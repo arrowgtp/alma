@@ -10,6 +10,7 @@ export default styled(Link)`
   align-items: center;
   justify-content: center;
   z-index: 2;
+  display: none;
   /* border: 1px solid black; */
 
   > img {
@@ -20,6 +21,7 @@ export default styled(Link)`
   }
 
   @media (min-width: 50rem) {
+    display: flex;
     grid-column: 1 / 2;
 
     > img {

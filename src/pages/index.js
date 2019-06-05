@@ -4,11 +4,16 @@ import styled from 'styled-components'
 import Img from 'gatsby-image'
 import { Link, injectIntl } from "gatsby-plugin-intl"
 
+// import Instagram from '../components/Instagram'
+
 import PageWrapper from '../components/PageWrapper'
 import FullWidthContainer from '../components/styled/FullWidthContainer'
 import CenteredContainer from '../components/styled/CenteredContainer'
 import HorizontalScrollContainer from '../components/styled/HorizontalScrollContainer'
 import H1 from '../components/styled/H1'
+// import Logo from '../components/Logo'
+
+import almaLogoWithBG from '../images/alma-logo-with-bg.svg';
 
 const FullContentCard = styled.div`
   grid-column: 1 / 4;
@@ -22,6 +27,19 @@ const FullContentCard = styled.div`
 
   @media (min-width: 50rem) {
     height: 100vh;
+  }
+`
+
+const MainLogo = styled.img`
+  grid-row: 1 / 3;
+  grid-column: 3 / 7;
+  z-index: 5;
+  align-self: center;
+  justify-self: center;
+
+  @media (min-width: 50rem) {
+    grid-column: 4 / 6;
+    display: none;
   }
 `
 
@@ -290,9 +308,14 @@ const InstaGrid = styled.div`
   grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
   grid-auto-rows: 1fr; */
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   grid-gap: 2rem;
+
+  @media (min-width: 50rem) {
+    grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  }
 `
 
 const InstaPost = styled.div`
@@ -339,6 +362,7 @@ const InstaLikes = styled.p`
   z-index: 5;
   color: white;
   justify-self: center;
+  font-size: 8px;
 `
 
 const InstaComments = styled.p`
@@ -347,6 +371,7 @@ const InstaComments = styled.p`
   z-index: 5;
   color: white;
   justify-self: center;
+  font-size: 8px;
 `
 
 const InstaImage = styled.img`
@@ -393,12 +418,14 @@ const Index = ({ data, intl }) => {
     <PageWrapper>
 
       <FullContentCard>
+        <MainLogo src={almaLogoWithBG} alt="The Alma Resort Logo."  />
         {/* <PageTitle>{intl.formatMessage({ id: "title" })}</PageTitle> */}
         <PageSlogan>{intl.formatMessage({ id: "slogan" })}</PageSlogan>
         <FullContentImage fluid={data.resortOverview.childImageSharp.fluid}/>
       </FullContentCard>
   
       <CenteredContainer>
+        <H1>Resort</H1>
         <P>Godfather ipsum dolor sit amet. If anything in this life is certain, if history has taught us anything, it is that you can kill anyone. What's the matter with you, huh? What am I going to do? Am I going to make that baby an orphan before he's born? I don't trust a doctor who can hardly speak English. Michael, you never told me you knew Johnny Fontane!</P>
       </CenteredContainer>
   
@@ -438,7 +465,7 @@ const Index = ({ data, intl }) => {
       </FullWidthContainer>
 
     <CenteredContainer>
-      <H1>The Rooms</H1>
+      <H1>Rooms</H1>
       <p>Godfather ipsum dolor sit amet. If anything in this life is certain, if history has taught us anything, it is that you can kill anyone. What's the matter with you, huh? What am I going to do? Am I going to make that baby an orphan before he's born? I don't trust a doctor who can hardly speak English. Michael, you never told me you knew Johnny Fontane!</p>
     </CenteredContainer>
 
@@ -478,7 +505,7 @@ const Index = ({ data, intl }) => {
     </FullWidthContainer>
 
     <CenteredContainer>
-      <H1>The Amenities</H1>
+      <H1>Amenities</H1>
       <p>Godfather ipsum dolor sit amet. If anything in this life is certain, if history has taught us anything, it is that you can kill anyone. What's the matter with you, huh? What am I going to do? Am I going to make that baby an orphan before he's born? I don't trust a doctor who can hardly speak English. Michael, you never told me you knew Johnny Fontane!</p>
     </CenteredContainer>
 
@@ -518,7 +545,7 @@ const Index = ({ data, intl }) => {
     </FullWidthContainer>
 
     <CenteredContainer>
-      <H1>Latest News</H1>
+      <H1>News</H1>
       <P>All the latest news that's fit to print about the worlds newest and brightest hotspot in the Vietnam travel scene</P>
       <h4>{data.articles.totalCount} Posts</h4>
     </CenteredContainer>
@@ -561,6 +588,9 @@ const Index = ({ data, intl }) => {
           </InstaPost>
         ))}
       </InstaGrid>
+
+      {/* <Instagram /> */}
+
     </FullWidthContainer>
   
     </PageWrapper>
