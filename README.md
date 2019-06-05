@@ -1,1 +1,1 @@
-Marketing SPAPWA for the Alma Resort in Vietnam.
+PWA for the Alma Resort in Vietnam.
