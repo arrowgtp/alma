@@ -4,8 +4,6 @@ import styled from 'styled-components'
 import Img from 'gatsby-image'
 import { Link, injectIntl } from 'gatsby-plugin-intl'
 
-
-
 const NewsContainer = styled.div`
 grid-column: 1 / 8;
 margin: 0;
@@ -188,10 +186,10 @@ z-index: 1;
 padding: 0; */
 `
 
-const News = ({data}) => {
+const News = ({ data }) => {
   return (
     <NewsContainer>
-      {data.articles.edges.map(({ node }) => (
+      {data.allMdx.edges.map(({ node }) => (
         <NewsCard key={node.id} to={node.fields.slug}>
           <NewsContentWrapper>
             <NewsTitle>{node.frontmatter.title}</NewsTitle>
@@ -208,7 +206,7 @@ const News = ({data}) => {
 
 export const query = graphql`
   query {
-    articles: allMdx {
+    allMdx {
       totalCount
       edges {
         node {
