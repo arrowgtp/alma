@@ -8,18 +8,41 @@ import Button from './styled/Button'
 import Language from './Language'
 import almaBGShell from '../images/alma-bg-shell.svg';
 
+// const SmallMenu = styled.div`
+//   text-align: center;
+//   margin: 0;
+//   padding: 0;
+//   text-decoration: none;
+//   grid-column: 1 / 2;
+//   grid-row: 3 / 4;
+//   z-index: 2;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: flex-end;
+//   justify-content: center;
+//   font-size: 10px;
+//   z-index: 10;
+
+//   @media (min-width: ${props => props.size}) {
+//     display: none;
+//   }
+// `
+
 const SmallMenu = styled.div`
   text-align: center;
   margin: 0;
   padding: 0;
   text-decoration: none;
-  grid-column: 1 / 2;
-  grid-row: 3 / 4;
+  /* grid-column: 1 / 2;
+  grid-row: 3 / 4; */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 10vh;
   z-index: 2;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr;
   font-size: 10px;
   z-index: 10;
 
