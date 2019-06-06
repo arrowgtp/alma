@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import styled from 'styled-components'
 import Img from 'gatsby-image'
-import { Link, injectIntl } from "gatsby-plugin-intl"
+import { Link, injectIntl } from 'gatsby-plugin-intl'
 
 // import Instagram from '../components/Instagram'
 
@@ -36,6 +36,12 @@ const MainLogo = styled.img`
   z-index: 5;
   align-self: center;
   justify-self: center;
+  filter: drop-shadow( 0px 0px 16px rgba(0, 0, 0, 0.25));
+  /* filter: drop-shadow(
+    0 13px 27px -5px rgba(50,50,93,.25),
+    0 8px 16px -8px rgba(0,0,0,.3),
+    0 -6px 16px -6px rgba(0,0,0,.025)
+  ); */
 
   @media (min-width: 50rem) {
     grid-column: 4 / 6;
@@ -77,13 +83,14 @@ const FullContentImage = styled(Img)`
 // `
 
 const PageSlogan = styled.div`
-  grid-row: 8 / 9;
+  grid-row: 7 / 9;
   grid-column: 1 / 9;
   z-index: 1;
   color: white;
-  font-size: 32px;
-  align-self: center;
+  font-size: calc(18px + (32 - 18) * ((100vw - 300px) / (1600 - 300)));
+  align-self: end;
   justify-self: center;
+  margin-bottom: 3rem;
 
   @media (min-width: 50rem) {
     grid-row: 8 / 9;
@@ -123,7 +130,13 @@ const Card = styled.div`
 // `
 
 const P = styled.p`
-  margin-top: 1rem;
+  margin: 1rem 0;
+  padding: 0;
+  font-size: calc(16px + (24 - 16) * ((100vw - 300px) / (1600 - 300)));
+
+  @media (min-width: 50rem) {
+    font-size: calc(16px + (32 - 16) * ((100vw - 300px) / (1600 - 300)));
+  }
 `
 
 const NewsContainer = styled.div`
@@ -153,15 +166,15 @@ const NewsContainer = styled.div`
 
 const NewsCard = styled(Link)`
   box-sizing: border-box;
-  top: 0px;
+  /* top: 0px; */
   margin: 0;
   padding: 0;
-  align-self: stretch;
-  justify-self: stretch;
+  /* align-self: stretch;
+  justify-self: stretch; */
   /* padding-top: calc(1 / (16/9) * 100%); */
   position: relative;
   text-decoration: none;
-  padding: 1rem;
+  /* padding: 1rem; */
   line-height: 1;
   background: white;
   cursor: pointer;
@@ -172,7 +185,9 @@ const NewsCard = styled(Link)`
     0 8px 16px -8px rgba(0,0,0,.3),
     0 -6px 16px -6px rgba(0,0,0,.025)
   ;
-  padding-top: calc(1 / (16/8) * 100%);
+  /* padding-top: calc(1 / (16/12) * 100%); */
+  /* padding-bottom: 100%; */
+  padding-top: 55%;
 
   :hover {
 
@@ -188,12 +203,19 @@ const NewsCard = styled(Link)`
     transition: All 100ms ease;
     transform: translateY(2px);
   }
+
+  @media (min-width: 50rem) {
+    padding-top: calc(1 / (16/8) * 100%);
+    padding-bottom: 55%;
+  }
 `
 
 const NewsContentWrapper = styled.div`
   position: absolute;
   top: 0;
   left: 0;
+  bottom: 0;
+  right: 0;
   width: 100%;
   height: 100%;
   display: grid;
@@ -263,6 +285,7 @@ const NewsImage = styled(Img)`
   grid-row: 1 / 9;
   width: 100%;
   height: 100%;
+  min-height: 100%;
   object-fit: cover;
   border-radius: 16px;
   z-index: 0;
@@ -314,7 +337,7 @@ const InstaGrid = styled.div`
 
   @media (min-width: 50rem) {
     grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
   }
 `
 
@@ -348,7 +371,7 @@ const InstaSpacer = styled.div`
   position: absolute;
   top: 0;
   left: 0;
-  display: inline-block;
+  /* display: inline-block; */
   height: 100%;
   width: 100%;
   display: grid;
