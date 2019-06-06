@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 import Helmet from 'react-helmet';
 // import { graphql } from 'gatsby';
 import styled from 'styled-components';
@@ -11,7 +11,7 @@ import Language from './Language';
 import Menu from './Menu';
 import Shell from './Shell';
 import Button from './styled/Button';
-import Div100vh from 'react-div-100vh';
+// import Div100vh from 'react-div-100vh';
 
 import almaLogoWithBG from '../images/alma-logo-with-bg.svg';
 import almaShell from '../images/alma-shell.svg';
@@ -158,7 +158,7 @@ const SidePanelBackground = styled.div`
 
 const Layout = ({ location, children }) => {
   return (
-    <Div100vh>
+    <Fragment>
       <Helmet
         title="Alma Vacations"
         meta={[
@@ -218,7 +218,7 @@ const Layout = ({ location, children }) => {
         <AlmaBGShell src={almaBGShell}/>
         {/* <Background /> */}
       </App>
-    </Div100vh>
+    </Fragment>
   )
 }
 
