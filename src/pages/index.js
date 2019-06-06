@@ -135,7 +135,7 @@ const P = styled.p`
   font-size: calc(16px + (24 - 16) * ((100vw - 300px) / (1600 - 300)));
 
   @media (min-width: 50rem) {
-    font-size: calc(16px + (32 - 16) * ((100vw - 300px) / (1600 - 300)));
+    font-size: calc(12px + (18 - 12) * ((100vw - 300px) / (1600 - 300)));
   }
 `
 
@@ -205,8 +205,8 @@ const NewsCard = styled(Link)`
   }
 
   @media (min-width: 50rem) {
-    padding-top: calc(1 / (16/8) * 100%);
-    padding-bottom: 55%;
+    /* padding-top: calc(1 / (16/8) * 100%); */
+    padding-top: 55%;
   }
 `
 
