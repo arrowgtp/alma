@@ -5,6 +5,7 @@ import Img from 'gatsby-image'
 import { Link, injectIntl } from 'gatsby-plugin-intl'
 
 // import Instagram from '../components/Instagram'
+// import News from '../components/News'
 
 import PageWrapper from '../components/PageWrapper'
 import FullWidthContainer from '../components/styled/FullWidthContainer'
@@ -587,6 +588,9 @@ const Index = ({ data, intl }) => {
           </NewsCard>
         ))}
       </NewsContainer>
+
+      {/* <News /> */}
+
     </FullWidthContainer>
   
     <CenteredContainer>
@@ -660,7 +664,7 @@ export const query = graphql`
             date(formatString: "MMMM Do, YYYY")
             image {
               childImageSharp {
-                fluid(maxWidth: 1920) {
+                fluid(maxWidth: 3840) {
                   ...GatsbyImageSharpFluid
                 }
               }
