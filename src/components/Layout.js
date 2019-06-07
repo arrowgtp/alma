@@ -176,9 +176,9 @@ const Layout = ({ location, children }) => {
           <Language />
         </Locales>
         <Menu changeMenuOn="50rem" />
-        <Shell to={`/`}>
+        {/* <Shell to={`/`}>
           <img src={almaShell} alt="The Alma Resort Shell."  />
-        </Shell>
+        </Shell> */}
         <Contact>
           <Button>Join</Button>
         </Contact>
