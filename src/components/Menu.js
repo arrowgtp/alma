@@ -43,14 +43,13 @@ const SmallMenu = styled.div`
   left: 0;
   right: 0;
   height: 10vh;
-  /* height: 4rem; */
   background: white;
-  /* border: 2px solid red; */
   z-index: 2;
   display: grid;
   grid-template-columns: 3fr 2fr 3fr;
   grid-template-rows: 1fr;
   z-index: 10;
+  box-shadow: 0px 0px 64px rgba(0, 0, 0, 0.25);
 
   @media (min-width: ${props => props.size}) {
     display: none;
@@ -69,11 +68,11 @@ const Button = styled.button`
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 4px;
-  font-size: calc(8px + (40 - 8) * ((100vw - 300px) / (1600 - 300)));
+  font-size: calc(10px + (40 - 10) * ((100vw - 300px) / (1600 - 300)));
   /* padding: 4px 8px; */
   padding:
-    calc(8px + (24 - 8) * ((100vw - 300px) / (1600 - 300)))
-    calc(16px + (32 - 16) * ((100vw - 300px) / (1600 - 300)))
+    calc(8px + (32 - 8) * ((100vw - 300px) / (1600 - 300)))
+    calc(16px + (48 - 16) * ((100vw - 300px) / (1600 - 300)))
   ;
   /* padding: calc(8px + (16 - 8) * ((100vw - 300px) / (1600 - 300))); */
   /* padding: 10vh; */
