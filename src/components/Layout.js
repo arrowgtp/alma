@@ -34,7 +34,7 @@ const App = styled.div`
     grid-template-rows: 20vh 5vh 55vh 20vh;
     grid-template-columns: 1fr 4fr;
   }
-`;
+`
 
 // const Main = styled.main`
 //   margin: 0;

@@ -3,7 +3,6 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { Link } from 'gatsby-plugin-intl'
-// import { Link as GatsbyLink } from "gatsby"
 
 // import Button from './styled/Button'
 import Language from './Language'
@@ -151,12 +150,13 @@ const MobileMenu = styled.div`
   margin: 0;
   padding: 0;
   position: fixed;
-  bottom: 18vh;
+  bottom: 15vh;
   left: 5vw;
   height: 50vh;
   width: 90vw;
   border-radius: 16px;
   background: white;
+  /* border: 2px solid red; */
   /* display: flex;
   flex-direction: column;
   align-items: center;
@@ -166,6 +166,20 @@ const MobileMenu = styled.div`
   grid-template-columns: repeat(8, 1fr);
   align-items: center;
   box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.5);
+`
+
+const DownArrow = styled.div`
+  width: 0; 
+  height: 0; 
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid white;
+  grid-row: 8 / 9;
+  grid-column: 2 / 3;
+  margin-bottom: -1rem;
+  margin-left: -12px;
+  align-self: end;
+  /* border: 2px solid red; */
 `
 
 const SLink = styled(Link)`
@@ -307,6 +321,7 @@ class Menu extends Component {
               <Locales>
                 <Language />
               </Locales>
+              <DownArrow />
               <AlmaBGShell src={almaBGShell}/>
             </MobileMenu>
           ) : null}
