@@ -153,7 +153,7 @@ const SidePanelBackground = styled.div`
 //   }
 // `;
 
-const Layout = ({ children }) => {
+const Layout = ({ location, children }) => {
   return (
     <Fragment>
       <Helmet
