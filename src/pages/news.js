@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import styled from 'styled-components'
-import { Link, injectIntl } from "gatsby-plugin-intl"
+import { Link, injectIntl } from 'gatsby-plugin-intl'
 
 import PageWrapper from '../components/PageWrapper'
 import CenteredContainer from '../components/styled/CenteredContainer'
@@ -68,3 +68,5 @@ export const query = graphql`
 `
 
 export default injectIntl(News)
+
+// export default News

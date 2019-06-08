@@ -1,12 +1,12 @@
-import React from "react"
-import { graphql } from "gatsby"
+import React from 'react'
+import { graphql } from 'gatsby'
 import styled from 'styled-components'
-import { injectIntl } from "gatsby-plugin-intl"
-import MDXRenderer from 'gatsby-mdx/mdx-renderer';
-import { MDXProvider } from "@mdx-js/tag"; 
+import { injectIntl } from 'gatsby-plugin-intl'
+import MDXRenderer from 'gatsby-mdx/mdx-renderer'
+import { MDXProvider } from '@mdx-js/tag'
 import Img from 'gatsby-image'
-// import Collapsible from 'react-collapsible';
-// import slugify from 'react-slugify';
+// import Collapsible from 'react-collapsible'
+// import slugify from 'react-slugify'
 
 
 import './article.css'
@@ -205,9 +205,6 @@ const Article = ({ data }) => {
         </TitleBlock>
         <MainContent>
           <div>
-            {/* <h1>{frontmatter.title}</h1>
-            <h2>{frontmatter.subtitle}</h2>
-            <h3>{frontmatter.date}</h3> */}
             <MDXRenderer>{code.body}</MDXRenderer>
           </div>
         </MainContent>
@@ -241,3 +238,5 @@ export const query = graphql`
 `
 
 export default injectIntl(Article)
+
+// export default Article

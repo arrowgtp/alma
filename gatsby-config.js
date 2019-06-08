@@ -5,6 +5,7 @@ module.exports = {
     title: `Alma Vacations`,
   },
   plugins: [
+    `gatsby-plugin-netlify`,
     `gatsby-mdx`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
@@ -14,12 +15,6 @@ module.exports = {
         component: require.resolve(`./src/components/Layout.js`),
       },
     },
-    // {
-    //   resolve: "gatsby-plugin-transition-link",
-    //   options: {
-    //     layout: require.resolve(`./src/components/layout.js`)
-    //   },
-    // },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -27,9 +22,6 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-transformer-yaml`,
-    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -38,6 +30,9 @@ module.exports = {
         // path: `${__dirname}/src/content`,
       },
     },
+    `gatsby-transformer-sharp`,
+    `gatsby-transformer-yaml`,
+    `gatsby-plugin-sharp`,
     `gatsby-transformer-remark`,
     {
       resolve: `gatsby-plugin-manifest`,
@@ -48,16 +43,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#ffffff`,
         display: 'minimal-ui',
-        icon: `src/images/alma-shell.svg`, // This path is relative to the root of the site.
-      },
-    },
-    {
-      resolve: `gatsby-plugin-intl`,
-      options: {
-        path: `${__dirname}/src/intl`,
-        languages: ['en', 'vi'],
-        defaultLanguage: 'en',
-        redirect: true,
+        icon: `src/images/alma-shell.svg`,
       },
     },
     {
@@ -74,6 +60,15 @@ module.exports = {
         username: 'gia_arrowgtp',
       },
     },
-    'gatsby-plugin-offline'
+    {
+      resolve: `gatsby-plugin-intl`,
+      options: {
+        path: `${__dirname}/src/intl`,
+        languages: ['en', 'vi'],
+        defaultLanguage: 'en',
+        redirect: true,
+      },
+    },
+    `gatsby-plugin-offline`
   ]
 };

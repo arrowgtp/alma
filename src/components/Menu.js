@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { Link } from 'gatsby-plugin-intl'
+// import { Link as GatsbyLink } from "gatsby"
 
 // import Button from './styled/Button'
 import Language from './Language'
@@ -278,6 +279,7 @@ class Menu extends Component {
           <SLink to={`/amenities`}>The Amenities</SLink>
           <SLink to={`/news`}>Latest News</SLink>
           <SLink to={`/about`}>About Alma</SLink>
+          {/* <GatsbyLink to={`/en/about`}>About Alma</GatsbyLink> */}
         </LargeMenu>
         <SmallMenu size={changeMenuOn}>
           {!this.state.showMenu ? (

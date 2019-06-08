@@ -234,3 +234,5 @@ export const query = graphql`
 `
 
 export default injectIntl(News)
+
+// export default News

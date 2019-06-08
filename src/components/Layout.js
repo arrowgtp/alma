@@ -1,21 +1,18 @@
-import React, {Fragment} from 'react';
-import Helmet from 'react-helmet';
-// import { graphql } from 'gatsby';
-import styled from 'styled-components';
-import { injectIntl } from "gatsby-plugin-intl"
-import { TransitionProvider } from "gatsby-plugin-transitions";
+import React, { Fragment } from 'react'
+import Helmet from 'react-helmet'
+// import { graphql } from 'gatsby' 
+import styled from 'styled-components'
+import { injectIntl } from 'gatsby-plugin-intl'
+import { TransitionProvider } from 'gatsby-plugin-transitions'
 
-import './Layout.css';
-import Logo from './Logo';
-import Language from './Language';
-import Menu from './Menu';
-import Shell from './Shell';
-import Button from './styled/Button';
-// import Div100vh from 'react-div-100vh';
+import './Layout.css'
+import Logo from './Logo'
+import Language from './Language'
+import Menu from './Menu'
+import Button from './styled/Button'
 
-import almaLogoWithBG from '../images/alma-logo-with-bg.svg';
-import almaShell from '../images/alma-shell.svg';
-import almaBGShell from '../images/alma-bg-shell.svg';
+import almaLogoWithBG from '../images/alma-logo-with-bg.svg'
+import almaBGShell from '../images/alma-bg-shell.svg'
 
 const App = styled.div`
   box-sizing: border-box;
@@ -156,7 +153,7 @@ const SidePanelBackground = styled.div`
 //   }
 // `;
 
-const Layout = ({ location, children }) => {
+const Layout = ({ children }) => {
   return (
     <Fragment>
       <Helmet
@@ -223,3 +220,5 @@ const Layout = ({ location, children }) => {
 }
 
 export default injectIntl(Layout)
+
+// export default Layout

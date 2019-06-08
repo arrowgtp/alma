@@ -14,7 +14,7 @@ import HorizontalScrollContainer from '../components/styled/HorizontalScrollCont
 import H1 from '../components/styled/H1'
 // import Logo from '../components/Logo'
 
-import almaLogoWithBG from '../images/alma-logo-with-bg.svg';
+import almaLogoWithBG from '../images/alma-logo-with-bg.svg'
 
 const FullContentCard = styled.div`
   grid-column: 1 / 4;
@@ -754,3 +754,5 @@ export const query = graphql`
 `
 
 export default injectIntl(Index)
+
+// export default Index

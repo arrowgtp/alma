@@ -1,5 +1,5 @@
 import React from 'react'
-import { injectIntl } from "gatsby-plugin-intl"
+import { injectIntl } from 'gatsby-plugin-intl'
 
 import PageWrapper from '../components/PageWrapper'
 import CenteredContainer from '../components/styled/CenteredContainer'
@@ -15,7 +15,6 @@ const Rooms = ({ intl }) => {
           photos and videos of pandas eating lots of food.
         </p>
         <p>{intl.formatMessage({ id: "title" })}</p>
-
         <p>{intl.formatMessage({ id: "slogan" })}</p>
       </CenteredContainer>
     </PageWrapper>
@@ -23,3 +22,5 @@ const Rooms = ({ intl }) => {
 }
 
 export default injectIntl(Rooms)
+
+// export default Rooms
