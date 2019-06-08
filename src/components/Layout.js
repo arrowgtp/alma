@@ -57,18 +57,18 @@ const App = styled.div`
 //   }
 // `
 
-const Main = styled.main`
-  grid-column: 1 / 4;
-  grid-row: 1 / 3;
-  overflow: scroll;
-  -webkit-overflow-scrolling: touch;
-  will-change: scroll-position;
+// const Main = styled.main`
+//   grid-column: 1 / 4;
+//   grid-row: 1 / 3;
+//   overflow: scroll;
+//   -webkit-overflow-scrolling: touch;
+//   will-change: scroll-position;
 
-  @media (min-width: 50rem) {
-    grid-column: 2 / 3;
-    grid-row: 1 / 5;
-  }
-`
+//   @media (min-width: 50rem) {
+//     grid-column: 2 / 3;
+//     grid-row: 1 / 5;
+//   }
+// `
 
 const Locales = styled.div`
   grid-column: 1 / 4;
