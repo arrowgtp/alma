@@ -9,7 +9,8 @@ export default styled.h1`
   letter-spacing: 16px;
   font-size: calc(16px + (32 - 16) * ((100vw - 300px) / (1600 - 300)));
   /* color: #AF875D; */
-  color: #946C42;
+  /* color: #946C42; */
+  color: black;
   border-width: 32px;
   border: 32px solid;
   border-image: url(${almaBorder}) 32 stretch;
