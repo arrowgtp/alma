@@ -443,6 +443,7 @@ const InstaScrim = styled.div`
 `
 
 const Index = ({ data, intl }) => {
+  
   return (
     <PageWrapper>
 
