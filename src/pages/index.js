@@ -381,29 +381,34 @@ const InstaSpacer = styled.div`
 `
 
 const InstaLikes = styled.p`
-  grid-row: 8 / 9;
-  grid-column: 1 / 4;
+  grid-row: 1 / 9;
+  grid-column: 1 / 9;
+  margin: 0;
+  padding: 0;
+  justify-self: start;
+  align-self: end;
   z-index: 5;
   color: white;
   justify-self: center;
-  font-size: 8px;
+  font-size: calc(8px + (32 - 12) * ((100vw - 300px) / (1600 - 300)));
 `
 
 const InstaComments = styled.p`
   grid-row: 8 / 9;
   grid-column: 5 / 9;
+  margin: 0;
+  padding: 0;
   z-index: 5;
   color: white;
   justify-self: center;
-  font-size: 8px;
+  font-size: calc(8px + (32 - 12) * ((100vw - 300px) / (1600 - 300)));
 `
 
-const InstaImage = styled.img`
+const InstaImage = styled(Img)`
   grid-row: 1 / 9;
   grid-column: 1 / 9;
   margin: 0;
   padding: 0;
-  /* border: 1px solid #ccc; */
   border-radius: 16px;
   object-fit: cover;
   width: 100%;
@@ -607,10 +612,11 @@ const Index = ({ data, intl }) => {
         {data.allInstaNode.edges.map(({ node }) => (
           <InstaPost key={node.id}>
             <InstaSpacer>
-              <InstaLikes>❤️ {node.likes}</InstaLikes>
-              <InstaComments>💬 {node.comments}</InstaComments>
+              {/* <InstaLikes>❤️ {node.likes}</InstaLikes>
+              <InstaComments>💬 {node.comments}</InstaComments> */}
               <InstaScrim />
-              <InstaImage src={node.original} />
+              {/* <InstaImage src={node.original} /> */}
+              <InstaImage fluid={node.localFile.childImageSharp.fluid} />
             </InstaSpacer>
           </InstaPost>
         ))}
@@ -637,6 +643,13 @@ export const query = graphql`
           original
           timestamp
           caption
+          localFile {
+            childImageSharp {
+              fluid(maxWidth: 256) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
           thumbnails {
             src
             config_width
