@@ -44,7 +44,7 @@ const SmallMenu = styled.div`
   right: 0;
   height: 10vh;
   background: white;
-  z-index: 2;
+  z-index: 100000000;
   display: grid;
   grid-template-columns: 3fr 2fr 3fr;
   grid-template-rows: 1fr;
@@ -134,8 +134,8 @@ const LargeMenu = styled.div`
   display: none;
 
   @media (min-width: ${props => props.size}) {
-    grid-column: 1 / 2;
-    grid-row: 2 / 3;
+    /* grid-column: 1 / 2;
+    grid-row: 2 / 3; */
     height: 60vh;
     font-size: 18px;
     display: flex;

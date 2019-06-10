@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import { graphql } from 'gatsby'
 import styled from 'styled-components'
 import Img from 'gatsby-image'
@@ -16,11 +16,27 @@ import H1 from '../components/styled/H1'
 
 import almaLogoWithBG from '../images/alma-logo-with-bg.svg'
 
+// const FullContentCard = styled.div`
+//   grid-column: 1 / 4;
+//   margin: 0;
+//   padding: 0;
+//   width: 100%;
+//   height: 90vh;
+//   display: grid;
+//   grid-template-rows: repeat(8, 1fr);
+//   grid-template-columns: repeat(8, 1fr);
+
+//   @media (min-width: 50rem) {
+//     height: 100vh;
+//   }
+// `
+
 const FullContentCard = styled.div`
-  grid-column: 1 / 4;
+  /* grid-column: 1 / 4; */
   margin: 0;
   padding: 0;
-  width: 100%;
+  /* width: 100%; */
+  width: 100vw;
   height: 90vh;
   display: grid;
   grid-template-rows: repeat(8, 1fr);
@@ -443,8 +459,10 @@ const InstaScrim = styled.div`
 `
 
 const Index = ({ data, intl }) => {
-  
+
   return (
+    
+    // <Fragment>
     <PageWrapper>
 
       <FullContentCard>
@@ -628,6 +646,7 @@ const Index = ({ data, intl }) => {
     </FullWidthContainer>
   
     </PageWrapper>
+    // </Fragment>
   )
 }
 
