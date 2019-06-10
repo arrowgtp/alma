@@ -32,11 +32,11 @@ import almaLogoWithBG from '../images/alma-logo-with-bg.svg'
 // `
 
 const FullContentCard = styled.div`
-  /* grid-column: 1 / 4; */
+  grid-column: 1 / 4;
   margin: 0;
   padding: 0;
-  /* width: 100%; */
-  width: 100vw;
+  width: 100%;
+  /* width: 100vw; */
   height: 90vh;
   display: grid;
   grid-template-rows: repeat(8, 1fr);
@@ -473,7 +473,7 @@ const Index = ({ data, intl }) => {
       </FullContentCard>
   
       <CenteredContainer>
-        <H1>Resort</H1>
+        <H1>Resor<span>t</span></H1>
         <P>Godfather ipsum dolor sit amet. If anything in this life is certain, if history has taught us anything, it is that you can kill anyone. What's the matter with you, huh? What am I going to do? Am I going to make that baby an orphan before he's born? I don't trust a doctor who can hardly speak English. Michael, you never told me you knew Johnny Fontane!</P>
       </CenteredContainer>
   
@@ -513,7 +513,7 @@ const Index = ({ data, intl }) => {
       </FullWidthContainer>
 
     <CenteredContainer>
-      <H1>Rooms</H1>
+      <H1>Room<span>s</span></H1>
       <p>Godfather ipsum dolor sit amet. If anything in this life is certain, if history has taught us anything, it is that you can kill anyone. What's the matter with you, huh? What am I going to do? Am I going to make that baby an orphan before he's born? I don't trust a doctor who can hardly speak English. Michael, you never told me you knew Johnny Fontane!</p>
     </CenteredContainer>
 
@@ -553,7 +553,7 @@ const Index = ({ data, intl }) => {
     </FullWidthContainer>
 
     <CenteredContainer>
-      <H1>Amenities</H1>
+      <H1>Amenitie<span>s</span></H1>
       <p>Godfather ipsum dolor sit amet. If anything in this life is certain, if history has taught us anything, it is that you can kill anyone. What's the matter with you, huh? What am I going to do? Am I going to make that baby an orphan before he's born? I don't trust a doctor who can hardly speak English. Michael, you never told me you knew Johnny Fontane!</p>
     </CenteredContainer>
 
@@ -593,7 +593,7 @@ const Index = ({ data, intl }) => {
     </FullWidthContainer>
 
     <CenteredContainer>
-      <H1>News</H1>
+      <H1>New<span>s</span></H1>
       <P>All the latest news that's fit to print about the worlds newest and brightest hotspot in the Vietnam travel scene</P>
       <h4>{data.articles.totalCount} Posts</h4>
     </CenteredContainer>
@@ -618,12 +618,12 @@ const Index = ({ data, intl }) => {
     </FullWidthContainer>
   
     <CenteredContainer>
-      <H1>About Us</H1>
+      <H1>About U<span>s</span></H1>
       <p>Godfather ipsum dolor sit amet. If anything in this life is certain, if history has taught us anything, it is that you can kill anyone. What's the matter with you, huh? What am I going to do? Am I going to make that baby an orphan before he's born? I don't trust a doctor who can hardly speak English. Michael, you never told me you knew Johnny Fontane!</p>
     </CenteredContainer>
       
     <CenteredContainer>
-      <H1>Instagram</H1>
+      <H1>Instagra<span>m</span></H1>
     </CenteredContainer>
 
     <FullWidthContainer>

@@ -134,8 +134,8 @@ const LargeMenu = styled.div`
   display: none;
 
   @media (min-width: ${props => props.size}) {
-    /* grid-column: 1 / 2;
-    grid-row: 2 / 3; */
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
     height: 60vh;
     font-size: 18px;
     display: flex;
