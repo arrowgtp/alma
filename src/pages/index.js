@@ -4,9 +4,6 @@ import styled from 'styled-components'
 import Img from 'gatsby-image'
 import { Link, injectIntl } from 'gatsby-plugin-intl'
 
-// import Instagram from '../components/Instagram'
-// import News from '../components/News'
-
 import PageWrapper from '../components/PageWrapper'
 import FullWidthContainer from '../components/styled/FullWidthContainer'
 import CenteredContainer from '../components/styled/CenteredContainer'
@@ -35,8 +32,6 @@ const FullContentCard = styled.div`
   grid-column: 1 / 4;
   margin: 0;
   padding: 0;
-  width: 100%;
-  /* width: 100vw; */
   height: 90vh;
   display: grid;
   grid-template-rows: repeat(8, 1fr);
@@ -72,22 +67,6 @@ const FullContentImage = styled(Img)`
   object-fit: cover;
   z-index: 0;
 `
-
-// const FullImg = styled(Img)`
-//   width: 100%;
-//   height: 90vh;
-//   position: absolute;
-//   top: 0;
-//   bottom: 0;
-//   left: 0;
-//   right: 0;
-//   object-fit: cover;
-//   z-index: 0;
-
-//   @media (min-width: 50rem) {
-//     height: 100vh;
-//   }
-// `
 
 // const PageTitle = styled.div`
 //   grid-row: 1 / 2;
@@ -139,12 +118,6 @@ const Card = styled.div`
     width: 40%;
   }
 `
-
-// const NavLink = styled(Link)`
-//   text-decoration: none;
-//   padding: 1rem;
-//   line-height: 1;
-// `
 
 const P = styled.p`
   margin: 1rem 0;

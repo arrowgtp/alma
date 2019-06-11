@@ -11,7 +11,6 @@ import Img from 'gatsby-image'
 
 import './article.css'
 import PageWrapper from '../components/PageWrapper'
-// import H1 from '../components/H1'
 
 const MainContent = styled.div`
   grid-column: 2 / 3;
@@ -73,9 +72,6 @@ const Date = styled.h3`
 const TitleImage = styled(Img)`
   grid-column: 1 / 4;
   grid-row: 1 / 4;
-  width: 100%;
-  height: 100%;
-  /* height: 100vh; */
   margin: 0;
   padding: 0;
   object-fit: cover;

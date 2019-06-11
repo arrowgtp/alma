@@ -77,18 +77,18 @@ const App = styled.div`
 //   }
 // `
 
-const Main = styled.main`
-  /* grid-column: 1 / 4;
-  grid-row: 1 / 3;
-  overflow: scroll;
-  -webkit-overflow-scrolling: touch;
-  will-change: scroll-position; */
+// const Main = styled.main`
+//   grid-column: 1 / 4;
+//   grid-row: 1 / 3;
+//   overflow: scroll;
+//   -webkit-overflow-scrolling: touch;
+//   will-change: scroll-position;
 
-  @media (min-width: 50rem) {
-    /* grid-column: 2 / 3;
-    grid-row: 1 / 5; */
-  }
-`
+//   @media (min-width: 50rem) {
+//     grid-column: 2 / 3;
+//     grid-row: 1 / 5;
+//   }
+// `
 
 const Locales = styled.div`
   grid-column: 1 / 4;
@@ -129,22 +129,25 @@ const AlmaBGShell = styled.img`
     grid-row: 4 / 5;
     margin-left: -64px;
     margin-top: -64px;
+    z-index: 1;
   }
 `
 
 const SidePanelBackground = styled.div`
-  display: block;
+  display: none;
   /* grid-column: 1 / 4;
   grid-row: 3 / 4; */
   box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.25);
-  /* box-shadow: 0 15px 30px 0 rgba(0,0,0,0.11),
-              0 5px 15px 0 rgba(0,0,0,0.08); */
+  box-shadow: 0 15px 30px 0 rgba(0,0,0,0.11),
+              0 5px 15px 0 rgba(0,0,0,0.08);
   z-index: 0;
 
   @media (min-width: 50rem) {
-    /* display: block; */
+    display: block;
     grid-column: 1 / 2;
     grid-row: 1 / 5;
+    background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5MCIgaGVpZ2h0PSIyMCI+CjxyZWN0IHdpZHRoPSI5MCIgaGVpZ2h0PSIyMCIgZmlsbD0iI2ZmZiI+PC9yZWN0Pgo8cmVjdCB3aWR0aD0iOTAiIGhlaWdodD0iMTAiIGZpbGw9IiNmY2ZjZmMiPjwvcmVjdD4KPC9zdmc+");
+    background-repeat: repeat;
     /* background: 
       linear-gradient(
         0deg,
