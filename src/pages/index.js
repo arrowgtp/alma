@@ -9,24 +9,9 @@ import FullWidthContainer from '../components/styled/FullWidthContainer'
 import CenteredContainer from '../components/styled/CenteredContainer'
 import HorizontalScrollContainer from '../components/styled/HorizontalScrollContainer'
 import H1 from '../components/styled/H1'
-// import Logo from '../components/Logo'
+import Logo from '../components/Logo'
 
 import almaLogoWithBG from '../images/alma-logo-with-bg.svg'
-
-// const FullContentCard = styled.div`
-//   grid-column: 1 / 4;
-//   margin: 0;
-//   padding: 0;
-//   width: 100%;
-//   height: 90vh;
-//   display: grid;
-//   grid-template-rows: repeat(8, 1fr);
-//   grid-template-columns: repeat(8, 1fr);
-
-//   @media (min-width: 50rem) {
-//     height: 100vh;
-//   }
-// `
 
 const FullContentCard = styled.div`
   grid-column: 1 / 4;
@@ -49,6 +34,7 @@ const MainLogo = styled.img`
   align-self: center;
   justify-self: center;
   filter: drop-shadow( 0px 0px 16px rgba(0, 0, 0, 0.25));
+  z-index: 1000;
   /* filter: drop-shadow(
     0 13px 27px -5px rgba(50,50,93,.25),
     0 8px 16px -8px rgba(0,0,0,.3),

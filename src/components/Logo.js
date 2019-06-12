@@ -23,6 +23,7 @@ export default styled(Link)`
   @media (min-width: 50rem) {
     display: flex;
     grid-column: 1 / 2;
+    z-index: 5;
 
     > img {
       max-width: 75%;
