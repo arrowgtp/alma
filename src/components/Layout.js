@@ -146,17 +146,8 @@ const SidePanelBackground = styled.div`
     display: block;
     grid-column: 1 / 2;
     grid-row: 1 / 5;
-    /* background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5MCIgaGVpZ2h0PSIyMCI+CjxyZWN0IHdpZHRoPSI5MCIgaGVpZ2h0PSIyMCIgZmlsbD0iI2ZmZiI+PC9yZWN0Pgo8cmVjdCB3aWR0aD0iOTAiIGhlaWdodD0iMTAiIGZpbGw9IiNmY2ZjZmMiPjwvcmVjdD4KPC9zdmc+"); */
-    /* background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MCIgaGVpZ2h0PSI5MCI+CjxyZWN0IHdpZHRoPSI1MCIgaGVpZ2h0PSI5MCIgZmlsbD0id2hpdGUiPjwvcmVjdD4KPHJlY3QgeD0iMjUiIHdpZHRoPSIyNSIgaGVpZ2h0PSI5MCIgZmlsbD0iI2ZhZmFmYSI+PC9yZWN0Pgo8L3N2Zz4="); */
     background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMCIgaGVpZ2h0PSI5MCI+CjxyZWN0IHdpZHRoPSIzMCIgaGVpZ2h0PSI5MCIgZmlsbD0id2hpdGUiPjwvcmVjdD4KPHJlY3QgeD0iMTUiIHdpZHRoPSIyNSIgaGVpZ2h0PSI5MCIgZmlsbD0iI2ZjZmNmYyI+PC9yZWN0Pgo8L3N2Zz4=");
     background-repeat: repeat;
-    /* background: 
-      linear-gradient(
-        0deg,
-        rgba(0,153,184,0.2539390756302521) 0%,
-        rgba(255,255,255,1) 100%
-      )
-    ; */
   }
 `;
 
