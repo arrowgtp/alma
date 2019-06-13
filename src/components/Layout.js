@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
 import { injectIntl } from 'gatsby-plugin-intl'
@@ -13,28 +13,6 @@ import Button from './styled/Button'
 import almaLogoWithBG from '../images/alma-logo-with-bg.svg'
 import almaBGShell from '../images/alma-bg-shell.svg'
 
-// const App = styled.div`
-//   box-sizing: border-box;
-//   margin: 0;
-//   padding: 0;
-//   width: 100vw;
-//   height: 100vh;
-//   display: grid;
-//   grid-template-rows: 20vh 70vh 10vh;
-//   grid-template-columns: repeat(3, 1fr);
-//   background: white;
-
-//   @media (min-width: 50rem) {
-//     grid-template-rows: 20vh 5vh 55vh 20vh;
-//     grid-template-columns: 1fr 3fr;
-//   }
-
-//   @media (min-width: 60rem) {
-//     grid-template-rows: 20vh 5vh 55vh 20vh;
-//     grid-template-columns: 1fr 4fr;
-//   }
-// `
-
 const App = styled.div`
   margin: 0;
   padding: 0;
@@ -43,7 +21,7 @@ const App = styled.div`
   display: grid;
   grid-template-rows: 20vh 70vh 10vh;
   grid-template-columns: repeat(3, 1fr);
-  background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMCIgaGVpZ2h0PSI5MCI+CjxyZWN0IHdpZHRoPSIzMCIgaGVpZ2h0PSI5MCIgZmlsbD0id2hpdGUiPjwvcmVjdD4KPHJlY3QgeD0iMTUiIHdpZHRoPSIyNSIgaGVpZ2h0PSI5MCIgZmlsbD0iI2ZjZmNmYyI+PC9yZWN0Pgo8L3N2Zz4=");
+  background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMCIgaGVpZ2h0PSIzMCI+CjxyZWN0IHdpZHRoPSIzMCIgaGVpZ2h0PSIzMCIgZmlsbD0iI2ZmZmZmZiI+PC9yZWN0Pgo8cmVjdCB4PSIxNSIgd2lkdGg9IjMwIiBoZWlnaHQ9IjMwIiBmaWxsPSIjZmRmZGZkIj48L3JlY3Q+Cjwvc3ZnPg==");
   background-repeat: repeat;
 
   @media (min-width: 50rem) {
@@ -140,7 +118,7 @@ const SidePanelBackground = styled.div`
     display: block;
     grid-column: 1 / 2;
     grid-row: 1 / 5;
-    background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMCIgaGVpZ2h0PSI5MCI+CjxyZWN0IHdpZHRoPSIzMCIgaGVpZ2h0PSI5MCIgZmlsbD0id2hpdGUiPjwvcmVjdD4KPHJlY3QgeD0iMTUiIHdpZHRoPSIyNSIgaGVpZ2h0PSI5MCIgZmlsbD0iI2ZjZmNmYyI+PC9yZWN0Pgo8L3N2Zz4=");
+    background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMCIgaGVpZ2h0PSIzMCI+CjxyZWN0IHdpZHRoPSIzMCIgaGVpZ2h0PSIzMCIgZmlsbD0iI2ZmZmZmZiI+PC9yZWN0Pgo8cmVjdCB4PSIxNSIgd2lkdGg9IjMwIiBoZWlnaHQ9IjMwIiBmaWxsPSIjZmRmZGZkIj48L3JlY3Q+Cjwvc3ZnPg==");
     background-repeat: repeat;
     box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.25);
     box-shadow:
@@ -153,7 +131,7 @@ const SidePanelBackground = styled.div`
 
 const Layout = ({ location, children }) => {
   return (
-    <Fragment>
+    <App>
       <Helmet
         title="Alma Vacations"
         meta={[
@@ -163,53 +141,51 @@ const Layout = ({ location, children }) => {
       >
         <html lang="en" />
       </Helmet>
-      <App>
-        <Logo to={`/`}>
-          <img src={almaLogoWithBG} alt="The Alma Resort Logo."  />
-        </Logo>
-        <Locales>
-          <Language />
-        </Locales>
-        <Menu changeMenuOn="50rem" />
-        <Contact>
-          <Button>Join</Button>
-        </Contact>
-        {/* <Main>
+      <Logo to={`/`}>
+        <img src={almaLogoWithBG} alt="The Alma Resort Logo."  />
+      </Logo>
+      <Locales>
+        <Language />
+      </Locales>
+      <Menu changeMenuOn="50rem" />
+      <Contact>
+        <Button>Join</Button>
+      </Contact>
+      {/* <Main>
+        {children}
+      </Main> */}
+      {/* <TransitionProvider location={location}>
+        {children}
+      </TransitionProvider> */}
+      <TransitionProvider
+        location={location}
+        enter={{
+          opacity: 0,
+          config: {
+            mass: 1,
+            tension: 210,
+            friction: 20,
+            clamp: true
+          },
+          onRest: () => {
+            console.log("Hello, World!");
+          }
+        }}
+        usual={{
+          opacity: 1,
+        }}
+        leave={{
+          opacity: 0,
+          config: {
+            duration: 250
+          }
+        }}
+      >
           {children}
-        </Main> */}
-        {/* <TransitionProvider location={location}>
-          {children}
-        </TransitionProvider> */}
-        <TransitionProvider
-          location={location}
-          enter={{
-            opacity: 0,
-            config: {
-              mass: 1,
-              tension: 210,
-              friction: 20,
-              clamp: true
-            },
-            onRest: () => {
-              console.log("Hello, World!");
-            }
-          }}
-          usual={{
-            opacity: 1,
-          }}
-          leave={{
-            opacity: 0,
-            config: {
-              duration: 250
-            }
-          }}
-        >
-            {children}
-        </TransitionProvider>
-        <SidePanelBackground />
-        <AlmaBGShell src={almaBGShell}/>
-      </App>
-    </Fragment>
+      </TransitionProvider>
+      <SidePanelBackground />
+      <AlmaBGShell src={almaBGShell}/>
+    </App>
   )
 }
 
