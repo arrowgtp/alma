@@ -10,7 +10,7 @@ overflow-y: scroll;
 -webkit-overflow-scrolling: touch;
 z-index: 1;
 background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMCIgaGVpZ2h0PSI5MCI+CjxyZWN0IHdpZHRoPSIzMCIgaGVpZ2h0PSI5MCIgZmlsbD0id2hpdGUiPjwvcmVjdD4KPHJlY3QgeD0iMTUiIHdpZHRoPSIyNSIgaGVpZ2h0PSI5MCIgZmlsbD0iI2ZjZmNmYyI+PC9yZWN0Pgo8L3N2Zz4=");
-  background-repeat: repeat;
+background-repeat: repeat;
 display: grid;
 grid-template-columns: 
   minmax(1rem, 1fr) 

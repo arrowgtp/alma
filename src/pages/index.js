@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import { graphql } from 'gatsby'
 import styled from 'styled-components'
 import Img from 'gatsby-image'
@@ -9,7 +9,7 @@ import FullWidthContainer from '../components/styled/FullWidthContainer'
 import CenteredContainer from '../components/styled/CenteredContainer'
 import HorizontalScrollContainer from '../components/styled/HorizontalScrollContainer'
 import H1 from '../components/styled/H1'
-import Logo from '../components/Logo'
+// import Logo from '../components/Logo'
 
 import almaLogoWithBG from '../images/alma-logo-with-bg.svg'
 
@@ -355,29 +355,29 @@ const InstaSpacer = styled.div`
   grid-template-columns: repeat(8, 1fr);
 `
 
-const InstaLikes = styled.p`
-  grid-row: 1 / 9;
-  grid-column: 1 / 9;
-  margin: 0;
-  padding: 0;
-  justify-self: start;
-  align-self: end;
-  z-index: 5;
-  color: white;
-  justify-self: center;
-  font-size: calc(8px + (32 - 12) * ((100vw - 300px) / (1600 - 300)));
-`
+// const InstaLikes = styled.p`
+//   grid-row: 1 / 9;
+//   grid-column: 1 / 9;
+//   margin: 0;
+//   padding: 0;
+//   justify-self: start;
+//   align-self: end;
+//   z-index: 5;
+//   color: white;
+//   justify-self: center;
+//   font-size: calc(8px + (32 - 12) * ((100vw - 300px) / (1600 - 300)));
+// `
 
-const InstaComments = styled.p`
-  grid-row: 8 / 9;
-  grid-column: 5 / 9;
-  margin: 0;
-  padding: 0;
-  z-index: 5;
-  color: white;
-  justify-self: center;
-  font-size: calc(8px + (32 - 12) * ((100vw - 300px) / (1600 - 300)));
-`
+// const InstaComments = styled.p`
+//   grid-row: 8 / 9;
+//   grid-column: 5 / 9;
+//   margin: 0;
+//   padding: 0;
+//   z-index: 5;
+//   color: white;
+//   justify-self: center;
+//   font-size: calc(8px + (32 - 12) * ((100vw - 300px) / (1600 - 300)));
+// `
 
 const InstaImage = styled(Img)`
   grid-row: 1 / 9;
@@ -421,7 +421,6 @@ const Index = ({ data, intl }) => {
 
   return (
     
-    // <Fragment>
     <PageWrapper>
 
       <FullContentCard>
@@ -605,7 +604,6 @@ const Index = ({ data, intl }) => {
     </FullWidthContainer>
   
     </PageWrapper>
-    // </Fragment>
   )
 }
 

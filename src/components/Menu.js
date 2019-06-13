@@ -7,7 +7,7 @@ import { Link } from 'gatsby-plugin-intl'
 // import Button from './styled/Button'
 import Language from './Language'
 import almaBGShell from '../images/alma-bg-shell.svg'
-import almaBorder from '../images/alma-border.svg'
+// import almaBorder from '../images/alma-border.svg'
 // import Shell from './Shell'
 
 // import almaLogoWithBG from '../images/alma-logo-with-bg.svg'
