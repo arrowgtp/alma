@@ -9,7 +9,6 @@ import FullWidthContainer from '../components/styled/FullWidthContainer'
 import CenteredContainer from '../components/styled/CenteredContainer'
 import HorizontalScrollContainer from '../components/styled/HorizontalScrollContainer'
 import H1 from '../components/styled/H1'
-// import Logo from '../components/Logo'
 
 import almaLogoWithBG from '../images/alma-logo-with-bg.svg'
 
@@ -34,12 +33,7 @@ const MainLogo = styled.img`
   align-self: center;
   justify-self: center;
   filter: drop-shadow( 0px 0px 16px rgba(0, 0, 0, 0.25));
-  z-index: 1000;
-  /* filter: drop-shadow(
-    0 13px 27px -5px rgba(50,50,93,.25),
-    0 8px 16px -8px rgba(0,0,0,.3),
-    0 -6px 16px -6px rgba(0,0,0,.025)
-  ); */
+  z-index: 1;
 
   @media (min-width: 50rem) {
     grid-column: 4 / 6;
@@ -142,15 +136,10 @@ const NewsContainer = styled.div`
 
 const NewsCard = styled(Link)`
   box-sizing: border-box;
-  /* top: 0px; */
   margin: 0;
   padding: 0;
-  /* align-self: stretch;
-  justify-self: stretch; */
-  /* padding-top: calc(1 / (16/9) * 100%); */
   position: relative;
   text-decoration: none;
-  /* padding: 1rem; */
   line-height: 1;
   background: white;
   cursor: pointer;
@@ -161,8 +150,6 @@ const NewsCard = styled(Link)`
     0 8px 16px -8px rgba(0,0,0,.3),
     0 -6px 16px -6px rgba(0,0,0,.025)
   ;
-  /* padding-top: calc(1 / (16/12) * 100%); */
-  /* padding-bottom: 100%; */
   padding-top: 55%;
 
   :hover {
@@ -181,7 +168,6 @@ const NewsCard = styled(Link)`
   }
 
   @media (min-width: 50rem) {
-    /* padding-top: calc(1 / (16/8) * 100%); */
     padding-top: 55%;
   }
 `
@@ -197,8 +183,6 @@ const NewsContentWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(8, 1fr);
-  /* margin: 0;
-  padding: 0; */
 `
 
 const NewsTitle = styled.h1`
@@ -265,8 +249,6 @@ const NewsImage = styled(Img)`
   object-fit: cover;
   border-radius: 16px;
   z-index: 0;
-  /* margin: 0;
-  padding: 0; */
 `
 
 const NewsScrim = styled.div`
@@ -293,19 +275,11 @@ const NewsScrim = styled.div`
   );
   border-radius: 16px;
   z-index: 1;
-  /* margin: 0;
-  padding: 0; */
 `
 
 const InstaGrid = styled.div`
   margin: 0;
   padding: 2rem;
-  /* display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: repeat(4, 1fr); */
-  /* display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
-  grid-auto-rows: 1fr; */
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
@@ -347,7 +321,6 @@ const InstaSpacer = styled.div`
   position: absolute;
   top: 0;
   left: 0;
-  /* display: inline-block; */
   height: 100%;
   width: 100%;
   display: grid;

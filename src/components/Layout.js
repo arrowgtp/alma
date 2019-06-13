@@ -1,6 +1,5 @@
 import React, { Fragment } from 'react'
 import Helmet from 'react-helmet'
-// import { graphql } from 'gatsby' 
 import styled from 'styled-components'
 import { injectIntl } from 'gatsby-plugin-intl'
 import { TransitionProvider } from 'gatsby-plugin-transitions'
@@ -39,12 +38,13 @@ import almaBGShell from '../images/alma-bg-shell.svg'
 const App = styled.div`
   margin: 0;
   padding: 0;
-  height: 100%;
   height: 100vh;
+  width: 100vw;
   display: grid;
   grid-template-rows: 20vh 70vh 10vh;
   grid-template-columns: repeat(3, 1fr);
-  background: white;
+  background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMCIgaGVpZ2h0PSI5MCI+CjxyZWN0IHdpZHRoPSIzMCIgaGVpZ2h0PSI5MCIgZmlsbD0id2hpdGUiPjwvcmVjdD4KPHJlY3QgeD0iMTUiIHdpZHRoPSIyNSIgaGVpZ2h0PSI5MCIgZmlsbD0iI2ZjZmNmYyI+PC9yZWN0Pgo8L3N2Zz4=");
+  background-repeat: repeat;
 
   @media (min-width: 50rem) {
     grid-template-rows: 20vh 5vh 55vh 20vh;
@@ -135,12 +135,6 @@ const AlmaBGShell = styled.img`
 
 const SidePanelBackground = styled.div`
   display: none;
-  /* grid-column: 1 / 4;
-  grid-row: 3 / 4; */
-  box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.25);
-  box-shadow: 0 15px 30px 0 rgba(0,0,0,0.11),
-              0 5px 15px 0 rgba(0,0,0,0.08);
-  z-index: 0;
 
   @media (min-width: 50rem) {
     display: block;
@@ -148,18 +142,14 @@ const SidePanelBackground = styled.div`
     grid-row: 1 / 5;
     background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMCIgaGVpZ2h0PSI5MCI+CjxyZWN0IHdpZHRoPSIzMCIgaGVpZ2h0PSI5MCIgZmlsbD0id2hpdGUiPjwvcmVjdD4KPHJlY3QgeD0iMTUiIHdpZHRoPSIyNSIgaGVpZ2h0PSI5MCIgZmlsbD0iI2ZjZmNmYyI+PC9yZWN0Pgo8L3N2Zz4=");
     background-repeat: repeat;
+    box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.25);
+    box-shadow:
+      0 15px 30px 0 rgba(0,0,0,0.11),
+      0 5px 15px 0 rgba(0,0,0,0.08)
+    ;
+    z-index: 0;
   }
-`;
-
-// const titleQuery = graphql`
-//   query MainSiteTitleQuery {
-//     site {
-//       siteMetadata {
-//         title
-//       }
-//     }
-//   }
-// `;
+`
 
 const Layout = ({ location, children }) => {
   return (
@@ -181,9 +171,6 @@ const Layout = ({ location, children }) => {
           <Language />
         </Locales>
         <Menu changeMenuOn="50rem" />
-        {/* <Shell to={`/`}>
-          <img src={almaShell} alt="The Alma Resort Shell."  />
-        </Shell> */}
         <Contact>
           <Button>Join</Button>
         </Contact>

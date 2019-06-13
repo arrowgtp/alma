@@ -60,7 +60,6 @@ module.exports = {
         username: 'gia_arrowgtp',
       },
     },
-    `gatsby-plugin-twitter`,
     {
       resolve: `gatsby-plugin-intl`,
       options: {
