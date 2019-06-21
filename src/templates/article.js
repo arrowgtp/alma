@@ -8,16 +8,9 @@ import Img from 'gatsby-image'
 // import Collapsible from 'react-collapsible'
 // import slugify from 'react-slugify'
 
-
 import './article.css'
-import PageWrapper from '../components/PageWrapper'
 
-const MainContent = styled.div`
-  grid-column: 2 / 3;
-  padding: 1rem 0;
-  margin-top: -192px;
-  z-index: 2000;
-`
+import ViewContainer from '../components/ViewContainer'
 
 const TitleBlock = styled.div`
   margin: 0;
@@ -120,6 +113,13 @@ const TitleScrim = styled.div`
   z-index: 1;
 `
 
+const MainContentSection = styled.div`
+  grid-column: 2 / 3;
+  padding: 1rem 0;
+  margin-top: -192px;
+  z-index: 2000;
+`
+
 // const Content = styled.div`
 //   p {
 //     /* font-family: sans-serif; */
@@ -184,7 +184,7 @@ const Article = ({ data }) => {
   const { frontmatter, code } = data.mdx
   // const { frontmatter, code, tableOfContents } = data.mdx
   return (
-    <PageWrapper>
+    <ViewContainer>
       <MDXProvider>
       {/* <MDXProvider components={components}> */}
         {/* <TOC>
@@ -199,13 +199,13 @@ const Article = ({ data }) => {
           <TitleImage fluid={frontmatter.image.childImageSharp.fluid} alt="cool stuff." />
           <TitleScrim />
         </TitleBlock>
-        <MainContent>
+        <MainContentSection>
           <div>
             <MDXRenderer>{code.body}</MDXRenderer>
           </div>
-        </MainContent>
+        </MainContentSection>
       </MDXProvider> 
-    </PageWrapper>
+    </ViewContainer>
   )
 }
 

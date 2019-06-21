@@ -10,7 +10,7 @@
     "@reach/menu-button": "^0.1.17",
     "babel-plugin-styled-components": "^1.10.0",
     "gatsby": "^2.8.6",
-    "gatsby-cli": "^2.6.5",
+    "gatsby-cli": "^2.6.7",
     "gatsby-image": "^2.1.2",
     "gatsby-mdx": "^0.6.3",
     "gatsby-plugin-intl": "^0.1.7",
@@ -36,10 +36,11 @@
     "react-div-100vh": "^0.3.4",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
+    "react-pose": "^4.0.8",
     "react-responsive-navbar": "^1.0.11",
     "react-slugify": "^1.2.0",
-    "react-spring": "^8.0.20",
-    "react-transition-group": "^4.1.0",
+    "react-spring": "^8.0.25",
+    "react-transition-group": "^4.1.1",
     "styled-components": "^4.2.1"
   },
   "keywords": [

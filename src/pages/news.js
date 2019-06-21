@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import { graphql } from 'gatsby'
 import styled from 'styled-components'
 import { Link, injectIntl } from 'gatsby-plugin-intl'
 
-import PageWrapper from '../components/PageWrapper'
+import ViewContainer from '../components/ViewContainer'
 import CenteredContainer from '../components/styled/CenteredContainer'
 import H1 from '../components/styled/H1'
 
@@ -19,7 +19,7 @@ const P = styled.p`
 
 const News = ({ data, intl }) => {
   return (
-    <PageWrapper>
+    <ViewContainer>
       <CenteredContainer>
         <H1>Latest News</H1>
         <p>{intl.formatMessage({ id: "title" })}</p>
@@ -42,7 +42,7 @@ const News = ({ data, intl }) => {
           ))}
         </div>
       </CenteredContainer>
-    </PageWrapper>
+    </ViewContainer>
   )
 }
 

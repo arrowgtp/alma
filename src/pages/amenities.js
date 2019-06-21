@@ -1,13 +1,13 @@
 import React from 'react'
 import { injectIntl } from 'gatsby-plugin-intl'
 
-import PageWrapper from '../components/PageWrapper'
+import ViewContainer from '../components/ViewContainer'
 import CenteredContainer from '../components/styled/CenteredContainer'
 import H1 from '../components/styled/H1'
 
 const Amenities = ({ intl }) => {
   return (
-    <PageWrapper>
+    <ViewContainer>
       <CenteredContainer>
         <H1>The Amenities</H1>
         <p>
@@ -17,7 +17,7 @@ const Amenities = ({ intl }) => {
         <p>{intl.formatMessage({ id: "title" })}</p>
         <p>{intl.formatMessage({ id: "slogan" })}</p>
       </CenteredContainer>
-    </PageWrapper>
+    </ViewContainer>
   )
 }
 

@@ -135,9 +135,10 @@ const LargeMenu = styled.div`
 
   @media (min-width: ${props => props.size}) {
     grid-column: 1 / 2;
-    grid-row: 2 / 3;
+    grid-row: 4 / 5;
     height: 60vh;
     font-size: 18px;
+    align-self: center;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -288,6 +289,7 @@ class Menu extends Component {
     return (
       <>
         <LargeMenu size={changeMenuOn}>
+          <SLink to={`/story`}>Our Story</SLink>
           <SLink to={`/resort`}>The Resort</SLink>
           <SLink to={`/rooms`}>The Rooms</SLink>
           <SLink to={`/amenities`}>The Amenities</SLink>

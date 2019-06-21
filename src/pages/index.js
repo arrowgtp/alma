@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import Img from 'gatsby-image'
 import { Link, injectIntl } from 'gatsby-plugin-intl'
 
-import PageWrapper from '../components/PageWrapper'
+import ViewContainer from '../components/ViewContainer'
 import FullWidthContainer from '../components/styled/FullWidthContainer'
 import CenteredContainer from '../components/styled/CenteredContainer'
 import HorizontalScrollContainer from '../components/styled/HorizontalScrollContainer'
@@ -210,7 +210,7 @@ const NewsTitle = styled.h1`
 const NewsSubtitle = styled.h2`
   text-shadow: 0px 0px 32px rgba(0, 0, 0, 1);
   font-size: calc(12px + (18 - 12) * ((100vw - 300px) / (1600 - 300)));
-  font-family: 'Open Sans', sans-serif;
+  /* font-family: 'Open Sans', sans-serif; */
   color: #fff;
   margin: 0;
   padding: 0 0 0 1rem;
@@ -231,7 +231,7 @@ const NewsSubtitle = styled.h2`
 const NewsDate = styled.h3`
   text-shadow: 0px 0px 32px rgba(0, 0, 0, 1);
   font-size: calc(8px + (12 - 8) * ((100vw - 300px) / (1600 - 300)));
-  font-family: 'Open Sans', sans-serif;
+  /* font-family: 'Open Sans', sans-serif; */
   color: #fff;
   grid-column: 1 / 13;
   grid-row: 8 / 9;
@@ -391,14 +391,10 @@ const InstaScrim = styled.div`
 `
 
 const Index = ({ data, intl }) => {
-
   return (
-    
-    <PageWrapper>
-
+    <ViewContainer>
       <FullContentCard>
         <MainLogo src={almaLogoWithBG} alt="The Alma Resort Logo."  />
-        {/* <PageTitle>{intl.formatMessage({ id: "title" })}</PageTitle> */}
         <PageSlogan>{intl.formatMessage({ id: "slogan" })}</PageSlogan>
         <FullContentImage fluid={data.resortOverview.childImageSharp.fluid}/>
       </FullContentCard>
@@ -443,140 +439,135 @@ const Index = ({ data, intl }) => {
         </HorizontalScrollContainer>
       </FullWidthContainer>
 
-    <CenteredContainer>
-      <H1>Room<span>s</span></H1>
-      <p>Godfather ipsum dolor sit amet. If anything in this life is certain, if history has taught us anything, it is that you can kill anyone. What's the matter with you, huh? What am I going to do? Am I going to make that baby an orphan before he's born? I don't trust a doctor who can hardly speak English. Michael, you never told me you knew Johnny Fontane!</p>
-    </CenteredContainer>
+      <CenteredContainer>
+        <H1>Room<span>s</span></H1>
+        <p>Godfather ipsum dolor sit amet. If anything in this life is certain, if history has taught us anything, it is that you can kill anyone. What's the matter with you, huh? What am I going to do? Am I going to make that baby an orphan before he's born? I don't trust a doctor who can hardly speak English. Michael, you never told me you knew Johnny Fontane!</p>
+      </CenteredContainer>
 
-    <FullWidthContainer>
-      <HorizontalScrollContainer orange>
-        <Card>
-          <Img fluid={data.almaBathroom1.childImageSharp.fluid} />
-          <P>
-            Poop on grasses under the bed bathe private parts with tongue then lick owner's face so i can haz.
-          </P>
-        </Card>
-        <Card>
-          <Img fluid={data.almaBedroom1.childImageSharp.fluid} />
-          <P>
-            Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.
-          </P>
-        </Card>
-        <Card>
-          <Img fluid={data.almaKitchen1.childImageSharp.fluid} />
-          <P>
-            Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of darkness.
-          </P>
-        </Card>
-        <Card>
-         <Img fluid={data.almaLivingRoom1.childImageSharp.fluid} />
-          <P>
-            Short ribs bresaola bacon burgdoggen sausage biltong ham. Shankle beef ribs ham ribeye.
-          </P>
-        </Card>
-        <Card>
-         <Img fluid={data.almaLivingRoom2.childImageSharp.fluid} />
-          <P>
-            Short ribs bresaola bacon burgdoggen sausage biltong ham. Shankle beef ribs ham ribeye.
-          </P>
-        </Card>
-      </HorizontalScrollContainer>
-    </FullWidthContainer>
+      <FullWidthContainer>
+        <HorizontalScrollContainer orange>
+          <Card>
+            <Img fluid={data.almaBathroom1.childImageSharp.fluid} />
+            <P>
+              Poop on grasses under the bed bathe private parts with tongue then lick owner's face so i can haz.
+            </P>
+          </Card>
+          <Card>
+            <Img fluid={data.almaBedroom1.childImageSharp.fluid} />
+            <P>
+              Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.
+            </P>
+          </Card>
+          <Card>
+            <Img fluid={data.almaKitchen1.childImageSharp.fluid} />
+            <P>
+              Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of darkness.
+            </P>
+          </Card>
+          <Card>
+          <Img fluid={data.almaLivingRoom1.childImageSharp.fluid} />
+            <P>
+              Short ribs bresaola bacon burgdoggen sausage biltong ham. Shankle beef ribs ham ribeye.
+            </P>
+          </Card>
+          <Card>
+          <Img fluid={data.almaLivingRoom2.childImageSharp.fluid} />
+            <P>
+              Short ribs bresaola bacon burgdoggen sausage biltong ham. Shankle beef ribs ham ribeye.
+            </P>
+          </Card>
+        </HorizontalScrollContainer>
+      </FullWidthContainer>
 
-    <CenteredContainer>
-      <H1>Amenitie<span>s</span></H1>
-      <p>Godfather ipsum dolor sit amet. If anything in this life is certain, if history has taught us anything, it is that you can kill anyone. What's the matter with you, huh? What am I going to do? Am I going to make that baby an orphan before he's born? I don't trust a doctor who can hardly speak English. Michael, you never told me you knew Johnny Fontane!</p>
-    </CenteredContainer>
+      <CenteredContainer>
+        <H1>Amenitie<span>s</span></H1>
+        <p>Godfather ipsum dolor sit amet. If anything in this life is certain, if history has taught us anything, it is that you can kill anyone. What's the matter with you, huh? What am I going to do? Am I going to make that baby an orphan before he's born? I don't trust a doctor who can hardly speak English. Michael, you never told me you knew Johnny Fontane!</p>
+      </CenteredContainer>
 
-    <FullWidthContainer>
-      <HorizontalScrollContainer blue>
-        <Card>
-          <Img fluid={data.almaResort1.childImageSharp.fluid} />
-          <P>
-            Poop on grasses under the bed bathe private parts with tongue then lick owner's face so i can haz.
-          </P>
-        </Card>
-        <Card>
-          <Img fluid={data.almaResort2.childImageSharp.fluid} />
-          <P>
-            Cream at dripper chicory, carajillo milk acerbic java robusta, that ut, irish cultivar.
-          </P>
-        </Card>
-        <Card>
-          <Img fluid={data.almaResort3.childImageSharp.fluid} />
-          <P>
-            Leverage agile frameworks to provide a robust synopsis for high level overviews.
-          </P>
-        </Card>
-        <Card>
-          <Img fluid={data.almaResort4.childImageSharp.fluid} />
-          <P>
-            The path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of evil men.
-          </P>
-        </Card>
-        <Card>
-         <Img fluid={data.almaResort5.childImageSharp.fluid} />
-          <P>
-            Beef shank ham hock biltong. Beef ribs chuck fatback tail, cupim filet mignon strip steak spare ribs turducken tri-tip short loin.
-          </P>
-        </Card>
-      </HorizontalScrollContainer>
-    </FullWidthContainer>
+      <FullWidthContainer>
+        <HorizontalScrollContainer blue>
+          <Card>
+            <Img fluid={data.almaResort1.childImageSharp.fluid} />
+            <P>
+              Poop on grasses under the bed bathe private parts with tongue then lick owner's face so i can haz.
+            </P>
+          </Card>
+          <Card>
+            <Img fluid={data.almaResort2.childImageSharp.fluid} />
+            <P>
+              Cream at dripper chicory, carajillo milk acerbic java robusta, that ut, irish cultivar.
+            </P>
+          </Card>
+          <Card>
+            <Img fluid={data.almaResort3.childImageSharp.fluid} />
+            <P>
+              Leverage agile frameworks to provide a robust synopsis for high level overviews.
+            </P>
+          </Card>
+          <Card>
+            <Img fluid={data.almaResort4.childImageSharp.fluid} />
+            <P>
+              The path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of evil men.
+            </P>
+          </Card>
+          <Card>
+          <Img fluid={data.almaResort5.childImageSharp.fluid} />
+            <P>
+              Beef shank ham hock biltong. Beef ribs chuck fatback tail, cupim filet mignon strip steak spare ribs turducken tri-tip short loin.
+            </P>
+          </Card>
+        </HorizontalScrollContainer>
+      </FullWidthContainer>
 
-    <CenteredContainer>
-      <H1>New<span>s</span></H1>
-      <P>All the latest news that's fit to print about the worlds newest and brightest hotspot in the Vietnam travel scene</P>
-      <h4>{data.articles.totalCount} Posts</h4>
-    </CenteredContainer>
-  
-    <FullWidthContainer>
-      <NewsContainer>
-        {data.articles.edges.map(({ node }) => (
-          <NewsCard key={node.id} to={node.fields.slug}>
-            <NewsContentWrapper>
-              <NewsTitle>{node.frontmatter.title}</NewsTitle>
-              <NewsSubtitle>{node.frontmatter.subtitle}</NewsSubtitle>
-              <NewsDate>{node.frontmatter.date}</NewsDate>
-              <NewsImage fluid={node.frontmatter.image.childImageSharp.fluid} alt="cool stuff." />
-              <NewsScrim />
-            </NewsContentWrapper>
-          </NewsCard>
-        ))}
-      </NewsContainer>
+      <CenteredContainer>
+        <H1>New<span>s</span></H1>
+        <P>All the latest news that's fit to print about the worlds newest and brightest hotspot in the Vietnam travel scene</P>
+        <h4>{data.articles.totalCount} Posts</h4>
+      </CenteredContainer>
+    
+      <FullWidthContainer>
+        <NewsContainer>
+          {data.articles.edges.map(({ node }) => (
+            <NewsCard key={node.id} to={node.fields.slug}>
+              <NewsContentWrapper>
+                <NewsTitle>{node.frontmatter.title}</NewsTitle>
+                <NewsSubtitle>{node.frontmatter.subtitle}</NewsSubtitle>
+                <NewsDate>{node.frontmatter.date}</NewsDate>
+                <NewsImage fluid={node.frontmatter.image.childImageSharp.fluid} alt="cool stuff." />
+                <NewsScrim />
+              </NewsContentWrapper>
+            </NewsCard>
+          ))}
+        </NewsContainer>
 
-      {/* <News /> */}
+      </FullWidthContainer>
+    
+      <CenteredContainer>
+        <H1>About U<span>s</span></H1>
+        <p>Godfather ipsum dolor sit amet. If anything in this life is certain, if history has taught us anything, it is that you can kill anyone. What's the matter with you, huh? What am I going to do? Am I going to make that baby an orphan before he's born? I don't trust a doctor who can hardly speak English. Michael, you never told me you knew Johnny Fontane!</p>
+      </CenteredContainer>
+        
+      <CenteredContainer>
+        <H1>Instagra<span>m</span></H1>
+      </CenteredContainer>
 
-    </FullWidthContainer>
-  
-    <CenteredContainer>
-      <H1>About U<span>s</span></H1>
-      <p>Godfather ipsum dolor sit amet. If anything in this life is certain, if history has taught us anything, it is that you can kill anyone. What's the matter with you, huh? What am I going to do? Am I going to make that baby an orphan before he's born? I don't trust a doctor who can hardly speak English. Michael, you never told me you knew Johnny Fontane!</p>
-    </CenteredContainer>
-      
-    <CenteredContainer>
-      <H1>Instagra<span>m</span></H1>
-    </CenteredContainer>
+      <FullWidthContainer>
+        <InstaGrid>
+          {data.allInstaNode.edges.map(({ node }) => (
+            <InstaPost key={node.id}>
+              <InstaSpacer>
+                {/* <InstaLikes>❤️ {node.likes}</InstaLikes>
+                <InstaComments>💬 {node.comments}</InstaComments> */}
+                <InstaScrim />
+                {/* <InstaImage src={node.original} /> */}
+                <InstaImage fluid={node.localFile.childImageSharp.fluid} />
+              </InstaSpacer>
+            </InstaPost>
+          ))}
+        </InstaGrid>
 
-    <FullWidthContainer>
-      <InstaGrid>
-        {data.allInstaNode.edges.map(({ node }) => (
-          <InstaPost key={node.id}>
-            <InstaSpacer>
-              {/* <InstaLikes>❤️ {node.likes}</InstaLikes>
-              <InstaComments>💬 {node.comments}</InstaComments> */}
-              <InstaScrim />
-              {/* <InstaImage src={node.original} /> */}
-              <InstaImage fluid={node.localFile.childImageSharp.fluid} />
-            </InstaSpacer>
-          </InstaPost>
-        ))}
-      </InstaGrid>
-
-      {/* <Instagram /> */}
-
-    </FullWidthContainer>
-  
-    </PageWrapper>
+      </FullWidthContainer>
+    </ViewContainer>
   )
 }
 

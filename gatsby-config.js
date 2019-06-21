@@ -3,6 +3,8 @@ const path = require('path');
 module.exports = {
   siteMetadata: {
     title: `Alma Vacations`,
+    description: `This is the website of the Alma resort in Vietnam.`,
+    author: `Arrow GTP`
   },
   plugins: [
     `gatsby-plugin-netlify`,
@@ -57,7 +59,7 @@ module.exports = {
     {
       resolve: 'gatsby-source-instagram',
       options: {
-        username: 'gia_arrowgtp',
+        username: 'almavacations',
       },
     },
     {

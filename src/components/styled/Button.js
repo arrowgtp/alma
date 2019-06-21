@@ -1,9 +1,10 @@
 import styled from 'styled-components'
 
 export default styled.button`
-  background-color: rgb(45,101,142);
-  background: linear-gradient(0deg, rgba(45,101,142,1) 0%, rgba(81,168,190,1) 100%);
-  background: linear-gradient(0deg, hsla(205, 52%, 37%, 1) 0%, hsla(192, 46%, 53%, 1) 100%);
+  /* background-color: rgb(45,101,142); */
+  /* background: linear-gradient(0deg, rgba(45,101,142,1) 0%, rgba(81,168,190,1) 100%); */
+  /* background: linear-gradient(0deg, hsla(205, 52%, 37%, 1) 0%, hsla(192, 46%, 53%, 1) 100%); */
+  background: linear-gradient(0deg, hsla(200, 100%, 39%, 1) 0%, hsla(187, 100%, 38%, 1) 100%);
   border: 2px solid #AF875D;
   border-radius: 32px;
   color: white;

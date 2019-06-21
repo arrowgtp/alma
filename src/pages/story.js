@@ -5,7 +5,7 @@ import ViewContainer from '../components/ViewContainer'
 import CenteredContainer from '../components/styled/CenteredContainer'
 import H1 from '../components/styled/H1'
 
-const About = ({ intl }) => {
+const Story = ({ intl }) => {
   return (
     <ViewContainer>
       <CenteredContainer>
@@ -32,6 +32,4 @@ const About = ({ intl }) => {
   )
 }
 
-export default injectIntl(About)
-
-// export default About
+export default injectIntl(Story)
