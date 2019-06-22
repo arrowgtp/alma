@@ -185,5 +185,3 @@ const Layout = ({ children }) => {
 }
 
 export default injectIntl(Layout)
-
-// export default Layout
