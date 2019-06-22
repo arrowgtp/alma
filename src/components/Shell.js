@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import { Link } from 'gatsby-plugin-intl'
-// import { AniLink } from "gatsby-plugin-transition-link";
 // import almaLogoWithBG from '../images/alma-logo-with-bg.svg'
 
 // export default styled(Link)`

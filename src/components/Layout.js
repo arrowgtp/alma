@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { injectIntl } from 'gatsby-plugin-intl'
-// import { TransitionProvider } from 'gatsby-plugin-transitions'
+import { useSpring, animated } from 'react-spring'
 
 import './Layout.css'
 import Logo from './Logo'
@@ -15,9 +15,9 @@ import almaBGShell from '../images/alma-bg-shell.svg'
 import FacebookIcon from '../images/facebook-button.svg'
 import InstagramIcon from '../images/instagram-button.svg'
 import TwitterIcon from '../images/twitter-button.svg'
-// import almaLogoShellGrey from '../images/alma-logo-shell-grey.svg'
+import almaGreyShell from '../images/alma-logo-shell-grey.svg'
 
-const App = styled.div`
+const App = styled(animated.div)`
   margin: 0;
   padding: 0;
   height: 100vh;
@@ -73,11 +73,6 @@ const App = styled.div`
 // `
 
 const Locales = styled.div`
-  /* grid-column: 1 / 4;
-  grid-row: 2 / 3;
-  justify-content: center;
-  cursor: pointer;
-  z-index: 1000; */
   display: none;
 
   @media (min-width: 50rem) {
@@ -86,7 +81,6 @@ const Locales = styled.div`
     align-self: center;
     display: flex;
     justify-content: center;
-    cursor: pointer;
     z-index: 1000;
   }
 `;
@@ -97,13 +91,12 @@ const SocialButtons = styled.div`
   @media (min-width: 50rem) {
     display: flex;
     margin: 0;
+    padding: 0;
     grid-column: 1 / 2;
     grid-row: 3 / 4;
-    line-height: 1;
     align-self: center;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
     z-index: 1000; 
   }
 `
@@ -120,19 +113,9 @@ const SocialButton = styled.a`
       height: 32px;
       width: 32px;
     }
-
-    :nth-child(2) {
-      padding: 0;
-    }
 `
 
 const Contact = styled.div`
-  /* grid-column: 3 / 4;
-  grid-row: 4 / 5;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  z-index: 2; */
   display: none;
 
   @media (min-width: 50rem) {
@@ -160,6 +143,25 @@ const AlmaBGShell = styled.img`
   }
 `
 
+const AlmaGreyShell = styled.img`
+  display: none;
+
+  @media (min-width: 50rem) {
+    display: block;
+    margin: 0;
+    padding: 0;
+    grid-column: 2 / 4;
+    grid-row: 1 / 6;
+    z-index: 1;
+    opacity: 0.16;
+    align-self: center;
+    justify-self: center;
+    width: 16rem;
+    height: auto;
+    /* filter: drop-shadow(0px 0px 16px hsla(0, 0%, 0%, 0.5)); */
+  }
+`
+
 const SidePanelBackground = styled.div`
   display: none;
 
@@ -179,8 +181,11 @@ const SidePanelBackground = styled.div`
 `
 
 const Layout = ({ children }) => {
+
+  const fade = useSpring({opacity: 1, from: {opacity: 0}})
+
   return (
-    <App>
+    <App style={fade}>
       <Logo to={`/`}>
         <img src={almaLogoWithBG} alt="The Alma Resort Logo."  />
       </Logo>
@@ -189,13 +194,13 @@ const Layout = ({ children }) => {
       </Locales>
       <SocialButtons>
         <SocialButton href='https://www.facebook.com/almavacations'>
-          <img src={FacebookIcon} alt='The Alma Resort Facebook account.'  />
+          <img src={FacebookIcon} alt='The Alma Resort Facebook account.' />
         </SocialButton>
         <SocialButton href='https://www.instagram.com/almavacations'>
-          <img src={InstagramIcon} alt='The Alma Resort Instagram account.'  />
+          <img src={InstagramIcon} alt='The Alma Resort Instagram account.' />
         </SocialButton>
         <SocialButton href='https://www.twitter.com/almavacations'>
-          <img src={TwitterIcon} alt='The Alma Resort Twitter account.'  />
+          <img src={TwitterIcon} alt='The Alma Resort Twitter account.' />
         </SocialButton>
       </SocialButtons>
       <Menu changeMenuOn="50rem" />
@@ -205,34 +210,9 @@ const Layout = ({ children }) => {
       <Main>
         {children}
       </Main>
-      {/* <TransitionProvider location={location}>
-        {children}
-      </TransitionProvider> */}
-      {/* <TransitionProvider
-        location={location}
-        enter={{
-          opacity: 0,
-          config: {
-            mass: 1,
-            tension: 210,
-            friction: 20,
-            clamp: true
-          }
-        }}
-        usual={{
-          opacity: 1,
-        }}
-        leave={{
-          opacity: 0,
-          config: {
-            duration: 250
-          }
-        }}
-      >
-          {children}
-      </TransitionProvider> */}
       <SidePanelBackground />
       <AlmaBGShell src={almaBGShell}/>
+      <AlmaGreyShell src={almaGreyShell}/>
     </App>
   )
 }

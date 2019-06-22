@@ -1,9 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import styled from 'styled-components'
-import { useSpring, useTransition, animated } from 'react-spring'
-// import posed from 'react-pose';
-// import { Transition } from 'react-spring/renderprops'
-// import { TransitionProvider } from 'gatsby-plugin-transitions'
+import { animated } from 'react-spring'
 
 // const Main = styled.main`
 //   grid-column: 1 / 4;
