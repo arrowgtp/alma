@@ -110,22 +110,24 @@ const AlmaBGShell = styled.img`
 `
 
 const AlmaWhiteShell = styled.img`
-  display: none;
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 10rem;
+  height: auto;
+  grid-column: 1 / 4;
+  grid-row: 1 / 5;
+  z-index: 1;
+  opacity: 0.5;
+  align-self: center;
+  justify-self: center;
+  z-index: 0;
+  filter: drop-shadow(0px 0px 32px hsla(0, 0%, 0%, 0.1));
 
   @media (min-width: 50rem) {
-    display: block;
-    margin: 0;
-    padding: 0;
     grid-column: 2 / 4;
     grid-row: 1 / 6;
-    z-index: 1;
-    opacity: 0.5;
-    align-self: center;
-    justify-self: center;
     width: 16rem;
-    height: auto;
-    z-index: 0;
-    filter: drop-shadow(0px 0px 32px hsla(0, 0%, 0%, 0.1));
   }
 `
 
