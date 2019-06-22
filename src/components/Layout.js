@@ -15,7 +15,7 @@ import almaBGShell from '../images/alma-bg-shell.svg'
 import FacebookIcon from '../images/facebook-button.svg'
 import InstagramIcon from '../images/instagram-button.svg'
 import TwitterIcon from '../images/twitter-button.svg'
-import almaGreyShell from '../images/alma-logo-shell-grey.svg'
+import almaWhiteShell from '../images/alma-logo-shell-white.svg'
 
 const App = styled(animated.div)`
   margin: 0;
@@ -37,40 +37,6 @@ const App = styled(animated.div)`
     grid-template-rows: 20vh 5vh 5vh 50vh 20vh;
   }
 `
-
-// const Main = styled.main`
-//   margin: 0;
-//   padding: 0;
-//   grid-column: 1 / 4;
-//   grid-row: 1 / 3;
-//   background: white;
-//   overflow-y: scroll;
-//   -webkit-overflow-scrolling: touch;
-//   z-index: 0;
-//   display: grid;
-//   grid-template-columns: 
-//     minmax(1rem, 1fr) 
-//     minmax(1rem, 40rem) 
-//     minmax(1rem, 1fr);
-
-//   @media (min-width: 50rem) {
-//     grid-column: 2 / 3;
-//     grid-row: 1 / 5;
-//   }
-// `
-
-// const Main = styled.main`
-//   grid-column: 1 / 4;
-//   grid-row: 1 / 3;
-//   overflow: scroll;
-//   -webkit-overflow-scrolling: touch;
-//   will-change: scroll-position;
-
-//   @media (min-width: 50rem) {
-//     grid-column: 2 / 3;
-//     grid-row: 1 / 5;
-//   }
-// `
 
 const Locales = styled.div`
   display: none;
@@ -143,7 +109,7 @@ const AlmaBGShell = styled.img`
   }
 `
 
-const AlmaGreyShell = styled.img`
+const AlmaWhiteShell = styled.img`
   display: none;
 
   @media (min-width: 50rem) {
@@ -153,12 +119,13 @@ const AlmaGreyShell = styled.img`
     grid-column: 2 / 4;
     grid-row: 1 / 6;
     z-index: 1;
-    opacity: 0.16;
+    opacity: 0.5;
     align-self: center;
     justify-self: center;
     width: 16rem;
     height: auto;
-    /* filter: drop-shadow(0px 0px 16px hsla(0, 0%, 0%, 0.5)); */
+    z-index: 0;
+    filter: drop-shadow(0px 0px 32px hsla(0, 0%, 0%, 0.1));
   }
 `
 
@@ -212,7 +179,7 @@ const Layout = ({ children }) => {
       </Main>
       <SidePanelBackground />
       <AlmaBGShell src={almaBGShell}/>
-      <AlmaGreyShell src={almaGreyShell}/>
+      <AlmaWhiteShell src={almaWhiteShell}/>
     </App>
   )
 }
