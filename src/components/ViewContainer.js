@@ -19,7 +19,7 @@ const ViewContainer = (props) => {
   const transition = useTransition(state, null, { 
     from: { opacity: 0 },
     enter: { opacity: 1 },
-    leave: { opacity: 0 } 
+    leave: { opacity: 0 }
   });
   return transition.map(({ item, key, props: fade }) =>
     item && <Container key={key} style={fade}>{props.children}</Container>

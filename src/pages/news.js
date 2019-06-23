@@ -5,7 +5,7 @@ import { Link, injectIntl } from 'gatsby-plugin-intl'
 
 import ViewContainer from '../components/ViewContainer'
 import CenteredContainer from '../components/styled/CenteredContainer'
-import H1 from '../components/styled/H1'
+import AlmaHeader from '../components/Header'
 
 const NavLink = styled(Link)`
   text-decoration: none;
@@ -21,7 +21,7 @@ const News = ({ data, intl }) => {
   return (
     <ViewContainer>
       <CenteredContainer>
-        <H1>Latest News</H1>
+        <AlmaHeader title='Latest News' />
         <p>{intl.formatMessage({ id: "title" })}</p>
         <p>{intl.formatMessage({ id: "slogan" })}</p>
         <div>

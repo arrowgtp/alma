@@ -8,7 +8,8 @@ import ViewContainer from '../components/ViewContainer'
 import FullWidthContainer from '../components/styled/FullWidthContainer'
 import CenteredContainer from '../components/styled/CenteredContainer'
 import HorizontalScrollContainer from '../components/styled/HorizontalScrollContainer'
-import H1 from '../components/styled/H1'
+// import H1 from '../components/styled/H1'
+import AlmaHeader from '../components/Header'
 
 import almaLogoWithBG from '../images/alma-logo-with-bg.svg'
 
@@ -400,7 +401,7 @@ const Index = ({ data, intl }) => {
       </FullContentCard>
   
       <CenteredContainer>
-        <H1>Resor<span>t</span></H1>
+        <AlmaHeader title='Resort' />
         <P>Godfather ipsum dolor sit amet. If anything in this life is certain, if history has taught us anything, it is that you can kill anyone. What's the matter with you, huh? What am I going to do? Am I going to make that baby an orphan before he's born? I don't trust a doctor who can hardly speak English. Michael, you never told me you knew Johnny Fontane!</P>
       </CenteredContainer>
   
@@ -440,7 +441,7 @@ const Index = ({ data, intl }) => {
       </FullWidthContainer>
 
       <CenteredContainer>
-        <H1>Room<span>s</span></H1>
+        <AlmaHeader title='Rooms' />
         <p>Godfather ipsum dolor sit amet. If anything in this life is certain, if history has taught us anything, it is that you can kill anyone. What's the matter with you, huh? What am I going to do? Am I going to make that baby an orphan before he's born? I don't trust a doctor who can hardly speak English. Michael, you never told me you knew Johnny Fontane!</p>
       </CenteredContainer>
 
@@ -480,7 +481,7 @@ const Index = ({ data, intl }) => {
       </FullWidthContainer>
 
       <CenteredContainer>
-        <H1>Amenitie<span>s</span></H1>
+        <AlmaHeader title='Amenities' />
         <p>Godfather ipsum dolor sit amet. If anything in this life is certain, if history has taught us anything, it is that you can kill anyone. What's the matter with you, huh? What am I going to do? Am I going to make that baby an orphan before he's born? I don't trust a doctor who can hardly speak English. Michael, you never told me you knew Johnny Fontane!</p>
       </CenteredContainer>
 
@@ -520,7 +521,7 @@ const Index = ({ data, intl }) => {
       </FullWidthContainer>
 
       <CenteredContainer>
-        <H1>New<span>s</span></H1>
+        <AlmaHeader title='News' />
         <P>All the latest news that's fit to print about the worlds newest and brightest hotspot in the Vietnam travel scene</P>
         <h4>{data.articles.totalCount} Posts</h4>
       </CenteredContainer>
@@ -543,12 +544,12 @@ const Index = ({ data, intl }) => {
       </FullWidthContainer>
     
       <CenteredContainer>
-        <H1>About U<span>s</span></H1>
+        <AlmaHeader title='About' />
         <p>Godfather ipsum dolor sit amet. If anything in this life is certain, if history has taught us anything, it is that you can kill anyone. What's the matter with you, huh? What am I going to do? Am I going to make that baby an orphan before he's born? I don't trust a doctor who can hardly speak English. Michael, you never told me you knew Johnny Fontane!</p>
       </CenteredContainer>
         
       <CenteredContainer>
-        <H1>Instagra<span>m</span></H1>
+        <AlmaHeader title='Instagram' />
       </CenteredContainer>
 
       <FullWidthContainer>

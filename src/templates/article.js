@@ -15,7 +15,7 @@ import ViewContainer from '../components/ViewContainer'
 const TitleBlock = styled.div`
   margin: 0;
   padding: 0;
-  z-index: 9;
+  z-index: 8;
   grid-column: 1 / 4;
   grid-row: 1;
   width: 100%;
@@ -23,6 +23,8 @@ const TitleBlock = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
+  background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMCIgaGVpZ2h0PSIzMCI+CjxyZWN0IHdpZHRoPSIzMCIgaGVpZ2h0PSIzMCIgZmlsbD0iI2ZmZmZmZiI+PC9yZWN0Pgo8cmVjdCB4PSIxNSIgd2lkdGg9IjMwIiBoZWlnaHQ9IjMwIiBmaWxsPSIjZmRmZGZkIj48L3JlY3Q+Cjwvc3ZnPg==");
+    background-repeat: repeat;
 `
 
 const TitleText = styled.div`

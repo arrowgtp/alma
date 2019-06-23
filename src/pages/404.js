@@ -1,12 +1,12 @@
 import React from 'react'
-import H1 from '../components/styled/H1'
+import AlmaHeader from '../components/Header'
 import ViewContainer from '../components/ViewContainer'
 import CenteredContainer from '../components/styled/CenteredContainer'
 
 const NotFoundPage = () => (
   <ViewContainer>
     <CenteredContainer>
-      <H1>NOT FOUND</H1>
+      <AlmaHeader title='Uh Oh' />
       <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
     </CenteredContainer>
   </ViewContainer>
