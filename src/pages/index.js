@@ -540,7 +540,6 @@ const Index = ({ data, intl }) => {
             </NewsCard>
           ))}
         </NewsContainer>
-
       </FullWidthContainer>
     
       <CenteredContainer>
