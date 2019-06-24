@@ -8,7 +8,6 @@ import ViewContainer from '../components/ViewContainer'
 import FullWidthContainer from '../components/styled/FullWidthContainer'
 import CenteredContainer from '../components/styled/CenteredContainer'
 import HorizontalScrollContainer from '../components/styled/HorizontalScrollContainer'
-// import H1 from '../components/styled/H1'
 import AlmaHeader from '../components/Header'
 
 import almaLogoWithBG from '../images/alma-logo-with-bg.svg'

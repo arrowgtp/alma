@@ -204,34 +204,34 @@ const News = ({ data }) => {
   )
 }
 
-export const query = graphql`
-  query {
-    allMdx {
-      totalCount
-      edges {
-        node {
-          excerpt
-          fields {
-            slug
-          }
-          frontmatter {
-            title
-            subtitle
-            description
-            date(formatString: "MMMM Do, YYYY")
-            image {
-              childImageSharp {
-                fluid(maxWidth: 3840) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-`
+// export const query = graphql`
+//   query {
+//     allMdx {
+//       totalCount
+//       edges {
+//         node {
+//           excerpt
+//           fields {
+//             slug
+//           }
+//           frontmatter {
+//             title
+//             subtitle
+//             description
+//             date(formatString: "MMMM Do, YYYY")
+//             image {
+//               childImageSharp {
+//                 fluid(maxWidth: 3840) {
+//                   ...GatsbyImageSharpFluid
+//                 }
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// `
 
 export default injectIntl(News)
 

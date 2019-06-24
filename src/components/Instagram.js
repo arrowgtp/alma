@@ -129,32 +129,32 @@ const Instagram = ({ data }) => {
   )
 }
 
-export const query = graphql`
-  query {
-    allInstaNode(sort: { fields: [timestamp], order: DESC }) {
-      edges {
-        node {
-          id
-          likes
-          comments
-          mediaType
-          preview
-          original
-          timestamp
-          caption
-          thumbnails {
-            src
-            config_width
-            config_height
-          }
-          dimensions {
-            height
-            width
-          }
-        }
-      }
-    }
-  }
-`
+// export const query = graphql`
+//   query {
+//     allInstaNode(sort: { fields: [timestamp], order: DESC }) {
+//       edges {
+//         node {
+//           id
+//           likes
+//           comments
+//           mediaType
+//           preview
+//           original
+//           timestamp
+//           caption
+//           thumbnails {
+//             src
+//             config_width
+//             config_height
+//           }
+//           dimensions {
+//             height
+//             width
+//           }
+//         }
+//       }
+//     }
+//   }
+// `
 
 export default Instagram
