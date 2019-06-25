@@ -10,9 +10,6 @@ const HeaderContainer = styled.div`
   display: grid;
   grid-template-rows: 1;
   grid-template-columns: 1;
-  /* align-items: center;
-  justify-content: center; */
-  /* border: 1px solid red; */
 `
 
 const HeaderBackground = styled.img`
@@ -26,8 +23,8 @@ const HeaderBackground = styled.img`
   width: 100%;
   height: 100%;
   min-height: 8rem;
+  max-height: 12rem;
   object-fit: fill;
-  /* border: 1px solid red; */
 `
 
 const HeaderTitle = styled.h1`
@@ -46,7 +43,6 @@ const HeaderTitle = styled.h1`
   font-size: calc(10px + (50 - 10) * ((100vw - 300px) / (1600 - 300)));
   text-shadow: 0px 0px 8px hsla(0, 0%, 0%, 0.5);
   margin-right: -16px;
-  /* border: 1px solid red; */
 `
 
 const Header = (props) => {
