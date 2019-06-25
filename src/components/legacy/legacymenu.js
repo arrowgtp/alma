@@ -1,12 +1,39 @@
 import React, { useState, Fragment } from 'react'
+// import { Link } from 'gatsby'
+// import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { useSpring, animated } from 'react-spring'
 import { Link } from 'gatsby-plugin-intl'
 
+// import Button from './styled/Button'
 import Language from './Language'
-
 import almaBGShell from '../images/alma-bg-shell.svg'
+// import almaBorder from '../images/alma-border.svg'
+// import Shell from './Shell'
+
+// import almaLogoWithBG from '../images/alma-logo-with-bg.svg'
 import almaShell from '../images/alma-shell.svg'
+// import almaBGShell from '../images/alma-bg-shell.svg';
+
+// const SmallMenu = styled.div`
+//   text-align: center;
+//   margin: 0;
+//   padding: 0;
+//   text-decoration: none;
+//   grid-column: 1 / 2;
+//   grid-row: 3 / 4;
+//   z-index: 2;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: flex-end;
+//   justify-content: center;
+//   font-size: 10px;
+//   z-index: 10;
+
+//   @media (min-width: ${props => props.size}) {
+//     display: none;
+//   }
+// `
 
 const SmallMenu = styled.div`
   margin: 0;
@@ -214,10 +241,20 @@ const AlmaBGShell = styled.img`
   opacity: 0.5;
 `
 
+// const MenuIcon = ({ onClick }) => (
+//   <div role="button" onClick={onClick}>
+//     {/* <Button>Menu</Button> */}
+//   </div>
+// );
+
 const Menu = (props) => {
+
   const [ isToggled, setToggle ] = useState(false);
+
   const toggle = () => setToggle(!isToggled);
+
   const fade = useSpring({ opacity: toggle ? 1 : 0 });
+
   return (
     <Fragment>
       <LargeMenu>
@@ -255,6 +292,87 @@ const Menu = (props) => {
       </SmallMenu>
     </Fragment>
   )
+
 }
+
+// class Menu extends Component {
+  
+//   constructor(props) {
+//     super(props);
+
+//     this.state = {
+//       showMenu: false,
+//     }
+//   }
+
+//   handleClick = () => {
+//     this.setState({ showMenu: !this.state.showMenu });
+//   };
+
+//   handleClick = () => {
+//     this.setState(prevState => {
+//       return { showMenu: !prevState.showMenu }
+//     })
+//   }
+
+//   render() {
+
+//     const { changeMenuOn } = this.props
+
+//     // const [locale] = location.pathname.split('/').slice(1)
+
+//     return (
+//       <>
+//         <LargeMenu size={changeMenuOn}>
+//           <SLink to={`/story`}>Our Story</SLink>
+//           <SLink to={`/resort`}>The Resort</SLink>
+//           <SLink to={`/rooms`}>The Rooms</SLink>
+//           <SLink to={`/amenities`}>The Amenities</SLink>
+//           <SLink to={`/news`}>Latest News</SLink>
+//           <SLink to={`/about`}>About Alma</SLink>
+//         </LargeMenu>
+//         <SmallMenu size={changeMenuOn}>
+//           {!this.state.showMenu ? (
+//             <MenuButton onClick={this.handleClick}>Menu</MenuButton>
+//           ) : (
+//             <MenuButton onClick={this.handleClick}>Close</MenuButton>
+//           )}
+//           {this.state.showMenu ? (
+//             <MobileMenu>
+//               <SLink to={`/resort`} onClick={this.handleClick}>
+//                 The Resort
+//               </SLink>
+//               <SLink to={`/rooms`} onClick={this.handleClick}>
+//                 The Rooms
+//               </SLink>
+//               <SLink to={`/amenities`} onClick={this.handleClick}>
+//                 The Amenities
+//               </SLink>
+//               <SLink to={`/news`} onClick={this.handleClick}>
+//                 Latest News
+//               </SLink>
+//               <SLink to={`/about`} onClick={this.handleClick}>
+//                 About Alma
+//               </SLink>
+//               <Locales>
+//                 <Language />
+//               </Locales>
+//               <DownArrow />
+//               <AlmaBGShell src={almaBGShell}/>
+//             </MobileMenu>
+//           ) : null}
+//           <AlmaShell to={`/`}>
+//             <img src={almaShell} alt="The Alma Resort Shell."  />
+//           </AlmaShell>
+//           <JoinButton>Join</JoinButton>
+//         </SmallMenu>
+//       </>
+//     )
+//   }
+// }
+
+// Menu.propTypes = {
+//   changeMenuOn: PropTypes.string.isRequired,
+// }
 
 export default Menu

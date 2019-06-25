@@ -172,7 +172,7 @@ const Layout = ({ children }) => {
           <img src={TwitterIcon} alt='The Alma Resort Twitter account.' />
         </SocialButton>
       </SocialButtons>
-      <Menu changeMenuOn="50rem" />
+      <Menu/>
       <Contact>
         <Button>Join</Button>
       </Contact>
