@@ -211,6 +211,7 @@ const Locales = styled.div`
   justify-content: center;
   cursor: pointer;
   z-index: 1000;
+  -webkit-tap-highlight-color: transparent;
 `
 
 const AlmaBGShell = styled.img`
@@ -230,11 +231,6 @@ const Menu = () => {
   const node = useRef();
 
   const [ isToggled, setToggle ] = useState(false);
-
-  // const fade = useSpring({
-  //   opacity: isToggled ? 1 : 0,
-  //   config: { duration: 1000 }
-  // });
 
   const transition = useTransition(isToggled, null, { 
     from: { opacity: 0, transform: 'translate3d(-33%,60%,0) scale(0.1)' },
@@ -270,11 +266,13 @@ const Menu = () => {
         <AlmaLink to={`/about`}>About Alma</AlmaLink>
       </LargeMenu>
       <SmallMenu ref={node}>
-        {!isToggled ? (
-          <MenuButton onClick={toggle}>Menu</MenuButton>
-        ) : (
-          <MenuButton onClick={toggle}>Close</MenuButton>
-        )}
+        {!isToggled ?
+          (
+            <MenuButton onClick={toggle}>Menu</MenuButton>
+          ) : (
+            <MenuButton onClick={toggle}>Close</MenuButton>
+          )
+        }
         {transition.map(({ item, key, props: fade }) => (
           item && <MobileMenu key={key} style={fade}>
             <AlmaLink to={`/resort`} onClick={toggle}>The Resort</AlmaLink>

@@ -10,6 +10,7 @@ const LocaleButton = styled(Button)`
   font-size: 10px;
   max-height: 24px;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 
   :first-child {
     border-radius: 16px 0 0 16px;
