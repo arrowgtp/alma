@@ -8,8 +8,8 @@ const HeaderContainer = styled.div`
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-rows: 1;
-  grid-template-columns: 1;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
 `
 
 const HeaderBackground = styled.img`

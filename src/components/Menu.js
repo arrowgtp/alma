@@ -1,7 +1,7 @@
-import React, { useState, Fragment } from 'react'
+import React, { useState, useEffect, useRef, Fragment } from 'react'
 import styled from 'styled-components'
-import { useSpring, animated } from 'react-spring'
-import { Link } from 'gatsby-plugin-intl'
+import { useTransition, animated } from 'react-spring'
+import { Link, injectIntl } from 'gatsby-plugin-intl'
 
 import Language from './Language'
 
@@ -17,11 +17,10 @@ const SmallMenu = styled.div`
   right: 0;
   height: 10vh;
   background: white;
-  z-index: 100000000;
   display: grid;
   grid-template-columns: 3fr 2fr 3fr;
   grid-template-rows: 1fr;
-  z-index: 10;
+  z-index: 1000;
   box-shadow: 0px 0px 64px rgba(0, 0, 0, 0.25);
 
   @media (min-width: 50rem) {
@@ -43,7 +42,8 @@ const MobileMenu = styled(animated.div)`
   grid-template-rows: repeat(8, 1fr);
   grid-template-columns: repeat(8, 1fr);
   align-items: center;
-  box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.25);
+  z-index: 1000000;
 `
 
 const LargeMenu = styled.div`
@@ -86,34 +86,45 @@ const Button = styled.button`
   line-height: 1;
   outline: none;
   z-index: 100;
+  -webkit-tap-highlight-color: transparent;
   transition: background 500ms ease;
 
   :hover {
     background: linear-gradient(0deg, hsla(205, 58%, 33%, 1) 0%, hsla(192, 43%, 49%, 1) 100%);
     color: #eee;
     cursor: pointer;
+    outline: none;
   }
 
   :active {
+    outline: none;
+    /* box-shadow: 0px 0px 8px rgba(0, 0, 200, 0.5); */
+  }
 
+  :focus {
+    outline: none;
+    /* box-shadow: 0px 0px 8px rgba(0, 0, 200, 0.5); */
   }
 `
 
 const MenuButton = styled(Button)`
   grid-column: 1 / 2;
+  z-index: 100;
 `
 
 const JoinButton = styled(Button)`
   grid-column: 3 / 4;
+  z-index: 100;
 `
 
 const AlmaShell = styled(Link)`
   margin: 0;
   padding: 0;
   grid-column: 2 / 3;
-  z-index: 2;
+  z-index: 1;
   margin: 0;
   padding: 0;
+  -webkit-tap-highlight-color: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -211,13 +222,43 @@ const AlmaBGShell = styled.img`
   grid-row: 1 / 9;
   z-index: 1;
   object-fit: cover;
-  opacity: 0.5;
+  opacity: 0.25;
 `
 
-const Menu = (props) => {
+const Menu = () => {
+
+  const node = useRef();
+
   const [ isToggled, setToggle ] = useState(false);
+
+  // const fade = useSpring({
+  //   opacity: isToggled ? 1 : 0,
+  //   config: { duration: 1000 }
+  // });
+
+  const transition = useTransition(isToggled, null, { 
+    from: { opacity: 0, transform: 'translate3d(-33%,60%,0) scale(0.1)' },
+    enter: { opacity: 1, transform: 'translate3d(0,0%,0) scale(1)' },
+    leave: { opacity: 0, transform: 'translate3d(-33%,60%,0) scale(0.1)' }
+  });
+
   const toggle = () => setToggle(!isToggled);
-  const fade = useSpring({ opacity: toggle ? 1 : 0 });
+
+  const handleClick = e => {
+    if (node.current.contains(e.target)) {
+      return;
+    }
+    setToggle(false);
+  };
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClick);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClick);
+    };
+  }, []);
+
   return (
     <Fragment>
       <LargeMenu>
@@ -228,14 +269,14 @@ const Menu = (props) => {
         <AlmaLink to={`/news`}>Latest News</AlmaLink>
         <AlmaLink to={`/about`}>About Alma</AlmaLink>
       </LargeMenu>
-      <SmallMenu>
+      <SmallMenu ref={node}>
         {!isToggled ? (
           <MenuButton onClick={toggle}>Menu</MenuButton>
         ) : (
           <MenuButton onClick={toggle}>Close</MenuButton>
         )}
-        {isToggled ? (
-          <MobileMenu style={fade}>
+        {transition.map(({ item, key, props: fade }) => (
+          item && <MobileMenu key={key} style={fade}>
             <AlmaLink to={`/resort`} onClick={toggle}>The Resort</AlmaLink>
             <AlmaLink to={`/rooms`} onClick={toggle}>The Rooms</AlmaLink>
             <AlmaLink to={`/amenities`} onClick={toggle}>The Amenities</AlmaLink>
@@ -247,7 +288,7 @@ const Menu = (props) => {
             <DownArrow />
             <AlmaBGShell src={almaBGShell}/>
           </MobileMenu>
-        ) : null}
+          ))}
         <AlmaShell to={`/`}>
           <img src={almaShell} alt="The Alma Resort Shell."  />
         </AlmaShell>
@@ -257,4 +298,39 @@ const Menu = (props) => {
   )
 }
 
-export default Menu
+export default injectIntl(Menu)
+
+// export default Menu
+
+//  <MobileMenu style={fade}>
+//   <MobileMenu>
+//   <AlmaLink to={`/resort`} onClick={toggle}>The Resort</AlmaLink>
+//   <AlmaLink to={`/rooms`} onClick={toggle}>The Rooms</AlmaLink>
+//   <AlmaLink to={`/amenities`} onClick={toggle}>The Amenities</AlmaLink>
+//   <AlmaLink to={`/news`} onClick={toggle}>Latest News</AlmaLink>
+//   <AlmaLink to={`/about`} onClick={toggle}>About Alma</AlmaLink>
+//   <Locales>
+//     <Language />
+//   </Locales>
+//   <DownArrow />
+//   <AlmaBGShell src={almaBGShell}/>
+// </MobileMenu>{isToggled ? (
+
+// {isToggled ? (
+//   <>
+//     {transition.map(({ item, key, props: fade }) => (
+//       item && <MobileMenu key={key} style={fade}>
+//           <AlmaLink to={`/resort`} onClick={toggle}>The Resort</AlmaLink>
+//           <AlmaLink to={`/rooms`} onClick={toggle}>The Rooms</AlmaLink>
+//           <AlmaLink to={`/amenities`} onClick={toggle}>The Amenities</AlmaLink>
+//           <AlmaLink to={`/news`} onClick={toggle}>Latest News</AlmaLink>
+//           <AlmaLink to={`/about`} onClick={toggle}>About Alma</AlmaLink>
+//           <Locales>
+//             <Language />
+//           </Locales>
+//           <DownArrow />
+//           <AlmaBGShell src={almaBGShell}/>
+//       </MobileMenu>
+//      ))}
+//   </>
+// ) : null}
