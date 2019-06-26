@@ -5,8 +5,8 @@ import almaHeader from '../images/alma-header.svg'
 const HeaderContainer = styled.div`
   margin: 1rem 0;
   padding: 0;
-  width: 100%;
-  height: 100%;
+  /* width: 100%;
+  height: 100%; */
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: 1fr;
@@ -22,8 +22,8 @@ const HeaderBackground = styled.img`
   justify-self: stretch;
   width: 100%;
   height: 100%;
-  min-height: 8rem;
-  max-height: 12rem;
+  min-height: 6rem;
+  max-height: 8rem;
   object-fit: fill;
 `
 
@@ -40,7 +40,7 @@ const HeaderTitle = styled.h1`
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 16px;
-  font-size: calc(10px + (50 - 10) * ((100vw - 300px) / (1600 - 300)));
+  font-size: calc(16px + (32 - 16) * ((100vw - 300px) / (1600 - 300)));
   text-shadow: 0px 0px 8px hsla(0, 0%, 0%, 0.5);
   margin-right: -16px;
 `

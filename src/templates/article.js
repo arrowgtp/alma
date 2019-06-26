@@ -17,9 +17,9 @@ const TitleBlock = styled.div`
   padding: 0;
   z-index: 8;
   grid-column: 1 / 4;
-  grid-row: 1;
-  width: 100%;
-  height: 100%;
+  /* grid-row: 1; */
+  /* width: 100%; */
+  height: 100vh;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
@@ -89,6 +89,7 @@ const TitleImage = styled(Img)`
     hsla(0, 0%, 100%, 0.951) 84.5%,
     hsla(0, 0%, 100%, 0.987) 91.9%,
     hsl(0, 0%, 100%) 100%);
+    padding-bottom: 0;
 `
 
 const TitleScrim = styled.div`
