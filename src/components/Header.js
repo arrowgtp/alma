@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import almaHeader from '../images/alma-header.svg'
+import almaHeader from '../images/alma-header-2.svg'
 
 const HeaderContainer = styled.div`
   margin: 1rem 0;
