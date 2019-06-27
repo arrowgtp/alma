@@ -7,7 +7,7 @@
   viewBox="0 0 729 135"
 >
   <defs>
-    <filter
+    <!-- <filter
       id="innershadow"
       x0="-50%"
       y0="-50%"
@@ -41,7 +41,7 @@
         in2="SourceGraphic"
         operator="over"
       />
-    </filter>
+    </filter> -->
     <pattern
       id="DiamondDots"
       patternUnits="userSpaceOnUse"
