@@ -2,6 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import styled from 'styled-components'
 import { Link, injectIntl } from 'gatsby-plugin-intl'
+import SEO from "../components/seo"
 
 import ViewContainer from '../components/ViewContainer'
 import CenteredContainer from '../components/styled/CenteredContainer'
@@ -20,6 +21,7 @@ const P = styled.p`
 const News = ({ data, intl }) => {
   return (
     <ViewContainer>
+      <SEO title="News" />
       <CenteredContainer>
         <AlmaHeader title='Latest News' />
         <p>{intl.formatMessage({ id: "title" })}</p>

@@ -7,7 +7,7 @@
   viewBox="0 0 729 135"
 >
   <defs>
-    <!-- <filter
+    <filter
       id="innershadow"
       x0="-50%"
       y0="-50%"
@@ -31,7 +31,7 @@
       />
       <feFlood
         flood-color="black"
-        flood-opacity="0.75"
+        flood-opacity="0.5"
       />
       <feComposite
         in2="shadowDiff"
@@ -41,7 +41,7 @@
         in2="SourceGraphic"
         operator="over"
       />
-    </filter> -->
+    </filter>
     <pattern
       id="DiamondDots"
       patternUnits="userSpaceOnUse"
@@ -88,4 +88,6 @@
     d="M727.321 97.727c0 8.334-7.999 16.334-24 16.334h-318c-12.332 0-17.309 5.422-21.315 13.355-3.483-7.775-9.02-13.355-21.351-13.355h-318c-16 0-24-8-24-16.334V37.85c0-8.334 8-16.333 24-16.333h318c12.331 0 17.712-5.734 21.351-13.476 4.547 7.658 8.983 13.476 21.315 13.476h318c16.001 0 24 7.999 24 16.333v59.877z"
   />
 </svg>
+
+<!-- filter="url(#innershadow)" -->
 

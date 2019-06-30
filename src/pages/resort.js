@@ -1,5 +1,7 @@
 import React from 'react'
 import { injectIntl } from 'gatsby-plugin-intl'
+import SEO from "../components/seo"
+
 
 import ViewContainer from '../components/ViewContainer'
 import CenteredContainer from '../components/styled/CenteredContainer'
@@ -8,6 +10,7 @@ import AlmaHeader from '../components/Header'
 const Resort = ({ intl }) => {
   return (
     <ViewContainer>
+      <SEO title="Resort" />
       <CenteredContainer>
         <AlmaHeader title='The Resort' />
         <p>

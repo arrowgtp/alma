@@ -3,6 +3,7 @@ import { graphql } from 'gatsby'
 import styled from 'styled-components'
 import Img from 'gatsby-image'
 import { Link, injectIntl } from 'gatsby-plugin-intl'
+import SEO from "../components/seo"
 
 import ViewContainer from '../components/ViewContainer'
 import FullWidthContainer from '../components/styled/FullWidthContainer'
@@ -135,25 +136,23 @@ const NewsContainer = styled.div`
 `
 
 const NewsCard = styled(Link)`
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  position: relative;
-  text-decoration: none;
-  line-height: 1;
-  background: white;
-  cursor: pointer;
+  width: 100%;
+  height: 100%;
   border-radius: 16px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(8, 1fr);
   transition: All 250ms ease;
   box-shadow: 
     0 13px 27px -5px rgba(50,50,93,.25),
     0 8px 16px -8px rgba(0,0,0,.3),
     0 -6px 16px -6px rgba(0,0,0,.025)
   ;
-  padding-top: 55%;
+  transform: translateY(0px);
 
   :hover {
-
     box-shadow:
       0 30px 60px -12px rgba(50,50,93,.25),
       0 18px 36px -18px rgba(0,0,0,.3),
@@ -168,27 +167,13 @@ const NewsCard = styled(Link)`
   }
 
   @media (min-width: 50rem) {
-    padding-top: 55%;
   }
-`
-
-const NewsContentWrapper = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(8, 1fr);
 `
 
 const NewsTitle = styled.h1`
   text-shadow: 0px 0px 8px hsla(360, 100%, 100%, 1);
   font-size: calc(32px + (64 - 32) * ((100vw - 300px) / (1600 - 300)));
-  font-family: 'Caveat', 'Knewave', 'Oswald', 'Condiment', 'Over the Rainbow',  sans-serif;
+  font-family: 'Caveat', sans-serif;
   font-weight: normal;
   color: #fff;
   margin: 0;
@@ -200,7 +185,7 @@ const NewsTitle = styled.h1`
   grid-column: 1 / 13;
   grid-row: 5 / 7;
   align-self: end;
-  z-index: 5;
+  z-index: 2;
 
   @media (min-width: 800px) {
     font-size: calc(16px + (64 - 16) * ((100vw - 300px) / (1600 - 300)));
@@ -210,7 +195,7 @@ const NewsTitle = styled.h1`
 const NewsSubtitle = styled.h2`
   text-shadow: 0px 0px 32px rgba(0, 0, 0, 1);
   font-size: calc(12px + (18 - 12) * ((100vw - 300px) / (1600 - 300)));
-  /* font-family: 'Open Sans', sans-serif; */
+  font-family: 'Open Sans', sans-serif;
   color: #fff;
   margin: 0;
   padding: 0 0 0 1rem;
@@ -221,7 +206,7 @@ const NewsSubtitle = styled.h2`
   font-style: normal;
   grid-column: 1 / 13;
   grid-row: 7 / 8;
-  z-index: 4;
+  z-index: 2;
 
   @media (min-width: 800px) {
     font-size: calc(12px + (16 - 12) * ((100vw - 300px) / (1600 - 300)));
@@ -231,11 +216,11 @@ const NewsSubtitle = styled.h2`
 const NewsDate = styled.h3`
   text-shadow: 0px 0px 32px rgba(0, 0, 0, 1);
   font-size: calc(8px + (12 - 8) * ((100vw - 300px) / (1600 - 300)));
-  /* font-family: 'Open Sans', sans-serif; */
+  font-family: 'Open Sans', sans-serif;
   color: #fff;
   grid-column: 1 / 13;
   grid-row: 8 / 9;
-  z-index: 5;
+  z-index: 2;
   padding: 0 0 0 1rem;
   margin: 0;
 `
@@ -244,9 +229,7 @@ const NewsImage = styled(Img)`
   grid-column: 1 / 13;
   grid-row: 1 / 9;
   width: 100%;
-  height: 100%;
-  min-height: 100%;
-  object-fit: cover;
+  height: auto;
   border-radius: 16px;
   z-index: 0;
 `
@@ -393,6 +376,7 @@ const InstaScrim = styled.div`
 const Index = ({ data, intl }) => {
   return (
     <ViewContainer>
+      <SEO title="Home" />
       <FullContentCard>
         <MainLogo src={almaLogoWithBG} alt="The Alma Resort Logo."  />
         <PageSlogan>{intl.formatMessage({ id: "slogan" })}</PageSlogan>
@@ -529,13 +513,11 @@ const Index = ({ data, intl }) => {
         <NewsContainer>
           {data.articles.edges.map(({ node }) => (
             <NewsCard key={node.id} to={node.fields.slug}>
-              <NewsContentWrapper>
-                <NewsTitle>{node.frontmatter.title}</NewsTitle>
-                <NewsSubtitle>{node.frontmatter.subtitle}</NewsSubtitle>
-                <NewsDate>{node.frontmatter.date}</NewsDate>
-                <NewsImage fluid={node.frontmatter.image.childImageSharp.fluid} alt="cool stuff." />
-                <NewsScrim />
-              </NewsContentWrapper>
+              <NewsTitle>{node.frontmatter.title}</NewsTitle>
+              <NewsSubtitle>{node.frontmatter.subtitle}</NewsSubtitle>
+              <NewsDate>{node.frontmatter.date}</NewsDate>
+              <NewsImage fluid={node.frontmatter.image.childImageSharp.fluid} alt="cool stuff." />
+              <NewsScrim />
             </NewsCard>
           ))}
         </NewsContainer>

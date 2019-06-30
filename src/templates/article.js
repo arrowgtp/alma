@@ -5,6 +5,7 @@ import { injectIntl } from 'gatsby-plugin-intl'
 import MDXRenderer from 'gatsby-mdx/mdx-renderer'
 import { MDXProvider } from '@mdx-js/tag'
 import Img from 'gatsby-image'
+import SEO from "../components/seo"
 // import Collapsible from 'react-collapsible'
 // import slugify from 'react-slugify'
 
@@ -44,7 +45,7 @@ const Title =styled.h1`
   padding: 0;
   text-shadow: 0px 0px 8px hsla(360, 100%, 100%, 1);
   font-size: calc(48px + (96 - 48) * ((100vw - 300px) / (1600 - 300)));
-  font-family: 'Condiment', 'Caveat', 'Knewave', 'Oswald', sans-serif;
+  font-family: 'Caveat', sans-serif;
   font-weight: normal;
   color: #000;
 `
@@ -92,47 +93,47 @@ const TitleImage = styled(Img)`
     padding-bottom: 0;
 `
 
-const TitleScrim = styled.div`
-  grid-column: 1 / 4;
-  grid-row: 1 / 4;
-  width: 100%;
-  height: 100%;
-  height: 100vh;
-  background: linear-gradient(
-    to top,
-  hsl(0, 0%, 0%) 0%,
-  hsla(0, 0%, 0%, 0.738) 19%,
-  hsla(0, 0%, 0%, 0.541) 34%,
-  hsla(0, 0%, 0%, 0.382) 47%,
-  hsla(0, 0%, 0%, 0.278) 56.5%,
-  hsla(0, 0%, 0%, 0.194) 65%,
-  hsla(0, 0%, 0%, 0.126) 73%,
-  hsla(0, 0%, 0%, 0.075) 80.2%,
-  hsla(0, 0%, 0%, 0.042) 86.1%,
-  hsla(0, 0%, 0%, 0.021) 91%,
-  hsla(0, 0%, 0%, 0.008) 95.2%,
-  hsla(0, 0%, 0%, 0.002) 98.2%,
-  hsla(0, 0%, 0%, 0) 100%);
-  background: linear-gradient(
-    to bottom,
-    hsla(0, 0%, 100%, 0) 0%,
-    hsla(0, 0%, 100%, 0.013) 8.1%,
-    hsla(0, 0%, 100%, 0.049) 15.5%,
-    hsla(0, 0%, 100%, 0.104) 22.5%,
-    hsla(0, 0%, 100%, 0.175) 29%,
-    hsla(0, 0%, 100%, 0.259) 35.3%,
-    hsla(0, 0%, 100%, 0.352) 41.2%,
-    hsla(0, 0%, 100%, 0.45) 47.1%,
-    hsla(0, 0%, 100%, 0.55) 52.9%,
-    hsla(0, 0%, 100%, 0.648) 58.8%,
-    hsla(0, 0%, 100%, 0.741) 64.7%,
-    hsla(0, 0%, 100%, 0.825) 71%,
-    hsla(0, 0%, 100%, 0.896) 77.5%,
-    hsla(0, 0%, 100%, 0.951) 84.5%,
-    hsla(0, 0%, 100%, 0.987) 91.9%,
-    hsl(0, 0%, 100%) 100%);
-  z-index: 1;
-`
+// const TitleScrim = styled.div`
+//   grid-column: 1 / 4;
+//   grid-row: 1 / 4;
+//   width: 100%;
+//   height: 100%;
+//   height: 100vh;
+//   background: linear-gradient(
+//     to top,
+//   hsl(0, 0%, 0%) 0%,
+//   hsla(0, 0%, 0%, 0.738) 19%,
+//   hsla(0, 0%, 0%, 0.541) 34%,
+//   hsla(0, 0%, 0%, 0.382) 47%,
+//   hsla(0, 0%, 0%, 0.278) 56.5%,
+//   hsla(0, 0%, 0%, 0.194) 65%,
+//   hsla(0, 0%, 0%, 0.126) 73%,
+//   hsla(0, 0%, 0%, 0.075) 80.2%,
+//   hsla(0, 0%, 0%, 0.042) 86.1%,
+//   hsla(0, 0%, 0%, 0.021) 91%,
+//   hsla(0, 0%, 0%, 0.008) 95.2%,
+//   hsla(0, 0%, 0%, 0.002) 98.2%,
+//   hsla(0, 0%, 0%, 0) 100%);
+//   background: linear-gradient(
+//     to bottom,
+//     hsla(0, 0%, 100%, 0) 0%,
+//     hsla(0, 0%, 100%, 0.013) 8.1%,
+//     hsla(0, 0%, 100%, 0.049) 15.5%,
+//     hsla(0, 0%, 100%, 0.104) 22.5%,
+//     hsla(0, 0%, 100%, 0.175) 29%,
+//     hsla(0, 0%, 100%, 0.259) 35.3%,
+//     hsla(0, 0%, 100%, 0.352) 41.2%,
+//     hsla(0, 0%, 100%, 0.45) 47.1%,
+//     hsla(0, 0%, 100%, 0.55) 52.9%,
+//     hsla(0, 0%, 100%, 0.648) 58.8%,
+//     hsla(0, 0%, 100%, 0.741) 64.7%,
+//     hsla(0, 0%, 100%, 0.825) 71%,
+//     hsla(0, 0%, 100%, 0.896) 77.5%,
+//     hsla(0, 0%, 100%, 0.951) 84.5%,
+//     hsla(0, 0%, 100%, 0.987) 91.9%,
+//     hsl(0, 0%, 100%) 100%);
+//   z-index: 1;
+// `
 
 const MainContentSection = styled.div`
   grid-column: 2 / 3;
@@ -206,6 +207,7 @@ const Article = ({ data }) => {
   // const { frontmatter, code, tableOfContents } = data.mdx
   return (
     <ViewContainer>
+      <SEO title={frontmatter.title} />
       <MDXProvider>
       {/* <MDXProvider components={components}> */}
         {/* <TOC>

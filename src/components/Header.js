@@ -5,8 +5,6 @@ import almaHeader from '../images/alma-header-2.svg'
 const HeaderContainer = styled.div`
   margin: 1rem 0;
   padding: 0;
-  /* width: 100%;
-  height: 100%; */
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: 1fr;
@@ -21,7 +19,7 @@ const HeaderBackground = styled.img`
   align-self: stretch;
   justify-self: stretch;
   width: 100%;
-  height: 100%;
+  height: auto;
   min-height: 6rem;
   max-height: 8rem;
   object-fit: fill;

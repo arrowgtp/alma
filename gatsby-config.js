@@ -52,7 +52,7 @@ module.exports = {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         google: {
-          families: ['Knewave', 'Oswald', 'Average', 'Open Sans', 'Fira Sans', 'Nunito', 'Quicksand', 'Exo', 'Caveat', 'Nothing You Could Do', 'Over the Rainbow', 'Condiment']
+          families: ['Caveat', 'Open Sans']
         }
       }
     },
