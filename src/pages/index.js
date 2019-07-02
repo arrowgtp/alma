@@ -392,33 +392,33 @@ const Index = ({ data, intl }) => {
         <HorizontalScrollContainer blue>
           <Card>
             <Img fluid={data.almaResort1.childImageSharp.fluid} />
-            <P>
+            {/* <P>
               Poop on grasses under the bed bathe private parts with tongue then lick owner's face so i can haz.
-            </P>
+            </P> */}
           </Card>
           <Card>
             <Img fluid={data.almaResort2.childImageSharp.fluid} />
-            <P>
+            {/* <P>
               Cream at dripper chicory, carajillo milk acerbic java robusta, that ut, irish cultivar.
-            </P>
+            </P> */}
           </Card>
           <Card>
             <Img fluid={data.almaResort3.childImageSharp.fluid} />
-            <P>
+            {/* <P>
               Leverage agile frameworks to provide a robust synopsis for high level overviews.
-            </P>
+            </P> */}
           </Card>
           <Card>
             <Img fluid={data.almaResort4.childImageSharp.fluid} />
-            <P>
+            {/* <P>
               The path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of evil men.
-            </P>
+            </P> */}
           </Card>
           <Card>
           <Img fluid={data.almaResort1.childImageSharp.fluid} />
-            <P>
+            {/* <P>
               Beef shank ham hock biltong. Beef ribs chuck fatback tail, cupim filet mignon strip steak spare ribs turducken tri-tip short loin.
-            </P>
+            </P> */}
           </Card>
         </HorizontalScrollContainer>
       </FullWidthContainer>
@@ -432,33 +432,33 @@ const Index = ({ data, intl }) => {
         <HorizontalScrollContainer orange>
           <Card>
             <Img fluid={data.almaBathroom1.childImageSharp.fluid} />
-            <P>
+            {/* <P>
               Poop on grasses under the bed bathe private parts with tongue then lick owner's face so i can haz.
-            </P>
+            </P> */}
           </Card>
           <Card>
             <Img fluid={data.almaBedroom1.childImageSharp.fluid} />
-            <P>
+            {/* <P>
               Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.
-            </P>
+            </P> */}
           </Card>
           <Card>
             <Img fluid={data.almaKitchen1.childImageSharp.fluid} />
-            <P>
+            {/* <P>
               Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of darkness.
-            </P>
+            </P> */}
           </Card>
           <Card>
           <Img fluid={data.almaLivingRoom1.childImageSharp.fluid} />
-            <P>
+            {/* <P>
               Short ribs bresaola bacon burgdoggen sausage biltong ham. Shankle beef ribs ham ribeye.
-            </P>
+            </P> */}
           </Card>
           <Card>
           <Img fluid={data.almaLivingRoom2.childImageSharp.fluid} />
-            <P>
+            {/* <P>
               Short ribs bresaola bacon burgdoggen sausage biltong ham. Shankle beef ribs ham ribeye.
-            </P>
+            </P> */}
           </Card>
         </HorizontalScrollContainer>
       </FullWidthContainer>
@@ -472,33 +472,33 @@ const Index = ({ data, intl }) => {
         <HorizontalScrollContainer blue>
           <Card>
             <Img fluid={data.almaResort1.childImageSharp.fluid} />
-            <P>
+            {/* <P>
               Poop on grasses under the bed bathe private parts with tongue then lick owner's face so i can haz.
-            </P>
+            </P> */}
           </Card>
           <Card>
             <Img fluid={data.almaResort2.childImageSharp.fluid} />
-            <P>
+            {/* <P>
               Cream at dripper chicory, carajillo milk acerbic java robusta, that ut, irish cultivar.
-            </P>
+            </P> */}
           </Card>
           <Card>
             <Img fluid={data.almaResort3.childImageSharp.fluid} />
-            <P>
+            {/* <P>
               Leverage agile frameworks to provide a robust synopsis for high level overviews.
-            </P>
+            </P> */}
           </Card>
           <Card>
             <Img fluid={data.almaResort4.childImageSharp.fluid} />
-            <P>
+            {/* <P>
               The path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of evil men.
-            </P>
+            </P> */}
           </Card>
           <Card>
           <Img fluid={data.almaResort5.childImageSharp.fluid} />
-            <P>
+            {/* <P>
               Beef shank ham hock biltong. Beef ribs chuck fatback tail, cupim filet mignon strip steak spare ribs turducken tri-tip short loin.
-            </P>
+            </P> */}
           </Card>
         </HorizontalScrollContainer>
       </FullWidthContainer>

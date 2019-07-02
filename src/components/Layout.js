@@ -147,7 +147,7 @@ const SidePanelBackground = styled.div`
 
 const Layout = ({ children }) => {
 
-  const fade = useSpring({opacity: 1, from: {opacity: 0}})
+  const fade = useSpring({opacity: 1, from: {opacity: 0}, config: {duration: 250}})
 
   return (
     <App style={fade}>
