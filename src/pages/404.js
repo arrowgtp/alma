@@ -2,7 +2,7 @@ import React from 'react'
 import SEO from '../components/seo'
 
 import AlmaHeader from '../components/Header'
-import ViewContainer from '../components/ViewContainer'
+import ViewContainer from '../components/layout/ViewContainer'
 import CenteredContainer from '../components/styled/CenteredContainer'
 
 const NotFoundPage = () => (

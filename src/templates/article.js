@@ -11,7 +11,7 @@ import SEO from "../components/seo"
 
 import './article.css'
 
-import ViewContainer from '../components/ViewContainer'
+import ViewContainer from '../components/layout/ViewContainer'
 
 const TitleBlock = styled.div`
   margin: 0;

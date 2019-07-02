@@ -5,7 +5,7 @@ import Img from 'gatsby-image'
 import { injectIntl } from 'gatsby-plugin-intl'
 import SEO from "../components/seo"
 
-import ViewContainer from '../components/ViewContainer'
+import ViewContainer from '../components/layout/ViewContainer'
 import FullWidthContainer from '../components/styled/FullWidthContainer'
 
 const TeamGrid = styled.div`

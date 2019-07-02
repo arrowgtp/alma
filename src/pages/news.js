@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { Link, injectIntl } from 'gatsby-plugin-intl'
 import SEO from "../components/seo"
 
-import ViewContainer from '../components/ViewContainer'
+import ViewContainer from '../components/layout/ViewContainer'
 import CenteredContainer from '../components/styled/CenteredContainer'
 import AlmaHeader from '../components/Header'
 

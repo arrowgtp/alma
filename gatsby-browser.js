@@ -1,5 +1,4 @@
 // import React, { useEffect } from 'react'
-// import Div100vh from 'react-div-100vh'
 
 // const WrapperComponent = (props) => {
 //   useEffect(() => {
@@ -16,9 +15,7 @@
 // export const wrapRootElement = ({ element }) => { 
 //   return (
 //     <WrapperComponent>
-//       <Div100vh>
 //         {element}
-//       </Div100vh>
 //     </WrapperComponent>
 //   )
 // }

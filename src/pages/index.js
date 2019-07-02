@@ -5,7 +5,7 @@ import Img from 'gatsby-image'
 import { Link, injectIntl } from 'gatsby-plugin-intl'
 import SEO from "../components/seo"
 
-import ViewContainer from '../components/ViewContainer'
+import ViewContainer from '../components/layout/ViewContainer'
 import FullWidthContainer from '../components/styled/FullWidthContainer'
 import CenteredContainer from '../components/styled/CenteredContainer'
 import HorizontalScrollContainer from '../components/styled/HorizontalScrollContainer'
@@ -24,6 +24,7 @@ const FullContentCard = styled.div`
 
   @media (min-width: 50rem) {
     height: 100vh;
+    /* height: 100%; */
   }
 `
 
@@ -93,7 +94,7 @@ const Card = styled.div`
   }
 
   :last-child {
-    margin-right: 0;
+    margin-right: 1rem;
   }
 
   @media (min-width: 50rem) {
