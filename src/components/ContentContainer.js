@@ -8,6 +8,7 @@ const Main = styled.main`
   grid-row: 1 / 3;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
+  /* will-change: initial; */
   z-index: 1;
 
   @media (min-width: 50rem) {
