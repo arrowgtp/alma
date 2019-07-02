@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { injectIntl } from 'gatsby-plugin-intl'
-import { useSpring, animated } from 'react-spring'
+// import { useSpring, animated } from 'react-spring'
 
 import './Layout.css'
 import Logo from './Logo'
@@ -151,10 +151,10 @@ const SidePanelBackground = styled.div`
 
 const Layout = ({ children }) => {
 
-  const fade = useSpring({opacity: 1, from: {opacity: 0}, config: {duration: 250}})
+  // const fade = useSpring({opacity: 1, from: {opacity: 0}, config: {duration: 250}})
 
   return (
-    <AppContainer style={fade}>
+    <AppContainer>
       <Logo to={`/`}>
         <img src={almaLogoWithBG} alt="The Alma Resort Logo."  />
       </Logo>
