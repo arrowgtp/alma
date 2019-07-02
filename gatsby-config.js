@@ -37,18 +37,6 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-remark`,
     {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `Alma`,
-        short_name: `Alma`,
-        start_url: `/`,
-        background_color: `#ffffff`,
-        theme_color: `#ffffff`,
-        display: 'minimal-ui',
-        icon: `src/images/alma-shell.svg`,
-      },
-    },
-    {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         google: {
@@ -69,6 +57,18 @@ module.exports = {
         languages: ['en', 'vi'],
         defaultLanguage: 'en',
         redirect: true,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Alma`,
+        short_name: `Alma`,
+        start_url: `/`,
+        background_color: `#ffffff`,
+        theme_color: `#ffffff`,
+        display: 'minimal-ui',
+        icon: `src/images/alma-shell.svg`,
       },
     },
     `gatsby-plugin-offline`

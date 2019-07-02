@@ -20,8 +20,8 @@ import almaWhiteShell from '../images/alma-logo-shell-white.svg'
 const App = styled(animated.div)`
   margin: 0;
   padding: 0;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   display: grid;
   grid-template-rows: 20vh 70vh 10vh;
   grid-template-columns: repeat(3, 1fr);
@@ -30,11 +30,8 @@ const App = styled(animated.div)`
 
   @media (min-width: 50rem) {
     grid-template-rows: 20vh 5vh 5vh 50vh 20vh;
+    /* grid-template-rows: 4fr 1fr 1fr 10fr 4fr; */
     grid-template-columns: 1fr 3fr;
-  }
-
-  @media (min-width: 60rem) {
-    grid-template-rows: 20vh 5vh 5vh 50vh 20vh;
   }
 `
 
@@ -89,7 +86,6 @@ const Contact = styled.div`
     grid-row: 5 / 6;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
     justify-content: center;
     z-index: 1000;
   }

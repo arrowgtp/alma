@@ -503,7 +503,7 @@ const Index = ({ data, intl }) => {
         </HorizontalScrollContainer>
       </FullWidthContainer>
 
-      <CenteredContainer>
+      {/* <CenteredContainer>
         <AlmaHeader title='News' />
         <P>All the latest news that's fit to print about the worlds newest and brightest hotspot in the Vietnam travel scene</P>
         <h4>{data.articles.totalCount} Posts</h4>
@@ -521,14 +521,14 @@ const Index = ({ data, intl }) => {
             </NewsCard>
           ))}
         </NewsContainer>
-      </FullWidthContainer>
+      </FullWidthContainer> */}
     
       <CenteredContainer>
         <AlmaHeader title='About' />
         <p>Godfather ipsum dolor sit amet. If anything in this life is certain, if history has taught us anything, it is that you can kill anyone. What's the matter with you, huh? What am I going to do? Am I going to make that baby an orphan before he's born? I don't trust a doctor who can hardly speak English. Michael, you never told me you knew Johnny Fontane!</p>
       </CenteredContainer>
         
-      <CenteredContainer>
+      {/* <CenteredContainer>
         <AlmaHeader title='Instagram' />
       </CenteredContainer>
 
@@ -537,17 +537,17 @@ const Index = ({ data, intl }) => {
           {data.allInstaNode.edges.map(({ node }) => (
             <InstaPost key={node.id}>
               <InstaSpacer>
-                {/* <InstaLikes>❤️ {node.likes}</InstaLikes>
-                <InstaComments>💬 {node.comments}</InstaComments> */}
+                <InstaLikes>❤️ {node.likes}</InstaLikes>
+                <InstaComments>💬 {node.comments}</InstaComments>
                 <InstaScrim />
-                {/* <InstaImage src={node.original} /> */}
+                <InstaImage src={node.original} />
                 <InstaImage fluid={node.localFile.childImageSharp.fluid} />
               </InstaSpacer>
             </InstaPost>
           ))}
         </InstaGrid>
+      </FullWidthContainer> */}
 
-      </FullWidthContainer>
     </ViewContainer>
   )
 }
