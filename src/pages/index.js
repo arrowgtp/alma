@@ -24,7 +24,6 @@ const FullContentCard = styled.div`
 
   @media (min-width: 50rem) {
     height: 100vh;
-    /* height: 100%; */
   }
 `
 
@@ -80,14 +79,15 @@ const PageSlogan = styled.div`
 const Card = styled.div`
   flex: 0 0 auto;
   margin: 1rem 0.5rem;
-  padding: 0.55rem; 
+  padding: 0.25rem;
+  /* padding: 0rem;  */
   width: 80%;
   background: white;
   line-height: 1;
   /* font-size: 18px; */
   white-space: pre-wrap;
   border-radius: 8px;
-  box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.5);
 
   :first-child {
     margin-left: 1rem;
@@ -117,6 +117,7 @@ const P = styled.p`
 `
 
 const NewsContainer = styled.div`
+  z-index: 5;
   grid-column: 1 / 8;
   margin: 0;
   padding: 2rem;
@@ -141,13 +142,14 @@ const NewsContainer = styled.div`
   }
 `
 
-const NewsCard = styled(Link)`
+const NewsCardOne = styled(Link)`
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
   border-radius: 16px;
   display: grid;
+  z-index: 1;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(8, 1fr);
   transition: All 250ms ease;
@@ -176,7 +178,7 @@ const NewsCard = styled(Link)`
   }
 `
 
-const NewsTitle = styled.h1`
+const NewsTitleOne = styled.h1`
   text-shadow: 0px 0px 8px hsla(360, 100%, 100%, 1);
   font-size: calc(32px + (64 - 32) * ((100vw - 300px) / (1600 - 300)));
   font-family: 'Caveat', sans-serif;
@@ -191,14 +193,14 @@ const NewsTitle = styled.h1`
   grid-column: 1 / 13;
   grid-row: 5 / 7;
   align-self: end;
-  z-index: 2;
+  z-index: 10;
 
   @media (min-width: 800px) {
     font-size: calc(16px + (64 - 16) * ((100vw - 300px) / (1600 - 300)));
   }
 `
 
-const NewsSubtitle = styled.h2`
+const NewsSubtitleOne = styled.h2`
   text-shadow: 0px 0px 32px rgba(0, 0, 0, 1);
   font-size: calc(12px + (18 - 12) * ((100vw - 300px) / (1600 - 300)));
   font-family: 'Open Sans', sans-serif;
@@ -212,35 +214,35 @@ const NewsSubtitle = styled.h2`
   font-style: normal;
   grid-column: 1 / 13;
   grid-row: 7 / 8;
-  z-index: 2;
+  z-index: 10;
 
   @media (min-width: 800px) {
     font-size: calc(12px + (16 - 12) * ((100vw - 300px) / (1600 - 300)));
   }
 `
 
-const NewsDate = styled.h3`
+const NewsDateOne = styled.h3`
   text-shadow: 0px 0px 32px rgba(0, 0, 0, 1);
   font-size: calc(8px + (12 - 8) * ((100vw - 300px) / (1600 - 300)));
   font-family: 'Open Sans', sans-serif;
   color: #fff;
   grid-column: 1 / 13;
   grid-row: 8 / 9;
-  z-index: 2;
+  z-index: 10;
   padding: 0 0 0 1rem;
   margin: 0;
 `
 
-const NewsImage = styled(Img)`
+const NewsImageOne = styled(Img)`
   grid-column: 1 / 13;
   grid-row: 1 / 9;
   width: 100%;
   height: auto;
   border-radius: 16px;
-  z-index: 0;
+  z-index: 1;
 `
 
-const NewsScrim = styled.div`
+const NewsScrimOne = styled.div`
   grid-column: 1 / 13;
   grid-row: 1 / 9;
   background: linear-gradient(
@@ -263,7 +265,88 @@ const NewsScrim = styled.div`
     hsla(0, 0%, 0%, 0.5) 100%
   );
   border-radius: 16px;
+  z-index: 2;
+`
+
+const NewsCard = styled(Link)`
+  text-decoration: none;
+  background: white;
+  border-radius: 16px;
   z-index: 1;
+  box-shadow: 
+    0 13px 27px -5px rgba(50,50,93,0.1),
+    0 8px 16px -8px rgba(0,0,0,0.15),
+    0 -6px 16px -6px rgba(0,0,0,0.01)
+  ;
+`
+
+const NewsImage = styled(Img)`
+  position: relative;
+  margin: 0;
+  border-radius: 16px 16px 0 0;
+  z-index: 0;
+  background: white;
+  /* box-shadow: 
+    0 13px 27px -5px rgba(50,50,93,.25),
+    0 8px 16px -8px rgba(0,0,0,.3),
+    0 -6px 16px -6px rgba(0,0,0,.025)
+  ; */
+  /* mask-image: linear-gradient(
+    to top,
+    hsla(0, 0%, 100%, 0) 0%,
+    hsla(0, 0%, 100%, 0.013) 8.1%,
+    hsla(0, 0%, 100%, 0.049) 15.5%,
+    hsla(0, 0%, 100%, 0.104) 22.5%,
+    hsla(0, 0%, 100%, 0.175) 29%,
+    hsla(0, 0%, 100%, 0.259) 35.3%,
+    hsla(0, 0%, 100%, 0.352) 41.2%,
+    hsla(0, 0%, 100%, 0.45) 47.1%,
+    hsla(0, 0%, 100%, 0.55) 52.9%,
+    hsla(0, 0%, 100%, 0.648) 58.8%,
+    hsla(0, 0%, 100%, 0.741) 64.7%,
+    hsla(0, 0%, 100%, 0.825) 71%,
+    hsla(0, 0%, 100%, 0.896) 77.5%,
+    hsla(0, 0%, 100%, 0.951) 84.5%,
+    hsla(0, 0%, 100%, 0.987) 91.9%,
+    hsl(0, 0%, 100%) 100%) */
+  ;
+`
+
+const NewsTitle = styled.h1`
+  font-size: calc(16px + (64 - 16) * ((100vw - 300px) / (1600 - 300)));
+  font-family: 'DM Serif Display';
+  color: black;
+  margin: calc(8px + (32 - 8) * ((100vw - 300px) / (1600 - 300)));
+  z-index: 2;
+`
+
+const NewsDate = styled.p`
+  font-size: 12px;
+  font-family: 'DM Serif Display';
+  font-style: italic;
+  margin: calc(8px + (32 - 8) * ((100vw - 300px) / (1600 - 300)));
+`
+
+const NewsSubtitle = styled.p`
+  font-size: calc(10px + (16 - 10) * ((100vw - 300px) / (1600 - 300)));
+  margin: calc(8px + (32 - 8) * ((100vw - 300px) / (1600 - 300)));
+`
+
+const AlmaSeparator = styled.hr`
+  margin: 1rem 2rem;
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    hsla(29, 47%, 75%, 1),
+    hsla(29, 47%, 75%, 1),
+    hsla(29, 47%, 75%, 1)
+  );
+`
+
+const NewsExcerpt = styled.p`
+  font-size: calc(8px + (12 - 8) * ((100vw - 300px) / (1600 - 300)));
+  margin: calc(8px + (32 - 8) * ((100vw - 300px) / (1600 - 300)));
 `
 
 const InstaGrid = styled.div`
@@ -509,25 +592,40 @@ const Index = ({ data, intl }) => {
         </HorizontalScrollContainer>
       </FullWidthContainer>
 
-      {/* <CenteredContainer>
+      <CenteredContainer>
         <AlmaHeader title='News' />
         <P>All the latest news that's fit to print about the worlds newest and brightest hotspot in the Vietnam travel scene</P>
         <h4>{data.articles.totalCount} Posts</h4>
       </CenteredContainer>
     
+      {/* <FullWidthContainer>
+        <NewsContainer>
+          {data.articles.edges.map(({ node }) => (
+            <NewsCardOne key={node.id} to={node.fields.slug}>
+              <NewsTitleOne>{node.frontmatter.title}</NewsTitleOne>
+              <NewsSubtitleOne>{node.frontmatter.subtitle}</NewsSubtitleOne>
+              <NewsDateOne>{node.frontmatter.date}</NewsDateOne>
+              <NewsImageOne fluid={node.frontmatter.image.childImageSharp.fluid} alt="cool stuff." />
+              <NewsScrimOne />
+            </NewsCardOne>
+          ))}
+        </NewsContainer>
+      </FullWidthContainer> */}
+
       <FullWidthContainer>
         <NewsContainer>
           {data.articles.edges.map(({ node }) => (
             <NewsCard key={node.id} to={node.fields.slug}>
-              <NewsTitle>{node.frontmatter.title}</NewsTitle>
-              <NewsSubtitle>{node.frontmatter.subtitle}</NewsSubtitle>
-              <NewsDate>{node.frontmatter.date}</NewsDate>
               <NewsImage fluid={node.frontmatter.image.childImageSharp.fluid} alt="cool stuff." />
-              <NewsScrim />
+              <NewsTitle>{node.frontmatter.title}{" "}</NewsTitle>
+              <NewsDate>{node.frontmatter.date}</NewsDate>
+              <NewsSubtitle>{node.frontmatter.subtitle}</NewsSubtitle>
+              <AlmaSeparator/>
+              <NewsExcerpt>{node.excerpt}</NewsExcerpt>
             </NewsCard>
           ))}
         </NewsContainer>
-      </FullWidthContainer> */}
+      </FullWidthContainer>
     
       <CenteredContainer>
         <AlmaHeader title='About' />

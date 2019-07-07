@@ -32,56 +32,53 @@ const WindowInfo = styled.div`
   margin: 1rem 1rem 0 0;
   padding: 0.5rem 1rem;
   background: white;
-  border-radius: 32px;
+  border-radius: 8px;
   box-shadow: 0px 0px 16px hsla(0,0%,0%,0.25);
 `
-
-const AppContainer = (props) => {
-
-  const fade = useSpring({opacity: 1, from: {opacity: 0}, config: {duration: 250}})
-
-  // useEffect(() => {
-  //   setTimeout(() => document.getElementById('ContentContainer').scrollTop = 0, 0);
-  // })
-
-  const size = useWindowSize();
-
-  return (
-    <App style={fade}>
-      <WindowInfo>{size.width}px / {size.height}px</WindowInfo>
-      {props.children}
-    </App>
-  )
-}
 
 // Hook
 function useWindowSize() {
   
-  const isClient = typeof window === 'object';
+  const isClient = typeof window === 'object'
 
   function getSize() {
     return {
       width: isClient ? window.innerWidth : undefined,
       height: isClient ? window.innerHeight : undefined
-    };
+    }
   }
 
-  const [windowSize, setWindowSize] = useState(getSize);
+  const [windowSize, setWindowSize] = useState(getSize)
 
   useEffect(() => {
+
     if (!isClient) {
-      return false;
+      return false
     }
     
     function handleResize() {
-      setWindowSize(getSize());
+      setWindowSize(getSize())
     }
 
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
-  }, []); // Empty array ensures that effect is only run on mount and unmount
+  }, []) // Empty array ensures that effect is only run on mount and unmount
 
-  return windowSize;
+  return windowSize
+}
+
+const AppContainer = (props) => {
+
+  const fade = useSpring({opacity: 1, from: {opacity: 0}, config: {duration: 250}})
+
+  const size = useWindowSize()
+
+  return (
+    <App style={fade}>
+      {/* <WindowInfo>{size.width}px / {size.height}px</WindowInfo> */}
+      {props.children}
+    </App>
+  )
 }
 
 export default AppContainer
