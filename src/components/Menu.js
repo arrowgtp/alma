@@ -107,11 +107,11 @@ const AlmaLink = styled(Link)`
   color: #2d658e;
   font-size: 20px;
 
-  :focus {
-    /* background: hsla(207, 55%, 69%, 0.2); */
+  /* :focus {
+    background: hsla(207, 55%, 69%, 0.2);
     border-radius: 32px;
     box-shadow: inset 0 0 8px hsla(0,0%,0%,0.25);
-  }
+  } */
 
   @media (min-width: 50rem) {
     font-size: calc(12px + (24 - 12) * ((100vw - 300px) / (1600 - 300)));
