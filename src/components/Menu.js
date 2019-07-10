@@ -34,7 +34,7 @@ const SmallMenu = styled.div`
 
 const MobileMenu = styled(animated.div)`
   margin: 0;
-  padding: 2rem;
+  padding: 1rem;
   position: fixed;
   bottom: 15vh;
   left: 5vw;
@@ -83,23 +83,27 @@ const MobileLinkFlex = styled.div`
   :first-child {
     grid-row: 1 / 5;
     grid-column: 1 / 5;
+    margin: 0 -1rem -1rem 0;
   }
 
   :nth-child(2) {
     grid-row: 1 / 5;
     grid-column: 5 / 9;
+    margin: 0 0 -1rem -1rem;
 
   }
 
   :nth-child(3) {
     grid-row: 5 / 9;
     grid-column: 1 / 5;
+    margin: -1rem -1rem 0 0;
   }
 
 `
 
 const AlmaLink = styled(Link)`
   grid-column: 2 / 4;
+  white-space: nowrap;
   text-decoration: none;
   margin: 0;
   padding: 0.6rem 0;
@@ -121,6 +125,7 @@ const AlmaLink = styled(Link)`
 
 const AlmaLink2 = styled(Link)`
   grid-column: 2 / 4;
+  white-space: nowrap;
   /* grid-column: auto; */
   font-size: calc(12px + (24 - 12) * ((100vw - 300px) / (1600 - 300)));
   /* font-family: 'Quicksand', 'Open Sans', 'DM Serif Display'; */
@@ -141,7 +146,7 @@ const AlmaLink2 = styled(Link)`
 const AlmaBulletShell = styled.img`
   padding: 0;
   width: 0.9rem;
-  margin-bottom: 2px;
+  /* margin-bottom: 2px; */
   height: auto;
   grid-column: 1 / 2;
   align-self: center;
@@ -151,12 +156,6 @@ const AlmaBulletShell = styled.img`
     grid-column: 1 / 2;
     margin-bottom: 0px;
   }
-`
-
-const AlmaHR = styled.hr`
-  grid-column: 2 / 4;
-  margin: 0;
-  padding: 0;
 `
 
 const Button = styled.button`
@@ -205,7 +204,7 @@ const Button = styled.button`
 
 const SocialButtons = styled.div`
   display: flex;
-  margin: 0;
+  margin: 0 0 -1rem -1rem;
   padding: 0;
   grid-column: 5 / 9;
   grid-row: 5 / 7;
@@ -213,7 +212,6 @@ const SocialButtons = styled.div`
   justify-content: center;
   align-items: center;
   z-index: 1000;
-  margin-bottom: -1rem;
 
   @media (min-width: 50rem) {
     display: none;
@@ -276,8 +274,8 @@ const DownArrow = styled.div`
   border-top: 20px solid white;
   grid-row: 8 / 9;
   grid-column: 2 / 3;
-  margin-bottom: -48px;
-  margin-left: -40px;
+  margin-bottom: -32px;
+  margin-left: -32px;
   align-self: end;
 `
 
@@ -290,20 +288,20 @@ const Locales = styled.div`
   cursor: pointer;
   z-index: 1000;
   -webkit-tap-highlight-color: transparent;
-  margin-top: -1rem;
+  margin: -2rem 0 0 -1rem;
 `
 
-const AlmaBGShell = styled.img`
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  grid-column: 1 / 9;
-  grid-row: 1 / 9;
-  z-index: 1;
-  object-fit: cover;
-  opacity: 0.25;
-`
+// const AlmaBGShell = styled.img`
+//   margin: 0;
+//   padding: 0;
+//   width: 100%;
+//   height: 100%;
+//   grid-column: 1 / 9;
+//   grid-row: 1 / 9;
+//   z-index: 1;
+//   object-fit: cover;
+//   opacity: 0.25;
+// `
 
 const Menu = () => {
 
@@ -356,6 +354,8 @@ const Menu = () => {
           <AlmaLink2 to={`alma/story`}>Our Story</AlmaLink2>
           <AlmaLink2 to={`alma/news`}>News</AlmaLink2>
         {/* <AlmaLink to={`/news`}>Latest News</AlmaLink> */}
+        <AlmaBulletShell src={almaShell}/>
+        <AlmaLink to={`/story`}>Promotions</AlmaLink>
       </LargeMenu>
       <SmallMenu ref={node}>
         {!isToggled ?
@@ -367,31 +367,26 @@ const Menu = () => {
         }
         {transition.map(({ item, key, props: fade }) => (
           item && <MobileMenu key={key} style={fade}>
-
-          
           <MobileLinkFlex>
             <AlmaBulletShell src={almaShell}/>
-            <AlmaLink to={`/resort`}>Resort</AlmaLink>
-            {/* <AlmaHR/> */}
-              <AlmaLink2 to={`/resort/apartments`}>Apartments</AlmaLink2>
-              <AlmaLink2 to={`/resort/villas`}>Villas</AlmaLink2>
-              <AlmaLink2 to={`/resort/amenities`}>Amenities</AlmaLink2>
+            <AlmaLink to={`/resort`} onClick={toggle}>Resort</AlmaLink>
+              <AlmaLink2 to={`/resort/apartments`} onClick={toggle}>Apartments</AlmaLink2>
+              <AlmaLink2 to={`/resort/villas`} onClick={toggle}>Villas</AlmaLink2>
+              <AlmaLink2 to={`/resort/amenities`} onClick={toggle}>Amenities</AlmaLink2>
           </MobileLinkFlex>
           <MobileLinkFlex>
             <AlmaBulletShell src={almaShell}/>
-            <AlmaLink to={`/vacations`}>Vacations</AlmaLink>
-            {/* <AlmaHR/> */}
-              <AlmaLink2 to={`vacations/about`}>About</AlmaLink2>
-              <AlmaLink2 to={`vacations/ownership`}>Ownership</AlmaLink2>
-              <AlmaLink2 to={`vacations/benefits`}>Benefits</AlmaLink2>
+            <AlmaLink to={`/vacations`} onClick={toggle}>Vacations</AlmaLink>
+              <AlmaLink2 to={`vacations/about`} onClick={toggle}>About</AlmaLink2>
+              <AlmaLink2 to={`vacations/ownership`} onClick={toggle}>Ownership</AlmaLink2>
+              <AlmaLink2 to={`vacations/benefits`} onClick={toggle}>Benefits</AlmaLink2>
           </MobileLinkFlex>
           <MobileLinkFlex>
             <AlmaBulletShell src={almaShell}/>
-            <AlmaLink to={`/story`}>Alma</AlmaLink>
-            {/* <AlmaHR/> */}
-              <AlmaLink2 to={`alma/about`}>About Us</AlmaLink2>
-              <AlmaLink2 to={`alma/story`}>Our Story</AlmaLink2>
-              <AlmaLink2 to={`alma/news`}>News</AlmaLink2>
+            <AlmaLink to={`/story`} onClick={toggle}>Alma</AlmaLink>
+              <AlmaLink2 to={`alma/about`} onClick={toggle}>About Us</AlmaLink2>
+              <AlmaLink2 to={`alma/story`} onClick={toggle}>Our Story</AlmaLink2>
+              <AlmaLink2 to={`alma/news`} onClick={toggle}>News</AlmaLink2>
           </MobileLinkFlex>
           <SocialButtons>
             <SocialButton href='https://www.facebook.com/almavacations'>
@@ -408,7 +403,6 @@ const Menu = () => {
             <Language />
           </Locales>
           <DownArrow />
-            {/* <AlmaBGShell src={almaBGShell}/> */}
           </MobileMenu>
           ))}
         <AlmaShell to={`/`}>

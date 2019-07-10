@@ -13,9 +13,13 @@ import AlmaHeader from '../components/Header'
 
 const HeaderContainer = styled.div`
   grid-row: 1 / 3;
-  grid-column: 2 / 8;
+  grid-column: 1 / 9;
   margin: 0 2rem;
   z-index: 5;
+
+  @media (min-width: 50rem) {
+    grid-column: 2 / 8;
+  }
 `
 
 const H2 = styled.h2`
