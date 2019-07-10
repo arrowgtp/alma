@@ -89,8 +89,9 @@ const TitleImage = styled(Img)`
     hsla(0, 0%, 100%, 0.896) 77.5%,
     hsla(0, 0%, 100%, 0.951) 84.5%,
     hsla(0, 0%, 100%, 0.987) 91.9%,
-    hsl(0, 0%, 100%) 100%);
-    padding-bottom: 0;
+    hsl(0, 0%, 100%) 100%)
+  ;
+  padding-bottom: 0;
 `
 
 // const TitleScrim = styled.div`

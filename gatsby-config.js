@@ -40,7 +40,7 @@ module.exports = {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         google: {
-          families: ['DM Serif Display', 'Caveat', 'Open Sans']
+          families: ['Quicksand', 'DM Serif Display', 'Caveat', 'Open Sans']
         }
       }
     },
@@ -68,7 +68,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#ffffff`,
         display: 'minimal-ui',
-        icon: `src/images/alma-shell.svg`,
+        icon: `src/images/alma/alma-shell.svg`,
       },
     },
     `gatsby-plugin-offline`

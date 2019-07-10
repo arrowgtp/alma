@@ -5,8 +5,12 @@ import { Link, injectIntl } from 'gatsby-plugin-intl'
 
 import Language from './Language'
 
-import almaBGShell from '../images/alma-bg-shell.svg'
-import almaShell from '../images/alma-shell.svg'
+import almaBGShell from '../images/alma/alma-bg-shell.svg'
+import almaShell from '../images/alma/alma-shell.svg'
+
+import FacebookIcon from '../images/social/facebook-button.svg'
+import InstagramIcon from '../images/social/instagram-button.svg'
+import TwitterIcon from '../images/social/twitter-button.svg'
 
 const SmallMenu = styled.div`
   margin: 0;
@@ -18,7 +22,7 @@ const SmallMenu = styled.div`
   height: 10vh;
   background: white;
   display: grid;
-  grid-template-columns: 3fr 2fr 3fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
   z-index: 1000;
   box-shadow: 0px 0px 64px rgba(0, 0, 0, 0.25);
@@ -30,7 +34,7 @@ const SmallMenu = styled.div`
 
 const MobileMenu = styled(animated.div)`
   margin: 0;
-  padding: 0;
+  padding: 2rem;
   position: fixed;
   bottom: 15vh;
   left: 5vw;
@@ -38,6 +42,11 @@ const MobileMenu = styled(animated.div)`
   width: 90vw;
   border-radius: 16px;
   background: white;
+  background-image: url(${almaBGShell});
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background: hsla(255,100%,100%,0.5); */
   display: grid;
   grid-template-rows: repeat(8, 1fr);
   grid-template-columns: repeat(8, 1fr);
@@ -52,15 +61,102 @@ const LargeMenu = styled.div`
   @media (min-width: 50rem) {
     grid-column: 1 / 2;
     grid-row: 4 / 5;
-    height: 60vh;
-    font-size: 18px;
     align-self: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    justify-self: center;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 2fr 2fr;
+    grid-column-gap: 0.5rem;
     z-index: 10;
   }
+`
+
+const MobileLinkFlex = styled.div`
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 2fr 2fr;
+  grid-column-gap: 0.5rem;
+  align-self: center;
+  justify-self: center;
+  z-index: 10;
+
+  :first-child {
+    grid-row: 1 / 5;
+    grid-column: 1 / 5;
+  }
+
+  :nth-child(2) {
+    grid-row: 1 / 5;
+    grid-column: 5 / 9;
+
+  }
+
+  :nth-child(3) {
+    grid-row: 5 / 9;
+    grid-column: 1 / 5;
+  }
+
+`
+
+const AlmaLink = styled(Link)`
+  grid-column: 2 / 4;
+  text-decoration: none;
+  margin: 0;
+  padding: 0.6rem 0;
+  line-height: 1;
+  color: #2d658e;
+  font-size: 20px;
+
+  :focus {
+    /* background: hsla(207, 55%, 69%, 0.2); */
+    border-radius: 32px;
+    box-shadow: inset 0 0 8px hsla(0,0%,0%,0.25);
+  }
+
+  @media (min-width: 50rem) {
+    font-size: calc(12px + (24 - 12) * ((100vw - 300px) / (1600 - 300)));
+    grid-column: 2 / 4;
+  }
+`
+
+const AlmaLink2 = styled(Link)`
+  grid-column: 2 / 4;
+  /* grid-column: auto; */
+  font-size: calc(12px + (24 - 12) * ((100vw - 300px) / (1600 - 300)));
+  /* font-family: 'Quicksand', 'Open Sans', 'DM Serif Display'; */
+  /* text-align: center; */
+  line-height: 1;
+  margin: 0;
+  padding: 0.4rem 0;
+  color: grey;
+  /* border: 1px solid black; */
+  /* width: 50%; */
+
+  @media (min-width: 50rem) {
+    grid-column: 2 / 4;
+    font-size: calc(12px + (16 - 12) * ((100vw - 300px) / (1600 - 300)));
+  }
+`
+
+const AlmaBulletShell = styled.img`
+  padding: 0;
+  width: 0.9rem;
+  margin-bottom: 2px;
+  height: auto;
+  grid-column: 1 / 2;
+  align-self: center;
+  justify-self: center;
+
+  @media (min-width: 50rem) {
+    grid-column: 1 / 2;
+    margin-bottom: 0px;
+  }
+`
+
+const AlmaHR = styled.hr`
+  grid-column: 2 / 4;
+  margin: 0;
+  padding: 0;
 `
 
 const Button = styled.button`
@@ -107,6 +203,37 @@ const Button = styled.button`
   }
 `
 
+const SocialButtons = styled.div`
+  display: flex;
+  margin: 0;
+  padding: 0;
+  grid-column: 5 / 9;
+  grid-row: 5 / 7;
+  align-self: center;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  margin-bottom: -1rem;
+
+  @media (min-width: 50rem) {
+    display: none;
+  }
+`
+
+const SocialButton = styled.a`
+  margin: 0;
+  padding: 0;
+  height: 32px;
+  width: 32px;
+
+  > img {
+      margin-bottom: 0;
+      padding: 0;
+      height: 32px;
+      width: 32px;
+    }
+`
+
 const MenuButton = styled(Button)`
   grid-column: 1 / 2;
   z-index: 100;
@@ -149,69 +276,21 @@ const DownArrow = styled.div`
   border-top: 20px solid white;
   grid-row: 8 / 9;
   grid-column: 2 / 3;
-  margin-bottom: -1rem;
-  margin-left: -12px;
+  margin-bottom: -48px;
+  margin-left: -40px;
   align-self: end;
 `
 
-const AlmaLink = styled(Link)`
-  text-decoration: none;
-  padding: 1rem 2rem;
-  line-height: 1;
-  color: #2d658e;
-  font-size: 18px;
-  z-index: 3;
-  grid-row: 1 / 2;
-  grid-column: 1 / 9;
-  align-self: center;
-  justify-self: center;
-
-
-  :focus {
-    background: hsla(207, 55%, 69%, 0.2);
-    border-radius: 32px;
-  }
-
-  @media (min-width: 50rem) {
-    font-size: 20px;
-  }
-
-  :first-child {
-    grid-row: 2 / 3;
-    grid-column: 1 / 9;
-  }
-
-  :nth-child(2) {
-    grid-row: 3 / 4;
-    grid-column: 1 / 9;
-  }
-
-  :nth-child(3) {
-    grid-row: 4 / 5;
-    grid-column: 1 / 9;
-  }
-
-  :nth-child(4) {
-    grid-row: 5 / 6;
-    grid-column: 1 / 9;
-  }
-
-  :nth-child(5) {
-    grid-row: 6 / 7;
-    grid-column: 1 / 9;
-  }
-
-`
-
 const Locales = styled.div`
-  grid-row: 7 / 8;
-  grid-column: 1 / 9;
+  grid-row: 7 / 9;
+  grid-column: 5 / 9;
   z-index: 2;
   display: flex;
   justify-content: center;
   cursor: pointer;
   z-index: 1000;
   -webkit-tap-highlight-color: transparent;
+  margin-top: -1rem;
 `
 
 const AlmaBGShell = styled.img`
@@ -249,7 +328,6 @@ const Menu = () => {
 
   useEffect(() => {
     document.addEventListener("mousedown", handleClick);
-
     return () => {
       document.removeEventListener("mousedown", handleClick);
     };
@@ -258,12 +336,26 @@ const Menu = () => {
   return (
     <Fragment>
       <LargeMenu>
-        <AlmaLink to={`/story`}>Our Story</AlmaLink>
-        <AlmaLink to={`/resort`}>The Resort</AlmaLink>
-        <AlmaLink to={`/rooms`}>The Rooms</AlmaLink>
-        <AlmaLink to={`/amenities`}>The Amenities</AlmaLink>
-        <AlmaLink to={`/news`}>Latest News</AlmaLink>
-        <AlmaLink to={`/about`}>About Alma</AlmaLink>
+        <AlmaBulletShell src={almaShell}/>
+        <AlmaLink to={`/resort`}>Resort</AlmaLink>
+        {/* <AlmaHR/> */}
+          <AlmaLink2 to={`/resort/apartments`}>Apartments</AlmaLink2>
+          <AlmaLink2 to={`/resort/villas`}>Villas</AlmaLink2>
+          <AlmaLink2 to={`/resort/amenities`}>Amenities</AlmaLink2>
+          {/* <AlmaLink2 to={`/resort/construction`}>Construction</AlmaLink2> */}
+        <AlmaBulletShell src={almaShell}/>
+        <AlmaLink to={`/vacations`}>Vacations</AlmaLink>
+        {/* <AlmaHR/> */}
+          <AlmaLink2 to={`vacations/about`}>About</AlmaLink2>
+          <AlmaLink2 to={`vacations/ownership`}>Ownership</AlmaLink2>
+          <AlmaLink2 to={`vacations/benefits`}>Benefits</AlmaLink2>
+        {/* <AlmaLink to={`/about`}>About Alma</AlmaLink> */}
+        <AlmaBulletShell src={almaShell}/>
+        <AlmaLink to={`/story`}>Alma</AlmaLink>
+          <AlmaLink2 to={`alma/about`}>About Us</AlmaLink2>
+          <AlmaLink2 to={`alma/story`}>Our Story</AlmaLink2>
+          <AlmaLink2 to={`alma/news`}>News</AlmaLink2>
+        {/* <AlmaLink to={`/news`}>Latest News</AlmaLink> */}
       </LargeMenu>
       <SmallMenu ref={node}>
         {!isToggled ?
@@ -275,16 +367,48 @@ const Menu = () => {
         }
         {transition.map(({ item, key, props: fade }) => (
           item && <MobileMenu key={key} style={fade}>
-            <AlmaLink to={`/resort`} onClick={toggle}>The Resort</AlmaLink>
-            <AlmaLink to={`/rooms`} onClick={toggle}>The Rooms</AlmaLink>
-            <AlmaLink to={`/amenities`} onClick={toggle}>The Amenities</AlmaLink>
-            <AlmaLink to={`/news`} onClick={toggle}>Latest News</AlmaLink>
-            <AlmaLink to={`/about`} onClick={toggle}>About Alma</AlmaLink>
-            <Locales>
-              <Language />
-            </Locales>
-            <DownArrow />
-            <AlmaBGShell src={almaBGShell}/>
+
+          
+          <MobileLinkFlex>
+            <AlmaBulletShell src={almaShell}/>
+            <AlmaLink to={`/resort`}>Resort</AlmaLink>
+            {/* <AlmaHR/> */}
+              <AlmaLink2 to={`/resort/apartments`}>Apartments</AlmaLink2>
+              <AlmaLink2 to={`/resort/villas`}>Villas</AlmaLink2>
+              <AlmaLink2 to={`/resort/amenities`}>Amenities</AlmaLink2>
+          </MobileLinkFlex>
+          <MobileLinkFlex>
+            <AlmaBulletShell src={almaShell}/>
+            <AlmaLink to={`/vacations`}>Vacations</AlmaLink>
+            {/* <AlmaHR/> */}
+              <AlmaLink2 to={`vacations/about`}>About</AlmaLink2>
+              <AlmaLink2 to={`vacations/ownership`}>Ownership</AlmaLink2>
+              <AlmaLink2 to={`vacations/benefits`}>Benefits</AlmaLink2>
+          </MobileLinkFlex>
+          <MobileLinkFlex>
+            <AlmaBulletShell src={almaShell}/>
+            <AlmaLink to={`/story`}>Alma</AlmaLink>
+            {/* <AlmaHR/> */}
+              <AlmaLink2 to={`alma/about`}>About Us</AlmaLink2>
+              <AlmaLink2 to={`alma/story`}>Our Story</AlmaLink2>
+              <AlmaLink2 to={`alma/news`}>News</AlmaLink2>
+          </MobileLinkFlex>
+          <SocialButtons>
+            <SocialButton href='https://www.facebook.com/almavacations'>
+              <img src={FacebookIcon} alt='The Alma Resort Facebook account.' />
+            </SocialButton>
+            <SocialButton href='https://www.instagram.com/almavacations'>
+              <img src={InstagramIcon} alt='The Alma Resort Instagram account.' />
+            </SocialButton>
+            <SocialButton href='https://www.twitter.com/almavacations'>
+              <img src={TwitterIcon} alt='The Alma Resort Twitter account.' />
+            </SocialButton>
+          </SocialButtons>
+          <Locales>
+            <Language />
+          </Locales>
+          <DownArrow />
+            {/* <AlmaBGShell src={almaBGShell}/> */}
           </MobileMenu>
           ))}
         <AlmaShell to={`/`}>
@@ -297,38 +421,3 @@ const Menu = () => {
 }
 
 export default injectIntl(Menu)
-
-// export default Menu
-
-//  <MobileMenu style={fade}>
-//   <MobileMenu>
-//   <AlmaLink to={`/resort`} onClick={toggle}>The Resort</AlmaLink>
-//   <AlmaLink to={`/rooms`} onClick={toggle}>The Rooms</AlmaLink>
-//   <AlmaLink to={`/amenities`} onClick={toggle}>The Amenities</AlmaLink>
-//   <AlmaLink to={`/news`} onClick={toggle}>Latest News</AlmaLink>
-//   <AlmaLink to={`/about`} onClick={toggle}>About Alma</AlmaLink>
-//   <Locales>
-//     <Language />
-//   </Locales>
-//   <DownArrow />
-//   <AlmaBGShell src={almaBGShell}/>
-// </MobileMenu>{isToggled ? (
-
-// {isToggled ? (
-//   <>
-//     {transition.map(({ item, key, props: fade }) => (
-//       item && <MobileMenu key={key} style={fade}>
-//           <AlmaLink to={`/resort`} onClick={toggle}>The Resort</AlmaLink>
-//           <AlmaLink to={`/rooms`} onClick={toggle}>The Rooms</AlmaLink>
-//           <AlmaLink to={`/amenities`} onClick={toggle}>The Amenities</AlmaLink>
-//           <AlmaLink to={`/news`} onClick={toggle}>Latest News</AlmaLink>
-//           <AlmaLink to={`/about`} onClick={toggle}>About Alma</AlmaLink>
-//           <Locales>
-//             <Language />
-//           </Locales>
-//           <DownArrow />
-//           <AlmaBGShell src={almaBGShell}/>
-//       </MobileMenu>
-//      ))}
-//   </>
-// ) : null}

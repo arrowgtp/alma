@@ -6,26 +6,27 @@ import { Link, injectIntl } from 'gatsby-plugin-intl'
 import SEO from "../components/seo"
 
 import ViewContainer from '../components/layout/ViewContainer'
-import FullWidthContainer from '../components/styled/FullWidthContainer'
-import CenteredContainer from '../components/styled/CenteredContainer'
-import HorizontalScrollContainer from '../components/styled/HorizontalScrollContainer'
+import FullWidthContainer from '../components/layout/FullWidthContainer'
+import CenteredContainer from '../components/layout/CenteredContainer'
+import HorizontalScrollContainer from '../components/layout/HorizontalScrollContainer'
 import AlmaHeader from '../components/Header'
+import { FullContentCard, FullContentImage } from '../components/layout/FullContentCard'
 
-import almaLogoWithBG from '../images/alma-logo-with-bg.svg'
+import almaLogoWithBG from '../images/alma/alma-logo-with-bg.svg'
 
-const FullContentCard = styled.div`
-  grid-column: 1 / 4;
-  margin: 0;
-  padding: 0;
-  height: 90vh;
-  display: grid;
-  grid-template-rows: repeat(8, 1fr);
-  grid-template-columns: repeat(8, 1fr);
+// const FullContentCard = styled.div`
+//   grid-column: 1 / 4;
+//   margin: 0;
+//   padding: 0;
+//   height: 90vh;
+//   display: grid;
+//   grid-template-rows: repeat(8, 1fr);
+//   grid-template-columns: repeat(8, 1fr);
 
-  @media (min-width: 50rem) {
-    height: 100vh;
-  }
-`
+//   @media (min-width: 50rem) {
+//     height: 100vh;
+//   }
+// `
 
 const MainLogo = styled.img`
   width: calc(192px + (320 - 192) * ((100vw - 300px) / (1600 - 300)));
@@ -43,12 +44,12 @@ const MainLogo = styled.img`
   }
 `
 
-const FullContentImage = styled(Img)`
-  grid-row: 1 / 9;
-  grid-column: 1 / 9;
-  object-fit: cover;
-  z-index: 0;
-`
+// const FullContentImage = styled(Img)`
+//   grid-row: 1 / 9;
+//   grid-column: 1 / 9;
+//   object-fit: cover;
+//   z-index: 0;
+// `
 
 // const PageTitle = styled.div`
 //   grid-row: 1 / 2;
@@ -400,29 +401,29 @@ const InstaSpacer = styled.div`
   grid-template-columns: repeat(8, 1fr);
 `
 
-// const InstaLikes = styled.p`
-//   grid-row: 1 / 9;
-//   grid-column: 1 / 9;
-//   margin: 0;
-//   padding: 0;
-//   justify-self: start;
-//   align-self: end;
-//   z-index: 5;
-//   color: white;
-//   justify-self: center;
-//   font-size: calc(8px + (32 - 12) * ((100vw - 300px) / (1600 - 300)));
-// `
+const InstaLikes = styled.p`
+  grid-row: 1 / 9;
+  grid-column: 1 / 9;
+  margin: 0;
+  padding: 0;
+  justify-self: start;
+  align-self: end;
+  z-index: 5;
+  color: white;
+  justify-self: center;
+  font-size: calc(8px + (32 - 12) * ((100vw - 300px) / (1600 - 300)));
+`
 
-// const InstaComments = styled.p`
-//   grid-row: 8 / 9;
-//   grid-column: 5 / 9;
-//   margin: 0;
-//   padding: 0;
-//   z-index: 5;
-//   color: white;
-//   justify-self: center;
-//   font-size: calc(8px + (32 - 12) * ((100vw - 300px) / (1600 - 300)));
-// `
+const InstaComments = styled.p`
+  grid-row: 8 / 9;
+  grid-column: 5 / 9;
+  margin: 0;
+  padding: 0;
+  z-index: 5;
+  color: white;
+  justify-self: center;
+  font-size: calc(8px + (32 - 12) * ((100vw - 300px) / (1600 - 300)));
+`
 
 const InstaImage = styled(Img)`
   grid-row: 1 / 9;
@@ -473,8 +474,8 @@ const Index = ({ data, intl }) => {
       </FullContentCard>
   
       <CenteredContainer>
-        <AlmaHeader title='Resort' />
-        <P>Godfather ipsum dolor sit amet. If anything in this life is certain, if history has taught us anything, it is that you can kill anyone. What's the matter with you, huh? What am I going to do? Am I going to make that baby an orphan before he's born? I don't trust a doctor who can hardly speak English. Michael, you never told me you knew Johnny Fontane!</P>
+        <AlmaHeader title={intl.formatMessage({ id: "resort-title" })} />
+        <P>{intl.formatMessage({ id: "resort-p1" })}</P>
       </CenteredContainer>
   
       <FullWidthContainer>
@@ -634,9 +635,9 @@ const Index = ({ data, intl }) => {
         
       {/* <CenteredContainer>
         <AlmaHeader title='Instagram' />
-      </CenteredContainer>
+      </CenteredContainer> */}
 
-      <FullWidthContainer>
+      {/* <FullWidthContainer>
         <InstaGrid>
           {data.allInstaNode.edges.map(({ node }) => (
             <InstaPost key={node.id}>
@@ -712,7 +713,7 @@ export const query = graphql`
         }
       }
     }
-    resortOverview: file(relativePath: { eq: "alma-resort-overview.jpg" }) {
+    resortOverview: file(relativePath: { eq: "resort/alma-resort-overview.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 3840) {
           ...GatsbyImageSharpFluid

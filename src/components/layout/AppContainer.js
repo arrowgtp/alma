@@ -15,10 +15,10 @@ const App = styled(animated.div)`
   background-repeat: repeat;
 
   @media (min-width: 50rem) {
-    grid-template-rows: 20vh 5vh 5vh 50vh 20vh;
+    grid-template-rows: 18vh 5vh 5vh 57vh 15vh;
     /* grid-template-rows: 20% 5% 5% 50% 20%; */
     /* grid-template-rows: 4fr 1fr 1fr 10fr 4fr; */
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 1fr 4fr;
   }
 `
 

@@ -6,7 +6,7 @@ import { injectIntl } from 'gatsby-plugin-intl'
 import SEO from "../components/seo"
 
 import ViewContainer from '../components/layout/ViewContainer'
-import FullWidthContainer from '../components/styled/FullWidthContainer'
+import FullWidthContainer from '../components/layout/FullWidthContainer'
 
 const TeamGrid = styled.div`
   display: grid;

@@ -11,12 +11,13 @@ import Language from './Language'
 import Menu from './Menu'
 import Button from './styled/Button'
 
-import almaLogoWithBG from '../images/alma-logo-with-bg.svg'
-import almaBGShell from '../images/alma-bg-shell.svg'
-import FacebookIcon from '../images/facebook-button.svg'
-import InstagramIcon from '../images/instagram-button.svg'
-import TwitterIcon from '../images/twitter-button.svg'
-import almaWhiteShell from '../images/alma-logo-shell-white.svg'
+import almaLogoWithBG from '../images/alma/alma-logo-with-bg.svg'
+import almaBGShell from '../images/alma/alma-bg-shell.svg'
+import almaWhiteShell from '../images/alma/alma-logo-shell-white.svg'
+
+import FacebookIcon from '../images/social/facebook-button.svg'
+import InstagramIcon from '../images/social/instagram-button.svg'
+import TwitterIcon from '../images/social/twitter-button.svg'
 
 // const App = styled(animated.div)`
 //   margin: 0;
