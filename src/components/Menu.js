@@ -105,11 +105,12 @@ const AlmaLink = styled(Link)`
   grid-column: 2 / 4;
   white-space: nowrap;
   text-decoration: none;
+  font-size: calc(18px + (32 - 18) * ((100vw - 300px) / (1600 - 300)));
   margin: 0;
   padding: 0.6rem 0;
   line-height: 1;
   color: #2d658e;
-  font-size: 20px;
+  /* font-size: 20px; */
 
   /* :focus {
     background: hsla(207, 55%, 69%, 0.2);
@@ -125,17 +126,12 @@ const AlmaLink = styled(Link)`
 
 const AlmaLink2 = styled(Link)`
   grid-column: 2 / 4;
-  white-space: nowrap;
-  /* grid-column: auto; */
-  font-size: calc(12px + (24 - 12) * ((100vw - 300px) / (1600 - 300)));
-  /* font-family: 'Quicksand', 'Open Sans', 'DM Serif Display'; */
-  /* text-align: center; */
-  line-height: 1;
   margin: 0;
   padding: 0.4rem 0;
+  white-space: nowrap;
+  font-size: calc(14px + (32 - 14) * ((100vw - 300px) / (1600 - 300)));
+  line-height: 1;
   color: grey;
-  /* border: 1px solid black; */
-  /* width: 50%; */
 
   @media (min-width: 50rem) {
     grid-column: 2 / 4;
@@ -266,6 +262,19 @@ const AlmaShell = styled(Link)`
   }
 `
 
+const Locales = styled.div`
+  grid-row: 7 / 9;
+  grid-column: 5 / 9;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1000;
+  -webkit-tap-highlight-color: transparent;
+  margin: -2rem 0 0 -1rem;
+`
+
+
 const DownArrow = styled.div`
   width: 0; 
   height: 0; 
@@ -277,18 +286,6 @@ const DownArrow = styled.div`
   margin-bottom: -32px;
   margin-left: -32px;
   align-self: end;
-`
-
-const Locales = styled.div`
-  grid-row: 7 / 9;
-  grid-column: 5 / 9;
-  z-index: 2;
-  display: flex;
-  justify-content: center;
-  cursor: pointer;
-  z-index: 1000;
-  -webkit-tap-highlight-color: transparent;
-  margin: -2rem 0 0 -1rem;
 `
 
 // const AlmaBGShell = styled.img`
