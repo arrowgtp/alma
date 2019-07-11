@@ -35,7 +35,7 @@ const HeaderTitle = styled.h1`
   font-size: calc(16px + (40 - 16) * ((100vw - 300px) / (1600 - 300)));
   font-family: 'Quicksand', 'Open Sans', 'DM Serif Display';
   font-style: medium;
-  text-shadow: ${props => props.white ? "none" : "0px 0px 8px hsla(0, 0%, 0%, 0.5)"};
+  text-shadow: ${props => props.white ? "none" : "0px 0px 8px hsla(0, 0%, 0%, 0.25)"};
   margin-right: -10px;
 `
 
