@@ -107,6 +107,7 @@ const AlmaBGShell = styled.img`
     margin-top: -64px;
     z-index: 1;
     opacity: 0.25;
+    overflow: hidden;
   }
 `
 
@@ -181,7 +182,7 @@ const Layout = ({ children }) => {
         {children}
       </Main>
       <SidePanelBackground />
-      <AlmaBGShell src={almaBGShell}/>
+      {/* <AlmaBGShell src={almaBGShell}/> */}
       <AlmaWhiteShell src={almaWhiteShell}/>
     </AppContainer>
   )

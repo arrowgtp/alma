@@ -6,8 +6,9 @@ const App = styled(animated.div)`
   margin: 0;
   padding: 0;
   height: 100vh;
-  height: calc(var(--vh, 1vh) * 100);
+  /* height: calc(var(--vh, 1vh) * 100); */
   width: 100vw;
+  overflow-x: hidden;
   display: grid;
   grid-template-rows: 20vh 70vh 10vh;
   grid-template-columns: repeat(3, 1fr);
@@ -22,59 +23,60 @@ const App = styled(animated.div)`
   }
 `
 
-const WindowInfo = styled.div`
-  position: fixed;
-  top: 0;
-  right: 0;
-  font-size: 12px;
-  line-height: 1;
-  z-index: 1000;
-  margin: 1rem 1rem 0 0;
-  padding: 0.5rem 1rem;
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0px 0px 16px hsla(0,0%,0%,0.25);
-`
+// const WindowInfo = styled.div`
+//   position: fixed;
+//   top: 0;
+//   right: 0;
+//   font-size: 12px;
+//   line-height: 1;
+//   z-index: 1000;
+//   margin: 1rem 1rem 0 0;
+//   padding: 0.5rem 1rem;
+//   background: white;
+//   border-radius: 8px;
+//   box-shadow: 0px 0px 16px hsla(0,0%,0%,0.25);
+// `
 
 // Hook
-function useWindowSize() {
+// function useWindowSize() {
   
-  const isClient = typeof window === 'object'
+//   const isClient = typeof window === 'object'
 
-  function getSize() {
-    return {
-      width: isClient ? window.innerWidth : undefined,
-      height: isClient ? window.innerHeight : undefined
-    }
-  }
+//   function getSize() {
+//     return {
+//       width: isClient ? window.innerWidth : undefined,
+//       height: isClient ? window.innerHeight : undefined
+//     }
+//   }
 
-  const [windowSize, setWindowSize] = useState(getSize)
+//   const [windowSize, setWindowSize] = useState(getSize)
 
-  useEffect(() => {
+//   useEffect(() => {
 
-    if (!isClient) {
-      return false
-    }
+//     if (!isClient) {
+//       return false
+//     }
     
-    function handleResize() {
-      setWindowSize(getSize())
-    }
+//     function handleResize() {
+//       setWindowSize(getSize())
+//     }
 
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []) // Empty array ensures that effect is only run on mount and unmount
+//     window.addEventListener('resize', handleResize);
+//     return () => window.removeEventListener('resize', handleResize);
+//   }, []) // Empty array ensures that effect is only run on mount and unmount
 
-  return windowSize
-}
+//   return windowSize
+// }
 
 const AppContainer = (props) => {
 
-  const fade = useSpring({opacity: 1, from: {opacity: 0}, config: {duration: 250}})
+  // const fade = useSpring({opacity: 1, from: {opacity: 0}})
 
-  const size = useWindowSize()
+  // const size = useWindowSize()
 
   return (
-    <App style={fade}>
+    // <App style={fade}>
+    <App style>
       {/* <WindowInfo>{size.width}px / {size.height}px</WindowInfo> */}
       {props.children}
     </App>

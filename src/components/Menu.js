@@ -90,7 +90,6 @@ const MobileLinkFlex = styled.div`
     grid-row: 1 / 5;
     grid-column: 5 / 9;
     margin: 0 0 -1rem -1rem;
-
   }
 
   :nth-child(3) {
@@ -105,7 +104,9 @@ const AlmaLink = styled(Link)`
   grid-column: 2 / 4;
   white-space: nowrap;
   text-decoration: none;
+  font-family: 'Work Sans', 'DM Serif Display', 'Lato';
   font-size: calc(18px + (32 - 18) * ((100vw - 300px) / (1600 - 300)));
+  font-weight: 300;
   margin: 0;
   padding: 0.6rem 0;
   line-height: 1;
@@ -119,7 +120,7 @@ const AlmaLink = styled(Link)`
   } */
 
   @media (min-width: 50rem) {
-    font-size: calc(12px + (24 - 12) * ((100vw - 300px) / (1600 - 300)));
+    font-size: calc(10px + (20 - 10) * ((100vw - 300px) / (1600 - 300)));
     grid-column: 2 / 4;
   }
 `
@@ -129,20 +130,21 @@ const AlmaLink2 = styled(Link)`
   margin: 0;
   padding: 0.4rem 0;
   white-space: nowrap;
+  font-family: 'Work Sans', 'DM Serif Display', 'Lato';
   font-size: calc(14px + (32 - 14) * ((100vw - 300px) / (1600 - 300)));
+  font-weight: 300;
   line-height: 1;
   color: grey;
 
   @media (min-width: 50rem) {
     grid-column: 2 / 4;
-    font-size: calc(12px + (16 - 12) * ((100vw - 300px) / (1600 - 300)));
+    font-size: calc(8px + (16 - 8) * ((100vw - 300px) / (1600 - 300)));
   }
 `
 
 const AlmaBulletShell = styled.img`
   padding: 0;
   width: 0.9rem;
-  /* margin-bottom: 2px; */
   height: auto;
   grid-column: 1 / 2;
   align-self: center;
@@ -333,24 +335,19 @@ const Menu = () => {
       <LargeMenu>
         <AlmaBulletShell src={almaShell}/>
         <AlmaLink to={`/resort`}>Resort</AlmaLink>
-        {/* <AlmaHR/> */}
-          <AlmaLink2 to={`/resort/apartments`}>Apartments</AlmaLink2>
-          <AlmaLink2 to={`/resort/villas`}>Villas</AlmaLink2>
-          <AlmaLink2 to={`/resort/amenities`}>Amenities</AlmaLink2>
-          {/* <AlmaLink2 to={`/resort/construction`}>Construction</AlmaLink2> */}
+          <AlmaLink2 to={`/apartments`}>Apartments</AlmaLink2>
+          <AlmaLink2 to={`/villas`}>Villas</AlmaLink2>
+          <AlmaLink2 to={`/amenities`}>Amenities</AlmaLink2>
         <AlmaBulletShell src={almaShell}/>
         <AlmaLink to={`/vacations`}>Vacations</AlmaLink>
-        {/* <AlmaHR/> */}
-          <AlmaLink2 to={`vacations/about`}>About</AlmaLink2>
-          <AlmaLink2 to={`vacations/ownership`}>Ownership</AlmaLink2>
-          <AlmaLink2 to={`vacations/benefits`}>Benefits</AlmaLink2>
-        {/* <AlmaLink to={`/about`}>About Alma</AlmaLink> */}
+          <AlmaLink2 to={`/about-rci`}>About</AlmaLink2>
+          <AlmaLink2 to={`/ownership`}>Ownership</AlmaLink2>
+          <AlmaLink2 to={`/benefits`}>Benefits</AlmaLink2>
         <AlmaBulletShell src={almaShell}/>
         <AlmaLink to={`/story`}>Alma</AlmaLink>
-          <AlmaLink2 to={`alma/about`}>About Us</AlmaLink2>
-          <AlmaLink2 to={`alma/story`}>Our Story</AlmaLink2>
-          <AlmaLink2 to={`alma/news`}>News</AlmaLink2>
-        {/* <AlmaLink to={`/news`}>Latest News</AlmaLink> */}
+          <AlmaLink2 to={`/about-alma`}>About Us</AlmaLink2>
+          <AlmaLink2 to={`/story`}>Our Story</AlmaLink2>
+          <AlmaLink2 to={`/news`}>News</AlmaLink2>
         <AlmaBulletShell src={almaShell}/>
         <AlmaLink to={`/story`}>Promotions</AlmaLink>
       </LargeMenu>
@@ -367,23 +364,23 @@ const Menu = () => {
           <MobileLinkFlex>
             <AlmaBulletShell src={almaShell}/>
             <AlmaLink to={`/resort`} onClick={toggle}>Resort</AlmaLink>
-              <AlmaLink2 to={`/resort/apartments`} onClick={toggle}>Apartments</AlmaLink2>
-              <AlmaLink2 to={`/resort/villas`} onClick={toggle}>Villas</AlmaLink2>
-              <AlmaLink2 to={`/resort/amenities`} onClick={toggle}>Amenities</AlmaLink2>
+              <AlmaLink2 to={`/apartments`} onClick={toggle}>Apartments</AlmaLink2>
+              <AlmaLink2 to={`/villas`} onClick={toggle}>Villas</AlmaLink2>
+              <AlmaLink2 to={`/amenities`} onClick={toggle}>Amenities</AlmaLink2>
           </MobileLinkFlex>
           <MobileLinkFlex>
             <AlmaBulletShell src={almaShell}/>
             <AlmaLink to={`/vacations`} onClick={toggle}>Vacations</AlmaLink>
-              <AlmaLink2 to={`vacations/about`} onClick={toggle}>About</AlmaLink2>
-              <AlmaLink2 to={`vacations/ownership`} onClick={toggle}>Ownership</AlmaLink2>
-              <AlmaLink2 to={`vacations/benefits`} onClick={toggle}>Benefits</AlmaLink2>
+              <AlmaLink2 to={`/about-rci`} onClick={toggle}>About</AlmaLink2>
+              <AlmaLink2 to={`/ownership`} onClick={toggle}>Ownership</AlmaLink2>
+              <AlmaLink2 to={`/benefits`} onClick={toggle}>Benefits</AlmaLink2>
           </MobileLinkFlex>
           <MobileLinkFlex>
             <AlmaBulletShell src={almaShell}/>
             <AlmaLink to={`/story`} onClick={toggle}>Alma</AlmaLink>
-              <AlmaLink2 to={`alma/about`} onClick={toggle}>About Us</AlmaLink2>
-              <AlmaLink2 to={`alma/story`} onClick={toggle}>Our Story</AlmaLink2>
-              <AlmaLink2 to={`alma/news`} onClick={toggle}>News</AlmaLink2>
+              <AlmaLink2 to={`/about-alma`} onClick={toggle}>About Us</AlmaLink2>
+              <AlmaLink2 to={`/story`} onClick={toggle}>Our Story</AlmaLink2>
+              <AlmaLink2 to={`/news`} onClick={toggle}>News</AlmaLink2>
           </MobileLinkFlex>
           <SocialButtons>
             <SocialButton href='https://www.facebook.com/almavacations'>

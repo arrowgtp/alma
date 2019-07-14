@@ -2,7 +2,8 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import { useTransition, animated, config } from 'react-spring'
 
-const Container = styled(animated.main)`
+// const Container = styled(animated.main)`
+const Container = styled.main`
   margin: 0;
   padding: 0;
   z-index: 1;
@@ -18,16 +19,18 @@ const Container = styled(animated.main)`
 `
 
 const ViewContainer = (props) => {
-  const [state] = useState(true);
-  const transition = useTransition(state, null, { 
-    from: { opacity: 0 },
-    enter: { opacity: 1 },
-    leave: { opacity: 0 }
-    // config: config.molasses,
-    // config: { duration: 250},
-  });
-  return transition.map(({ item, key, props: fade }) =>
-    item && <Container key={key} style={fade}>{props.children}</Container>
+  // const [state] = useState(true);
+  // const transition = useTransition(state, null, { 
+  //   from: { opacity: 0 },
+  //   enter: { opacity: 1 },
+  //   leave: { opacity: 0 }
+  // });
+  // return transition.map(({ item, key, props: fade }) =>
+  //   item && <Container key={key} style={fade}>{props.children}</Container>
+  // )
+
+  return (
+    <Container>{props.children}</Container>
   )
 }
 

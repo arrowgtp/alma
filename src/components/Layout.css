@@ -22,7 +22,7 @@ html, body {
   height: 100vh; */
   overflow: hidden;
   background: white;
-  overscroll-behavior: none;
+  /* overscroll-behavior: none; */
 }
 
 p {

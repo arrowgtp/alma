@@ -1,24 +1,25 @@
 import React from 'react'
 import { injectIntl } from 'gatsby-plugin-intl'
-import SEO from '../components/seo'
+import SEO from "../components/seo"
 
 import ViewContainer from '../components/layout/ViewContainer'
 import CenteredContainer from '../components/layout/CenteredContainer'
 import AlmaHeader from '../components/Header'
 
-import P from '../components/visual/Paragraph'
-
-const Story = ({ intl }) => {
+const AboutRCI = ({ intl }) => {
   return (
     <ViewContainer>
-      <SEO title="Story" />
+      <SEO title="About" />
       <CenteredContainer>
-        <AlmaHeader title='About Alma' />
-
+        <AlmaHeader title='About Us' />
+        <p>
+          We're the only site running on your computer dedicated to showing the best
+          photos and videos of pandas eating lots of food.
+        </p>
         <p>{intl.formatMessage({ id: "title" })}</p>
         <p>{intl.formatMessage({ id: "slogan" })}</p>
 
-        <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquet bibendum enim facilisis gravida neque. Eget nunc scelerisque viverra mauris. Dolor sit amet consectetur adipiscing. Turpis nunc eget lorem dolor sed viverra ipsum nunc. Elit at imperdiet dui accumsan sit amet nulla facilisi. Mi bibendum neque egestas congue. Habitasse platea dictumst quisque sagittis purus sit. Dolor sed viverra ipsum nunc. Massa ultricies mi quis hendrerit dolor magna. Lacus suspendisse faucibus interdum posuere lorem.</P>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquet bibendum enim facilisis gravida neque. Eget nunc scelerisque viverra mauris. Dolor sit amet consectetur adipiscing. Turpis nunc eget lorem dolor sed viverra ipsum nunc. Elit at imperdiet dui accumsan sit amet nulla facilisi. Mi bibendum neque egestas congue. Habitasse platea dictumst quisque sagittis purus sit. Dolor sed viverra ipsum nunc. Massa ultricies mi quis hendrerit dolor magna. Lacus suspendisse faucibus interdum posuere lorem.</p>
 
         <p>Enim neque volutpat ac tincidunt. Tristique et egestas quis ipsum suspendisse. Purus gravida quis blandit turpis. A pellentesque sit amet porttitor eget. Proin sed libero enim sed faucibus. Ipsum faucibus vitae aliquet nec. Odio tempor orci dapibus ultrices in iaculis. Ut venenatis tellus in metus vulputate eu scelerisque. Pharetra convallis posuere morbi leo urna molestie at elementum eu. Mauris in aliquam sem fringilla ut. Eget duis at tellus at. Aliquam vestibulum morbi blandit cursus risus at ultrices. Velit egestas dui id ornare. Quis eleifend quam adipiscing vitae proin sagittis nisl rhoncus. Lobortis mattis aliquam faucibus purus in massa tempor. Commodo sed egestas egestas fringilla phasellus faucibus scelerisque eleifend. Et malesuada fames ac turpis egestas sed tempus urna.</p>
 
@@ -33,4 +34,6 @@ const Story = ({ intl }) => {
   )
 }
 
-export default injectIntl(Story)
+export default injectIntl(AboutRCI)
+
+// export default About

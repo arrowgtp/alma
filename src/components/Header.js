@@ -12,7 +12,7 @@ const HeaderContainer = styled.div`
   /* filter: drop-shadow( 0px 0px 16px hsla(0, 0%, 0%, 0.5)); */
   filter:
     ${props => props.white ?
-      "drop-shadow( 0px 0px 16px hsla(0, 0%, 0%, 0.3))"
+      "drop-shadow( 0px 0px 16px hsla(0, 0%, 0%, 0.25))"
       :
       "none"
     }
@@ -32,11 +32,11 @@ const HeaderTitle = styled.h1`
   text-align: center;
   text-transform: uppercase;
   letter-spacing: calc(12px + (28 - 12) * ((100vw - 300px) / (1600 - 300)));
-  font-size: calc(16px + (40 - 16) * ((100vw - 300px) / (1600 - 300)));
-  font-family: 'Quicksand', 'Open Sans', 'DM Serif Display';
-  font-style: medium;
+  font-size: calc(18px + (40 - 18) * ((100vw - 300px) / (1600 - 300)));
+  font-family: 'Quicksand';
+  font-weight: 700;
   text-shadow: ${props => props.white ? "none" : "0px 0px 8px hsla(0, 0%, 0%, 0.25)"};
-  margin-right: -10px;
+  margin-right: -24px;
 `
 
 const HeaderBackground = styled.img`

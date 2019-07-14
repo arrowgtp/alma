@@ -6,7 +6,7 @@ import ViewContainer from '../components/layout/ViewContainer'
 import CenteredContainer from '../components/layout/CenteredContainer'
 import AlmaHeader from '../components/Header'
 
-const About = ({ intl }) => {
+const AboutAlma = ({ intl }) => {
   return (
     <ViewContainer>
       <SEO title="About" />
@@ -34,6 +34,6 @@ const About = ({ intl }) => {
   )
 }
 
-export default injectIntl(About)
+export default injectIntl(AboutAlma)
 
 // export default About

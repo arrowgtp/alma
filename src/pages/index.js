@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { graphql } from 'gatsby'
 import styled from 'styled-components'
 import Img from 'gatsby-image'
 import { Link, injectIntl } from 'gatsby-plugin-intl'
-import SEO from "../components/seo"
+import SEO from '../components/seo'
+// import { motion, useMotionValue, useViewportScroll } from 'framer-motion'
+// import { animated, useSpring, config } from 'react-spring'
 
 import ViewContainer from '../components/layout/ViewContainer'
 import FullWidthContainer from '../components/layout/FullWidthContainer'
@@ -11,6 +13,8 @@ import CenteredContainer from '../components/layout/CenteredContainer'
 import HorizontalScrollContainer from '../components/layout/HorizontalScrollContainer'
 import AlmaHeader from '../components/Header'
 import { FullContentCard, FullContentImage } from '../components/layout/FullContentCard'
+
+import P from '../components/visual/Paragraph'
 
 import almaLogoWithBG from '../images/alma/alma-logo-with-bg.svg'
 
@@ -77,12 +81,75 @@ const PageSlogan = styled.div`
   }
 `
 
+// const MotionImage = styled(motion.custom(Img))`
+//   width: 200px;
+//   height: 200px;
+//   background: tomato;
+// `
+
+// const MotionDiv = styled(motion.div)`
+//   width: 200px;
+//   height: 200px;
+//   background: tomato;
+// `
+
+// const AnimatedImage = styled(animated(Img))`
+//   width: 200px;
+//   height: 200px;
+//   background: tomato;
+// `
+
+// const Parallax = styled.div`
+//   perspective: 1px;
+//   height: 50vh;
+//   overflow-x: hidden;
+//   overflow-y: auto;
+// `
+
+// const ParallaxGroup = styled.div`
+//   position: relative;
+//   height: 50vh;
+//   background: #2a8190;
+//   transform-style: preserve-3d;
+// `
+
+// const ParallaxLayer = styled.div`
+//   position: absolute;
+//   top: 0;
+//   right: 0;
+//   bottom: 0;
+//   left: 0;
+// `
+
+// const ParallaxLayerBase = styled.div`
+//   position: absolute;
+//   top: 0;
+//   right: 0;
+//   bottom: 0;
+//   left: 0;
+//   transform: translateZ(0);
+//   border: 1px red solid;
+//   z-index: 2;
+// `
+
+// const ParallaxLayerBack = styled.div`
+//   position: absolute;
+//   top: 0;
+//   right: 0;
+//   bottom: 0;
+//   left: 0;
+//   transform: translateZ(-1px);
+//   border: 1px red solid;
+//   z-index: 3;
+// `
+
 const Card = styled.div`
   flex: 0 0 auto;
   margin: 1rem 0.5rem;
   padding: 0.25rem;
   /* padding: 0rem;  */
   width: 80%;
+  height: auto;
   background: white;
   line-height: 1;
   /* font-size: 18px; */
@@ -95,7 +162,7 @@ const Card = styled.div`
   }
 
   :last-child {
-    margin-right: 1rem;
+    margin-right: -1rem;
   }
 
   @media (min-width: 50rem) {
@@ -105,15 +172,11 @@ const Card = styled.div`
 
 const CardImg = styled(Img)`
   border-radius: 6px;
-`
-
-const P = styled.p`
-  margin: 1rem 0;
-  padding: 0;
-  font-size: calc(16px + (24 - 16) * ((100vw - 300px) / (1600 - 300)));
+  object-fit: cover;
+  min-height: 20rem;
 
   @media (min-width: 50rem) {
-    font-size: calc(12px + (18 - 12) * ((100vw - 300px) / (1600 - 300)));
+    min-height: 20rem;
   }
 `
 
@@ -464,9 +527,28 @@ const InstaScrim = styled.div`
 `
 
 const Index = ({ data, intl }) => {
+
+  // const ref = useRef()
+
+  // const { scrollYProgress } = useViewportScroll();
+
+  // const fade = useSpring({opacity: 1, from: {opacity: 0}, config: {duration: 5000}})
+
   return (
     <ViewContainer>
+
       <SEO title="Home" />
+
+      {/* <AnimatedImage fluid={data.almaResort1.childImageSharp.fluid} style={fade}/> */}
+      
+      {/* <MotionImage
+        ref={ref}
+        fluid={data.almaResort1.childImageSharp.fluid}
+        animate={{ x: 100 }}
+      /> */}
+
+      {/* <MotionDiv animate={{ scale: 0.25 }}>Motion!</MotionDiv> */}
+
       <FullContentCard>
         <MainLogo src={almaLogoWithBG} alt="The Alma Resort Logo."  />
         <PageSlogan>{intl.formatMessage({ id: "slogan" })}</PageSlogan>
@@ -477,124 +559,197 @@ const Index = ({ data, intl }) => {
         <AlmaHeader title={intl.formatMessage({ id: "resort-title" })} />
         <P>{intl.formatMessage({ id: "resort-p1" })}</P>
       </CenteredContainer>
+
+      <FullWidthContainer>
+
+        {/* <motion.div animate={{ x: 100 }}/> */}
+
+        {/* <AnimatedImage fluid={data.almaResort1.childImageSharp.fluid} style={fade}/> */}
+
+        {/* <MotionDiv
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          animate={{ x: 1000 }}
+          style={{ scaleY: scrollYProgress }}
+        >Motion, bishez!</MotionDiv> */}
+
+        {/* <Parallax>
+          <ParallaxGroup>
+            <ParallaxLayerBase>
+            <h1>World.</h1>
+            </ParallaxLayerBase>
+            <ParallaxLayerBack>
+              <h1>Hello</h1>
+            </ParallaxLayerBack>
+          </ParallaxGroup>
+        </Parallax> */}
+
+      </FullWidthContainer>
   
+        <FullWidthContainer>
+          <HorizontalScrollContainer orange>
+            <Card><CardImg fluid={data.almaResort1.childImageSharp.fluid}/></Card>
+            <Card><CardImg fluid={data.almaResort2.childImageSharp.fluid}/></Card>
+            <Card><CardImg fluid={data.almaResort3.childImageSharp.fluid}/></Card>
+            <Card><CardImg fluid={data.almaResort4.childImageSharp.fluid}/></Card>
+            <Card><CardImg fluid={data.almaResort1.childImageSharp.fluid}/></Card>
+          </HorizontalScrollContainer>
+        </FullWidthContainer>
+
+      <CenteredContainer>
+        <AlmaHeader white title='Apartments'/>
+        <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</P>
+      </CenteredContainer>
+
       <FullWidthContainer>
-        <HorizontalScrollContainer blue>
-          <Card>
-            <CardImg fluid={data.almaResort1.childImageSharp.fluid} />
-            {/* <P>
-              Poop on grasses under the bed bathe private parts with tongue then lick owner's face so i can haz.
-            </P> */}
-          </Card>
-          <Card>
-            <CardImg fluid={data.almaResort2.childImageSharp.fluid} />
-            {/* <P>
-              Cream at dripper chicory, carajillo milk acerbic java robusta, that ut, irish cultivar.
-            </P> */}
-          </Card>
-          <Card>
-            <CardImg fluid={data.almaResort3.childImageSharp.fluid} />
-            {/* <P>
-              Leverage agile frameworks to provide a robust synopsis for high level overviews.
-            </P> */}
-          </Card>
-          <Card>
-            <CardImg fluid={data.almaResort4.childImageSharp.fluid} />
-            {/* <P>
-              The path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of evil men.
-            </P> */}
-          </Card>
-          <Card>
-            <CardImg fluid={data.almaResort1.childImageSharp.fluid} />
-            {/* <P>
-              Beef shank ham hock biltong. Beef ribs chuck fatback tail, cupim filet mignon strip steak spare ribs turducken tri-tip short loin.
-            </P> */}
-          </Card>
+        <HorizontalScrollContainer blue> 
+          <Card><CardImg fluid={data.almaLivingRoom1.childImageSharp.fluid}/></Card>
+          <Card><CardImg fluid={data.almaLivingRoom2.childImageSharp.fluid}/></Card>
+          <Card><CardImg fluid={data.almaKitchen1.childImageSharp.fluid}/></Card>
+          <Card><CardImg fluid={data.almaBedroom1.childImageSharp.fluid}/></Card>
+          <Card><CardImg fluid={data.almaBathroom1.childImageSharp.fluid}/></Card>
         </HorizontalScrollContainer>
       </FullWidthContainer>
 
       <CenteredContainer>
-        <AlmaHeader title='Rooms' />
-        <p>Godfather ipsum dolor sit amet. If anything in this life is certain, if history has taught us anything, it is that you can kill anyone. What's the matter with you, huh? What am I going to do? Am I going to make that baby an orphan before he's born? I don't trust a doctor who can hardly speak English. Michael, you never told me you knew Johnny Fontane!</p>
+        <AlmaHeader white title='Villas'/>
+        <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</P>
       </CenteredContainer>
 
       <FullWidthContainer>
+        <HorizontalScrollContainer blue>
+          <Card><CardImg fluid={data.villaExterior1.childImageSharp.fluid}/></Card>
+          <Card><CardImg fluid={data.villaLivingRoom1.childImageSharp.fluid}/></Card>
+          <Card><CardImg fluid={data.villaLivingRoom2.childImageSharp.fluid}/></Card>
+          <Card><CardImg fluid={data.villaBedroom1.childImageSharp.fluid}/></Card>
+          <Card><CardImg fluid={data.villaBathroom1.childImageSharp.fluid}/></Card>
+        </HorizontalScrollContainer>
+      </FullWidthContainer>
+
+      <CenteredContainer>
+        <AlmaHeader white title='Amenities' />
+        <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</P>
+      </CenteredContainer>
+
+      <FullWidthContainer>
+        <HorizontalScrollContainer blue>
+          <Card><CardImg fluid={data.reception.childImageSharp.fluid}/></Card>
+          <Card><CardImg fluid={data.allDayDiner.childImageSharp.fluid}/></Card>
+          <Card><CardImg fluid={data.ballroom.childImageSharp.fluid}/></Card>
+          <Card><CardImg fluid={data.beachBar.childImageSharp.fluid}/></Card>
+          <Card><CardImg fluid={data.spaTreatment.childImageSharp.fluid}/></Card>
+        </HorizontalScrollContainer>
+      </FullWidthContainer>
+
+      <CenteredContainer>
+        {/* <AlmaHeader title={intl.formatMessage({ id: "resort-title" })} /> */}
+        <AlmaHeader title='Vacations' />
+        <P>{intl.formatMessage({ id: "resort-p1" })}</P>
+      </CenteredContainer>
+  
+      {/* <FullWidthContainer>
         <HorizontalScrollContainer orange>
-          <Card>
-            <CardImg fluid={data.almaBathroom1.childImageSharp.fluid} />
-            {/* <P>
-              Poop on grasses under the bed bathe private parts with tongue then lick owner's face so i can haz.
-            </P> */}
-          </Card>
-          <Card>
-            <CardImg fluid={data.almaBedroom1.childImageSharp.fluid} />
-            {/* <P>
-              Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.
-            </P> */}
-          </Card>
-          <Card>
-            <CardImg fluid={data.almaKitchen1.childImageSharp.fluid} />
-            {/* <P>
-              Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of darkness.
-            </P> */}
-          </Card>
-          <Card>
-          <CardImg fluid={data.almaLivingRoom1.childImageSharp.fluid} />
-            {/* <P>
-              Short ribs bresaola bacon burgdoggen sausage biltong ham. Shankle beef ribs ham ribeye.
-            </P> */}
-          </Card>
-          <Card>
-            <CardImg fluid={data.almaLivingRoom2.childImageSharp.fluid} />
-            {/* <P>
-              Short ribs bresaola bacon burgdoggen sausage biltong ham. Shankle beef ribs ham ribeye.
-            </P> */}
-          </Card>
+          <Card><CardImg fluid={data.almaResort1.childImageSharp.fluid}/></Card>
+          <Card><CardImg fluid={data.almaResort2.childImageSharp.fluid}/></Card>
+          <Card><CardImg fluid={data.almaResort3.childImageSharp.fluid}/></Card>
+          <Card><CardImg fluid={data.almaResort4.childImageSharp.fluid}/></Card>
+          <Card><CardImg fluid={data.almaResort1.childImageSharp.fluid}/></Card>
         </HorizontalScrollContainer>
-      </FullWidthContainer>
+      </FullWidthContainer> */}
 
       <CenteredContainer>
-        <AlmaHeader title='Amenities' />
-        <p>Godfather ipsum dolor sit amet. If anything in this life is certain, if history has taught us anything, it is that you can kill anyone. What's the matter with you, huh? What am I going to do? Am I going to make that baby an orphan before he's born? I don't trust a doctor who can hardly speak English. Michael, you never told me you knew Johnny Fontane!</p>
+        <AlmaHeader white title='About RCI' />
+        <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</P>
       </CenteredContainer>
 
-      <FullWidthContainer>
+      {/* <FullWidthContainer>
         <HorizontalScrollContainer blue>
-          <Card>
-            <CardImg fluid={data.almaResort1.childImageSharp.fluid} />
-            {/* <P>
-              Poop on grasses under the bed bathe private parts with tongue then lick owner's face so i can haz.
-            </P> */}
-          </Card>
-          <Card>
-            <CardImg fluid={data.almaResort2.childImageSharp.fluid} />
-            {/* <P>
-              Cream at dripper chicory, carajillo milk acerbic java robusta, that ut, irish cultivar.
-            </P> */}
-          </Card>
-          <Card>
-            <CardImg fluid={data.almaResort3.childImageSharp.fluid} />
-            {/* <P>
-              Leverage agile frameworks to provide a robust synopsis for high level overviews.
-            </P> */}
-          </Card>
-          <Card>
-            <CardImg fluid={data.almaResort4.childImageSharp.fluid} />
-            {/* <P>
-              The path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of evil men.
-            </P> */}
-          </Card>
-          <Card>
-            <CardImg fluid={data.almaResort5.childImageSharp.fluid} />
-            {/* <P>
-              Beef shank ham hock biltong. Beef ribs chuck fatback tail, cupim filet mignon strip steak spare ribs turducken tri-tip short loin.
-            </P> */}
-          </Card>
+          <Card><CardImg fluid={data.almaResort1.childImageSharp.fluid}/></Card>
+          <Card><CardImg fluid={data.almaResort2.childImageSharp.fluid}/></Card>
+          <Card><CardImg fluid={data.almaResort3.childImageSharp.fluid}/></Card>
+          <Card><CardImg fluid={data.almaResort4.childImageSharp.fluid}/></Card>
+          <Card><CardImg fluid={data.almaResort5.childImageSharp.fluid}/></Card>
         </HorizontalScrollContainer>
-      </FullWidthContainer>
+      </FullWidthContainer> */}
 
       <CenteredContainer>
-        <AlmaHeader title='News' />
+        <AlmaHeader white title='Ownership' />
+        <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</P>
+      </CenteredContainer>
+
+      {/* <FullWidthContainer>
+        <HorizontalScrollContainer blue>
+          <Card><CardImg fluid={data.almaResort1.childImageSharp.fluid}/></Card>
+          <Card><CardImg fluid={data.almaResort2.childImageSharp.fluid}/></Card>
+          <Card><CardImg fluid={data.almaResort3.childImageSharp.fluid}/></Card>
+          <Card><CardImg fluid={data.almaResort4.childImageSharp.fluid}/></Card>
+          <Card><CardImg fluid={data.almaResort5.childImageSharp.fluid}/></Card>
+        </HorizontalScrollContainer>
+      </FullWidthContainer> */}
+
+      <CenteredContainer>
+        <AlmaHeader white title='Benefits' />
+        <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</P>
+      </CenteredContainer>
+
+      {/* <FullWidthContainer>
+        <HorizontalScrollContainer blue>
+          <Card><CardImg fluid={data.almaResort1.childImageSharp.fluid}/></Card>
+          <Card><CardImg fluid={data.almaResort2.childImageSharp.fluid}/></Card>
+          <Card><CardImg fluid={data.almaResort3.childImageSharp.fluid}/></Card>
+          <Card><CardImg fluid={data.almaResort4.childImageSharp.fluid}/></Card>
+          <Card><CardImg fluid={data.almaResort5.childImageSharp.fluid}/></Card>
+        </HorizontalScrollContainer>
+      </FullWidthContainer> */}
+
+      <CenteredContainer>
+        {/* <AlmaHeader title={intl.formatMessage({ id: "resort-title" })} /> */}
+        <AlmaHeader title='Alma' />
+        <P>{intl.formatMessage({ id: "resort-p1" })}</P>
+      </CenteredContainer>
+  
+      {/* <FullWidthContainer>
+        <HorizontalScrollContainer orange>
+          <Card><CardImg fluid={data.almaResort1.childImageSharp.fluid}/></Card>
+          <Card><CardImg fluid={data.almaResort2.childImageSharp.fluid}/></Card>
+          <Card><CardImg fluid={data.almaResort3.childImageSharp.fluid}/></Card>
+          <Card><CardImg fluid={data.almaResort4.childImageSharp.fluid}/></Card>
+          <Card><CardImg fluid={data.almaResort1.childImageSharp.fluid}/></Card>
+        </HorizontalScrollContainer>
+      </FullWidthContainer> */}
+
+      <CenteredContainer>
+        <AlmaHeader white title='About Us' />
+        <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</P>
+      </CenteredContainer>
+
+      {/* <FullWidthContainer>
+        <HorizontalScrollContainer blue>
+          <Card><CardImg fluid={data.almaResort1.childImageSharp.fluid}/></Card>
+          <Card><CardImg fluid={data.almaResort2.childImageSharp.fluid}/></Card>
+          <Card><CardImg fluid={data.almaResort3.childImageSharp.fluid}/></Card>
+          <Card><CardImg fluid={data.almaResort4.childImageSharp.fluid}/></Card>
+          <Card><CardImg fluid={data.almaResort5.childImageSharp.fluid}/></Card>
+        </HorizontalScrollContainer>
+      </FullWidthContainer> */}
+
+      <CenteredContainer>
+        <AlmaHeader white title='Our Story' />
+        <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</P>
+      </CenteredContainer>
+
+      {/* <FullWidthContainer>
+        <HorizontalScrollContainer blue>
+          <Card><CardImg fluid={data.almaResort1.childImageSharp.fluid}/></Card>
+          <Card><CardImg fluid={data.almaResort2.childImageSharp.fluid}/></Card>
+          <Card><CardImg fluid={data.almaResort3.childImageSharp.fluid}/></Card>
+          <Card><CardImg fluid={data.almaResort4.childImageSharp.fluid}/></Card>
+          <Card><CardImg fluid={data.almaResort5.childImageSharp.fluid}/></Card>
+        </HorizontalScrollContainer>
+      </FullWidthContainer> */}
+
+      <CenteredContainer>
+        <AlmaHeader white title='News' />
         <P>All the latest news that's fit to print about the worlds newest and brightest hotspot in the Vietnam travel scene</P>
         <h4>{data.articles.totalCount} Posts</h4>
       </CenteredContainer>
@@ -627,11 +782,6 @@ const Index = ({ data, intl }) => {
           ))}
         </NewsContainer>
       </FullWidthContainer>
-    
-      <CenteredContainer>
-        <AlmaHeader title='About' />
-        <p>Godfather ipsum dolor sit amet. If anything in this life is certain, if history has taught us anything, it is that you can kill anyone. What's the matter with you, huh? What am I going to do? Am I going to make that baby an orphan before he's born? I don't trust a doctor who can hardly speak English. Michael, you never told me you knew Johnny Fontane!</p>
-      </CenteredContainer>
         
       {/* <CenteredContainer>
         <AlmaHeader title='Instagram' />
@@ -755,6 +905,48 @@ export const query = graphql`
         }
       }
     }
+    villaExterior1: file(relativePath: { eq: "villas/villa-exterior-1-3840x2880.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 3840) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    villaLivingRoom1: file(relativePath: { eq: "villas/villa-living-room-1-3840x2880.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 3840) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    villaLivingRoom2: file(relativePath: { eq: "villas/villa-living-room-2-3840x2880.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 3840) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    villaBedroom1: file(relativePath: { eq: "villas/villa-bedroom-1-3840x2880.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 3840) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    villaBathroom1: file(relativePath: { eq: "villas/villa-bathroom-1-3840x2880.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 3840) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    villaLivingRoom1: file(relativePath: { eq: "villas/villa-living-room-1-3840x2880.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 3840) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
     almaBathroom1: file(relativePath: { eq: "rooms/alma-bathroom-1.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 3840) {
@@ -790,9 +982,42 @@ export const query = graphql`
         }
       }
     }
+    reception: file(relativePath: { eq: "amenities/reception-lobby-3840x2880.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 3840) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    ballroom: file(relativePath: { eq: "amenities/ballroom-3840x2880.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 3840) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    spaTreatment: file(relativePath: { eq: "amenities/spa-treatment-3840x2880.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 3840) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    allDayDiner: file(relativePath: { eq: "restaurants/all-day-diner-1-3840x2880.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 3840) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    beachBar: file(relativePath: { eq: "restaurants/beach-bar-2-3840x2880.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 3840) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
   }
 `
 
 export default injectIntl(Index)
-
-// export default Index

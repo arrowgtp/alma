@@ -40,7 +40,7 @@ module.exports = {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         google: {
-          families: ['Quicksand', 'DM Serif Display', 'Caveat', 'Open Sans']
+          families: [`Work Sans`, `Lato`, `Montserrat`, `Lora`, `Quicksand`, `DM Serif Display`, `Caveat`, `Open Sans`]
         }
       }
     },

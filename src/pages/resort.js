@@ -22,10 +22,10 @@ const HeaderContainer = styled.div`
   }
 `
 
-const H2 = styled.h2`
-  margin: 2rem 0;
-  padding: 0;
-`
+// const H2 = styled.h2`
+//   margin: 2rem 0;
+//   padding: 0;
+// `
 
 const P = styled.p`
   margin: 2rem 0;

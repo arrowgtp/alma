@@ -8,12 +8,12 @@ import AlmaHeader from '../components/Header'
 
 import P from '../components/visual/Paragraph'
 
-const Villas = ({ intl }) => {
+const Ownership = ({ intl }) => {
   return (
     <ViewContainer>
-      <SEO title="Villas" />
+      <SEO title="Ownership" />
       <CenteredContainer>
-        <AlmaHeader title='Villas' />
+        <AlmaHeader title='Ownership' />
         <P>{intl.formatMessage({ id: "title" })}</P>
         <P>{intl.formatMessage({ id: "slogan" })}</P>
       </CenteredContainer>
@@ -21,4 +21,4 @@ const Villas = ({ intl }) => {
   )
 }
 
-export default injectIntl(Villas)
+export default injectIntl(Ownership)
