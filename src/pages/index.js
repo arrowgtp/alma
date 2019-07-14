@@ -586,7 +586,7 @@ const Index = ({ data, intl }) => {
 
       </FullWidthContainer>
   
-        <FullWidthContainer>
+        {/* <FullWidthContainer>
           <HorizontalScrollContainer orange>
             <Card><CardImg fluid={data.almaResort1.childImageSharp.fluid}/></Card>
             <Card><CardImg fluid={data.almaResort2.childImageSharp.fluid}/></Card>
@@ -594,14 +594,14 @@ const Index = ({ data, intl }) => {
             <Card><CardImg fluid={data.almaResort4.childImageSharp.fluid}/></Card>
             <Card><CardImg fluid={data.almaResort1.childImageSharp.fluid}/></Card>
           </HorizontalScrollContainer>
-        </FullWidthContainer>
+        </FullWidthContainer> */}
 
       <CenteredContainer>
         <AlmaHeader white title='Apartments'/>
         <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</P>
       </CenteredContainer>
 
-      <FullWidthContainer>
+      {/* <FullWidthContainer>
         <HorizontalScrollContainer blue> 
           <Card><CardImg fluid={data.almaLivingRoom1.childImageSharp.fluid}/></Card>
           <Card><CardImg fluid={data.almaLivingRoom2.childImageSharp.fluid}/></Card>
@@ -609,14 +609,14 @@ const Index = ({ data, intl }) => {
           <Card><CardImg fluid={data.almaBedroom1.childImageSharp.fluid}/></Card>
           <Card><CardImg fluid={data.almaBathroom1.childImageSharp.fluid}/></Card>
         </HorizontalScrollContainer>
-      </FullWidthContainer>
+      </FullWidthContainer> */}
 
       <CenteredContainer>
         <AlmaHeader white title='Villas'/>
         <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</P>
       </CenteredContainer>
 
-      <FullWidthContainer>
+      {/* <FullWidthContainer>
         <HorizontalScrollContainer blue>
           <Card><CardImg fluid={data.villaExterior1.childImageSharp.fluid}/></Card>
           <Card><CardImg fluid={data.villaLivingRoom1.childImageSharp.fluid}/></Card>
@@ -624,14 +624,14 @@ const Index = ({ data, intl }) => {
           <Card><CardImg fluid={data.villaBedroom1.childImageSharp.fluid}/></Card>
           <Card><CardImg fluid={data.villaBathroom1.childImageSharp.fluid}/></Card>
         </HorizontalScrollContainer>
-      </FullWidthContainer>
+      </FullWidthContainer> */}
 
       <CenteredContainer>
         <AlmaHeader white title='Amenities' />
         <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</P>
       </CenteredContainer>
 
-      <FullWidthContainer>
+      {/* <FullWidthContainer>
         <HorizontalScrollContainer blue>
           <Card><CardImg fluid={data.reception.childImageSharp.fluid}/></Card>
           <Card><CardImg fluid={data.allDayDiner.childImageSharp.fluid}/></Card>
@@ -639,7 +639,7 @@ const Index = ({ data, intl }) => {
           <Card><CardImg fluid={data.beachBar.childImageSharp.fluid}/></Card>
           <Card><CardImg fluid={data.spaTreatment.childImageSharp.fluid}/></Card>
         </HorizontalScrollContainer>
-      </FullWidthContainer>
+      </FullWidthContainer> */}
 
       <CenteredContainer>
         {/* <AlmaHeader title={intl.formatMessage({ id: "resort-title" })} /> */}
