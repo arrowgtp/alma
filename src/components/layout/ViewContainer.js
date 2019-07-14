@@ -2,8 +2,7 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import { useTransition, animated, config } from 'react-spring'
 
-// const Container = styled(animated.main)`
-const Container = styled.main`
+const Container = styled(animated.main)`
   margin: 0;
   padding: 0;
   z-index: 1;
