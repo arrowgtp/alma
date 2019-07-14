@@ -344,12 +344,12 @@ const Menu = () => {
           <AlmaLink2 to={`/ownership`}>Ownership</AlmaLink2>
           <AlmaLink2 to={`/benefits`}>Benefits</AlmaLink2>
         <AlmaBulletShell src={almaShell}/>
-        <AlmaLink to={`/story`}>Alma</AlmaLink>
+        <AlmaLink to={`/alma`}>Alma</AlmaLink>
           <AlmaLink2 to={`/about-alma`}>About Us</AlmaLink2>
           <AlmaLink2 to={`/story`}>Our Story</AlmaLink2>
           <AlmaLink2 to={`/news`}>News</AlmaLink2>
         <AlmaBulletShell src={almaShell}/>
-        <AlmaLink to={`/story`}>Promotions</AlmaLink>
+        <AlmaLink to={`/promotions`}>Promotions</AlmaLink>
       </LargeMenu>
       <SmallMenu ref={node}>
         {!isToggled ?
@@ -377,7 +377,7 @@ const Menu = () => {
           </MobileLinkFlex>
           <MobileLinkFlex>
             <AlmaBulletShell src={almaShell}/>
-            <AlmaLink to={`/story`} onClick={toggle}>Alma</AlmaLink>
+            <AlmaLink to={`/alma`} onClick={toggle}>Alma</AlmaLink>
               <AlmaLink2 to={`/about-alma`} onClick={toggle}>About Us</AlmaLink2>
               <AlmaLink2 to={`/story`} onClick={toggle}>Our Story</AlmaLink2>
               <AlmaLink2 to={`/news`} onClick={toggle}>News</AlmaLink2>

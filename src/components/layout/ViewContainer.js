@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import { useTransition, animated, config } from 'react-spring'
+import { useTransition, animated } from 'react-spring'
 
 const Container = styled(animated.main)`
   margin: 0;

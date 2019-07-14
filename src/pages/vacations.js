@@ -12,8 +12,6 @@ const Vacations = ({ intl }) => {
       <SEO title="Vacations" />
       <CenteredContainer>
         <AlmaHeader title='Vacations' />
-        <p>We're the only site running on your computer dedicated to showing the best
-          photos and videos of pandas eating lots of food.</p>
         <p>{intl.formatMessage({ id: "title" })}</p>
         <p>{intl.formatMessage({ id: "slogan" })}</p>
       </CenteredContainer>

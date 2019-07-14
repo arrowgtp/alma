@@ -12,7 +12,7 @@ import Menu from './Menu'
 import Button from './styled/Button'
 
 import almaLogoWithBG from '../images/alma/alma-logo-with-bg.svg'
-import almaBGShell from '../images/alma/alma-bg-shell.svg'
+// import almaBGShell from '../images/alma/alma-bg-shell.svg'
 import almaWhiteShell from '../images/alma/alma-logo-shell-white.svg'
 
 import FacebookIcon from '../images/social/facebook-button.svg'
@@ -94,22 +94,22 @@ const Contact = styled.div`
     justify-content: center;
     z-index: 1000;
   }
-`;
-
-const AlmaBGShell = styled.img`
-  display: none;
-
-  @media (min-width: 50rem) {
-    display: block;
-    grid-column: 1 / 2;
-    grid-row: 5 / 6;
-    margin-left: -64px;
-    margin-top: -64px;
-    z-index: 1;
-    opacity: 0.25;
-    overflow: hidden;
-  }
 `
+
+// const AlmaBGShell = styled.img`
+//   display: none;
+
+//   @media (min-width: 50rem) {
+//     display: block;
+//     grid-column: 1 / 2;
+//     grid-row: 5 / 6;
+//     margin-left: -64px;
+//     margin-top: -64px;
+//     z-index: 1;
+//     opacity: 0.25;
+//     overflow: hidden;
+//   }
+// `
 
 const AlmaWhiteShell = styled.img`
   display: block;

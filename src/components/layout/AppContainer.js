@@ -1,12 +1,10 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import styled from 'styled-components'
-import { useSpring, animated } from 'react-spring'
 
-const App = styled(animated.div)`
+const App = styled.div`
   margin: 0;
   padding: 0;
   height: 100vh;
-  /* height: calc(var(--vh, 1vh) * 100); */
   width: 100vw;
   overflow-x: hidden;
   display: grid;
@@ -17,8 +15,6 @@ const App = styled(animated.div)`
 
   @media (min-width: 50rem) {
     grid-template-rows: 18vh 5vh 5vh 57vh 15vh;
-    /* grid-template-rows: 20% 5% 5% 50% 20%; */
-    /* grid-template-rows: 4fr 1fr 1fr 10fr 4fr; */
     grid-template-columns: 1fr 4fr;
   }
 `
@@ -76,7 +72,7 @@ const AppContainer = (props) => {
 
   return (
     // <App style={fade}>
-    <App style>
+    <App>
       {/* <WindowInfo>{size.width}px / {size.height}px</WindowInfo> */}
       {props.children}
     </App>

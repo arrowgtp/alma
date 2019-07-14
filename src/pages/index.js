@@ -1,36 +1,20 @@
-import React, { useRef } from 'react'
+import React from 'react'
 import { graphql } from 'gatsby'
 import styled from 'styled-components'
 import Img from 'gatsby-image'
 import { Link, injectIntl } from 'gatsby-plugin-intl'
 import SEO from '../components/seo'
-// import { motion, useMotionValue, useViewportScroll } from 'framer-motion'
-// import { animated, useSpring, config } from 'react-spring'
 
 import ViewContainer from '../components/layout/ViewContainer'
 import FullWidthContainer from '../components/layout/FullWidthContainer'
 import CenteredContainer from '../components/layout/CenteredContainer'
-import HorizontalScrollContainer from '../components/layout/HorizontalScrollContainer'
+// import HorizontalScrollContainer from '../components/layout/HorizontalScrollContainer'
 import AlmaHeader from '../components/Header'
 import { FullContentCard, FullContentImage } from '../components/layout/FullContentCard'
 
-import P from '../components/visual/Paragraph'
+// import P from '../components/visual/Paragraph'
 
 import almaLogoWithBG from '../images/alma/alma-logo-with-bg.svg'
-
-// const FullContentCard = styled.div`
-//   grid-column: 1 / 4;
-//   margin: 0;
-//   padding: 0;
-//   height: 90vh;
-//   display: grid;
-//   grid-template-rows: repeat(8, 1fr);
-//   grid-template-columns: repeat(8, 1fr);
-
-//   @media (min-width: 50rem) {
-//     height: 100vh;
-//   }
-// `
 
 const MainLogo = styled.img`
   width: calc(192px + (320 - 192) * ((100vw - 300px) / (1600 - 300)));
@@ -48,23 +32,6 @@ const MainLogo = styled.img`
   }
 `
 
-// const FullContentImage = styled(Img)`
-//   grid-row: 1 / 9;
-//   grid-column: 1 / 9;
-//   object-fit: cover;
-//   z-index: 0;
-// `
-
-// const PageTitle = styled.div`
-//   grid-row: 1 / 2;
-//   grid-column: 1 / 9;
-//   z-index: 1;
-//   color: black;
-//   font-size: 32px;
-//   align-self: center;
-//   justify-self: center;
-// `
-
 const PageSlogan = styled.div`
   grid-row: 7 / 9;
   grid-column: 1 / 9;
@@ -81,104 +48,34 @@ const PageSlogan = styled.div`
   }
 `
 
-// const MotionImage = styled(motion.custom(Img))`
-//   width: 200px;
-//   height: 200px;
-//   background: tomato;
+// const Card = styled.div`
+//   flex: 0 0 auto;
+//   margin: 1rem 0.5rem;
+//   padding: 0.25rem;
+//   width: 80%;
+//   height: auto;
+//   background: white;
+//   line-height: 1;
+//   white-space: pre-wrap;
+//   border-radius: 8px;
+//   box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.5);
+
+//   :first-child {
+//     margin-left: 1rem;
+//   }
+
+//   :last-child {
+//     margin-right: -1rem;
+//   }
+
+//   @media (min-width: 50rem) {
+//     width: 40%;
+//   }
 // `
 
-// const MotionDiv = styled(motion.div)`
-//   width: 200px;
-//   height: 200px;
-//   background: tomato;
+// const CardImg = styled(Img)`
+//   border-radius: 6px;
 // `
-
-// const AnimatedImage = styled(animated(Img))`
-//   width: 200px;
-//   height: 200px;
-//   background: tomato;
-// `
-
-// const Parallax = styled.div`
-//   perspective: 1px;
-//   height: 50vh;
-//   overflow-x: hidden;
-//   overflow-y: auto;
-// `
-
-// const ParallaxGroup = styled.div`
-//   position: relative;
-//   height: 50vh;
-//   background: #2a8190;
-//   transform-style: preserve-3d;
-// `
-
-// const ParallaxLayer = styled.div`
-//   position: absolute;
-//   top: 0;
-//   right: 0;
-//   bottom: 0;
-//   left: 0;
-// `
-
-// const ParallaxLayerBase = styled.div`
-//   position: absolute;
-//   top: 0;
-//   right: 0;
-//   bottom: 0;
-//   left: 0;
-//   transform: translateZ(0);
-//   border: 1px red solid;
-//   z-index: 2;
-// `
-
-// const ParallaxLayerBack = styled.div`
-//   position: absolute;
-//   top: 0;
-//   right: 0;
-//   bottom: 0;
-//   left: 0;
-//   transform: translateZ(-1px);
-//   border: 1px red solid;
-//   z-index: 3;
-// `
-
-const Card = styled.div`
-  flex: 0 0 auto;
-  margin: 1rem 0.5rem;
-  padding: 0.25rem;
-  /* padding: 0rem;  */
-  width: 80%;
-  height: auto;
-  background: white;
-  line-height: 1;
-  /* font-size: 18px; */
-  white-space: pre-wrap;
-  border-radius: 8px;
-  box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.5);
-
-  :first-child {
-    margin-left: 1rem;
-  }
-
-  :last-child {
-    margin-right: -1rem;
-  }
-
-  @media (min-width: 50rem) {
-    width: 40%;
-  }
-`
-
-const CardImg = styled(Img)`
-  border-radius: 6px;
-  object-fit: cover;
-  min-height: 20rem;
-
-  @media (min-width: 50rem) {
-    min-height: 20rem;
-  }
-`
 
 const NewsContainer = styled.div`
   z-index: 5;
@@ -206,131 +103,131 @@ const NewsContainer = styled.div`
   }
 `
 
-const NewsCardOne = styled(Link)`
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 16px;
-  display: grid;
-  z-index: 1;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(8, 1fr);
-  transition: All 250ms ease;
-  box-shadow: 
-    0 13px 27px -5px rgba(50,50,93,.25),
-    0 8px 16px -8px rgba(0,0,0,.3),
-    0 -6px 16px -6px rgba(0,0,0,.025)
-  ;
-  transform: translateY(0px);
+// const NewsCardOne = styled(Link)`
+//   margin: 0;
+//   padding: 0;
+//   width: 100%;
+//   height: 100%;
+//   border-radius: 16px;
+//   display: grid;
+//   z-index: 1;
+//   grid-template-columns: repeat(12, 1fr);
+//   grid-template-rows: repeat(8, 1fr);
+//   transition: All 250ms ease;
+//   box-shadow: 
+//     0 13px 27px -5px rgba(50,50,93,.25),
+//     0 8px 16px -8px rgba(0,0,0,.3),
+//     0 -6px 16px -6px rgba(0,0,0,.025)
+//   ;
+//   transform: translateY(0px);
 
-  :hover {
-    box-shadow:
-      0 30px 60px -12px rgba(50,50,93,.25),
-      0 18px 36px -18px rgba(0,0,0,.3),
-      0 -12px 36px -8px rgba(0,0,0,.025)
-    ;
-    transform: translateY(-2px);
-  }
+//   :hover {
+//     box-shadow:
+//       0 30px 60px -12px rgba(50,50,93,.25),
+//       0 18px 36px -18px rgba(0,0,0,.3),
+//       0 -12px 36px -8px rgba(0,0,0,.025)
+//     ;
+//     transform: translateY(-2px);
+//   }
 
-  :active {
-    transition: All 100ms ease;
-    transform: translateY(2px);
-  }
+//   :active {
+//     transition: All 100ms ease;
+//     transform: translateY(2px);
+//   }
 
-  @media (min-width: 50rem) {
-  }
-`
+//   @media (min-width: 50rem) {
+//   }
+// `
 
-const NewsTitleOne = styled.h1`
-  text-shadow: 0px 0px 8px hsla(360, 100%, 100%, 1);
-  font-size: calc(32px + (64 - 32) * ((100vw - 300px) / (1600 - 300)));
-  font-family: 'Caveat', sans-serif;
-  font-weight: normal;
-  color: #fff;
-  margin: 0;
-  padding: 0 0 0 1rem;
-  font-weight: normal;
-  color: #fff;
-  line-height: 1;
-  font-style: bold;
-  grid-column: 1 / 13;
-  grid-row: 5 / 7;
-  align-self: end;
-  z-index: 10;
+// const NewsTitleOne = styled.h1`
+//   text-shadow: 0px 0px 8px hsla(360, 100%, 100%, 1);
+//   font-size: calc(32px + (64 - 32) * ((100vw - 300px) / (1600 - 300)));
+//   font-family: 'Caveat', sans-serif;
+//   font-weight: normal;
+//   color: #fff;
+//   margin: 0;
+//   padding: 0 0 0 1rem;
+//   font-weight: normal;
+//   color: #fff;
+//   line-height: 1;
+//   font-style: bold;
+//   grid-column: 1 / 13;
+//   grid-row: 5 / 7;
+//   align-self: end;
+//   z-index: 10;
 
-  @media (min-width: 800px) {
-    font-size: calc(16px + (64 - 16) * ((100vw - 300px) / (1600 - 300)));
-  }
-`
+//   @media (min-width: 800px) {
+//     font-size: calc(16px + (64 - 16) * ((100vw - 300px) / (1600 - 300)));
+//   }
+// `
 
-const NewsSubtitleOne = styled.h2`
-  text-shadow: 0px 0px 32px rgba(0, 0, 0, 1);
-  font-size: calc(12px + (18 - 12) * ((100vw - 300px) / (1600 - 300)));
-  font-family: 'Open Sans', sans-serif;
-  color: #fff;
-  margin: 0;
-  padding: 0 0 0 1rem;
-  font-size: 12px;
-  color: #fff;
-  line-height: 1;
-  align-self: center;
-  font-style: normal;
-  grid-column: 1 / 13;
-  grid-row: 7 / 8;
-  z-index: 10;
+// const NewsSubtitleOne = styled.h2`
+//   text-shadow: 0px 0px 32px rgba(0, 0, 0, 1);
+//   font-size: calc(12px + (18 - 12) * ((100vw - 300px) / (1600 - 300)));
+//   font-family: 'Open Sans', sans-serif;
+//   color: #fff;
+//   margin: 0;
+//   padding: 0 0 0 1rem;
+//   font-size: 12px;
+//   color: #fff;
+//   line-height: 1;
+//   align-self: center;
+//   font-style: normal;
+//   grid-column: 1 / 13;
+//   grid-row: 7 / 8;
+//   z-index: 10;
 
-  @media (min-width: 800px) {
-    font-size: calc(12px + (16 - 12) * ((100vw - 300px) / (1600 - 300)));
-  }
-`
+//   @media (min-width: 800px) {
+//     font-size: calc(12px + (16 - 12) * ((100vw - 300px) / (1600 - 300)));
+//   }
+// `
 
-const NewsDateOne = styled.h3`
-  text-shadow: 0px 0px 32px rgba(0, 0, 0, 1);
-  font-size: calc(8px + (12 - 8) * ((100vw - 300px) / (1600 - 300)));
-  font-family: 'Open Sans', sans-serif;
-  color: #fff;
-  grid-column: 1 / 13;
-  grid-row: 8 / 9;
-  z-index: 10;
-  padding: 0 0 0 1rem;
-  margin: 0;
-`
+// const NewsDateOne = styled.h3`
+//   text-shadow: 0px 0px 32px rgba(0, 0, 0, 1);
+//   font-size: calc(8px + (12 - 8) * ((100vw - 300px) / (1600 - 300)));
+//   font-family: 'Open Sans', sans-serif;
+//   color: #fff;
+//   grid-column: 1 / 13;
+//   grid-row: 8 / 9;
+//   z-index: 10;
+//   padding: 0 0 0 1rem;
+//   margin: 0;
+// `
 
-const NewsImageOne = styled(Img)`
-  grid-column: 1 / 13;
-  grid-row: 1 / 9;
-  width: 100%;
-  height: auto;
-  border-radius: 16px;
-  z-index: 1;
-`
+// const NewsImageOne = styled(Img)`
+//   grid-column: 1 / 13;
+//   grid-row: 1 / 9;
+//   width: 100%;
+//   height: auto;
+//   border-radius: 16px;
+//   z-index: 1;
+// `
 
-const NewsScrimOne = styled.div`
-  grid-column: 1 / 13;
-  grid-row: 1 / 9;
-  background: linear-gradient(
-    to bottom,
-    hsla(0, 0%, 0%, 0) 0%,
-    hsla(0, 0%, 0%, 0.006) 8.1%,
-    hsla(0, 0%, 0%, 0.024) 15.5%,
-    hsla(0, 0%, 0%, 0.052) 22.5%,
-    hsla(0, 0%, 0%, 0.088) 29%,
-    hsla(0, 0%, 0%, 0.13) 35.3%,
-    hsla(0, 0%, 0%, 0.176) 41.2%,
-    hsla(0, 0%, 0%, 0.225) 47.1%,
-    hsla(0, 0%, 0%, 0.275) 52.9%,
-    hsla(0, 0%, 0%, 0.324) 58.8%,
-    hsla(0, 0%, 0%, 0.37) 64.7%,
-    hsla(0, 0%, 0%, 0.412) 71%,
-    hsla(0, 0%, 0%, 0.448) 77.5%,
-    hsla(0, 0%, 0%, 0.476) 84.5%,
-    hsla(0, 0%, 0%, 0.494) 91.9%,
-    hsla(0, 0%, 0%, 0.5) 100%
-  );
-  border-radius: 16px;
-  z-index: 2;
-`
+// const NewsScrimOne = styled.div`
+//   grid-column: 1 / 13;
+//   grid-row: 1 / 9;
+//   background: linear-gradient(
+//     to bottom,
+//     hsla(0, 0%, 0%, 0) 0%,
+//     hsla(0, 0%, 0%, 0.006) 8.1%,
+//     hsla(0, 0%, 0%, 0.024) 15.5%,
+//     hsla(0, 0%, 0%, 0.052) 22.5%,
+//     hsla(0, 0%, 0%, 0.088) 29%,
+//     hsla(0, 0%, 0%, 0.13) 35.3%,
+//     hsla(0, 0%, 0%, 0.176) 41.2%,
+//     hsla(0, 0%, 0%, 0.225) 47.1%,
+//     hsla(0, 0%, 0%, 0.275) 52.9%,
+//     hsla(0, 0%, 0%, 0.324) 58.8%,
+//     hsla(0, 0%, 0%, 0.37) 64.7%,
+//     hsla(0, 0%, 0%, 0.412) 71%,
+//     hsla(0, 0%, 0%, 0.448) 77.5%,
+//     hsla(0, 0%, 0%, 0.476) 84.5%,
+//     hsla(0, 0%, 0%, 0.494) 91.9%,
+//     hsla(0, 0%, 0%, 0.5) 100%
+//   );
+//   border-radius: 16px;
+//   z-index: 2;
+// `
 
 const NewsCard = styled(Link)`
   text-decoration: none;
@@ -413,126 +310,120 @@ const NewsExcerpt = styled.p`
   margin: calc(8px + (32 - 8) * ((100vw - 300px) / (1600 - 300)));
 `
 
-const InstaGrid = styled.div`
-  margin: 0;
-  padding: 2rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-gap: 2rem;
+// const InstaGrid = styled.div`
+//   margin: 0;
+//   padding: 2rem;
+//   display: grid;
+//   grid-template-columns: 1fr 1fr;
+//   grid-template-rows: 1fr 1fr 1fr;
+//   grid-gap: 2rem;
 
-  @media (min-width: 50rem) {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-  }
-`
+//   @media (min-width: 50rem) {
+//     grid-template-columns: 1fr 1fr 1fr;
+//     grid-template-rows: 1fr 1fr 1fr;
+//   }
+// `
 
-const InstaPost = styled.div`
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 0;
-  padding-bottom: 100%;
-  border-radius: 16px;
-  box-shadow: 0px 0px 24px 0px rgba(0,0,0,0.15);
-  position: relative;
-  transition: All 250ms ease;
-  box-shadow: 
-    0 13px 27px -5px rgba(50,50,93,.25),
-    0 8px 16px -8px rgba(0,0,0,.3),
-    0 -6px 16px -6px rgba(0,0,0,.025)
-  ;
+// const InstaPost = styled.div`
+//   margin: 0;
+//   padding: 0;
+//   width: 100%;
+//   height: 0;
+//   padding-bottom: 100%;
+//   border-radius: 16px;
+//   box-shadow: 0px 0px 24px 0px rgba(0,0,0,0.15);
+//   position: relative;
+//   transition: All 250ms ease;
+//   box-shadow: 
+//     0 13px 27px -5px rgba(50,50,93,.25),
+//     0 8px 16px -8px rgba(0,0,0,.3),
+//     0 -6px 16px -6px rgba(0,0,0,.025)
+//   ;
 
-  :hover {
-    box-shadow:
-      0 30px 60px -12px rgba(50,50,93,.25),
-      0 18px 36px -18px rgba(0,0,0,.3),
-      0 -12px 36px -8px rgba(0,0,0,.025)
-    ;
-    transform: translateY(-2px);
-  }
-`
+//   :hover {
+//     box-shadow:
+//       0 30px 60px -12px rgba(50,50,93,.25),
+//       0 18px 36px -18px rgba(0,0,0,.3),
+//       0 -12px 36px -8px rgba(0,0,0,.025)
+//     ;
+//     transform: translateY(-2px);
+//   }
+// `
 
-const InstaSpacer = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  display: grid;
-  grid-template-rows: repeat(8, 1fr);
-  grid-template-columns: repeat(8, 1fr);
-`
+// const InstaSpacer = styled.div`
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   height: 100%;
+//   width: 100%;
+//   display: grid;
+//   grid-template-rows: repeat(8, 1fr);
+//   grid-template-columns: repeat(8, 1fr);
+// `
 
-const InstaLikes = styled.p`
-  grid-row: 1 / 9;
-  grid-column: 1 / 9;
-  margin: 0;
-  padding: 0;
-  justify-self: start;
-  align-self: end;
-  z-index: 5;
-  color: white;
-  justify-self: center;
-  font-size: calc(8px + (32 - 12) * ((100vw - 300px) / (1600 - 300)));
-`
+// const InstaLikes = styled.p`
+//   grid-row: 1 / 9;
+//   grid-column: 1 / 9;
+//   margin: 0;
+//   padding: 0;
+//   justify-self: start;
+//   align-self: end;
+//   z-index: 5;
+//   color: white;
+//   justify-self: center;
+//   font-size: calc(8px + (32 - 12) * ((100vw - 300px) / (1600 - 300)));
+// `
 
-const InstaComments = styled.p`
-  grid-row: 8 / 9;
-  grid-column: 5 / 9;
-  margin: 0;
-  padding: 0;
-  z-index: 5;
-  color: white;
-  justify-self: center;
-  font-size: calc(8px + (32 - 12) * ((100vw - 300px) / (1600 - 300)));
-`
+// const InstaComments = styled.p`
+//   grid-row: 8 / 9;
+//   grid-column: 5 / 9;
+//   margin: 0;
+//   padding: 0;
+//   z-index: 5;
+//   color: white;
+//   justify-self: center;
+//   font-size: calc(8px + (32 - 12) * ((100vw - 300px) / (1600 - 300)));
+// `
 
-const InstaImage = styled(Img)`
-  grid-row: 1 / 9;
-  grid-column: 1 / 9;
-  margin: 0;
-  padding: 0;
-  border-radius: 16px;
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-`
+// const InstaImage = styled(Img)`
+//   grid-row: 1 / 9;
+//   grid-column: 1 / 9;
+//   margin: 0;
+//   padding: 0;
+//   border-radius: 16px;
+//   object-fit: cover;
+//   width: 100%;
+//   height: 100%;
+//   z-index: 0;
+// `
 
-const InstaScrim = styled.div`
-  grid-column: 1 / 9;
-  grid-row: 1 / 9;
-  background: linear-gradient(
-    to bottom,
-    hsla(0, 0%, 0%, 0) 0%,
-    hsla(0, 0%, 0%, 0.003) 8.1%,
-    hsla(0, 0%, 0%, 0.012) 15.5%,
-    hsla(0, 0%, 0%, 0.026) 22.5%,
-    hsla(0, 0%, 0%, 0.044) 29%,
-    hsla(0, 0%, 0%, 0.065) 35.3%,
-    hsla(0, 0%, 0%, 0.088) 41.2%,
-    hsla(0, 0%, 0%, 0.113) 47.1%,
-    hsla(0, 0%, 0%, 0.137) 52.9%,
-    hsla(0, 0%, 0%, 0.162) 58.8%,
-    hsla(0, 0%, 0%, 0.185) 64.7%,
-    hsla(0, 0%, 0%, 0.206) 71%,
-    hsla(0, 0%, 0%, 0.224) 77.5%,
-    hsla(0, 0%, 0%, 0.238) 84.5%,
-    hsla(0, 0%, 0%, 0.247) 91.9%,
-    hsla(0, 0%, 0%, 0.25) 100%
-  );
-  z-index: 1;
-  border-radius: 16px;
-`
+// const InstaScrim = styled.div`
+//   grid-column: 1 / 9;
+//   grid-row: 1 / 9;
+//   background: linear-gradient(
+//     to bottom,
+//     hsla(0, 0%, 0%, 0) 0%,
+//     hsla(0, 0%, 0%, 0.003) 8.1%,
+//     hsla(0, 0%, 0%, 0.012) 15.5%,
+//     hsla(0, 0%, 0%, 0.026) 22.5%,
+//     hsla(0, 0%, 0%, 0.044) 29%,
+//     hsla(0, 0%, 0%, 0.065) 35.3%,
+//     hsla(0, 0%, 0%, 0.088) 41.2%,
+//     hsla(0, 0%, 0%, 0.113) 47.1%,
+//     hsla(0, 0%, 0%, 0.137) 52.9%,
+//     hsla(0, 0%, 0%, 0.162) 58.8%,
+//     hsla(0, 0%, 0%, 0.185) 64.7%,
+//     hsla(0, 0%, 0%, 0.206) 71%,
+//     hsla(0, 0%, 0%, 0.224) 77.5%,
+//     hsla(0, 0%, 0%, 0.238) 84.5%,
+//     hsla(0, 0%, 0%, 0.247) 91.9%,
+//     hsla(0, 0%, 0%, 0.25) 100%
+//   );
+//   z-index: 1;
+//   border-radius: 16px;
+// `
 
 const Index = ({ data, intl }) => {
-
-  // const ref = useRef()
-
-  // const { scrollYProgress } = useViewportScroll();
-
-  // const fade = useSpring({opacity: 1, from: {opacity: 0}, config: {duration: 5000}})
 
   return (
     <ViewContainer>
@@ -557,34 +448,8 @@ const Index = ({ data, intl }) => {
   
       <CenteredContainer>
         <AlmaHeader title={intl.formatMessage({ id: "resort-title" })} />
-        <P>{intl.formatMessage({ id: "resort-p1" })}</P>
+        <p>{intl.formatMessage({ id: "resort-p1" })}</p>
       </CenteredContainer>
-
-      <FullWidthContainer>
-
-        {/* <motion.div animate={{ x: 100 }}/> */}
-
-        {/* <AnimatedImage fluid={data.almaResort1.childImageSharp.fluid} style={fade}/> */}
-
-        {/* <MotionDiv
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-          animate={{ x: 1000 }}
-          style={{ scaleY: scrollYProgress }}
-        >Motion, bishez!</MotionDiv> */}
-
-        {/* <Parallax>
-          <ParallaxGroup>
-            <ParallaxLayerBase>
-            <h1>World.</h1>
-            </ParallaxLayerBase>
-            <ParallaxLayerBack>
-              <h1>Hello</h1>
-            </ParallaxLayerBack>
-          </ParallaxGroup>
-        </Parallax> */}
-
-      </FullWidthContainer>
   
         {/* <FullWidthContainer>
           <HorizontalScrollContainer orange>
@@ -598,7 +463,7 @@ const Index = ({ data, intl }) => {
 
       <CenteredContainer>
         <AlmaHeader white title='Apartments'/>
-        <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</P>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       </CenteredContainer>
 
       {/* <FullWidthContainer>
@@ -613,7 +478,7 @@ const Index = ({ data, intl }) => {
 
       <CenteredContainer>
         <AlmaHeader white title='Villas'/>
-        <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</P>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       </CenteredContainer>
 
       {/* <FullWidthContainer>
@@ -628,7 +493,7 @@ const Index = ({ data, intl }) => {
 
       <CenteredContainer>
         <AlmaHeader white title='Amenities' />
-        <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</P>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       </CenteredContainer>
 
       {/* <FullWidthContainer>
@@ -644,7 +509,7 @@ const Index = ({ data, intl }) => {
       <CenteredContainer>
         {/* <AlmaHeader title={intl.formatMessage({ id: "resort-title" })} /> */}
         <AlmaHeader title='Vacations' />
-        <P>{intl.formatMessage({ id: "resort-p1" })}</P>
+        <p>{intl.formatMessage({ id: "resort-p1" })}</p>
       </CenteredContainer>
   
       {/* <FullWidthContainer>
@@ -659,7 +524,7 @@ const Index = ({ data, intl }) => {
 
       <CenteredContainer>
         <AlmaHeader white title='About RCI' />
-        <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</P>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       </CenteredContainer>
 
       {/* <FullWidthContainer>
@@ -674,7 +539,7 @@ const Index = ({ data, intl }) => {
 
       <CenteredContainer>
         <AlmaHeader white title='Ownership' />
-        <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</P>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       </CenteredContainer>
 
       {/* <FullWidthContainer>
@@ -689,7 +554,7 @@ const Index = ({ data, intl }) => {
 
       <CenteredContainer>
         <AlmaHeader white title='Benefits' />
-        <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</P>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       </CenteredContainer>
 
       {/* <FullWidthContainer>
@@ -705,7 +570,7 @@ const Index = ({ data, intl }) => {
       <CenteredContainer>
         {/* <AlmaHeader title={intl.formatMessage({ id: "resort-title" })} /> */}
         <AlmaHeader title='Alma' />
-        <P>{intl.formatMessage({ id: "resort-p1" })}</P>
+        <p>{intl.formatMessage({ id: "resort-p1" })}</p>
       </CenteredContainer>
   
       {/* <FullWidthContainer>
@@ -720,7 +585,7 @@ const Index = ({ data, intl }) => {
 
       <CenteredContainer>
         <AlmaHeader white title='About Us' />
-        <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</P>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       </CenteredContainer>
 
       {/* <FullWidthContainer>
@@ -735,7 +600,7 @@ const Index = ({ data, intl }) => {
 
       <CenteredContainer>
         <AlmaHeader white title='Our Story' />
-        <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</P>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       </CenteredContainer>
 
       {/* <FullWidthContainer>
@@ -750,7 +615,7 @@ const Index = ({ data, intl }) => {
 
       <CenteredContainer>
         <AlmaHeader white title='News' />
-        <P>All the latest news that's fit to print about the worlds newest and brightest hotspot in the Vietnam travel scene</P>
+        <p>All the latest news that's fit to print about the worlds newest and brightest hotspot in the Vietnam travel scene</p>
         <h4>{data.articles.totalCount} Posts</h4>
       </CenteredContainer>
     
