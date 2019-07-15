@@ -10,13 +10,13 @@ const HeaderContainer = styled.div`
   grid-template-rows: 1fr;
   grid-template-columns: 1fr;
   /* filter: drop-shadow( 0px 0px 16px hsla(0, 0%, 0%, 0.5)); */
-  filter:
+  /* filter:
     ${props => props.white ?
       "drop-shadow( 0px 0px 16px hsla(0, 0%, 0%, 0.25))"
       :
       "none"
     }
-  ;
+  ; */
 `
 
 const HeaderTitle = styled.h1`

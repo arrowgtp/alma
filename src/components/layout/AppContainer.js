@@ -6,7 +6,6 @@ const App = styled.div`
   padding: 0;
   height: 100vh;
   width: 100vw;
-  overflow-x: hidden;
   display: grid;
   grid-template-rows: 20vh 70vh 10vh;
   grid-template-columns: repeat(3, 1fr);

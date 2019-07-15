@@ -6,8 +6,10 @@ const Main = styled.main`
   padding: 0;
   grid-column: 1 / 4;
   grid-row: 1 / 3;
+  /* overflow-x: hidden;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
+  will-change: scroll-position; */
   z-index: 1;
 
   @media (min-width: 50rem) {
@@ -29,7 +31,7 @@ const ContentContainer = (props) => {
   })
 
   return (
-    // <Main ref={elementRef}></Main>
+    // <Main ref={elementRef}>
     <Main id='ContentContainer'>
       {props.children}
     </Main>
