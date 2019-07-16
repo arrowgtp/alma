@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { Link } from 'gatsby-plugin-intl'
-// import almaLogoWithBG from '../images/alma-logo-with-bg.svg'
+import almaLogoWithBG from '../images/alma-logo-with-bg.svg'
 
 // export default styled(Link)`
 //   grid-column: 2 / 3;

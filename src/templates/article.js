@@ -6,9 +6,6 @@ import MDXRenderer from 'gatsby-mdx/mdx-renderer'
 import { MDXProvider } from '@mdx-js/tag'
 import Img from 'gatsby-image'
 import SEO from "../components/seo"
-// import Collapsible from 'react-collapsible'
-// import slugify from 'react-slugify'
-
 import './article.css'
 
 import ViewContainer from '../components/layout/ViewContainer'
@@ -40,7 +37,7 @@ const TitleText = styled.div`
   justify-content: center;
 `
 
-const Title =styled.h1`
+const Title = styled.h1`
   margin: 0 0 1rem 0;
   padding: 0;
   text-shadow: 0px 0px 8px hsla(360, 100%, 100%, 1);
@@ -248,7 +245,6 @@ export const query = graphql`
           }
         }
       }
-      tableOfContents
       code {
         scope
         body
@@ -258,5 +254,3 @@ export const query = graphql`
 `
 
 export default injectIntl(Article)
-
-// export default Article

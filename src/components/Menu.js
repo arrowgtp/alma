@@ -4,6 +4,7 @@ import { useTransition, animated } from 'react-spring'
 import { Link, injectIntl } from 'gatsby-plugin-intl'
 
 import Language from './Language'
+import Form from './Contact'
 
 import almaBGShell from '../images/alma/alma-bg-shell.svg'
 import almaShell from '../images/alma/alma-shell.svg'
@@ -53,7 +54,7 @@ const MobileMenu = styled(animated.div)`
   grid-template-columns: repeat(8, 1fr);
   align-items: center;
   box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.25);
-  z-index: 1000000;
+  z-index: 100;
 `
 
 const LargeMenu = styled.div`
@@ -388,6 +389,15 @@ const MenuButton = styled(Button)`
   }
 `
 
+const FormButton = styled(Button)`
+  grid-column: 3 / 4;
+  z-index: 100;
+
+  @media (min-width: 50rem) {
+    display: none
+  }
+`
+
 const AlmaShell = styled(Link)`
   margin: 0;
   padding: 0;
@@ -475,7 +485,33 @@ const DownArrow = styled.div`
 //   opacity: 0.25;
 // `
 
-const Menu = () => {
+const FormContainer = styled(animated.div)`
+  margin: 0;
+  padding: 1rem;
+  position: fixed;
+  bottom: 15vh;
+  left: 5vw;
+  height: 50vh;
+  width: 90vw;
+  border-radius: 16px;
+  background: white;
+  background-image: url(${almaBGShell});
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  grid-template-rows: repeat(8, 1fr);
+  grid-template-columns: repeat(8, 1fr);
+  align-items: center;
+  box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.25);
+  z-index: 100;
+`
+
+const FormContent = styled.div`
+
+`
+
+const Nav = () => {
 
   const node = useRef();
 
@@ -505,6 +541,7 @@ const Menu = () => {
 
   return (
     <Fragment>
+
       <SmallMenu ref={node}>
         {!isToggled ?
           (
@@ -557,11 +594,47 @@ const Menu = () => {
           <DownArrow />
           </MobileMenu>
           ))}
-        <AlmaShell to={`/`}>
+        <AlmaShell to={`/`} onClick={toggle}>
           <img src={almaShell} alt="The Alma Resort Shell."  />
         </AlmaShell>
         <JoinButton>Join</JoinButton>
       </SmallMenu>
+
+      {/* <FormContainer ref={node}>
+        {!isToggled ?
+          (
+            <FormButton onClick={toggle}>Join</FormButton>
+          ) : (
+            <FormButton onClick={toggle}>Close</FormButton>
+          )
+        }
+        {transition.map(({ item, key, props: fade }) => (
+          item && <FormContent key={key} style={fade}>
+            <form name="contact" method="POST" data-netlify="true">
+              <p>
+                <label>Your Name: <input type="text" name="name" /></label>   
+              </p>
+              <p>
+                <label>Your Email: <input type="email" name="email" /></label>
+              </p>
+              <p>
+                <label>Your Role: <select name="role[]" multiple>
+                  <option value="leader">Leader</option>
+                  <option value="follower">Follower</option>
+                </select></label>
+              </p>
+              <p>
+                <label>Message: <textarea name="message"></textarea></label>
+              </p>
+              <p>
+                <button type="submit">Send</button>
+              </p>
+            </form>
+            <DownArrow />
+          </FormContent>
+          ))}
+      </FormContainer> */}
+
       <LargeMenu>
         <Logo to={`/`}>
           <img src={almaLogoWithBG} alt="The Alma Resort Logo."  />
@@ -608,4 +681,4 @@ const Menu = () => {
   )
 }
 
-export default injectIntl(Menu)
+export default injectIntl(Nav)
