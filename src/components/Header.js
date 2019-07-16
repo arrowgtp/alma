@@ -60,7 +60,7 @@ const Header = (props) => {
   return (
     <HeaderContainer white={props.white}>
       <HeaderTitle white={props.white}>{props.title}</HeaderTitle>
-      <HeaderBackground src={props.white ? almaHeaderWhite : almaHeaderBlue}/>
+      <HeaderBackground src={props.white ? almaHeaderWhite : almaHeaderBlue} alt='Decorative Alma Heading Background Image.'/>
     </HeaderContainer>
   )
 }
