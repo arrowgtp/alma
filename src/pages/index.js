@@ -453,7 +453,7 @@ const Index = ({ data, intl }) => {
 
       <CenteredContainer>
         <AlmaHeader white title='Apartments'/>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</P>
       </CenteredContainer>
 
       <FullWidthContainer>
@@ -468,7 +468,7 @@ const Index = ({ data, intl }) => {
 
       <CenteredContainer>
         <AlmaHeader white title='Villas'/>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</P>
       </CenteredContainer>
 
       <FullWidthContainer>
@@ -483,7 +483,7 @@ const Index = ({ data, intl }) => {
 
       <CenteredContainer>
         <AlmaHeader white title='Amenities' />
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</P>
       </CenteredContainer>
 
       <FullWidthContainer>
@@ -499,7 +499,7 @@ const Index = ({ data, intl }) => {
       <CenteredContainer>
         {/* <AlmaHeader title={intl.formatMessage({ id: "resort-title" })} /> */}
         <AlmaHeader title='Vacations' />
-        <p>{intl.formatMessage({ id: "resort-p1" })}</p>
+        <P>{intl.formatMessage({ id: "resort-p1" })}</P>
       </CenteredContainer>
   
       {/* <FullWidthContainer>
@@ -514,7 +514,7 @@ const Index = ({ data, intl }) => {
 
       <CenteredContainer>
         <AlmaHeader white title='About RCI' />
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</P>
       </CenteredContainer>
 
       {/* <FullWidthContainer>
@@ -529,7 +529,7 @@ const Index = ({ data, intl }) => {
 
       <CenteredContainer>
         <AlmaHeader white title='Ownership' />
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</P>
       </CenteredContainer>
 
       {/* <FullWidthContainer>
@@ -544,7 +544,7 @@ const Index = ({ data, intl }) => {
 
       <CenteredContainer>
         <AlmaHeader white title='Benefits' />
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</P>
       </CenteredContainer>
 
       {/* <FullWidthContainer>
@@ -560,7 +560,7 @@ const Index = ({ data, intl }) => {
       <CenteredContainer>
         {/* <AlmaHeader title={intl.formatMessage({ id: "resort-title" })} /> */}
         <AlmaHeader title='Alma' />
-        <p>{intl.formatMessage({ id: "resort-p1" })}</p>
+        <P>{intl.formatMessage({ id: "resort-p1" })}</P>
       </CenteredContainer>
   
       {/* <FullWidthContainer>
@@ -575,7 +575,7 @@ const Index = ({ data, intl }) => {
 
       <CenteredContainer>
         <AlmaHeader white title='About Us' />
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</P>
       </CenteredContainer>
 
       {/* <FullWidthContainer>
@@ -590,7 +590,7 @@ const Index = ({ data, intl }) => {
 
       <CenteredContainer>
         <AlmaHeader white title='Our Story' />
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</P>
       </CenteredContainer>
 
       {/* <FullWidthContainer>
@@ -605,8 +605,8 @@ const Index = ({ data, intl }) => {
 
       <CenteredContainer>
         <AlmaHeader white title='News' />
-        <p>All the latest news that's fit to print about the worlds newest and brightest hotspot in the Vietnam travel scene</p>
-        <h4>{data.articles.totalCount} Posts</h4>
+        <P>All the latest news that's fit to print about the worlds newest and brightest hotspot in the Vietnam travel scene</P>
+        <P>{data.articles.totalCount} Posts</P>
       </CenteredContainer>
     
       {/* <FullWidthContainer>
@@ -721,154 +721,154 @@ export const query = graphql`
     resortOverview: file(relativePath: { eq: "resort/alma-resort-overview.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 3840) {
-          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     almaResort1: file(relativePath: { eq: "resort/alma-resort-1.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 3840) {
-          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     almaResort2: file(relativePath: { eq: "resort/alma-resort-2.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 3840) {
-          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     almaResort3: file(relativePath: { eq: "resort/alma-resort-3.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 3840) {
-          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     almaResort4: file(relativePath: { eq: "resort/alma-resort-4.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 3840) {
-          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     almaResort5: file(relativePath: { eq: "resort/alma-resort-5.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 3840) {
-          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     villaExterior1: file(relativePath: { eq: "villas/villa-exterior-1-3840x2880.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 3840) {
-          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     villaLivingRoom1: file(relativePath: { eq: "villas/villa-living-room-1-3840x2880.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 3840) {
-          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     villaLivingRoom2: file(relativePath: { eq: "villas/villa-living-room-2-3840x2880.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 3840) {
-          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     villaBedroom1: file(relativePath: { eq: "villas/villa-bedroom-1-3840x2880.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 3840) {
-          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     villaBathroom1: file(relativePath: { eq: "villas/villa-bathroom-1-3840x2880.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 3840) {
-          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     villaLivingRoom1: file(relativePath: { eq: "villas/villa-living-room-1-3840x2880.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 3840) {
-          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     almaBathroom1: file(relativePath: { eq: "rooms/alma-bathroom-1.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 3840) {
-          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     almaBedroom1: file(relativePath: { eq: "rooms/alma-bedroom-1.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 3840) {
-          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     almaKitchen1: file(relativePath: { eq: "rooms/alma-kitchen-1.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 3840) {
-          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     almaLivingRoom1: file(relativePath: { eq: "rooms/alma-living-room-1.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 3840) {
-          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     almaLivingRoom2: file(relativePath: { eq: "rooms/alma-living-room-2.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 3840) {
-          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     reception: file(relativePath: { eq: "amenities/reception-lobby-3840x2880.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 3840) {
-          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     ballroom: file(relativePath: { eq: "amenities/ballroom-3840x2880.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 3840) {
-          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     spaTreatment: file(relativePath: { eq: "amenities/spa-treatment-3840x2880.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 3840) {
-          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     allDayDiner: file(relativePath: { eq: "restaurants/all-day-diner-1-3840x2880.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 3840) {
-          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     beachBar: file(relativePath: { eq: "restaurants/beach-bar-2-3840x2880.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 3840) {
-          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }

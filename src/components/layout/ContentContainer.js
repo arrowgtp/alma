@@ -14,6 +14,10 @@ const Main = styled.main`
   @media (min-width: 50rem) {
     grid-column: 2 / 3;
     grid-row: 1 / 6;
+    /* overflow-x: hidden;
+    overflow-y: scroll; */
+    overflow-x: initial;
+    overflow-y: initial;
   }
 `
 
