@@ -22,11 +22,6 @@ const HeaderContainer = styled.div`
   }
 `
 
-// const H2 = styled.h2`
-//   margin: 2rem 0;
-//   padding: 0;
-// `
-
 const P = styled.p`
   margin: 2rem 0;
 ` 
@@ -36,8 +31,6 @@ const Resort = ({ data, intl }) => {
     <ViewContainer>
       <SEO title={intl.formatMessage({ id: "resort-title" })} />
       <FullContentCard>
-        {/* <MainLogo src={almaLogoWithBG} alt="The Alma Resort Logo."  />
-        <PageSlogan>{intl.formatMessage({ id: "slogan" })}</PageSlogan> */}
         <HeaderContainer>
           <AlmaHeader white
             title={intl.formatMessage({ id: "resort-title" })}
@@ -78,37 +71,37 @@ const Resort = ({ data, intl }) => {
 
 export const query = graphql`
   query {
-    almaResort1: file(relativePath: { eq: "resort/alma-resort-1.jpg" }) {
+    almaResort1: file(relativePath: { eq: "resort/resort-1-16x10.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 3840) {
+        fluid(maxWidth: 3456) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    almaResort2: file(relativePath: { eq: "resort/alma-resort-2.jpg" }) {
+    almaResort2: file(relativePath: { eq: "resort/resort-2-16x10.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 3840) {
+        fluid(maxWidth: 3456) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    almaResort3: file(relativePath: { eq: "resort/alma-resort-3.jpg" }) {
+    almaResort3: file(relativePath: { eq: "resort/resort-3-16x10.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 3840) {
+        fluid(maxWidth: 3456) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    almaResort4: file(relativePath: { eq: "resort/alma-resort-4.jpg" }) {
+    almaResort4: file(relativePath: { eq: "resort/resort-4-16x10.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 3840) {
+        fluid(maxWidth: 3456) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    almaResort5: file(relativePath: { eq: "resort/alma-resort-5.jpg" }) {
+    almaResort5: file(relativePath: { eq: "resort/resort-overview-2-16x10.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 3840) {
+        fluid(maxWidth: 3456) {
           ...GatsbyImageSharpFluid
         }
       }

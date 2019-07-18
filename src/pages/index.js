@@ -38,6 +38,7 @@ const PageSlogan = styled.div`
   z-index: 1;
   color: white;
   font-size: calc(18px + (32 - 18) * ((100vw - 300px) / (1600 - 300)));
+  font-family: 'Quicksand';
   align-self: end;
   justify-self: center;
   margin-bottom: 3rem;
@@ -501,107 +502,12 @@ const Index = ({ data, intl }) => {
         <AlmaHeader title='Vacations' />
         <P>{intl.formatMessage({ id: "resort-p1" })}</P>
       </CenteredContainer>
-  
-      {/* <FullWidthContainer>
-        <HorizontalScrollContainer orange>
-          <Card><CardImg fluid={data.almaResort1.childImageSharp.fluid}/></Card>
-          <Card><CardImg fluid={data.almaResort2.childImageSharp.fluid}/></Card>
-          <Card><CardImg fluid={data.almaResort3.childImageSharp.fluid}/></Card>
-          <Card><CardImg fluid={data.almaResort4.childImageSharp.fluid}/></Card>
-          <Card><CardImg fluid={data.almaResort1.childImageSharp.fluid}/></Card>
-        </HorizontalScrollContainer>
-      </FullWidthContainer> */}
-
-      <CenteredContainer>
-        <AlmaHeader white title='About RCI' />
-        <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</P>
-      </CenteredContainer>
-
-      {/* <FullWidthContainer>
-        <HorizontalScrollContainer blue>
-          <Card><CardImg fluid={data.almaResort1.childImageSharp.fluid}/></Card>
-          <Card><CardImg fluid={data.almaResort2.childImageSharp.fluid}/></Card>
-          <Card><CardImg fluid={data.almaResort3.childImageSharp.fluid}/></Card>
-          <Card><CardImg fluid={data.almaResort4.childImageSharp.fluid}/></Card>
-          <Card><CardImg fluid={data.almaResort5.childImageSharp.fluid}/></Card>
-        </HorizontalScrollContainer>
-      </FullWidthContainer> */}
-
-      <CenteredContainer>
-        <AlmaHeader white title='Ownership' />
-        <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</P>
-      </CenteredContainer>
-
-      {/* <FullWidthContainer>
-        <HorizontalScrollContainer blue>
-          <Card><CardImg fluid={data.almaResort1.childImageSharp.fluid}/></Card>
-          <Card><CardImg fluid={data.almaResort2.childImageSharp.fluid}/></Card>
-          <Card><CardImg fluid={data.almaResort3.childImageSharp.fluid}/></Card>
-          <Card><CardImg fluid={data.almaResort4.childImageSharp.fluid}/></Card>
-          <Card><CardImg fluid={data.almaResort5.childImageSharp.fluid}/></Card>
-        </HorizontalScrollContainer>
-      </FullWidthContainer> */}
-
-      <CenteredContainer>
-        <AlmaHeader white title='Benefits' />
-        <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</P>
-      </CenteredContainer>
-
-      {/* <FullWidthContainer>
-        <HorizontalScrollContainer blue>
-          <Card><CardImg fluid={data.almaResort1.childImageSharp.fluid}/></Card>
-          <Card><CardImg fluid={data.almaResort2.childImageSharp.fluid}/></Card>
-          <Card><CardImg fluid={data.almaResort3.childImageSharp.fluid}/></Card>
-          <Card><CardImg fluid={data.almaResort4.childImageSharp.fluid}/></Card>
-          <Card><CardImg fluid={data.almaResort5.childImageSharp.fluid}/></Card>
-        </HorizontalScrollContainer>
-      </FullWidthContainer> */}
-
+      
       <CenteredContainer>
         {/* <AlmaHeader title={intl.formatMessage({ id: "resort-title" })} /> */}
         <AlmaHeader title='Alma' />
         <P>{intl.formatMessage({ id: "resort-p1" })}</P>
       </CenteredContainer>
-  
-      {/* <FullWidthContainer>
-        <HorizontalScrollContainer orange>
-          <Card><CardImg fluid={data.almaResort1.childImageSharp.fluid}/></Card>
-          <Card><CardImg fluid={data.almaResort2.childImageSharp.fluid}/></Card>
-          <Card><CardImg fluid={data.almaResort3.childImageSharp.fluid}/></Card>
-          <Card><CardImg fluid={data.almaResort4.childImageSharp.fluid}/></Card>
-          <Card><CardImg fluid={data.almaResort1.childImageSharp.fluid}/></Card>
-        </HorizontalScrollContainer>
-      </FullWidthContainer> */}
-
-      <CenteredContainer>
-        <AlmaHeader white title='About Us' />
-        <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</P>
-      </CenteredContainer>
-
-      {/* <FullWidthContainer>
-        <HorizontalScrollContainer blue>
-          <Card><CardImg fluid={data.almaResort1.childImageSharp.fluid}/></Card>
-          <Card><CardImg fluid={data.almaResort2.childImageSharp.fluid}/></Card>
-          <Card><CardImg fluid={data.almaResort3.childImageSharp.fluid}/></Card>
-          <Card><CardImg fluid={data.almaResort4.childImageSharp.fluid}/></Card>
-          <Card><CardImg fluid={data.almaResort5.childImageSharp.fluid}/></Card>
-        </HorizontalScrollContainer>
-      </FullWidthContainer> */}
-
-      <CenteredContainer>
-        <AlmaHeader white title='Our Story' />
-        <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</P>
-      </CenteredContainer>
-
-      {/* <FullWidthContainer>
-        <HorizontalScrollContainer blue>
-          <Card><CardImg fluid={data.almaResort1.childImageSharp.fluid}/></Card>
-          <Card><CardImg fluid={data.almaResort2.childImageSharp.fluid}/></Card>
-          <Card><CardImg fluid={data.almaResort3.childImageSharp.fluid}/></Card>
-          <Card><CardImg fluid={data.almaResort4.childImageSharp.fluid}/></Card>
-          <Card><CardImg fluid={data.almaResort5.childImageSharp.fluid}/></Card>
-        </HorizontalScrollContainer>
-      </FullWidthContainer> */}
 
       <CenteredContainer>
         <AlmaHeader white title='News' />
@@ -718,44 +624,44 @@ export const query = graphql`
         }
       }
     }
-    resortOverview: file(relativePath: { eq: "resort/alma-resort-overview.jpg" }) {
+    resortOverview: file(relativePath: { eq: "resort/resort-overview-1-16x10.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 3840) {
+        fluid(maxWidth: 3456) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
-    almaResort1: file(relativePath: { eq: "resort/alma-resort-1.jpg" }) {
+    almaResort1: file(relativePath: { eq: "resort/resort-1-4x3.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 3840) {
+        fluid(maxWidth: 2880) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
-    almaResort2: file(relativePath: { eq: "resort/alma-resort-2.jpg" }) {
+    almaResort2: file(relativePath: { eq: "resort/resort-2-4x3.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 3840) {
+        fluid(maxWidth: 2880) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
-    almaResort3: file(relativePath: { eq: "resort/alma-resort-3.jpg" }) {
+    almaResort3: file(relativePath: { eq: "resort/resort-3-4x3.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 3840) {
+        fluid(maxWidth: 2880) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
-    almaResort4: file(relativePath: { eq: "resort/alma-resort-4.jpg" }) {
+    almaResort4: file(relativePath: { eq: "resort/resort-4-4x3.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 3840) {
+        fluid(maxWidth: 2880) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
-    almaResort5: file(relativePath: { eq: "resort/alma-resort-5.jpg" }) {
+    almaResort5: file(relativePath: { eq: "resort/resort-overview-2-4x3.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 3840) {
+        fluid(maxWidth: 2880) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }

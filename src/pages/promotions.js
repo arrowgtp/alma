@@ -9,9 +9,9 @@ import AlmaHeader from '../components/Header'
 const Promotions = ({ intl }) => {
   return (
     <ViewContainer>
-      <SEO title="Benefits" />
+      <SEO title="Promotions" />
       <CenteredContainer>
-        <AlmaHeader title='Benefits' />
+        <AlmaHeader title='Promotions' />
         <p>{intl.formatMessage({ id: "title" })}</p>
         <p>{intl.formatMessage({ id: "slogan" })}</p>
       </CenteredContainer>

@@ -1,7 +1,7 @@
 import React from "react"
 import styled from 'styled-components';
 import { IntlContextConsumer, changeLocale } from "gatsby-plugin-intl"
-import Button from './styled/Button';
+import Button from './visual/Button';
 
 const LocaleButton = styled(Button)`
   border-radius: 0 0 0 0;
