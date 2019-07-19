@@ -8,6 +8,10 @@ const ViewContainer = styled.div`
   left: 0;
   right: 0;
   bottom: 0;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
   display: grid;
   grid-template-rows: 1;
   grid-template-columns: 1;
