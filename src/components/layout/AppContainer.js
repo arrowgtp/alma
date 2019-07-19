@@ -24,7 +24,7 @@ const App = styled(motion.div)`
 
 const AppContainer = ({ children }) => {
   return (
-    <App animate={{ opacity: 1 }} transition={{ ease: 'easeInOut', duration: 2, delay: 2 }}>
+    <App animate={{ opacity: 1 }} transition={{ ease: 'easeInOut', duration: 2, delay: 4 }}>
       {children}
     </App>
   )
