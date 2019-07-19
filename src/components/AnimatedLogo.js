@@ -8,7 +8,7 @@ const ViewContainer = styled.div`
   left: 0;
   right: 0;
   bottom: 0;
-  height: 100vh;
+  height: 80vh;
   width: 100vw;
   margin: 0;
   padding: 0;
