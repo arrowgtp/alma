@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 // import styled from 'styled-components'
 import { injectIntl } from 'gatsby-plugin-intl'
 
@@ -6,6 +6,8 @@ import { injectIntl } from 'gatsby-plugin-intl'
 
 import './Layout.css'
 
+
+import AnimatedLogo from './AnimatedLogo'
 import App from './layout/AppContainer'
 import Main from './layout/ContentContainer'
 import Menu from './Menu'
@@ -16,7 +18,8 @@ import Contact from './Contact'
 
 const Layout = ({ children }) => {
   return (
-    // <Context>
+    <Fragment>
+      <AnimatedLogo/>
       <App>
         <Menu>
           <Logo/>
@@ -27,7 +30,7 @@ const Layout = ({ children }) => {
           {children}
         </Main>
       </App>
-    // </Context>
+    </Fragment>
   )
 }
 

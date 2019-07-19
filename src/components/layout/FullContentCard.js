@@ -22,4 +22,15 @@ const FullContentImage = styled(Img)`
   z-index: 0;
 `
 
-export { FullContentCard, FullContentImage }
+const HeadingContainer = styled.div`
+  grid-row: 1 / 3;
+  grid-column: 1 / 9;
+  margin: 0 2rem;
+  z-index: 5;
+
+  @media (min-width: 50rem) {
+    grid-column: 2 / 8;
+  }
+`
+
+export { FullContentCard, FullContentImage, HeadingContainer }
