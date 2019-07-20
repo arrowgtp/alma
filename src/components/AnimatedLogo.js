@@ -161,7 +161,7 @@ const AnimatedLogo = () => {
           transition={{ ease: 'easeInOut', duration: 2, delay: 2 }}
         />
         <defs>
-          <linearGradient id="AlmaGradientFull" gradientTransform="rotate(90)">
+          <linearGradient id="AlmaGradient" gradientTransform="rotate(90)">
             <stop offset="0%" stop-color="#01acc4" stop-opacity="1"/>
             <stop offset="100%" stop-color="#006897" stop-opacity="1"/>
           </linearGradient>
