@@ -59,24 +59,24 @@ const NavBlock = styled.div`
   z-index: 10;
 
   :first-child {
-    grid-row: 1 / 5;
+    grid-row: 1 / 9;
     grid-column: 1 / 5;
     margin: 0 -1rem -1rem 0;
     /* border: 1px solid tomato; */
   }
 
   :nth-child(2) {
-    grid-row: 1 / 5;
+    grid-row: 1 / 9;
     grid-column: 5 / 9;
     margin: 0 0 -1rem -1rem;
     /* border: 1px solid tomato; */
   }
 
-  :nth-child(3) {
+  /* :nth-child(3) {
     grid-row: 5 / 9;
     grid-column: 1 / 5;
     margin: -1rem -1rem 0 0;
-    /* border: 1px solid tomato; */
+    border: 1px solid tomato;
   }
 
   :nth-child(4) {
@@ -84,8 +84,8 @@ const NavBlock = styled.div`
     grid-column: 5 / 9;
     grid-template-rows: 1fr 1fr 1fr;
     margin: -1rem 0 0 -1rem;
-    /* border: 1px solid tomato; */
-  }
+    border: 1px solid tomato;
+  } */
 
   @media (min-width: 50rem ) {
     display: none;
@@ -125,7 +125,7 @@ const AlmaLink = styled(Link)`
   font-family: 'Work Sans', 'DM Serif Display', 'Lato';
   font-size: calc(18px + (32 - 18) * ((100vw - 300px) / (1600 - 300)));
   font-weight: 300;
-  margin: 0;
+  margin: 0.25rem;
   padding: 0.6rem 0;
   line-height: 1;
   color: #2d658e;
@@ -144,7 +144,7 @@ const AlmaLink = styled(Link)`
 
 const AlmaLink2 = styled(Link)`
   grid-column: 2 / 4;
-  margin: 0;
+  margin: 0.25rem;
   padding: 0.4rem 0;
   white-space: nowrap;
   font-family: 'Work Sans', 'DM Serif Display', 'Lato';
@@ -175,10 +175,10 @@ const AlmaBulletShell = styled.img`
 
 const SocialButtons = styled.div`
   /* margin: 0 0 -1rem -1rem; */
-  margin: 0;
+  margin: 0.5rem;
   padding: 0;
   grid-column: 1 / 4;
-  grid-row: 2 / 3;
+  /* grid-row: 2 / 3; */
   align-self: center;
   display: flex;
   justify-content: center;
@@ -218,7 +218,8 @@ const MenuButton = styled(Button)`
 `
 
 const Locales = styled.div`
-  grid-row: 3 / 4;
+  margin: 0.5rem;
+  /* grid-row: 3 / 4; */
   grid-column: 1 / 4;
   align-self: center;
   z-index: 2;
@@ -227,7 +228,6 @@ const Locales = styled.div`
   cursor: pointer;
   z-index: 1000;
   -webkit-tap-highlight-color: transparent;
-  margin: 0;
 
   @media (min-width: 50rem) {
     grid-column: 1 / 4;
@@ -300,25 +300,23 @@ const Navigation = () => {
             <NavBlock>
               <AlmaBulletShell src={almaShell}/>
               <AlmaLink to={`/resort`} onClick={toggle}>Resort</AlmaLink>
-                <AlmaLink2 to={`/apartments`} onClick={toggle}>Apartments</AlmaLink2>
-                <AlmaLink2 to={`/villas`} onClick={toggle}>Villas</AlmaLink2>
-                <AlmaLink2 to={`/amenities`} onClick={toggle}>Amenities</AlmaLink2>
+                <AlmaLink2 to={`/apartments`}>Apartments</AlmaLink2>
+                <AlmaLink2 to={`/villas`}>Villas</AlmaLink2>
+                <AlmaLink2 to={`/restaurants`}>Restaurants</AlmaLink2>
+                <AlmaLink2 to={`/amenities`}>Amenities</AlmaLink2>
+                <AlmaLink2 to={`/construction`}>Construction</AlmaLink2>
             </NavBlock>
             <NavBlock>
               <AlmaBulletShell src={almaShell}/>
               <AlmaLink to={`/vacations`} onClick={toggle}>Vacations</AlmaLink>
-                <AlmaLink2 to={`/about-rci`} onClick={toggle}>About</AlmaLink2>
+                {/* <AlmaLink2 to={`/about-rci`} onClick={toggle}>About</AlmaLink2>
                 <AlmaLink2 to={`/ownership`} onClick={toggle}>Ownership</AlmaLink2>
-                <AlmaLink2 to={`/benefits`} onClick={toggle}>Benefits</AlmaLink2>
-            </NavBlock>
-            <NavBlock>
+                <AlmaLink2 to={`/benefits`} onClick={toggle}>Benefits</AlmaLink2> */}
               <AlmaBulletShell src={almaShell}/>
-              <AlmaLink to={`/alma`} onClick={toggle}>Alma</AlmaLink>
-                <AlmaLink2 to={`/about-alma`} onClick={toggle}>About Us</AlmaLink2>
+              <AlmaLink to={`/alma`} onClick={toggle}>Our Story</AlmaLink>
+                {/* <AlmaLink2 to={`/about-alma`} onClick={toggle}>About Us</AlmaLink2>
                 <AlmaLink2 to={`/story`} onClick={toggle}>Our Story</AlmaLink2>
-                <AlmaLink2 to={`/news`} onClick={toggle}>News</AlmaLink2>
-            </NavBlock>
-            <NavBlock>
+                <AlmaLink2 to={`/news`} onClick={toggle}>News</AlmaLink2> */}
               <AlmaBulletShell src={almaShell}/>
               <AlmaLink to={`/promotions`} onClick={toggle}>Promotions</AlmaLink>
               <SocialButtons>
@@ -362,9 +360,9 @@ const Navigation = () => {
           <AlmaLink to={`/resort`}>Resort</AlmaLink>
             <AlmaLink2 to={`/apartments`}>Apartments</AlmaLink2>
             <AlmaLink2 to={`/villas`}>Villas</AlmaLink2>
+            <AlmaLink2 to={`/restaurants`}>Restaurants</AlmaLink2>
             <AlmaLink2 to={`/amenities`}>Amenities</AlmaLink2>
-            <AlmaLink2 to={`/amenities`}>Restaurants</AlmaLink2>
-            <AlmaLink2 to={`/amenities`}>Construction</AlmaLink2>
+            <AlmaLink2 to={`/construction`}>Construction</AlmaLink2>
           <AlmaBulletShell src={almaShell}/>
           <AlmaLink to={`/vacations`}>Vacations</AlmaLink>
             {/* <AlmaLink2 to={`/about-rci`}>About</AlmaLink2>
@@ -375,8 +373,8 @@ const Navigation = () => {
             {/* <AlmaLink2 to={`/about-alma`}>About Us</AlmaLink2>
             <AlmaLink2 to={`/story`}>Our Story</AlmaLink2>
             <AlmaLink2 to={`/news`}>News</AlmaLink2> */}
-          <AlmaBulletShell src={almaShell}/>
-          <AlmaLink to={`/promotions`}>Promotions</AlmaLink>
+          {/* <AlmaBulletShell src={almaShell}/> */}
+          {/* <AlmaLink to={`/promotions`}>Promotions</AlmaLink> */}
         </LargeLinkTree> 
       </LargeNav>
 

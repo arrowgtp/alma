@@ -21,6 +21,12 @@ const LocaleButton = styled(Button)`
     border-radius: 0 16px 16px 0;
     /* border-left: 1px; */
   }
+
+  @media (min-width: 50rem) {
+    font-size: 10px;
+    line-height: 1;
+    padding: 4px;
+  }
 `;
 
 const languageName = {

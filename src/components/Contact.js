@@ -10,18 +10,18 @@ import Button from './visual/Button'
 import almaBGShell from '../images/alma/alma-bg-shell.svg'
 
 const FormContainer = styled.div`
-  grid-column: 3 / 4;
-  grid-row: 1 / 2;
+  /* grid-column: 3 / 4;
+  grid-row: 1 / 2; */
   display: flex;
   align-items: center;
   justify-content: center;
 
   @media (min-width: 50rem) {
-    grid-column: 1 / 2;
-    grid-row: 3 / 4;
-    display: flex;
+    /* grid-column: 1 / 2;
+    grid-row: 3 / 4; */
+    /* display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
   }
 `
 
@@ -40,7 +40,7 @@ const Form = styled(animated.div)`
   background-repeat: no-repeat;
   background-size: cover;
   display: grid;
-  grid-template-rows: repeat(8, 1fr);
+  grid-template-rows: repeat(5, 1fr);
   grid-template-columns: repeat(8, 1fr);
   align-items: center;
   box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.25);
@@ -51,8 +51,8 @@ const Form = styled(animated.div)`
     padding: 2rem;
     left: 20vw;
     top: auto;
-    width: 25rem;
-    height: 30rem;
+    width: 28rem;
+    height: 32rem;
     bottom: 0;
     grid-template-rows: repeat(5, 1fr);
   }

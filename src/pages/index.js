@@ -13,8 +13,15 @@ import AlmaHeader from '../components/Header'
 import { FullContentCard, FullContentImage } from '../components/layout/FullContentCard'
 
 import P from '../components/visual/Paragraph'
+import Button from '../components/visual/Button'
 
 import almaLogoWithBG from '../images/alma/alma-logo-with-bg.svg'
+
+const ButtonContainer = styled.div`
+  margin: 0 0 2rem 0;
+  display: flex;
+  justify-content: center;
+`
 
 const MainLogo = styled.img`
   width: calc(192px + (320 - 192) * ((100vw - 300px) / (1600 - 300)));
@@ -78,31 +85,31 @@ const CardImg = styled(Img)`
   border-radius: 6px;
 `
 
-const NewsContainer = styled.div`
-  z-index: 5;
-  grid-column: 1 / 8;
-  margin: 0;
-  padding: 2rem;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto;
-  grid-gap: 2rem;
+// const NewsContainer = styled.div`
+//   z-index: 5;
+//   grid-column: 1 / 8;
+//   margin: 0;
+//   padding: 2rem;
+//   display: grid;
+//   grid-template-columns: 1fr;
+//   grid-template-rows: auto;
+//   grid-gap: 2rem;
 
-  @media (min-width: 800px) {
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 2rem;
-  }
+//   @media (min-width: 800px) {
+//     grid-template-columns: 1fr 1fr;
+//     grid-gap: 2rem;
+//   }
 
-  @media (min-width: 1600px) {
-    grid-template-columns: 1fr 1fr;
-  }
+//   @media (min-width: 1600px) {
+//     grid-template-columns: 1fr 1fr;
+//   }
 
-  @media (orientation: landscape) {
-    .content-grid {
-      margin: 2rem;
-    }
-  }
-`
+//   @media (orientation: landscape) {
+//     .content-grid {
+//       margin: 2rem;
+//     }
+//   }
+// `
 
 // const NewsCardOne = styled(Link)`
 //   margin: 0;
@@ -230,86 +237,86 @@ const NewsContainer = styled.div`
 //   z-index: 2;
 // `
 
-const NewsCard = styled(Link)`
-  text-decoration: none;
-  background: white;
-  border-radius: 16px;
-  z-index: 1;
-  box-shadow: 
-    0 13px 27px -5px rgba(50,50,93,0.1),
-    0 8px 16px -8px rgba(0,0,0,0.15),
-    0 -6px 16px -6px rgba(0,0,0,0.01)
-  ;
-`
+// const NewsCard = styled(Link)`
+//   text-decoration: none;
+//   background: white;
+//   border-radius: 16px;
+//   z-index: 1;
+//   box-shadow: 
+//     0 13px 27px -5px rgba(50,50,93,0.1),
+//     0 8px 16px -8px rgba(0,0,0,0.15),
+//     0 -6px 16px -6px rgba(0,0,0,0.01)
+//   ;
+// `
 
-const NewsImage = styled(Img)`
-  position: relative;
-  margin: 0;
-  border-radius: 16px 16px 0 0;
-  z-index: 0;
-  background: white;
-  /* box-shadow: 
-    0 13px 27px -5px rgba(50,50,93,.25),
-    0 8px 16px -8px rgba(0,0,0,.3),
-    0 -6px 16px -6px rgba(0,0,0,.025)
-  ; */
-  /* mask-image: linear-gradient(
-    to top,
-    hsla(0, 0%, 100%, 0) 0%,
-    hsla(0, 0%, 100%, 0.013) 8.1%,
-    hsla(0, 0%, 100%, 0.049) 15.5%,
-    hsla(0, 0%, 100%, 0.104) 22.5%,
-    hsla(0, 0%, 100%, 0.175) 29%,
-    hsla(0, 0%, 100%, 0.259) 35.3%,
-    hsla(0, 0%, 100%, 0.352) 41.2%,
-    hsla(0, 0%, 100%, 0.45) 47.1%,
-    hsla(0, 0%, 100%, 0.55) 52.9%,
-    hsla(0, 0%, 100%, 0.648) 58.8%,
-    hsla(0, 0%, 100%, 0.741) 64.7%,
-    hsla(0, 0%, 100%, 0.825) 71%,
-    hsla(0, 0%, 100%, 0.896) 77.5%,
-    hsla(0, 0%, 100%, 0.951) 84.5%,
-    hsla(0, 0%, 100%, 0.987) 91.9%,
-    hsl(0, 0%, 100%) 100%) */
-  ;
-`
+// const NewsImage = styled(Img)`
+//   position: relative;
+//   margin: 0;
+//   border-radius: 16px 16px 0 0;
+//   z-index: 0;
+//   background: white;
+//   box-shadow: 
+//     0 13px 27px -5px rgba(50,50,93,.25),
+//     0 8px 16px -8px rgba(0,0,0,.3),
+//     0 -6px 16px -6px rgba(0,0,0,.025)
+//   ;
+//   mask-image: linear-gradient(
+//     to top,
+//     hsla(0, 0%, 100%, 0) 0%,
+//     hsla(0, 0%, 100%, 0.013) 8.1%,
+//     hsla(0, 0%, 100%, 0.049) 15.5%,
+//     hsla(0, 0%, 100%, 0.104) 22.5%,
+//     hsla(0, 0%, 100%, 0.175) 29%,
+//     hsla(0, 0%, 100%, 0.259) 35.3%,
+//     hsla(0, 0%, 100%, 0.352) 41.2%,
+//     hsla(0, 0%, 100%, 0.45) 47.1%,
+//     hsla(0, 0%, 100%, 0.55) 52.9%,
+//     hsla(0, 0%, 100%, 0.648) 58.8%,
+//     hsla(0, 0%, 100%, 0.741) 64.7%,
+//     hsla(0, 0%, 100%, 0.825) 71%,
+//     hsla(0, 0%, 100%, 0.896) 77.5%,
+//     hsla(0, 0%, 100%, 0.951) 84.5%,
+//     hsla(0, 0%, 100%, 0.987) 91.9%,
+//     hsl(0, 0%, 100%) 100%)
+//   ;
+// `
 
-const NewsTitle = styled.h1`
-  font-size: calc(16px + (64 - 16) * ((100vw - 300px) / (1600 - 300)));
-  font-family: 'DM Serif Display';
-  color: black;
-  margin: calc(8px + (32 - 8) * ((100vw - 300px) / (1600 - 300)));
-  z-index: 2;
-`
+// const NewsTitle = styled.h1`
+//   font-size: calc(16px + (64 - 16) * ((100vw - 300px) / (1600 - 300)));
+//   font-family: 'DM Serif Display';
+//   color: black;
+//   margin: calc(8px + (32 - 8) * ((100vw - 300px) / (1600 - 300)));
+//   z-index: 2;
+// `
 
-const NewsDate = styled.p`
-  font-size: 12px;
-  font-family: 'DM Serif Display';
-  font-style: italic;
-  margin: calc(8px + (32 - 8) * ((100vw - 300px) / (1600 - 300)));
-`
+// const NewsDate = styled.p`
+//   font-size: 12px;
+//   font-family: 'DM Serif Display';
+//   font-style: italic;
+//   margin: calc(8px + (32 - 8) * ((100vw - 300px) / (1600 - 300)));
+// `
 
-const NewsSubtitle = styled.p`
-  font-size: calc(10px + (16 - 10) * ((100vw - 300px) / (1600 - 300)));
-  margin: calc(8px + (32 - 8) * ((100vw - 300px) / (1600 - 300)));
-`
+// const NewsSubtitle = styled.p`
+//   font-size: calc(10px + (16 - 10) * ((100vw - 300px) / (1600 - 300)));
+//   margin: calc(8px + (32 - 8) * ((100vw - 300px) / (1600 - 300)));
+// `
 
-const AlmaSeparator = styled.hr`
-  margin: 1rem 2rem;
-  border: 0;
-  height: 1px;
-  background-image: linear-gradient(
-    to right,
-    hsla(29, 47%, 75%, 1),
-    hsla(29, 47%, 75%, 1),
-    hsla(29, 47%, 75%, 1)
-  );
-`
+// const AlmaSeparator = styled.hr`
+//   margin: 1rem 2rem;
+//   border: 0;
+//   height: 1px;
+//   background-image: linear-gradient(
+//     to right,
+//     hsla(29, 47%, 75%, 1),
+//     hsla(29, 47%, 75%, 1),
+//     hsla(29, 47%, 75%, 1)
+//   );
+// `
 
-const NewsExcerpt = styled.p`
-  font-size: calc(8px + (12 - 8) * ((100vw - 300px) / (1600 - 300)));
-  margin: calc(8px + (32 - 8) * ((100vw - 300px) / (1600 - 300)));
-`
+// const NewsExcerpt = styled.p`
+//   font-size: calc(8px + (12 - 8) * ((100vw - 300px) / (1600 - 300)));
+//   margin: calc(8px + (32 - 8) * ((100vw - 300px) / (1600 - 300)));
+// `
 
 // const InstaGrid = styled.div`
 //   margin: 0;
@@ -440,6 +447,12 @@ const Index = ({ data, intl }) => {
       <CenteredContainer>
         <AlmaHeader title={intl.formatMessage({ id: "resort-title" })} />
         <P>{intl.formatMessage({ id: "resort-p1" })}</P>
+        <ButtonContainer>
+          <Link to="/resort">
+            <Button>Learn More</Button>
+          </Link> 
+        </ButtonContainer>
+        
       </CenteredContainer>
   
         <FullWidthContainer>
@@ -454,22 +467,32 @@ const Index = ({ data, intl }) => {
 
       <CenteredContainer>
         <AlmaHeader white title='Apartments'/>
-        <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</P>
+        <P>{intl.formatMessage({ id: "resort-p1" })}</P>
+        <ButtonContainer>
+          <Link to="/apartments">
+            <Button>Learn More</Button>
+          </Link> 
+        </ButtonContainer>
       </CenteredContainer>
 
       <FullWidthContainer>
         <HorizontalScrollContainer blue> 
-          <Card><CardImg fluid={data.almaLivingRoom1.childImageSharp.fluid}/></Card>
-          <Card><CardImg fluid={data.almaLivingRoom2.childImageSharp.fluid}/></Card>
-          <Card><CardImg fluid={data.almaKitchen1.childImageSharp.fluid}/></Card>
-          <Card><CardImg fluid={data.almaBedroom1.childImageSharp.fluid}/></Card>
-          <Card><CardImg fluid={data.almaBathroom1.childImageSharp.fluid}/></Card>
+          <Card><CardImg fluid={data.apartmentLivingRoom1.childImageSharp.fluid}/></Card>
+          <Card><CardImg fluid={data.apartmentLivingRoom2.childImageSharp.fluid}/></Card>
+          <Card><CardImg fluid={data.apartmentKitchen.childImageSharp.fluid}/></Card>
+          <Card><CardImg fluid={data.apartmentBedroom.childImageSharp.fluid}/></Card>
+          <Card><CardImg fluid={data.apartmentBathroom.childImageSharp.fluid}/></Card>
         </HorizontalScrollContainer>
       </FullWidthContainer>
 
       <CenteredContainer>
         <AlmaHeader white title='Villas'/>
-        <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</P>
+        <P>{intl.formatMessage({ id: "resort-p1" })}</P>
+        <ButtonContainer>
+          <Link to="/villas">
+            <Button>Learn More</Button>
+          </Link> 
+        </ButtonContainer>
       </CenteredContainer>
 
       <FullWidthContainer>
@@ -483,16 +506,42 @@ const Index = ({ data, intl }) => {
       </FullWidthContainer>
 
       <CenteredContainer>
-        <AlmaHeader white title='Amenities' />
-        <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</P>
+        <AlmaHeader white title='restaurants'/>
+        <P>{intl.formatMessage({ id: "resort-p1" })}</P>
+        <ButtonContainer>
+          <Link to="/restaurants">
+            <Button>Learn More</Button>
+          </Link> 
+        </ButtonContainer>
       </CenteredContainer>
 
       <FullWidthContainer>
         <HorizontalScrollContainer blue>
-          <Card><CardImg fluid={data.reception.childImageSharp.fluid}/></Card>
-          <Card><CardImg fluid={data.allDayDiner.childImageSharp.fluid}/></Card>
+          <Card><CardImg fluid={data.allDayDiner1.childImageSharp.fluid}/></Card>
+          <Card><CardImg fluid={data.beachBar2.childImageSharp.fluid}/></Card>
+          <Card><CardImg fluid={data.asianRestaurant.childImageSharp.fluid}/></Card>
+          <Card><CardImg fluid={data.foodCourt1.childImageSharp.fluid}/></Card>
+          <Card><CardImg fluid={data.italianRestaurant.childImageSharp.fluid}/></Card>
+          <Card><CardImg fluid={data.pub1.childImageSharp.fluid}/></Card>
+        </HorizontalScrollContainer>
+      </FullWidthContainer>
+
+      <CenteredContainer>
+        <AlmaHeader white title='Amenities' />
+        <P>{intl.formatMessage({ id: "resort-p1" })}</P>
+        <ButtonContainer>
+          <Link to="/amenities">
+            <Button>Learn More</Button>
+          </Link> 
+        </ButtonContainer>
+      </CenteredContainer>
+
+      <FullWidthContainer>
+        <HorizontalScrollContainer blue>
+          <Card><CardImg fluid={data.receptionLobby.childImageSharp.fluid}/></Card>
+          <Card><CardImg fluid={data.lobbyLounge.childImageSharp.fluid}/></Card>
+          <Card><CardImg fluid={data.conventionCenter.childImageSharp.fluid}/></Card>
           <Card><CardImg fluid={data.ballroom.childImageSharp.fluid}/></Card>
-          <Card><CardImg fluid={data.beachBar.childImageSharp.fluid}/></Card>
           <Card><CardImg fluid={data.spaTreatment.childImageSharp.fluid}/></Card>
         </HorizontalScrollContainer>
       </FullWidthContainer>
@@ -505,15 +554,15 @@ const Index = ({ data, intl }) => {
       
       <CenteredContainer>
         {/* <AlmaHeader title={intl.formatMessage({ id: "resort-title" })} /> */}
-        <AlmaHeader title='Alma' />
+        <AlmaHeader title='Our Story' />
         <P>{intl.formatMessage({ id: "resort-p1" })}</P>
       </CenteredContainer>
 
-      <CenteredContainer>
+      {/* <CenteredContainer>
         <AlmaHeader white title='News' />
         <P>All the latest news that's fit to print about the worlds newest and brightest hotspot in the Vietnam travel scene</P>
         <P>{data.articles.totalCount} Posts</P>
-      </CenteredContainer>
+      </CenteredContainer> */}
     
       {/* <FullWidthContainer>
         <NewsContainer>
@@ -529,7 +578,7 @@ const Index = ({ data, intl }) => {
         </NewsContainer>
       </FullWidthContainer> */}
 
-      <FullWidthContainer>
+      {/* <FullWidthContainer>
         <NewsContainer>
           {data.articles.edges.map(({ node }) => (
             <NewsCard key={node.id} to={node.fields.slug}>
@@ -542,7 +591,7 @@ const Index = ({ data, intl }) => {
             </NewsCard>
           ))}
         </NewsContainer>
-      </FullWidthContainer>
+      </FullWidthContainer> */}
         
       {/* <CenteredContainer>
         <AlmaHeader title='Instagram' />
@@ -666,114 +715,149 @@ export const query = graphql`
         }
       }
     }
-    villaExterior1: file(relativePath: { eq: "villas/villa-exterior-1-3840x2880.jpg" }) {
+    apartmentLivingRoom1: file(relativePath: { eq: "apartments/apartment-living-room-1-4x3.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 3840) {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    apartmentLivingRoom2: file(relativePath: { eq: "apartments/apartment-living-room-2-4x3.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    apartmentKitchen: file(relativePath: { eq: "apartments/apartment-kitchen-4x3.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    apartmentBedroom: file(relativePath: { eq: "apartments/apartment-bedroom-4x3.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    apartmentBathroom: file(relativePath: { eq: "apartments/apartment-bathroom-4x3.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    villaExterior1: file(relativePath: { eq: "villas/villa-exterior-1-4x3.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
-    villaLivingRoom1: file(relativePath: { eq: "villas/villa-living-room-1-3840x2880.jpg" }) {
+    villaLivingRoom1: file(relativePath: { eq: "villas/villa-living-room-1-4x3.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 3840) {
+        fluid(maxWidth: 2880) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
-    villaLivingRoom2: file(relativePath: { eq: "villas/villa-living-room-2-3840x2880.jpg" }) {
+    villaLivingRoom2: file(relativePath: { eq: "villas/villa-living-room-2-4x3.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 3840) {
+        fluid(maxWidth: 2880) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
-    villaBedroom1: file(relativePath: { eq: "villas/villa-bedroom-1-3840x2880.jpg" }) {
+    villaBedroom1: file(relativePath: { eq: "villas/villa-bedroom-1-4x3.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 3840) {
+        fluid(maxWidth: 2880) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
-    villaBathroom1: file(relativePath: { eq: "villas/villa-bathroom-1-3840x2880.jpg" }) {
+    villaBathroom1: file(relativePath: { eq: "villas/villa-bathroom-1-4x3.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 3840) {
+        fluid(maxWidth: 2880) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
-    villaLivingRoom1: file(relativePath: { eq: "villas/villa-living-room-1-3840x2880.jpg" }) {
+    allDayDiner1: file(relativePath: { eq: "restaurants/all-day-diner-1-4x3.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 3840) {
+        fluid(maxWidth: 1798) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
-    almaBathroom1: file(relativePath: { eq: "rooms/alma-bathroom-1.jpg" }) {
+    asianRestaurant: file(relativePath: { eq: "restaurants/asian-restaurant-4x3.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 3840) {
+        fluid(maxWidth: 1796) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
-    almaBedroom1: file(relativePath: { eq: "rooms/alma-bedroom-1.jpg" }) {
+    beachBar2: file(relativePath: { eq: "restaurants/beach-bar-2-4x3.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 3840) {
+        fluid(maxWidth: 1790) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
-    almaKitchen1: file(relativePath: { eq: "rooms/alma-kitchen-1.jpg" }) {
+    foodCourt1: file(relativePath: { eq: "restaurants/food-court-1-4x3.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 3840) {
+        fluid(maxWidth: 1796) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
-    almaLivingRoom1: file(relativePath: { eq: "rooms/alma-living-room-1.jpg" }) {
+    italianRestaurant: file(relativePath: { eq: "restaurants/italian-restaurant-4x3.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 3840) {
+        fluid(maxWidth: 1789) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
-    almaLivingRoom2: file(relativePath: { eq: "rooms/alma-living-room-2.jpg" }) {
+    pub1: file(relativePath: { eq: "restaurants/pub-1-4x3.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 3840) {
+        fluid(maxWidth: 1794) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
-    reception: file(relativePath: { eq: "amenities/reception-lobby-3840x2880.jpg" }) {
+    receptionLobby: file(relativePath: { eq: "amenities/reception-lobby-4x3.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 3840) {
+        fluid(maxWidth: 2880) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
-    ballroom: file(relativePath: { eq: "amenities/ballroom-3840x2880.jpg" }) {
+    lobbyLounge: file(relativePath: { eq: "amenities/lobby-lounge-4x3.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 3840) {
+        fluid(maxWidth: 2880) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
-    spaTreatment: file(relativePath: { eq: "amenities/spa-treatment-3840x2880.jpg" }) {
+    conventionCenter: file(relativePath: { eq: "amenities/convention-center-4x3.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 3840) {
+        fluid(maxWidth: 2880) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
-    allDayDiner: file(relativePath: { eq: "restaurants/all-day-diner-1-3840x2880.jpg" }) {
+    ballroom: file(relativePath: { eq: "amenities/ballroom-4x3.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 3840) {
+        fluid(maxWidth: 2880) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
-    beachBar: file(relativePath: { eq: "restaurants/beach-bar-2-3840x2880.jpg" }) {
+    spaTreatment: file(relativePath: { eq: "amenities/spa-treatment-4x3.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 3840) {
+        fluid(maxWidth: 2880) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }

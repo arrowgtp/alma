@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import { injectIntl } from 'gatsby-plugin-intl'
+import { Link, injectIntl } from 'gatsby-plugin-intl'
 import styled from 'styled-components'
 import Img from 'gatsby-image'
 import SEO from "../components/seo"
@@ -10,22 +10,28 @@ import ViewContainer from '../components/layout/ViewContainer'
 import FullWidthContainer from '../components/layout/FullWidthContainer'
 import CenteredContainer from '../components/layout/CenteredContainer'
 import AlmaHeader from '../components/Header'
+import Button from '../components/visual/Button'
+import P from '../components/visual/Paragraph'
 
-const P = styled.p`
-  margin: 2rem 0;
-` 
+const ButtonContainer = styled.div`
+  margin: 0 0 2rem 0;
+  display: flex;
+  justify-content: center;
+`
 
 const Resort = ({ data, intl }) => {
   return (
     <ViewContainer>
+
       <SEO title={intl.formatMessage({ id: "resort-title" })} />
+      
       <FullContentCard>
         <HeadingContainer>
           <AlmaHeader white
             title={intl.formatMessage({ id: "resort-title" })}
           />
         </HeadingContainer>
-        <FullContentImage fluid={data.almaResort2.childImageSharp.fluid}/>
+        <FullContentImage fluid={data.almaResort1.childImageSharp.fluid}/>
       </FullContentCard>
 
       <CenteredContainer>
@@ -34,7 +40,7 @@ const Resort = ({ data, intl }) => {
       </CenteredContainer>
 
       <FullWidthContainer>
-        <Img fluid={data.almaResort3.childImageSharp.fluid}/>
+        <Img fluid={data.almaResort2.childImageSharp.fluid}/>
       </FullWidthContainer>
 
       <CenteredContainer>
@@ -42,7 +48,7 @@ const Resort = ({ data, intl }) => {
       </CenteredContainer>
 
       <FullWidthContainer>
-        <Img fluid={data.almaResort4.childImageSharp.fluid}/>
+        <Img fluid={data.almaResort3.childImageSharp.fluid}/>
       </FullWidthContainer>
 
       <CenteredContainer>
@@ -50,9 +56,21 @@ const Resort = ({ data, intl }) => {
       </CenteredContainer>
 
       <FullWidthContainer>
+        <Img fluid={data.almaResort4.childImageSharp.fluid}/>
+      </FullWidthContainer>
+
+      <FullWidthContainer>
         <Img fluid={data.almaResort5.childImageSharp.fluid}/>
       </FullWidthContainer>
-      
+
+      <CenteredContainer> 
+        <P>Learn more about our beautiful oceanview apartments and their floorplans.</P>
+        <ButtonContainer>
+          <Link to="/apartments">
+            <Button>Learn More</Button>
+          </Link> 
+        </ButtonContainer> 
+      </CenteredContainer>
 
     </ViewContainer>
   )
@@ -60,38 +78,45 @@ const Resort = ({ data, intl }) => {
 
 export const query = graphql`
   query {
-    almaResort1: file(relativePath: { eq: "resort/resort-1-16x10.jpg" }) {
+    resortOverview: file(relativePath: { eq: "resort/resort-overview-1-16x10.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 3456) {
-          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    almaResort1: file(relativePath: { eq: "resort/resort-1-16x10.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     almaResort2: file(relativePath: { eq: "resort/resort-2-16x10.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 3456) {
-          ...GatsbyImageSharpFluid
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     almaResort3: file(relativePath: { eq: "resort/resort-3-16x10.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 3456) {
-          ...GatsbyImageSharpFluid
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     almaResort4: file(relativePath: { eq: "resort/resort-4-16x10.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 3456) {
-          ...GatsbyImageSharpFluid
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     almaResort5: file(relativePath: { eq: "resort/resort-overview-2-16x10.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 3456) {
-          ...GatsbyImageSharpFluid
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
