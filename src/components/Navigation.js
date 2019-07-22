@@ -300,25 +300,19 @@ const Navigation = () => {
             <NavBlock>
               <AlmaBulletShell src={almaShell}/>
               <AlmaLink to={`/resort`} onClick={toggle}>Resort</AlmaLink>
-                <AlmaLink2 to={`/apartments`}>Apartments</AlmaLink2>
-                <AlmaLink2 to={`/villas`}>Villas</AlmaLink2>
-                <AlmaLink2 to={`/restaurants`}>Restaurants</AlmaLink2>
-                <AlmaLink2 to={`/amenities`}>Amenities</AlmaLink2>
-                <AlmaLink2 to={`/construction`}>Construction</AlmaLink2>
+                <AlmaLink2 to={`/apartments`} onClick={toggle}>Apartments</AlmaLink2>
+                <AlmaLink2 to={`/villas`} onClick={toggle}>Villas</AlmaLink2>
+                <AlmaLink2 to={`/restaurants`} onClick={toggle}>Restaurants</AlmaLink2>
+                <AlmaLink2 to={`/amenities`} onClick={toggle}>Amenities</AlmaLink2>
+                <AlmaLink2 to={`/construction`} onClick={toggle}>Construction</AlmaLink2>
             </NavBlock>
             <NavBlock>
               <AlmaBulletShell src={almaShell}/>
               <AlmaLink to={`/vacations`} onClick={toggle}>Vacations</AlmaLink>
-                {/* <AlmaLink2 to={`/about-rci`} onClick={toggle}>About</AlmaLink2>
-                <AlmaLink2 to={`/ownership`} onClick={toggle}>Ownership</AlmaLink2>
-                <AlmaLink2 to={`/benefits`} onClick={toggle}>Benefits</AlmaLink2> */}
               <AlmaBulletShell src={almaShell}/>
               <AlmaLink to={`/alma`} onClick={toggle}>Our Story</AlmaLink>
-                {/* <AlmaLink2 to={`/about-alma`} onClick={toggle}>About Us</AlmaLink2>
-                <AlmaLink2 to={`/story`} onClick={toggle}>Our Story</AlmaLink2>
-                <AlmaLink2 to={`/news`} onClick={toggle}>News</AlmaLink2> */}
-              <AlmaBulletShell src={almaShell}/>
-              <AlmaLink to={`/promotions`} onClick={toggle}>Promotions</AlmaLink>
+              {/* <AlmaBulletShell src={almaShell}/>
+              <AlmaLink to={`/promotions`} onClick={toggle}>Promotions</AlmaLink> */}
               <SocialButtons>
                 <SocialButton href='https://www.facebook.com/almavacations'>
                   <img src={FacebookIcon} alt='The Alma Resort Facebook account.' />
@@ -365,14 +359,8 @@ const Navigation = () => {
             <AlmaLink2 to={`/construction`}>Construction</AlmaLink2>
           <AlmaBulletShell src={almaShell}/>
           <AlmaLink to={`/vacations`}>Vacations</AlmaLink>
-            {/* <AlmaLink2 to={`/about-rci`}>About</AlmaLink2>
-            <AlmaLink2 to={`/ownership`}>Ownership</AlmaLink2>
-            <AlmaLink2 to={`/benefits`}>Benefits</AlmaLink2> */}
           <AlmaBulletShell src={almaShell}/>
           <AlmaLink to={`/alma`}>Our Story</AlmaLink>
-            {/* <AlmaLink2 to={`/about-alma`}>About Us</AlmaLink2>
-            <AlmaLink2 to={`/story`}>Our Story</AlmaLink2>
-            <AlmaLink2 to={`/news`}>News</AlmaLink2> */}
           {/* <AlmaBulletShell src={almaShell}/> */}
           {/* <AlmaLink to={`/promotions`}>Promotions</AlmaLink> */}
         </LargeLinkTree> 

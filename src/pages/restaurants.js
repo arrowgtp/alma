@@ -19,6 +19,30 @@ const ButtonContainer = styled.div`
   justify-content: center;
 `
 
+const UL = styled.ul`
+  font-family: 'Work Sans', sans-serif;
+  margin: 2rem;
+  padding: 0;
+  color: #006897;
+  list-style-type: circle;
+`
+
+const ListTitle = styled.h1`
+  font-family: 'Quicksand', sans-serif;
+  text-transform: uppercase;
+  font-size: 40px;
+  color: #006897;
+  text-align: center;
+`
+
+const LI = styled.li`
+  font-family: 'Work Sans', sans-serif;
+  color: #006897;
+  list-style-type: circle;
+  font-size: 16px;
+  padding: 0.25rem;
+`
+
 const Restaurants = ({ data, intl }) => {
   return (
     <ViewContainer>
@@ -34,9 +58,25 @@ const Restaurants = ({ data, intl }) => {
         <FullContentImage fluid={data.beachBar2.childImageSharp.fluid}/>
       </FullContentCard>
 
+      {/* <CenteredContainer>
+        <P>{intl.formatMessage({ id: "restaurants-paragraph-1" })}</P>
+      </CenteredContainer> */}
+
       <CenteredContainer>
-        <AlmaHeader title={intl.formatMessage({ id: "restaurants-subtitle" })}></AlmaHeader>
-        <P>{intl.formatMessage({ id: "resort-p1" })}</P>
+        <UL>
+          <ListTitle>{intl.formatMessage({ id: "restaurants-list" })}</ListTitle>
+          <LI>{intl.formatMessage({ id: "restaurants-list-point-1" })}</LI>
+          <LI>{intl.formatMessage({ id: "restaurants-list-point-2" })}</LI>
+          <LI>{intl.formatMessage({ id: "restaurants-list-point-3" })}</LI>
+          <LI>{intl.formatMessage({ id: "restaurants-list-point-4" })}</LI>
+          <LI>{intl.formatMessage({ id: "restaurants-list-point-5" })}</LI>
+          <LI>{intl.formatMessage({ id: "restaurants-list-point-6" })}</LI>
+          <LI>{intl.formatMessage({ id: "restaurants-list-point-7" })}</LI>
+          <LI>{intl.formatMessage({ id: "restaurants-list-point-8" })}</LI>
+          <LI>{intl.formatMessage({ id: "restaurants-list-point-9" })}</LI>
+          <LI>{intl.formatMessage({ id: "restaurants-list-point-10" })}</LI>
+          <LI>{intl.formatMessage({ id: "restaurants-list-point-11" })}</LI>
+        </UL>
       </CenteredContainer>
 
       <FullWidthContainer>
@@ -46,10 +86,6 @@ const Restaurants = ({ data, intl }) => {
         <Img fluid={data.allDayDiner2.childImageSharp.fluid}/>
       </FullWidthContainer>
 
-      <CenteredContainer>
-        <P>{intl.formatMessage({ id: "resort-p2" })}</P>
-      </CenteredContainer>
-
       <FullWidthContainer>
         <Img fluid={data.beachBar1.childImageSharp.fluid}/>
       </FullWidthContainer>
@@ -57,40 +93,26 @@ const Restaurants = ({ data, intl }) => {
         <Img fluid={data.beachBar2.childImageSharp.fluid}/>
       </FullWidthContainer>
 
-      <CenteredContainer>
-        <P>{intl.formatMessage({ id: "resort-p3" })}</P>
-      </CenteredContainer>
-
       <FullWidthContainer>
         <Img fluid={data.asianRestaurant.childImageSharp.fluid}/>
       </FullWidthContainer>
-
-      <CenteredContainer>
-        <P>{intl.formatMessage({ id: "resort-p3" })}</P>
-      </CenteredContainer>
 
       <FullWidthContainer>
         <Img fluid={data.italianRestaurant.childImageSharp.fluid}/>
       </FullWidthContainer>
 
-      <CenteredContainer>
-        <P>{intl.formatMessage({ id: "resort-p3" })}</P>
-      </CenteredContainer>
-
       <FullWidthContainer>
         <Img fluid={data.foodCourt1.childImageSharp.fluid}/>
       </FullWidthContainer>
+
       <FullWidthContainer>
         <Img fluid={data.foodCourt2.childImageSharp.fluid}/>
       </FullWidthContainer>
-      
-      <CenteredContainer>
-        <P>{intl.formatMessage({ id: "resort-p3" })}</P>
-      </CenteredContainer>
 
       <FullWidthContainer>
         <Img fluid={data.pub1.childImageSharp.fluid}/>
       </FullWidthContainer>
+      
       <FullWidthContainer>
         <Img fluid={data.pub2.childImageSharp.fluid}/>
       </FullWidthContainer>

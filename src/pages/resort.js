@@ -36,7 +36,7 @@ const Resort = ({ data, intl }) => {
 
       <CenteredContainer>
         <AlmaHeader title={intl.formatMessage({ id: "resort-subtitle" })}></AlmaHeader>
-        <P>{intl.formatMessage({ id: "resort-p1" })}</P>
+        <P>{intl.formatMessage({ id: "resort-paragraph-1" })}</P>
       </CenteredContainer>
 
       <FullWidthContainer>
@@ -44,7 +44,7 @@ const Resort = ({ data, intl }) => {
       </FullWidthContainer>
 
       <CenteredContainer>
-        <P>{intl.formatMessage({ id: "resort-p2" })}</P>
+        <P>{intl.formatMessage({ id: "resort-paragraph-2" })}</P>
       </CenteredContainer>
 
       <FullWidthContainer>
@@ -52,7 +52,7 @@ const Resort = ({ data, intl }) => {
       </FullWidthContainer>
 
       <CenteredContainer>
-        <P>{intl.formatMessage({ id: "resort-p3" })}</P>
+        <P>{intl.formatMessage({ id: "resort-paragraph-3" })}</P>
       </CenteredContainer>
 
       <FullWidthContainer>

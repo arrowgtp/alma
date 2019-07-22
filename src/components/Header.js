@@ -31,7 +31,7 @@ const HeaderTitle = styled.h1`
   color: ${props => props.white ? "#007eb5" : "white"};
   text-align: center;
   text-transform: uppercase;
-  letter-spacing: calc(12px + (18 - 12) * ((100vw - 300px) / (1600 - 300)));
+  letter-spacing: calc(4px + (8 - 4) * ((100vw - 300px) / (1600 - 300)));
   font-size: calc(18px + (40 - 18) * ((100vw - 300px) / (1600 - 300)));
   font-family: 'Quicksand';
   font-weight: 700;

@@ -19,6 +19,30 @@ const ButtonContainer = styled.div`
   justify-content: center;
 `
 
+const UL = styled.ul`
+  font-family: 'Work Sans', sans-serif;
+  margin: 2rem;
+  padding: 0;
+  color: #006897;
+  list-style-type: circle;
+`
+
+const ListTitle = styled.h1`
+  font-family: 'Quicksand', sans-serif;
+  text-transform: uppercase;
+  font-size: 40px;
+  color: #006897;
+  text-align: center;
+`
+
+const LI = styled.li`
+  font-family: 'Work Sans', sans-serif;
+  color: #006897;
+  list-style-type: circle;
+  font-size: 16px;
+  padding: 0.25rem;
+`
+
 const Amenities = ({ data, intl }) => {
   return (
     <ViewContainer>
@@ -35,33 +59,44 @@ const Amenities = ({ data, intl }) => {
       </FullContentCard>
 
       <CenteredContainer>
-        <AlmaHeader title={intl.formatMessage({ id: "amenities-subtitle" })}></AlmaHeader>
-        <P>{intl.formatMessage({ id: "resort-p1" })}</P>
+        <P>{intl.formatMessage({ id: "amenities-paragraph-1" })}</P>
+      </CenteredContainer>
+
+      <CenteredContainer>
+        <UL>
+          <ListTitle>{intl.formatMessage({ id: "amenities-list" })}</ListTitle>
+          <LI>{intl.formatMessage({ id: "amenities-list-point-1" })}</LI>
+          <LI>{intl.formatMessage({ id: "amenities-list-point-2" })}</LI>
+          <LI>{intl.formatMessage({ id: "amenities-list-point-3" })}</LI>
+          <LI>{intl.formatMessage({ id: "amenities-list-point-4" })}</LI>
+          <LI>{intl.formatMessage({ id: "amenities-list-point-5" })}</LI>
+          <LI>{intl.formatMessage({ id: "amenities-list-point-6" })}</LI>
+          <LI>{intl.formatMessage({ id: "amenities-list-point-7" })}</LI>
+          <LI>{intl.formatMessage({ id: "amenities-list-point-8" })}</LI>
+          <LI>{intl.formatMessage({ id: "amenities-list-point-9" })}</LI>
+          <LI>{intl.formatMessage({ id: "amenities-list-point-10" })}</LI>
+          <LI>{intl.formatMessage({ id: "amenities-list-point-11" })}</LI>
+          <LI>{intl.formatMessage({ id: "amenities-list-point-12" })}</LI>
+          <LI>{intl.formatMessage({ id: "amenities-list-point-13" })}</LI>
+          <LI>{intl.formatMessage({ id: "amenities-list-point-14" })}</LI>
+          <LI>{intl.formatMessage({ id: "amenities-list-point-15" })}</LI>
+          <LI>{intl.formatMessage({ id: "amenities-list-point-16" })}</LI>
+          <LI>{intl.formatMessage({ id: "amenities-list-point-17" })}</LI>
+          <LI>{intl.formatMessage({ id: "amenities-list-point-18" })}</LI>
+        </UL>
       </CenteredContainer>
 
       <FullWidthContainer>
         <Img fluid={data.receptionLobby.childImageSharp.fluid}/>
       </FullWidthContainer>
 
-      <CenteredContainer>
-        <P>{intl.formatMessage({ id: "resort-p2" })}</P>
-      </CenteredContainer>
-
       <FullWidthContainer>
         <Img fluid={data.lobbyLounge.childImageSharp.fluid}/>
       </FullWidthContainer>
 
-      <CenteredContainer>
-        <P>{intl.formatMessage({ id: "resort-p3" })}</P>
-      </CenteredContainer>
-
       <FullWidthContainer>
         <Img fluid={data.conventionCenter.childImageSharp.fluid}/>
       </FullWidthContainer>
-
-      <CenteredContainer>
-        <P>{intl.formatMessage({ id: "resort-p3" })}</P>
-      </CenteredContainer>
 
       <FullWidthContainer>
         <Img fluid={data.ballroom.childImageSharp.fluid}/>

@@ -12,6 +12,7 @@ import CenteredContainer from '../components/layout/CenteredContainer'
 import AlmaHeader from '../components/Header'
 import Button from '../components/visual/Button'
 import P from '../components/visual/Paragraph'
+import FullWidthContainer from '../components/layout/FullWidthContainer';
 
 const ButtonContainer = styled.div`
   margin: 0 0 2rem 0;
@@ -35,37 +36,28 @@ const Construction = ({ data, intl }) => {
       </FullContentCard>
 
       <CenteredContainer>
-        <AlmaHeader title={intl.formatMessage({ id: "construction-subtitle" })}></AlmaHeader>
-        <P>{intl.formatMessage({ id: "resort-p1" })}</P>
-        <Img fluid={data.july1.childImageSharp.fluid}/>
-        <P>{intl.formatMessage({ id: "resort-p1" })}</P>
-        <Img fluid={data.july2.childImageSharp.fluid}/>
-        <P>{intl.formatMessage({ id: "resort-p1" })}</P>
-        <Img fluid={data.july3.childImageSharp.fluid}/>
-        <P>{intl.formatMessage({ id: "resort-p1" })}</P>
-        <Img fluid={data.july4.childImageSharp.fluid}/>
-        <P>{intl.formatMessage({ id: "resort-p1" })}</P>
-        <Img fluid={data.july5.childImageSharp.fluid}/>
-        <P>{intl.formatMessage({ id: "resort-p1" })}</P>
-        <Img fluid={data.july6.childImageSharp.fluid}/>
-        <P>{intl.formatMessage({ id: "resort-p1" })}</P>
-        <Img fluid={data.july7.childImageSharp.fluid}/>
-        <P>{intl.formatMessage({ id: "resort-p1" })}</P>
-        <Img fluid={data.july8.childImageSharp.fluid}/>
-        <P>{intl.formatMessage({ id: "resort-p1" })}</P>
-        <Img fluid={data.july9.childImageSharp.fluid}/>
-        <P>{intl.formatMessage({ id: "resort-p1" })}</P>
-        <Img fluid={data.july10.childImageSharp.fluid}/>
-        <P>{intl.formatMessage({ id: "resort-p1" })}</P>
-        <Img fluid={data.july11.childImageSharp.fluid}/>
-        <P>{intl.formatMessage({ id: "resort-p1" })}</P>
-        <Img fluid={data.july12.childImageSharp.fluid}/>
-        <P>{intl.formatMessage({ id: "resort-p1" })}</P>
-        <Img fluid={data.july13.childImageSharp.fluid}/>
-        <P>{intl.formatMessage({ id: "resort-p1" })}</P>
-        <Img fluid={data.july14.childImageSharp.fluid}/>
+        <P>{intl.formatMessage({ id: "construction-paragraph-1" })}</P>
+        <P>{intl.formatMessage({ id: "construction-paragraph-2" })}</P>
+        <P>{intl.formatMessage({ id: "construction-paragraph-3" })}</P>
+        <P>{intl.formatMessage({ id: "construction-paragraph-4" })}</P>
       </CenteredContainer>
-
+      <FullWidthContainer>
+        <Img fluid={data.july1.childImageSharp.fluid}/>
+        <Img fluid={data.july2.childImageSharp.fluid}/>
+        <Img fluid={data.july3.childImageSharp.fluid}/>
+        <Img fluid={data.july4.childImageSharp.fluid}/>
+        <Img fluid={data.july5.childImageSharp.fluid}/>
+        <Img fluid={data.july6.childImageSharp.fluid}/>
+        <Img fluid={data.july7.childImageSharp.fluid}/>
+        <Img fluid={data.july8.childImageSharp.fluid}/>
+        <Img fluid={data.july9.childImageSharp.fluid}/>
+        <Img fluid={data.july10.childImageSharp.fluid}/>
+        <Img fluid={data.july11.childImageSharp.fluid}/>
+        <Img fluid={data.july12.childImageSharp.fluid}/>
+        <Img fluid={data.july13.childImageSharp.fluid}/>
+        <Img fluid={data.july14.childImageSharp.fluid}/>
+      </FullWidthContainer>
+        
       <CenteredContainer> 
         <P>Head back home now and learn more about all of the wonderful vacation opportunites that could be yours.</P>
         <ButtonContainer>

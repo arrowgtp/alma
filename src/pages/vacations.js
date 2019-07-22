@@ -9,11 +9,17 @@ import AlmaHeader from '../components/Header'
 const Vacations = ({ intl }) => {
   return (
     <ViewContainer>
-      <SEO title="Vacations" />
+      <SEO title={intl.formatMessage({ id: "vacations-title" })}/>
       <CenteredContainer>
-        <AlmaHeader title='Vacations' />
-        <p>{intl.formatMessage({ id: "title" })}</p>
-        <p>{intl.formatMessage({ id: "slogan" })}</p>
+
+        <AlmaHeader title={intl.formatMessage({ id: "vacations-title" })}/>
+        
+        <p>{intl.formatMessage({ id: "vacations-paragraph-1" })}</p>
+
+        <h1>{intl.formatMessage({ id: "rci-title" })}</h1>
+
+        <p>{intl.formatMessage({ id: "rci-paragraph-1" })}</p>
+
       </CenteredContainer>
     </ViewContainer>
   )

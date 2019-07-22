@@ -318,56 +318,56 @@ const CardImg = styled(Img)`
 //   margin: calc(8px + (32 - 8) * ((100vw - 300px) / (1600 - 300)));
 // `
 
-// const InstaGrid = styled.div`
-//   margin: 0;
-//   padding: 2rem;
-//   display: grid;
-//   grid-template-columns: 1fr 1fr;
-//   grid-template-rows: 1fr 1fr 1fr;
-//   grid-gap: 2rem;
+const InstaGrid = styled.div`
+  margin: 0;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 2rem;
 
-//   @media (min-width: 50rem) {
-//     grid-template-columns: 1fr 1fr 1fr;
-//     grid-template-rows: 1fr 1fr 1fr;
-//   }
-// `
+  @media (min-width: 50rem) {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+`
 
-// const InstaPost = styled.div`
-//   margin: 0;
-//   padding: 0;
-//   width: 100%;
-//   height: 0;
-//   padding-bottom: 100%;
-//   border-radius: 16px;
-//   box-shadow: 0px 0px 24px 0px rgba(0,0,0,0.15);
-//   position: relative;
-//   transition: All 250ms ease;
-//   box-shadow: 
-//     0 13px 27px -5px rgba(50,50,93,.25),
-//     0 8px 16px -8px rgba(0,0,0,.3),
-//     0 -6px 16px -6px rgba(0,0,0,.025)
-//   ;
+const InstaPost = styled.div`
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+  border-radius: 16px;
+  box-shadow: 0px 0px 24px 0px rgba(0,0,0,0.15);
+  position: relative;
+  transition: All 250ms ease;
+  box-shadow: 
+    0 13px 27px -5px rgba(50,50,93,.25),
+    0 8px 16px -8px rgba(0,0,0,.3),
+    0 -6px 16px -6px rgba(0,0,0,.025)
+  ;
+  
+  :hover {
+    box-shadow:
+      0 30px 60px -12px rgba(50,50,93,.25),
+      0 18px 36px -18px rgba(0,0,0,.3),
+      0 -12px 36px -8px rgba(0,0,0,.025)
+    ;
+    transform: translateY(-2px);
+  }
+`
 
-//   :hover {
-//     box-shadow:
-//       0 30px 60px -12px rgba(50,50,93,.25),
-//       0 18px 36px -18px rgba(0,0,0,.3),
-//       0 -12px 36px -8px rgba(0,0,0,.025)
-//     ;
-//     transform: translateY(-2px);
-//   }
-// `
-
-// const InstaSpacer = styled.div`
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   height: 100%;
-//   width: 100%;
-//   display: grid;
-//   grid-template-rows: repeat(8, 1fr);
-//   grid-template-columns: repeat(8, 1fr);
-// `
+const InstaSpacer = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-rows: repeat(8, 1fr);
+  grid-template-columns: repeat(8, 1fr);
+`
 
 // const InstaLikes = styled.p`
 //   grid-row: 1 / 9;
@@ -393,43 +393,43 @@ const CardImg = styled(Img)`
 //   font-size: calc(8px + (32 - 12) * ((100vw - 300px) / (1600 - 300)));
 // `
 
-// const InstaImage = styled(Img)`
-//   grid-row: 1 / 9;
-//   grid-column: 1 / 9;
-//   margin: 0;
-//   padding: 0;
-//   border-radius: 16px;
-//   object-fit: cover;
-//   width: 100%;
-//   height: 100%;
-//   z-index: 0;
-// `
+const InstaImage = styled(Img)`
+  grid-row: 1 / 9;
+  grid-column: 1 / 9;
+  margin: 0;
+  padding: 0;
+  border-radius: 16px;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+`
 
-// const InstaScrim = styled.div`
-//   grid-column: 1 / 9;
-//   grid-row: 1 / 9;
-//   background: linear-gradient(
-//     to bottom,
-//     hsla(0, 0%, 0%, 0) 0%,
-//     hsla(0, 0%, 0%, 0.003) 8.1%,
-//     hsla(0, 0%, 0%, 0.012) 15.5%,
-//     hsla(0, 0%, 0%, 0.026) 22.5%,
-//     hsla(0, 0%, 0%, 0.044) 29%,
-//     hsla(0, 0%, 0%, 0.065) 35.3%,
-//     hsla(0, 0%, 0%, 0.088) 41.2%,
-//     hsla(0, 0%, 0%, 0.113) 47.1%,
-//     hsla(0, 0%, 0%, 0.137) 52.9%,
-//     hsla(0, 0%, 0%, 0.162) 58.8%,
-//     hsla(0, 0%, 0%, 0.185) 64.7%,
-//     hsla(0, 0%, 0%, 0.206) 71%,
-//     hsla(0, 0%, 0%, 0.224) 77.5%,
-//     hsla(0, 0%, 0%, 0.238) 84.5%,
-//     hsla(0, 0%, 0%, 0.247) 91.9%,
-//     hsla(0, 0%, 0%, 0.25) 100%
-//   );
-//   z-index: 1;
-//   border-radius: 16px;
-// `
+const InstaScrim = styled.div`
+  grid-column: 1 / 9;
+  grid-row: 1 / 9;
+  background: linear-gradient(
+    to bottom,
+    hsla(0, 0%, 0%, 0) 0%,
+    hsla(0, 0%, 0%, 0.003) 8.1%,
+    hsla(0, 0%, 0%, 0.012) 15.5%,
+    hsla(0, 0%, 0%, 0.026) 22.5%,
+    hsla(0, 0%, 0%, 0.044) 29%,
+    hsla(0, 0%, 0%, 0.065) 35.3%,
+    hsla(0, 0%, 0%, 0.088) 41.2%,
+    hsla(0, 0%, 0%, 0.113) 47.1%,
+    hsla(0, 0%, 0%, 0.137) 52.9%,
+    hsla(0, 0%, 0%, 0.162) 58.8%,
+    hsla(0, 0%, 0%, 0.185) 64.7%,
+    hsla(0, 0%, 0%, 0.206) 71%,
+    hsla(0, 0%, 0%, 0.224) 77.5%,
+    hsla(0, 0%, 0%, 0.238) 84.5%,
+    hsla(0, 0%, 0%, 0.247) 91.9%,
+    hsla(0, 0%, 0%, 0.25) 100%
+  );
+  z-index: 1;
+  border-radius: 16px;
+`
 
 const Index = ({ data, intl }) => {
 
@@ -446,10 +446,10 @@ const Index = ({ data, intl }) => {
   
       <CenteredContainer>
         <AlmaHeader title={intl.formatMessage({ id: "resort-title" })} />
-        <P>{intl.formatMessage({ id: "resort-p1" })}</P>
+        <P>{intl.formatMessage({ id: "resort-paragraph-1" })}</P>
         <ButtonContainer>
           <Link to="/resort">
-            <Button>Learn More</Button>
+            <Button>{intl.formatMessage({ id: "learn-more-button" })}</Button>
           </Link> 
         </ButtonContainer>
         
@@ -466,11 +466,11 @@ const Index = ({ data, intl }) => {
         </FullWidthContainer>
 
       <CenteredContainer>
-        <AlmaHeader white title='Apartments'/>
-        <P>{intl.formatMessage({ id: "resort-p1" })}</P>
+        <AlmaHeader title={intl.formatMessage({ id: "apartments-title" })} />
+        <P>{intl.formatMessage({ id: "apartments-paragraph-1" })}</P>
         <ButtonContainer>
           <Link to="/apartments">
-            <Button>Learn More</Button>
+            <Button>{intl.formatMessage({ id: "learn-more-button" })}</Button>
           </Link> 
         </ButtonContainer>
       </CenteredContainer>
@@ -486,11 +486,11 @@ const Index = ({ data, intl }) => {
       </FullWidthContainer>
 
       <CenteredContainer>
-        <AlmaHeader white title='Villas'/>
-        <P>{intl.formatMessage({ id: "resort-p1" })}</P>
+        <AlmaHeader title={intl.formatMessage({ id: "villas-title" })} />
+        <P>{intl.formatMessage({ id: "villas-paragraph-1" })}</P>
         <ButtonContainer>
           <Link to="/villas">
-            <Button>Learn More</Button>
+            <Button>{intl.formatMessage({ id: "learn-more-button" })}</Button>
           </Link> 
         </ButtonContainer>
       </CenteredContainer>
@@ -506,11 +506,11 @@ const Index = ({ data, intl }) => {
       </FullWidthContainer>
 
       <CenteredContainer>
-        <AlmaHeader white title='restaurants'/>
-        <P>{intl.formatMessage({ id: "resort-p1" })}</P>
+        <AlmaHeader title={intl.formatMessage({ id: "restaurants-title" })} />
+        <P>{intl.formatMessage({ id: "restaurants-paragraph-1" })}</P>
         <ButtonContainer>
           <Link to="/restaurants">
-            <Button>Learn More</Button>
+            <Button>{intl.formatMessage({ id: "learn-more-button" })}</Button>
           </Link> 
         </ButtonContainer>
       </CenteredContainer>
@@ -527,11 +527,11 @@ const Index = ({ data, intl }) => {
       </FullWidthContainer>
 
       <CenteredContainer>
-        <AlmaHeader white title='Amenities' />
-        <P>{intl.formatMessage({ id: "resort-p1" })}</P>
+        <AlmaHeader title={intl.formatMessage({ id: "amenities-title" })} />
+        <P>{intl.formatMessage({ id: "amenities-paragraph-1" })}</P>
         <ButtonContainer>
           <Link to="/amenities">
-            <Button>Learn More</Button>
+            <Button>{intl.formatMessage({ id: "learn-more-button" })}</Button>
           </Link> 
         </ButtonContainer>
       </CenteredContainer>
@@ -547,15 +547,23 @@ const Index = ({ data, intl }) => {
       </FullWidthContainer>
 
       <CenteredContainer>
-        {/* <AlmaHeader title={intl.formatMessage({ id: "resort-title" })} /> */}
-        <AlmaHeader title='Vacations' />
-        <P>{intl.formatMessage({ id: "resort-p1" })}</P>
+        <AlmaHeader title={intl.formatMessage({ id: "vacations-title" })} />
+        <P>{intl.formatMessage({ id: "vacations-paragraph-1" })}</P>
+        <ButtonContainer>
+          <Link to="/vacations">
+            <Button>{intl.formatMessage({ id: "learn-more-button" })}</Button>
+          </Link> 
+        </ButtonContainer>
       </CenteredContainer>
       
       <CenteredContainer>
-        {/* <AlmaHeader title={intl.formatMessage({ id: "resort-title" })} /> */}
-        <AlmaHeader title='Our Story' />
-        <P>{intl.formatMessage({ id: "resort-p1" })}</P>
+        <AlmaHeader title={intl.formatMessage({ id: "alma-title" })} />
+        <P>{intl.formatMessage({ id: "alma-paragraph-1-1" })}</P>
+        <ButtonContainer>
+          <Link to="/vacations">
+            <Button>{intl.formatMessage({ id: "learn-more-button" })}</Button>
+          </Link> 
+        </ButtonContainer>
       </CenteredContainer>
 
       {/* <CenteredContainer>
@@ -593,25 +601,22 @@ const Index = ({ data, intl }) => {
         </NewsContainer>
       </FullWidthContainer> */}
         
-      {/* <CenteredContainer>
+      <CenteredContainer>
         <AlmaHeader title='Instagram' />
-      </CenteredContainer> */}
+      </CenteredContainer>
 
-      {/* <FullWidthContainer>
+      <FullWidthContainer>
         <InstaGrid>
           {data.allInstaNode.edges.map(({ node }) => (
             <InstaPost key={node.id}>
               <InstaSpacer>
-                <InstaLikes>❤️ {node.likes}</InstaLikes>
-                <InstaComments>💬 {node.comments}</InstaComments>
                 <InstaScrim />
-                <InstaImage src={node.original} />
                 <InstaImage fluid={node.localFile.childImageSharp.fluid} />
               </InstaSpacer>
             </InstaPost>
           ))}
         </InstaGrid>
-      </FullWidthContainer> */}
+      </FullWidthContainer>
 
     </ViewContainer>
   )

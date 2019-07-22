@@ -9,6 +9,8 @@ import { FullContentCard, FullContentImage, HeadingContainer } from '../componen
 import ViewContainer from '../components/layout/ViewContainer'
 import FullWidthContainer from '../components/layout/FullWidthContainer'
 import CenteredContainer from '../components/layout/CenteredContainer'
+import FlexContainer from '../components/layout/FlexContainer'
+import FlexBox from '../components/layout/FlexBox'
 import AlmaHeader from '../components/Header'
 import Button from '../components/visual/Button'
 import P from '../components/visual/Paragraph'
@@ -17,6 +19,28 @@ const ButtonContainer = styled.div`
   margin: 0 0 2rem 0;
   display: flex;
   justify-content: center;
+`
+
+const Floorplan = styled(Img)`
+  width: 100%;
+  height: auto;
+`
+
+const FloorplanHeading = styled.h1`
+  margin: 1rem;
+  padding: 0;
+  text-transform: uppercase;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 48px;
+  color: #006897;
+`
+
+const FloorplanParagraph = styled.p`
+  margin: 0.5rem;
+  padding: 0;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 16px;
+  color: #006897;
 `
 
 const Apartments = ({ data, intl }) => {
@@ -35,48 +59,81 @@ const Apartments = ({ data, intl }) => {
       </FullContentCard>
 
       <CenteredContainer>
-        <AlmaHeader title={intl.formatMessage({ id: "apartments-subtitle" })}></AlmaHeader>
-        <P>{intl.formatMessage({ id: "resort-p1" })}</P>
+        <P>{intl.formatMessage({ id: "apartments-paragraph-1" })}</P>
       </CenteredContainer>
 
       <FullWidthContainer>
         <Img fluid={data.apartmentLivingRoom2.childImageSharp.fluid}/>
       </FullWidthContainer>
 
-      <CenteredContainer>
-        <P>{intl.formatMessage({ id: "resort-p2" })}</P>
-      </CenteredContainer>
-
       <FullWidthContainer>
         <Img fluid={data.apartmentKitchen.childImageSharp.fluid}/>
       </FullWidthContainer>
 
-      <CenteredContainer>
-        <P>{intl.formatMessage({ id: "resort-p3" })}</P>
-      </CenteredContainer>
 
       <FullWidthContainer>
         <Img fluid={data.apartmentBedroom.childImageSharp.fluid}/>
       </FullWidthContainer>
 
-      <CenteredContainer>
-        <P>{intl.formatMessage({ id: "resort-p3" })}</P>
-      </CenteredContainer>
 
       <FullWidthContainer>
         <Img fluid={data.apartmentBathroom.childImageSharp.fluid}/>
       </FullWidthContainer>
 
       <CenteredContainer>
-        <Img fluid={data.floorplanA.childImageSharp.fluid}/>
+        {/* <AlmaHeader white title={intl.formatMessage({ id: "floorplans-title" })}></AlmaHeader> */}
+        <AlmaHeader white title="Floorplans"></AlmaHeader>
       </CenteredContainer>
 
-      <CenteredContainer>
-        <Img fluid={data.floorplanB.childImageSharp.fluid}/>
-      </CenteredContainer>
+      <FullWidthContainer>
+        <FlexContainer>
+          <FlexBox>
+            <FloorplanHeading>
+              {intl.formatMessage({ id: "floorplan-a" })}
+            </FloorplanHeading>
+            <FloorplanParagraph>
+              {intl.formatMessage({ id: "floorplan-a-size" })}
+            </FloorplanParagraph>
+            <FloorplanParagraph>{intl.formatMessage({ id: "floorplan-a-bedrooms" })}</FloorplanParagraph>
+            <FloorplanParagraph>{intl.formatMessage({ id: "floorplan-a-capacity" })}</FloorplanParagraph>
+          </FlexBox>
+          <FlexBox>
+            <Floorplan fluid={data.floorplanA.childImageSharp.fluid}/>
+          </FlexBox>
+        </FlexContainer>
+      </FullWidthContainer>
+
+      <FullWidthContainer>
+        <FlexContainer>
+          <FlexBox>
+            <FloorplanHeading>{intl.formatMessage({ id: "floorplan-b" })}</FloorplanHeading>
+            <FloorplanParagraph>{intl.formatMessage({ id: "floorplan-b-size" })}</FloorplanParagraph>
+            <FloorplanParagraph>{intl.formatMessage({ id: "floorplan-b-bedrooms" })}</FloorplanParagraph>
+            <FloorplanParagraph>{intl.formatMessage({ id: "floorplan-b-capacity" })}</FloorplanParagraph>
+          </FlexBox>
+          <FlexBox>
+            <Floorplan fluid={data.floorplanB.childImageSharp.fluid}/>
+          </FlexBox>
+        </FlexContainer>
+      </FullWidthContainer>
+
+      <FullWidthContainer>
+        <FlexContainer>
+          <FlexBox>
+            <FloorplanHeading>{intl.formatMessage({ id: "floorplan-c" })}</FloorplanHeading>
+            <FloorplanParagraph>{intl.formatMessage({ id: "floorplan-c-size" })}</FloorplanParagraph>
+            <FloorplanParagraph>{intl.formatMessage({ id: "floorplan-c-bedrooms" })}</FloorplanParagraph>
+            <FloorplanParagraph>{intl.formatMessage({ id: "floorplan-c-capacity" })}</FloorplanParagraph>
+          </FlexBox>
+          <FlexBox>
+            <Floorplan fluid={data.floorplanC.childImageSharp.fluid}/>
+          </FlexBox>
+        </FlexContainer>
+      </FullWidthContainer>
 
       <CenteredContainer>
-        <Img fluid={data.floorplanC.childImageSharp.fluid}/>
+        <FloorplanHeading>{intl.formatMessage({ id: "floorplan-h" })}</FloorplanHeading>
+        <FloorplanParagraph>{intl.formatMessage({ id: "floorplan-h-placeholder" })}</FloorplanParagraph>
       </CenteredContainer>
 
       <CenteredContainer> 
