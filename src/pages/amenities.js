@@ -12,6 +12,7 @@ import CenteredContainer from '../components/layout/CenteredContainer'
 import AlmaHeader from '../components/Header'
 import Button from '../components/visual/Button'
 import P from '../components/visual/Paragraph'
+import FullImage from '../components/visual/FullImage'
 
 const ButtonContainer = styled.div`
   margin: 0 0 2rem 0;
@@ -87,19 +88,19 @@ const Amenities = ({ data, intl }) => {
       </CenteredContainer>
 
       <FullWidthContainer>
-        <Img fluid={data.receptionLobby.childImageSharp.fluid}/>
+        <FullImage fluid={data.receptionLobby.childImageSharp.fluid}/>
       </FullWidthContainer>
 
       <FullWidthContainer>
-        <Img fluid={data.lobbyLounge.childImageSharp.fluid}/>
+        <FullImage fluid={data.lobbyLounge.childImageSharp.fluid}/>
       </FullWidthContainer>
 
       <FullWidthContainer>
-        <Img fluid={data.conventionCenter.childImageSharp.fluid}/>
+        <FullImage fluid={data.conventionCenter.childImageSharp.fluid}/>
       </FullWidthContainer>
 
       <FullWidthContainer>
-        <Img fluid={data.ballroom.childImageSharp.fluid}/>
+        <FullImage fluid={data.ballroom.childImageSharp.fluid}/>
       </FullWidthContainer>
 
       <CenteredContainer> 

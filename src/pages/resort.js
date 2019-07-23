@@ -12,6 +12,7 @@ import CenteredContainer from '../components/layout/CenteredContainer'
 import AlmaHeader from '../components/Header'
 import Button from '../components/visual/Button'
 import P from '../components/visual/Paragraph'
+import FullImage from '../components/visual/FullImage'
 
 const ButtonContainer = styled.div`
   margin: 0 0 2rem 0;
@@ -31,7 +32,7 @@ const Resort = ({ data, intl }) => {
             title={intl.formatMessage({ id: "resort-title" })}
           />
         </HeadingContainer>
-        <FullContentImage fluid={data.almaResort1.childImageSharp.fluid}/>
+        <FullContentImage fluid={data.almaResort2.childImageSharp.fluid}/>
       </FullContentCard>
 
       <CenteredContainer>
@@ -40,7 +41,7 @@ const Resort = ({ data, intl }) => {
       </CenteredContainer>
 
       <FullWidthContainer>
-        <Img fluid={data.almaResort2.childImageSharp.fluid}/>
+        <FullImage fluid={data.almaResort1.childImageSharp.fluid}/>
       </FullWidthContainer>
 
       <CenteredContainer>
@@ -48,7 +49,7 @@ const Resort = ({ data, intl }) => {
       </CenteredContainer>
 
       <FullWidthContainer>
-        <Img fluid={data.almaResort3.childImageSharp.fluid}/>
+        <FullImage fluid={data.almaResort3.childImageSharp.fluid}/>
       </FullWidthContainer>
 
       <CenteredContainer>
@@ -56,11 +57,11 @@ const Resort = ({ data, intl }) => {
       </CenteredContainer>
 
       <FullWidthContainer>
-        <Img fluid={data.almaResort4.childImageSharp.fluid}/>
+        <FullImage fluid={data.almaResort4.childImageSharp.fluid}/>
       </FullWidthContainer>
 
       <FullWidthContainer>
-        <Img fluid={data.almaResort5.childImageSharp.fluid}/>
+        <FullImage fluid={data.almaResort5.childImageSharp.fluid}/>
       </FullWidthContainer>
 
       <CenteredContainer> 

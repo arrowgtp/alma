@@ -14,6 +14,7 @@ import FlexBox from '../components/layout/FlexBox'
 import AlmaHeader from '../components/Header'
 import Button from '../components/visual/Button'
 import P from '../components/visual/Paragraph'
+import FullImage from '../components/visual/FullImage'
 
 const ButtonContainer = styled.div`
   margin: 0 0 2rem 0;
@@ -63,19 +64,10 @@ const Villas = ({ data, intl }) => {
       </CenteredContainer>
 
       <FullWidthContainer>
-        <Img fluid={data.villaExterior1.childImageSharp.fluid}/>
-      </FullWidthContainer>
-
-      <FullWidthContainer>
-        <Img fluid={data.villaLivingRoom2.childImageSharp.fluid}/>
-      </FullWidthContainer>
-
-      <FullWidthContainer>
-        <Img fluid={data.villaBedroom1.childImageSharp.fluid}/>
-      </FullWidthContainer>
-
-      <FullWidthContainer>
-        <Img fluid={data.villaBathroom1.childImageSharp.fluid}/>
+        <FullImage fluid={data.villaExterior1.childImageSharp.fluid}/>
+        <FullImage fluid={data.villaLivingRoom2.childImageSharp.fluid}/>
+        <FullImage fluid={data.villaBedroom1.childImageSharp.fluid}/>
+        <FullImage fluid={data.villaBathroom1.childImageSharp.fluid}/>
       </FullWidthContainer>
 
       <CenteredContainer>

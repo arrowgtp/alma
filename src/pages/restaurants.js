@@ -12,6 +12,7 @@ import CenteredContainer from '../components/layout/CenteredContainer'
 import AlmaHeader from '../components/Header'
 import Button from '../components/visual/Button'
 import P from '../components/visual/Paragraph'
+import FullImage from '../components/visual/FullImage'
 
 const ButtonContainer = styled.div`
   margin: 0 0 2rem 0;
@@ -80,41 +81,37 @@ const Restaurants = ({ data, intl }) => {
       </CenteredContainer>
 
       <FullWidthContainer>
-        <Img fluid={data.allDayDiner1.childImageSharp.fluid}/>
-      </FullWidthContainer>
-      <FullWidthContainer>
-        <Img fluid={data.allDayDiner2.childImageSharp.fluid}/>
+        <FullImage fluid={data.allDayDiner1.childImageSharp.fluid}/>
+        <FullImage fluid={data.allDayDiner2.childImageSharp.fluid}/>
       </FullWidthContainer>
 
       <FullWidthContainer>
-        <Img fluid={data.beachBar1.childImageSharp.fluid}/>
-      </FullWidthContainer>
-      <FullWidthContainer>
-        <Img fluid={data.beachBar2.childImageSharp.fluid}/>
+        <FullImage fluid={data.beachBar1.childImageSharp.fluid}/>
+        <FullImage fluid={data.beachBar2.childImageSharp.fluid}/>
       </FullWidthContainer>
 
       <FullWidthContainer>
-        <Img fluid={data.asianRestaurant.childImageSharp.fluid}/>
+        <FullImage fluid={data.asianRestaurant.childImageSharp.fluid}/>
       </FullWidthContainer>
 
       <FullWidthContainer>
-        <Img fluid={data.italianRestaurant.childImageSharp.fluid}/>
+        <FullImage fluid={data.italianRestaurant.childImageSharp.fluid}/>
       </FullWidthContainer>
 
       <FullWidthContainer>
-        <Img fluid={data.foodCourt1.childImageSharp.fluid}/>
+        <FullImage fluid={data.foodCourt1.childImageSharp.fluid}/>
       </FullWidthContainer>
 
       <FullWidthContainer>
-        <Img fluid={data.foodCourt2.childImageSharp.fluid}/>
+        <FullImage fluid={data.foodCourt2.childImageSharp.fluid}/>
       </FullWidthContainer>
 
       <FullWidthContainer>
-        <Img fluid={data.pub1.childImageSharp.fluid}/>
+        <FullImage fluid={data.pub1.childImageSharp.fluid}/>
       </FullWidthContainer>
       
-      <FullWidthContainer>
-        <Img fluid={data.pub2.childImageSharp.fluid}/>
+      <FullWidthContainer>  
+        <FullImage fluid={data.pub2.childImageSharp.fluid}/>
       </FullWidthContainer>
 
       <CenteredContainer> 

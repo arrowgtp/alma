@@ -12,7 +12,8 @@ import CenteredContainer from '../components/layout/CenteredContainer'
 import AlmaHeader from '../components/Header'
 import Button from '../components/visual/Button'
 import P from '../components/visual/Paragraph'
-import FullWidthContainer from '../components/layout/FullWidthContainer';
+import FullWidthContainer from '../components/layout/FullWidthContainer'
+import FullImage from '../components/visual/FullImage'
 
 const ButtonContainer = styled.div`
   margin: 0 0 2rem 0;
@@ -42,20 +43,20 @@ const Construction = ({ data, intl }) => {
         <P>{intl.formatMessage({ id: "construction-paragraph-4" })}</P>
       </CenteredContainer>
       <FullWidthContainer>
-        <Img fluid={data.july1.childImageSharp.fluid}/>
-        <Img fluid={data.july2.childImageSharp.fluid}/>
-        <Img fluid={data.july3.childImageSharp.fluid}/>
-        <Img fluid={data.july4.childImageSharp.fluid}/>
-        <Img fluid={data.july5.childImageSharp.fluid}/>
-        <Img fluid={data.july6.childImageSharp.fluid}/>
-        <Img fluid={data.july7.childImageSharp.fluid}/>
-        <Img fluid={data.july8.childImageSharp.fluid}/>
-        <Img fluid={data.july9.childImageSharp.fluid}/>
-        <Img fluid={data.july10.childImageSharp.fluid}/>
-        <Img fluid={data.july11.childImageSharp.fluid}/>
-        <Img fluid={data.july12.childImageSharp.fluid}/>
-        <Img fluid={data.july13.childImageSharp.fluid}/>
-        <Img fluid={data.july14.childImageSharp.fluid}/>
+        {/* <FullImage fluid={data.july1.childImageSharp.fluid}/> */}
+        <FullImage fluid={data.july2.childImageSharp.fluid}/>
+        <FullImage fluid={data.july3.childImageSharp.fluid}/>
+        <FullImage fluid={data.july4.childImageSharp.fluid}/>
+        <FullImage fluid={data.july5.childImageSharp.fluid}/>
+        <FullImage fluid={data.july6.childImageSharp.fluid}/>
+        <FullImage fluid={data.july7.childImageSharp.fluid}/>
+        <FullImage fluid={data.july8.childImageSharp.fluid}/>
+        <FullImage fluid={data.july9.childImageSharp.fluid}/>
+        <FullImage fluid={data.july10.childImageSharp.fluid}/>
+        <FullImage fluid={data.july11.childImageSharp.fluid}/>
+        <FullImage fluid={data.july12.childImageSharp.fluid}/>
+        <FullImage fluid={data.july13.childImageSharp.fluid}/>
+        <FullImage fluid={data.july14.childImageSharp.fluid}/>
       </FullWidthContainer>
         
       <CenteredContainer> 

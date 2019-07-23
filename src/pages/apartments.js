@@ -14,6 +14,7 @@ import FlexBox from '../components/layout/FlexBox'
 import AlmaHeader from '../components/Header'
 import Button from '../components/visual/Button'
 import P from '../components/visual/Paragraph'
+import FullImage from '../components/visual/FullImage'
 
 const ButtonContainer = styled.div`
   margin: 0 0 2rem 0;
@@ -63,26 +64,14 @@ const Apartments = ({ data, intl }) => {
       </CenteredContainer>
 
       <FullWidthContainer>
-        <Img fluid={data.apartmentLivingRoom2.childImageSharp.fluid}/>
-      </FullWidthContainer>
-
-      <FullWidthContainer>
-        <Img fluid={data.apartmentKitchen.childImageSharp.fluid}/>
-      </FullWidthContainer>
-
-
-      <FullWidthContainer>
-        <Img fluid={data.apartmentBedroom.childImageSharp.fluid}/>
-      </FullWidthContainer>
-
-
-      <FullWidthContainer>
-        <Img fluid={data.apartmentBathroom.childImageSharp.fluid}/>
+        <FullImage fluid={data.apartmentLivingRoom2.childImageSharp.fluid}/>
+        <FullImage fluid={data.apartmentKitchen.childImageSharp.fluid}/>
+        <FullImage fluid={data.apartmentBedroom.childImageSharp.fluid}/>
+        <FullImage fluid={data.apartmentBathroom.childImageSharp.fluid}/>
       </FullWidthContainer>
 
       <CenteredContainer>
-        {/* <AlmaHeader white title={intl.formatMessage({ id: "floorplans-title" })}></AlmaHeader> */}
-        <AlmaHeader white title="Floorplans"></AlmaHeader>
+        <AlmaHeader white title={intl.formatMessage({ id: "floorplans-title" })}></AlmaHeader>
       </CenteredContainer>
 
       <FullWidthContainer>
