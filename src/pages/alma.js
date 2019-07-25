@@ -65,7 +65,7 @@ const Alma = ({ intl, data }) => {
         <Space/>
         <P>{intl.formatMessage({ id: "founder-paragraph-1" })}</P>
         <Space/>
-        <P>{intl.formatMessage({ id: "founder-paragraph-1" })}</P>
+        <P>{intl.formatMessage({ id: "founder-paragraph-2" })}</P>
         <Space/>
 
       </CenteredContainer>
