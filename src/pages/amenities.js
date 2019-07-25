@@ -74,7 +74,7 @@ const Amenities = ({ data, intl }) => {
 
       <CenteredContainer>
         <Space/>
-        <P>{intl.formatMessage({ id: "amenities-paragraph-1" })}</P>
+        <P>{intl.formatMessage({ id: "amenities-paragraph-2" })}</P>
         <Space/>
       </CenteredContainer>
 
@@ -84,7 +84,7 @@ const Amenities = ({ data, intl }) => {
 
       <CenteredContainer>
         <Space/>
-        <P>{intl.formatMessage({ id: "amenities-paragraph-1" })}</P>
+        <P>{intl.formatMessage({ id: "amenities-paragraph-3" })}</P>
         <Space/>
       </CenteredContainer>
 
@@ -94,7 +94,7 @@ const Amenities = ({ data, intl }) => {
 
       <CenteredContainer>
         <Space/>
-        <P>{intl.formatMessage({ id: "amenities-paragraph-1" })}</P>
+        <P>{intl.formatMessage({ id: "amenities-paragraph-4" })}</P>
         <Space/>
       </CenteredContainer>
 
