@@ -29,15 +29,11 @@ const Vacations = ({ intl, data }) => {
       </FullContentCard>
 
       <CenteredContainer>
-
+        <Space/>
         <AlmaHeader title={intl.formatMessage({ id: "vacations-title" })}/>
-
         <Space/>
-        
         <P>{intl.formatMessage({ id: "vacations-intro-paragraph" })}</P>
-
         <Space/>
-
         <H1>{intl.formatMessage({ id: "rci-heading-1" })}</H1>
         <Space/>
         <P>{intl.formatMessage({ id: "rci-paragraph-1" })}</P>
@@ -56,7 +52,6 @@ const Vacations = ({ intl, data }) => {
           <LI>{intl.formatMessage({ id: "rci-point-4" })}</LI>
           <LI>{intl.formatMessage({ id: "rci-point-5" })}</LI>
         </UL>
-
         <H1>{intl.formatMessage({ id: "rci-heading-5" })}</H1>
         <Space/>
         <H2>{intl.formatMessage({ id: "rci-heading-5-1" })}</H2>
@@ -70,13 +65,9 @@ const Vacations = ({ intl, data }) => {
         <H2>{intl.formatMessage({ id: "rci-heading-5-3" })}</H2>
         <Space/>
         <P>{intl.formatMessage({ id: "rci-paragraph-5-3" })}</P>
-        
         <Space/>
-
         <AlmaHeader white title={intl.formatMessage({ id: "rci-destinations-title" })}/>
-
         <Space/>
-
         <H1>{intl.formatMessage({ id: "rci-destination-1" })}</H1>
         <Space/>
         <P>{intl.formatMessage({ id: "rci-destination-1-paragraph" })}</P>
@@ -101,7 +92,6 @@ const Vacations = ({ intl, data }) => {
         <Space/>
         <P>{intl.formatMessage({ id: "rci-destination-6-paragraph" })}</P>
         <Space/>
-
       </CenteredContainer>
 
       <Footer>

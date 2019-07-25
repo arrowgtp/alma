@@ -27,7 +27,7 @@ const Alma = ({ intl, data }) => {
       </FullContentCard>
 
       <CenteredContainer>
-
+        <Space/>
         <AlmaHeader title={intl.formatMessage({ id: "alma-title" })}/>
         <Space/>
         <P>{intl.formatMessage({ id: "alma-subtitle" })}</P>
