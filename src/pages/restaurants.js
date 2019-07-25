@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import { Link, injectIntl } from 'gatsby-plugin-intl'
 import styled from 'styled-components'
-import Img from 'gatsby-image'
+// import Img from 'gatsby-image'
 import SEO from "../components/seo"
 
 import { FullContentCard, FullContentImage, HeadingContainer } from '../components/layout/FullContentCard'
@@ -11,37 +11,17 @@ import FullWidthContainer from '../components/layout/FullWidthContainer'
 import CenteredContainer from '../components/layout/CenteredContainer'
 import AlmaHeader from '../components/Header'
 import Button from '../components/visual/Button'
-import P from '../components/visual/Paragraph'
+import { Space, H1, H2, P, UL, ListTitle, LI } from '../components/visual/Typography'
+// import P from '../components/visual/Paragraph'
 import FullImage from '../components/visual/FullImage'
 
+import Footer from '../components/Footer'
+
 const ButtonContainer = styled.div`
-  margin: 0 0 2rem 0;
+  margin: 0;
+  padding: 0;
   display: flex;
   justify-content: center;
-`
-
-const UL = styled.ul`
-  font-family: 'Work Sans', sans-serif;
-  margin: 2rem;
-  padding: 0;
-  color: #006897;
-  list-style-type: circle;
-`
-
-const ListTitle = styled.h1`
-  font-family: 'Quicksand', sans-serif;
-  text-transform: uppercase;
-  font-size: 40px;
-  color: #006897;
-  text-align: center;
-`
-
-const LI = styled.li`
-  font-family: 'Work Sans', sans-serif;
-  color: #006897;
-  list-style-type: circle;
-  font-size: 16px;
-  padding: 0.25rem;
 `
 
 const Restaurants = ({ data, intl }) => {
@@ -56,12 +36,69 @@ const Restaurants = ({ data, intl }) => {
             title={intl.formatMessage({ id: "restaurants-title" })}
           />
         </HeadingContainer>
-        <FullContentImage fluid={data.beachBar2.childImageSharp.fluid}/>
+        <FullContentImage fluid={data.realRestaurant1.childImageSharp.fluid}/>
       </FullContentCard>
 
-      {/* <CenteredContainer>
+      <CenteredContainer>
+        <Space/>
         <P>{intl.formatMessage({ id: "restaurants-paragraph-1" })}</P>
-      </CenteredContainer> */}
+        <Space/>
+      </CenteredContainer>
+
+      <FullWidthContainer>
+        <FullImage fluid={data.allDayDiner2.childImageSharp.fluid}/>
+        {/* <FullImage fluid={data.allDayDiner2.childImageSharp.fluid}/> */}
+      </FullWidthContainer>
+
+      <CenteredContainer>
+        <Space/>
+        <P>{intl.formatMessage({ id: "restaurants-paragraph-2" })}</P>
+        <Space/>
+      </CenteredContainer>
+
+      <FullWidthContainer>
+        <FullImage fluid={data.beachBar2.childImageSharp.fluid}/>
+      </FullWidthContainer>
+
+      <CenteredContainer>
+        <Space/>
+        <P>{intl.formatMessage({ id: "restaurants-paragraph-3" })}</P>
+        <Space/>
+      </CenteredContainer>
+
+      <FullWidthContainer>
+        <FullImage fluid={data.asianRestaurant.childImageSharp.fluid}/>
+      </FullWidthContainer>
+
+      <CenteredContainer>
+        <Space/>
+        <P>{intl.formatMessage({ id: "restaurants-paragraph-4" })}</P>
+        <Space/>
+      </CenteredContainer>
+
+      <FullWidthContainer>
+        <FullImage fluid={data.italianRestaurant.childImageSharp.fluid}/>
+      </FullWidthContainer>
+
+      <CenteredContainer>
+        <Space/>
+        <P>{intl.formatMessage({ id: "restaurants-paragraph-5" })}</P>
+        <Space/>
+      </CenteredContainer>
+
+      <FullWidthContainer>
+        <FullImage fluid={data.foodCourt1.childImageSharp.fluid}/>
+      </FullWidthContainer>
+
+      <CenteredContainer>
+        <Space/>
+        <P>{intl.formatMessage({ id: "restaurants-paragraph-6" })}</P>
+        <Space/>
+      </CenteredContainer>
+
+      <FullWidthContainer>
+        <FullImage fluid={data.pub1.childImageSharp.fluid}/>
+      </FullWidthContainer>
 
       <CenteredContainer>
         <UL>
@@ -80,48 +117,24 @@ const Restaurants = ({ data, intl }) => {
         </UL>
       </CenteredContainer>
 
-      <FullWidthContainer>
-        <FullImage fluid={data.allDayDiner1.childImageSharp.fluid}/>
-        <FullImage fluid={data.allDayDiner2.childImageSharp.fluid}/>
-      </FullWidthContainer>
 
-      <FullWidthContainer>
-        <FullImage fluid={data.beachBar1.childImageSharp.fluid}/>
-        <FullImage fluid={data.beachBar2.childImageSharp.fluid}/>
-      </FullWidthContainer>
-
-      <FullWidthContainer>
-        <FullImage fluid={data.asianRestaurant.childImageSharp.fluid}/>
-      </FullWidthContainer>
-
-      <FullWidthContainer>
-        <FullImage fluid={data.italianRestaurant.childImageSharp.fluid}/>
-      </FullWidthContainer>
-
-      <FullWidthContainer>
-        <FullImage fluid={data.foodCourt1.childImageSharp.fluid}/>
-      </FullWidthContainer>
-
-      <FullWidthContainer>
-        <FullImage fluid={data.foodCourt2.childImageSharp.fluid}/>
-      </FullWidthContainer>
-
-      <FullWidthContainer>
-        <FullImage fluid={data.pub1.childImageSharp.fluid}/>
-      </FullWidthContainer>
-      
-      <FullWidthContainer>  
-        <FullImage fluid={data.pub2.childImageSharp.fluid}/>
-      </FullWidthContainer>
-
-      <CenteredContainer> 
-        <P>Learn more about our lovely amenities.</P>
+      <CenteredContainer>
+        <Space/> 
+        <P>Click here to learn more about our incredible and diverse selection lovely amenities, facilities, and activities.</P>
+        <Space/>
         <ButtonContainer>
           <Link to="/amenities">
             <Button>Learn More</Button>
           </Link> 
-        </ButtonContainer> 
+        </ButtonContainer>
+        <Space/>
+        <Space/>
       </CenteredContainer>
+
+      <Footer>
+        <p>{intl.formatMessage({ id: "copyright-notice" })}</p>
+        <p>{intl.formatMessage({ id: "solicitation-notice" })}</p>
+      </Footer>
 
     </ViewContainer>
   )
@@ -195,6 +208,13 @@ export const query = graphql`
     pub2: file(relativePath: { eq: "restaurants/pub-2-16x10.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1794) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    realRestaurant1: file(relativePath: { eq: "restaurants/real-restaurant-1-16x10.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2045) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }

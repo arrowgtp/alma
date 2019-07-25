@@ -75,7 +75,7 @@ const LargeMenuContainer = styled.div`
     height: 100vh;
     width: 20vw;
     display: grid;
-    grid-template-rows: 15vh 70vh 15vh;
+    grid-template-rows: 20vh 65vh 15vh;
     grid-template-columns: 1fr;
     z-index: 100;
     background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMCIgaGVpZ2h0PSIzMCI+CjxyZWN0IHdpZHRoPSIzMCIgaGVpZ2h0PSIzMCIgZmlsbD0iI2ZmZmZmZiI+PC9yZWN0Pgo8cmVjdCB4PSIxNSIgd2lkdGg9IjMwIiBoZWlnaHQ9IjMwIiBmaWxsPSIjZmRmZGZkIj48L3JlY3Q+Cjwvc3ZnPg==");

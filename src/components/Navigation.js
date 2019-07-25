@@ -99,7 +99,7 @@ const LargeNav = styled.div`
     grid-row: 2 / 3;
     grid-column: 1 / 2;
     display: grid;
-    grid-template-rows: 5vh 5vh 60vh;
+    grid-template-rows: 5vh 5vh 55vh;
     grid-template-columns: 1fr 2fr 2fr;
     grid-column-gap: 0.5rem;
     align-self: center;
@@ -310,7 +310,7 @@ const Navigation = () => {
               <AlmaBulletShell src={almaShell}/>
               <AlmaLink to={`/vacations`} onClick={toggle}>Vacations</AlmaLink>
               <AlmaBulletShell src={almaShell}/>
-              <AlmaLink to={`/alma`} onClick={toggle}>Our Story</AlmaLink>
+              <AlmaLink to={`/alma`} onClick={toggle}>About Alma</AlmaLink>
               {/* <AlmaBulletShell src={almaShell}/>
               <AlmaLink to={`/promotions`} onClick={toggle}>Promotions</AlmaLink> */}
               <SocialButtons>
@@ -360,7 +360,7 @@ const Navigation = () => {
           <AlmaBulletShell src={almaShell}/>
           <AlmaLink to={`/vacations`}>Vacations</AlmaLink>
           <AlmaBulletShell src={almaShell}/>
-          <AlmaLink to={`/alma`}>Our Story</AlmaLink>
+          <AlmaLink to={`/alma`}>About Alma</AlmaLink>
           {/* <AlmaBulletShell src={almaShell}/> */}
           {/* <AlmaLink to={`/promotions`}>Promotions</AlmaLink> */}
         </LargeLinkTree> 

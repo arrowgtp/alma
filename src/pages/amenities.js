@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import { Link, injectIntl } from 'gatsby-plugin-intl'
 import styled from 'styled-components'
-import Img from 'gatsby-image'
+// import Img from 'gatsby-image'
 import SEO from "../components/seo"
 
 import { FullContentCard, FullContentImage, HeadingContainer } from '../components/layout/FullContentCard'
@@ -11,8 +11,11 @@ import FullWidthContainer from '../components/layout/FullWidthContainer'
 import CenteredContainer from '../components/layout/CenteredContainer'
 import AlmaHeader from '../components/Header'
 import Button from '../components/visual/Button'
-import P from '../components/visual/Paragraph'
+import { Space, H1, H2, P, UL, ListTitle, LI } from '../components/visual/Typography'
+// import P from '../components/visual/Paragraph'
 import FullImage from '../components/visual/FullImage'
+
+import Footer from '../components/Footer'
 
 const ButtonContainer = styled.div`
   margin: 0 0 2rem 0;
@@ -20,29 +23,29 @@ const ButtonContainer = styled.div`
   justify-content: center;
 `
 
-const UL = styled.ul`
-  font-family: 'Work Sans', sans-serif;
-  margin: 2rem;
-  padding: 0;
-  color: #006897;
-  list-style-type: circle;
-`
+// const UL = styled.ul`
+//   font-family: 'Work Sans', sans-serif;
+//   margin: 2rem;
+//   padding: 0;
+//   color: #006897;
+//   list-style-type: circle;
+// `
 
-const ListTitle = styled.h1`
-  font-family: 'Quicksand', sans-serif;
-  text-transform: uppercase;
-  font-size: 40px;
-  color: #006897;
-  text-align: center;
-`
+// const ListTitle = styled.h1`
+//   font-family: 'Quicksand', sans-serif;
+//   text-transform: uppercase;
+//   font-size: 40px;
+//   color: #006897;
+//   text-align: center;
+// `
 
-const LI = styled.li`
-  font-family: 'Work Sans', sans-serif;
-  color: #006897;
-  list-style-type: circle;
-  font-size: 16px;
-  padding: 0.25rem;
-`
+// const LI = styled.li`
+//   font-family: 'Work Sans', sans-serif;
+//   color: #006897;
+//   list-style-type: circle;
+//   font-size: 16px;
+//   padding: 0.25rem;
+// `
 
 const Amenities = ({ data, intl }) => {
   return (
@@ -60,8 +63,44 @@ const Amenities = ({ data, intl }) => {
       </FullContentCard>
 
       <CenteredContainer>
+        <Space/>
         <P>{intl.formatMessage({ id: "amenities-paragraph-1" })}</P>
+        <Space/>
       </CenteredContainer>
+
+      <FullWidthContainer>
+        <FullImage fluid={data.receptionLobby.childImageSharp.fluid}/>
+      </FullWidthContainer>
+
+      <CenteredContainer>
+        <Space/>
+        <P>{intl.formatMessage({ id: "amenities-paragraph-1" })}</P>
+        <Space/>
+      </CenteredContainer>
+
+      <FullWidthContainer>
+        <FullImage fluid={data.lobbyLounge.childImageSharp.fluid}/>
+      </FullWidthContainer>
+
+      <CenteredContainer>
+        <Space/>
+        <P>{intl.formatMessage({ id: "amenities-paragraph-1" })}</P>
+        <Space/>
+      </CenteredContainer>
+
+      <FullWidthContainer>
+        <FullImage fluid={data.conventionCenter.childImageSharp.fluid}/>
+      </FullWidthContainer>
+
+      <CenteredContainer>
+        <Space/>
+        <P>{intl.formatMessage({ id: "amenities-paragraph-1" })}</P>
+        <Space/>
+      </CenteredContainer>
+
+      <FullWidthContainer>
+        <FullImage fluid={data.ballroom.childImageSharp.fluid}/>
+      </FullWidthContainer>
 
       <CenteredContainer>
         <UL>
@@ -87,30 +126,23 @@ const Amenities = ({ data, intl }) => {
         </UL>
       </CenteredContainer>
 
-      <FullWidthContainer>
-        <FullImage fluid={data.receptionLobby.childImageSharp.fluid}/>
-      </FullWidthContainer>
-
-      <FullWidthContainer>
-        <FullImage fluid={data.lobbyLounge.childImageSharp.fluid}/>
-      </FullWidthContainer>
-
-      <FullWidthContainer>
-        <FullImage fluid={data.conventionCenter.childImageSharp.fluid}/>
-      </FullWidthContainer>
-
-      <FullWidthContainer>
-        <FullImage fluid={data.ballroom.childImageSharp.fluid}/>
-      </FullWidthContainer>
-
-      <CenteredContainer> 
-        <P>Now see our latest contruction updates to view our progress.</P>
+      <CenteredContainer>
+        <Space/>
+        <P>Click here to get the latest info on our progress and see photos of our latest contruction updates.</P>
+        <Space/>
         <ButtonContainer>
           <Link to="/construction">
             <Button>Learn More</Button>
           </Link> 
-        </ButtonContainer> 
+        </ButtonContainer>
+        <Space/>
+        <Space/>
       </CenteredContainer>
+
+      <Footer>
+        <p>{intl.formatMessage({ id: "copyright-notice" })}</p>
+        <p>{intl.formatMessage({ id: "solicitation-notice" })}</p>
+      </Footer>
 
     </ViewContainer>
   )

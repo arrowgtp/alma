@@ -185,7 +185,7 @@ const Contact = () => {
 
         {!isToggled ?
           (
-            <JoinButton onClick={toggle}>Join</JoinButton>
+            <JoinButton onClick={toggle}>Promo</JoinButton>
           ) : (
             <JoinButton onClick={toggle}>Close</JoinButton>
           )
@@ -196,7 +196,7 @@ const Contact = () => {
           &&
           <Form key={key} style={fade} name="contact" method="POST" data-netlify="true">
             <FormP>
-              If you're interested, then shoot us some info, and we'll shoot you right back :-)
+            Don’t miss out on a chance to win your next exotic getaway! Enter now!
             </FormP>
             <Label>Name: <Input type="text" name="name"/></Label>   
             <Label>Email: <Input type="email" name="email" /></Label>

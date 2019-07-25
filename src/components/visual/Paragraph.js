@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 
 export default styled.p`
-  margin: 1rem 0;
-  padding: 1rem 0;
+  margin: 0;
+  padding: 0;
   font-family: 'Work Sans', 'DM Serif Display', 'Lato';
   font-size: calc(16px + (24 - 16) * ((100vw - 300px) / (1600 - 300)));
   line-height: calc(24px + (32 - 24) * ((100vw - 300px) / (1600 - 300)));

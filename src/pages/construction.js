@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import { Link, injectIntl } from 'gatsby-plugin-intl'
 import styled from 'styled-components'
-import Img from 'gatsby-image'
+// import Img from 'gatsby-image'
 import SEO from "../components/seo"
 
 import { FullContentCard, FullContentImage, HeadingContainer } from '../components/layout/FullContentCard'
@@ -11,12 +11,15 @@ import ViewContainer from '../components/layout/ViewContainer'
 import CenteredContainer from '../components/layout/CenteredContainer'
 import AlmaHeader from '../components/Header'
 import Button from '../components/visual/Button'
-import P from '../components/visual/Paragraph'
+import { Space, H1, H2, P, UL, LI } from '../components/visual/Typography'
+// import P from '../components/visual/Paragraph'
 import FullWidthContainer from '../components/layout/FullWidthContainer'
 import FullImage from '../components/visual/FullImage'
 
+import Footer from '../components/Footer'
+
 const ButtonContainer = styled.div`
-  margin: 0 0 2rem 0;
+  margin: 0;
   display: flex;
   justify-content: center;
 `
@@ -37,36 +40,66 @@ const Construction = ({ data, intl }) => {
       </FullContentCard>
 
       <CenteredContainer>
+        <Space/>
+        <AlmaHeader
+          title={intl.formatMessage({ id: "construction-month" })}
+        />
+        <Space/>
         <P>{intl.formatMessage({ id: "construction-paragraph-1" })}</P>
+        <Space/>
         <P>{intl.formatMessage({ id: "construction-paragraph-2" })}</P>
+        <Space/>
         <P>{intl.formatMessage({ id: "construction-paragraph-3" })}</P>
+        <Space/>
         <P>{intl.formatMessage({ id: "construction-paragraph-4" })}</P>
+        <Space/>
       </CenteredContainer>
       <FullWidthContainer>
         {/* <FullImage fluid={data.july1.childImageSharp.fluid}/> */}
         <FullImage fluid={data.july2.childImageSharp.fluid}/>
+        <Space/>
         <FullImage fluid={data.july3.childImageSharp.fluid}/>
+        <Space/>
         <FullImage fluid={data.july4.childImageSharp.fluid}/>
+        <Space/>
         <FullImage fluid={data.july5.childImageSharp.fluid}/>
+        <Space/>
         <FullImage fluid={data.july6.childImageSharp.fluid}/>
+        <Space/>
         <FullImage fluid={data.july7.childImageSharp.fluid}/>
+        <Space/>
         <FullImage fluid={data.july8.childImageSharp.fluid}/>
+        <Space/>
         <FullImage fluid={data.july9.childImageSharp.fluid}/>
+        <Space/>
         <FullImage fluid={data.july10.childImageSharp.fluid}/>
+        <Space/>
         <FullImage fluid={data.july11.childImageSharp.fluid}/>
+        <Space/>
         <FullImage fluid={data.july12.childImageSharp.fluid}/>
+        <Space/>
         <FullImage fluid={data.july13.childImageSharp.fluid}/>
+        <Space/>
         <FullImage fluid={data.july14.childImageSharp.fluid}/>
       </FullWidthContainer>
         
-      <CenteredContainer> 
+      <CenteredContainer>
+        <Space/>
         <P>Head back home now and learn more about all of the wonderful vacation opportunites that could be yours.</P>
+        <Space/>
         <ButtonContainer>
           <Link to="/">
             <Button>Home</Button>
           </Link> 
-        </ButtonContainer> 
+        </ButtonContainer>
+        <Space/>
+        <Space/>
       </CenteredContainer>
+
+      <Footer>
+        <p>{intl.formatMessage({ id: "copyright-notice" })}</p>
+        <p>{intl.formatMessage({ id: "solicitation-notice" })}</p>
+      </Footer>
 
     </ViewContainer>
   )

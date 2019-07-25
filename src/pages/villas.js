@@ -13,11 +13,15 @@ import FlexContainer from '../components/layout/FlexContainer'
 import FlexBox from '../components/layout/FlexBox'
 import AlmaHeader from '../components/Header'
 import Button from '../components/visual/Button'
-import P from '../components/visual/Paragraph'
+// import P from '../components/visual/Paragraph'
+import { Space, H1, H2, P, UL, LI } from '../components/visual/Typography'
 import FullImage from '../components/visual/FullImage'
 
+import Footer from '../components/Footer'
+
 const ButtonContainer = styled.div`
-  margin: 0 0 2rem 0;
+  margin: 0;
+  padding: 0;
   display: flex;
   justify-content: center;
 `
@@ -56,23 +60,52 @@ const Villas = ({ data, intl }) => {
             title={intl.formatMessage({ id: "villas-title" })}
           />
         </HeadingContainer>
-        <FullContentImage fluid={data.villaLivingRoom1.childImageSharp.fluid}/>
+        <FullContentImage fluid={data.realVillaExterior1.childImageSharp.fluid}/>
       </FullContentCard>
 
       <CenteredContainer>
+        <Space/>
         <P>{intl.formatMessage({ id: "villas-paragraph-1" })}</P>
+        <Space/>
       </CenteredContainer>
 
       <FullWidthContainer>
-        <FullImage fluid={data.villaExterior1.childImageSharp.fluid}/>
-        <FullImage fluid={data.villaLivingRoom2.childImageSharp.fluid}/>
-        <FullImage fluid={data.villaBedroom1.childImageSharp.fluid}/>
+        <FullImage fluid={data.villaLivingRoom1.childImageSharp.fluid}/>
+      </FullWidthContainer>
+
+      <CenteredContainer>
+        <Space/>
+        <P>{intl.formatMessage({ id: "villas-paragraph-2" })}</P>
+        <Space/>
+      </CenteredContainer>
+
+      <FullWidthContainer>
+        <FullImage fluid={data.realVillaInterior2.childImageSharp.fluid}/>
+      </FullWidthContainer>
+
+      <CenteredContainer>
+        <Space/>
+        <P>{intl.formatMessage({ id: "villas-paragraph-3" })}</P>
+        <Space/>
+      </CenteredContainer>
+
+      <FullWidthContainer>
+        <FullImage fluid={data.realVillaInterior1.childImageSharp.fluid}/>
+      </FullWidthContainer>
+
+      <CenteredContainer>
+        <Space/>
+        <P>{intl.formatMessage({ id: "villas-paragraph-4" })}</P>
+        <Space/>
+      </CenteredContainer>
+
+      <FullWidthContainer>
         <FullImage fluid={data.villaBathroom1.childImageSharp.fluid}/>
       </FullWidthContainer>
 
       <CenteredContainer>
-        {/* <AlmaHeader white title={intl.formatMessage({ id: "floorplans-title" })}></AlmaHeader> */}
-        <AlmaHeader white title="Floorplans"></AlmaHeader>
+        <Space/>
+        <AlmaHeader white title={intl.formatMessage({ id: "floorplans-title" })}></AlmaHeader>
       </CenteredContainer>
 
       <FullWidthContainer>
@@ -132,13 +165,22 @@ const Villas = ({ data, intl }) => {
       </FullWidthContainer>
 
       <CenteredContainer> 
-        <P>Learn more about the fabulous food at our world class restuarants and food court.</P>
+      <Space/>
+        <P>Click here to learn more about the fabulous food at our world class restuarants and food court.</P>
+        <Space/>
         <ButtonContainer>
           <Link to="/restaurants">
             <Button>Learn More</Button>
           </Link> 
-        </ButtonContainer> 
+        </ButtonContainer>
+        <Space/> 
+        <Space/>
       </CenteredContainer>
+
+      <Footer>
+        <p>{intl.formatMessage({ id: "copyright-notice" })}</p>
+        <p>{intl.formatMessage({ id: "solicitation-notice" })}</p>
+      </Footer>
 
     </ViewContainer>
   )
@@ -147,6 +189,48 @@ const Villas = ({ data, intl }) => {
 export const query = graphql`
   query {
     villaExterior1: file(relativePath: { eq: "villas/villa-exterior-1-4x3.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    realVillaExterior1: file(relativePath: { eq: "villas/real-villa-1.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    realVillaExterior2: file(relativePath: { eq: "villas/real-villa-2.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    realVillaExterior3: file(relativePath: { eq: "villas/real-villa-3.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    realVillaInterior1: file(relativePath: { eq: "villas/real-villa-4.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    realVillaInterior2: file(relativePath: { eq: "villas/real-villa-5.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    realVillaInterior3: file(relativePath: { eq: "villas/real-villa-6.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 2880) {
           ...GatsbyImageSharpFluid_withWebp

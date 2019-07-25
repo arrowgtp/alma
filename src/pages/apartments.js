@@ -5,19 +5,23 @@ import styled from 'styled-components'
 import Img from 'gatsby-image'
 import SEO from "../components/seo"
 
-import { FullContentCard, FullContentImage, HeadingContainer } from '../components/layout/FullContentCard'
+
 import ViewContainer from '../components/layout/ViewContainer'
+import { FullContentCard, FullContentImage, HeadingContainer } from '../components/layout/FullContentCard'
 import FullWidthContainer from '../components/layout/FullWidthContainer'
 import CenteredContainer from '../components/layout/CenteredContainer'
 import FlexContainer from '../components/layout/FlexContainer'
 import FlexBox from '../components/layout/FlexBox'
 import AlmaHeader from '../components/Header'
 import Button from '../components/visual/Button'
-import P from '../components/visual/Paragraph'
+import { Space, H1, H2, P, UL, LI } from '../components/visual/Typography'
+// import P from '../components/visual/Paragraph'
 import FullImage from '../components/visual/FullImage'
 
+import Footer from '../components/Footer'
+
 const ButtonContainer = styled.div`
-  margin: 0 0 2rem 0;
+  margin: 0;
   display: flex;
   justify-content: center;
 `
@@ -60,17 +64,48 @@ const Apartments = ({ data, intl }) => {
       </FullContentCard>
 
       <CenteredContainer>
+        <Space/>
         <P>{intl.formatMessage({ id: "apartments-paragraph-1" })}</P>
+        <Space/>
       </CenteredContainer>
 
       <FullWidthContainer>
         <FullImage fluid={data.apartmentLivingRoom2.childImageSharp.fluid}/>
-        <FullImage fluid={data.apartmentKitchen.childImageSharp.fluid}/>
-        <FullImage fluid={data.apartmentBedroom.childImageSharp.fluid}/>
-        <FullImage fluid={data.apartmentBathroom.childImageSharp.fluid}/>
       </FullWidthContainer>
 
       <CenteredContainer>
+        <Space/>
+        <P>{intl.formatMessage({ id: "apartments-paragraph-2" })}</P>
+        <Space/>
+      </CenteredContainer>
+
+      <FullWidthContainer>
+        <FullImage fluid={data.apartmentKitchen.childImageSharp.fluid}/>
+      </FullWidthContainer>
+
+      <CenteredContainer>
+        <Space/>
+        <P>{intl.formatMessage({ id: "apartments-paragraph-3" })}</P>
+        <Space/>
+      </CenteredContainer>
+
+      <FullWidthContainer>
+        <FullImage fluid={data.apartmentBedroom.childImageSharp.fluid}/>
+      </FullWidthContainer>
+
+      <CenteredContainer>
+        <Space/>
+        <P>{intl.formatMessage({ id: "apartments-paragraph-4" })}</P>
+        <Space/>
+      </CenteredContainer>
+
+      <FullWidthContainer>
+        <FullImage fluid={data.apartmentBathroom.childImageSharp.fluid}/>
+      </FullWidthContainer>
+
+
+      <CenteredContainer>
+        <Space/>
         <AlmaHeader white title={intl.formatMessage({ id: "floorplans-title" })}></AlmaHeader>
       </CenteredContainer>
 
@@ -125,14 +160,23 @@ const Apartments = ({ data, intl }) => {
         <FloorplanParagraph>{intl.formatMessage({ id: "floorplan-h-placeholder" })}</FloorplanParagraph>
       </CenteredContainer>
 
-      <CenteredContainer> 
-        <P>Learn more about our beautiful luxury oceanview villas and their floorplans.</P>
+      <CenteredContainer>
+        <Space/>
+        <P>Click here to learn more about our beautiful and luxurious oceanfront villas, their amenities, and their floorplans.</P>
+        <Space/>
         <ButtonContainer>
           <Link to="/villas">
             <Button>Learn More</Button>
           </Link> 
-        </ButtonContainer> 
+        </ButtonContainer>
+        <Space/>
+        <Space/>
       </CenteredContainer>
+
+      <Footer>
+        <p>{intl.formatMessage({ id: "copyright-notice" })}</p>
+        <p>{intl.formatMessage({ id: "solicitation-notice" })}</p>
+      </Footer>
 
     </ViewContainer>
   )

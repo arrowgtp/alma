@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import { Link, injectIntl } from 'gatsby-plugin-intl'
 import styled from 'styled-components'
-import Img from 'gatsby-image'
+// import Img from 'gatsby-image'
 import SEO from "../components/seo"
 
 import { FullContentCard, FullContentImage, HeadingContainer } from '../components/layout/FullContentCard'
@@ -11,11 +11,14 @@ import FullWidthContainer from '../components/layout/FullWidthContainer'
 import CenteredContainer from '../components/layout/CenteredContainer'
 import AlmaHeader from '../components/Header'
 import Button from '../components/visual/Button'
-import P from '../components/visual/Paragraph'
+// import P from '../components/visual/Paragraph'
 import FullImage from '../components/visual/FullImage'
+import { Space, H1, H2, P, UL, LI } from '../components/visual/Typography'
+
+import Footer from '../components/Footer'
 
 const ButtonContainer = styled.div`
-  margin: 0 0 2rem 0;
+  margin: 0;
   display: flex;
   justify-content: center;
 `
@@ -36,8 +39,10 @@ const Resort = ({ data, intl }) => {
       </FullContentCard>
 
       <CenteredContainer>
-        <AlmaHeader title={intl.formatMessage({ id: "resort-subtitle" })}></AlmaHeader>
+        <Space/>
+        {/* <AlmaHeader title={intl.formatMessage({ id: "resort-subtitle" })}></AlmaHeader> */}
         <P>{intl.formatMessage({ id: "resort-paragraph-1" })}</P>
+        <Space/>
       </CenteredContainer>
 
       <FullWidthContainer>
@@ -45,7 +50,9 @@ const Resort = ({ data, intl }) => {
       </FullWidthContainer>
 
       <CenteredContainer>
+        <Space/>
         <P>{intl.formatMessage({ id: "resort-paragraph-2" })}</P>
+        <Space/>
       </CenteredContainer>
 
       <FullWidthContainer>
@@ -53,25 +60,42 @@ const Resort = ({ data, intl }) => {
       </FullWidthContainer>
 
       <CenteredContainer>
+        <Space/>
         <P>{intl.formatMessage({ id: "resort-paragraph-3" })}</P>
+        <Space/>
       </CenteredContainer>
 
       <FullWidthContainer>
         <FullImage fluid={data.almaResort4.childImageSharp.fluid}/>
       </FullWidthContainer>
 
+      <CenteredContainer>
+        <Space/>
+        <P>{intl.formatMessage({ id: "resort-paragraph-4" })}</P>
+        <Space/>
+      </CenteredContainer>
+
       <FullWidthContainer>
         <FullImage fluid={data.almaResort5.childImageSharp.fluid}/>
       </FullWidthContainer>
 
-      <CenteredContainer> 
-        <P>Learn more about our beautiful oceanview apartments and their floorplans.</P>
+      <CenteredContainer>
+        <Space/>
+        <P>Click here to learn more about our beautiful oceanview apartments, their floorplans, and all the amenities that they have to offer our members.</P>
+        <Space/>
         <ButtonContainer>
           <Link to="/apartments">
             <Button>Learn More</Button>
           </Link> 
-        </ButtonContainer> 
+        </ButtonContainer>
+        <Space/>
+        <Space/>
       </CenteredContainer>
+
+      <Footer>
+        <p>{intl.formatMessage({ id: "copyright-notice" })}</p>
+        <p>{intl.formatMessage({ id: "solicitation-notice" })}</p>
+      </Footer>
 
     </ViewContainer>
   )
