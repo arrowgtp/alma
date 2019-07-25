@@ -4,9 +4,10 @@ import almaHeaderBlue from '../images/alma/alma-header-blue.svg'
 import almaHeaderWhite from '../images/alma/alma-header-white.svg'
 
 const HeaderContainer = styled.div`
-  margin: 1rem 0;
+  margin: 0;
   padding: 0;
   display: grid;
+  /* border: 1px solid red; */
   grid-template-rows: 1fr;
   grid-template-columns: 1fr;
   /* filter: drop-shadow( 0px 0px 16px hsla(0, 0%, 0%, 0.5)); */
@@ -49,8 +50,8 @@ const HeaderBackground = styled.img`
   justify-self: stretch;
   width: 100%;
   height: auto;
-  min-height: 6rem;
-  max-height: 8rem;
+  /* min-height: 6rem;
+  max-height: 8rem; */
   object-fit: fill;
   opacity: 0.9;
 `
