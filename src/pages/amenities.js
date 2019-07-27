@@ -3,17 +3,17 @@ import { graphql } from 'gatsby'
 import { Link, injectIntl } from 'gatsby-plugin-intl'
 import styled from 'styled-components'
 // import Img from 'gatsby-image'
-import SEO from "../components/seo"
+import SEO from '../components/seo'
 
-import { FullContentCard, FullContentImage, HeadingContainer } from '../components/layout/FullContentCard'
 import ViewContainer from '../components/layout/ViewContainer'
 import FullWidthContainer from '../components/layout/FullWidthContainer'
 import CenteredContainer from '../components/layout/CenteredContainer'
+import { FullContentCard, FullContentImage, HeadingContainer, FullCaption } from '../components/layout/FullContentCard'
+import { FullImage, Image, Caption } from '../components/visual/FullImage'
 import AlmaHeader from '../components/Header'
 import Button from '../components/visual/Button'
 import { Space, H1, H2, P, UL, ListTitle, LI } from '../components/visual/Typography'
-// import P from '../components/visual/Paragraph'
-import FullImage from '../components/visual/FullImage'
+
 
 import Footer from '../components/Footer'
 
@@ -22,30 +22,6 @@ const ButtonContainer = styled.div`
   display: flex;
   justify-content: center;
 `
-
-// const UL = styled.ul`
-//   font-family: 'Work Sans', sans-serif;
-//   margin: 2rem;
-//   padding: 0;
-//   color: #006897;
-//   list-style-type: circle;
-// `
-
-// const ListTitle = styled.h1`
-//   font-family: 'Quicksand', sans-serif;
-//   text-transform: uppercase;
-//   font-size: 40px;
-//   color: #006897;
-//   text-align: center;
-// `
-
-// const LI = styled.li`
-//   font-family: 'Work Sans', sans-serif;
-//   color: #006897;
-//   list-style-type: circle;
-//   font-size: 16px;
-//   padding: 0.25rem;
-// `
 
 const Amenities = ({ data, intl }) => {
   return (
@@ -60,6 +36,7 @@ const Amenities = ({ data, intl }) => {
           />
         </HeadingContainer>
         <FullContentImage fluid={data.spaTreatment.childImageSharp.fluid}/>
+        <FullCaption>Artist Rendering</FullCaption>
       </FullContentCard>
 
       <CenteredContainer>
@@ -69,7 +46,10 @@ const Amenities = ({ data, intl }) => {
       </CenteredContainer>
 
       <FullWidthContainer>
-        <FullImage fluid={data.receptionLobby.childImageSharp.fluid}/>
+        <FullImage>
+          <Image fluid={data.receptionLobby.childImageSharp.fluid}/>
+          <Caption>Artist Rendering</Caption>
+        </FullImage>
       </FullWidthContainer>
 
       <CenteredContainer>
@@ -79,7 +59,10 @@ const Amenities = ({ data, intl }) => {
       </CenteredContainer>
 
       <FullWidthContainer>
-        <FullImage fluid={data.lobbyLounge.childImageSharp.fluid}/>
+        <FullImage>
+          <Image fluid={data.lobbyLounge.childImageSharp.fluid}/>
+          <Caption>Artist Rendering</Caption>
+        </FullImage>
       </FullWidthContainer>
 
       <CenteredContainer>
@@ -89,7 +72,10 @@ const Amenities = ({ data, intl }) => {
       </CenteredContainer>
 
       <FullWidthContainer>
-        <FullImage fluid={data.conventionCenter.childImageSharp.fluid}/>
+        <FullImage>
+          <Image fluid={data.conventionCenter.childImageSharp.fluid}/>
+          <Caption>Artist Rendering</Caption>
+        </FullImage>
       </FullWidthContainer>
 
       <CenteredContainer>
@@ -99,7 +85,10 @@ const Amenities = ({ data, intl }) => {
       </CenteredContainer>
 
       <FullWidthContainer>
-        <FullImage fluid={data.ballroom.childImageSharp.fluid}/>
+        <FullImage>
+          <Image fluid={data.ballroom.childImageSharp.fluid}/>
+          <Caption>Artist Rendering</Caption>
+        </FullImage>
       </FullWidthContainer>
 
       <CenteredContainer>

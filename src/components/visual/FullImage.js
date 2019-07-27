@@ -1,8 +1,10 @@
+import React from 'react'
 import styled from 'styled-components'
 import Img from 'gatsby-image'
 
-export default styled(Img)`
+const FullImage = styled.div`
   box-sizing: border-box;
+  position: relative;
   margin: 1rem;
   padding: 0;
   border-radius: 16px;
@@ -10,11 +12,8 @@ export default styled(Img)`
 
 
   @media (min-width: 50rem) {
-    display: block;
     margin: 0 2rem;
     border-radius: 24px;
-    /* max-width: 70rem; */
-    /* align-self: center; */
   }
 
   @media (min-width: 75rem ) {
@@ -25,3 +24,34 @@ export default styled(Img)`
     margin: 0 12rem;
   }
 `
+
+const Image = styled(Img)`
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  z-index: 1;
+`
+
+const Caption = styled.caption`
+  position: absolute;
+  color: white;
+  text-shadow: 1px 1px 3px hsla(0,0%,0%,0.75);
+  bottom: 0;
+  left: 0;
+  font-family: 'Work Sans', sans-serif;
+  margin: 1rem;
+  padding: 0;
+  z-index: 2;
+`
+
+// const FullImage = ({ children }) => {
+//   return (
+//     <ImageContainer>
+//       {children}
+//     </ImageContainer>
+//   )
+// }
+
+export { FullImage, Image, Caption }

@@ -5,7 +5,6 @@ const Space = styled.div`
   padding: 0;
   height: 2rem;
   width: 100%;
-  /* border: 1px solid red; */
   @media (min-width: 50rem) {
     height: 2rem;
   }
@@ -52,8 +51,8 @@ const P = styled.p`
   -webkit-text-fill-color: transparent;
 
   @media (min-width: 50rem) {
-    font-size: calc(12px + (18 - 12) * ((100vw - 300px) / (1600 - 300)));
-    line-height: calc(24px + (32 - 24) * ((100vw - 300px) / (1600 - 300)));
+    font-size: calc(12px + (20 - 12) * ((100vw - 300px) / (1600 - 300)));
+    line-height: calc(28px + (40 - 28) * ((100vw - 300px) / (1600 - 300)));
   }
 `
 
@@ -80,9 +79,14 @@ const ListTitle = styled.h1`
 
 const LI = styled.li`
   font-family: 'Work Sans', sans-serif;
-  list-style-type: circle;
+  list-style-type: disc;
   font-size: 16px;
   padding: 0.25rem;
+
+  @media (min-width: 50rem) {
+    font-size: calc(12px + (20 - 12) * ((100vw - 300px) / (1600 - 300)));
+    line-height: calc(28px + (40 - 28) * ((100vw - 300px) / (1600 - 300)));
+  }
 `
 
 export { Space, H1, H2, H3, P, UL, ListTitle, LI }

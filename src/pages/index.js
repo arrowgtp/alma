@@ -6,13 +6,12 @@ import { Link, injectIntl } from 'gatsby-plugin-intl'
 import SEO from '../components/seo'
 
 import ViewContainer from '../components/layout/ViewContainer'
+import { FullContentCard, FullContentImage, HeadingContainer, FullCaption } from '../components/layout/FullContentCard'
 import FullWidthContainer from '../components/layout/FullWidthContainer'
 import CenteredContainer from '../components/layout/CenteredContainer'
 import HorizontalScrollContainer from '../components/layout/HorizontalScrollContainer'
 import AlmaHeader from '../components/Header'
-import { FullContentCard, FullContentImage } from '../components/layout/FullContentCard'
 import { Space, H1, H2, P, UL, LI } from '../components/visual/Typography'
-// import P from '../components/visual/Paragraph'
 import Button from '../components/visual/Button'
 
 import almaLogoWithBG from '../images/alma/alma-logo-with-bg.svg'
@@ -59,6 +58,7 @@ const PageSlogan = styled.div`
 `
 
 const Card = styled.div`
+  position: relative;
   flex: 0 0 auto;
   margin: 1rem 0.5rem;
   padding: 0.25rem;
@@ -84,15 +84,29 @@ const Card = styled.div`
 `
 
 const CardImg = styled(Img)`
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: auto;
   border-radius: 6px;
+  z-index: 1;
+`
+
+const CardCaption = styled.caption`
+  position: absolute;
+  color: white;
+  text-shadow: 1px 1px 3px hsla(0,0%,0%,0.75);
+  bottom: 0;
+  left: 0;
+  font-family: 'Work Sans', sans-serif;
+  margin: 1rem;
+  padding: 0;
+  z-index: 2;
 `
 
 const RCIMap = styled(FullContentImage)`
   width: 100%;
   height: auto;
-  /* object-fit: contain; */
-  /* background-color: #00b7ff;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='540' height='450' viewBox='0 0 1080 900'%3E%3Cg fill-opacity='.1'%3E%3Cpolygon fill='%23444' points='90 150 0 300 180 300'/%3E%3Cpolygon points='90 150 180 0 0 0'/%3E%3Cpolygon fill='%23AAA' points='270 150 360 0 180 0'/%3E%3Cpolygon fill='%23DDD' points='450 150 360 300 540 300'/%3E%3Cpolygon fill='%23999' points='450 150 540 0 360 0'/%3E%3Cpolygon points='630 150 540 300 720 300'/%3E%3Cpolygon fill='%23DDD' points='630 150 720 0 540 0'/%3E%3Cpolygon fill='%23444' points='810 150 720 300 900 300'/%3E%3Cpolygon fill='%23FFF' points='810 150 900 0 720 0'/%3E%3Cpolygon fill='%23DDD' points='990 150 900 300 1080 300'/%3E%3Cpolygon fill='%23444' points='990 150 1080 0 900 0'/%3E%3Cpolygon fill='%23DDD' points='90 450 0 600 180 600'/%3E%3Cpolygon points='90 450 180 300 0 300'/%3E%3Cpolygon fill='%23666' points='270 450 180 600 360 600'/%3E%3Cpolygon fill='%23AAA' points='270 450 360 300 180 300'/%3E%3Cpolygon fill='%23DDD' points='450 450 360 600 540 600'/%3E%3Cpolygon fill='%23999' points='450 450 540 300 360 300'/%3E%3Cpolygon fill='%23999' points='630 450 540 600 720 600'/%3E%3Cpolygon fill='%23FFF' points='630 450 720 300 540 300'/%3E%3Cpolygon points='810 450 720 600 900 600'/%3E%3Cpolygon fill='%23DDD' points='810 450 900 300 720 300'/%3E%3Cpolygon fill='%23AAA' points='990 450 900 600 1080 600'/%3E%3Cpolygon fill='%23444' points='990 450 1080 300 900 300'/%3E%3Cpolygon fill='%23222' points='90 750 0 900 180 900'/%3E%3Cpolygon points='270 750 180 900 360 900'/%3E%3Cpolygon fill='%23DDD' points='270 750 360 600 180 600'/%3E%3Cpolygon points='450 750 540 600 360 600'/%3E%3Cpolygon points='630 750 540 900 720 900'/%3E%3Cpolygon fill='%23444' points='630 750 720 600 540 600'/%3E%3Cpolygon fill='%23AAA' points='810 750 720 900 900 900'/%3E%3Cpolygon fill='%23666' points='810 750 900 600 720 600'/%3E%3Cpolygon fill='%23999' points='990 750 900 900 1080 900'/%3E%3Cpolygon fill='%23999' points='180 0 90 150 270 150'/%3E%3Cpolygon fill='%23444' points='360 0 270 150 450 150'/%3E%3Cpolygon fill='%23FFF' points='540 0 450 150 630 150'/%3E%3Cpolygon points='900 0 810 150 990 150'/%3E%3Cpolygon fill='%23222' points='0 300 -90 450 90 450'/%3E%3Cpolygon fill='%23FFF' points='0 300 90 150 -90 150'/%3E%3Cpolygon fill='%23FFF' points='180 300 90 450 270 450'/%3E%3Cpolygon fill='%23666' points='180 300 270 150 90 150'/%3E%3Cpolygon fill='%23222' points='360 300 270 450 450 450'/%3E%3Cpolygon fill='%23FFF' points='360 300 450 150 270 150'/%3E%3Cpolygon fill='%23444' points='540 300 450 450 630 450'/%3E%3Cpolygon fill='%23222' points='540 300 630 150 450 150'/%3E%3Cpolygon fill='%23AAA' points='720 300 630 450 810 450'/%3E%3Cpolygon fill='%23666' points='720 300 810 150 630 150'/%3E%3Cpolygon fill='%23FFF' points='900 300 810 450 990 450'/%3E%3Cpolygon fill='%23999' points='900 300 990 150 810 150'/%3E%3Cpolygon points='0 600 -90 750 90 750'/%3E%3Cpolygon fill='%23666' points='0 600 90 450 -90 450'/%3E%3Cpolygon fill='%23AAA' points='180 600 90 750 270 750'/%3E%3Cpolygon fill='%23444' points='180 600 270 450 90 450'/%3E%3Cpolygon fill='%23444' points='360 600 270 750 450 750'/%3E%3Cpolygon fill='%23999' points='360 600 450 450 270 450'/%3E%3Cpolygon fill='%23666' points='540 600 630 450 450 450'/%3E%3Cpolygon fill='%23222' points='720 600 630 750 810 750'/%3E%3Cpolygon fill='%23FFF' points='900 600 810 750 990 750'/%3E%3Cpolygon fill='%23222' points='900 600 990 450 810 450'/%3E%3Cpolygon fill='%23DDD' points='0 900 90 750 -90 750'/%3E%3Cpolygon fill='%23444' points='180 900 270 750 90 750'/%3E%3Cpolygon fill='%23FFF' points='360 900 450 750 270 750'/%3E%3Cpolygon fill='%23AAA' points='540 900 630 750 450 750'/%3E%3Cpolygon fill='%23FFF' points='720 900 810 750 630 750'/%3E%3Cpolygon fill='%23222' points='900 900 990 750 810 750'/%3E%3Cpolygon fill='%23222' points='1080 300 990 450 1170 450'/%3E%3Cpolygon fill='%23FFF' points='1080 300 1170 150 990 150'/%3E%3Cpolygon points='1080 600 990 750 1170 750'/%3E%3Cpolygon fill='%23666' points='1080 600 1170 450 990 450'/%3E%3Cpolygon fill='%23DDD' points='1080 900 1170 750 990 750'/%3E%3C/g%3E%3C/svg%3E"); */
 `
 
 // const NewsContainer = styled.div`
@@ -452,6 +466,7 @@ const Index = ({ data, intl }) => {
         <MainLogo src={almaLogoWithBG} alt="The Alma Resort Logo."  />
         <PageSlogan>{intl.formatMessage({ id: "slogan" })}</PageSlogan>
         <FullContentImage fluid={data.resortOverview.childImageSharp.fluid}/>
+        <FullCaption>Artist Rendering</FullCaption>
       </FullContentCard>
   
       <CenteredContainer>
@@ -470,11 +485,14 @@ const Index = ({ data, intl }) => {
   
         <FullWidthContainer>
           <HorizontalScrollContainer orange>
-            <Card><CardImg fluid={data.almaResort1.childImageSharp.fluid}/></Card>
-            <Card><CardImg fluid={data.almaResort2.childImageSharp.fluid}/></Card>
-            <Card><CardImg fluid={data.almaResort3.childImageSharp.fluid}/></Card>
-            <Card><CardImg fluid={data.almaResort4.childImageSharp.fluid}/></Card>
-            <Card><CardImg fluid={data.almaResort1.childImageSharp.fluid}/></Card>
+            <Card>
+              <CardImg fluid={data.almaResort1.childImageSharp.fluid}/>
+              <CardCaption>Artist Rendering</CardCaption>
+            </Card>
+            <Card><CardImg fluid={data.almaResort2.childImageSharp.fluid}/><CardCaption>Artist Rendering</CardCaption></Card>
+            <Card><CardImg fluid={data.almaResort3.childImageSharp.fluid}/><CardCaption>Artist Rendering</CardCaption></Card>
+            <Card><CardImg fluid={data.almaResort4.childImageSharp.fluid}/><CardCaption>Artist Rendering</CardCaption></Card>
+            <Card><CardImg fluid={data.almaResort1.childImageSharp.fluid}/><CardCaption>Artist Rendering</CardCaption></Card>
           </HorizontalScrollContainer>
         </FullWidthContainer>
 
@@ -494,11 +512,11 @@ const Index = ({ data, intl }) => {
 
       <FullWidthContainer>
         <HorizontalScrollContainer blue> 
-          <Card><CardImg fluid={data.apartmentLivingRoom1.childImageSharp.fluid}/></Card>
-          <Card><CardImg fluid={data.apartmentLivingRoom2.childImageSharp.fluid}/></Card>
-          <Card><CardImg fluid={data.apartmentKitchen.childImageSharp.fluid}/></Card>
-          <Card><CardImg fluid={data.apartmentBedroom.childImageSharp.fluid}/></Card>
-          <Card><CardImg fluid={data.apartmentBathroom.childImageSharp.fluid}/></Card>
+          <Card><CardImg fluid={data.apartmentLivingRoom1.childImageSharp.fluid}/><CardCaption>Artist Rendering</CardCaption></Card>
+          <Card><CardImg fluid={data.apartmentLivingRoom2.childImageSharp.fluid}/><CardCaption>Artist Rendering</CardCaption></Card>
+          <Card><CardImg fluid={data.apartmentKitchen.childImageSharp.fluid}/><CardCaption>Artist Rendering</CardCaption></Card>
+          <Card><CardImg fluid={data.apartmentBedroom.childImageSharp.fluid}/><CardCaption>Artist Rendering</CardCaption></Card>
+          <Card><CardImg fluid={data.apartmentBathroom.childImageSharp.fluid}/><CardCaption>Artist Rendering</CardCaption></Card>
         </HorizontalScrollContainer>
       </FullWidthContainer>
 
@@ -518,11 +536,12 @@ const Index = ({ data, intl }) => {
 
       <FullWidthContainer>
         <HorizontalScrollContainer blue>
-          <Card><CardImg fluid={data.villaExterior1.childImageSharp.fluid}/></Card>
-          <Card><CardImg fluid={data.villaLivingRoom1.childImageSharp.fluid}/></Card>
-          <Card><CardImg fluid={data.villaLivingRoom2.childImageSharp.fluid}/></Card>
-          <Card><CardImg fluid={data.villaBedroom1.childImageSharp.fluid}/></Card>
-          <Card><CardImg fluid={data.villaBathroom1.childImageSharp.fluid}/></Card>
+          <Card><CardImg fluid={data.realVillaExterior1.childImageSharp.fluid}/></Card>
+          <Card><CardImg fluid={data.realVillaExterior2.childImageSharp.fluid}/></Card>
+          <Card><CardImg fluid={data.realVillaExterior3.childImageSharp.fluid}/></Card>
+          <Card><CardImg fluid={data.realVillaInterior1.childImageSharp.fluid}/></Card>
+          <Card><CardImg fluid={data.realVillaInterior2.childImageSharp.fluid}/></Card>
+          <Card><CardImg fluid={data.realVillaInterior3.childImageSharp.fluid}/></Card>
         </HorizontalScrollContainer>
       </FullWidthContainer>
 
@@ -542,12 +561,12 @@ const Index = ({ data, intl }) => {
 
       <FullWidthContainer>
         <HorizontalScrollContainer blue>
-          <Card><CardImg fluid={data.allDayDiner1.childImageSharp.fluid}/></Card>
-          <Card><CardImg fluid={data.beachBar2.childImageSharp.fluid}/></Card>
-          <Card><CardImg fluid={data.asianRestaurant.childImageSharp.fluid}/></Card>
-          <Card><CardImg fluid={data.foodCourt1.childImageSharp.fluid}/></Card>
-          <Card><CardImg fluid={data.italianRestaurant.childImageSharp.fluid}/></Card>
-          <Card><CardImg fluid={data.pub1.childImageSharp.fluid}/></Card>
+          <Card><CardImg fluid={data.allDayDiner1.childImageSharp.fluid}/><CardCaption>Artist Rendering</CardCaption></Card>
+          <Card><CardImg fluid={data.beachBar2.childImageSharp.fluid}/><CardCaption>Artist Rendering</CardCaption></Card>
+          <Card><CardImg fluid={data.asianRestaurant.childImageSharp.fluid}/><CardCaption>Artist Rendering</CardCaption></Card>
+          <Card><CardImg fluid={data.foodCourt1.childImageSharp.fluid}/><CardCaption>Artist Rendering</CardCaption></Card>
+          <Card><CardImg fluid={data.italianRestaurant.childImageSharp.fluid}/><CardCaption>Artist Rendering</CardCaption></Card>
+          <Card><CardImg fluid={data.pub1.childImageSharp.fluid}/><CardCaption>Artist Rendering</CardCaption></Card>
         </HorizontalScrollContainer>
       </FullWidthContainer>
 
@@ -567,11 +586,35 @@ const Index = ({ data, intl }) => {
 
       <FullWidthContainer>
         <HorizontalScrollContainer blue>
-          <Card><CardImg fluid={data.receptionLobby.childImageSharp.fluid}/></Card>
-          <Card><CardImg fluid={data.lobbyLounge.childImageSharp.fluid}/></Card>
-          <Card><CardImg fluid={data.conventionCenter.childImageSharp.fluid}/></Card>
-          <Card><CardImg fluid={data.ballroom.childImageSharp.fluid}/></Card>
-          <Card><CardImg fluid={data.spaTreatment.childImageSharp.fluid}/></Card>
+          <Card><CardImg fluid={data.receptionLobby.childImageSharp.fluid}/><CardCaption>Artist Rendering</CardCaption></Card>
+          <Card><CardImg fluid={data.lobbyLounge.childImageSharp.fluid}/><CardCaption>Artist Rendering</CardCaption></Card>
+          <Card><CardImg fluid={data.conventionCenter.childImageSharp.fluid}/><CardCaption>Artist Rendering</CardCaption></Card>
+          <Card><CardImg fluid={data.ballroom.childImageSharp.fluid}/><CardCaption>Artist Rendering</CardCaption></Card>
+          <Card><CardImg fluid={data.spaTreatment.childImageSharp.fluid}/><CardCaption>Artist Rendering</CardCaption></Card>
+        </HorizontalScrollContainer>
+      </FullWidthContainer>
+
+      <CenteredContainer>
+        <Space/>
+        <AlmaHeader title={intl.formatMessage({ id: "construction-title" })} />
+        <Space/>
+        <P>{intl.formatMessage({ id: "construction-intro-paragraph" })}</P>
+        <Space/>
+        <ButtonContainer>
+          <Link to="/construction">
+            <Button>{intl.formatMessage({ id: "learn-more-button" })}</Button>
+          </Link> 
+        </ButtonContainer>
+        <Space/>
+      </CenteredContainer>
+
+      <FullWidthContainer>
+        <HorizontalScrollContainer blue>
+          <Card><CardImg fluid={data.june1.childImageSharp.fluid}/></Card>
+          <Card><CardImg fluid={data.june2.childImageSharp.fluid}/></Card>
+          <Card><CardImg fluid={data.june3.childImageSharp.fluid}/></Card>
+          <Card><CardImg fluid={data.june4.childImageSharp.fluid}/></Card>
+          <Card><CardImg fluid={data.june5.childImageSharp.fluid}/></Card>
         </HorizontalScrollContainer>
       </FullWidthContainer>
 
@@ -802,6 +845,48 @@ export const query = graphql`
         }
       }
     }
+    realVillaExterior1: file(relativePath: { eq: "villas/real-villa-1-4x3.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    realVillaExterior2: file(relativePath: { eq: "villas/real-villa-2-4x3.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    realVillaExterior3: file(relativePath: { eq: "villas/real-villa-3-4x3.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    realVillaInterior1: file(relativePath: { eq: "villas/real-villa-4-4x3.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    realVillaInterior2: file(relativePath: { eq: "villas/real-villa-5-4x3.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    realVillaInterior3: file(relativePath: { eq: "villas/real-villa-6-4x3.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
     villaExterior1: file(relativePath: { eq: "villas/villa-exterior-1-4x3.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 2880) {
@@ -908,6 +993,41 @@ export const query = graphql`
       }
     }
     spaTreatment: file(relativePath: { eq: "amenities/spa-treatment-4x3.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    june1: file(relativePath: { eq: "construction/june-1.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    june2: file(relativePath: { eq: "construction/june-2.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    june3: file(relativePath: { eq: "construction/june-3.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    june4: file(relativePath: { eq: "construction/june-4.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    june5: file(relativePath: { eq: "construction/june-5.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 2880) {
           ...GatsbyImageSharpFluid_withWebp

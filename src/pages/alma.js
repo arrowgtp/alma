@@ -8,6 +8,7 @@ import ViewContainer from '../components/layout/ViewContainer'
 import { FullContentCard, FullContentImage, HeadingContainer } from '../components/layout/FullContentCard'
 import CenteredContainer from '../components/layout/CenteredContainer'
 import AlmaHeader from '../components/Header'
+import AlmaHeading from '../components/visual/AlmaHeading'
 import { Space, H1, H2, P, UL, LI } from '../components/visual/Typography'
 
 import Footer from '../components/Footer'
@@ -81,7 +82,7 @@ const Alma = ({ intl, data }) => {
 
 export const query = graphql`
   query {
-    almaConstruction: file(relativePath: { eq: "construction/july-5.jpg" }) {
+    almaConstruction: file(relativePath: { eq: "construction/june-5.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 2880) {
           ...GatsbyImageSharpFluid

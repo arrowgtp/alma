@@ -3,20 +3,19 @@ import { graphql } from 'gatsby'
 import { Link, injectIntl } from 'gatsby-plugin-intl'
 import styled from 'styled-components'
 import Img from 'gatsby-image'
-import SEO from "../components/seo"
+import SEO from '../components/seo'
 
 
 import ViewContainer from '../components/layout/ViewContainer'
-import { FullContentCard, FullContentImage, HeadingContainer } from '../components/layout/FullContentCard'
 import FullWidthContainer from '../components/layout/FullWidthContainer'
 import CenteredContainer from '../components/layout/CenteredContainer'
+import { FullContentCard, FullContentImage, HeadingContainer, FullCaption } from '../components/layout/FullContentCard'
+import { FullImage, Image, Caption } from '../components/visual/FullImage'
 import FlexContainer from '../components/layout/FlexContainer'
 import FlexBox from '../components/layout/FlexBox'
 import AlmaHeader from '../components/Header'
 import Button from '../components/visual/Button'
 import { Space, H1, H2, P, UL, LI } from '../components/visual/Typography'
-// import P from '../components/visual/Paragraph'
-import FullImage from '../components/visual/FullImage'
 
 import Footer from '../components/Footer'
 
@@ -61,6 +60,7 @@ const Apartments = ({ data, intl }) => {
           />
         </HeadingContainer>
         <FullContentImage fluid={data.apartmentLivingRoom1.childImageSharp.fluid}/>
+        <FullCaption>Artist Rendering</FullCaption>
       </FullContentCard>
 
       <CenteredContainer>
@@ -69,8 +69,15 @@ const Apartments = ({ data, intl }) => {
         <Space/>
       </CenteredContainer>
 
-      <FullWidthContainer>
+      {/* <FullWidthContainer>
         <FullImage fluid={data.apartmentLivingRoom2.childImageSharp.fluid}/>
+      </FullWidthContainer> */}
+
+      <FullWidthContainer>
+        <FullImage>
+          <Image fluid={data.apartmentLivingRoom2.childImageSharp.fluid}/>
+          <Caption>Artist Rendering</Caption>
+        </FullImage>
       </FullWidthContainer>
 
       <CenteredContainer>
@@ -79,8 +86,15 @@ const Apartments = ({ data, intl }) => {
         <Space/>
       </CenteredContainer>
 
-      <FullWidthContainer>
+      {/* <FullWidthContainer>
         <FullImage fluid={data.apartmentKitchen.childImageSharp.fluid}/>
+      </FullWidthContainer> */}
+
+      <FullWidthContainer>
+        <FullImage>
+          <Image fluid={data.apartmentKitchen.childImageSharp.fluid}/>
+          <Caption>Artist Rendering</Caption>
+        </FullImage>
       </FullWidthContainer>
 
       <CenteredContainer>
@@ -89,8 +103,15 @@ const Apartments = ({ data, intl }) => {
         <Space/>
       </CenteredContainer>
 
-      <FullWidthContainer>
+      {/* <FullWidthContainer>
         <FullImage fluid={data.apartmentBedroom.childImageSharp.fluid}/>
+      </FullWidthContainer> */}
+
+      <FullWidthContainer>
+        <FullImage>
+          <Image fluid={data.apartmentBedroom.childImageSharp.fluid}/>
+          <Caption>Artist Rendering</Caption>
+        </FullImage>
       </FullWidthContainer>
 
       <CenteredContainer>
@@ -100,8 +121,15 @@ const Apartments = ({ data, intl }) => {
       </CenteredContainer>
 
       <FullWidthContainer>
-        <FullImage fluid={data.apartmentBathroom.childImageSharp.fluid}/>
+        <FullImage>
+          <Image fluid={data.apartmentBathroom.childImageSharp.fluid}/>
+          <Caption>Artist Rendering</Caption>
+        </FullImage>
       </FullWidthContainer>
+
+      {/* <FullWidthContainer>
+        <FullImage fluid={data.apartmentBathroom.childImageSharp.fluid}/>
+      </FullWidthContainer> */}
 
 
       <CenteredContainer>

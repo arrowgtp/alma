@@ -4,11 +4,13 @@ import { graphql } from 'gatsby'
 import { injectIntl } from 'gatsby-plugin-intl'
 import SEO from "../components/seo"
 
-
 import ViewContainer from '../components/layout/ViewContainer'
-import { FullContentCard, FullContentImage, HeadingContainer } from '../components/layout/FullContentCard'
+import FullWidthContainer from '../components/layout/FullWidthContainer'
 import CenteredContainer from '../components/layout/CenteredContainer'
+import { FullContentCard, FullContentImage, HeadingContainer, FullCaption } from '../components/layout/FullContentCard'
+import { FullImage, Image, Caption } from '../components/visual/FullImage'
 import AlmaHeader from '../components/Header'
+import AlmaHeading from '../components/visual/AlmaHeading'
 import { Space, H1, H2, P, UL, LI } from '../components/visual/Typography'
 
 import Footer from '../components/Footer'
@@ -66,7 +68,8 @@ const Vacations = ({ intl, data }) => {
         <Space/>
         <P>{intl.formatMessage({ id: "rci-paragraph-5-3" })}</P>
         <Space/>
-        <AlmaHeader white title={intl.formatMessage({ id: "rci-destinations-title" })}/>
+        {/* <AlmaHeader white title={intl.formatMessage({ id: "rci-destinations-title" })}/> */}
+        <AlmaHeading>{intl.formatMessage({ id: "rci-destinations-title" })}</AlmaHeading>
         <Space/>
         <H1>{intl.formatMessage({ id: "rci-destination-1" })}</H1>
         <Space/>

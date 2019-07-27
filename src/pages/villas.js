@@ -5,17 +5,16 @@ import styled from 'styled-components'
 import Img from 'gatsby-image'
 import SEO from "../components/seo"
 
-import { FullContentCard, FullContentImage, HeadingContainer } from '../components/layout/FullContentCard'
 import ViewContainer from '../components/layout/ViewContainer'
 import FullWidthContainer from '../components/layout/FullWidthContainer'
 import CenteredContainer from '../components/layout/CenteredContainer'
+import { FullContentCard, FullContentImage, HeadingContainer, FullCaption } from '../components/layout/FullContentCard'
+import { FullImage, Image, Caption } from '../components/visual/FullImage'
 import FlexContainer from '../components/layout/FlexContainer'
 import FlexBox from '../components/layout/FlexBox'
 import AlmaHeader from '../components/Header'
 import Button from '../components/visual/Button'
-// import P from '../components/visual/Paragraph'
 import { Space, H1, H2, P, UL, LI } from '../components/visual/Typography'
-import FullImage from '../components/visual/FullImage'
 
 import Footer from '../components/Footer'
 
@@ -70,7 +69,10 @@ const Villas = ({ data, intl }) => {
       </CenteredContainer>
 
       <FullWidthContainer>
-        <FullImage fluid={data.villaLivingRoom1.childImageSharp.fluid}/>
+        <FullImage>
+          <Image fluid={data.villaLivingRoom1.childImageSharp.fluid}/>
+          <Caption>Artist Rendering</Caption>
+        </FullImage>
       </FullWidthContainer>
 
       <CenteredContainer>
@@ -80,8 +82,11 @@ const Villas = ({ data, intl }) => {
       </CenteredContainer>
 
       <FullWidthContainer>
-        <FullImage fluid={data.realVillaInterior2.childImageSharp.fluid}/>
+        <FullImage>
+          <Image fluid={data.realVillaInterior2.childImageSharp.fluid}/>
+        </FullImage>
       </FullWidthContainer>
+
 
       <CenteredContainer>
         <Space/>
@@ -90,7 +95,9 @@ const Villas = ({ data, intl }) => {
       </CenteredContainer>
 
       <FullWidthContainer>
-        <FullImage fluid={data.realVillaInterior1.childImageSharp.fluid}/>
+        <FullImage>
+          <Image fluid={data.realVillaInterior1.childImageSharp.fluid}/>
+        </FullImage>
       </FullWidthContainer>
 
       <CenteredContainer>
@@ -100,8 +107,11 @@ const Villas = ({ data, intl }) => {
       </CenteredContainer>
 
       <FullWidthContainer>
-        <FullImage fluid={data.villaBathroom1.childImageSharp.fluid}/>
-      </FullWidthContainer>
+        <FullImage>
+          <Image fluid={data.villaBathroom1.childImageSharp.fluid}/>
+          <Caption>Artist Rendering</Caption>
+        </FullImage>
+      </FullWidthContainer>      
 
       <CenteredContainer>
         <Space/>

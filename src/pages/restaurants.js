@@ -5,15 +5,14 @@ import styled from 'styled-components'
 // import Img from 'gatsby-image'
 import SEO from "../components/seo"
 
-import { FullContentCard, FullContentImage, HeadingContainer } from '../components/layout/FullContentCard'
 import ViewContainer from '../components/layout/ViewContainer'
 import FullWidthContainer from '../components/layout/FullWidthContainer'
 import CenteredContainer from '../components/layout/CenteredContainer'
+import { FullContentCard, FullContentImage, HeadingContainer, FullCaption } from '../components/layout/FullContentCard'
+import { FullImage, Image, Caption } from '../components/visual/FullImage'
 import AlmaHeader from '../components/Header'
 import Button from '../components/visual/Button'
 import { Space, H1, H2, P, UL, ListTitle, LI } from '../components/visual/Typography'
-// import P from '../components/visual/Paragraph'
-import FullImage from '../components/visual/FullImage'
 
 import Footer from '../components/Footer'
 
@@ -46,8 +45,10 @@ const Restaurants = ({ data, intl }) => {
       </CenteredContainer>
 
       <FullWidthContainer>
-        <FullImage fluid={data.allDayDiner2.childImageSharp.fluid}/>
-        {/* <FullImage fluid={data.allDayDiner2.childImageSharp.fluid}/> */}
+        <FullImage>
+          <Image fluid={data.allDayDiner2.childImageSharp.fluid}/>
+          <Caption>Artist Rendering</Caption>
+        </FullImage>
       </FullWidthContainer>
 
       <CenteredContainer>
@@ -57,7 +58,10 @@ const Restaurants = ({ data, intl }) => {
       </CenteredContainer>
 
       <FullWidthContainer>
-        <FullImage fluid={data.beachBar2.childImageSharp.fluid}/>
+        <FullImage>
+          <Image fluid={data.beachBar2.childImageSharp.fluid}/>
+          <Caption>Artist Rendering</Caption>
+        </FullImage>
       </FullWidthContainer>
 
       <CenteredContainer>
@@ -67,7 +71,10 @@ const Restaurants = ({ data, intl }) => {
       </CenteredContainer>
 
       <FullWidthContainer>
-        <FullImage fluid={data.asianRestaurant.childImageSharp.fluid}/>
+        <FullImage>
+          <Image fluid={data.asianRestaurant.childImageSharp.fluid}/>
+          <Caption>Artist Rendering</Caption>
+        </FullImage>
       </FullWidthContainer>
 
       <CenteredContainer>
@@ -77,7 +84,10 @@ const Restaurants = ({ data, intl }) => {
       </CenteredContainer>
 
       <FullWidthContainer>
-        <FullImage fluid={data.italianRestaurant.childImageSharp.fluid}/>
+        <FullImage>
+          <Image fluid={data.italianRestaurant.childImageSharp.fluid}/>
+          <Caption>Artist Rendering</Caption>
+        </FullImage>
       </FullWidthContainer>
 
       <CenteredContainer>
@@ -87,7 +97,10 @@ const Restaurants = ({ data, intl }) => {
       </CenteredContainer>
 
       <FullWidthContainer>
-        <FullImage fluid={data.foodCourt1.childImageSharp.fluid}/>
+        <FullImage>
+          <Image fluid={data.foodCourt1.childImageSharp.fluid}/>
+          <Caption>Artist Rendering</Caption>
+        </FullImage>
       </FullWidthContainer>
 
       <CenteredContainer>
@@ -97,7 +110,10 @@ const Restaurants = ({ data, intl }) => {
       </CenteredContainer>
 
       <FullWidthContainer>
-        <FullImage fluid={data.pub1.childImageSharp.fluid}/>
+        <FullImage>
+          <Image fluid={data.pub1.childImageSharp.fluid}/>
+          <Caption>Artist Rendering</Caption>
+        </FullImage>
       </FullWidthContainer>
 
       <CenteredContainer>

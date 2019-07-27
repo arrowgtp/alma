@@ -23,7 +23,7 @@ const Main = styled.main`
   }
 `
 
-const ContentContainer = (props) => {
+const ContentContainer = ({ children }) => {
 
   // const elementRef = useRef()
 
@@ -31,14 +31,14 @@ const ContentContainer = (props) => {
   //   setTimeout(() => elementRef.current.scrollTop = 0, 0)
   // }, [])
 
-   useEffect(() => {
-    setTimeout(() => document.getElementById('ContentContainer').scrollTop = 0, 0);
-  })
+  //  useEffect(() => {
+  //   setTimeout(() => document.getElementById('ContentContainer').scrollTop = 0, 0);
+  // })
 
   return (
     // <Main ref={elementRef}>
     <Main id='ContentContainer'>
-      {props.children}
+      {children}
     </Main>
   )
 }
