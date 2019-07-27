@@ -16,19 +16,19 @@ const Container = styled(animated.main)`
 `
 
 const ViewContainer = ({ children }) => {
-  // const [state] = useState(true);
-  // const transition = useTransition(state, null, { 
-  //   from: { opacity: 0 },
-  //   enter: { opacity: 1 },
-  //   leave: { opacity: 0 }
-  // });
-  // return transition.map(({ item, key, props: fade }) =>
-  //   item && <Container key={key} style={fade}>{props.children}</Container>
-  // )
-
-  return (
-    <Container>{children}</Container>
+  const [state] = useState(true);
+  const transition = useTransition(state, null, { 
+    from: { opacity: 0 },
+    enter: { opacity: 1 },
+    leave: { opacity: 0 }
+  });
+  return transition.map(({ item, key, props: fade }) =>
+    item && <Container key={key} style={fade}>{children}</Container>
   )
+
+  // return (
+  //   <Container>{children}</Container>
+  // )
 }
 
 export default ViewContainer

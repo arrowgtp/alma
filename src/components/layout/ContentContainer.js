@@ -31,9 +31,9 @@ const ContentContainer = ({ children }) => {
   //   setTimeout(() => elementRef.current.scrollTop = 0, 0)
   // }, [])
 
-  //  useEffect(() => {
-  //   setTimeout(() => document.getElementById('ContentContainer').scrollTop = 0, 0);
-  // })
+   useEffect(() => {
+    setTimeout(() => document.getElementById('ContentContainer').scrollTop = 0, 0);
+  })
 
   return (
     // <Main ref={elementRef}>
