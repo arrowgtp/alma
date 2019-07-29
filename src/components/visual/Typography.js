@@ -44,6 +44,7 @@ const H3 = styled.h2`
 const P = styled.p`
   margin: 0;
   padding: 0;
+  color: #006897;
   font-family: 'Work Sans', 'DM Serif Display', 'Lato';
   font-size: calc(16px + (24 - 16) * ((100vw - 300px) / (1600 - 300)));
   line-height: calc(24px + (32 - 24) * ((100vw - 300px) / (1600 - 300)));
@@ -61,7 +62,8 @@ const UL = styled.ul`
   font-family: 'Work Sans', sans-serif;
   margin: 2rem;
   padding: 0;
-  background: -webkit-linear-gradient(#006674, #004566);
+  color: #006897;
+  /* background: -webkit-linear-gradient(#006674, #004566); */
   /* -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent; */
@@ -75,10 +77,11 @@ const ListTitle = styled.h1`
   text-align: center;
   letter-spacing: 2px;
   color: #be854d;
-  -webkit-text-fill-color: #be854d;
+  /* -webkit-text-fill-color: #be854d; */
 `
 
 const LI = styled.li`
+  color: #006897;
   font-family: 'Work Sans', sans-serif;
   list-style-type: disc;
   font-size: 16px;

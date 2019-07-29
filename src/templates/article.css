@@ -1,12 +1,13 @@
 p {
   margin: 1rem 0;
   padding: 1rem 0;
+  color: #006897;
   font-family: 'Work Sans', 'DM Serif Display', 'Lato';
   font-size: calc(16px + (24 - 16) * ((100vw - 300px) / (1600 - 300)));
   line-height: calc(24px + (32 - 24) * ((100vw - 300px) / (1600 - 300)));
-  background: -webkit-linear-gradient(#006674, #004566);
+  /* background: -webkit-linear-gradient(#006674, #004566);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent; */
 }
 
   @media screen and (min-width: 50rem) {
