@@ -3,10 +3,11 @@ import styled from 'styled-components'
 const Space = styled.div`
   margin: 0;
   padding: 0;
-  height: 2rem;
+  height: 1.5rem;
   width: 100%;
+
   @media (min-width: 50rem) {
-    height: 2rem;
+    height: 2.5rem;
   }
 `
 
@@ -46,9 +47,9 @@ const P = styled.p`
   font-family: 'Work Sans', 'DM Serif Display', 'Lato';
   font-size: calc(16px + (24 - 16) * ((100vw - 300px) / (1600 - 300)));
   line-height: calc(24px + (32 - 24) * ((100vw - 300px) / (1600 - 300)));
-  background: -webkit-linear-gradient(#006674, #004566);
+  /* background: -webkit-linear-gradient(#006674, #004566);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent; */
 
   @media (min-width: 50rem) {
     font-size: calc(12px + (20 - 12) * ((100vw - 300px) / (1600 - 300)));
@@ -61,9 +62,9 @@ const UL = styled.ul`
   margin: 2rem;
   padding: 0;
   background: -webkit-linear-gradient(#006674, #004566);
-  -webkit-background-clip: text;
+  /* -webkit-background-clip: text;
   background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent; */
   list-style-type: circle;
 `
 

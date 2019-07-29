@@ -477,7 +477,7 @@ const Index = ({ data, intl }) => {
         <Space/>
         <ButtonContainer>
           <Link to="/resort">
-            <Button>{intl.formatMessage({ id: "learn-more-button" })}</Button>
+            <Button>{intl.formatMessage({ id: "resort-title" })}</Button>
           </Link>
         </ButtonContainer>
         <Space/>
@@ -504,7 +504,7 @@ const Index = ({ data, intl }) => {
         <Space/>
         <ButtonContainer>
           <Link to="/apartments">
-            <Button>{intl.formatMessage({ id: "learn-more-button" })}</Button>
+            <Button>{intl.formatMessage({ id: "apartments-title" })}</Button>
           </Link> 
         </ButtonContainer>
         <Space/>
@@ -528,7 +528,7 @@ const Index = ({ data, intl }) => {
         <Space/>
         <ButtonContainer>
           <Link to="/villas">
-            <Button>{intl.formatMessage({ id: "learn-more-button" })}</Button>
+            <Button>{intl.formatMessage({ id: "villas-title" })}</Button>
           </Link> 
         </ButtonContainer>
         <Space/>
@@ -553,7 +553,7 @@ const Index = ({ data, intl }) => {
         <Space/>
         <ButtonContainer>
           <Link to="/restaurants">
-            <Button>{intl.formatMessage({ id: "learn-more-button" })}</Button>
+            <Button>{intl.formatMessage({ id: "restaurants-title" })}</Button>
           </Link> 
         </ButtonContainer>
         <Space/>
@@ -578,7 +578,7 @@ const Index = ({ data, intl }) => {
         <Space/>
         <ButtonContainer>
           <Link to="/amenities">
-            <Button>{intl.formatMessage({ id: "learn-more-button" })}</Button>
+            <Button>{intl.formatMessage({ id: "amenities-title" })}</Button>
           </Link> 
         </ButtonContainer>
         <Space/>
@@ -602,7 +602,7 @@ const Index = ({ data, intl }) => {
         <Space/>
         <ButtonContainer>
           <Link to="/construction">
-            <Button>{intl.formatMessage({ id: "learn-more-button" })}</Button>
+            <Button>{intl.formatMessage({ id: "construction-title" })}</Button>
           </Link> 
         </ButtonContainer>
         <Space/>
@@ -626,7 +626,7 @@ const Index = ({ data, intl }) => {
         <Space/>
         <ButtonContainer>
           <Link to="/vacations">
-            <Button>{intl.formatMessage({ id: "learn-more-button" })}</Button>
+            <Button>{intl.formatMessage({ id: "vacations-title" })}</Button>
           </Link> 
         </ButtonContainer>
         <Space/>
@@ -644,7 +644,7 @@ const Index = ({ data, intl }) => {
         <Space/>
         <ButtonContainer>
           <Link to="/vacations">
-            <Button>{intl.formatMessage({ id: "learn-more-button" })}</Button>
+            <Button>{intl.formatMessage({ id: "alma-title" })}</Button>
           </Link> 
         </ButtonContainer>
         <Space/>

@@ -41,6 +41,7 @@ const Caption = styled.caption`
   bottom: 0;
   left: 0;
   font-family: 'Work Sans', sans-serif;
+  font-size: calc(8px + (16 - 8) * ((100vw - 300px) / (1600 - 300)));
   margin: 1rem;
   padding: 0;
   z-index: 2;

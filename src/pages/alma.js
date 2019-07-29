@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { graphql } from 'gatsby'
-import { injectIntl } from 'gatsby-plugin-intl'
+import { Link, injectIntl } from 'gatsby-plugin-intl'
 import SEO from '../components/seo'
 
 import ViewContainer from '../components/layout/ViewContainer'
@@ -9,9 +9,16 @@ import { FullContentCard, FullContentImage, HeadingContainer } from '../componen
 import CenteredContainer from '../components/layout/CenteredContainer'
 import AlmaHeader from '../components/Header'
 import AlmaHeading from '../components/visual/AlmaHeading'
+import Button from '../components/visual/Button'
 import { Space, H1, H2, P, UL, LI } from '../components/visual/Typography'
 
 import Footer from '../components/Footer'
+
+const ButtonContainer = styled.div`
+  margin: 0;
+  display: flex;
+  justify-content: center;
+`
 
 const Alma = ({ intl, data }) => {
   return (
@@ -68,6 +75,19 @@ const Alma = ({ intl, data }) => {
         <Space/>
         <P>{intl.formatMessage({ id: "founder-paragraph-2" })}</P>
         <Space/>
+
+        <CenteredContainer>
+        <Space/>
+        <P>Head back home now and learn more about all of the wonderful vacation opportunites that could be yours.</P>
+        <Space/>
+        <ButtonContainer>
+          <Link to="/">
+            <Button>Home</Button>
+          </Link> 
+        </ButtonContainer>
+        <Space/>
+        <Space/>
+      </CenteredContainer>
 
       </CenteredContainer>
 

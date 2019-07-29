@@ -9,9 +9,9 @@ const Container = styled(animated.main)`
   display: grid;
   grid-template-rows: auto;
   grid-template-columns: 
-    minmax(1rem, 1fr) 
-    minmax(1rem, 40rem) 
-    minmax(1rem, 1fr)
+    minmax(2rem, 1fr) 
+    minmax(1rem, 45rem) 
+    minmax(2rem, 1fr)
   ;
 `
 

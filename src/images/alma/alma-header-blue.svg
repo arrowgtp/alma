@@ -49,10 +49,6 @@
       y="0"
       width="46"
       height="46"
-      fill-rule="evenodd"
-      stroke-linejoin="round"
-      stroke-miterlimit="02"
-      clip-rule="evenodd"
       viewBox="0 0 11.5 11.5"
     >
       <path fill="none" d="M0 0h11.52v11.52H0z"/>

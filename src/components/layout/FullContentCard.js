@@ -43,7 +43,7 @@ const FullCaption = styled.caption`
   color: white;
   text-shadow: 1px 1px 3px hsla(0,0%,0%,0.75);
   font-family: 'Work Sans', sans-serif;
-  font-size: 16px;
+  font-size: calc(8px + (16 - 8) * ((100vw - 300px) / (1600 - 300)));
   margin: 1rem;
   padding: 0;
   z-index: 2;

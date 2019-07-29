@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { graphql } from 'gatsby'
-import { injectIntl } from 'gatsby-plugin-intl'
+import { Link, injectIntl } from 'gatsby-plugin-intl'
 import SEO from "../components/seo"
 
 import ViewContainer from '../components/layout/ViewContainer'
@@ -11,9 +11,16 @@ import { FullContentCard, FullContentImage, HeadingContainer, FullCaption } from
 import { FullImage, Image, Caption } from '../components/visual/FullImage'
 import AlmaHeader from '../components/Header'
 import AlmaHeading from '../components/visual/AlmaHeading'
+import Button from '../components/visual/Button'
 import { Space, H1, H2, P, UL, LI } from '../components/visual/Typography'
 
 import Footer from '../components/Footer'
+
+const ButtonContainer = styled.div`
+  margin: 0;
+  display: flex;
+  justify-content: center;
+`
 
 const Vacations = ({ intl, data }) => {
   return (
@@ -94,6 +101,19 @@ const Vacations = ({ intl, data }) => {
         <H1>{intl.formatMessage({ id: "rci-destination-6" })}</H1>
         <Space/>
         <P>{intl.formatMessage({ id: "rci-destination-6-paragraph" })}</P>
+        <Space/>
+      </CenteredContainer>
+
+      <CenteredContainer>
+        <Space/>
+        <P>Click here to learn all about alma, our story, and our mission to provide vacationers with the utmost in qulaity and relaxation.</P>
+        <Space/>
+        <ButtonContainer>
+          <Link to="/alma">
+            <Button>{intl.formatMessage({ id: "alma-title" })}</Button>
+          </Link> 
+        </ButtonContainer>
+        <Space/>
         <Space/>
       </CenteredContainer>
 
