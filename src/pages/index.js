@@ -537,6 +537,7 @@ const Index = ({ data, intl }) => {
 
       <FullWidthContainer>
         <HorizontalScrollContainer blue>
+          <Card><CardImg fluid={data.june7.childImageSharp.fluid}/></Card>
           <Card><CardImg fluid={data.realVillaExterior1.childImageSharp.fluid}/></Card>
           <Card><CardImg fluid={data.realVillaExterior2.childImageSharp.fluid}/></Card>
           <Card><CardImg fluid={data.realVillaExterior3.childImageSharp.fluid}/></Card>
@@ -562,6 +563,7 @@ const Index = ({ data, intl }) => {
 
       <FullWidthContainer>
         <HorizontalScrollContainer blue>
+          <Card><CardImg fluid={data.june14.childImageSharp.fluid}/></Card>
           <Card><CardImg fluid={data.allDayDiner1.childImageSharp.fluid}/><CardCaption>Artist Rendering</CardCaption></Card>
           <Card><CardImg fluid={data.beachBar2.childImageSharp.fluid}/><CardCaption>Artist Rendering</CardCaption></Card>
           <Card><CardImg fluid={data.asianRestaurant.childImageSharp.fluid}/><CardCaption>Artist Rendering</CardCaption></Card>
@@ -1000,35 +1002,56 @@ export const query = graphql`
         }
       }
     }
-    june1: file(relativePath: { eq: "construction/june-1.jpg" }) {
+    june1: file(relativePath: { eq: "construction/june-1-4x3.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 2880) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
-    june2: file(relativePath: { eq: "construction/june-2.jpg" }) {
+    june2: file(relativePath: { eq: "construction/june-2-4x3.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 2880) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
-    june3: file(relativePath: { eq: "construction/june-3.jpg" }) {
+    june3: file(relativePath: { eq: "construction/june-3-4x3.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 2880) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
-    june4: file(relativePath: { eq: "construction/june-4.jpg" }) {
+    june4: file(relativePath: { eq: "construction/june-4-4x3.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 2880) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
-    june5: file(relativePath: { eq: "construction/june-5.jpg" }) {
+    june5: file(relativePath: { eq: "construction/june-5-4x3.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    june6: file(relativePath: { eq: "construction/june-6-4x3.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    june7: file(relativePath: { eq: "construction/june-7-4x3.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    june14: file(relativePath: { eq: "construction/june-14-4x3.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 2880) {
           ...GatsbyImageSharpFluid_withWebp
