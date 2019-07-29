@@ -1,8 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
-import almaHeaderBlue from '../images/alma/alma-header-blue.svg'
-import almaHeaderPhone from '../images/alma/alma-header-phone.svg'
-import almaHeaderWhite from '../images/alma/alma-header-white.svg'
+import almaHeaderBlueSmall from '../images/alma/alma-header-blue-small.svg'
+import almaHeaderBlueLarge from '../images/alma/alma-header-blue-large.svg'
+import almaHeaderWhiteSmall from '../images/alma/alma-header-white-small.svg'
+import almaHeaderWhiteLarge from '../images/alma/alma-header-white-large.svg'
 
 const HeaderContainer = styled.div`
   margin: 0;
@@ -59,7 +60,29 @@ const HeaderBackground = styled.img`
   /* min-height: 6rem;
   max-height: 8rem; */
   object-fit: fill;
-  opacity: 0.9;
+  /* opacity: 0.9; */
+`
+
+const HeaderBackgroundLarge = styled.img`
+
+  display: none;
+
+  @media (min-width: 50rem) {
+    margin: 0;
+    padding: 0;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    z-index: 1;
+    align-self: stretch;
+    justify-self: stretch;
+    width: 100%;
+    height: auto;
+    /* min-height: 6rem;
+    max-height: 8rem; */
+    object-fit: fill;
+    /* opacity: 0.9; */
+  }
+  
 `
 
 const Header = (props) => {
@@ -67,7 +90,7 @@ const Header = (props) => {
   return (
     <HeaderContainer white={props.white}>
       <HeaderTitle white={props.white}>{props.title}</HeaderTitle>
-      <HeaderBackground src={props.white ? almaHeaderWhite : almaHeaderPhone} alt='Decorative Alma Heading Background Image.'/>
+      <HeaderBackground src={props.white ? almaHeaderWhiteSmall : almaHeaderBlueSmall} alt='Decorative Alma Heading Background Image.'/>
     </HeaderContainer>
   )
 }
