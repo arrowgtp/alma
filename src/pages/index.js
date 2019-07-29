@@ -98,8 +98,9 @@ const CardCaption = styled.caption`
   text-shadow: 1px 1px 3px hsla(0,0%,0%,0.75);
   bottom: 0;
   left: 0;
+  font-size: calc(8px + (12 - 8) * ((100vw - 300px) / (1600 - 300)));
   font-family: 'Work Sans', sans-serif;
-  margin: 1rem;
+  margin: 0.75rem;
   padding: 0;
   z-index: 2;
 `

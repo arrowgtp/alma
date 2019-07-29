@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import almaHeaderBlue from '../images/alma/alma-header-blue.svg'
+import almaHeaderPhone from '../images/alma/alma-header-phone.svg'
 import almaHeaderWhite from '../images/alma/alma-header-white.svg'
 
 const HeaderContainer = styled.div`
@@ -33,11 +34,16 @@ const HeaderTitle = styled.h1`
   text-align: center;
   text-transform: uppercase;
   letter-spacing: calc(4px + (8 - 4) * ((100vw - 300px) / (1600 - 300)));
-  font-size: calc(18px + (40 - 18) * ((100vw - 300px) / (1600 - 300)));
+  font-size: calc(24px + (40 - 24) * ((100vw - 300px) / (1600 - 300)));
   font-family: 'Quicksand';
   font-weight: 700;
   text-shadow: ${props => props.white ? "none" : "0px 0px 8px hsla(0, 0%, 0%, 0.25)"};
-  margin-right: -24px;
+  margin-right: -8px;
+
+  @media (min-width: 50rem) {
+    font-size: calc(18px + (40 - 18) * ((100vw - 300px) / (1600 - 300)));
+    margin-right: -24px;
+  }
 `
 
 const HeaderBackground = styled.img`
@@ -61,7 +67,7 @@ const Header = (props) => {
   return (
     <HeaderContainer white={props.white}>
       <HeaderTitle white={props.white}>{props.title}</HeaderTitle>
-      <HeaderBackground src={props.white ? almaHeaderWhite : almaHeaderBlue} alt='Decorative Alma Heading Background Image.'/>
+      <HeaderBackground src={props.white ? almaHeaderWhite : almaHeaderPhone} alt='Decorative Alma Heading Background Image.'/>
     </HeaderContainer>
   )
 }
