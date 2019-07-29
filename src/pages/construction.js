@@ -7,7 +7,6 @@ import SEO from "../components/seo"
 
 import { FullContentCard, FullContentImage, HeadingContainer } from '../components/layout/FullContentCard'
 import ViewContainer from '../components/layout/ViewContainer'
-// import FullWidthContainer from '../components/layout/FullWidthContainer'
 import CenteredContainer from '../components/layout/CenteredContainer'
 import AlmaHeader from '../components/Header'
 import Button from '../components/visual/Button'
