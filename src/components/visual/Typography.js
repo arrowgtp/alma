@@ -47,7 +47,7 @@ const P = styled.p`
   color: #006897;
   font-family: 'Work Sans', 'DM Serif Display', 'Lato';
   font-size: calc(16px + (24 - 16) * ((100vw - 300px) / (1600 - 300)));
-  line-height: calc(24px + (32 - 24) * ((100vw - 300px) / (1600 - 300)));
+  line-height: calc(28px + (32 - 28) * ((100vw - 300px) / (1600 - 300)));
   /* background: -webkit-linear-gradient(#006674, #004566);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; */

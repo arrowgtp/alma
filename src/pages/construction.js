@@ -41,6 +41,7 @@ const Construction = ({ data, intl }) => {
       <CenteredContainer>
         <Space/>
         <AlmaHeader
+          blue
           title={intl.formatMessage({ id: "construction-month" })}
         />
         <Space/>

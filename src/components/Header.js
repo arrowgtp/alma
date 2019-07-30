@@ -24,7 +24,7 @@ const HeaderContainer = styled.div`
 
 const HeaderTitle = styled.h1`
   margin: 0;
-  padding: 0;
+  padding: calc(20px + (170 - 20) * ((100vw - 300px) / (1600 - 300))) 0;
   grid-column: 1 / 2;
   grid-row: 1 / 2;
   z-index: 2;
@@ -42,12 +42,13 @@ const HeaderTitle = styled.h1`
   margin-right: -8px;
 
   @media (min-width: 50rem) {
+    padding: calc(50px + (50 - 50) * ((100vw - 300px) / (1600 - 300))) 0;
     font-size: calc(18px + (40 - 18) * ((100vw - 300px) / (1600 - 300)));
     margin-right: -24px;
   }
 `
 
-const HeaderBackground = styled.img`
+const HeaderBackground = styled.div`
   margin: 0;
   padding: 0;
   grid-column: 1 / 2;
@@ -59,38 +60,62 @@ const HeaderBackground = styled.img`
   height: auto;
   /* min-height: 6rem;
   max-height: 8rem; */
-  object-fit: fill;
+  /* object-fit: fill; */
   /* opacity: 0.9; */
-`
-
-const HeaderBackgroundLarge = styled.img`
-
-  display: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% auto;
+  ${props =>
+    props.blue && `
+      background-image: url(${almaHeaderBlueSmall});
+  `}
+  ${props =>
+    props.white && `
+      background-image: url(${almaHeaderWhiteSmall});
+  `}
 
   @media (min-width: 50rem) {
-    margin: 0;
-    padding: 0;
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
-    z-index: 1;
-    align-self: stretch;
-    justify-self: stretch;
-    width: 100%;
-    height: auto;
-    /* min-height: 6rem;
-    max-height: 8rem; */
-    object-fit: fill;
-    /* opacity: 0.9; */
+    ${props =>
+      props.blue && `
+      background-image: url(${almaHeaderBlueLarge});
+    `}
+    ${props =>
+      props.white && `
+      background-image: url(${almaHeaderWhiteLarge});
+    `}
   }
-  
 `
+
+// const HeaderBackgroundLarge = styled.img`
+
+//   display: none;
+
+//   @media (min-width: 50rem) {
+//     margin: 0;
+//     padding: 0;
+//     grid-column: 1 / 2;
+//     grid-row: 1 / 2;
+//     z-index: 1;
+//     align-self: stretch;
+//     justify-self: stretch;
+//     width: 100%;
+//     height: auto;
+//     min-height: 6rem;
+//     max-height: 8rem;
+//     object-fit: fill;
+//     opacity: 0.9;
+    
+//   }
+  
+// `
 
 const Header = (props) => {
 
   return (
     <HeaderContainer white={props.white}>
       <HeaderTitle white={props.white}>{props.title}</HeaderTitle>
-      <HeaderBackground src={props.white ? almaHeaderWhiteSmall : almaHeaderBlueSmall} alt='Decorative Alma Heading Background Image.'/>
+      {/* <HeaderBackground src={props.white ? almaHeaderWhiteSmall : almaHeaderBlueSmall} alt='Decorative Alma Heading Background Image.'/> */}
+      <HeaderBackground white={props.white}  blue={props.blue}/>
     </HeaderContainer>
   )
 }

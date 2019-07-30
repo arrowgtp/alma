@@ -30,16 +30,12 @@ const Vacations = ({ intl, data }) => {
 
       <FullContentCard>
         <HeadingContainer>
-          <AlmaHeader white
-            title={intl.formatMessage({ id: "vacations-title" })}
-          />
+          <AlmaHeader white title={intl.formatMessage({ id: "vacations-title" })}/>
         </HeadingContainer>
         <FullContentImage fluid={data.secretsConcunPool.childImageSharp.fluid}/>
       </FullContentCard>
 
       <CenteredContainer>
-        <Space/>
-        <AlmaHeader title={intl.formatMessage({ id: "vacations-title" })}/>
         <Space/>
         <P>{intl.formatMessage({ id: "vacations-intro-paragraph" })}</P>
         <Space/>
@@ -75,8 +71,7 @@ const Vacations = ({ intl, data }) => {
         <Space/>
         <P>{intl.formatMessage({ id: "rci-paragraph-5-3" })}</P>
         <Space/>
-        {/* <AlmaHeader white title={intl.formatMessage({ id: "rci-destinations-title" })}/> */}
-        <AlmaHeading>{intl.formatMessage({ id: "rci-destinations-title" })}</AlmaHeading>
+        <AlmaHeader blue title={intl.formatMessage({ id: "rci-destinations-title" })}/>
         <Space/>
         <H1>{intl.formatMessage({ id: "rci-destination-1" })}</H1>
         <Space/>

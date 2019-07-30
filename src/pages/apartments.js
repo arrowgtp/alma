@@ -134,7 +134,7 @@ const Apartments = ({ data, intl }) => {
 
       <CenteredContainer>
         <Space/>
-        <AlmaHeader white title={intl.formatMessage({ id: "floorplans-title" })}></AlmaHeader>
+        <AlmaHeader blue title={intl.formatMessage({ id: "floorplans-title" })}></AlmaHeader>
       </CenteredContainer>
 
       <FullWidthContainer>

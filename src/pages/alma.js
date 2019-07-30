@@ -36,8 +36,6 @@ const Alma = ({ intl, data }) => {
 
       <CenteredContainer>
         <Space/>
-        <AlmaHeader title={intl.formatMessage({ id: "alma-title" })}/>
-        <Space/>
         <P>{intl.formatMessage({ id: "alma-subtitle" })}</P>
         <Space/>
         <H1>{intl.formatMessage({ id: "alma-heading-1" })}</H1>
@@ -67,7 +65,7 @@ const Alma = ({ intl, data }) => {
         <P>{intl.formatMessage({ id: "alma-paragraph-1-4" })}</P>
         <Space/>
 
-        <AlmaHeader white
+        <AlmaHeader blue
             title={intl.formatMessage({ id: "founder-name" })}
           />
         <Space/>

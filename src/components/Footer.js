@@ -13,7 +13,7 @@ const FooterContainer = styled(FullWidthContainer)`
   background-image: url(${almaPattern3});
   background-repeat: repeat;
   background-size: 96px;
-  box-shadow: inset 0px 0px 32px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0px 0px 32px rgba(0, 0, 0, 0.1);
 
   > p {
     color: #ffffff;
