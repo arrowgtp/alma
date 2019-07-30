@@ -123,6 +123,8 @@
 
   "construction-title": "Construction",
   "construction-subtitle": "Every journey begins with a shovel and a dream.",
+  "construction-intro-paragraph": "Keep up with all the latest information about the resort and its contruction progress here. Will we posting new pictures and status reports every month up until the resorts opening.",
+
   "construction-month": "June 2019",
   "construction-paragraph-1": "Tính cho đến tháng Sáu 2019, chúng tôi đã hoàn tất nhiều hoạt động thúc đẩy tiến trình xây cất. Ngoài việc dốc toàn lực vào để hoàn tất các khu cao ốc chính và biệt thự, nhà thầu xây cất đang tiến hành các khu vực công cộng, trồng cây xanh, để mang lại dáng vẻ mới lạ cho khu nghỉ dưỡng xinh đẹp này.",
   "construction-paragraph-2": "Hiện tại, 100 ngôi biệt thự đã sẵn sàng cho quá trình trang trí nội thất. Hơn nữa, tất cả các căn hộ từ lầu 8 đến 11 trong tòa cao ốc chính cũng đã xong và sẵn sàng cho công việc nội thất.",
@@ -156,16 +158,18 @@
 
   "rci-destinations-title": "Destinations",
 
-  "rci-destination-1": "Cancun",
-  "rci-destination-1-paragraph": "Nổi danh khắp thế giới với nhiều quán bar sinh động, các hoạt động về đêm đầy sức sống và thức ăn tuyệt vời, Cancun mang cả hai nét hiện đại và hoài cổ. Từ các khu mua sắm hàng hiệu sầm uất cho đến những khu tàn tích thời Maya xa xưa, từ các hộp đêm kích động cho đến những kim tự tháp cổ đại, nơi này sẽ làm hài lòng tất cả những ý thích của du khách.",
-  "rci-destination-2": "Aruba",
-  "rci-destination-2-paragraph": "Biển cát trắng ngà, làn nước trong xanh và những hàng cây cọ dài vô tận giúp biến nơi này thành địa điểm lý tưởng để thư giãn và ngoạn cảnh thiên nhiên. Hòn đảo hiền hòa này là nơi trú ngụ của nhiều loại chim muông độc đáo, và những vách núi đá vôi và eo biển bí ẩn, sẵn sàng cho cuộc khám phú kỳ thú.",
-  "rci-destination-3": "St. Martin",
-  "rci-destination-3-paragraph": "Hòn đảo này được ảnh hưởng bởi cả hai Hòa Lan và Pháp, và vì vậy, có một nền văn hóa vô cùng độc đáo. Các trò chơi nước như trượt nước, trượt sóng, lộn sóng, lướt ván nước do tàu kéo, lướt ván diều, lái xe trên sóng, chèo thuyền...thu hút nhiều khách đến viếng địa điểm xanh thẳm này. Tương phản với các hoạt động kích thích bên trên là nét trang nhã của những bãi biển êm vắng, nhà hàng và quán ăn ven biển.",
-  "rci-destination-4": "Hawaii",
-  "rci-destination-4-paragraph": "Chỉ cái tên Hawaii thôi đã khơi gợi hình ảnh của những khu rừng nhiệt đới, vách đá sừng sững, thung lũng bất tận, bãi biển tráng vàng, và thác nước như tơ. Nơi thiên nhiên căng nhựa sống này mời gọi du khách hãy thư giãn, sống chậm lại, và tận tình thưởng thức những thời khắc dưới ánh hoàng hôn. Địa điểm này lý tưởng cho các cặp đôi trăng mật hoặc những chuyến du lịch lãng mạn.",
-  "rci-destination-5": "Orlando ",
-  "rci-destination-5-paragraph": "Sở thú, công viên giải trí, công viên thủy sinh và nhiều hoạt động dành cho trẻ em giúp địa điểm này thành nơi du lịch dành cho gia đình được viếng thăm nhiều nhất. Dành riêng cho người lớn là các buổi biểu diễn kèm ẩm thực, các sinh hoạt về đêm, các sân gôn, khu mua sắm và thư giãn...",
+  "rci-destination-1": "Nha Trang",
+  "rci-destination-1-paragraph": "Sun-kissed relaxation is an everyday thing in the bustling coastal town of Nha Trang. After all, this is a place with more days of sunshine per year than anywhere else in Vietnam. The town’s main beach, Tran Phu, a seven-kilometre stretch of pristine sand and clear water, bordered by rustling palms, colourful beachside bars and seafood restaurants.",
+  "rci-destination-2": "Cancun",
+  "rci-destination-2-paragraph": "Nổi danh khắp thế giới với nhiều quán bar sinh động, các hoạt động về đêm đầy sức sống và thức ăn tuyệt vời, Cancun mang cả hai nét hiện đại và hoài cổ. Từ các khu mua sắm hàng hiệu sầm uất cho đến những khu tàn tích thời Maya xa xưa, từ các hộp đêm kích động cho đến những kim tự tháp cổ đại, nơi này sẽ làm hài lòng tất cả những ý thích của du khách.",
+  "rci-destination-3": "Aruba",
+  "rci-destination-3-paragraph": "Biển cát trắng ngà, làn nước trong xanh và những hàng cây cọ dài vô tận giúp biến nơi này thành địa điểm lý tưởng để thư giãn và ngoạn cảnh thiên nhiên. Hòn đảo hiền hòa này là nơi trú ngụ của nhiều loại chim muông độc đáo, và những vách núi đá vôi và eo biển bí ẩn, sẵn sàng cho cuộc khám phú kỳ thú.",
+  "rci-destination-4": "St. Martin",
+  "rci-destination-4-paragraph": "Hòn đảo này được ảnh hưởng bởi cả hai Hòa Lan và Pháp, và vì vậy, có một nền văn hóa vô cùng độc đáo. Các trò chơi nước như trượt nước, trượt sóng, lộn sóng, lướt ván nước do tàu kéo, lướt ván diều, lái xe trên sóng, chèo thuyền...thu hút nhiều khách đến viếng địa điểm xanh thẳm này. Tương phản với các hoạt động kích thích bên trên là nét trang nhã của những bãi biển êm vắng, nhà hàng và quán ăn ven biển.",
+  "rci-destination-5": "Hawaii",
+  "rci-destination-5-paragraph": "Chỉ cái tên Hawaii thôi đã khơi gợi hình ảnh của những khu rừng nhiệt đới, vách đá sừng sững, thung lũng bất tận, bãi biển tráng vàng, và thác nước như tơ. Nơi thiên nhiên căng nhựa sống này mời gọi du khách hãy thư giãn, sống chậm lại, và tận tình thưởng thức những thời khắc dưới ánh hoàng hôn. Địa điểm này lý tưởng cho các cặp đôi trăng mật hoặc những chuyến du lịch lãng mạn.",
+  "rci-destination-6": "Orlando",
+  "rci-destination-6-paragraph": "Sở thú, công viên giải trí, công viên thủy sinh và nhiều hoạt động dành cho trẻ em giúp địa điểm này thành nơi du lịch dành cho gia đình được viếng thăm nhiều nhất. Dành riêng cho người lớn là các buổi biểu diễn kèm ẩm thực, các sinh hoạt về đêm, các sân gôn, khu mua sắm và thư giãn...",
 
   "alma-title": "Câu Chuyện Về Alma",
   "alma-subtitle": "Tiên Phong Trong Lĩnh Vực Sở Hữu Kỳ Nghỉ",
@@ -184,8 +188,7 @@
   "alma-heading-1-4": "Trách Nhiệm Xã Hội",
   "alma-paragraph-1-4": "Sức khỏe của toàn thể cư dân trong khu nghỉ dưỡng Alma là trách nhiệm chính của chúng tôi. Alma tập trung vào việc tạo nên một không gian xanh và lành mạnh xuyên suốt khu nghỉ dưỡng dẫn ra biển, thông qua các thiết kế kiến trúc và cách dùng năng lượng thông minh, các phương cách hoạt động hiệu suất cao, cùng những chương trình dọn dẹp và bảo tồn hệ sinh thái chung quanh khu nghỉ dưỡng.",
   
-  "founder-name": "About Igal Ahouvi",
+  "founder-name": "Our Founder",
   "founder-paragraph-1": "Igal Ahouvi has a degree in Accounting and Economics from Tel Aviv University, and is currently Chairman of the Board of Blenheim Properties Group Ltd and Ravad Ltd, and director of the Nielsen Innovate Fund. He owns more than £3 billion worth of real estate in Israel, Europe and Vietnam.",
   "founder-paragraph-2": "Igal Ahouvi is not just a billionaire, a businessman, and an avid real estate developer, but a longtime lover of Vietnam - the country, the people, the land - and this love has driven him to build the beautiful and luxurious Alma Resort in the cerulean coastal city of Nha Trang. He wants vacation owners from all over the world to be able to enjoy this paradise in the most luxurious way that will bring families together."
-
 }
