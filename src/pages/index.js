@@ -12,6 +12,7 @@ import CenteredContainer from '../components/layout/CenteredContainer'
 import HorizontalScrollContainer from '../components/layout/HorizontalScrollContainer'
 import AlmaHeader from '../components/Header'
 import { Space, H1, H2, P, UL, LI } from '../components/visual/Typography'
+
 import Button from '../components/visual/Button'
 
 import almaLogoWithBG from '../images/alma/alma-logo-with-bg.svg'
