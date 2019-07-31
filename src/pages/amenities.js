@@ -117,7 +117,7 @@ const Amenities = ({ data, intl }) => {
 
       <CenteredContainer>
         <Space/>
-        <P>Click here to get the latest info on our progress and see photos of our latest contruction updates.</P>
+        <P>Click here to get the latest info on our progress and see photos of our latest construction updates.</P>
         <Space/>
         <ButtonContainer>
           <Link to="/construction">

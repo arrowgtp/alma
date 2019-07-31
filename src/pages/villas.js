@@ -176,7 +176,7 @@ const Villas = ({ data, intl }) => {
 
       <CenteredContainer> 
       <Space/>
-        <P>Click here to learn more about the fabulous food at our world class restuarants and food court.</P>
+        <P>Click here to learn more about the fabulous food at our world class restaurants and food court.</P>
         <Space/>
         <ButtonContainer>
           <Link to="/restaurants">

@@ -136,7 +136,7 @@ const Restaurants = ({ data, intl }) => {
 
       <CenteredContainer>
         <Space/> 
-        <P>Click here to learn more about our incredible and diverse selection lovely amenities, facilities, and activities.</P>
+        <P>Click here to learn more about our incredible and diverse selection of lovely amenities, facilities, and activities.</P>
         <Space/>
         <ButtonContainer>
           <Link to="/amenities">

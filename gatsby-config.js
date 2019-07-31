@@ -36,6 +36,7 @@ module.exports = {
     `gatsby-transformer-yaml`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-remark`,
+    `gatsby-remark-images-medium-zoom`,
     {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
