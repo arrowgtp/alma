@@ -48,6 +48,12 @@ const HeaderTitle = styled.h1`
   }
 `
 
+const LargeHeaderTitle = styled(HeaderTitle)`
+  @media (min-width: 50rem) {
+    padding: calc(60px + (70 - 60) * ((100vw - 300px) / (1600 - 300))) 0;
+  }
+`
+
 const HeaderBackground = styled.div`
   margin: 0;
   padding: 0;

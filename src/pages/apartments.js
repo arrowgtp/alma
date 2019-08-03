@@ -190,7 +190,7 @@ const Apartments = ({ data, intl }) => {
 
       <CenteredContainer>
         <Space/>
-        <P>Click here to learn more about our beautiful and luxurious oceanfront villas, their amenities, and their floorplans.</P>
+        <P>{intl.formatMessage({ id: "apartments-to-villas" })}</P>
         <Space/>
         <ButtonContainer>
           <Link to="/villas">

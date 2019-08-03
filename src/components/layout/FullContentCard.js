@@ -27,11 +27,13 @@ const HeadingContainer = styled.div`
   grid-column: 1 / 9;
   margin: 0 2rem;
   align-self: center;
+  /* justify-self: center; */
   z-index: 5;
 
   @media (min-width: 50rem) {
     grid-column: 2 / 8;
     margin: 0 4rem;
+    /* max-width: 45rem; */
   }
 `
 

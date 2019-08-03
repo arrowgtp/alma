@@ -1,23 +1,26 @@
 {
-
   "title": "The Alma Resort",
   "slogan": "Happiness | Harmony | Home",
   "learn-more-button": "Learn More",
+  "instagram-paragraph": "View and share your own #AlmaVacations photos, videos and memorable moments.",
   "copyright-notice": "© Copyright 2019, Alma USA LLC. All rights reserved.",
   "solicitation-notice": "This website is being used for the purpose of soliciting the sale of timeshare interests.",
 
   "resort-title": "The Resort",
   "resort-subtitle": "Luxury living made easy.",
-  "resort-paragraph-1": "The Alma Resort is a luxurious and exclusive vacation destination for couples and families alike. The first of its kind in the coastal paradise of Nha Trang, the Alma Resort has most recently been awarded with the Asia Pacific Property Award for Best Hotel Architecture in Vietnam in 2016. Every single apartment, condominium, and villa offers a luxurious and uninterrupted vista of golden sun, soft sand, and cerulean sea at any time of the day.",
-  "resort-paragraph-2": "The Alma Resort offers world-class amenities including a cinema, amphitheater, pool bar, ballroom and event venue, convention and business center, gym, sauna and jacuzzi, spa and salon, supermarket and wine store, night club and whiskey bar, golf course, kids club, youth club, sports playground, water park, science museum, library, and many world class restaurants serving mix of international cuisine.",
-  "resort-paragraph-3": "As exclusive Alma Vacation Owners, this 75 acre oasis is your ultimate happiness, harmony, and home, where many generations can come together to share laughter and enjoy relaxation in the comfort of your own sanctuary. Use your time here to journey inwards in your quest for tranquility, or journey outdoors to quench your thirst for adventure. The Alma resort is whatever you want it to be, whenever you want it.",
-  "resort-paragraph-4": "With so much on offer at the Alma resort, you may never need to leave the resort, but if you do decide to venture out into the surrouding area, you will surely not be dissapointed. But at the heart of the Alma experience is our commitment to the very best that the world of hospitatility has to offer.",
+  "resort-intro-paragraph": "The Alma Resort is a luxurious and exclusive vacation destination for couples and families alike. The first of its kind in the coastal paradise of Nha Trang, the Alma Resort has most recently been awarded with the Asia Pacific Property Award for Best Hotel Architecture in Vietnam. Every single apartment, condominium, and villa offers a luxurious and uninterrupted vista of golden sun, soft sand, and cerulean sea at any time of the day.",
+
+  "resort-paragraph-1": "The Alma Resort offers world-class amenities including a cinema, amphitheater, pool bar, ballroom and event venue, convention and business center, gym, sauna and jacuzzi, spa and salon, supermarket and wine store, night club and whiskey bar, golf course, kids club, youth club, sports playground, water park, science museum, library, and many world class restaurants serving mix of international cuisine.",
+  "resort-paragraph-2": "As exclusive Alma Vacation Owners, this 75 acre oasis is your ultimate happiness, harmony, and home, where many generations can come together to share laughter and enjoy relaxation in the comfort of your own sanctuary. Use your time here to journey inwards in your quest for tranquility, or journey outdoors to quench your thirst for adventure. The Alma resort is whatever you want it to be, whenever you want it.",
+  "resort-paragraph-3": "With so much on offer at the Alma resort, you may never need to leave the resort, but if you do decide to venture out into the surrounding area, you will surely not be disappointed, as the coastal city of Nha Trang boasts some of the most beautiful coastline in all of Vietnam. But at the heart of the Alma experience is our commitment to the very best that the art and craft of hospitality has to offer.",
+  "resort-paragraph-4": "When you consider the quality of our accommodations, the plethora of beautiful world-class restaurants, the exhaustive and all encompassing amenities that cover any and all possible desires, easy access to and from the local international airport, and the surrounding city and all of its beauty, it's easy to see why the Alma Resort should be the next vacation destination for you, your friends, and your family.",
+  "resort-to-apartments": "Click here to learn more about our beautiful ocean view apartments, their floor plans, and all the amenities that they have to offer our members.",
 
   "apartments-title": "Apartments",
   "apartments-subtitle": "Oceans all around you",
-  "apartments-intro-paragraph": "Your Alma resort journey begins in our lovingly apointed apartments. Every single one of our oceanview apartments has a full, unobstructed view of the sand and surf, and they offer suite level amenities for all of our guests.",
+  "apartments-intro-paragraph": "Your Alma Resort journey begins in our lovingly appointed apartments. Every single one of our oceanview apartments has a full, unobstructed view of the sand and surf, and they offer suite level amenities for all of our guests.",
 
-  "apartments-paragraph-1": "Walking through the door you are greeted with a beautiful vista of the ocean framed by crystal clear sliding glass doors. Surrounding your view are lovely and modern furnishings to make you feel right at home the moment you walk inside.",
+  "apartments-paragraph-1": "Walking through the door, you are greeted with a beautiful vista of the ocean framed by crystal clear sliding glass doors. Surrounding your view are lovely and modern furnishings to make you feel right at home the moment you walk inside.",
   "apartments-paragraph-2": "The kitchen is fully equiped and ready to help you create the most delishious of dishes. With sleek, flush cabinets and soft muted pastel colors you will feel relaxed and rejuvenated as you prepare dinner for your family by candle light.",
   "apartments-paragraph-3": "The bedrooms are appointed in the same elegant and modern manner as the rest of the apartment, creating a seamless experience from room to room. Soft lighting and the calming sounds of the ocean waves will lull you to sleep at night, so you can restore your energy and prepare for the day events that will follow tomorrow.",
   "apartments-paragraph-4": "The bathrooms complete the soft and serene sense of peace that accompanies the rest of the apartment. Beautiful marble countertops and soft sandy tiles will help you wash the day away as you sink into your full body bathtub and let your mind wander deep into your wildest dreams.",
@@ -42,14 +45,16 @@
   "floorplan-h": "Type H",
   "floorplan-h-placeholder": "Coming soon...",
 
+  "apartments-to-villas": "Click here to learn more about our beautiful and luxurious oceanfront villas, their amenities, and their floor plans.",
+
   "villas-title": "Villas",
   "villas-subtitle": "The sand at your feet.",
   "villas-intro-paragraph": "If our apartments are just a bit too cozy for your growing family and active lifestyle, then our villas will be just the thing that you are looking for. Every villa has direct access to the soft sandy beach and offers a residential living style more suited to larger groups.",
 
-  "villas-paragraph-1": "As soon as you step foot in one of our luxuriously appointed villas you will feel right at home. Every aspect of our villas has been designed to stimulate the senses and relax the mind. Your own private infinity pool or hot tub will offer you the most effortless vista of the glistening coastal waters that you could ever imagine.",
+  "villas-paragraph-1": "As soon as you step foot into one of our luxuriously appointed villas, you will feel right at home. Every aspect of our villas has been designed to stimulate the senses and relax the mind. Your own private infinity pool or hot tub will offer you the most effortless vista of the glistening coastal waters that you could ever imagine.",
   "villas-paragraph-2": "The living rooms of our villas are crafted with the same meticulous attention to detail and luxurious modern amenities as our apartments, but the stakes have been raised in regards to capacity, with larger dining tables, couches, and a more open and airy space.",
   "villas-paragraph-3": "The same feelings of calm and cool will envelope you in our villa bedrooms, with soft, muted tones, and mellow, diffuse lighting, while allowing access to your own private patio.",
-  "villas-paragraph-4": "The bathrooms take it a step further as well, with meaningful and luxurious upgrades to the appointments that will truly set this vacation destination apart. After a long day of activities and a  lovely dinner, with maybe a movie on the side, sinking into the hot tub will feel like time has stood still.",
+  "villas-paragraph-4": "The bathrooms take it a step further as well, with meaningful and luxurious upgrades to the appointments that will truly set this vacation destination apart. After a long day of activities and a lovely dinner, with maybe a movie on the side, sinking into the hot tub will feel like time has stood still.",
 
   "floorplan-d": "Type D",
   "floorplan-d-size": "Square Footage: 182.7 m² / 1,967 ft2",
@@ -71,13 +76,18 @@
   "floorplan-g-bedrooms": "Bedrooms: 2",
   "floorplan-g-capacity": "Capacity: 7 people",
 
+  "villas-to-restaurants": "Click here to learn more about the fabulous food at our world class restaurants and food court",
+
   "restaurants-title": "Restaurants",
-  "restaurants-paragraph-1": "The Alma Resort is filled with beautiful and diverse world class restaurants that can satisfy any taste at any time of the day or night. The all day diner will serve only the best fare from around the world. ",
+  "restaurants-intro-paragraph": "Your accommodations at the Alma Resort are only the beginning of this magical oasis of tranquility, as the grounds are also filled with beautiful and diverse world class restaurants that can satisfy any craving that you may have at any time of the day or night.",
+
+  "restaurants-paragraph-1": "The all day diner is the main restaurant of the resort and will serve only the best fare from around the world and aims to meet your most common cravings when you have them.",
   "restaurants-paragraph-2": "There is a lovely bar and grill by the beach for those times when you want a little bit of sun and surf with your meal or drink.",
   "restaurants-paragraph-3": "The asian themed restaurant will feature signature dishes from around the continent to satisfy even the most discerning patron.",
   "restaurants-paragraph-4": "The Italian restaurant will specialize in cured meats, fresh pastas and pizzas and the most delicate and complex cheeses directly from Italy.",
   "restaurants-paragraph-5": "The food court will be filled with all sorts of interesting and compelling offerings from around the world, including local fare from installed food trucks, offering authentic street food and drinks.",
   "restaurants-paragraph-6": "The Pub will specialize in exotic and original crafted cocktails featuring fresh local ingredients and novel serving techniques, bringing flare and artistry to your thirst.",
+  
   "restaurants-list": "Food & Drink",
   "restaurants-list-point-1": "Main Restaurant",
   "restaurants-list-point-2": "Italian Restaurant",
@@ -91,11 +101,13 @@
   "restaurants-list-point-10": "Karaoke Bar",
   "restaurants-list-point-11": "Coffee and Bakery Lounge",
 
-  "amenities-title": "Amenities",
-  "amenities-subtitle": "All the worlds pleasures.",
-  "amenities-intro-paragraph": "With world-class amenities and a plethora of activities, Alma wishes to provide you and your family with luxury, comfort, convenience, and excitement.",
+  "restaurants-to-amenities": "Click here to learn more about our incredible and diverse selection of lovely amenities, facilities, and activities.",
 
-  "amenities-paragraph-1": "As you enter our resort you will be greeted be a warm and inviting staff, who take pride in showing you the best that this tropical paradise has to offer. The feeling of the outdoors and the indoors meeting together will give this resort a sense of connection with nature.",
+  "amenities-title": "Amenities",
+  "amenities-subtitle": "",
+  "amenities-intro-paragraph": "With world-class amenities and a plethora of activities, the Alma Resort is overjoyed to provide you and your family with luxury, comfort, convenience, and excitement just around every corner.",
+
+  "amenities-paragraph-1": "As you enter our resort you will be greeted by a warm and inviting staff, who take pride in showing you the best that this tropical paradise has to offer. The feeling of the outdoors and the indoors meeting together will give this resort a sense of connection with nature.",
   "amenities-paragraph-2": "And as you wait for your friends and family to arrive and join you in this home away from home, you could always head over to the lobby lounge and grab a lovingly crafted cocktail or a delicious and unique bite to eat.",
   "amenities-paragraph-3": "Should you desire to host an event at our resort then you will be thrilled with our convention center, located right inside the resort. Perfect for any sort of event that you would wish to organize, we will do our best to provide every guest and patrons with the utmost in customer care and support.",
   "amenities-paragraph-4": "Our world class ballrooms would be perfect for any sort of formal or informal event that you would like to throw as well. Wedding receptions would be especially lovely in your exceptionally appointed venues located around the resort.",
@@ -120,9 +132,11 @@
   "amenities-list-point-17": "Shops",
   "amenities-list-point-18": "Parking",
 
+  "amenities-to-construction": "Click here to get the latest info on our progress and see photos of our latest construction updates.",
+
   "construction-title": "Construction",
-  "construction-subtitle": "Every journey begins with a shovel and a dream.",
-  "construction-intro-paragraph": "Keep up with all the latest information about the resort and its contruction progress here. Will we posting new pictures and status reports every month up until the resorts opening.",
+  "construction-subtitle": "",
+  "construction-intro-paragraph": "Keep up with all the latest information about the resort and its construction progress here. Will we posting new pictures and status reports every month up until the resorts opening.",
 
   "construction-month": "June 2019",
   "construction-paragraph-1": "As of June 2019, we have conducted various activities to accelerate construction progress. In addition to focusing on the main towers and villa sections, our contractors are constructing public areas, planting trees, and bringing a whole new appearance to the beautiful resort.",
@@ -130,13 +144,15 @@
   "construction-paragraph-3": "In regards to public areas, construction is progressing nicely in the interior and exterior of the main check-in lobby, food court, water park, Italian restaurant, amphitheatre, and walkway from the towers leading to the beach.",
   "construction-paragraph-4": "We will continue to keep you informed with up-to-date information regarding the construction progress of Alma Resort.",
 
+  "construction-to-vacations": "Click here to see the amazing vacations options that joining the Alma Resort will give you.",
+
   "vacations-title": "Vacations",
-  "vacations-intro-paragraph": "When you join the Alma family you are also opening up a world of possibility, becasue you also become part of the RCI network, which will unlock a gateway to expereince everything that the world ahs to offer.",
+  "vacations-subtitle": "Discover more with Alma Vacations",
+  "vacations-intro-paragraph": "When you join the Alma family you are also opening up a world of possibility, because you also become part of the RCI network, which will unlock a gateway to experience everything that the world has to offer.",
 
   "rci-heading-1": "Vacation Ownership",
   "rci-paragraph-1": "Vacation ownership is a premium vacation model for families, offering outstanding economic benefits, a wide selection of destinations, all while ensuring that past, present and future generations of your family will create even stronger bonds that will grow deeper with time. Different from other conventional forms of travelling, Alma Vacation Ownership is a legacy that you pass down from generation to generation.",
 
-  
   "rci-heading-2": "RCI Vacation Exchange Network",
   "rci-paragraph-2": "Alma is part of the RCI network - the world’s largest vacation exchange service provider with more than 40 years of vacation expertise, with 3.8 million subscribing members, all conducting 60 million vacation exchanges. RCI’s flexible vacation exchange program offers 4300 hotels and resorts in more than 110 countries globally, and 10,000 cruise itineraries. With a membership to RCI the world is truly at your feet. Visit www.rci.com for more details.",
 
@@ -159,8 +175,7 @@
   "rci-destinations-title": "Destinations",
 
   "rci-destination-1": "Nha Trang",
-  "rci-destination-1-paragraph": "Sun-kissed relaxation is an everyday thing in the bustling coastal town of Nha Trang. After all, this is a place with more days of sunshine per year than anywhere else in Vietnam. The town’s main beach, Tran Phu, a seven-kilometre stretch of pristine sand and clear water, bordered by rustling palms, colourful beachside bars and seafood restaurants.",
-
+  "rci-destination-1-paragraph": "Sun-kissed relaxation is an everyday thing in the bustling coastal town of Nha Trang, with more days of sunshine per year than anywhere else in Vietnam. The town’s main beach, Tran Phu, a seven-kilometre stretch of pristine sand and clear water, bordered by rustling palms, colourful beachside bars and delicious seafood restaurants. Nha Trang also has therapeutic clay mud baths, complete with water slides and pools and other water sports for a unique experience.",
   "rci-destination-2": "Cancun",
   "rci-destination-2-paragraph": "World famous for lively bars, alluring nightlife and delicious cuisine, Cancun is both modern and historic. From designer shopping to the Mayan ruins, from hot night clubs to ancient pyramids, it will please every side of the traveler in you.",
   "rci-destination-3": "Aruba",
@@ -172,8 +187,10 @@
   "rci-destination-6": "Orlando",
   "rci-destination-6-paragraph": "Zooes, theme parks, aquariums, and many kid-friendly attractions have solidified Orlando as the number one family vacation destination. For the adults, there are dining shows, nightlife, golf, shopping, spa and much more.",
 
+  "vacations-to-alma": "Click here to learn all about Alma, our story, and our mission to provide vacationers with the utmost in quality and relaxation.",
+
   "alma-title": "About Alma",
-  "alma-subtitle": "The Alma Resort is a pioneer of vacation ownership in Vietnam. We strive to create a lovingly crafted and luxurious apointed escape for you and your family to enjoy for years to come in the tropical paradise of Nha Trang.",
+  "alma-intro-paragraph": "The Alma Resort is a pioneer of vacation ownership in Vietnam. We strive to create a lovingly crafted and luxurious appointed escape for you and your family to enjoy for years to come in the tropical paradise of Nha Trang.",
   "alma-heading-1": "The Alma Promise",
   "alma-heading-1-1": "Vision",
   "alma-paragraph-1-1": "Alma aims to become the first luxury vacation ownership club of its kind in Vietnam, with world-class amenities, first-rate hospitality services, and unmatched architectural design.",
@@ -191,5 +208,7 @@
 
   "founder-name": "Our Founder",
   "founder-paragraph-1": "Igal Ahouvi has a degree in Accounting and Economics from Tel Aviv University, and is currently Chairman of the Board of Blenheim Properties Group Ltd and Ravad Ltd, and director of the Nielsen Innovate Fund. He owns more than £3 billion worth of real estate in Israel, Europe and Vietnam.",
-  "founder-paragraph-2": "Igal Ahouvi is not just a billionaire, a businessman, and an avid real estate developer, but a longtime lover of Vietnam - the country, the people, the land - and this love has driven him to build the beautiful and luxurious Alma Resort in the cerulean coastal city of Nha Trang. He wants vacation owners from all over the world to be able to enjoy this paradise in the most luxurious way that will bring families together."
+  "founder-paragraph-2": "Igal Ahouvi is not just a billionaire, a businessman, and an avid real estate developer, but a longtime lover of Vietnam - the country, the people, the land - and this love has driven him to build the beautiful and luxurious Alma Resort in the cerulean coastal city of Nha Trang. He wants vacation owners from all over the world to be able to enjoy this paradise in the most luxurious way that will bring families together.",
+
+  "alma-to-home": "Click here to head back home and make sure that you didn't miss any of the wonderful vacation opportunities that the Alma Resort has to offer."
 }

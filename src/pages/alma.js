@@ -76,7 +76,7 @@ const Alma = ({ intl, data }) => {
 
         <CenteredContainer>
         <Space/>
-        <P>Head back home now and learn more about all of the wonderful vacation opportunites that could be yours.</P>
+        <P>{intl.formatMessage({ id: "alma-to-home" })}</P>
         <Space/>
         <ButtonContainer>
           <Link to="/">

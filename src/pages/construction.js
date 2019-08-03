@@ -84,7 +84,7 @@ const Construction = ({ data, intl }) => {
         
       <CenteredContainer>
         <Space/>
-        <P>Click here to see the amazing vacations options that joining the alma resort will give you.</P>
+        <P>{intl.formatMessage({ id: "construction-to-vacations" })}</P>
         <Space/>
         <ButtonContainer>
           <Link to="/vacations">

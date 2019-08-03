@@ -109,7 +109,7 @@ const Resort = ({ data, intl }) => {
 
       <CenteredContainer>
         <Space/>
-        <P>Click here to learn more about our beautiful oceanview apartments, their floorplans, and all the amenities that they have to offer our members.</P>
+        <P>{intl.formatMessage({ id: "resort-to-apartments" })}</P>
         <Space/>
         <ButtonContainer>
           <Link to="/apartments">

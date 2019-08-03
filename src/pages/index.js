@@ -475,7 +475,7 @@ const Index = ({ data, intl }) => {
         <Space/>
         <AlmaHeader blue title={intl.formatMessage({ id: "resort-title" })} />
         <Space/>
-        <P>{intl.formatMessage({ id: "resort-paragraph-1" })}</P>
+        <P>{intl.formatMessage({ id: "resort-intro-paragraph" })}</P>
         <Space/>
         <ButtonContainer>
           <Link to="/resort">
@@ -552,7 +552,7 @@ const Index = ({ data, intl }) => {
         <Space/>
         <AlmaHeader white title={intl.formatMessage({ id: "restaurants-title" })} />
         <Space/>
-        <P>{intl.formatMessage({ id: "restaurants-paragraph-1" })}</P>
+        <P>{intl.formatMessage({ id: "restaurants-intro-paragraph" })}</P>
         <Space/>
         <ButtonContainer>
           <Link to="/restaurants">
@@ -644,7 +644,7 @@ const Index = ({ data, intl }) => {
         <Space/>
         <AlmaHeader blue title={intl.formatMessage({ id: "alma-title" })} />
         <Space/>
-        <P>{intl.formatMessage({ id: "alma-paragraph-1-1" })}</P>
+        <P>{intl.formatMessage({ id: "alma-intro-paragraph" })}</P>
         <Space/>
         <ButtonContainer>
           <Link to="/vacations">
@@ -691,6 +691,8 @@ const Index = ({ data, intl }) => {
         
       <CenteredContainer>
         <AlmaHeader blue title='Instagram' />
+        <Space/>
+        <P>{intl.formatMessage({ id: "instagram-paragraph" })}</P>
       </CenteredContainer>
 
       <FullWidthContainer>
