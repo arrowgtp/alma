@@ -42,16 +42,33 @@ const Construction = ({ data, intl }) => {
         <Space/>
         <AlmaHeader
           blue
-          title={intl.formatMessage({ id: "construction-month" })}
+          title={intl.formatMessage({ id: "construction-july-2019" })}
         />
         <Space/>
-        <P>{intl.formatMessage({ id: "construction-paragraph-1" })}</P>
+        <P>{intl.formatMessage({ id: "construction-july-2019-paragraph-1" })}</P>
         <Space/>
-        <P>{intl.formatMessage({ id: "construction-paragraph-2" })}</P>
+        <P>{intl.formatMessage({ id: "construction-july-2019-paragraph-2" })}</P>
         <Space/>
-        <P>{intl.formatMessage({ id: "construction-paragraph-3" })}</P>
+        <P>{intl.formatMessage({ id: "construction-july-2019-paragraph-3" })}</P>
         <Space/>
-        <P>{intl.formatMessage({ id: "construction-paragraph-4" })}</P>
+        <P>{intl.formatMessage({ id: "construction-july-2019-paragraph-4" })}</P>
+        <Space/>
+      </CenteredContainer>
+
+      <CenteredContainer>
+        <Space/>
+        <AlmaHeader
+          blue
+          title={intl.formatMessage({ id: "construction-june-2019" })}
+        />
+        <Space/>
+        <P>{intl.formatMessage({ id: "construction-june-2019-paragraph-1" })}</P>
+        <Space/>
+        <P>{intl.formatMessage({ id: "construction-june-2019-paragraph-2" })}</P>
+        <Space/>
+        <P>{intl.formatMessage({ id: "construction-june-2019-paragraph-3" })}</P>
+        <Space/>
+        <P>{intl.formatMessage({ id: "construction-june-2019-paragraph-4" })}</P>
         <Space/>
       </CenteredContainer>
       <FullWidthContainer>

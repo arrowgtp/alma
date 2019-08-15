@@ -538,13 +538,34 @@ const Index = ({ data, intl }) => {
 
       <FullWidthContainer>
         <HorizontalScrollContainer blue>
-          <Card><CardImg fluid={data.june7.childImageSharp.fluid}/></Card>
-          <Card><CardImg fluid={data.realVillaExterior1.childImageSharp.fluid}/></Card>
-          <Card><CardImg fluid={data.realVillaExterior2.childImageSharp.fluid}/></Card>
-          <Card><CardImg fluid={data.realVillaExterior3.childImageSharp.fluid}/></Card>
-          <Card><CardImg fluid={data.realVillaInterior1.childImageSharp.fluid}/></Card>
-          <Card><CardImg fluid={data.realVillaInterior2.childImageSharp.fluid}/></Card>
-          <Card><CardImg fluid={data.realVillaInterior3.childImageSharp.fluid}/></Card>
+          <Card>
+            <CardImg fluid={data.june7.childImageSharp.fluid}/>
+            <CardCaption>Actual Image</CardCaption>
+          </Card>
+          <Card>
+            <CardImg fluid={data.realVillaExterior1.childImageSharp.fluid}/>
+            <CardCaption>Actual Image</CardCaption>
+          </Card>
+          <Card>
+            <CardImg fluid={data.realVillaExterior2.childImageSharp.fluid}/>
+            <CardCaption>Actual Image</CardCaption>
+          </Card>
+          <Card>
+            <CardImg fluid={data.realVillaExterior3.childImageSharp.fluid}/>
+            <CardCaption>Actual Image</CardCaption>
+          </Card>
+          <Card>
+            <CardImg fluid={data.realVillaInterior1.childImageSharp.fluid}/>
+            <CardCaption>Actual Image</CardCaption>
+          </Card>
+          <Card>
+            <CardImg fluid={data.realVillaInterior2.childImageSharp.fluid}/>
+            <CardCaption>Actual Image</CardCaption>
+          </Card>
+          <Card>
+            <CardImg fluid={data.realVillaInterior3.childImageSharp.fluid}/>
+            <CardCaption>Actual Image</CardCaption>
+          </Card>
         </HorizontalScrollContainer>
       </FullWidthContainer>
 
@@ -564,13 +585,34 @@ const Index = ({ data, intl }) => {
 
       <FullWidthContainer>
         <HorizontalScrollContainer blue>
-          <Card><CardImg fluid={data.june14.childImageSharp.fluid}/></Card>
-          <Card><CardImg fluid={data.allDayDiner1.childImageSharp.fluid}/><CardCaption>Artist Rendering</CardCaption></Card>
-          <Card><CardImg fluid={data.beachBar2.childImageSharp.fluid}/><CardCaption>Artist Rendering</CardCaption></Card>
-          <Card><CardImg fluid={data.asianRestaurant.childImageSharp.fluid}/><CardCaption>Artist Rendering</CardCaption></Card>
-          <Card><CardImg fluid={data.foodCourt1.childImageSharp.fluid}/><CardCaption>Artist Rendering</CardCaption></Card>
-          <Card><CardImg fluid={data.italianRestaurant.childImageSharp.fluid}/><CardCaption>Artist Rendering</CardCaption></Card>
-          <Card><CardImg fluid={data.pub1.childImageSharp.fluid}/><CardCaption>Artist Rendering</CardCaption></Card>
+          <Card>
+            <CardImg fluid={data.june14.childImageSharp.fluid}/>
+            <CardCaption>Actual Image</CardCaption>
+          </Card>
+          <Card>
+            <CardImg fluid={data.allDayDiner1.childImageSharp.fluid}/>
+            <CardCaption>Artist Rendering</CardCaption>
+          </Card>
+          <Card>
+            <CardImg fluid={data.beachBar2.childImageSharp.fluid}/>
+            <CardCaption>Artist Rendering</CardCaption>
+          </Card>
+          <Card>
+            <CardImg fluid={data.asianRestaurant.childImageSharp.fluid}/>
+            <CardCaption>Artist Rendering</CardCaption>
+          </Card>
+          <Card>
+            <CardImg fluid={data.foodCourt1.childImageSharp.fluid}/>
+            <CardCaption>Artist Rendering</CardCaption>
+          </Card>
+          <Card>
+            <CardImg fluid={data.italianRestaurant.childImageSharp.fluid}/>
+            <CardCaption>Artist Rendering</CardCaption>
+          </Card>
+          <Card>
+            <CardImg fluid={data.pub1.childImageSharp.fluid}/>
+            <CardCaption>Artist Rendering</CardCaption>
+          </Card>
         </HorizontalScrollContainer>
       </FullWidthContainer>
 
