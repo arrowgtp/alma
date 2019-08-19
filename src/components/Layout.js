@@ -18,7 +18,7 @@ import Contact from './Contact'
 const Layout = ({ children }) => {
   return (
     <Fragment>
-      <AnimatedLogo/>
+      {/* <AnimatedLogo/> */}
       <App>
         <Menu>
           <Logo/>

@@ -5,7 +5,8 @@ const FullContentCard = styled.div`
   grid-column: 1 / 4;
   margin: 0;
   padding: 0;
-  height: 90vh;
+  /* height: 90vh; */
+  height: calc(var(--vh, 1vh) * 90);
   display: grid;
   grid-template-rows: repeat(8, 1fr);
   grid-template-columns: repeat(8, 1fr);
