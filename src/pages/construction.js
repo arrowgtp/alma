@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 import { Link, injectIntl } from 'gatsby-plugin-intl'
 import styled from 'styled-components'
 // import Img from 'gatsby-image'
-import SEO from "../components/seo"
+import SEO from '../components/seo'
 
 import { FullContentCard, FullContentImage, HeadingContainer } from '../components/layout/FullContentCard'
 import ViewContainer from '../components/layout/ViewContainer'
