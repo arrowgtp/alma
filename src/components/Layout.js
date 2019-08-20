@@ -1,5 +1,4 @@
 import React, { Fragment } from 'react'
-// import styled from 'styled-components'
 import { injectIntl } from 'gatsby-plugin-intl'
 
 // import { Context } from "./Context"
@@ -7,9 +6,9 @@ import { injectIntl } from 'gatsby-plugin-intl'
 import './Layout.css'
 
 import AnimatedLogo from './AnimatedLogo'
-import App from './layout/AppContainer'
-import Main from './layout/ContentContainer'
-import Menu from './Menu'
+import App from './layout/App'
+import Main from './layout/Main'
+import Menu from './layout/Menu'
 
 import Logo from './Logo'
 import Nav from './Navigation'

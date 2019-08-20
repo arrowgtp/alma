@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import styled from 'styled-components'
 
-const Main = styled.main`
+const MainContainer = styled.main`
   margin: 0;
   padding: 0;
   grid-column: 1 / 4;
@@ -23,7 +23,7 @@ const Main = styled.main`
   }
 `
 
-const ContentContainer = ({ children }) => {
+const Main = ({ children }) => {
 
   // const elementRef = useRef()
 
@@ -32,15 +32,15 @@ const ContentContainer = ({ children }) => {
   // }, [])
 
    useEffect(() => {
-    setTimeout(() => document.getElementById('ContentContainer').scrollTop = 0, 0);
+    setTimeout(() => document.getElementById('MainContainer').scrollTop = 0, 0);
   })
 
   return (
     // <Main ref={elementRef}>
-    <Main id='ContentContainer'>
+    <MainContainer id='MainContainer'>
       {children}
-    </Main>
+    </MainContainer>
   )
 }
 
-export default ContentContainer
+export default Main

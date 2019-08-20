@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
 
-const App = styled(motion.div)`
+const AppContainer = styled(motion.div)`
   margin: 0;
   padding: 0;
   width: 100vw;
@@ -28,12 +28,12 @@ const App = styled(motion.div)`
   }
 `
 
-const AppContainer = ({ children }) => {
+const App = ({ children }) => {
   return (
-    <App animate={{ opacity: 1 }} transition={{ ease: 'easeInOut', duration: 1, delay: 0 }}>
+    <AppContainer animate={{ opacity: 1 }} transition={{ ease: 'easeInOut', duration: 1, delay: 0 }}>
       {children}
-    </App>
+    </AppContainer>
   )
 }
 
-export default AppContainer
+export default App
