@@ -20,10 +20,11 @@ const SmallAlmaLogo = styled(Link)`
   > img {
     height: auto;
     width: 100%;
-    max-width: 6rem;
+    width: calc(80px + (160 - 80) * ((100vw - 300px) / (1600 - 300)));
+    /* max-width: 5rem; */
     margin: 0;
     padding: 8px;
-    margin-top: -24px;
+    margin-top: -16px;
     background: white;
     border-radius: 50% 50% 0 0;
   }
