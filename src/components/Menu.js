@@ -44,14 +44,36 @@ import { injectIntl } from 'gatsby-plugin-intl'
 //   }
 // `
 
+// const SmallMenuContainer = styled.div`
+//   margin: 0;
+//   padding: 0;
+//   position: fixed;
+//   bottom: 0;
+//   left: 0;
+//   right: 0;
+//   height: 10vh;
+//   background: white;
+//   display: grid;
+//   grid-template-columns: 1fr 1fr 1fr;
+//   grid-template-rows: 1fr;
+//   z-index: 1000;
+//   box-shadow: 0px 0px 64px rgba(0, 0, 0, 0.25);
+
+//   @media (min-width: 50rem) {
+//     display: none;
+//   }
+// `
+
 const SmallMenuContainer = styled.div`
   margin: 0;
   padding: 0;
-  position: fixed;
+  grid-column: 1 / 4;
+  grid-row: 3 / 4;
+  /* position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
-  height: 10vh;
+  height: 10vh; */
   background: white;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;

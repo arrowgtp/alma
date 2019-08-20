@@ -50,6 +50,7 @@ const FullCaption = styled.caption`
   margin: 1rem;
   padding: 0;
   z-index: 2;
+  opacity: 0.5;
 `
 
 export { FullContentCard, FullContentImage, HeadingContainer, FullCaption }

@@ -36,7 +36,7 @@ const Alma = ({ intl, data }) => {
 
       <CenteredContainer>
         <Space/>
-        <P>{intl.formatMessage({ id: "alma-subtitle" })}</P>
+        <P>{intl.formatMessage({ id: "alma-intro-paragraph-2" })}</P>
         <Space/>
         <H1>{intl.formatMessage({ id: "alma-heading-1" })}</H1>
         <Space/>
