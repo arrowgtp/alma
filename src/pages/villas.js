@@ -198,7 +198,7 @@ const Villas = ({ data, intl }) => {
 
 export const query = graphql`
   query {
-    villaExterior1: file(relativePath: { eq: "villas/villa-exterior-1-4x3.jpg" }) {
+    villaExterior1: file(relativePath: { eq: "villas/villa-exterior-render-1-4x3.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 2880) {
           ...GatsbyImageSharpFluid_withWebp
@@ -247,28 +247,28 @@ export const query = graphql`
         }
       }
     }
-    villaLivingRoom1: file(relativePath: { eq: "villas/villa-living-room-1-4x3.jpg" }) {
+    villaLivingRoom1: file(relativePath: { eq: "villas/villa-living-room-render-1-4x3.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 2880) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
-    villaLivingRoom2: file(relativePath: { eq: "villas/villa-living-room-2-4x3.jpg" }) {
+    villaLivingRoom2: file(relativePath: { eq: "villas/villa-living-room-render-2-4x3.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 2880) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
-    villaBedroom1: file(relativePath: { eq: "villas/villa-bedroom-1-4x3.jpg" }) {
+    villaBedroom1: file(relativePath: { eq: "villas/villa-bedroom-render-1-4x3.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 2880) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
-    villaBathroom1: file(relativePath: { eq: "villas/villa-bathroom-1-4x3.jpg" }) {
+    villaBathroom1: file(relativePath: { eq: "villas/villa-bathroom-render-1-4x3.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 2880) {
           ...GatsbyImageSharpFluid_withWebp
