@@ -16,6 +16,7 @@ import { Space, H1, H2, P, UL, LI } from '../components/visual/Typography'
 import Button from '../components/visual/Button'
 
 import almaLogoWithBG from '../images/alma/alma-logo-with-bg.svg'
+import almaLogoWhite from '../images/alma/alma-logo-white.svg'
 
 import Footer from '../components/Footer'
 
@@ -104,6 +105,19 @@ const CardCaption = styled.caption`
   margin: 0.75rem;
   padding: 0;
   z-index: 2;
+  opacity: 0.75;
+`
+
+const CardWatermark = styled.img`
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 0.75rem;
+  padding: 0;
+  z-index: 2;
+  width: 12%;
+  height: auto;
+  opacity: 0.75;
 `
 
 const RCIMap = styled(FullContentImage)`
@@ -457,6 +471,12 @@ const InstaScrim = styled.div`
   border-radius: 16px;
 `
 
+const Watermark = () => {
+  return(
+    <CardWatermark src={almaLogoWhite}/>
+  )
+}
+
 const Index = ({ data, intl }) => {
 
   return (
@@ -469,6 +489,7 @@ const Index = ({ data, intl }) => {
         <PageSlogan>{intl.formatMessage({ id: "slogan" })}</PageSlogan>
         <FullContentImage fluid={data.resortOverview.childImageSharp.fluid}/>
         <FullCaption>Artist Rendering</FullCaption>
+        {/* <Watermark/> */}
       </FullContentCard>
   
       <CenteredContainer>
@@ -485,18 +506,35 @@ const Index = ({ data, intl }) => {
         <Space/>
       </CenteredContainer>
   
-        <FullWidthContainer>
-          <HorizontalScrollContainer orange>
-            <Card>
-              <CardImg fluid={data.almaResort1.childImageSharp.fluid}/>
-              <CardCaption>Artist Rendering</CardCaption>
-            </Card>
-            <Card><CardImg fluid={data.almaResort2.childImageSharp.fluid}/><CardCaption>Artist Rendering</CardCaption></Card>
-            <Card><CardImg fluid={data.almaResort3.childImageSharp.fluid}/><CardCaption>Artist Rendering</CardCaption></Card>
-            <Card><CardImg fluid={data.almaResort4.childImageSharp.fluid}/><CardCaption>Artist Rendering</CardCaption></Card>
-            <Card><CardImg fluid={data.almaResort1.childImageSharp.fluid}/><CardCaption>Artist Rendering</CardCaption></Card>
-          </HorizontalScrollContainer>
-        </FullWidthContainer>
+      <FullWidthContainer>
+        <HorizontalScrollContainer orange>
+          <Card>
+            <CardImg fluid={data.almaResort1.childImageSharp.fluid}/>
+            <CardCaption>Artist Rendering</CardCaption>
+            <CardWatermark src={almaLogoWhite}/>
+          </Card>
+          <Card>
+            <CardImg fluid={data.almaResort2.childImageSharp.fluid}/>
+            <CardCaption>Artist Rendering</CardCaption>
+            <CardWatermark src={almaLogoWhite}/>
+          </Card>
+          <Card>
+            <CardImg fluid={data.almaResort3.childImageSharp.fluid}/>
+            <CardCaption>Artist Rendering</CardCaption>
+            <CardWatermark src={almaLogoWhite}/>
+          </Card>
+          <Card>
+            <CardImg fluid={data.almaResort4.childImageSharp.fluid}/>
+            <CardCaption>Artist Rendering</CardCaption>
+            <CardWatermark src={almaLogoWhite}/>
+          </Card>
+          <Card>
+            <CardImg fluid={data.almaResort1.childImageSharp.fluid}/>
+            <CardCaption>Artist Rendering</CardCaption>
+            <CardWatermark src={almaLogoWhite}/>
+          </Card>
+        </HorizontalScrollContainer>
+      </FullWidthContainer>
 
       <CenteredContainer>
         <Space/>
@@ -514,11 +552,31 @@ const Index = ({ data, intl }) => {
 
       <FullWidthContainer>
         <HorizontalScrollContainer blue> 
-          <Card><CardImg fluid={data.apartmentLivingRoom1.childImageSharp.fluid}/><CardCaption>Artist Rendering</CardCaption></Card>
-          <Card><CardImg fluid={data.apartmentLivingRoom2.childImageSharp.fluid}/><CardCaption>Artist Rendering</CardCaption></Card>
-          <Card><CardImg fluid={data.apartmentKitchen.childImageSharp.fluid}/><CardCaption>Artist Rendering</CardCaption></Card>
-          <Card><CardImg fluid={data.apartmentBedroom.childImageSharp.fluid}/><CardCaption>Artist Rendering</CardCaption></Card>
-          <Card><CardImg fluid={data.apartmentBathroom.childImageSharp.fluid}/><CardCaption>Artist Rendering</CardCaption></Card>
+          <Card>
+            <CardImg fluid={data.apartmentLivingRoom1.childImageSharp.fluid}/>
+            <CardCaption>Artist Rendering</CardCaption>
+            <Watermark/>
+            </Card>
+          <Card>
+            <CardImg fluid={data.apartmentLivingRoom2.childImageSharp.fluid}/>
+            <CardCaption>Artist Rendering</CardCaption>
+            <Watermark/>
+          </Card>
+          <Card>
+            <CardImg fluid={data.apartmentKitchen.childImageSharp.fluid}/>
+            <CardCaption>Artist Rendering</CardCaption>
+            <Watermark/>
+          </Card>
+          <Card>
+            <CardImg fluid={data.apartmentBedroom.childImageSharp.fluid}/>
+            <CardCaption>Artist Rendering</CardCaption>
+            <Watermark/>
+          </Card>
+          <Card>
+            <CardImg fluid={data.apartmentBathroom.childImageSharp.fluid}/>
+            <CardCaption>Artist Rendering</CardCaption>
+            <Watermark/>
+          </Card>
         </HorizontalScrollContainer>
       </FullWidthContainer>
 
@@ -541,30 +599,37 @@ const Index = ({ data, intl }) => {
           <Card>
             <CardImg fluid={data.june7.childImageSharp.fluid}/>
             <CardCaption>Actual Image</CardCaption>
+            <Watermark/>
           </Card>
           <Card>
             <CardImg fluid={data.realVillaExterior1.childImageSharp.fluid}/>
             <CardCaption>Actual Image</CardCaption>
+            <Watermark/>
           </Card>
           <Card>
             <CardImg fluid={data.realVillaExterior2.childImageSharp.fluid}/>
             <CardCaption>Actual Image</CardCaption>
+            <Watermark/>
           </Card>
           <Card>
             <CardImg fluid={data.realVillaExterior3.childImageSharp.fluid}/>
             <CardCaption>Actual Image</CardCaption>
+            <Watermark/>
           </Card>
           <Card>
             <CardImg fluid={data.realVillaInterior1.childImageSharp.fluid}/>
             <CardCaption>Actual Image</CardCaption>
+            <Watermark/>
           </Card>
           <Card>
             <CardImg fluid={data.realVillaInterior2.childImageSharp.fluid}/>
             <CardCaption>Actual Image</CardCaption>
+            <Watermark/>
           </Card>
           <Card>
             <CardImg fluid={data.realVillaInterior3.childImageSharp.fluid}/>
             <CardCaption>Actual Image</CardCaption>
+            <Watermark/>
           </Card>
         </HorizontalScrollContainer>
       </FullWidthContainer>
@@ -588,30 +653,37 @@ const Index = ({ data, intl }) => {
           <Card>
             <CardImg fluid={data.june14.childImageSharp.fluid}/>
             <CardCaption>Actual Image</CardCaption>
+            <Watermark/>
           </Card>
           <Card>
             <CardImg fluid={data.allDayDiner1.childImageSharp.fluid}/>
             <CardCaption>Artist Rendering</CardCaption>
+            <Watermark/>
           </Card>
           <Card>
             <CardImg fluid={data.beachBar2.childImageSharp.fluid}/>
             <CardCaption>Artist Rendering</CardCaption>
+            <Watermark/>
           </Card>
           <Card>
             <CardImg fluid={data.asianRestaurant.childImageSharp.fluid}/>
             <CardCaption>Artist Rendering</CardCaption>
+            <Watermark/>
           </Card>
           <Card>
             <CardImg fluid={data.foodCourt1.childImageSharp.fluid}/>
             <CardCaption>Artist Rendering</CardCaption>
+            <Watermark/>
           </Card>
           <Card>
             <CardImg fluid={data.italianRestaurant.childImageSharp.fluid}/>
             <CardCaption>Artist Rendering</CardCaption>
+            <Watermark/>
           </Card>
           <Card>
             <CardImg fluid={data.pub1.childImageSharp.fluid}/>
             <CardCaption>Artist Rendering</CardCaption>
+            <Watermark/>
           </Card>
         </HorizontalScrollContainer>
       </FullWidthContainer>
@@ -632,11 +704,31 @@ const Index = ({ data, intl }) => {
 
       <FullWidthContainer>
         <HorizontalScrollContainer blue>
-          <Card><CardImg fluid={data.receptionLobby.childImageSharp.fluid}/><CardCaption>Artist Rendering</CardCaption></Card>
-          <Card><CardImg fluid={data.lobbyLounge.childImageSharp.fluid}/><CardCaption>Artist Rendering</CardCaption></Card>
-          <Card><CardImg fluid={data.conventionCenter.childImageSharp.fluid}/><CardCaption>Artist Rendering</CardCaption></Card>
-          <Card><CardImg fluid={data.ballroom.childImageSharp.fluid}/><CardCaption>Artist Rendering</CardCaption></Card>
-          <Card><CardImg fluid={data.spaTreatment.childImageSharp.fluid}/><CardCaption>Artist Rendering</CardCaption></Card>
+          <Card>
+            <CardImg fluid={data.receptionLobby.childImageSharp.fluid}/>
+            <CardCaption>Artist Rendering</CardCaption>
+            <Watermark/>
+          </Card>
+          <Card>
+            <CardImg fluid={data.lobbyLounge.childImageSharp.fluid}/>
+            <CardCaption>Artist Rendering</CardCaption>
+            <Watermark/>
+          </Card>
+          <Card>
+            <CardImg fluid={data.conventionCenter.childImageSharp.fluid}/>
+            <CardCaption>Artist Rendering</CardCaption>
+            <Watermark/>
+          </Card>
+          <Card>
+            <CardImg fluid={data.ballroom.childImageSharp.fluid}/>
+            <CardCaption>Artist Rendering</CardCaption>
+            <Watermark/>
+          </Card>
+          <Card>
+            <CardImg fluid={data.spaTreatment.childImageSharp.fluid}/>
+            <CardCaption>Artist Rendering</CardCaption>
+            <Watermark/>
+          </Card>
         </HorizontalScrollContainer>
       </FullWidthContainer>
 
@@ -656,11 +748,31 @@ const Index = ({ data, intl }) => {
 
       <FullWidthContainer>
         <HorizontalScrollContainer blue>
-          <Card><CardImg fluid={data.june1.childImageSharp.fluid}/></Card>
-          <Card><CardImg fluid={data.june2.childImageSharp.fluid}/></Card>
-          <Card><CardImg fluid={data.june3.childImageSharp.fluid}/></Card>
-          <Card><CardImg fluid={data.june4.childImageSharp.fluid}/></Card>
-          <Card><CardImg fluid={data.june5.childImageSharp.fluid}/></Card>
+          <Card>
+            <CardImg fluid={data.june1.childImageSharp.fluid}/>
+            <CardCaption>Actual Image</CardCaption>
+            <Watermark/>
+            </Card>
+          <Card>
+            <CardImg fluid={data.june2.childImageSharp.fluid}/>
+            <CardCaption>Actual Image</CardCaption>
+            <Watermark/>
+          </Card>
+          <Card>
+            <CardImg fluid={data.june3.childImageSharp.fluid}/>
+            <CardCaption>Actual Image</CardCaption>
+            <Watermark/>
+          </Card>
+          <Card>
+            <CardImg fluid={data.june4.childImageSharp.fluid}/>
+            <CardCaption>Actual Image</CardCaption>
+            <Watermark/>
+          </Card>
+          <Card>
+            <CardImg fluid={data.june5.childImageSharp.fluid}/>
+            <CardCaption>Actual Image</CardCaption>
+            <Watermark/>
+          </Card>
         </HorizontalScrollContainer>
       </FullWidthContainer>
 
