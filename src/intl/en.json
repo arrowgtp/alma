@@ -1,7 +1,19 @@
 {
   "title": "The Alma Resort",
   "slogan": "Happiness | Harmony | Home",
+
+  "nav-home": "Home",
+  "nav-resort": "Resort",
+  "nav-apartments": "Apartments",
+  "nav-villas": "Villas",
+  "nav-restaurants": "Restaurants",
+  "nav-amenities": "Amenities",
+  "nav-construction": "Construction",
+  "nav-vacations": "Vacations",
+  "nav-about-alma": "About Alma",
+  
   "learn-more-button": "Learn More",
+
   "instagram-paragraph": "View and share your own #AlmaVacations photos, videos and memorable moments.",
   "copyright-notice": "© Copyright 2019, Alma USA LLC. All rights reserved.",
   "solicitation-notice": "This website is being used for the purpose of soliciting the sale of timeshare interests.",
@@ -151,6 +163,28 @@
   "construction-june-2019-paragraph-2": "Currently, 100 villas are now ready for interior work. Moreover, all units from the 8th to 11th floors of the main towers are ready for interior work.",
   "construction-june-2019-paragraph-3": "In regards to public areas, construction is progressing nicely in the interior and exterior of the main check-in lobby, food court, water park, Italian restaurant, amphitheatre, and walkway from the towers leading to the beach.",
   "construction-june-2019-paragraph-4": "We will continue to keep you informed with up-to-date information regarding the construction progress of Alma Resort.",
+
+  "construction-may-2019": "May 2019",
+  "construction-may-2019-paragraph-1": "This month, much effort is devoted to the acceleration of various construction progresses, including work in the food court, main towers, beach villas, and other public areas. Trees are being planted around the villa area, creating a fresh green aura.",
+  "construction-may-2019-paragraph-2": "Electrical work is at 90% completion, and 100 beach villas are ready for interior decoration. In the main towers, tile work in the balconies is finished in 50 luxury apartments as they await for additional floor tile and ceiling work.",
+  "construction-may-2019-paragraph-3": "Summer is an exciting time and we hope that by this time next year, we can welcome some special guests to this lovely paradise.",
+
+  "construction-april-2019": "April 2019",
+  "construction-april-2019-paragraph-1": "Construction work commences earlier than expected for the water park and we are enthralled by the creative and functional design. Electrical and plumbing work is progressing nicely in the main towers and beach villas. Tiles and bathroom fixtures are being installed in the beach villas, while some other units completely ready for the final interior decoration phase. Structures for the amphitheater and the main pavillion are being built while the golf course’s groundwork is being levelled for pre-construction.",
+  "construction-april-2019-paragraph-2": "As buildings after buildings rise, forming a beautiful backdrop for the lovely resort. Check back soon for more updates.",
+
+  "construction-march-2019": "March 2019",
+  "construction-march-2019-paragraph-1": "Infrastructure work is finished in more than half of the beach villas, as beautiful and modern interior work immediately begins. Tiles are being laid in luxury apartments from the 5th to 11th floor in the main building. Sliding doors, glass and aluminum railings are being installed.",
+  "construction-march-2019-paragraph-2": "Structural work is completed in the food court, pub, bar, theater, while the spa and gym area is almost ready. Steel structure and concrete roof slabs for the main pavilion are also finished.",
+  "construction-march-2019-paragraph-3": "Things are coming together in harmony at Alma Resort. Check back for regular construction updates.",
+
+  "construction-february-2019": "February 2019",
+  "construction-february-2019-paragraph-1": "Structural work for all the beach villas are completed this month. They are ready for beautiful interior decoration work. The pathways for resort electric shuttles are being built, as well as the kids pool area. The main majestic pavilion is coming together beautifully. The water park featuring lazy river, family pool, kids pool, wave pool, and other water slides is being designed and construction is expected to begin in summer of 2019",
+  "construction-february-2019-paragraph-2": "As the new year brings new opportunities and new joys, we are absolutely excited to share many exciting plans ahead.",
+
+  "construction-january-2019": "January 2019",
+  "construction-january-2019-paragraph-1": "Though it is approaching the most important holiday, the Lunar New Year, good progress is still happening this month. Scaffolding removal in the two towers have commenced, revealing a beautiful exterior facade. Construction work in some beach villas is finished, and exterior facade work has started. Some beach villas are also ready for landscaping design. The pools’ foundations are in the waterproofing stage, to be followed by concrete work.",
+  "construction-january-2019-paragraph-2": "Wishing everyone a happy and prosperous new year. We will continue to update you with the resort’s amazing transformation.",
 
   "construction-to-vacations": "Click here to see the amazing vacations options that joining the Alma Resort will give you.",
 

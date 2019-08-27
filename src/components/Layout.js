@@ -1,8 +1,6 @@
 import React, { Fragment } from 'react'
 import { injectIntl } from 'gatsby-plugin-intl'
 
-// import { Context } from "./Context"
-
 import './Layout.css'
 
 import AnimatedLogo from './AnimatedLogo'

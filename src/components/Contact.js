@@ -31,7 +31,7 @@ const Form = styled(animated.div)`
   position: fixed;
   bottom: 15vh;
   left: 5vw;
-  height: 60vh;
+  height: 70vh;
   width: 90vw;
   border-radius: 16px;
   background: white;
@@ -128,6 +128,7 @@ const Input = styled.input`
   display: block;
   width: 100%;
   height: 24px;
+  font-size: 16px;
   border: 1px solid #006674;
   /* background: #eee; */
   border-radius: 4px;

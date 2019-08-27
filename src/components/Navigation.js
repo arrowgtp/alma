@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef, Fragment } from 'react'
 import styled from 'styled-components'
 import { useTransition, animated } from 'react-spring'
-import { Link, injectIntl } from 'gatsby-plugin-intl'
+import { injectIntl, Link } from 'gatsby-plugin-intl'
 
 // import Toggle from './functional/toggle'
 
@@ -29,7 +29,7 @@ const SmallNav = styled(animated.div)`
   position: fixed;
   bottom: 15vh;
   left: 5vw;
-  height: 50vh;
+  height: 70vh;
   width: 90vw;
   border-radius: 16px;
   background: white;
@@ -43,6 +43,7 @@ const SmallNav = styled(animated.div)`
   align-items: center;
   box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.25);
   z-index: 100;
+  /* border: 1px solid red; */
 
   @media (min-width: 50rem) {
     display: none;
@@ -57,20 +58,24 @@ const NavBlock = styled.div`
   align-self: center;
   justify-self: center;
   z-index: 10;
+  grid-row: 1 / 9;
+  grid-column: 1 / 9;
+  margin: 0 -1rem -1rem 0;
+  /* border: 1px solid red; */
 
-  :first-child {
+  /* :first-child {
     grid-row: 1 / 9;
-    grid-column: 1 / 5;
+    grid-column: 1 / 9;
     margin: 0 -1rem -1rem 0;
-    /* border: 1px solid tomato; */
-  }
+    border: 1px solid tomato;
+  } */
 
-  :nth-child(2) {
+  /* :nth-child(2) {
     grid-row: 1 / 9;
     grid-column: 5 / 9;
     margin: 0 0 -1rem -1rem;
-    /* border: 1px solid tomato; */
-  }
+    border: 1px solid tomato;
+  } */
 
   /* :nth-child(3) {
     grid-row: 5 / 9;
@@ -127,7 +132,7 @@ const AlmaLink = styled(Link)`
   font-weight: 300;
   margin: 0.25rem;
   padding: 0.6rem 0;
-  line-height: 1;
+  line-height: 0.75;
   color: #2d658e;
 
   /* :focus {
@@ -137,8 +142,9 @@ const AlmaLink = styled(Link)`
   } */
 
   @media (min-width: 50rem) {
-    font-size: calc(10px + (20 - 10) * ((100vw - 300px) / (1600 - 300)));
+    font-size: calc(10px + (18 - 10) * ((100vw - 300px) / (1600 - 300)));
     grid-column: 2 / 4;
+    line-height: 1.25;
   }
 `
 
@@ -148,7 +154,7 @@ const AlmaLink2 = styled(Link)`
   padding: 0.4rem 0;
   white-space: nowrap;
   font-family: 'Work Sans', 'DM Serif Display', 'Lato';
-  font-size: calc(14px + (32 - 14) * ((100vw - 300px) / (1600 - 300)));
+  font-size: calc(16px + (32 - 16) * ((100vw - 300px) / (1600 - 300)));
   font-weight: 300;
   line-height: 1;
   color: grey;
@@ -156,6 +162,7 @@ const AlmaLink2 = styled(Link)`
   @media (min-width: 50rem) {
     grid-column: 2 / 4;
     font-size: calc(8px + (16 - 8) * ((100vw - 300px) / (1600 - 300)));
+    line-height: 1.25;
   }
 `
 
@@ -252,7 +259,7 @@ const DownArrow = styled.div`
   align-self: end;
 `
 
-const Navigation = () => {
+const Navigation = ({ intl }) => {
 
   const navRef = useRef();
 
@@ -299,18 +306,16 @@ const Navigation = () => {
           <SmallNav key={key} style={fade}>
             <NavBlock>
               <AlmaBulletShell src={almaShell}/>
-              <AlmaLink to={`/resort`} onClick={toggle}>Resort</AlmaLink>
-                <AlmaLink2 to={`/apartments`} onClick={toggle}>Apartments</AlmaLink2>
-                <AlmaLink2 to={`/villas`} onClick={toggle}>Villas</AlmaLink2>
-                <AlmaLink2 to={`/restaurants`} onClick={toggle}>Restaurants</AlmaLink2>
-                <AlmaLink2 to={`/amenities`} onClick={toggle}>Amenities</AlmaLink2>
-                <AlmaLink2 to={`/construction`} onClick={toggle}>Construction</AlmaLink2>
-            </NavBlock>
-            <NavBlock>
+              <AlmaLink to={`/resort`} onClick={toggle}>{intl.formatMessage({ id: "nav-resort" })}</AlmaLink>
+                <AlmaLink2 to={`/apartments`} onClick={toggle}>{intl.formatMessage({ id: "nav-apartments" })}</AlmaLink2>
+                <AlmaLink2 to={`/villas`} onClick={toggle}>{intl.formatMessage({ id: "nav-villas" })}</AlmaLink2>
+                <AlmaLink2 to={`/restaurants`} onClick={toggle}>{intl.formatMessage({ id: "nav-restaurants" })}</AlmaLink2>
+                <AlmaLink2 to={`/amenities`} onClick={toggle}>{intl.formatMessage({ id: "nav-amenities" })}</AlmaLink2>
+                <AlmaLink2 to={`/construction`} onClick={toggle}>{intl.formatMessage({ id: "nav-construction" })}</AlmaLink2>
+                <AlmaBulletShell src={almaShell}/>
+              <AlmaLink to={`/vacations`} onClick={toggle}>{intl.formatMessage({ id: "nav-vacations" })}</AlmaLink>
               <AlmaBulletShell src={almaShell}/>
-              <AlmaLink to={`/vacations`} onClick={toggle}>Vacations</AlmaLink>
-              <AlmaBulletShell src={almaShell}/>
-              <AlmaLink to={`/alma`} onClick={toggle}>About Alma</AlmaLink>
+              <AlmaLink to={`/alma`} onClick={toggle}>{intl.formatMessage({ id: "nav-about-alma" })}</AlmaLink>
               {/* <AlmaBulletShell src={almaShell}/>
               <AlmaLink to={`/promotions`} onClick={toggle}>Promotions</AlmaLink> */}
               <SocialButtons>
@@ -351,16 +356,16 @@ const Navigation = () => {
         </SocialButtons>
         <LargeLinkTree>
         <AlmaBulletShell src={almaShell}/>
-          <AlmaLink to={`/resort`}>Resort</AlmaLink>
-            <AlmaLink2 to={`/apartments`}>Apartments</AlmaLink2>
-            <AlmaLink2 to={`/villas`}>Villas</AlmaLink2>
-            <AlmaLink2 to={`/restaurants`}>Restaurants</AlmaLink2>
-            <AlmaLink2 to={`/amenities`}>Amenities</AlmaLink2>
-            <AlmaLink2 to={`/construction`}>Construction</AlmaLink2>
+          <AlmaLink to={`/resort`}>{intl.formatMessage({ id: "nav-resort" })}</AlmaLink>
+            <AlmaLink2 to={`/apartments`}>{intl.formatMessage({ id: "nav-apartments" })}</AlmaLink2>
+            <AlmaLink2 to={`/villas`}>{intl.formatMessage({ id: "nav-villas" })}</AlmaLink2>
+            <AlmaLink2 to={`/restaurants`}>{intl.formatMessage({ id: "nav-restaurants" })}</AlmaLink2>
+            <AlmaLink2 to={`/amenities`}>{intl.formatMessage({ id: "nav-amenities" })}</AlmaLink2>
+            <AlmaLink2 to={`/construction`}>{intl.formatMessage({ id: "nav-construction" })}</AlmaLink2>
           <AlmaBulletShell src={almaShell}/>
-          <AlmaLink to={`/vacations`}>Vacations</AlmaLink>
+          <AlmaLink to={`/vacations`}>{intl.formatMessage({ id: "nav-vacations" })}</AlmaLink>
           <AlmaBulletShell src={almaShell}/>
-          <AlmaLink to={`/alma`}>About Alma</AlmaLink>
+          <AlmaLink to={`/alma`}>{intl.formatMessage({ id: "nav-about-alma" })}</AlmaLink>
           {/* <AlmaBulletShell src={almaShell}/> */}
           {/* <AlmaLink to={`/promotions`}>Promotions</AlmaLink> */}
         </LargeLinkTree> 

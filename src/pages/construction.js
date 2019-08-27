@@ -98,6 +98,75 @@ const Construction = ({ data, intl }) => {
         <Space/>
         <FullImage><Image fluid={data.june14.childImageSharp.fluid}/></FullImage>
       </FullWidthContainer>
+
+      <CenteredContainer>
+        <Space/>
+        <AlmaHeader
+          blue
+          title={intl.formatMessage({ id: "construction-may-2019" })}
+        />
+        <Space/>
+        <P>{intl.formatMessage({ id: "construction-may-2019-paragraph-1" })}</P>
+        <Space/>
+        <P>{intl.formatMessage({ id: "construction-may-2019-paragraph-2" })}</P>
+        <Space/>
+        <P>{intl.formatMessage({ id: "construction-may-2019-paragraph-3" })}</P>
+        <Space/>
+      </CenteredContainer>
+
+      <CenteredContainer>
+        <Space/>
+        <AlmaHeader
+          blue
+          title={intl.formatMessage({ id: "construction-april-2019" })}
+        />
+        <Space/>
+        <P>{intl.formatMessage({ id: "construction-april-2019-paragraph-1" })}</P>
+        <Space/>
+        <P>{intl.formatMessage({ id: "construction-april-2019-paragraph-2" })}</P>
+        <Space/>
+      </CenteredContainer>
+
+      <CenteredContainer>
+        <Space/>
+        <AlmaHeader
+          blue
+          title={intl.formatMessage({ id: "construction-march-2019" })}
+        />
+        <Space/>
+        <P>{intl.formatMessage({ id: "construction-march-2019-paragraph-1" })}</P>
+        <Space/>
+        <P>{intl.formatMessage({ id: "construction-march-2019-paragraph-2" })}</P>
+        <Space/>
+        <P>{intl.formatMessage({ id: "construction-march-2019-paragraph-3" })}</P>
+        <Space/>
+      </CenteredContainer>
+
+      <CenteredContainer>
+        <Space/>
+        <AlmaHeader
+          blue
+          title={intl.formatMessage({ id: "construction-february-2019" })}
+        />
+        <Space/>
+        <P>{intl.formatMessage({ id: "construction-february-2019-paragraph-1" })}</P>
+        <Space/>
+        <P>{intl.formatMessage({ id: "construction-february-2019-paragraph-2" })}</P>
+        <Space/>
+      </CenteredContainer>
+
+      <CenteredContainer>
+        <Space/>
+        <AlmaHeader
+          blue
+          title={intl.formatMessage({ id: "construction-january-2019" })}
+        />
+        <Space/>
+        <P>{intl.formatMessage({ id: "construction-january-2019-paragraph-1" })}</P>
+        <Space/>
+        <P>{intl.formatMessage({ id: "construction-january-2019-paragraph-2" })}</P>
+        <Space/>
+      </CenteredContainer>
         
       <CenteredContainer>
         <Space/>

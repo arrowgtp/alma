@@ -816,42 +816,42 @@ export const query = graphql`
         }
       }
     }
-    resortOverview: file(relativePath: { eq: "resort/resort-overview-1-16x10.jpg" }) {
+    resortOverview: file(relativePath: { eq: "resort/resort-overview-render-1-16x10.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 3456) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
-    almaResort1: file(relativePath: { eq: "resort/resort-1-4x3.jpg" }) {
+    almaResort1: file(relativePath: { eq: "resort/resort-render-1-4x3.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 2880) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
-    almaResort2: file(relativePath: { eq: "resort/resort-2-4x3.jpg" }) {
+    almaResort2: file(relativePath: { eq: "resort/resort-render-2-4x3.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 2880) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
-    almaResort3: file(relativePath: { eq: "resort/resort-3-4x3.jpg" }) {
+    almaResort3: file(relativePath: { eq: "resort/resort-render-3-4x3.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 2880) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
-    almaResort4: file(relativePath: { eq: "resort/resort-4-4x3.jpg" }) {
+    almaResort4: file(relativePath: { eq: "resort/resort-render-4-4x3.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 2880) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
-    almaResort5: file(relativePath: { eq: "resort/resort-overview-2-4x3.jpg" }) {
+    almaResort5: file(relativePath: { eq: "resort/resort-overview-render-2-4x3.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 2880) {
           ...GatsbyImageSharpFluid_withWebp
