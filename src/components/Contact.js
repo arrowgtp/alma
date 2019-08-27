@@ -31,7 +31,7 @@ const Form = styled(animated.div)`
   position: fixed;
   bottom: 15vh;
   left: 5vw;
-  height: 70vh;
+  height: 60vh;
   width: 90vw;
   border-radius: 16px;
   background: white;
