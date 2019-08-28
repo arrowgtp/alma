@@ -5,7 +5,6 @@ import styled from 'styled-components'
 import Img from 'gatsby-image'
 import SEO from '../components/seo'
 
-
 import ViewContainer from '../components/layout/ViewContainer'
 import FullWidthContainer from '../components/layout/FullWidthContainer'
 import CenteredContainer from '../components/layout/CenteredContainer'
@@ -16,6 +15,7 @@ import FlexBox from '../components/layout/FlexBox'
 import AlmaHeader from '../components/Header'
 import Button from '../components/visual/Button'
 import { Space, H1, H2, P, UL, LI } from '../components/visual/Typography'
+import Watermark from '../components/Watermark'
 
 import Footer from '../components/Footer'
 
@@ -61,6 +61,7 @@ const Apartments = ({ data, intl }) => {
         </HeadingContainer>
         <FullContentImage fluid={data.apartmentLivingRoom1.childImageSharp.fluid}/>
         <FullCaption>Artist Rendering</FullCaption>
+        <Watermark large/>
       </FullContentCard>
 
       <CenteredContainer>
@@ -77,6 +78,7 @@ const Apartments = ({ data, intl }) => {
         <FullImage>
           <Image fluid={data.apartmentLivingRoom2.childImageSharp.fluid}/>
           <Caption>Artist Rendering</Caption>
+          <Watermark medium/>
         </FullImage>
       </FullWidthContainer>
 
@@ -94,6 +96,7 @@ const Apartments = ({ data, intl }) => {
         <FullImage>
           <Image fluid={data.apartmentKitchen.childImageSharp.fluid}/>
           <Caption>Artist Rendering</Caption>
+          <Watermark medium/>
         </FullImage>
       </FullWidthContainer>
 
@@ -111,6 +114,7 @@ const Apartments = ({ data, intl }) => {
         <FullImage>
           <Image fluid={data.apartmentBedroom.childImageSharp.fluid}/>
           <Caption>Artist Rendering</Caption>
+          <Watermark medium/>
         </FullImage>
       </FullWidthContainer>
 
@@ -124,6 +128,7 @@ const Apartments = ({ data, intl }) => {
         <FullImage>
           <Image fluid={data.apartmentBathroom.childImageSharp.fluid}/>
           <Caption>Artist Rendering</Caption>
+          <Watermark medium/>
         </FullImage>
       </FullWidthContainer>
 

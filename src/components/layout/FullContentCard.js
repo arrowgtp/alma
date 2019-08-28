@@ -3,6 +3,7 @@ import Img from 'gatsby-image'
 
 const FullContentCard = styled.div`
   grid-column: 1 / 4;
+  position: relative;
   margin: 0;
   padding: 0;
   /* height: 90vh; */

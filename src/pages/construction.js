@@ -15,6 +15,8 @@ import { Space, H1, H2, P, UL, LI } from '../components/visual/Typography'
 import FullWidthContainer from '../components/layout/FullWidthContainer'
 import { FullImage, Image, Caption } from '../components/visual/FullImage'
 
+import Watermark from '../components/Watermark'
+
 import Footer from '../components/Footer'
 
 const ButtonContainer = styled.div`

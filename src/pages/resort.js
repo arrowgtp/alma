@@ -13,6 +13,7 @@ import CenteredContainer from '../components/layout/CenteredContainer'
 import AlmaHeader from '../components/Header'
 import Button from '../components/visual/Button'
 import { Space, H1, H2, P, UL, LI } from '../components/visual/Typography'
+import Watermark from '../components/Watermark'
 
 import Footer from '../components/Footer'
 
@@ -36,6 +37,7 @@ const Resort = ({ data, intl }) => {
         </HeadingContainer>
         <FullContentImage fluid={data.almaResort2.childImageSharp.fluid}/>
         <FullCaption>Artist Rendering</FullCaption>
+        <Watermark large/>
       </FullContentCard>
 
       <CenteredContainer>
@@ -53,6 +55,7 @@ const Resort = ({ data, intl }) => {
         <FullImage>
           <Image fluid={data.almaResort1.childImageSharp.fluid}/>
           <Caption>Artist Rendering</Caption>
+          <Watermark medium/>
         </FullImage>
       </FullWidthContainer>
 
@@ -70,6 +73,7 @@ const Resort = ({ data, intl }) => {
         <FullImage>
           <Image fluid={data.almaResort3.childImageSharp.fluid}/>
           <Caption>Artist Rendering</Caption>
+          <Watermark medium/>
         </FullImage>
       </FullWidthContainer>
 
@@ -83,6 +87,7 @@ const Resort = ({ data, intl }) => {
         <FullImage>
           <Image fluid={data.almaResort4.childImageSharp.fluid}/>
           <Caption>Artist Rendering</Caption>
+          <Watermark medium/>
         </FullImage>
       </FullWidthContainer>
 
@@ -100,6 +105,7 @@ const Resort = ({ data, intl }) => {
         <FullImage>
           <Image fluid={data.almaResort5.childImageSharp.fluid}/>
           <Caption>Artist Rendering</Caption>
+          <Watermark medium/>
         </FullImage>
       </FullWidthContainer>
 
@@ -116,7 +122,6 @@ const Resort = ({ data, intl }) => {
             <Button>{intl.formatMessage({ id: "apartments-title" })}</Button>
           </Link> 
         </ButtonContainer>
-        <Space/>
         <Space/>
       </CenteredContainer>
 

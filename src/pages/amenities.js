@@ -13,6 +13,7 @@ import { FullImage, Image, Caption } from '../components/visual/FullImage'
 import AlmaHeader from '../components/Header'
 import Button from '../components/visual/Button'
 import { Space, H1, H2, P, UL, ListTitle, LI } from '../components/visual/Typography'
+import Watermark from '../components/Watermark'
 
 
 import Footer from '../components/Footer'

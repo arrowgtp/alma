@@ -6,6 +6,7 @@ const Container = styled(animated.main)`
   margin: 0;
   padding: 0;
   z-index: 1;
+  /* width: 100vw; */
   display: grid;
   grid-template-rows: auto;
   grid-template-columns: 

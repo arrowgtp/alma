@@ -13,6 +13,7 @@ import AlmaHeader from '../components/Header'
 import AlmaHeading from '../components/visual/AlmaHeading'
 import Button from '../components/visual/Button'
 import { Space, H1, H2, P, UL, LI } from '../components/visual/Typography'
+import Watermark from '../components/Watermark'
 
 import Footer from '../components/Footer'
 
