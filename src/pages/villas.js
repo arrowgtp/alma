@@ -13,19 +13,12 @@ import { FullImage, Image } from '../components/visual/FullImage'
 import FlexContainer from '../components/layout/FlexContainer'
 import FlexBox from '../components/layout/FlexBox'
 import AlmaHeader from '../components/Header'
-import Button from '../components/visual/Button'
+import { Button, ButtonContainer } from '../components/visual/Button'
 import { Space, H1, H2, P, UL, LI } from '../components/visual/Typography'
 import Watermark from '../components/Watermark'
 import Caption from '../components/Caption'
 
 import Footer from '../components/Footer'
-
-const ButtonContainer = styled.div`
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-`
 
 const Floorplan = styled(Img)`
   width: 100%;
@@ -72,8 +65,8 @@ const Villas = ({ data, intl }) => {
 
       <FullWidthContainer>
         <FullImage>
-          <Image fluid={data.villaLivingRoom1.childImageSharp.fluid}/>
-          <Caption medium>Artist Rendering</Caption>
+          <Image fluid={data.villaKitchen1.childImageSharp.fluid}/>
+          <Caption medium>Actual Image</Caption>
           <Watermark medium/>
         </FullImage>
       </FullWidthContainer>
@@ -86,7 +79,7 @@ const Villas = ({ data, intl }) => {
 
       <FullWidthContainer>
         <FullImage>
-          <Image fluid={data.realVillaInterior2.childImageSharp.fluid}/>
+          <Image fluid={data.villaLivingRoom2.childImageSharp.fluid}/>
           <Caption medium>Actual Image</Caption>
           <Watermark medium/>
         </FullImage>
@@ -102,7 +95,7 @@ const Villas = ({ data, intl }) => {
 
       <FullWidthContainer>
         <FullImage>
-          <Image fluid={data.realVillaInterior1.childImageSharp.fluid}/>
+          <Image fluid={data.villaBedroom1.childImageSharp.fluid}/>
           <Caption medium>Actual Image</Caption>
           <Watermark medium/>
         </FullImage>
@@ -118,7 +111,7 @@ const Villas = ({ data, intl }) => {
       <FullWidthContainer>
         <FullImage>
           <Image fluid={data.villaBathroom1.childImageSharp.fluid}/>
-          <Caption medium>Artist Rendering</Caption>
+          <Caption medium>Actual Image</Caption>
           <Watermark medium/>
         </FullImage>
       </FullWidthContainer>      
@@ -257,28 +250,28 @@ export const query = graphql`
         }
       }
     }
-    villaLivingRoom1: file(relativePath: { eq: "villas/villa-living-room-render-1-4x3.jpg" }) {
+    villaKitchen1: file(relativePath: { eq: "villas/villa-kitchen-1-4x3.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 2880) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
-    villaLivingRoom2: file(relativePath: { eq: "villas/villa-living-room-render-2-4x3.jpg" }) {
+    villaLivingRoom2: file(relativePath: { eq: "villas/villa-living-room-2-4x3.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 2880) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
-    villaBedroom1: file(relativePath: { eq: "villas/villa-bedroom-render-1-4x3.jpg" }) {
+    villaBedroom1: file(relativePath: { eq: "villas/villa-bedroom-1-4x3.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 2880) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
-    villaBathroom1: file(relativePath: { eq: "villas/villa-bathroom-render-1-4x3.jpg" }) {
+    villaBathroom1: file(relativePath: { eq: "villas/villa-bathroom-1-4x3.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 2880) {
           ...GatsbyImageSharpFluid_withWebp

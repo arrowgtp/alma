@@ -11,18 +11,12 @@ import CenteredContainer from '../components/layout/CenteredContainer'
 import { FullContentCard, FullContentImage, HeadingContainer } from '../components/layout/FullContentCard'
 import { FullImage, Image } from '../components/visual/FullImage'
 import AlmaHeader from '../components/Header'
-import Button from '../components/visual/Button'
+import { Button, ButtonContainer } from '../components/visual/Button'
 import { Space, H1, H2, P, UL, ListTitle, LI } from '../components/visual/Typography'
 import Watermark from '../components/Watermark'
 import Caption from '../components/Caption'
 
 import Footer from '../components/Footer'
-
-const ButtonContainer = styled.div`
-  margin: 0 0 2rem 0;
-  display: flex;
-  justify-content: center;
-`
 
 const Amenities = ({ data, intl }) => {
   return (

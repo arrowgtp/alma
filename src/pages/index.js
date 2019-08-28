@@ -15,18 +15,11 @@ import { Space, H1, H2, P, UL, LI } from '../components/visual/Typography'
 import Watermark from '../components/Watermark'
 import Caption from '../components/Caption'
 
-import Button from '../components/visual/Button'
+import { Button, ButtonContainer } from '../components/visual/Button'
 
 import almaLogoWithBG from '../images/alma/alma-logo-with-bg.svg'
-import almaLogoWhite from '../images/alma/alma-logo-white.svg'
 
 import Footer from '../components/Footer'
-
-const ButtonContainer = styled.div`
-  margin: 0;
-  display: flex;
-  justify-content: center;
-`
 
 const MainLogo = styled.img`
   width: calc(192px + (320 - 192) * ((100vw - 300px) / (1600 - 300)));
@@ -95,32 +88,6 @@ const CardImg = styled(Img)`
   border-radius: 6px;
   z-index: 1;
 `
-
-const CardCaption = styled.caption`
-  position: absolute;
-  color: white;
-  text-shadow: 1px 1px 3px hsla(0,0%,0%,0.75);
-  bottom: 0;
-  left: 0;
-  font-size: calc(8px + (12 - 8) * ((100vw - 300px) / (1600 - 300)));
-  font-family: 'Work Sans', sans-serif;
-  margin: 0.75rem;
-  padding: 0;
-  z-index: 2;
-  opacity: 0.75;
-`
-
-// const CardWatermark = styled.img`
-//   position: absolute;
-//   bottom: 0;
-//   right: 0;
-//   margin: 0.75rem;
-//   padding: 0;
-//   z-index: 2;
-//   width: 12%;
-//   height: auto;
-//   opacity: 0.75;
-// `
 
 const RCIMap = styled(FullContentImage)`
   width: 100%;

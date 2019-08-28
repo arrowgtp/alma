@@ -6,7 +6,7 @@ import { injectIntl, Link } from 'gatsby-plugin-intl'
 // import Toggle from './functional/toggle'
 
 import Language from './Language'
-import Button from './visual/Button'
+import { Button } from '../components/visual/Button'
 
 import almaBGShell from '../images/alma/alma-bg-shell.svg'
 import almaShell from '../images/alma/alma-shell.svg'

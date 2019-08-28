@@ -5,7 +5,7 @@ import { injectIntl } from 'gatsby-plugin-intl'
 
 import P from './visual/Paragraph'
 
-import Button from './visual/Button'
+import { Button } from '../components/visual/Button'
 
 import almaBGShell from '../images/alma/alma-bg-shell.svg'
 

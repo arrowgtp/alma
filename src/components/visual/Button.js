@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export default styled.button`
+const Button = styled.button`
   margin: 0;
   padding: 0;
   background: linear-gradient(0deg, rgba(45,101,142,1) 0%, rgba(81,168,190,1) 100%);
@@ -53,3 +53,11 @@ export default styled.button`
     ;
   }
 `
+
+const ButtonContainer = styled.div`
+  margin: 0;
+  display: flex;
+  justify-content: center;
+`
+
+export { Button, ButtonContainer }

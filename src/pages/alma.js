@@ -9,18 +9,12 @@ import { FullContentCard, FullContentImage, HeadingContainer } from '../componen
 import CenteredContainer from '../components/layout/CenteredContainer'
 import AlmaHeader from '../components/Header'
 import AlmaHeading from '../components/visual/AlmaHeading'
-import Button from '../components/visual/Button'
+import { Button, ButtonContainer } from '../components/visual/Button'
 import { Space, H1, H2, P, UL, LI } from '../components/visual/Typography'
 import Watermark from '../components/Watermark'
 import Caption from '../components/Caption'
 
 import Footer from '../components/Footer'
-
-const ButtonContainer = styled.div`
-  margin: 0;
-  display: flex;
-  justify-content: center;
-`
 
 const Alma = ({ intl, data }) => {
   return (
