@@ -2,18 +2,18 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import { Link, injectIntl } from 'gatsby-plugin-intl'
 import styled from 'styled-components'
-// import Img from 'gatsby-image'
 import SEO from "../components/seo"
 
 import ViewContainer from '../components/layout/ViewContainer'
-import { FullContentCard, FullContentImage, HeadingContainer, FullCaption } from '../components/layout/FullContentCard'
-import { FullImage, Image, Caption } from '../components/visual/FullImage'
+import { FullContentCard, FullContentImage, HeadingContainer } from '../components/layout/FullContentCard'
+import { FullImage, Image } from '../components/visual/FullImage'
 import FullWidthContainer from '../components/layout/FullWidthContainer'
 import CenteredContainer from '../components/layout/CenteredContainer'
 import AlmaHeader from '../components/Header'
 import Button from '../components/visual/Button'
 import { Space, H1, H2, P, UL, LI } from '../components/visual/Typography'
 import Watermark from '../components/Watermark'
+import Caption from '../components/Caption'
 
 import Footer from '../components/Footer'
 
@@ -31,30 +31,23 @@ const Resort = ({ data, intl }) => {
       
       <FullContentCard>
         <HeadingContainer>
-          <AlmaHeader white
-            title={intl.formatMessage({ id: "resort-title" })}
-          />
+          <AlmaHeader white title={intl.formatMessage({ id: "resort-title" })}/>
         </HeadingContainer>
         <FullContentImage fluid={data.almaResort2.childImageSharp.fluid}/>
-        <FullCaption>Artist Rendering</FullCaption>
+        <Caption large>Artist Rendering</Caption>
         <Watermark large/>
       </FullContentCard>
 
       <CenteredContainer>
         <Space/>
-        {/* <AlmaHeader title={intl.formatMessage({ id: "resort-subtitle" })}></AlmaHeader> */}
         <P>{intl.formatMessage({ id: "resort-paragraph-1" })}</P>
         <Space/>
       </CenteredContainer>
 
-      {/* <FullWidthContainer>
-        <FullImage fluid={data.almaResort1.childImageSharp.fluid}/>
-      </FullWidthContainer> */}
-
       <FullWidthContainer>
         <FullImage>
           <Image fluid={data.almaResort1.childImageSharp.fluid}/>
-          <Caption>Artist Rendering</Caption>
+          <Caption medium>Artist Rendering</Caption>
           <Watermark medium/>
         </FullImage>
       </FullWidthContainer>
@@ -72,7 +65,7 @@ const Resort = ({ data, intl }) => {
       <FullWidthContainer>
         <FullImage>
           <Image fluid={data.almaResort3.childImageSharp.fluid}/>
-          <Caption>Artist Rendering</Caption>
+          <Caption medium>Artist Rendering</Caption>
           <Watermark medium/>
         </FullImage>
       </FullWidthContainer>
@@ -86,14 +79,10 @@ const Resort = ({ data, intl }) => {
       <FullWidthContainer>
         <FullImage>
           <Image fluid={data.almaResort4.childImageSharp.fluid}/>
-          <Caption>Artist Rendering</Caption>
+          <Caption medium>Artist Rendering</Caption>
           <Watermark medium/>
         </FullImage>
       </FullWidthContainer>
-
-      {/* <FullWidthContainer>
-        <FullImage fluid={data.almaResort4.childImageSharp.fluid}/>
-      </FullWidthContainer> */}
 
       <CenteredContainer>
         <Space/>
@@ -104,14 +93,10 @@ const Resort = ({ data, intl }) => {
       <FullWidthContainer>
         <FullImage>
           <Image fluid={data.almaResort5.childImageSharp.fluid}/>
-          <Caption>Artist Rendering</Caption>
+          <Caption medium>Artist Rendering</Caption>
           <Watermark medium/>
         </FullImage>
       </FullWidthContainer>
-
-      {/* <FullWidthContainer>
-        <FullImage fluid={data.almaResort5.childImageSharp.fluid}/>
-      </FullWidthContainer> */}
 
       <CenteredContainer>
         <Space/>

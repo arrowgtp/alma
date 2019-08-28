@@ -45,6 +45,7 @@ const Caption = styled.caption`
   margin: 1rem;
   padding: 0;
   z-index: 2;
+  opacity: 0.5;
 `
 
 // const FullImage = ({ children }) => {

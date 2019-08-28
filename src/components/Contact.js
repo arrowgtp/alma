@@ -208,16 +208,6 @@ const Contact = () => {
         ))}
 
       </FormContainer>
-      
-      {/* <LargeContact>
-        <Form name="contact" method="POST" data-netlify="true">
-          <Label>Name: <Input type="text" name="name"/></Label>   
-          <Label>Email: <Input type="email" name="email" /></Label>
-          <Label>Number: <Input type="tel" name="email" /></Label>
-          <label>Message: <textarea name="message"></textarea></label>
-          <Button type="submit">Join</Button>
-        </Form>
-      </LargeContact> */}
 
     </Fragment>
   )

@@ -12,6 +12,7 @@ import AlmaHeading from '../components/visual/AlmaHeading'
 import Button from '../components/visual/Button'
 import { Space, H1, H2, P, UL, LI } from '../components/visual/Typography'
 import Watermark from '../components/Watermark'
+import Caption from '../components/Caption'
 
 import Footer from '../components/Footer'
 
@@ -28,11 +29,11 @@ const Alma = ({ intl, data }) => {
 
       <FullContentCard>
         <HeadingContainer>
-          <AlmaHeader white
-            title={intl.formatMessage({ id: "alma-title" })}
-          />
+          <AlmaHeader white title={intl.formatMessage({ id: "alma-title" })}/>
         </HeadingContainer>
         <FullContentImage fluid={data.almaConstruction.childImageSharp.fluid}/>
+        <Caption large>Actual Image</Caption>
+        <Watermark large/>
       </FullContentCard>
 
       <CenteredContainer>

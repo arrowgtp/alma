@@ -5,17 +5,16 @@ import styled from 'styled-components'
 // import Img from 'gatsby-image'
 import SEO from '../components/seo'
 
+import FullWidthContainer from '../components/layout/FullWidthContainer'
+import { FullImage, Image } from '../components/visual/FullImage'
 import { FullContentCard, FullContentImage, HeadingContainer } from '../components/layout/FullContentCard'
 import ViewContainer from '../components/layout/ViewContainer'
 import CenteredContainer from '../components/layout/CenteredContainer'
 import AlmaHeader from '../components/Header'
 import Button from '../components/visual/Button'
 import { Space, H1, H2, P, UL, LI } from '../components/visual/Typography'
-
-import FullWidthContainer from '../components/layout/FullWidthContainer'
-import { FullImage, Image, Caption } from '../components/visual/FullImage'
-
 import Watermark from '../components/Watermark'
+import Caption from '../components/Caption'
 
 import Footer from '../components/Footer'
 
@@ -33,11 +32,11 @@ const Construction = ({ data, intl }) => {
       
       <FullContentCard>
         <HeadingContainer>
-          <AlmaHeader white
-            title={intl.formatMessage({ id: "construction-title" })}
-          />
+          <AlmaHeader white title={intl.formatMessage({ id: "construction-title" })}/>
         </HeadingContainer>
         <FullContentImage fluid={data.june1.childImageSharp.fluid}/>
+        <Caption large>Actual Image</Caption>
+        <Watermark large/>
       </FullContentCard>
 
       <CenteredContainer>
@@ -74,31 +73,83 @@ const Construction = ({ data, intl }) => {
         <Space/>
       </CenteredContainer>
       <FullWidthContainer>
-        <FullImage><Image fluid={data.june2.childImageSharp.fluid}/></FullImage>
+        <FullImage>
+          <Image fluid={data.june2.childImageSharp.fluid}/>
+          <Caption medium>Actual Image</Caption>
+          <Watermark medium/>
+        </FullImage>
         <Space/>
-        <FullImage><Image fluid={data.june3.childImageSharp.fluid}/></FullImage>
+        <FullImage>
+          <Image fluid={data.june3.childImageSharp.fluid}/>
+          <Caption medium>Actual Image</Caption>
+          <Watermark medium/>
+        </FullImage>
         <Space/>
-        <FullImage><Image fluid={data.june4.childImageSharp.fluid}/></FullImage>
+        <FullImage>
+          <Image fluid={data.june4.childImageSharp.fluid}/>
+          <Caption medium>Actual Image</Caption>
+          <Watermark medium/>
+        </FullImage>
         <Space/>
-        <FullImage><Image fluid={data.june5.childImageSharp.fluid}/></FullImage>
+        <FullImage>
+          <Image fluid={data.june5.childImageSharp.fluid}/>
+          <Caption medium>Actual Image</Caption>
+          <Watermark medium/>
+        </FullImage>
         <Space/>
-        <FullImage><Image fluid={data.june6.childImageSharp.fluid}/></FullImage>
+        <FullImage>
+          <Image fluid={data.june6.childImageSharp.fluid}/>
+          <Caption medium>Actual Image</Caption>
+          <Watermark medium/>
+        </FullImage>
         <Space/>
-        <FullImage><Image fluid={data.june7.childImageSharp.fluid}/></FullImage>
+        <FullImage>
+          <Image fluid={data.june7.childImageSharp.fluid}/>
+          <Caption medium>Actual Image</Caption>
+          <Watermark medium/>
+        </FullImage>
         <Space/>
-        <FullImage><Image fluid={data.june8.childImageSharp.fluid}/></FullImage>
+        <FullImage>
+          <Image fluid={data.june8.childImageSharp.fluid}/>
+          <Caption medium>Actual Image</Caption>
+          <Watermark medium/>
+        </FullImage>
         <Space/>
-        <FullImage><Image fluid={data.june9.childImageSharp.fluid}/></FullImage>
+        <FullImage>
+          <Image fluid={data.june9.childImageSharp.fluid}/>
+          <Caption medium>Actual Image</Caption>
+          <Watermark medium/>
+        </FullImage>
         <Space/>
-        <FullImage><Image fluid={data.june10.childImageSharp.fluid}/></FullImage>
+        <FullImage>
+          <Image fluid={data.june10.childImageSharp.fluid}/>
+          <Caption medium>Actual Image</Caption>
+          <Watermark medium/>
+        </FullImage>
         <Space/>
-        <FullImage><Image fluid={data.june11.childImageSharp.fluid}/></FullImage>
+        <FullImage>
+          <Image fluid={data.june11.childImageSharp.fluid}/>
+          <Caption medium>Actual Image</Caption>
+          <Watermark medium/>
+        </FullImage>
         <Space/>
-        <FullImage><Image fluid={data.june12.childImageSharp.fluid}/></FullImage>
+        <FullImage>
+          <Image fluid={data.june12.childImageSharp.fluid}/>
+          <Caption medium>Actual Image</Caption>
+          <Watermark medium/>
+        </FullImage>
         <Space/>
-        <FullImage><Image fluid={data.june13.childImageSharp.fluid}/></FullImage>
+        <FullImage>
+          <Image fluid={data.june13.childImageSharp.fluid}/>
+          <Caption medium>Actual Image</Caption>
+          <Watermark medium/>
+        </FullImage>
         <Space/>
-        <FullImage><Image fluid={data.june14.childImageSharp.fluid}/></FullImage>
+        <FullImage>
+          <Image fluid={data.june14.childImageSharp.fluid}/>
+          <Caption medium>Actual Image</Caption>
+          <Watermark medium/>
+        </FullImage>
       </FullWidthContainer>
 
       <CenteredContainer>
