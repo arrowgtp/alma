@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 import FullWidthContainer from './layout/FullWidthContainer'
 
-import almaPattern2 from '../images/alma/alma-bg-pattern-2.svg'
+// import almaPattern2 from '../images/alma/alma-bg-pattern-2.svg'
 import almaPattern3 from '../images/alma/alma-bg-pattern-3.svg'
 
 const FooterContainer = styled(FullWidthContainer)`

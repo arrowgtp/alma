@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import { Link, injectIntl } from 'gatsby-plugin-intl'
-import styled from 'styled-components'
+// import styled from 'styled-components'
 import SEO from "../components/seo"
 
 import ViewContainer from '../components/layout/ViewContainer'
@@ -11,7 +11,7 @@ import FullWidthContainer from '../components/layout/FullWidthContainer'
 import CenteredContainer from '../components/layout/CenteredContainer'
 import AlmaHeader from '../components/Header'
 import { Button, ButtonContainer } from '../components/visual/Button'
-import { Space, H1, H2, P, UL, LI } from '../components/visual/Typography'
+import { Space, P } from '../components/visual/Typography'
 import Watermark from '../components/Watermark'
 import Caption from '../components/Caption'
 

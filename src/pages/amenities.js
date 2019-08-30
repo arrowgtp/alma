@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import { Link, injectIntl } from 'gatsby-plugin-intl'
-import styled from 'styled-components'
+// import styled from 'styled-components'
 // import Img from 'gatsby-image'
 import SEO from '../components/seo'
 
@@ -12,7 +12,7 @@ import { FullContentCard, FullContentImage, HeadingContainer } from '../componen
 import { FullImage, Image } from '../components/visual/FullImage'
 import AlmaHeader from '../components/Header'
 import { Button, ButtonContainer } from '../components/visual/Button'
-import { Space, H1, H2, P, UL, ListTitle, LI } from '../components/visual/Typography'
+import { Space, P, UL, ListTitle, LI } from '../components/visual/Typography'
 import Watermark from '../components/Watermark'
 import Caption from '../components/Caption'
 

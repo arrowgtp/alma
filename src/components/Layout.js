@@ -3,7 +3,7 @@ import { injectIntl } from 'gatsby-plugin-intl'
 
 import './Layout.css'
 
-import AnimatedLogo from './AnimatedLogo'
+// import AnimatedLogo from './AnimatedLogo'
 import App from './layout/App'
 import Main from './layout/Main'
 import Menu from './layout/Menu'

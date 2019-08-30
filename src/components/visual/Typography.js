@@ -45,12 +45,9 @@ const P = styled.p`
   margin: 0;
   padding: 0;
   color: #006897;
-  font-family: 'Work Sans', 'DM Serif Display', 'Lato';
+  font-family: 'Open Sans', sans-serif;
   font-size: calc(16px + (24 - 16) * ((100vw - 300px) / (1600 - 300)));
   line-height: calc(28px + (32 - 28) * ((100vw - 300px) / (1600 - 300)));
-  /* background: -webkit-linear-gradient(#006674, #004566);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; */
 
   @media (min-width: 50rem) {
     font-size: calc(12px + (20 - 12) * ((100vw - 300px) / (1600 - 300)));
@@ -59,7 +56,7 @@ const P = styled.p`
 `
 
 const UL = styled.ul`
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   margin: 2rem;
   padding: 0;
   color: #006897;
@@ -82,7 +79,7 @@ const ListTitle = styled.h1`
 
 const LI = styled.li`
   color: #006897;
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   list-style-type: disc;
   font-size: 16px;
   padding: 0.25rem;

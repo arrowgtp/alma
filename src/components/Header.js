@@ -42,17 +42,17 @@ const HeaderTitle = styled.h1`
   margin-right: -8px;
 
   @media (min-width: 50rem) {
-    padding: calc(50px + (50 - 50) * ((100vw - 300px) / (1600 - 300))) 0;
+    padding: calc(68px + (68 - 68) * ((100vw - 300px) / (1600 - 300))) 0;
     font-size: calc(18px + (40 - 18) * ((100vw - 300px) / (1600 - 300)));
     margin-right: -24px;
   }
 `
 
-const LargeHeaderTitle = styled(HeaderTitle)`
-  @media (min-width: 50rem) {
-    padding: calc(60px + (70 - 60) * ((100vw - 300px) / (1600 - 300))) 0;
-  }
-`
+// const LargeHeaderTitle = styled(HeaderTitle)`
+//   @media (min-width: 50rem) {
+//     padding: calc(60px + (70 - 60) * ((100vw - 300px) / (1600 - 300))) 0;
+//   }
+// `
 
 const HeaderBackground = styled.div`
   margin: 0;

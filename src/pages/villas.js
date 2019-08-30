@@ -14,7 +14,7 @@ import FlexContainer from '../components/layout/FlexContainer'
 import FlexBox from '../components/layout/FlexBox'
 import AlmaHeader from '../components/Header'
 import { Button, ButtonContainer } from '../components/visual/Button'
-import { Space, H1, H2, P, UL, LI } from '../components/visual/Typography'
+import { Space, P } from '../components/visual/Typography'
 import Watermark from '../components/Watermark'
 import Caption from '../components/Caption'
 

@@ -8,7 +8,6 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-netlify`,
-    `gatsby-mdx`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
     {
@@ -36,12 +35,12 @@ module.exports = {
     `gatsby-transformer-yaml`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-remark`,
-    `gatsby-remark-images-medium-zoom`,
+    `gatsby-plugin-mdx`,
     {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         google: {
-          families: [`Work Sans`, `Quicksand`]
+          families: [`Open Sans`, `Quicksand`]
         }
       }
     },

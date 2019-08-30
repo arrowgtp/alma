@@ -3,11 +3,12 @@ import styled from 'styled-components'
 import { useTransition, animated } from 'react-spring'
 import { injectIntl } from 'gatsby-plugin-intl'
 
-import P from './visual/Paragraph'
+import { P } from './visual/Typography'
 
 import { Button } from '../components/visual/Button'
 
-import almaBGShell from '../images/alma/alma-bg-shell.svg'
+// import almaBGShell from '../images/alma/alma-bg-shell.svg'
+import lifestyleImage from '../images/lifestyle/lifestyle-1.jpg'
 
 const FormContainer = styled.div`
   /* grid-column: 3 / 4;
@@ -35,7 +36,7 @@ const Form = styled(animated.div)`
   width: 90vw;
   border-radius: 16px;
   background: white;
-  background-image: url(${almaBGShell});
+  background-image: url(${lifestyleImage});
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -51,7 +52,7 @@ const Form = styled(animated.div)`
     padding: 2rem;
     left: 20vw;
     top: auto;
-    width: 28rem;
+    width: 48rem;
     height: 32rem;
     bottom: 0;
     grid-template-rows: repeat(5, 1fr);
@@ -149,6 +150,8 @@ const FormP = styled(P)`
   padding: 0;
   align-self: center;
   justify-self: center;
+  background: white;
+  /* text-shadow: 0px 0px 8px hsla(0,0%,0%,1); */
 `
 
 const Contact = () => {
@@ -197,7 +200,7 @@ const Contact = () => {
           &&
           <Form key={key} style={fade} name="contact" method="POST" data-netlify="true">
             <FormP>
-            Don’t miss out on a chance to win your next exotic getaway! Enter now!
+              Don’t miss out on a chance to win your next exotic getaway! Enter now!
             </FormP>
             <Label>Name: <Input type="text" name="name"/></Label>   
             <Label>Email: <Input type="email" name="email" /></Label>

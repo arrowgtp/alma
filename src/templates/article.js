@@ -2,8 +2,8 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import styled from 'styled-components'
 import { injectIntl } from 'gatsby-plugin-intl'
-import MDXRenderer from 'gatsby-mdx/mdx-renderer'
-import { MDXProvider } from '@mdx-js/tag'
+import { MDXRenderer } from 'gatsby-plugin-mdx'
+import { MDXProvider } from '@mdx-js/react'
 import Img from 'gatsby-image'
 import SEO from "../components/seo"
 import './article.css'
@@ -201,16 +201,11 @@ const MainContentSection = styled.div`
 // )
 
 const Article = ({ data }) => {
-  const { frontmatter, code } = data.mdx
-  // const { frontmatter, code, tableOfContents } = data.mdx
+  const { frontmatter, body } = data.mdx
   return (
     <ViewContainer>
       <SEO title={frontmatter.title} />
       <MDXProvider>
-      {/* <MDXProvider components={components}> */}
-        {/* <TOC>
-          {tableOfContents && <ul>{tableOfContents.items.map(renderItem)}</ul>}
-        </TOC> */}
         <TitleBlock>
           <TitleText>
             <Title>{frontmatter.title}</Title>
@@ -218,11 +213,10 @@ const Article = ({ data }) => {
             <Date>{frontmatter.date}</Date>
           </TitleText>
           <TitleImage fluid={frontmatter.image.childImageSharp.fluid} alt="cool stuff." />
-          {/* <TitleScrim /> */}
         </TitleBlock>
         <MainContentSection>
           <div>
-            <MDXRenderer>{code.body}</MDXRenderer>
+            <MDXRenderer>{body}</MDXRenderer>
           </div>
         </MainContentSection>
       </MDXProvider> 
@@ -245,10 +239,7 @@ export const query = graphql`
           }
         }
       }
-      code {
-        scope
-        body
-      }
+      body
     }
   }
 `
