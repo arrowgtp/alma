@@ -11,26 +11,16 @@ import { Button } from '../components/visual/Button'
 import lifestyleImage from '../images/lifestyle/lifestyle-1.jpg'
 
 const FormContainer = styled.div`
-  /* grid-column: 3 / 4;
-  grid-row: 1 / 2; */
   display: flex;
   align-items: center;
   justify-content: center;
-
-  @media (min-width: 50rem) {
-    /* grid-column: 1 / 2;
-    grid-row: 3 / 4; */
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
-  }
 `
 
 const Form = styled(animated.div)`
   margin: 0;
   padding: 1rem;
   position: fixed;
-  bottom: 15vh;
+  bottom: calc(var(--vh, 1vh) * 15);;
   left: 5vw;
   height: 60vh;
   width: 90vw;
@@ -46,14 +36,15 @@ const Form = styled(animated.div)`
   align-items: center;
   box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.25);
   z-index: 100;
+  border: 10px solid white;
 
   @media (min-width: 50rem) {
     margin: 0 0 1rem 2rem;
     padding: 2rem;
     left: 20vw;
     top: auto;
-    width: 48rem;
-    height: 32rem;
+    width: 52rem;
+    height: 40rem;
     bottom: 0;
     grid-template-rows: repeat(5, 1fr);
   }
@@ -68,7 +59,7 @@ const DownArrow = styled.div`
   border-top: 20px solid white;
   grid-row: 8 / 9;
   grid-column: 8 / 9;
-  margin-bottom: -32px;
+  margin-bottom: -40px;
   margin-left: -12px;
   align-self: end;
 
@@ -119,7 +110,7 @@ const Label = styled.label`
   display: block;
   margin: 0;
   padding: 1rem;
-  color: #006674;
+  color: white;
 `
 
 const Input = styled.input`
@@ -131,8 +122,14 @@ const Input = styled.input`
   height: 24px;
   font-size: 16px;
   border: 1px solid #006674;
-  /* background: #eee; */
+  background: hsla(0,0%,0%,0.25);
   border-radius: 4px;
+  /* opacity: 0.25; */
+  color: white;
+
+  /* :focus {
+    color: white;
+  } */
 `
 
 const SubmitButton = styled(Button)`
@@ -147,11 +144,15 @@ const SubmitButton = styled(Button)`
 const FormP = styled(P)`
   grid-column: 1 / 9;
   margin: 0 1rem 0 1rem;
-  padding: 0;
-  align-self: center;
-  justify-self: center;
-  background: white;
-  /* text-shadow: 0px 0px 8px hsla(0,0%,0%,1); */
+  padding: 1rem;
+  align-self: stretch;
+  justify-self: stretch;
+  /* background: white; */
+  /* border: 1px solid red; */
+  color: white;
+  font-size: 24px;
+  line-height: 1.5;
+  text-shadow: 0px 0px 8px hsla(0,0%,0%,1);
 `
 
 const Contact = () => {
@@ -204,7 +205,7 @@ const Contact = () => {
             </FormP>
             <Label>Name: <Input type="text" name="name"/></Label>   
             <Label>Email: <Input type="email" name="email" /></Label>
-            <Label>Number: <Input type="tel" name="email" /></Label>
+            <Label>Number: <Input type="tel" name="phone" /></Label>
             <SubmitButton type="submit">Submit</SubmitButton>
             <DownArrow />
           </Form>
