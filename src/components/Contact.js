@@ -218,13 +218,14 @@ const Contact = () => {
         {transition.map(({ item, key, props: fade }) => (
           item 
           &&
-          <Form key={key} style={fade} name="contact" method="POST" data-netlify="true">
+          <Form key={key} style={fade} name="contact-form" method="POST" data-netlify="true">
+            <input type="hidden" name="form-name" value="contact-form" />
             <Message>
               Don’t miss out on a chance to win your next exotic getaway! Enter now!
             </Message>
             <Label>Name: <Input type="text" name="name"/></Label>   
-            <Label>Email: <Input type="email" name="email" /></Label>
-            <Label>Number: <Input type="tel" name="phone" /></Label>
+            <Label>Email: <Input type="email" name="email"/></Label>
+            <Label>Number: <Input type="tel" name="phone"/></Label>
             <SubmitButton
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
