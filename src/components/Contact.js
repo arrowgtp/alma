@@ -136,7 +136,8 @@ const SubmitButton = styled(Button)`
   grid-column: 1 / 9;
   grid-row: 5 / 6;
   align-self: center;
-  font-size: 16px;
+  font-size: calc(16px + (24 - 16) * ((100vw - 300px) / (1600 - 300)));
+  line-height: 1;
   margin-top: 1rem;
   padding: 0.75rem 1.25rem;
   color: black;
@@ -146,12 +147,13 @@ const SubmitButton = styled(Button)`
   text-shadow: none;
 
   :hover {
-    background: #aaa;
+    background: white;
     color: black;
   }
 
   :active {
-    background: black;
+    background: white;
+    color: black;
   }
 
   :focus {
@@ -223,7 +225,13 @@ const Contact = () => {
             <Label>Name: <Input type="text" name="name"/></Label>   
             <Label>Email: <Input type="email" name="email" /></Label>
             <Label>Number: <Input type="tel" name="phone" /></Label>
-            <SubmitButton type="submit">Submit</SubmitButton>
+            <SubmitButton
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              type="submit"
+            >
+              Submit
+            </SubmitButton>
             <DownArrow />
           </Form>
         ))}

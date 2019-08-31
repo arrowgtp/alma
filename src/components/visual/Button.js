@@ -1,6 +1,8 @@
+import React, { Fragment } from 'react'
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
 
-const Button = styled.button`
+const Button = styled(motion.button)`
   margin: 0;
   padding: 0;
   background: linear-gradient(0deg, rgba(45,101,142,1) 0%, rgba(81,168,190,1) 100%);
