@@ -20,9 +20,9 @@ const Form = styled(animated.div)`
   margin: 0;
   padding: 1rem;
   position: fixed;
-  bottom: calc(var(--vh, 1vh) * 15);;
+  bottom: calc(var(--vh, 1vh) * 15);
   left: 5vw;
-  height: 60vh;
+  height: calc(var(--vh, 1vh) * 75);
   width: 90vw;
   border-radius: 16px;
   background: white;
@@ -138,10 +138,27 @@ const SubmitButton = styled(Button)`
   align-self: center;
   font-size: 16px;
   margin-top: 1rem;
-  padding: 0.5rem 1rem;
+  padding: 0.75rem 1.25rem;
+  color: black;
+  background: white;
+  border: none;
+  box-shadow: 0px 0px 16px hsla(0,0%,0%,0.5);
+  text-shadow: none;
+
+  :hover {
+    background: #aaa;
+    color: black;
+  }
+
+  :active {
+    background: black;
+  }
+
+  :focus {
+  }
 `
 
-const FormP = styled(P)`
+const Message = styled(P)`
   grid-column: 1 / 9;
   margin: 0 1rem 0 1rem;
   padding: 1rem;
@@ -150,7 +167,7 @@ const FormP = styled(P)`
   /* background: white; */
   /* border: 1px solid red; */
   color: white;
-  font-size: 24px;
+  font-size: calc(16px + (24 - 16) * ((100vw - 300px) / (1600 - 300)));
   line-height: 1.5;
   text-shadow: 0px 0px 8px hsla(0,0%,0%,1);
 `
@@ -200,9 +217,9 @@ const Contact = () => {
           item 
           &&
           <Form key={key} style={fade} name="contact" method="POST" data-netlify="true">
-            <FormP>
+            <Message>
               Don’t miss out on a chance to win your next exotic getaway! Enter now!
-            </FormP>
+            </Message>
             <Label>Name: <Input type="text" name="name"/></Label>   
             <Label>Email: <Input type="email" name="email" /></Label>
             <Label>Number: <Input type="tel" name="phone" /></Label>
