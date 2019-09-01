@@ -122,7 +122,8 @@ const Input = styled.input`
   height: 24px;
   font-size: 16px;
   border: 1px solid #006674;
-  background: hsla(0,0%,0%,0.25);
+  border: 1px solid hsla(0,0%,0%,0.25);
+  background: hsla(0,0%,0%,0.5);
   border-radius: 4px;
   /* opacity: 0.25; */
   color: white;
@@ -140,6 +141,8 @@ const SubmitButton = styled(Button)`
   line-height: 1;
   margin-top: 1rem;
   padding: 0.75rem 1.25rem;
+  padding: 16px 24px;
+  vertical-align: baseline;
   color: black;
   background: white;
   border: none;
@@ -219,13 +222,13 @@ const Contact = () => {
           item 
           &&
           <Form key={key} style={fade} name="contact-form" method="POST" data-netlify="true">
-            <input type="hidden" name="form-name" value="contact-form" />
+            <input type="hidden" name="contact-form" value="contact"/>
             <Message>
               Don’t miss out on a chance to win your next exotic getaway! Enter now!
             </Message>
-            <Label>Name: <Input type="text" name="name"/></Label>   
-            <Label>Email: <Input type="email" name="email"/></Label>
-            <Label>Number: <Input type="tel" name="phone"/></Label>
+            <Label>Name : <Input name="name" type="text"/></Label>   
+            <Label>Email : <Input name="email" type="email"/></Label>
+            <Label>Number : <Input name="phone" type="tel"/></Label>
             <SubmitButton
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
