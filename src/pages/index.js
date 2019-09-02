@@ -5,7 +5,7 @@ import Img from 'gatsby-image'
 import { Link, injectIntl } from 'gatsby-plugin-intl'
 import SEO from '../components/seo'
 
-import ViewContainer from '../components/layout/ViewContainer'
+import Content from '../components/layout/Content'
 import { FullContentCard, FullContentImage } from '../components/layout/FullContentCard'
 import FullWidthContainer from '../components/layout/FullWidthContainer'
 import CenteredContainer from '../components/layout/CenteredContainer'
@@ -449,7 +449,7 @@ const InstaScrim = styled.div`
 const Index = ({ data, intl }) => {
 
   return (
-    <ViewContainer>
+    <Content>
 
       <SEO title="Home" />
 
@@ -837,7 +837,7 @@ const Index = ({ data, intl }) => {
         <p>{intl.formatMessage({ id: "solicitation-notice" })}</p>
       </Footer>
 
-    </ViewContainer>
+    </Content>
   )
 }
 

@@ -8,7 +8,7 @@ import Img from 'gatsby-image'
 import SEO from "../components/seo"
 import './article.css'
 
-import ViewContainer from '../components/layout/ViewContainer'
+import Content from '../components/layout/Content'
 
 const TitleBlock = styled.div`
   margin: 0;
@@ -203,7 +203,7 @@ const MainContentSection = styled.div`
 const Article = ({ data }) => {
   const { frontmatter, body } = data.mdx
   return (
-    <ViewContainer>
+    <Content>
       <SEO title={frontmatter.title} />
       <MDXProvider>
         <TitleBlock>
@@ -220,7 +220,7 @@ const Article = ({ data }) => {
           </div>
         </MainContentSection>
       </MDXProvider> 
-    </ViewContainer>
+    </Content>
   )
 }
 

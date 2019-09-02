@@ -5,7 +5,7 @@ import { Link, injectIntl } from 'gatsby-plugin-intl'
 // import Img from 'gatsby-image'
 import SEO from "../components/seo"
 
-import ViewContainer from '../components/layout/ViewContainer'
+import Content from '../components/layout/Content'
 import FullWidthContainer from '../components/layout/FullWidthContainer'
 import CenteredContainer from '../components/layout/CenteredContainer'
 import { FullContentCard, FullContentImage, HeadingContainer } from '../components/layout/FullContentCard'
@@ -20,7 +20,7 @@ import Footer from '../components/Footer'
 
 const Restaurants = ({ data, intl }) => {
   return (
-    <ViewContainer>
+    <Content>
 
       <SEO title={intl.formatMessage({ id: "restaurants-title" })} />
       
@@ -153,7 +153,7 @@ const Restaurants = ({ data, intl }) => {
         <p>{intl.formatMessage({ id: "solicitation-notice" })}</p>
       </Footer>
 
-    </ViewContainer>
+    </Content>
   )
 }
 

@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef, Fragment } from 'react'
 import styled from 'styled-components'
-import { useTransition, animated } from 'react-spring'
+// import { useTransition, animated } from 'react-spring'
+import { motion, AnimatePresence } from 'framer-motion'
 import { injectIntl, Link } from 'gatsby-plugin-intl'
 
 // import Toggle from './functional/toggle'
@@ -23,7 +24,7 @@ const NavContainer = styled.div`
   justify-content: center;
 `
 
-const SmallNav = styled(animated.div)`
+const SmallNav = styled(motion.div)`
   margin: 0;
   padding: 1rem;
   position: fixed;
@@ -281,64 +282,183 @@ const Navigation = ({ intl }) => {
     };
   }, []);
 
-  const transition = useTransition(isToggled, null, { 
-    from: { opacity: 0, transform: 'translate3d(-33%,60%,0) scale(0.1)' },
-    enter: { opacity: 1, transform: 'translate3d(0,0%,0) scale(1)' },
-    leave: { opacity: 0, transform: 'translate3d(-33%,60%,0) scale(0.1)' }
-  });
+  // const transition = useTransition(isToggled, null, { 
+  //   from: { opacity: 0, transform: 'translate3d(-33%,60%,0) scale(0.1)' },
+  //   enter: { opacity: 1, transform: 'translate3d(0,0%,0) scale(1)' },
+  //   leave: { opacity: 0, transform: 'translate3d(-33%,60%,0) scale(0.1)' }
+  // });
+
+  // return (
+  //   <Fragment>
+
+  //     <NavContainer ref={navRef}>
+
+  //       {!isToggled ?
+  //         (
+  //           <MenuButton onClick={toggle}>Menu</MenuButton>
+  //         ) : (
+  //           <MenuButton onClick={toggle}>Close</MenuButton>
+  //         )
+  //       }
+
+  //       {transition.map(({ item, key, props: fade }) => (
+  //         item 
+  //         && 
+  //         <SmallNav key={key} style={fade}>
+  //           <NavBlock>
+  //             <AlmaBulletShell src={almaShell}/>
+  //             <AlmaLink to={`/resort`} onClick={toggle}>{intl.formatMessage({ id: "nav-resort" })}</AlmaLink>
+  //               <AlmaLink2 to={`/apartments`} onClick={toggle}>{intl.formatMessage({ id: "nav-apartments" })}</AlmaLink2>
+  //               <AlmaLink2 to={`/villas`} onClick={toggle}>{intl.formatMessage({ id: "nav-villas" })}</AlmaLink2>
+  //               <AlmaLink2 to={`/restaurants`} onClick={toggle}>{intl.formatMessage({ id: "nav-restaurants" })}</AlmaLink2>
+  //               <AlmaLink2 to={`/amenities`} onClick={toggle}>{intl.formatMessage({ id: "nav-amenities" })}</AlmaLink2>
+  //               <AlmaLink2 to={`/construction`} onClick={toggle}>{intl.formatMessage({ id: "nav-construction" })}</AlmaLink2>
+  //               <AlmaBulletShell src={almaShell}/>
+  //             <AlmaLink to={`/vacations`} onClick={toggle}>{intl.formatMessage({ id: "nav-vacations" })}</AlmaLink>
+  //             <AlmaBulletShell src={almaShell}/>
+  //             <AlmaLink to={`/alma`} onClick={toggle}>{intl.formatMessage({ id: "nav-about-alma" })}</AlmaLink>
+  //             {/* <AlmaBulletShell src={almaShell}/>
+  //             <AlmaLink to={`/promotions`} onClick={toggle}>Promotions</AlmaLink> */}
+  //             <SocialButtons>
+  //               <SocialButton href='https://www.facebook.com/almavacations'>
+  //                 <img src={FacebookIcon} alt='The Alma Resort Facebook account.' />
+  //               </SocialButton>
+  //               <SocialButton href='https://www.instagram.com/almavacations'>
+  //                 <img src={InstagramIcon} alt='The Alma Resort Instagram account.' />
+  //               </SocialButton>
+  //               <SocialButton href='https://www.twitter.com/almavacations'>
+  //                 <img src={TwitterIcon} alt='The Alma Resort Twitter account.' />
+  //               </SocialButton>
+  //             </SocialButtons>
+  //             <Locales>
+  //               <Language />
+  //             </Locales>
+  //           </NavBlock>
+  //           <DownArrow />
+  //       </SmallNav>
+  //       ))}
+
+  //     </NavContainer>
+
+  //     <LargeNav>
+  //       <Locales>
+  //         <Language />
+  //       </Locales>
+  //       <SocialButtons>
+  //         <SocialButton href='https://www.facebook.com/almavacations'>
+  //           <img src={FacebookIcon} alt='The Alma Resort Facebook account.' />
+  //         </SocialButton>
+  //         <SocialButton href='https://www.instagram.com/almavacations'>
+  //           <img src={InstagramIcon} alt='The Alma Resort Instagram account.' />
+  //         </SocialButton>
+  //         <SocialButton href='https://www.twitter.com/almavacations'>
+  //           <img src={TwitterIcon} alt='The Alma Resort Twitter account.' />
+  //         </SocialButton>
+  //       </SocialButtons>
+  //       <LargeLinkTree>
+  //       <AlmaBulletShell src={almaShell}/>
+  //         <AlmaLink to={`/resort`}>{intl.formatMessage({ id: "nav-resort" })}</AlmaLink>
+  //           <AlmaLink2 to={`/apartments`}>{intl.formatMessage({ id: "nav-apartments" })}</AlmaLink2>
+  //           <AlmaLink2 to={`/villas`}>{intl.formatMessage({ id: "nav-villas" })}</AlmaLink2>
+  //           <AlmaLink2 to={`/restaurants`}>{intl.formatMessage({ id: "nav-restaurants" })}</AlmaLink2>
+  //           <AlmaLink2 to={`/amenities`}>{intl.formatMessage({ id: "nav-amenities" })}</AlmaLink2>
+  //           <AlmaLink2 to={`/construction`}>{intl.formatMessage({ id: "nav-construction" })}</AlmaLink2>
+  //         <AlmaBulletShell src={almaShell}/>
+  //         <AlmaLink to={`/vacations`}>{intl.formatMessage({ id: "nav-vacations" })}</AlmaLink>
+  //         <AlmaBulletShell src={almaShell}/>
+  //         <AlmaLink to={`/alma`}>{intl.formatMessage({ id: "nav-about-alma" })}</AlmaLink>
+  //         {/* <AlmaBulletShell src={almaShell}/> */}
+  //         {/* <AlmaLink to={`/promotions`}>Promotions</AlmaLink> */}
+  //       </LargeLinkTree> 
+  //     </LargeNav>
+
+  //   </Fragment>
+  // )
 
   return (
     <Fragment>
-
       <NavContainer ref={navRef}>
 
-        {!isToggled ?
+        {
+          !isToggled ?
           (
             <MenuButton onClick={toggle}>Menu</MenuButton>
           ) : (
             <MenuButton onClick={toggle}>Close</MenuButton>
           )
         }
-
-        {transition.map(({ item, key, props: fade }) => (
-          item 
-          && 
-          <SmallNav key={key} style={fade}>
-            <NavBlock>
-              <AlmaBulletShell src={almaShell}/>
-              <AlmaLink to={`/resort`} onClick={toggle}>{intl.formatMessage({ id: "nav-resort" })}</AlmaLink>
-                <AlmaLink2 to={`/apartments`} onClick={toggle}>{intl.formatMessage({ id: "nav-apartments" })}</AlmaLink2>
-                <AlmaLink2 to={`/villas`} onClick={toggle}>{intl.formatMessage({ id: "nav-villas" })}</AlmaLink2>
-                <AlmaLink2 to={`/restaurants`} onClick={toggle}>{intl.formatMessage({ id: "nav-restaurants" })}</AlmaLink2>
-                <AlmaLink2 to={`/amenities`} onClick={toggle}>{intl.formatMessage({ id: "nav-amenities" })}</AlmaLink2>
-                <AlmaLink2 to={`/construction`} onClick={toggle}>{intl.formatMessage({ id: "nav-construction" })}</AlmaLink2>
+        
+        <AnimatePresence>
+          {isToggled &&
+            <SmallNav
+              initial={{
+                opacity: 0,
+                scale: 0.1,
+                x: -175,
+                y: 275,
+                transition: { 
+                  type: "spring",
+                  stiffness: 200,
+                  damping: 30
+                }
+              }}
+              animate={{
+                opacity: 1,
+                scale: 1.0,
+                x: 0,
+                y: 0,
+                transition: {
+                  type: "spring",
+                  stiffness: 200,
+                  damping: 30
+                }
+              }}
+              exit={{
+                opacity: 0,
+                scale: 0.1,
+                x: -175,
+                y: 275,
+                transition: {
+                  type: "spring",
+                  stiffness: 200,
+                  damping: 30
+                }
+              }}
+            >
+              <NavBlock>
                 <AlmaBulletShell src={almaShell}/>
-              <AlmaLink to={`/vacations`} onClick={toggle}>{intl.formatMessage({ id: "nav-vacations" })}</AlmaLink>
-              <AlmaBulletShell src={almaShell}/>
-              <AlmaLink to={`/alma`} onClick={toggle}>{intl.formatMessage({ id: "nav-about-alma" })}</AlmaLink>
-              {/* <AlmaBulletShell src={almaShell}/>
-              <AlmaLink to={`/promotions`} onClick={toggle}>Promotions</AlmaLink> */}
-              <SocialButtons>
-                <SocialButton href='https://www.facebook.com/almavacations'>
-                  <img src={FacebookIcon} alt='The Alma Resort Facebook account.' />
-                </SocialButton>
-                <SocialButton href='https://www.instagram.com/almavacations'>
-                  <img src={InstagramIcon} alt='The Alma Resort Instagram account.' />
-                </SocialButton>
-                <SocialButton href='https://www.twitter.com/almavacations'>
-                  <img src={TwitterIcon} alt='The Alma Resort Twitter account.' />
-                </SocialButton>
-              </SocialButtons>
-              <Locales>
-                <Language />
-              </Locales>
-            </NavBlock>
-            <DownArrow />
-        </SmallNav>
-        ))}
-
+                <AlmaLink to={`/resort`} onClick={toggle}>{intl.formatMessage({ id: "nav-resort" })}</AlmaLink>
+                  <AlmaLink2 to={`/apartments`} onClick={toggle}>{intl.formatMessage({ id: "nav-apartments" })}</AlmaLink2>
+                  <AlmaLink2 to={`/villas`} onClick={toggle}>{intl.formatMessage({ id: "nav-villas" })}</AlmaLink2>
+                  <AlmaLink2 to={`/restaurants`} onClick={toggle}>{intl.formatMessage({ id: "nav-restaurants" })}</AlmaLink2>
+                  <AlmaLink2 to={`/amenities`} onClick={toggle}>{intl.formatMessage({ id: "nav-amenities" })}</AlmaLink2>
+                  <AlmaLink2 to={`/construction`} onClick={toggle}>{intl.formatMessage({ id: "nav-construction" })}</AlmaLink2>
+                  <AlmaBulletShell src={almaShell}/>
+                <AlmaLink to={`/vacations`} onClick={toggle}>{intl.formatMessage({ id: "nav-vacations" })}</AlmaLink>
+                <AlmaBulletShell src={almaShell}/>
+                <AlmaLink to={`/alma`} onClick={toggle}>{intl.formatMessage({ id: "nav-about-alma" })}</AlmaLink>
+                {/* <AlmaBulletShell src={almaShell}/>
+                <AlmaLink to={`/promotions`} onClick={toggle}>Promotions</AlmaLink> */}
+                <SocialButtons>
+                  <SocialButton href='https://www.facebook.com/almavacations'>
+                    <img src={FacebookIcon} alt='The Alma Resort Facebook account.' />
+                  </SocialButton>
+                  <SocialButton href='https://www.instagram.com/almavacations'>
+                    <img src={InstagramIcon} alt='The Alma Resort Instagram account.' />
+                  </SocialButton>
+                  <SocialButton href='https://www.twitter.com/almavacations'>
+                    <img src={TwitterIcon} alt='The Alma Resort Twitter account.' />
+                  </SocialButton>
+                </SocialButtons>
+                <Locales>
+                  <Language />
+                </Locales>
+              </NavBlock>
+              <DownArrow />
+            </SmallNav>
+          }
+        </AnimatePresence>
       </NavContainer>
-
       <LargeNav>
         <Locales>
           <Language />
@@ -370,7 +490,6 @@ const Navigation = ({ intl }) => {
           {/* <AlmaLink to={`/promotions`}>Promotions</AlmaLink> */}
         </LargeLinkTree> 
       </LargeNav>
-
     </Fragment>
   )
 }

@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import { Link, injectIntl } from 'gatsby-plugin-intl'
 import SEO from "../components/seo"
 
-import ViewContainer from '../components/layout/ViewContainer'
+import Content from '../components/layout/Content'
 import CenteredContainer from '../components/layout/CenteredContainer'
 import AlmaHeader from '../components/Header'
 
@@ -74,7 +74,7 @@ font-size: 16px;
 
 const News = ({ data, intl }) => {
   return (
-    <ViewContainer>
+    <Content>
       <SEO title="News" />
       <CenteredContainer>
         <AlmaHeader title='Latest News' />
@@ -93,7 +93,7 @@ const News = ({ data, intl }) => {
           ))}
         </div>
       </CenteredContainer>
-    </ViewContainer>
+    </Content>
   )
 }
 

@@ -1,27 +1,11 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styled from 'styled-components'
-import { useTransition, animated } from 'react-spring'
 import { motion, AnimatePresence } from 'framer-motion'
 
-// const Container = styled(animated.main)`
-//   margin: 0;
-//   padding: 0;
-//   z-index: 1;
-//   /* width: 100vw; */
-//   display: grid;
-//   grid-template-rows: auto;
-//   grid-template-columns: 
-//     minmax(2rem, 1fr) 
-//     minmax(1rem, 45rem) 
-//     minmax(2rem, 1fr)
-//   ;
-// `
-
-const Container = styled(motion.main)`
+const Container = styled(motion.div)`
   margin: 0;
   padding: 0;
   z-index: 1;
-  /* width: 100vw; */
   display: grid;
   grid-template-rows: auto;
   grid-template-columns: 
@@ -31,7 +15,7 @@ const Container = styled(motion.main)`
   ;
 `
 
-const ViewContainer = ({ children }) => {
+const Content = ({ children }) => {
   // const [state] = useState(true);
   // const transition = useTransition(state, null, { 
   //   from: { opacity: 0 },
@@ -46,12 +30,36 @@ const ViewContainer = ({ children }) => {
   //   <Container>{children}</Container>
   // )
 
+  // Need to add conditionals that stop the animation when langauge is changed
+
   return (
     <AnimatePresence>
       <Container
-        initial={{ opacity: 0, transition: { duration: 1, delay: 0 }}}
-        animate={{ opacity: 1, transition: { duration: 1, delay: 0 }}}
-        exit={{ opacity: 0, transition: { duration: 1 }}}
+        initial={{
+          opacity: 0,
+          transition: { 
+            type: "spring",
+            stiffness: 200,
+            damping: 50
+          }
+        }}
+        animate={{
+          opacity: 1,
+          transition: { 
+            type: "spring",
+            stiffness: 200,
+            damping: 50,
+            delay: 0.2
+          }
+        }}
+        exit={{
+          opacity: 0,
+          transition: { 
+            type: "spring",
+            stiffness: 200,
+            damping: 50
+          }
+        }}
       >
         {children}
       </Container>
@@ -59,4 +67,4 @@ const ViewContainer = ({ children }) => {
   )
 }
 
-export default ViewContainer
+export default Content

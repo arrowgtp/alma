@@ -5,10 +5,11 @@ import { Link, injectIntl } from 'gatsby-plugin-intl'
 // import Img from 'gatsby-image'
 import SEO from '../components/seo'
 
+import Content from '../components/layout/Content'
+
 import FullWidthContainer from '../components/layout/FullWidthContainer'
 import { FullImage, Image } from '../components/visual/FullImage'
 import { FullContentCard, FullContentImage, HeadingContainer } from '../components/layout/FullContentCard'
-import ViewContainer from '../components/layout/ViewContainer'
 import CenteredContainer from '../components/layout/CenteredContainer'
 import AlmaHeader from '../components/Header'
 import { Button, ButtonContainer } from '../components/visual/Button'
@@ -20,7 +21,7 @@ import Footer from '../components/Footer'
 
 const Construction = ({ data, intl }) => {
   return (
-    <ViewContainer>
+    <Content>
 
       <SEO title={intl.formatMessage({ id: "construction-title" })} />
       
@@ -233,7 +234,7 @@ const Construction = ({ data, intl }) => {
         <p>{intl.formatMessage({ id: "solicitation-notice" })}</p>
       </Footer>
 
-    </ViewContainer>
+    </Content>
   )
 }
 

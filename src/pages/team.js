@@ -5,7 +5,7 @@ import Img from 'gatsby-image'
 import { injectIntl } from 'gatsby-plugin-intl'
 import SEO from "../components/seo"
 
-import ViewContainer from '../components/layout/ViewContainer'
+import Content from '../components/layout/Content'
 import FullWidthContainer from '../components/layout/FullWidthContainer'
 
 const TeamGrid = styled.div`
@@ -77,7 +77,7 @@ const Bio = styled.p`
 
 const Team = ({data}) => {
   return (
-    <ViewContainer>
+    <Content>
       <SEO title="Team" />
       <FullWidthContainer>
         <TeamGrid>
@@ -93,7 +93,7 @@ const Team = ({data}) => {
           ))}
         </TeamGrid>
       </FullWidthContainer>
-    </ViewContainer>
+    </Content>
   )
 }
 

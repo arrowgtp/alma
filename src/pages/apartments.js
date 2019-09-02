@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import Img from 'gatsby-image'
 import SEO from '../components/seo'
 
-import ViewContainer from '../components/layout/ViewContainer'
+import Content from '../components/layout/Content'
 import FullWidthContainer from '../components/layout/FullWidthContainer'
 import CenteredContainer from '../components/layout/CenteredContainer'
 import { FullContentCard, FullContentImage, HeadingContainer } from '../components/layout/FullContentCard'
@@ -44,7 +44,7 @@ const FloorplanParagraph = styled.p`
 
 const Apartments = ({ data, intl }) => {
   return (
-    <ViewContainer>
+    <Content>
 
       <SEO title={intl.formatMessage({ id: "apartments-title" })} />
       
@@ -187,7 +187,7 @@ const Apartments = ({ data, intl }) => {
         <p>{intl.formatMessage({ id: "solicitation-notice" })}</p>
       </Footer>
 
-    </ViewContainer>
+    </Content>
   )
 }
 

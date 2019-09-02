@@ -4,7 +4,7 @@ import { graphql } from 'gatsby'
 import { Link, injectIntl } from 'gatsby-plugin-intl'
 import SEO from "../components/seo"
 
-import ViewContainer from '../components/layout/ViewContainer'
+import Content from '../components/layout/Content'
 // import FullWidthContainer from '../components/layout/FullWidthContainer'
 import CenteredContainer from '../components/layout/CenteredContainer'
 import { FullContentCard, FullContentImage, HeadingContainer } from '../components/layout/FullContentCard'
@@ -20,7 +20,7 @@ import Footer from '../components/Footer'
 
 const Vacations = ({ intl, data }) => {
   return (
-    <ViewContainer>
+    <Content>
 
       <SEO title={intl.formatMessage({ id: "vacations-title" })}/>
 
@@ -115,7 +115,7 @@ const Vacations = ({ intl, data }) => {
         <p>{intl.formatMessage({ id: "solicitation-notice" })}</p>
       </Footer>
 
-    </ViewContainer>
+    </Content>
   )
 }
 
