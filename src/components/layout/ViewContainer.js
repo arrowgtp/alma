@@ -49,9 +49,9 @@ const ViewContainer = ({ children }) => {
   return (
     <AnimatePresence>
       <Container
-        initial={{ opacity: 0, delay: 1, duration: 2 }}
-        animate={{ opacity: 1, delay: 1, duration: 2 }}
-        exit={{ duration: 2, opacity: 0 }}
+        initial={{ opacity: 0, transition: { duration: 1, delay: 0 }}}
+        animate={{ opacity: 1, transition: { duration: 1, delay: 0 }}}
+        exit={{ opacity: 0, transition: { duration: 1 }}}
       >
         {children}
       </Container>
