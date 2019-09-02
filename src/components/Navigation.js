@@ -31,6 +31,7 @@ const SmallNav = styled(motion.div)`
   bottom: 15vh;
   left: 5vw;
   height: 60vh;
+  height: 36rem;
   width: 90vw;
   border-radius: 16px;
   background: white;
@@ -387,15 +388,15 @@ const Navigation = ({ intl }) => {
             <MenuButton onClick={toggle}>Close</MenuButton>
           )
         }
-        
+
         <AnimatePresence>
           {isToggled &&
             <SmallNav
               initial={{
                 opacity: 0,
                 scale: 0.1,
-                x: -175,
-                y: 275,
+                x: -100,
+                y: 250,
                 transition: { 
                   type: "spring",
                   stiffness: 200,
@@ -416,8 +417,8 @@ const Navigation = ({ intl }) => {
               exit={{
                 opacity: 0,
                 scale: 0.1,
-                x: -175,
-                y: 275,
+                x: -100,
+                y: 250,
                 transition: {
                   type: "spring",
                   stiffness: 200,

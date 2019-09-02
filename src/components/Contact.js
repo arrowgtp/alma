@@ -58,6 +58,7 @@ const Form = styled(motion.form)`
   bottom: calc(var(--vh, 1vh) * 15);
   left: 5vw;
   height: calc(var(--vh, 1vh) * 80);
+  height: 36rem;
   width: 90vw;
   border-radius: 16px;
   background: white;
@@ -94,8 +95,9 @@ const DownArrow = styled.div`
   border-top: 20px solid white;
   grid-row: 8 / 9;
   grid-column: 8 / 9;
-  margin-bottom: -32px;
-  margin-left: -12px;
+  margin-bottom: -40px;
+  /* margin-bottom: -4vh; */
+  margin-left: -2vw;
   align-self: end;
 
   @media (min-width: 50rem) {
@@ -300,8 +302,8 @@ const Contact = () => {
                 opacity: 0,
                 scale: 0.1,
                 // x: -500,
-                x: 175,
-                y: 325,
+                x: '10vh',
+                y: '50vw',
                 transition: { 
                   type: "spring",
                   stiffness: 200,
@@ -311,8 +313,8 @@ const Contact = () => {
               animate={{
                 opacity: 1,
                 scale: 1.0,
-                x: 0,
-                y: 0,
+                x: '0vh',
+                y: '0vw',
                 transition: {
                   type: "spring",
                   stiffness: 200,
@@ -323,8 +325,8 @@ const Contact = () => {
                 opacity: 0,
                 scale: 0.1,
                 // x: -500,
-                x: 175,
-                y: 325,
+                x: '10vh',
+                y: '50vw',
                 transition: {
                   type: "spring",
                   stiffness: 200,
