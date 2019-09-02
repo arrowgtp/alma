@@ -57,7 +57,7 @@ const Form = styled(motion.form)`
   position: fixed;
   bottom: calc(var(--vh, 1vh) * 15);
   left: 5vw;
-  height: calc(var(--vh, 1vh) * 75);
+  height: calc(var(--vh, 1vh) * 80);
   width: 90vw;
   border-radius: 16px;
   background: white;
@@ -94,7 +94,7 @@ const DownArrow = styled.div`
   border-top: 20px solid white;
   grid-row: 8 / 9;
   grid-column: 8 / 9;
-  margin-bottom: -40px;
+  margin-bottom: -32px;
   margin-left: -12px;
   align-self: end;
 
