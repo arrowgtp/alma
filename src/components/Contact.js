@@ -58,7 +58,6 @@ const Form = styled(motion.form)`
   bottom: calc(var(--vh, 1vh) * 15);
   left: 5vw;
   height: calc(var(--vh, 1vh) * 80);
-  height: 36rem;
   width: 90vw;
   border-radius: 16px;
   background: white;
@@ -302,8 +301,8 @@ const Contact = () => {
                 opacity: 0,
                 scale: 0.1,
                 // x: -500,
-                x: '10vh',
-                y: '50vw',
+                x: '30vw',
+                y: '35vh',
                 transition: { 
                   type: "spring",
                   stiffness: 200,
@@ -313,8 +312,8 @@ const Contact = () => {
               animate={{
                 opacity: 1,
                 scale: 1.0,
-                x: '0vh',
-                y: '0vw',
+                x: '0vw',
+                y: '0vh',
                 transition: {
                   type: "spring",
                   stiffness: 200,
@@ -325,8 +324,8 @@ const Contact = () => {
                 opacity: 0,
                 scale: 0.1,
                 // x: -500,
-                x: '10vh',
-                y: '50vw',
+                x: '30vw',
+                y: '35vh',
                 transition: {
                   type: "spring",
                   stiffness: 200,

@@ -28,10 +28,9 @@ const SmallNav = styled(motion.div)`
   margin: 0;
   padding: 1rem;
   position: fixed;
-  bottom: 15vh;
+  bottom: calc(var(--vh, 1vh) * 15);
   left: 5vw;
-  height: 60vh;
-  height: 36rem;
+  height: calc(var(--vh, 1vh) * 80);
   width: 90vw;
   border-radius: 16px;
   background: white;
