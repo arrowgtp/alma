@@ -193,35 +193,35 @@ const Apartments = ({ data, intl }) => {
 
 export const query = graphql`
   query {
-    apartmentLivingRoom1: file(relativePath: { eq: "apartments/apartment-living-room-1-4x3.jpg" }) {
+    apartmentLivingRoom1: file(relativePath: { eq: "apartments/apartment-living-room-1-render-4x3.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 2880) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    apartmentLivingRoom2: file(relativePath: { eq: "apartments/apartment-living-room-2-4x3.jpg" }) {
+    apartmentLivingRoom2: file(relativePath: { eq: "apartments/apartment-living-room-2-render-4x3.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 2880) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    apartmentKitchen: file(relativePath: { eq: "apartments/apartment-kitchen-4x3.jpg" }) {
+    apartmentKitchen: file(relativePath: { eq: "apartments/apartment-kitchen-render-4x3.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 2880) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    apartmentBedroom: file(relativePath: { eq: "apartments/apartment-bedroom-4x3.jpg" }) {
+    apartmentBedroom: file(relativePath: { eq: "apartments/apartment-bedroom-render-4x3.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 2880) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    apartmentBathroom: file(relativePath: { eq: "apartments/apartment-bathroom-4x3.jpg" }) {
+    apartmentBathroom: file(relativePath: { eq: "apartments/apartment-bathroom-render-4x3.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 2880) {
           ...GatsbyImageSharpFluid
