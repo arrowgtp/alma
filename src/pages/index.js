@@ -17,6 +17,7 @@ import Caption from '../components/Caption'
 
 import { Button, ButtonContainer } from '../components/visual/Button'
 
+
 import almaLogoWithBG from '../images/alma/alma-logo-with-bg.svg'
 
 import Footer from '../components/Footer'
