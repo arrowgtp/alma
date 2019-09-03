@@ -2,9 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
 
-// import almaLogoShellWhite from '../../images/alma/alma-logo-shell-white.svg'
-// import almaShell from '../../images/alma/alma-shell.svg'
-
 const AppContainer = styled(motion.div)`
   margin: 0;
   padding: 0;

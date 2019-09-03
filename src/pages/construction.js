@@ -38,35 +38,17 @@ const Construction = ({ data, intl }) => {
         <Space/>
         <AlmaHeader
           blue
-          title={intl.formatMessage({ id: "construction-july-2019" })}
+          title={intl.formatMessage({ id: "construction-august-2019" })}
         />
         <Space/>
-        <P>{intl.formatMessage({ id: "construction-july-2019-paragraph-1" })}</P>
+        <P>{intl.formatMessage({ id: "construction-august-2019-paragraph-1" })}</P>
         <Space/>
-        <P>{intl.formatMessage({ id: "construction-july-2019-paragraph-2" })}</P>
+        <P>{intl.formatMessage({ id: "construction-august-2019-paragraph-2" })}</P>
         <Space/>
-        <P>{intl.formatMessage({ id: "construction-july-2019-paragraph-3" })}</P>
-        <Space/>
-        <P>{intl.formatMessage({ id: "construction-july-2019-paragraph-4" })}</P>
+        <P>{intl.formatMessage({ id: "construction-august-2019-paragraph-3" })}</P>
         <Space/>
       </CenteredContainer>
 
-      <CenteredContainer>
-        <Space/>
-        <AlmaHeader
-          blue
-          title={intl.formatMessage({ id: "construction-june-2019" })}
-        />
-        <Space/>
-        <P>{intl.formatMessage({ id: "construction-june-2019-paragraph-1" })}</P>
-        <Space/>
-        <P>{intl.formatMessage({ id: "construction-june-2019-paragraph-2" })}</P>
-        <Space/>
-        <P>{intl.formatMessage({ id: "construction-june-2019-paragraph-3" })}</P>
-        <Space/>
-        <P>{intl.formatMessage({ id: "construction-june-2019-paragraph-4" })}</P>
-        <Space/>
-      </CenteredContainer>
       <FullWidthContainer>
         <FullImage>
           <Image fluid={data.june2.childImageSharp.fluid}/>
@@ -91,7 +73,26 @@ const Construction = ({ data, intl }) => {
           <Caption medium>Actual Image</Caption>
           <Watermark medium/>
         </FullImage>
+      </FullWidthContainer>
+
+      <CenteredContainer>
         <Space/>
+        <AlmaHeader
+          blue
+          title={intl.formatMessage({ id: "construction-july-2019" })}
+        />
+        <Space/>
+        <P>{intl.formatMessage({ id: "construction-july-2019-paragraph-1" })}</P>
+        <Space/>
+        <P>{intl.formatMessage({ id: "construction-july-2019-paragraph-2" })}</P>
+        <Space/>
+        <P>{intl.formatMessage({ id: "construction-july-2019-paragraph-3" })}</P>
+        <Space/>
+        <P>{intl.formatMessage({ id: "construction-july-2019-paragraph-4" })}</P>
+        <Space/>
+      </CenteredContainer>
+
+      <FullWidthContainer>
         <FullImage>
           <Image fluid={data.june6.childImageSharp.fluid}/>
           <Caption medium>Actual Image</Caption>
@@ -115,6 +116,26 @@ const Construction = ({ data, intl }) => {
           <Caption medium>Actual Image</Caption>
           <Watermark medium/>
         </FullImage>
+      </FullWidthContainer>
+
+      <CenteredContainer>
+        <Space/>
+        <AlmaHeader
+          blue
+          title={intl.formatMessage({ id: "construction-june-2019" })}
+        />
+        <Space/>
+        <P>{intl.formatMessage({ id: "construction-june-2019-paragraph-1" })}</P>
+        <Space/>
+        <P>{intl.formatMessage({ id: "construction-june-2019-paragraph-2" })}</P>
+        <Space/>
+        <P>{intl.formatMessage({ id: "construction-june-2019-paragraph-3" })}</P>
+        <Space/>
+        <P>{intl.formatMessage({ id: "construction-june-2019-paragraph-4" })}</P>
+        <Space/>
+      </CenteredContainer>
+      <FullWidthContainer>
+        
         <Space/>
         <FullImage>
           <Image fluid={data.june10.childImageSharp.fluid}/>
@@ -136,12 +157,6 @@ const Construction = ({ data, intl }) => {
         <Space/>
         <FullImage>
           <Image fluid={data.june13.childImageSharp.fluid}/>
-          <Caption medium>Actual Image</Caption>
-          <Watermark medium/>
-        </FullImage>
-        <Space/>
-        <FullImage>
-          <Image fluid={data.june14.childImageSharp.fluid}/>
           <Caption medium>Actual Image</Caption>
           <Watermark medium/>
         </FullImage>

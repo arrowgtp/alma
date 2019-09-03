@@ -3,7 +3,6 @@ import styled from 'styled-components'
 
 import FullWidthContainer from './layout/FullWidthContainer'
 
-// import almaPattern2 from '../images/alma/alma-bg-pattern-2.svg'
 import almaPattern3 from '../images/alma/alma-bg-pattern-3.svg'
 
 const FooterContainer = styled(FullWidthContainer)`
@@ -16,6 +15,7 @@ const FooterContainer = styled(FullWidthContainer)`
   box-shadow: inset 0px 0px 32px rgba(0, 0, 0, 0.1);
 
   > p {
+    font-family: 'Open Sans', sans-serif;
     color: #ffffff;
     -webkit-text-fill-color: #ffffff;
     text-shadow: 2px 2px 4px hsla(0, 0%, 0%, 0.25);

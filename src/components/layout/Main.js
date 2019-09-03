@@ -1,6 +1,9 @@
 import React, { useEffect } from 'react'
 import styled from 'styled-components'
 
+import almaLogoShellWhite from '../../images/alma/alma-logo-shell-white.svg'
+// import almaShell from '../../images/alma/alma-shell.svg'
+
 const MainContainer = styled.main`
   margin: 0;
   padding: 0;
@@ -10,8 +13,11 @@ const MainContainer = styled.main`
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
   z-index: 1;
-  /* background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMCIgaGVpZ2h0PSIzMCI+CjxyZWN0IHdpZHRoPSIzMCIgaGVpZ2h0PSIzMCIgZmlsbD0iI2ZmZmZmZiI+PC9yZWN0Pgo8cmVjdCB4PSIxNSIgd2lkdGg9IjMwIiBoZWlnaHQ9IjMwIiBmaWxsPSIjZmRmZGZkIj48L3JlY3Q+Cjwvc3ZnPg==");
-  background-repeat: repeat; */
+  background-image: url(${almaLogoShellWhite});
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  box-shadow: 0px 0px 16px hsla(0,0%,0%,1);
 
   @media (min-width: 50rem) {
     grid-column: 2 / 3;

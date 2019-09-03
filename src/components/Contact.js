@@ -210,6 +210,7 @@ const Message = styled(P)`
   color: white;
   font-size: calc(16px + (24 - 16) * ((100vw - 300px) / (1600 - 300)));
   line-height: 1.5;
+  font-weight: 800;
   text-shadow: 0px 0px 8px hsla(0,0%,0%,1);
 `
 
