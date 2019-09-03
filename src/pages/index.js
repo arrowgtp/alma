@@ -575,27 +575,27 @@ const Index = ({ data, intl }) => {
       <FullWidthContainer>
         <HorizontalScrollContainer blue> 
           <Card>
-            <CardImg fluid={data.apartmentLivingRoom1.childImageSharp.fluid} alt="The Alma Resort."/>
+            <CardImg fluid={data.apartmentLivingRoom1.childImageSharp.fluid} alt="Apartment living room."/>
             <Caption small>Artist Rendering</Caption>
             <Watermark small/>
             </Card>
           <Card>
-            <CardImg fluid={data.apartmentLivingRoom2.childImageSharp.fluid} alt="The Alma Resort."/>
+            <CardImg fluid={data.apartmentLivingRoom2.childImageSharp.fluid} alt="Apartment living room."/>
             <Caption small>Artist Rendering</Caption>
             <Watermark small/>
           </Card>
           <Card>
-            <CardImg fluid={data.apartmentKitchen.childImageSharp.fluid} alt="The Alma Resort."/>
+            <CardImg fluid={data.apartmentKitchen.childImageSharp.fluid} alt="Apartment kitchen."/>
             <Caption small>Artist Rendering</Caption>
             <Watermark small/>
           </Card>
           <Card>
-            <CardImg fluid={data.apartmentBedroom.childImageSharp.fluid} alt="The Alma Resort."/>
+            <CardImg fluid={data.apartmentBedroom.childImageSharp.fluid} alt="Apartment Bedroom."/>
             <Caption small>Artist Rendering</Caption>
             <Watermark small/>
           </Card>
           <Card>
-            <CardImg fluid={data.apartmentBathroom.childImageSharp.fluid} alt="The Alma Resort."/>
+            <CardImg fluid={data.apartmentBathroom.childImageSharp.fluid} alt="Apartment bathroom."/>
             <Caption small>Artist Rendering</Caption>
             <Watermark small/>
           </Card>
