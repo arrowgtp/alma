@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const CaptionText = styled.caption`
+const CaptionText = styled.figcaption`
   position: absolute;
   color: white;
   text-shadow: 1px 1px 3px hsla(0,0%,0%,0.75);
