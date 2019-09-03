@@ -17,7 +17,6 @@ import Caption from '../components/Caption'
 
 import { Button, ButtonContainer } from '../components/visual/Button'
 
-
 import almaLogoWithBG from '../images/alma/alma-logo-with-bg.svg'
 
 import Footer from '../components/Footer'
@@ -1065,7 +1064,7 @@ export const query = graphql`
     }
     apartmentLivingRoom1: file(relativePath: { eq: "apartments/apartment-living-room-1-render-1x1.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 2880) {
+        fluid(maxWidth: 2160) {
           ...GatsbyImageSharpFluid
         }
       }
