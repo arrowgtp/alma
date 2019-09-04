@@ -495,28 +495,23 @@ const Index = ({ data, intl }) => {
             <Caption small>Actual Image</Caption>
             <Watermark small/>
           </Card>
-          {/* <Card>
-            <CardImg fluid={data.resortDrone4.childImageSharp.fluid} alt="The Alma Resort."/>
+          <Card>
+            <CardImg fluid={data.resortBirdseye.childImageSharp.fluid} alt="The Alma Resort."/>
             <Caption small>Actual Image</Caption>
             <Watermark small/>
-          </Card> */}
+          </Card>
           <Card>
             <CardImg fluid={data.resortDrone5.childImageSharp.fluid} alt="The Alma Resort."/>
             <Caption small>Actual Image</Caption>
             <Watermark small/>
           </Card>
           <Card>
+            <CardImg fluid={data.resortDay1.childImageSharp.fluid} alt="The Alma Resort."/>
+            <Caption small>Actual Image</Caption>
+            <Watermark small/>
+          </Card>
+          <Card>
             <CardImg fluid={data.resortExterior6.childImageSharp.fluid} alt="The Alma Resort."/>
-            <Caption small>Actual Image</Caption>
-            <Watermark small/>
-          </Card>
-          <Card>
-            <CardImg fluid={data.resortExterior8.childImageSharp.fluid} alt="The Alma Resort."/>
-            <Caption small>Actual Image</Caption>
-            <Watermark small/>
-          </Card>
-          <Card>
-            <CardImg fluid={data.resortExterior9.childImageSharp.fluid} alt="The Alma Resort."/>
             <Caption small>Actual Image</Caption>
             <Watermark small/>
           </Card>
@@ -957,6 +952,20 @@ export const query = graphql`
         }
       }
     }
+    resortBirdseye: file(relativePath: { eq: "resort/birdseye-1x1.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2160) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    resortDay1: file(relativePath: { eq: "resort/resort-day-1-1x1.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2160) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
     almaResort1: file(relativePath: { eq: "resort/resort-render-1-4x3.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 2880) {
@@ -1195,37 +1204,37 @@ export const query = graphql`
         }
       }
     }
-    receptionLobby: file(relativePath: { eq: "amenities/reception-lobby-4x3.jpg" }) {
+    receptionLobby: file(relativePath: { eq: "amenities/reception-lobby-render-1x1.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 2880) {
+        fluid(maxWidth: 2160) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
-    lobbyLounge: file(relativePath: { eq: "amenities/lobby-lounge-4x3.jpg" }) {
+    lobbyLounge: file(relativePath: { eq: "amenities/lobby-lounge-render-1x1.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 2880) {
+        fluid(maxWidth: 2160) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
-    conventionCenter: file(relativePath: { eq: "amenities/convention-center-4x3.jpg" }) {
+    conventionCenter: file(relativePath: { eq: "amenities/convention-center-render-1x1.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 2880) {
+        fluid(maxWidth: 2160) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
-    ballroom: file(relativePath: { eq: "amenities/ballroom-4x3.jpg" }) {
+    ballroom: file(relativePath: { eq: "amenities/ballroom-render-1x1.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 2880) {
+        fluid(maxWidth: 2160) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
-    spaTreatment: file(relativePath: { eq: "amenities/spa-treatment-4x3.jpg" }) {
+    spaTreatment: file(relativePath: { eq: "amenities/spa-treatment-render-1x1.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 2880) {
+        fluid(maxWidth: 2160) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
