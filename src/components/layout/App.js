@@ -16,7 +16,7 @@ const AppContainer = styled(motion.div)`
     calc(var(--vh, 1vh) * 10)
   ;
   grid-template-columns: repeat(3, 1fr);
-  opacity: 0;
+  /* opacity: 0; */
   z-index: 2;
 
   @media (min-width: 50rem) {
@@ -28,12 +28,12 @@ const AppContainer = styled(motion.div)`
 const App = ({ children }) => {
   return (
     <AppContainer
-      animate={{ opacity: 1 }}
-      transition={{
-        ease: 'easeInOut',
-        duration: 1,
-        delay: 0 
-      }}
+      // animate={{ opacity: 1 }}
+      // transition={{
+      //   ease: 'easeInOut',
+      //   duration: 1,
+      //   delay: 0 
+      // }}
     >
       {children}
     </AppContainer>
