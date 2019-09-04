@@ -479,39 +479,34 @@ const Index = ({ data, intl }) => {
         <HorizontalScrollContainer orange>
           <Card>
             <CardImg
-              fluid={data.resortExterior1.childImageSharp.fluid}
+              fluid={data.resortDrone1.childImageSharp.fluid}
               alt="The Alma Resort."
             />
             <Caption small>Actual Image</Caption>
             <Watermark small/>
           </Card>
           <Card>
-            <CardImg fluid={data.resortExterior2.childImageSharp.fluid} alt="The Alma Resort."/>
+            <CardImg fluid={data.resortDrone2.childImageSharp.fluid} alt="The Alma Resort."/>
             <Caption small>Actual Image</Caption>
             <Watermark small/>
           </Card>
           <Card>
-            <CardImg fluid={data.resortExterior3.childImageSharp.fluid} alt="The Alma Resort."/>
+            <CardImg fluid={data.resortDrone3.childImageSharp.fluid} alt="The Alma Resort."/>
             <Caption small>Actual Image</Caption>
             <Watermark small/>
           </Card>
           <Card>
-            <CardImg fluid={data.resortExterior4.childImageSharp.fluid} alt="The Alma Resort."/>
+            <CardImg fluid={data.resortDrone4.childImageSharp.fluid} alt="The Alma Resort."/>
             <Caption small>Actual Image</Caption>
             <Watermark small/>
           </Card>
           <Card>
-            <CardImg fluid={data.resortExterior5.childImageSharp.fluid} alt="The Alma Resort."/>
+            <CardImg fluid={data.resortDrone5.childImageSharp.fluid} alt="The Alma Resort."/>
             <Caption small>Actual Image</Caption>
             <Watermark small/>
           </Card>
           <Card>
             <CardImg fluid={data.resortExterior6.childImageSharp.fluid} alt="The Alma Resort."/>
-            <Caption small>Actual Image</Caption>
-            <Watermark small/>
-          </Card>
-          <Card>
-            <CardImg fluid={data.resortExterior7.childImageSharp.fluid} alt="The Alma Resort."/>
             <Caption small>Actual Image</Caption>
             <Watermark small/>
           </Card>
@@ -619,37 +614,42 @@ const Index = ({ data, intl }) => {
       <FullWidthContainer>
         <HorizontalScrollContainer blue>
           <Card>
-            <CardImg fluid={data.june7.childImageSharp.fluid} alt="The Alma Resort."/>
+            <CardImg fluid={data.resortExterior7.childImageSharp.fluid} alt="The Alma Resort."/>
             <Caption small>Actual Image</Caption>
             <Watermark small/>
           </Card>
           <Card>
-            <CardImg fluid={data.realVillaExterior1.childImageSharp.fluid} alt="The Alma Resort."/>
+            <CardImg fluid={data.villaExterior1.childImageSharp.fluid} alt="The Alma Resort."/>
             <Caption small>Actual Image</Caption>
             <Watermark small/>
           </Card>
           <Card>
-            <CardImg fluid={data.realVillaExterior2.childImageSharp.fluid} alt="The Alma Resort."/>
+            <CardImg fluid={data.villaExterior4.childImageSharp.fluid} alt="The Alma Resort."/>
             <Caption small>Actual Image</Caption>
             <Watermark small/>
           </Card>
           <Card>
-            <CardImg fluid={data.realVillaExterior3.childImageSharp.fluid} alt="The Alma Resort."/>
+            <CardImg fluid={data.villaLivingRoom1.childImageSharp.fluid} alt="The Alma Resort."/>
             <Caption small>Actual Image</Caption>
             <Watermark small/>
           </Card>
           <Card>
-            <CardImg fluid={data.realVillaInterior1.childImageSharp.fluid} alt="The Alma Resort."/>
+            <CardImg fluid={data.villaLivingRoom2.childImageSharp.fluid} alt="The Alma Resort."/>
             <Caption small>Actual Image</Caption>
             <Watermark small/>
           </Card>
           <Card>
-            <CardImg fluid={data.realVillaInterior2.childImageSharp.fluid} alt="The Alma Resort."/>
+            <CardImg fluid={data.villaDining1.childImageSharp.fluid} alt="The Alma Resort."/>
             <Caption small>Actual Image</Caption>
             <Watermark small/>
           </Card>
           <Card>
-            <CardImg fluid={data.realVillaInterior3.childImageSharp.fluid} alt="The Alma Resort."/>
+            <CardImg fluid={data.villaBedroom1.childImageSharp.fluid} alt="The Alma Resort."/>
+            <Caption small>Actual Image</Caption>
+            <Watermark small/>
+          </Card>
+          <Card>
+            <CardImg fluid={data.villaBathroom1.childImageSharp.fluid} alt="The Alma Resort."/>
             <Caption small>Actual Image</Caption>
             <Watermark small/>
           </Card>
@@ -992,35 +992,35 @@ export const query = graphql`
         }
       }
     }
-    resortExterior1: file(relativePath: { eq: "resort/resort-exterior-1-1x1.jpg" }) {
+    resortDrone1: file(relativePath: { eq: "resort/resort-drone-1-1x1.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 2160) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
-    resortExterior2: file(relativePath: { eq: "resort/resort-exterior-2-1x1.jpg" }) {
+    resortDrone2: file(relativePath: { eq: "resort/resort-drone-2-1x1.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 2160) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
-    resortExterior3: file(relativePath: { eq: "resort/resort-exterior-3-1x1.jpg" }) {
+    resortDrone3: file(relativePath: { eq: "resort/resort-drone-3-1x1.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 2160) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
-    resortExterior4: file(relativePath: { eq: "resort/resort-exterior-4-1x1.jpg" }) {
+    resortDrone4: file(relativePath: { eq: "resort/resort-drone-4-1x1.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 2160) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
-    resortExterior5: file(relativePath: { eq: "resort/resort-exterior-5-1x1.jpg" }) {
+    resortDrone5: file(relativePath: { eq: "resort/resort-drone-5-1x1.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 2160) {
           ...GatsbyImageSharpFluid_withWebp
@@ -1097,79 +1097,51 @@ export const query = graphql`
         }
       }
     }
-    realVillaExterior1: file(relativePath: { eq: "villas/real-villa-1-4x3.jpg" }) {
+    villaExterior1: file(relativePath: { eq: "villas/villa-exterior-1-1x1.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 2880) {
+        fluid(maxWidth: 2160) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
-    realVillaExterior2: file(relativePath: { eq: "villas/real-villa-2-4x3.jpg" }) {
+    villaExterior4: file(relativePath: { eq: "villas/villa-exterior-4-1x1.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 2880) {
+        fluid(maxWidth: 2160) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
-    realVillaExterior3: file(relativePath: { eq: "villas/real-villa-3-4x3.jpg" }) {
+    villaLivingRoom1: file(relativePath: { eq: "villas/villa-living-room-1-1x1.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 2880) {
+        fluid(maxWidth: 2160) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
-    realVillaInterior1: file(relativePath: { eq: "villas/real-villa-4-4x3.jpg" }) {
+    villaLivingRoom2: file(relativePath: { eq: "villas/villa-living-room-3-1x1.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 2880) {
+        fluid(maxWidth: 2160) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
-    realVillaInterior2: file(relativePath: { eq: "villas/real-villa-5-4x3.jpg" }) {
+    villaDining1: file(relativePath: { eq: "villas/villa-dining-1-1x1.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 2880) {
+        fluid(maxWidth: 2160) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
-    realVillaInterior3: file(relativePath: { eq: "villas/real-villa-6-4x3.jpg" }) {
+    villaBedroom1: file(relativePath: { eq: "villas/villa-bedroom-1-1x1.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 2880) {
+        fluid(maxWidth: 2160) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
-    villaExterior1: file(relativePath: { eq: "villas/villa-exterior-1-4x3.jpg" }) {
+    villaBathroom1: file(relativePath: { eq: "villas/villa-bathroom-1-1x1.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 2880) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
-    villaLivingRoom1: file(relativePath: { eq: "villas/villa-living-room-1-4x3.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 2880) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
-    villaLivingRoom2: file(relativePath: { eq: "villas/villa-living-room-2-4x3.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 2880) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
-    villaBedroom1: file(relativePath: { eq: "villas/villa-bedroom-1-4x3.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 2880) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
-    villaBathroom1: file(relativePath: { eq: "villas/villa-bathroom-1-4x3.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 2880) {
+        fluid(maxWidth: 2160) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }

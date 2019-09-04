@@ -65,7 +65,7 @@ const Villas = ({ data, intl }) => {
 
       <FullWidthContainer>
         <FullImage>
-          <Image fluid={data.villaKitchen1.childImageSharp.fluid}/>
+          <Image fluid={data.villaDining1.childImageSharp.fluid}/>
           <Caption medium>Actual Image</Caption>
           <Watermark medium/>
         </FullImage>
@@ -250,7 +250,7 @@ export const query = graphql`
         }
       }
     }
-    villaKitchen1: file(relativePath: { eq: "villas/villa-kitchen-1-4x3.jpg" }) {
+    villaLivingRoom1: file(relativePath: { eq: "villas/villa-living-room-1-4x3.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 2880) {
           ...GatsbyImageSharpFluid_withWebp
@@ -258,6 +258,13 @@ export const query = graphql`
       }
     }
     villaLivingRoom2: file(relativePath: { eq: "villas/villa-living-room-2-4x3.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    villaDining1: file(relativePath: { eq: "villas/villa-dining-1-4x3.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 2880) {
           ...GatsbyImageSharpFluid_withWebp
