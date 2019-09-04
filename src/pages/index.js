@@ -495,11 +495,11 @@ const Index = ({ data, intl }) => {
             <Caption small>Actual Image</Caption>
             <Watermark small/>
           </Card>
-          <Card>
+          {/* <Card>
             <CardImg fluid={data.resortDrone4.childImageSharp.fluid} alt="The Alma Resort."/>
             <Caption small>Actual Image</Caption>
             <Watermark small/>
-          </Card>
+          </Card> */}
           <Card>
             <CardImg fluid={data.resortDrone5.childImageSharp.fluid} alt="The Alma Resort."/>
             <Caption small>Actual Image</Caption>
@@ -673,7 +673,7 @@ const Index = ({ data, intl }) => {
       <FullWidthContainer>
         <HorizontalScrollContainer blue>
           <Card>
-            <CardImg fluid={data.june14.childImageSharp.fluid} alt="The Alma Resort."/>
+            <CardImg fluid={data.realRestaurant1.childImageSharp.fluid} alt="The Alma Resort."/>
             <Caption small>Actual Image</Caption>
             <Watermark small/>
           </Card>
@@ -1146,42 +1146,49 @@ export const query = graphql`
         }
       }
     }
-    allDayDiner1: file(relativePath: { eq: "restaurants/all-day-diner-1-4x3.jpg" }) {
+    realRestaurant1: file(relativePath: { eq: "restaurants/restaurant-1-1x1.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1798) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
-    asianRestaurant: file(relativePath: { eq: "restaurants/asian-restaurant-4x3.jpg" }) {
+    allDayDiner1: file(relativePath: { eq: "restaurants/all-day-diner-1-render-1x1.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1798) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    asianRestaurant: file(relativePath: { eq: "restaurants/asian-restaurant-render-1x1.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1796) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
-    beachBar2: file(relativePath: { eq: "restaurants/beach-bar-2-4x3.jpg" }) {
+    beachBar2: file(relativePath: { eq: "restaurants/beach-bar-2-render-1x1.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1790) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
-    foodCourt1: file(relativePath: { eq: "restaurants/food-court-1-4x3.jpg" }) {
+    foodCourt1: file(relativePath: { eq: "restaurants/food-court-1-render-1x1.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1796) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
-    italianRestaurant: file(relativePath: { eq: "restaurants/italian-restaurant-4x3.jpg" }) {
+    italianRestaurant: file(relativePath: { eq: "restaurants/italian-restaurant-render-1x1.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1789) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
-    pub1: file(relativePath: { eq: "restaurants/pub-1-4x3.jpg" }) {
+    pub1: file(relativePath: { eq: "restaurants/pub-1-render-1x1.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1794) {
           ...GatsbyImageSharpFluid_withWebp
