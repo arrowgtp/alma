@@ -8,7 +8,7 @@ import SEO from '../components/seo'
 import Content from '../components/layout/Content'
 import FullWidthContainer from '../components/layout/FullWidthContainer'
 import CenteredContainer from '../components/layout/CenteredContainer'
-import { FullContentCard, FullContentImage, HeadingContainer } from '../components/layout/FullContentCard'
+import { FullContentCard, HeadingContainer } from '../components/layout/FullContentCard'
 import { FullImage, Image } from '../components/visual/FullImage'
 import AlmaHeader from '../components/Header'
 import { Button, ButtonContainer } from '../components/visual/Button'
@@ -28,7 +28,7 @@ const Amenities = ({ data, intl }) => {
         <HeadingContainer>
           <AlmaHeader white title={intl.formatMessage({ id: "amenities-title" })}/>
         </HeadingContainer>
-        <FullContentImage fluid={data.spaTreatment.childImageSharp.fluid}/>
+        <Image grid fluid={data.spaTreatment.childImageSharp.fluid}/>
         <Caption large>Artist Rendering</Caption>
         <Watermark large/>
       </FullContentCard>
@@ -41,7 +41,7 @@ const Amenities = ({ data, intl }) => {
 
       <FullWidthContainer>
         <FullImage>
-          <Image fluid={data.receptionLobby.childImageSharp.fluid}/>
+          <Image rounded fluid={data.receptionLobby.childImageSharp.fluid}/>
           <Caption medium>Artist Rendering</Caption>
           <Watermark medium/>
         </FullImage>
@@ -55,7 +55,7 @@ const Amenities = ({ data, intl }) => {
 
       <FullWidthContainer>
         <FullImage>
-          <Image fluid={data.lobbyLounge.childImageSharp.fluid}/>
+          <Image rounded fluid={data.lobbyLounge.childImageSharp.fluid}/>
           <Caption medium>Artist Rendering</Caption>
           <Watermark medium/>
         </FullImage>
@@ -69,7 +69,7 @@ const Amenities = ({ data, intl }) => {
 
       <FullWidthContainer>
         <FullImage>
-          <Image fluid={data.conventionCenter.childImageSharp.fluid}/>
+          <Image rounded fluid={data.conventionCenter.childImageSharp.fluid}/>
           <Caption medium>Artist Rendering</Caption>
           <Watermark medium/>
         </FullImage>
@@ -83,7 +83,7 @@ const Amenities = ({ data, intl }) => {
 
       <FullWidthContainer>
         <FullImage>
-          <Image fluid={data.ballroom.childImageSharp.fluid}/>
+          <Image rounded fluid={data.ballroom.childImageSharp.fluid}/>
           <Caption medium>Artist Rendering</Caption>
           <Watermark medium/>
         </FullImage>

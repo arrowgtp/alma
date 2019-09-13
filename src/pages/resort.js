@@ -6,7 +6,7 @@ import SEO from "../components/seo"
 
 import Content from '../components/layout/Content'
 
-import { FullContentCard, FullContentImage, HeadingContainer } from '../components/layout/FullContentCard'
+import { FullContentCard, HeadingContainer } from '../components/layout/FullContentCard'
 import { FullImage, Image } from '../components/visual/FullImage'
 import FullWidthContainer from '../components/layout/FullWidthContainer'
 import CenteredContainer from '../components/layout/CenteredContainer'
@@ -29,7 +29,7 @@ const Resort = ({ data, intl }) => {
         <HeadingContainer>
           <AlmaHeader white title={intl.formatMessage({ id: "resort-title" })}/>
         </HeadingContainer>
-        <FullContentImage fluid={data.almaResort2.childImageSharp.fluid}/>
+        <Image grid fluid={data.almaResort2.childImageSharp.fluid}/>
         <Caption large>Artist Rendering</Caption>
         <Watermark large/>
       </FullContentCard>
@@ -42,7 +42,7 @@ const Resort = ({ data, intl }) => {
 
       <FullWidthContainer>
         <FullImage>
-          <Image fluid={data.almaResort1.childImageSharp.fluid}/>
+          <Image rounded fluid={data.almaResort1.childImageSharp.fluid}/>
           <Caption medium>Artist Rendering</Caption>
           <Watermark medium/>
         </FullImage>
@@ -60,7 +60,7 @@ const Resort = ({ data, intl }) => {
 
       <FullWidthContainer>
         <FullImage>
-          <Image fluid={data.almaResort3.childImageSharp.fluid}/>
+          <Image rounded fluid={data.almaResort3.childImageSharp.fluid}/>
           <Caption medium>Artist Rendering</Caption>
           <Watermark medium/>
         </FullImage>
@@ -74,7 +74,7 @@ const Resort = ({ data, intl }) => {
 
       <FullWidthContainer>
         <FullImage>
-          <Image fluid={data.almaResort4.childImageSharp.fluid}/>
+          <Image rounded fluid={data.almaResort4.childImageSharp.fluid}/>
           <Caption medium>Artist Rendering</Caption>
           <Watermark medium/>
         </FullImage>
@@ -88,7 +88,7 @@ const Resort = ({ data, intl }) => {
 
       <FullWidthContainer>
         <FullImage>
-          <Image fluid={data.almaResort5.childImageSharp.fluid}/>
+          <Image rounded fluid={data.almaResort5.childImageSharp.fluid}/>
           <Caption medium>Artist Rendering</Caption>
           <Watermark medium/>
         </FullImage>

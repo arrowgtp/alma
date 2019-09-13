@@ -8,7 +8,7 @@ import SEO from "../components/seo"
 import Content from '../components/layout/Content'
 import FullWidthContainer from '../components/layout/FullWidthContainer'
 import CenteredContainer from '../components/layout/CenteredContainer'
-import { FullContentCard, FullContentImage, HeadingContainer } from '../components/layout/FullContentCard'
+import { FullContentCard, HeadingContainer } from '../components/layout/FullContentCard'
 import { FullImage, Image } from '../components/visual/FullImage'
 import AlmaHeader from '../components/Header'
 import { Button, ButtonContainer } from '../components/visual/Button'
@@ -28,7 +28,7 @@ const Restaurants = ({ data, intl }) => {
         <HeadingContainer>
           <AlmaHeader white title={intl.formatMessage({ id: "restaurants-title" })}/>
         </HeadingContainer>
-        <FullContentImage fluid={data.realRestaurant1.childImageSharp.fluid}/>
+        <Image grid fluid={data.realRestaurant1.childImageSharp.fluid}/>
         <Caption large>Actual Image</Caption>
         <Watermark large/>
       </FullContentCard>
@@ -41,7 +41,7 @@ const Restaurants = ({ data, intl }) => {
 
       <FullWidthContainer>
         <FullImage>
-          <Image fluid={data.allDayDiner2.childImageSharp.fluid}/>
+          <Image rounded fluid={data.allDayDiner2.childImageSharp.fluid}/>
           <Caption medium>Artist Rendering</Caption>
           <Watermark medium/>
         </FullImage>
@@ -55,7 +55,7 @@ const Restaurants = ({ data, intl }) => {
 
       <FullWidthContainer>
         <FullImage>
-          <Image fluid={data.beachBar2.childImageSharp.fluid}/>
+          <Image rounded fluid={data.beachBar2.childImageSharp.fluid}/>
           <Caption medium>Artist Rendering</Caption>
           <Watermark medium/>
         </FullImage>
@@ -69,7 +69,7 @@ const Restaurants = ({ data, intl }) => {
 
       <FullWidthContainer>
         <FullImage>
-          <Image fluid={data.asianRestaurant.childImageSharp.fluid}/>
+          <Image rounded fluid={data.asianRestaurant.childImageSharp.fluid}/>
           <Caption medium>Artist Rendering</Caption>
           <Watermark medium/>
         </FullImage>
@@ -83,7 +83,7 @@ const Restaurants = ({ data, intl }) => {
 
       <FullWidthContainer>
         <FullImage>
-          <Image fluid={data.italianRestaurant.childImageSharp.fluid}/>
+          <Image rounded fluid={data.italianRestaurant.childImageSharp.fluid}/>
           <Caption medium>Artist Rendering</Caption>
           <Watermark medium/>
         </FullImage>
@@ -97,7 +97,7 @@ const Restaurants = ({ data, intl }) => {
 
       <FullWidthContainer>
         <FullImage>
-          <Image fluid={data.foodCourt1.childImageSharp.fluid}/>
+          <Image rounded fluid={data.foodCourt1.childImageSharp.fluid}/>
           <Caption small>Artist Rendering</Caption>
           <Watermark medium/>
         </FullImage>
@@ -111,7 +111,7 @@ const Restaurants = ({ data, intl }) => {
 
       <FullWidthContainer>
         <FullImage>
-          <Image fluid={data.pub1.childImageSharp.fluid}/>
+          <Image rounded fluid={data.pub1.childImageSharp.fluid}/>
           <Caption small>Artist Rendering</Caption>
           <Watermark medium/>
         </FullImage>

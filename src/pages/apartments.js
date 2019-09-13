@@ -8,7 +8,7 @@ import SEO from '../components/seo'
 import Content from '../components/layout/Content'
 import FullWidthContainer from '../components/layout/FullWidthContainer'
 import CenteredContainer from '../components/layout/CenteredContainer'
-import { FullContentCard, FullContentImage, HeadingContainer } from '../components/layout/FullContentCard'
+import { FullContentCard, HeadingContainer } from '../components/layout/FullContentCard'
 import { FullImage, Image } from '../components/visual/FullImage'
 import FlexContainer from '../components/layout/FlexContainer'
 import FlexBox from '../components/layout/FlexBox'
@@ -52,7 +52,7 @@ const Apartments = ({ data, intl }) => {
         <HeadingContainer>
           <AlmaHeader white title={intl.formatMessage({ id: "apartments-title" })}/>
         </HeadingContainer>
-        <FullContentImage fluid={data.apartmentLivingRoom1.childImageSharp.fluid}/>
+        <Image grid fluid={data.apartmentLivingRoom1.childImageSharp.fluid}/>
         <Caption large>Artist Rendering</Caption>
         <Watermark large/>
       </FullContentCard>
@@ -65,7 +65,7 @@ const Apartments = ({ data, intl }) => {
 
       <FullWidthContainer>
         <FullImage>
-          <Image fluid={data.apartmentLivingRoom2.childImageSharp.fluid}/>
+          <Image rounded fluid={data.apartmentLivingRoom2.childImageSharp.fluid}/>
           <Caption medium>Artist Rendering</Caption>
           <Watermark medium/>
         </FullImage>
@@ -79,7 +79,7 @@ const Apartments = ({ data, intl }) => {
 
       <FullWidthContainer>
         <FullImage>
-          <Image fluid={data.apartmentKitchen.childImageSharp.fluid}/>
+          <Image rounded fluid={data.apartmentKitchen.childImageSharp.fluid}/>
           <Caption medium>Artist Rendering</Caption>
           <Watermark medium/>
         </FullImage>
@@ -93,7 +93,7 @@ const Apartments = ({ data, intl }) => {
 
       <FullWidthContainer>
         <FullImage>
-          <Image fluid={data.apartmentBedroom.childImageSharp.fluid}/>
+          <Image rounded fluid={data.apartmentBedroom.childImageSharp.fluid}/>
           <Caption medium>Artist Rendering</Caption>
           <Watermark medium/>
         </FullImage>
@@ -107,7 +107,7 @@ const Apartments = ({ data, intl }) => {
 
       <FullWidthContainer>
         <FullImage>
-          <Image fluid={data.apartmentBathroom.childImageSharp.fluid}/>
+          <Image rounded fluid={data.apartmentBathroom.childImageSharp.fluid}/>
           <Caption medium>Artist Rendering</Caption>
           <Watermark medium/>
         </FullImage>

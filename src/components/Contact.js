@@ -17,40 +17,6 @@ const FormContainer = styled.div`
   justify-content: center;
 `
 
-// const Form = styled(animated.form)`
-//   margin: 0;
-//   padding: 1rem;
-//   position: fixed;
-//   bottom: calc(var(--vh, 1vh) * 15);
-//   left: 5vw;
-//   height: calc(var(--vh, 1vh) * 75);
-//   width: 90vw;
-//   border-radius: 16px;
-//   background: white;
-//   background-image: url(${lifestyleImage});
-//   background-position: center;
-//   background-repeat: no-repeat;
-//   background-size: cover;
-//   display: grid;
-//   grid-template-rows: repeat(5, 1fr);
-//   grid-template-columns: repeat(8, 1fr);
-//   align-items: center;
-//   box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.25);
-//   z-index: 100;
-//   border: 10px solid white;
-
-//   @media (min-width: 50rem) {
-//     margin: 0 0 1rem 2rem;
-//     padding: 2rem;
-//     left: 20vw;
-//     top: auto;
-//     width: 52rem;
-//     height: 40rem;
-//     bottom: 0;
-//     grid-template-rows: repeat(5, 1fr);
-//   }
-// `
-
 const Form = styled(motion.form)`
   margin: 0;
   padding: 1rem;
@@ -235,52 +201,6 @@ const Contact = () => {
       document.removeEventListener("mousedown", handleClick);
     };
   }, []);
-
-  // const transition = useTransition(isToggled, null, { 
-  //   from: { opacity: 0, transform: 'translate3d(33%,60%,0) scale(0.1)' },
-  //   enter: { opacity: 1, transform: 'translate3d(0,0%,0) scale(1)' },
-  //   leave: { opacity: 0, transform: 'translate3d(33%,60%,0) scale(0.1)' }
-  // });
-
-  // return (
-  //   <Fragment>
-
-  //     <FormContainer ref={joinRef}>
-
-  //       {!isToggled ?
-  //         (
-  //           <JoinButton onClick={toggle}>Promo</JoinButton>
-  //         ) : (
-  //           <JoinButton onClick={toggle}>Close</JoinButton>
-  //         )
-  //       }
-
-  //       {transition.map(({ item, key, props: fade }) => (
-  //         item 
-  //         &&
-  //         <Form key={key} style={fade} name="contact-form" method="POST" data-netlify="true">
-  //           <input type="hidden" name="contact-form" value="contact"/>
-  //           <Message>
-  //             Don’t miss out on a chance to win your next exotic getaway! Enter now!
-  //           </Message>
-  //           <Label>Name : <Input name="name" type="text"/></Label>   
-  //           <Label>Email : <Input name="email" type="email"/></Label>
-  //           <Label>Number : <Input name="phone" type="tel"/></Label>
-  //           <SubmitButton
-  //             whileHover={{ scale: 1.1 }}
-  //             whileTap={{ scale: 0.9 }}
-  //             type="submit"
-  //           >
-  //             Submit
-  //           </SubmitButton>
-  //           <DownArrow />
-  //         </Form>
-  //       ))}
-
-  //     </FormContainer>
-
-  //   </Fragment>
-  // )
 
   return (
     <Fragment>

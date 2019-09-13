@@ -7,8 +7,8 @@ import SEO from "../components/seo"
 import Content from '../components/layout/Content'
 // import FullWidthContainer from '../components/layout/FullWidthContainer'
 import CenteredContainer from '../components/layout/CenteredContainer'
-import { FullContentCard, FullContentImage, HeadingContainer } from '../components/layout/FullContentCard'
-// import { FullImage, Image } from '../components/visual/FullImage'
+import { FullContentCard, HeadingContainer } from '../components/layout/FullContentCard'
+import { Image } from '../components/visual/FullImage'
 import AlmaHeader from '../components/Header'
 // import AlmaHeading from '../components/visual/AlmaHeading'
 import { Button, ButtonContainer } from '../components/visual/Button'
@@ -28,7 +28,7 @@ const Vacations = ({ intl, data }) => {
         <HeadingContainer>
           <AlmaHeader white title={intl.formatMessage({ id: "vacations-title" })}/>
         </HeadingContainer>
-        <FullContentImage fluid={data.secretsConcunPool.childImageSharp.fluid}/>
+        <Image grid fluid={data.secretsConcunPool.childImageSharp.fluid}/>
         <Caption large>Actual Image</Caption>
         <Watermark large/>
       </FullContentCard>

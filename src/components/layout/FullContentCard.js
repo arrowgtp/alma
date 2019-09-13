@@ -39,19 +39,4 @@ const HeadingContainer = styled.div`
   }
 `
 
-const FullCaption = styled.caption`
-  grid-row: 8 / 9;
-  grid-column: 1 / 5;
-  align-self: end;
-  justify-self: start;
-  color: white;
-  text-shadow: 1px 1px 3px hsla(0,0%,0%,0.75);
-  font-family: 'Work Sans', sans-serif;
-  font-size: calc(8px + (16 - 8) * ((100vw - 300px) / (1600 - 300)));
-  margin: 1rem;
-  padding: 0;
-  z-index: 2;
-  opacity: 0.5;
-`
-
-export { FullContentCard, FullContentImage, HeadingContainer, FullCaption }
+export { FullContentCard, FullContentImage, HeadingContainer }

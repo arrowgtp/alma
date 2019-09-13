@@ -14,6 +14,7 @@ import AlmaHeader from '../components/Header'
 import { Space, P } from '../components/visual/Typography'
 import Watermark from '../components/Watermark'
 import Caption from '../components/Caption'
+import { Image } from '../components/visual/FullImage'
 
 import { Button, ButtonContainer } from '../components/visual/Button'
 
@@ -456,7 +457,8 @@ const Index = ({ data, intl }) => {
       <FullContentCard>
         <MainLogo src={almaLogoWithBG} alt="The Alma Resort Logo."/>
         <PageSlogan>{intl.formatMessage({ id: "slogan" })}</PageSlogan>
-        <FullContentImage fluid={data.resortOverview.childImageSharp.fluid}/>
+        {/* <FullContentImage fluid={data.resortOverview.childImageSharp.fluid}/> */}
+        <Image grid fluid={data.resortOverview.childImageSharp.fluid}/>
         <Caption large>Artist Rendering</Caption>
         <Watermark large/>
       </FullContentCard>

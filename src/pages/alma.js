@@ -6,7 +6,8 @@ import SEO from '../components/seo'
 
 import Content from '../components/layout/Content'
 
-import { FullContentCard, FullContentImage, HeadingContainer } from '../components/layout/FullContentCard'
+import { FullContentCard, HeadingContainer } from '../components/layout/FullContentCard'
+import { Image } from '../components/visual/FullImage'
 import CenteredContainer from '../components/layout/CenteredContainer'
 import AlmaHeader from '../components/Header'
 // import AlmaHeading from '../components/visual/AlmaHeading'
@@ -27,7 +28,7 @@ const Alma = ({ intl, data }) => {
         <HeadingContainer>
           <AlmaHeader white title={intl.formatMessage({ id: "alma-title" })}/>
         </HeadingContainer>
-        <FullContentImage fluid={data.almaConstruction.childImageSharp.fluid}/>
+        <Image grid fluid={data.almaConstruction.childImageSharp.fluid}/>
         <Caption large>Actual Image</Caption>
         <Watermark large/>
       </FullContentCard>

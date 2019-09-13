@@ -9,7 +9,7 @@ import Content from '../components/layout/Content'
 
 import FullWidthContainer from '../components/layout/FullWidthContainer'
 import { FullImage, Image } from '../components/visual/FullImage'
-import { FullContentCard, FullContentImage, HeadingContainer } from '../components/layout/FullContentCard'
+import { FullContentCard, HeadingContainer } from '../components/layout/FullContentCard'
 import CenteredContainer from '../components/layout/CenteredContainer'
 import AlmaHeader from '../components/Header'
 import { Button, ButtonContainer } from '../components/visual/Button'
@@ -29,7 +29,7 @@ const Construction = ({ data, intl }) => {
         <HeadingContainer>
           <AlmaHeader white title={intl.formatMessage({ id: "construction-title" })}/>
         </HeadingContainer>
-        <FullContentImage fluid={data.june1.childImageSharp.fluid}/>
+        <Image grid fluid={data.june1.childImageSharp.fluid}/>
         <Caption large>Actual Image</Caption>
         <Watermark large/>
       </FullContentCard>
@@ -51,25 +51,25 @@ const Construction = ({ data, intl }) => {
 
       <FullWidthContainer>
         <FullImage>
-          <Image fluid={data.june2.childImageSharp.fluid}/>
+          <Image rounded fluid={data.june2.childImageSharp.fluid}/>
           <Caption medium>Actual Image</Caption>
           <Watermark medium/>
         </FullImage>
         <Space/>
         <FullImage>
-          <Image fluid={data.june3.childImageSharp.fluid}/>
+          <Image rounded fluid={data.june3.childImageSharp.fluid}/>
           <Caption medium>Actual Image</Caption>
           <Watermark medium/>
         </FullImage>
         <Space/>
         <FullImage>
-          <Image fluid={data.june4.childImageSharp.fluid}/>
+          <Image rounded fluid={data.june4.childImageSharp.fluid}/>
           <Caption medium>Actual Image</Caption>
           <Watermark medium/>
         </FullImage>
         <Space/>
         <FullImage>
-          <Image fluid={data.june5.childImageSharp.fluid}/>
+          <Image rounded fluid={data.june5.childImageSharp.fluid}/>
           <Caption medium>Actual Image</Caption>
           <Watermark medium/>
         </FullImage>
@@ -94,25 +94,25 @@ const Construction = ({ data, intl }) => {
 
       <FullWidthContainer>
         <FullImage>
-          <Image fluid={data.june6.childImageSharp.fluid}/>
+          <Image rounded fluid={data.june6.childImageSharp.fluid}/>
           <Caption medium>Actual Image</Caption>
           <Watermark medium/>
         </FullImage>
         <Space/>
         <FullImage>
-          <Image fluid={data.june7.childImageSharp.fluid}/>
+          <Image rounded fluid={data.june7.childImageSharp.fluid}/>
           <Caption medium>Actual Image</Caption>
           <Watermark medium/>
         </FullImage>
         <Space/>
         <FullImage>
-          <Image fluid={data.june8.childImageSharp.fluid}/>
+          <Image rounded fluid={data.june8.childImageSharp.fluid}/>
           <Caption medium>Actual Image</Caption>
           <Watermark medium/>
         </FullImage>
         <Space/>
         <FullImage>
-          <Image fluid={data.june9.childImageSharp.fluid}/>
+          <Image rounded fluid={data.june9.childImageSharp.fluid}/>
           <Caption medium>Actual Image</Caption>
           <Watermark medium/>
         </FullImage>
@@ -138,25 +138,25 @@ const Construction = ({ data, intl }) => {
         
         <Space/>
         <FullImage>
-          <Image fluid={data.june10.childImageSharp.fluid}/>
+          <Image rounded fluid={data.june10.childImageSharp.fluid}/>
           <Caption medium>Actual Image</Caption>
           <Watermark medium/>
         </FullImage>
         <Space/>
         <FullImage>
-          <Image fluid={data.june11.childImageSharp.fluid}/>
+          <Image rounded fluid={data.june11.childImageSharp.fluid}/>
           <Caption medium>Actual Image</Caption>
           <Watermark medium/>
         </FullImage>
         <Space/>
         <FullImage>
-          <Image fluid={data.june12.childImageSharp.fluid}/>
+          <Image rounded fluid={data.june12.childImageSharp.fluid}/>
           <Caption medium>Actual Image</Caption>
           <Watermark medium/>
         </FullImage>
         <Space/>
         <FullImage>
-          <Image fluid={data.june13.childImageSharp.fluid}/>
+          <Image rounded fluid={data.june13.childImageSharp.fluid}/>
           <Caption medium>Actual Image</Caption>
           <Watermark medium/>
         </FullImage>
