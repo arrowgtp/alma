@@ -7,15 +7,15 @@ module.exports = {
     author: `Arrow GTP`
   },
   plugins: [
-    {
-      resolve: 'gatsby-plugin-crisp-chat',
-      options: {
-        websiteId: '5bf26a00-0b14-4846-83e9-ed8bab8c0584',
-        enableDuringDevelop: true, // Optional. Disables Crisp Chat during gatsby develop. Defaults to true.
-        defer: false, // Optional. Sets the Crisp loading script to defer instead of async. Defaults to false.
-        enableImprovedAccessibility: true // Optional. Sets aria-label attribute on pop-up icon for screen readers. Defaults to true.
-      },
-    },
+    // {
+    //   resolve: 'gatsby-plugin-crisp-chat',
+    //   options: {
+    //     websiteId: '5bf26a00-0b14-4846-83e9-ed8bab8c0584',
+    //     enableDuringDevelop: true, // Optional. Disables Crisp Chat during gatsby develop. Defaults to true.
+    //     defer: false, // Optional. Sets the Crisp loading script to defer instead of async. Defaults to false.
+    //     enableImprovedAccessibility: true // Optional. Sets aria-label attribute on pop-up icon for screen readers. Defaults to true.
+    //   },
+    // },
     `gatsby-plugin-modal-routing`,
     `gatsby-plugin-netlify`,
     `gatsby-plugin-react-helmet`,
