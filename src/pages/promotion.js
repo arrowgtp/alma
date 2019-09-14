@@ -184,9 +184,9 @@ const Promotion = () => {
         data-netlify="true"
         data-netlify-honeypot="bot-field"
       >
-        <input type="hidden" name="form-name" value="alma-form"/>
         <input type="hidden" name="bot-field" />
-        <input type="hidden" name="alma-form" value="contact"/>
+        <input type="hidden" name="form-name" value="alma-form"/>
+        {/* <input type="hidden" name="alma-form" value="contact"/> */}
         <Message>
           Don’t miss out on a chance to win your next exotic getaway! Enter now!
         </Message>
