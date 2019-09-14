@@ -140,10 +140,10 @@ const Promotion = () => {
         name="contact-form"
         method="post"
         data-netlify="true"
-        // data-netlify-honeypot="bot-field"
+        data-netlify-honeypot="bot-field"
       >
-        {/* <input type="hidden" name="bot-field" /> */}
         <input type="hidden" name="contact-form" value="contact"/>
+        <input type="hidden" name="bot-field" />
         <Message>
           Don’t miss out on a chance to win your next exotic getaway! Enter now!
         </Message>
