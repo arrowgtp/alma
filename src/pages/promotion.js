@@ -137,19 +137,19 @@ const Promotion = () => {
     <FullContentCard>
       <Image></Image>
       <Form
-        name="contact-form"
-        method="post"
+        name="alma-form"
+        method="POST"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
       >
-        <input type="hidden" name="contact-form" value="contact"/>
+        <input type="hidden" name="alma-form" value="contact"/>
         <input type="hidden" name="bot-field" />
         <Message>
           Don’t miss out on a chance to win your next exotic getaway! Enter now!
         </Message>
-        <Label>Name<Input name="name" type="text"/></Label>   
-        <Label>Email<Input name="email" type="email"/></Label>
-        <Label>Number<Input name="phone" type="tel"/></Label>
+        <Label>Name<Input name="alma-name" type="text"/></Label>   
+        <Label>Email<Input name="alma-email" type="email"/></Label>
+        <Label>Number<Input name="alma-phone" type="tel"/></Label>
         <SubmitButton
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
