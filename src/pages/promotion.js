@@ -147,9 +147,9 @@ const Promotion = () => {
         <Message>
           Don’t miss out on a chance to win your next exotic getaway! Enter now!
         </Message>
-        <Label htmlFor="name">Name<Input name="name" type="text"/></Label>   
-        <Label htmlFor="email">Email<Input name="email" type="email"/></Label>
-        <Label htmlFor="phone">Number<Input name="phone" type="tel"/></Label>
+        <Label>Name<Input name="name" type="text"/></Label>   
+        <Label>Email<Input name="email" type="email"/></Label>
+        <Label>Number<Input name="phone" type="tel"/></Label>
         <SubmitButton
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
