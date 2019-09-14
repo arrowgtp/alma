@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef, Fragment } from 'react'
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
 import { graphql } from 'gatsby'
 import { Link, injectIntl } from 'gatsby-plugin-intl'
 import Img from 'gatsby-image'
@@ -10,7 +11,8 @@ import { P } from '../components/visual/Typography'
 
 import lifestyleImage from '../images/lifestyle/lifestyle-1.jpg'
 
-const FullContentCard = styled.div`
+const AnimatedCard = styled(motion.div)`
+  opacity: 0;
   grid-column: 1 / 4;
   margin: 0;
   padding: 0;
@@ -92,7 +94,7 @@ const Form = styled.form`
     /* width: 40rem;
     height: 60vh; */
     grid-column: 6 / 9;
-    grid-row: 2 / 7;
+    grid-row: 2 / 8;
     grid-template-rows: repeat(5, 1fr);
   }
 `
@@ -148,7 +150,7 @@ const Input = styled.input`
 
 
   :focus {
-    box-shadow: 0px 0px 12px rgba(0,0,0,0.2);
+    box-shadow: 0px 0px 12px rgba(81,167,190,0.5);
   }
 `
 
@@ -183,7 +185,15 @@ const SubmitButton = styled(Button)`
 
 const Promotion = () => {
   return (
-    <FullContentCard>
+    <AnimatedCard 
+      animate={{
+        opacity: 1,
+        transition: {
+          type: "spring",
+          stiffness: 100,
+          damping: 10
+        }
+      }}>
       <Image></Image>
       <Form
         name="alma-form"
@@ -208,7 +218,7 @@ const Promotion = () => {
         Submit
         </SubmitButton>
       </Form>     
-    </FullContentCard>
+    </AnimatedCard>
   )
 }
 

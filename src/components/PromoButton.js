@@ -1,0 +1,74 @@
+import React, { useState, useEffect, useRef, Fragment } from 'react'
+import styled from 'styled-components'
+import { Link, injectIntl } from 'gatsby-plugin-intl'
+
+import { Button } from './visual/Button'
+
+const PromotionalButton = styled(Button)`
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
+  align-self: center;
+  justify-self: center;
+  z-index: 100;
+
+  @media (min-width: 50rem) {
+    font-size: 24px;
+    padding: 12px 16px;
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    z-index: 1000;
+    padding: 0.75rem 1.25rem;
+    font-size: 16px;
+    line-height: 1;
+  }
+`
+
+const PromoButton = () => {
+
+  const promoRef = useRef();
+
+  const [ isToggled, setToggle ] = useState(false);
+
+  const toggle = () => setToggle(!isToggled);
+
+  const handleClick = e => {
+    if (promoRef.current.contains(e.target)) {
+      return;
+    }
+    setToggle(false);
+  }
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClick);
+    return () => {
+      document.removeEventListener("mousedown", handleClick);
+    };
+  }, []);
+
+  return (
+    <div ref={promoRef}>
+      {
+        !isToggled ?
+        (
+          <Link to={`/promotion`}>
+            <PromotionalButton onClick={toggle}>Promo</PromotionalButton>
+          </Link>
+        ) : (
+          <Link to={`/`}>
+            <PromotionalButton onClick={toggle}>Close</PromotionalButton>
+          </Link>
+        )
+      }
+    </div>
+  )
+}
+
+export default injectIntl(PromoButton)
+
+
+
+
+

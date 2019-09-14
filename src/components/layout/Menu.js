@@ -13,6 +13,8 @@ const SmallMenuContainer = styled.div`
   grid-template-rows: 1fr;
   z-index: 1000;
   box-shadow: 0px 0px 64px rgba(0, 0, 0, 0.25);
+  align-items: center;
+  justify-items: center;
 
   @media (min-width: 50rem) {
     display: none;
@@ -32,6 +34,8 @@ const LargeMenuContainer = styled.div`
     display: grid;
     grid-template-rows: 20vh 65vh 15vh;
     grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
     z-index: 100;
     background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMCIgaGVpZ2h0PSIzMCI+CjxyZWN0IHdpZHRoPSIzMCIgaGVpZ2h0PSIzMCIgZmlsbD0iI2ZmZmZmZiI+PC9yZWN0Pgo8cmVjdCB4PSIxNSIgd2lkdGg9IjMwIiBoZWlnaHQ9IjMwIiBmaWxsPSIjZmRmZGZkIj48L3JlY3Q+Cjwvc3ZnPg==");
     background-repeat: repeat;

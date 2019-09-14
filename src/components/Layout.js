@@ -10,9 +10,10 @@ import Menu from './layout/Menu'
 
 import Logo from './Logo'
 import Nav from './Navigation'
-import Contact from './Contact'
+import PromoButton from './PromoButton'
 
 const Layout = ({ children }) => {
+
   return (
     <>
       {/* <AnimatedLogo/> */}
@@ -20,7 +21,7 @@ const Layout = ({ children }) => {
         <Menu>
           <Logo/>
           <Nav/>
-          {/* <Contact/> */}
+          <PromoButton/>
         </Menu>
         <Main>
           {children}
