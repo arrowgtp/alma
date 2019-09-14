@@ -6,7 +6,7 @@ import Img from 'gatsby-image'
 import SEO from '../components/seo'
 
 import { Button } from '../components/visual/Button'
-import { Space, P } from '../components/visual/Typography'
+import { P } from '../components/visual/Typography'
 
 import lifestyleImage from '../images/lifestyle/lifestyle-1.jpg'
 
@@ -34,34 +34,66 @@ const Image = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  grid-column: 1 / 6;
+  grid-column: 1 / 9;
   grid-row: 1 / 9;
-  margin: 2rem;
-  border-radius: 32px;
+  margin: 0;
+  border-radius: 0px;
+  mask-image: linear-gradient(
+    to bottom,
+    hsla(0, 0%, 100%, 0) 0%,
+    hsla(0, 0%, 100%, 0.013) 8.1%,
+    hsla(0, 0%, 100%, 0.049) 15.5%,
+    hsla(0, 0%, 100%, 0.104) 22.5%,
+    hsla(0, 0%, 100%, 0.175) 29%,
+    hsla(0, 0%, 100%, 0.259) 35.3%,
+    hsla(0, 0%, 100%, 0.352) 41.2%,
+    hsla(0, 0%, 100%, 0.45) 47.1%,
+    hsla(0, 0%, 100%, 0.55) 52.9%,
+    hsla(0, 0%, 100%, 0.648) 58.8%,
+    hsla(0, 0%, 100%, 0.741) 64.7%,
+    hsla(0, 0%, 100%, 0.825) 71%,
+    hsla(0, 0%, 100%, 0.896) 77.5%,
+    hsla(0, 0%, 100%, 0.951) 84.5%,
+    hsla(0, 0%, 100%, 0.987) 91.9%,
+    hsl(0, 0%, 100%) 100%)
+  ;
+
+  @media (min-width: 50rem) {
+    mask-image: none;
+    grid-column: 1 / 6;
+    grid-row: 1 / 9;
+    margin: 2rem;
+    border-radius: 32px;
+  }
 `
 
 const Form = styled.form`
   margin: 0;
   padding: 2rem;
-  grid-column: 6 / 9;
-  grid-row: 2 / 7;
+  grid-column: 1 / 9;
+  grid-row: 1 / 9;
   /* width: 40vw;
   height: 60vh; */
-  background: white;
+  background: rgba(255,255,255,0.1);
   display: grid;
   grid-template-rows: repeat(5, 1fr);
   grid-template-columns: repeat(8, 1fr);
   align-items: center;
-  border-radius: 16px;
+  border-radius: 0px;
   box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.25);
   z-index: 100;
-  /* opacity: 0.75; */
+  /* opacity: 0.5; */
 
   @media (min-width: 50rem) {
+    background: rgba(255,255,255,1);
+    border-radius: 16px;
+    opacity: 1;
     margin: 0 4rem 0 -8rem;
     padding: 0;
     /* width: 40rem;
     height: 60vh; */
+    grid-column: 6 / 9;
+    grid-row: 2 / 7;
     grid-template-rows: repeat(5, 1fr);
   }
 `
@@ -75,17 +107,22 @@ const Message = styled(P)`
   /* background: white; */
   /* border: 1px solid red; */
   color: black;
-  font-size: calc(16px + (24 - 16) * ((100vw - 300px) / (1600 - 300)));
+  font-family: 'Open Sans', sans-serif;
+  font-size: calc(18px + (28 - 18) * ((100vw - 300px) / (1600 - 300)));
   line-height: 1.5;
-  font-weight: 800;
   /* text-shadow: 0px 0px 8px hsla(0,0%,0%,1); */
 `
 
 const Label = styled.label`
+  font-size: calc(16px + (24 - 16) * ((100vw - 300px) / (1600 - 300)));
   grid-column: 1 / 9;
   display: block;
   margin: 0;
   padding: 1rem 2rem;
+
+  @media (min-width: 50rem) {
+    font-size: calc(12px + (16 - 12) * ((100vw - 300px) / (1600 - 300)));
+  }
 `
 
 const Input = styled.input`
@@ -101,6 +138,7 @@ const Input = styled.input`
   background: hsla(255,100%,100%,0.5);
   border-radius: 8px;
   outline: none;
+  background: rgba(255,255,255,0.75);
 
   :focus {
     box-shadow: 0px 0px 12px rgba(0,0,0,0.2);
@@ -119,8 +157,12 @@ const SubmitButton = styled(Button)`
   padding: 16px 24px;
   vertical-align: baseline;
   color: whtie;
-  /* box-shadow: 0px 0px 16px hsla(0,0%,0%,0.1); */
+  box-shadow: 0px 0px 32px hsla(0,0%,0%,0.5);
   text-shadow: none;
+
+  @media (min-width: 50rem) {
+    box-shadow: none;
+  }
 
   :hover {
   }
@@ -155,7 +197,7 @@ const Promotion = () => {
           whileTap={{ scale: 0.9 }}
           type="submit"
         >
-          Submit
+        Submit
         </SubmitButton>
       </Form>     
     </FullContentCard>
