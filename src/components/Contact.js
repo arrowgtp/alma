@@ -165,46 +165,46 @@ const SubmitButton = styled(Button)`
   }
 `
 
-const Message = styled(P)`
-  grid-column: 1 / 9;
-  margin: 0 1rem 0 1rem;
-  padding: 1rem;
-  align-self: stretch;
-  justify-self: stretch;
-  /* background: white; */
-  /* border: 1px solid red; */
-  color: white;
-  font-size: calc(16px + (24 - 16) * ((100vw - 300px) / (1600 - 300)));
-  line-height: 1.5;
-  font-weight: 800;
-  text-shadow: 0px 0px 8px hsla(0,0%,0%,1);
-`
+// const Message = styled(P)`
+//   grid-column: 1 / 9;
+//   margin: 0 1rem 0 1rem;
+//   padding: 1rem;
+//   align-self: stretch;
+//   justify-self: stretch;
+//   background: white;
+//   border: 1px solid red;
+//   color: white;
+//   font-size: calc(16px + (24 - 16) * ((100vw - 300px) / (1600 - 300)));
+//   line-height: 1.5;
+//   font-weight: 800;
+//   text-shadow: 0px 0px 8px hsla(0,0%,0%,1);
+// `
 
 const Contact = () => {
 
-  const joinRef = useRef();
+  // const joinRef = useRef();
 
-  const [ isToggled, setToggle ] = useState(false);
+  // const [ isToggled, setToggle ] = useState(false);
 
-  const toggle = () => setToggle(!isToggled);
+  // const toggle = () => setToggle(!isToggled);
 
-  const handleClick = e => {
-    if (joinRef.current.contains(e.target)) {
-      return;
-    }
-    setToggle(false);
-  }
+  // const handleClick = e => {
+  //   if (joinRef.current.contains(e.target)) {
+  //     return;
+  //   }
+  //   setToggle(false);
+  // }
 
-  useEffect(() => {
-    document.addEventListener("mousedown", handleClick);
-    return () => {
-      document.removeEventListener("mousedown", handleClick);
-    };
-  }, []);
+  // useEffect(() => {
+  //   document.addEventListener("mousedown", handleClick);
+  //   return () => {
+  //     document.removeEventListener("mousedown", handleClick);
+  //   };
+  // }, []);
 
   return (
     <Fragment>
-      <FormContainer ref={joinRef}>
+      {/* <FormContainer ref={joinRef}>
 
         {
           !isToggled ?
@@ -275,7 +275,7 @@ const Contact = () => {
             </Form>        
           }
         </AnimatePresence>
-      </FormContainer>
+      </FormContainer> */}
     </Fragment>
   )
 

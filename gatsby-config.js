@@ -16,7 +16,7 @@ module.exports = {
     //     enableImprovedAccessibility: true // Optional. Sets aria-label attribute on pop-up icon for screen readers. Defaults to true.
     //   },
     // },
-    `gatsby-plugin-modal-routing`,
+    // `gatsby-plugin-modal-routing`,
     `gatsby-plugin-netlify`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
@@ -81,6 +81,6 @@ module.exports = {
         icon: `src/images/alma/alma-shell.svg`,
       },
     },
-    `gatsby-plugin-offline`
+    // `gatsby-plugin-offline`
   ]
 };

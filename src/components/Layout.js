@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import { injectIntl } from 'gatsby-plugin-intl'
 
 import './Layout.css'
@@ -14,19 +14,19 @@ import Contact from './Contact'
 
 const Layout = ({ children }) => {
   return (
-    <Fragment>
+    <>
       {/* <AnimatedLogo/> */}
       <App>
         <Menu>
           <Logo/>
           <Nav/>
-          <Contact/>
+          {/* <Contact/> */}
         </Menu>
         <Main>
           {children}
         </Main>
       </App>
-    </Fragment>
+    </>
   )
 }
 
