@@ -184,6 +184,7 @@ const Promotion = () => {
         data-netlify="true"
         data-netlify-honeypot="bot-field"
       >
+        <input type="hidden" name="form-name" value="alma-form"/>
         <input type="hidden" name="bot-field" />
         <input type="hidden" name="alma-form" value="contact"/>
         <Message>
