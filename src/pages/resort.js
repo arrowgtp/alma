@@ -6,15 +6,14 @@ import SEO from "../components/seo"
 
 import Content from '../components/layout/Content'
 
-import { FullContentCard, HeadingContainer } from '../components/layout/FullContentCard'
+import { HeadingContainer } from '../components/layout/FullContentCard'
 import { FullImage, Image } from '../components/visual/FullImage'
-import FullWidthContainer from '../components/layout/FullWidthContainer'
-import CenteredContainer from '../components/layout/CenteredContainer'
 import AlmaHeader from '../components/Header'
 import { Button, ButtonContainer } from '../components/visual/Button'
 import { Space, P } from '../components/visual/Typography'
 import Watermark from '../components/Watermark'
 import Caption from '../components/Caption'
+import Box from '../components/Box'
 
 import Footer from '../components/Footer'
 
@@ -25,76 +24,72 @@ const Resort = ({ data, intl }) => {
 
       <SEO title={intl.formatMessage({ id: "resort-title" })} />
       
-      <FullContentCard>
+      <Box featured>
         <HeadingContainer>
           <AlmaHeader white title={intl.formatMessage({ id: "resort-title" })}/>
         </HeadingContainer>
         <Image grid fluid={data.almaResort2.childImageSharp.fluid}/>
         <Caption large>Artist Rendering</Caption>
         <Watermark large/>
-      </FullContentCard>
+      </Box>
 
-      <CenteredContainer>
+      <Box center>
         <Space/>
         <P>{intl.formatMessage({ id: "resort-paragraph-1" })}</P>
         <Space/>
-      </CenteredContainer>
+      </Box>
 
-      <FullWidthContainer>
+      <Box full>
         <FullImage>
           <Image rounded fluid={data.almaResort1.childImageSharp.fluid}/>
           <Caption medium>Artist Rendering</Caption>
           <Watermark medium/>
         </FullImage>
-      </FullWidthContainer>
+      </Box>
 
-      <CenteredContainer>
+      <Box center>
         <Space/>
         <P>{intl.formatMessage({ id: "resort-paragraph-2" })}</P>
         <Space/>
-      </CenteredContainer>
+      </Box>
 
-      {/* <FullWidthContainer>
-        <FullImage fluid={data.almaResort3.childImageSharp.fluid}/>
-      </FullWidthContainer> */}
-
-      <FullWidthContainer>
+      <Box full>
         <FullImage>
           <Image rounded fluid={data.almaResort3.childImageSharp.fluid}/>
           <Caption medium>Artist Rendering</Caption>
           <Watermark medium/>
         </FullImage>
-      </FullWidthContainer>
+      </Box>
 
-      <CenteredContainer>
+      <Box center>
         <Space/>
         <P>{intl.formatMessage({ id: "resort-paragraph-3" })}</P>
         <Space/>
-      </CenteredContainer>
+      </Box>
 
-      <FullWidthContainer>
+      <Box full>
         <FullImage>
           <Image rounded fluid={data.almaResort4.childImageSharp.fluid}/>
           <Caption medium>Artist Rendering</Caption>
           <Watermark medium/>
         </FullImage>
-      </FullWidthContainer>
+      </Box>
 
-      <CenteredContainer>
+      <Box center>
         <Space/>
         <P>{intl.formatMessage({ id: "resort-paragraph-4" })}</P>
         <Space/>
-      </CenteredContainer>
+      </Box>
 
-      <FullWidthContainer>
+      <Box full>
         <FullImage>
           <Image rounded fluid={data.almaResort5.childImageSharp.fluid}/>
           <Caption medium>Artist Rendering</Caption>
           <Watermark medium/>
         </FullImage>
-      </FullWidthContainer>
+      </Box>
 
-      <CenteredContainer>
+      <Box center>
         <Space/>
         <P>{intl.formatMessage({ id: "resort-to-apartments" })}</P>
         <Space/>
@@ -104,7 +99,7 @@ const Resort = ({ data, intl }) => {
           </Link> 
         </ButtonContainer>
         <Space/>
-      </CenteredContainer>
+      </Box>
 
       <Footer>
         <p>{intl.formatMessage({ id: "copyright-notice" })}</p>

@@ -6,16 +6,13 @@ import { Link, injectIntl } from 'gatsby-plugin-intl'
 import SEO from '../components/seo'
 
 import Content from '../components/layout/Content'
-import { FullContentCard, FullContentImage } from '../components/layout/FullContentCard'
-import FullWidthContainer from '../components/layout/FullWidthContainer'
-import CenteredContainer from '../components/layout/CenteredContainer'
 import HorizontalScrollContainer from '../components/layout/HorizontalScrollContainer'
 import AlmaHeader from '../components/Header'
 import { Space, P } from '../components/visual/Typography'
 import Watermark from '../components/Watermark'
 import Caption from '../components/Caption'
 import { Image } from '../components/visual/FullImage'
-
+import Box from '../components/Box'
 import { Button, ButtonContainer } from '../components/visual/Button'
 
 import almaLogoWithBG from '../images/alma/alma-logo-with-bg.svg'
@@ -90,7 +87,7 @@ const CardImg = styled(Img)`
   z-index: 1;
 `
 
-const RCIMap = styled(FullContentImage)`
+const RCIMap = styled(Image)`
   width: 100%;
   height: auto;
 `
@@ -454,16 +451,16 @@ const Index = ({ data, intl }) => {
 
       <SEO title="Home" />
 
-      <FullContentCard>
+      <Box featured>
         <MainLogo src={almaLogoWithBG} alt="The Alma Resort Logo."/>
         <PageSlogan>{intl.formatMessage({ id: "slogan" })}</PageSlogan>
         {/* <FullContentImage fluid={data.resortOverview.childImageSharp.fluid}/> */}
         <Image grid fluid={data.resortOverview.childImageSharp.fluid}/>
         <Caption large>Artist Rendering</Caption>
         <Watermark large/>
-      </FullContentCard>
+      </Box>
   
-      <CenteredContainer>
+      <Box center>
         <Space/>
         <AlmaHeader blue title={intl.formatMessage({ id: "resort-title" })} />
         <Space/>
@@ -475,9 +472,9 @@ const Index = ({ data, intl }) => {
           </Link>
         </ButtonContainer>
         <Space/>
-      </CenteredContainer>
+      </Box>
   
-      <FullWidthContainer>
+      <Box full>
         <HorizontalScrollContainer orange>
           <Card>
             <CardImg
@@ -548,9 +545,9 @@ const Index = ({ data, intl }) => {
             <Watermark small/>
           </Card> */}
         </HorizontalScrollContainer>
-      </FullWidthContainer>
+      </Box>
 
-      <CenteredContainer>
+      <Box center>
         <Space/>
         <AlmaHeader white title={intl.formatMessage({ id: "apartments-title" })} />
         <Space/>
@@ -562,9 +559,9 @@ const Index = ({ data, intl }) => {
           </Link> 
         </ButtonContainer>
         <Space/>
-      </CenteredContainer>
+      </Box>
 
-      <FullWidthContainer>
+      <Box full>
         <HorizontalScrollContainer blue> 
           <Card>
             <CardImg fluid={data.apartmentLivingRoom1.childImageSharp.fluid} alt="Apartment living room."/>
@@ -592,9 +589,9 @@ const Index = ({ data, intl }) => {
             <Watermark small/>
           </Card>
         </HorizontalScrollContainer>
-      </FullWidthContainer>
+      </Box>
 
-      <CenteredContainer>
+      <Box center>
         <Space/>
         <AlmaHeader white title={intl.formatMessage({ id: "villas-title" })} />
         <Space/>
@@ -606,9 +603,9 @@ const Index = ({ data, intl }) => {
           </Link> 
         </ButtonContainer>
         <Space/>
-      </CenteredContainer>
+      </Box>
 
-      <FullWidthContainer>
+      <Box full>
         <HorizontalScrollContainer blue>
           <Card>
             <CardImg fluid={data.resortExterior7.childImageSharp.fluid} alt="The Alma Resort."/>
@@ -651,9 +648,9 @@ const Index = ({ data, intl }) => {
             <Watermark small/>
           </Card>
         </HorizontalScrollContainer>
-      </FullWidthContainer>
+      </Box>
 
-      <CenteredContainer>
+      <Box center>
         <Space/>
         <AlmaHeader white title={intl.formatMessage({ id: "restaurants-title" })} />
         <Space/>
@@ -665,9 +662,9 @@ const Index = ({ data, intl }) => {
           </Link> 
         </ButtonContainer>
         <Space/>
-      </CenteredContainer>
+      </Box>
 
-      <FullWidthContainer>
+      <Box full>
         <HorizontalScrollContainer blue>
           <Card>
             <CardImg fluid={data.realRestaurant1.childImageSharp.fluid} alt="The Alma Resort."/>
@@ -705,9 +702,9 @@ const Index = ({ data, intl }) => {
             <Watermark small/>
           </Card>
         </HorizontalScrollContainer>
-      </FullWidthContainer>
+      </Box>
 
-      <CenteredContainer>
+      <Box center>
         <Space/>
         <AlmaHeader white title={intl.formatMessage({ id: "amenities-title" })} />
         <Space/>
@@ -719,9 +716,9 @@ const Index = ({ data, intl }) => {
           </Link> 
         </ButtonContainer>
         <Space/>
-      </CenteredContainer>
+      </Box>
 
-      <FullWidthContainer>
+      <Box full>
         <HorizontalScrollContainer blue>
           <Card>
             <CardImg fluid={data.receptionLobby.childImageSharp.fluid} alt="The Alma Resort."/>
@@ -749,9 +746,9 @@ const Index = ({ data, intl }) => {
             <Watermark small/>
           </Card>
         </HorizontalScrollContainer>
-      </FullWidthContainer>
+      </Box>
 
-      <CenteredContainer>
+      <Box center>
         <Space/>
         <AlmaHeader white title={intl.formatMessage({ id: "construction-title" })} />
         <Space/>
@@ -763,9 +760,9 @@ const Index = ({ data, intl }) => {
           </Link> 
         </ButtonContainer>
         <Space/>
-      </CenteredContainer>
+      </Box>
 
-      <FullWidthContainer>
+      <Box full>
         <HorizontalScrollContainer blue>
           <Card>
             <CardImg fluid={data.june1.childImageSharp.fluid} alt="The Alma Resort."/>
@@ -793,9 +790,9 @@ const Index = ({ data, intl }) => {
             <Watermark small/>
           </Card>
         </HorizontalScrollContainer>
-      </FullWidthContainer>
+      </Box>
 
-      <CenteredContainer>
+      <Box center>
         <Space/>
         <AlmaHeader blue title={intl.formatMessage({ id: "vacations-title" })} />
         <Space/>
@@ -807,13 +804,13 @@ const Index = ({ data, intl }) => {
           </Link> 
         </ButtonContainer>
         <Space/>
-      </CenteredContainer>
+      </Box>
 
-      <FullContentCard>
+      <Box full>
         <RCIMap fluid={data.rciMap.childImageSharp.fluid}/>
-      </FullContentCard>
+      </Box>
       
-      <CenteredContainer>
+      <Box center>
         <Space/>
         <AlmaHeader blue title={intl.formatMessage({ id: "alma-title" })} />
         <Space/>
@@ -825,15 +822,15 @@ const Index = ({ data, intl }) => {
           </Link> 
         </ButtonContainer>
         <Space/>
-      </CenteredContainer>
+      </Box>
 
-      {/* <CenteredContainer>
+      {/* <Box center>
         <AlmaHeader white title='News' />
         <P>All the latest news that's fit to print about the worlds newest and brightest hotspot in the Vietnam travel scene</P>
         <P>{data.articles.totalCount} Posts</P>
-      </CenteredContainer> */}
+      </Box> */}
     
-      {/* <FullWidthContainer>
+      {/* <Box full>
         <NewsContainer>
           {data.articles.edges.map(({ node }) => (
             <NewsCardOne key={node.id} to={node.fields.slug}>
@@ -845,9 +842,9 @@ const Index = ({ data, intl }) => {
             </NewsCardOne>
           ))}
         </NewsContainer>
-      </FullWidthContainer> */}
+      </Box> */}
 
-      {/* <FullWidthContainer>
+      {/* <Box full>
         <NewsContainer>
           {data.articles.edges.map(({ node }) => (
             <NewsCard key={node.id} to={node.fields.slug}>
@@ -860,15 +857,15 @@ const Index = ({ data, intl }) => {
             </NewsCard>
           ))}
         </NewsContainer>
-      </FullWidthContainer> */}
+      </Box> */}
         
-      <CenteredContainer>
+      <Box center>
         <AlmaHeader blue title='Instagram' />
         <Space/>
         <P>{intl.formatMessage({ id: "instagram-paragraph" })}</P>
-      </CenteredContainer>
+      </Box>
 
-      <FullWidthContainer>
+      <Box full>
         <InstaGrid>
           {data.allInstaNode.edges.map(({ node }) => (
             <InstaPost key={node.id}>
@@ -880,7 +877,7 @@ const Index = ({ data, intl }) => {
           ))}
         </InstaGrid>
         <Space/>
-      </FullWidthContainer>
+      </Box>
 
       <Footer>
         <p>{intl.formatMessage({ id: "copyright-notice" })}</p>

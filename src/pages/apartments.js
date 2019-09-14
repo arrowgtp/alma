@@ -6,9 +6,7 @@ import Img from 'gatsby-image'
 import SEO from '../components/seo'
 
 import Content from '../components/layout/Content'
-import FullWidthContainer from '../components/layout/FullWidthContainer'
-import CenteredContainer from '../components/layout/CenteredContainer'
-import { FullContentCard, HeadingContainer } from '../components/layout/FullContentCard'
+import { HeadingContainer } from '../components/layout/FullContentCard'
 import { FullImage, Image } from '../components/visual/FullImage'
 import FlexContainer from '../components/layout/FlexContainer'
 import FlexBox from '../components/layout/FlexBox'
@@ -17,6 +15,7 @@ import { Button, ButtonContainer } from '../components/visual/Button'
 import { Space, P } from '../components/visual/Typography'
 import Watermark from '../components/Watermark'
 import Caption from '../components/Caption'
+import Box from '../components/Box'
 
 import Footer from '../components/Footer'
 
@@ -48,77 +47,77 @@ const Apartments = ({ data, intl }) => {
 
       <SEO title={intl.formatMessage({ id: "apartments-title" })} />
       
-      <FullContentCard>
+      <Box featured>
         <HeadingContainer>
           <AlmaHeader white title={intl.formatMessage({ id: "apartments-title" })}/>
         </HeadingContainer>
         <Image grid fluid={data.apartmentLivingRoom1.childImageSharp.fluid}/>
         <Caption large>Artist Rendering</Caption>
         <Watermark large/>
-      </FullContentCard>
+      </Box>
 
-      <CenteredContainer>
+      <Box center>
         <Space/>
         <P>{intl.formatMessage({ id: "apartments-paragraph-1" })}</P>
         <Space/>
-      </CenteredContainer>
+      </Box>
 
-      <FullWidthContainer>
+      <Box full>
         <FullImage>
           <Image rounded fluid={data.apartmentLivingRoom2.childImageSharp.fluid}/>
           <Caption medium>Artist Rendering</Caption>
           <Watermark medium/>
         </FullImage>
-      </FullWidthContainer>
+      </Box>
 
-      <CenteredContainer>
+      <Box center>
         <Space/>
         <P>{intl.formatMessage({ id: "apartments-paragraph-2" })}</P>
         <Space/>
-      </CenteredContainer>
+      </Box>
 
-      <FullWidthContainer>
+      <Box full>
         <FullImage>
           <Image rounded fluid={data.apartmentKitchen.childImageSharp.fluid}/>
           <Caption medium>Artist Rendering</Caption>
           <Watermark medium/>
         </FullImage>
-      </FullWidthContainer>
+      </Box>
 
-      <CenteredContainer>
+      <Box center>
         <Space/>
         <P>{intl.formatMessage({ id: "apartments-paragraph-3" })}</P>
         <Space/>
-      </CenteredContainer>
+      </Box>
 
-      <FullWidthContainer>
+      <Box full>
         <FullImage>
           <Image rounded fluid={data.apartmentBedroom.childImageSharp.fluid}/>
           <Caption medium>Artist Rendering</Caption>
           <Watermark medium/>
         </FullImage>
-      </FullWidthContainer>
+      </Box>
 
-      <CenteredContainer>
+      <Box center>
         <Space/>
         <P>{intl.formatMessage({ id: "apartments-paragraph-4" })}</P>
         <Space/>
-      </CenteredContainer>
+      </Box>
 
-      <FullWidthContainer>
+      <Box full>
         <FullImage>
           <Image rounded fluid={data.apartmentBathroom.childImageSharp.fluid}/>
           <Caption medium>Artist Rendering</Caption>
           <Watermark medium/>
         </FullImage>
-      </FullWidthContainer>
+      </Box>
 
-      <CenteredContainer>
+      <Box center>
         <Space/>
         <AlmaHeader blue title={intl.formatMessage({ id: "floorplans-title" })}></AlmaHeader>
-      </CenteredContainer>
+      </Box>
 
-      <FullWidthContainer>
+      <Box full>
         <FlexContainer>
           <FlexBox>
             <FloorplanHeading>
@@ -134,9 +133,9 @@ const Apartments = ({ data, intl }) => {
             <Floorplan fluid={data.floorplanA.childImageSharp.fluid}/>
           </FlexBox>
         </FlexContainer>
-      </FullWidthContainer>
+      </Box>
 
-      <FullWidthContainer>
+      <Box full>
         <FlexContainer>
           <FlexBox>
             <FloorplanHeading>{intl.formatMessage({ id: "floorplan-b" })}</FloorplanHeading>
@@ -148,9 +147,9 @@ const Apartments = ({ data, intl }) => {
             <Floorplan fluid={data.floorplanB.childImageSharp.fluid}/>
           </FlexBox>
         </FlexContainer>
-      </FullWidthContainer>
+      </Box>
 
-      <FullWidthContainer>
+      <Box full>
         <FlexContainer>
           <FlexBox>
             <FloorplanHeading>{intl.formatMessage({ id: "floorplan-c" })}</FloorplanHeading>
@@ -162,14 +161,14 @@ const Apartments = ({ data, intl }) => {
             <Floorplan fluid={data.floorplanC.childImageSharp.fluid}/>
           </FlexBox>
         </FlexContainer>
-      </FullWidthContainer>
+      </Box>
 
-      <CenteredContainer>
+      <Box center>
         <FloorplanHeading>{intl.formatMessage({ id: "floorplan-h" })}</FloorplanHeading>
         <FloorplanParagraph>{intl.formatMessage({ id: "floorplan-h-placeholder" })}</FloorplanParagraph>
-      </CenteredContainer>
+      </Box>
 
-      <CenteredContainer>
+      <Box center>
         <Space/>
         <P>{intl.formatMessage({ id: "apartments-to-villas" })}</P>
         <Space/>
@@ -180,7 +179,7 @@ const Apartments = ({ data, intl }) => {
         </ButtonContainer>
         <Space/>
         <Space/>
-      </CenteredContainer>
+      </Box>
 
       <Footer>
         <p>{intl.formatMessage({ id: "copyright-notice" })}</p>
