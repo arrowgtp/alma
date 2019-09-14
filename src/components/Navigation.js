@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, Fragment } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import styled from 'styled-components'
 // import { useTransition, animated } from 'react-spring'
 import { motion, AnimatePresence } from 'framer-motion'
@@ -283,7 +283,7 @@ const Navigation = ({ intl }) => {
   }, []);
 
   return (
-    <Fragment>
+    <>
       <NavContainer ref={navRef}>
 
         {
@@ -397,7 +397,7 @@ const Navigation = ({ intl }) => {
           {/* <AlmaLink to={`/promotions`}>Promotions</AlmaLink> */}
         </LargeLinkTree> 
       </LargeNav>
-    </Fragment>
+    </>
   )
 }
 
