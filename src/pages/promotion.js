@@ -69,14 +69,14 @@ const Image = styled.div`
 
 const Form = styled.form`
   margin: 0;
-  padding: 2rem;
+  padding: 0;
   grid-column: 1 / 9;
   grid-row: 1 / 9;
   /* width: 40vw;
   height: 60vh; */
   background: rgba(255,255,255,0.1);
   display: grid;
-  grid-template-rows: repeat(5, 1fr);
+  grid-template-rows: repeat(6, 1fr);
   grid-template-columns: repeat(8, 1fr);
   align-items: center;
   border-radius: 0px;
@@ -87,7 +87,6 @@ const Form = styled.form`
   @media (min-width: 50rem) {
     background: rgba(255,255,255,1);
     border-radius: 16px;
-    opacity: 1;
     margin: 0 4rem 0 -8rem;
     padding: 0;
     /* width: 40rem;
@@ -118,20 +117,21 @@ const Label = styled.label`
   grid-column: 1 / 9;
   display: block;
   margin: 0;
-  padding: 1rem 2rem;
+  padding: 1rem;
 
   @media (min-width: 50rem) {
     font-size: calc(12px + (16 - 12) * ((100vw - 300px) / (1600 - 300)));
+    padding: 1rem 2rem;
   }
 `
 
 const Input = styled.input`
   grid-column: 1 / 9;
   margin: 0.5rem 0;
-  padding: 1.5rem;
+  padding: 1.25rem;
   display: block;
   width: 100%;
-  height: 24px;
+  height: 20px;
   font-size: 16px;
   border: 1px solid #006674;
   border: 1px solid hsla(0,0%,0%,0.25);
@@ -139,6 +139,13 @@ const Input = styled.input`
   border-radius: 8px;
   outline: none;
   background: rgba(255,255,255,0.75);
+  
+  @media (min-width: 50rem) {
+    margin: 0.5rem 0;
+    height: 24px;
+    padding: 1.5rem;
+  }
+
 
   :focus {
     box-shadow: 0px 0px 12px rgba(0,0,0,0.2);
