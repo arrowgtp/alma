@@ -16,22 +16,7 @@ const Container = styled(motion.div)`
 `
 
 const Content = ({ children }) => {
-  // const [state] = useState(true);
-  // const transition = useTransition(state, null, { 
-  //   from: { opacity: 0 },
-  //   enter: { opacity: 1 },
-  //   leave: { opacity: 0 }
-  // });
-  // return transition.map(({ item, key, props: fade }) =>
-  //   item && <Container key={key} style={fade}>{children}</Container>
-  // )
-
-  // return (
-  //   <Container>{children}</Container>
-  // )
-
   // Need to add conditionals that stop the animation when langauge is changed
-
   return (
     <AnimatePresence>
       <Container

@@ -15,6 +15,7 @@ import { Button, ButtonContainer } from '../components/visual/Button'
 import { Space, P, UL, ListTitle, LI } from '../components/visual/Typography'
 import Watermark from '../components/Watermark'
 import Caption from '../components/Caption'
+import Box from '../components/Box'
 
 import Footer from '../components/Footer'
 

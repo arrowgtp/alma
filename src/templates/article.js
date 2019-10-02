@@ -227,6 +227,7 @@ const Article = ({ data }) => {
 export const query = graphql`
   query GetMdxTemplate($slug: String!) {
     mdx(fields: { slug: { eq: $slug }}) {
+      id
       frontmatter {
         title
         subtitle

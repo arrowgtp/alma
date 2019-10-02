@@ -164,11 +164,6 @@ const Apartments = ({ data, intl }) => {
       </Box>
 
       <Box center>
-        <FloorplanHeading>{intl.formatMessage({ id: "floorplan-h" })}</FloorplanHeading>
-        <FloorplanParagraph>{intl.formatMessage({ id: "floorplan-h-placeholder" })}</FloorplanParagraph>
-      </Box>
-
-      <Box center>
         <Space/>
         <P>{intl.formatMessage({ id: "apartments-to-villas" })}</P>
         <Space/>
