@@ -15,6 +15,7 @@ import almaShell from '../images/alma/alma-shell.svg'
 import FacebookIcon from '../images/social/facebook-button.svg'
 import InstagramIcon from '../images/social/instagram-button.svg'
 import TwitterIcon from '../images/social/twitter-button.svg'
+import YouTubeIcon from '../images/social/youtube-button.svg'
 
 const NavContainer = styled.div`
   grid-column: 1 / 2;
@@ -356,6 +357,9 @@ const Navigation = ({ intl }) => {
                   <SocialButton href='https://www.twitter.com/almavacations'>
                     <img src={TwitterIcon} alt='The Alma Resort Twitter account.' />
                   </SocialButton>
+                  <SocialButton href='https://www.youtube.com/channel/UCMzsbNMXxwVTLOUZr_3lZWw'>
+                    <img src={YouTubeIcon} alt='The Alma Resort YouTube account.' />
+                  </SocialButton>
                 </SocialButtons>
                 <Locales>
                   <Language />
@@ -379,6 +383,9 @@ const Navigation = ({ intl }) => {
           </SocialButton>
           <SocialButton href='https://www.twitter.com/almavacations'>
             <img src={TwitterIcon} alt='The Alma Resort Twitter account.' />
+          </SocialButton>
+          <SocialButton href='https://www.youtube.com/channel/UCMzsbNMXxwVTLOUZr_3lZWw'>
+            <img src={YouTubeIcon} alt='The Alma Resort YouTube account.' />
           </SocialButton>
         </SocialButtons>
         <LargeLinkTree>
