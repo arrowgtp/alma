@@ -72,6 +72,6 @@ module.exports = {
         icon: `src/images/alma/alma-shell.svg`,
       },
     },
-    `gatsby-plugin-offline`
+    // `gatsby-plugin-offline`
   ]
 };
