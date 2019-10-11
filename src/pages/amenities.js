@@ -29,7 +29,7 @@ const Amenities = ({ data, intl }) => {
         <HeadingContainer>
           <AlmaHeader white title={intl.formatMessage({ id: "amenities-title" })}/>
         </HeadingContainer>
-        <Image grid fluid={data.spaTreatment.childImageSharp.fluid}/>
+        <Image grid fluid={data.waterpark4.childImageSharp.fluid}/>
         <Caption large>Artist Rendering</Caption>
         <Watermark large/>
       </FullContentCard>
@@ -167,6 +167,13 @@ export const query = graphql`
       }
     }
     spaTreatment: file(relativePath: { eq: "amenities/spa-treatment-4x3.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    waterpark4: file(relativePath: { eq: "amenities/waterpark-4.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 2880) {
           ...GatsbyImageSharpFluid_withWebp

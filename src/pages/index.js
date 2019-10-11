@@ -721,7 +721,7 @@ const Index = ({ data, intl }) => {
       <Box full>
         <HorizontalScrollContainer blue>
           <Card>
-            <CardImg fluid={data.receptionLobby.childImageSharp.fluid} alt="The Alma Resort."/>
+            <CardImg fluid={data.waterpark4.childImageSharp.fluid} alt="The Alma Resort."/>
             <Caption small>Artist Rendering</Caption>
             <Watermark small/>
           </Card>
@@ -1288,6 +1288,13 @@ export const query = graphql`
       }
     }
     june14: file(relativePath: { eq: "construction/june-14-4x3.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    waterpark4: file(relativePath: { eq: "amenities/waterpark-4-1x1.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 2880) {
           ...GatsbyImageSharpFluid_withWebp
