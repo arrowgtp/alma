@@ -30,10 +30,83 @@ const Construction = ({ data, intl }) => {
         <HeadingContainer>
           <AlmaHeader white title={intl.formatMessage({ id: "construction-title" })}/>
         </HeadingContainer>
-        <Image grid fluid={data.june1.childImageSharp.fluid}/>
+        <Image grid fluid={data.sep1.childImageSharp.fluid}/>
         <Caption large>Actual Image</Caption>
         <Watermark large/>
       </FullContentCard>
+
+      <CenteredContainer>
+        <Space/>
+        <AlmaHeader
+          blue
+          title={intl.formatMessage({ id: "construction-september-2019" })}
+        />
+        <Space/>
+        <P>{intl.formatMessage({ id: "construction-september-2019-paragraph-1" })}</P>
+        <Space/>
+        <P>{intl.formatMessage({ id: "construction-september-2019-paragraph-2" })}</P>
+        <Space/>
+        <P>{intl.formatMessage({ id: "construction-september-2019-paragraph-3" })}</P>
+        <Space/>
+        <P>{intl.formatMessage({ id: "construction-september-2019-paragraph-4" })}</P>
+        <Space/>
+      </CenteredContainer>
+
+      <FullWidthContainer>
+        <FullImage>
+          <Image rounded fluid={data.sep1.childImageSharp.fluid}/>
+          <Caption medium>Actual Image</Caption>
+          <Watermark medium/>
+        </FullImage>
+        <Space/>
+        <FullImage>
+          <Image rounded fluid={data.sep2.childImageSharp.fluid}/>
+          <Caption medium>Actual Image</Caption>
+          <Watermark medium/>
+        </FullImage>
+        <Space/>
+        <FullImage>
+          <Image rounded fluid={data.sep3.childImageSharp.fluid}/>
+          <Caption medium>Actual Image</Caption>
+          <Watermark medium/>
+        </FullImage>
+        <Space/>
+        <FullImage>
+          <Image rounded fluid={data.sep4.childImageSharp.fluid}/>
+          <Caption medium>Actual Image</Caption>
+          <Watermark medium/>
+        </FullImage>
+        <Space/>
+        <FullImage>
+          <Image rounded fluid={data.sep5.childImageSharp.fluid}/>
+          <Caption medium>Actual Image</Caption>
+          <Watermark medium/>
+        </FullImage>
+        <Space/>
+        <FullImage>
+          <Image rounded fluid={data.sep6.childImageSharp.fluid}/>
+          <Caption medium>Actual Image</Caption>
+          <Watermark medium/>
+        </FullImage>
+        <Space/>
+        <FullImage>
+          <Image rounded fluid={data.sep7.childImageSharp.fluid}/>
+          <Caption medium>Actual Image</Caption>
+          <Watermark medium/>
+        </FullImage>
+        <Space/>
+        <FullImage>
+          <Image rounded fluid={data.sep8.childImageSharp.fluid}/>
+          <Caption medium>Actual Image</Caption>
+          <Watermark medium/>
+        </FullImage>
+        <Space/>
+        <FullImage>
+          <Image rounded fluid={data.sep9.childImageSharp.fluid}/>
+          <Caption medium>Actual Image</Caption>
+          <Watermark medium/>
+        </FullImage>
+      </FullWidthContainer>
 
       <CenteredContainer>
         <Space/>
@@ -354,6 +427,70 @@ export const query = graphql`
         }
       }
     }
+    sep1: file(relativePath: { eq: "construction/september-1.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    sep2: file(relativePath: { eq: "construction/september-2.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    sep3: file(relativePath: { eq: "construction/september-3.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    sep4: file(relativePath: { eq: "construction/september-4.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    sep5: file(relativePath: { eq: "construction/september-5.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    sep6: file(relativePath: { eq: "construction/september-6.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    sep7: file(relativePath: { eq: "construction/september-7.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    sep8: file(relativePath: { eq: "construction/september-8.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    sep9: file(relativePath: { eq: "construction/september-9.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    
     
   }
 `

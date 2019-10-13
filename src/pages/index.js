@@ -764,28 +764,48 @@ const Index = ({ data, intl }) => {
 
       <Box full>
         <HorizontalScrollContainer blue>
-          <Card>
-            <CardImg fluid={data.june1.childImageSharp.fluid} alt="The Alma Resort."/>
-            <Caption small>Actual Image</Caption>
-            <Watermark small/>
-            </Card>
-          <Card>
-            <CardImg fluid={data.june2.childImageSharp.fluid} alt="The Alma Resort."/>
+        <Card>
+            <CardImg fluid={data.sep1.childImageSharp.fluid} alt="The Alma Resort."/>
             <Caption small>Actual Image</Caption>
             <Watermark small/>
           </Card>
           <Card>
-            <CardImg fluid={data.june3.childImageSharp.fluid} alt="The Alma Resort."/>
+            <CardImg fluid={data.sep3.childImageSharp.fluid} alt="The Alma Resort."/>
             <Caption small>Actual Image</Caption>
             <Watermark small/>
           </Card>
           <Card>
-            <CardImg fluid={data.june4.childImageSharp.fluid} alt="The Alma Resort."/>
+            <CardImg fluid={data.sep4.childImageSharp.fluid} alt="The Alma Resort."/>
             <Caption small>Actual Image</Caption>
             <Watermark small/>
           </Card>
           <Card>
-            <CardImg fluid={data.june5.childImageSharp.fluid} alt="The Alma Resort."/>
+            <CardImg fluid={data.sep6.childImageSharp.fluid} alt="The Alma Resort."/>
+            <Caption small>Actual Image</Caption>
+            <Watermark small/>
+          </Card>
+          <Card>
+            <CardImg fluid={data.aug1.childImageSharp.fluid} alt="The Alma Resort."/>
+            <Caption small>Actual Image</Caption>
+            <Watermark small/>
+          </Card>
+          <Card>
+            <CardImg fluid={data.aug2.childImageSharp.fluid} alt="The Alma Resort."/>
+            <Caption small>Actual Image</Caption>
+            <Watermark small/>
+          </Card>
+          <Card>
+            <CardImg fluid={data.aug3.childImageSharp.fluid} alt="The Alma Resort."/>
+            <Caption small>Actual Image</Caption>
+            <Watermark small/>
+          </Card>
+          <Card>
+            <CardImg fluid={data.aug4.childImageSharp.fluid} alt="The Alma Resort."/>
+            <Caption small>Actual Image</Caption>
+            <Watermark small/>
+          </Card>
+          <Card>
+            <CardImg fluid={data.aug5.childImageSharp.fluid} alt="The Alma Resort."/>
             <Caption small>Actual Image</Caption>
             <Watermark small/>
           </Card>
@@ -1288,6 +1308,84 @@ export const query = graphql`
       }
     }
     june14: file(relativePath: { eq: "construction/june-14-4x3.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    aug1: file(relativePath: { eq: "construction/august-1-1x1.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    aug2: file(relativePath: { eq: "construction/august-2-1x1.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    aug3: file(relativePath: { eq: "construction/august-3-1x1.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    aug4: file(relativePath: { eq: "construction/august-4-1x1.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    aug5: file(relativePath: { eq: "construction/august-5-1x1.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+
+    aug6: file(relativePath: { eq: "construction/august-6-1x1.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    aug7: file(relativePath: { eq: "construction/august-7-1x1.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    sep1: file(relativePath: { eq: "construction/september-1-1x1.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    sep3: file(relativePath: { eq: "construction/september-3-1x1.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    sep4: file(relativePath: { eq: "construction/september-4-1x1.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    sep6: file(relativePath: { eq: "construction/september-6-1x1.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 2880) {
           ...GatsbyImageSharpFluid_withWebp

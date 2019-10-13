@@ -7,6 +7,7 @@ module.exports = {
     author: `Arrow GTP`
   },
   plugins: [
+    `gatsby-plugin-preact`,
     `gatsby-plugin-modal-routing`,
     `gatsby-plugin-netlify`,
     `gatsby-plugin-react-helmet`,
