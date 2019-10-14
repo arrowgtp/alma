@@ -11,6 +11,17 @@ const Space = styled.div`
   }
 `
 
+const SmallSpace = styled.div`
+  margin: 0;
+  padding: 0;
+  height: 0.5rem;
+  width: 100%;
+
+  @media (min-width: 50rem) {
+    height: 0.75rem;
+  }
+`
+
 const H1 = styled.h1`
   margin: 0;
   padding: 0;
@@ -90,4 +101,4 @@ const LI = styled.li`
   }
 `
 
-export { Space, H1, H2, H3, P, UL, ListTitle, LI }
+export { Space, SmallSpace, H1, H2, H3, P, UL, ListTitle, LI }

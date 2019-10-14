@@ -11,15 +11,9 @@
   "nav-construction": "Construction",
   "nav-vacations": "Vacations",
   "nav-about-alma": "About Alma",
+  "nav-showroom": "US Showroom",
   
   "learn-more-button": "Learn More",
-
-  "contact-showroom-hours": "",
-  "contact-phone-number": "",
-  "contact-address": "",
-  "contact-website": "",
-  "contact-email": "",
-
 
   "instagram-paragraph": "View and share your own #AlmaVacations photos, videos and memorable moments.",
   "copyright-notice": "© Copyright 2019, Alma USA LLC. All rights reserved.",
@@ -272,5 +266,24 @@
   "founder-paragraph-1": "Igal Ahouvi has a degree in Accounting and Economics from Tel Aviv University, and is currently Chairman of the Board of Blenheim Properties Group Ltd and Ravad Ltd, and director of the Nielsen Innovate Fund. He owns more than £3 billion worth of real estate in Israel, Europe and Vietnam.",
   "founder-paragraph-2": "Igal Ahouvi is not just a billionaire, a businessman, and an avid real estate developer, but a longtime lover of Vietnam - the country, the people, the land - and this love has driven him to build the beautiful and luxurious Alma Resort in the cerulean coastal city of Nha Trang. He wants vacation owners from all over the world to be able to enjoy this paradise in the most luxurious way that will bring families together.",
 
-  "alma-to-home": "Click here to head back home and make sure that you didn't miss any of the wonderful vacation opportunities that the Alma Resort has to offer."
+  "alma-to-home": "Click here to head back home and make sure that you didn't miss any of the wonderful vacation opportunities that the Alma Resort has to offer.",
+
+  "showroom-title": "US Showroom",
+
+  "showroom-hours-title": "Showroom Hours",
+  "showroom-hours": "Tuesday - Saturday 10:00 AM - 4:00 PM",
+  "alma-contact-title": "Contact",
+  "alma-phone-number-title": "Phone Number",
+  "alma-phone-number": "1.833.OWN.ALMA | 1.833.696.2562",
+  "showroom-address-title": "Address",
+  "showroom-address": "575 Anton Blvd, Suite 650",
+  "showroom-location": "Costa Mesa, CA, USA",
+  "showroom-zipcode": "92626",
+  "showroom-website-title": "Website",
+  "showroom-website": "alma.vacations",
+  "showroom-email-title": "Email Address",
+  "showroom-email": "travel@alma.vacations",
+  "showroom-paragraph-1": "Text and stuff and things.",
+  "showroom-paragraph-2": "All sorts of text and info.",
+  "showroom-paragraph-3": "Even moar info and stuff."
 }

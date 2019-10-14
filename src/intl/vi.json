@@ -11,14 +11,9 @@
   "nav-construction": "Xây Cất",
   "nav-vacations": "Điểm Du Lịch",
   "nav-about-alma": "Về Alma",
+  "nav-showroom": "US Showroom",
 
   "learn-more-button": "Tìm Hiểu Thêm",
-
-  "contact-showroom-hours": "",
-  "contact-phone-number": "",
-  "contact-address": "",
-  "contact-website": "",
-  "contact-email": "",
 
   "instagram-paragraph": "Ngắm và chia sẻ hình ảnh về khoảnh khắc khó quên cùng những video du lịch của bạn, hashtag #AlmaVacations.",
   "copyright-notice": "© Bản quyền 2019, Alma USA LLC. Bảo lưu mọi quyền.",
@@ -272,5 +267,24 @@
   "founder-paragraph-1": "Igal Ahouvi có bằng Kế Toán và Kinh Tế từ đại học Tel Aviv, và hiện thời giữ chức Chủ Tịch Hội Đồng quản trị của tập đoàn Blenheim Properties Group Ltd và Ravad Ltd, và là giám đốc của Nielsen Innovate Fund. Ông nắm giữ tài sản địa ốc trên 3 triệu bản anh tại Israel, Châu  u và Việt Nam.",
   "founder-paragraph-2": "Igal Ahouvi không chỉ là tỉ phú, thương gia, và một người say mê phát triển các dự án địa ốc, ông còn có trái tim lớn dành Việt Nam, cho đất nước, con người và xứ sở này, và tình yêu đó đã thúc đẩy ông xây khu nghỉ dưỡng Alma xinh đẹp và sang trọng ven bờ biển ngọc bích của Nha Trang. Ông ước mong các chủ nhân kỳ nghỉ đến từ khắp nơi trên thế giới có thể thưởng thức thiên đường này trong không gian sang trọng, quây quần bên gia đình.",
 
-  "alma-to-home": "Nhấn vào đây để trở lại trang nhà, hãy khám phá thêm để không bỏ lỡ những cơ hội du lịch mới lạ mà khu nghỉ dưỡng Alma có thể mang lại cho bạn."
+  "alma-to-home": "Nhấn vào đây để trở lại trang nhà, hãy khám phá thêm để không bỏ lỡ những cơ hội du lịch mới lạ mà khu nghỉ dưỡng Alma có thể mang lại cho bạn.",
+
+  "showroom-title": "US Showroom",
+
+  "showroom-hours-title": "Giờ Showroom",
+  "showroom-hours": "Thứ Ba - Thứ Bảy: 10:00 Sáng - 4:00 Chiều",
+  "alma-contact-title": "Liên Lạc",
+  "alma-phone-number-title": "Phone Number",
+  "alma-phone-number": "1.833.OWN.ALMA | 1.833.696.2562",
+  "showroom-address-title": "Address",
+  "showroom-address": "575 Anton Blvd, Suite 650",
+  "showroom-location": "Costa Mesa, CA, USA",
+  "showroom-zipcode": "92626",
+  "showroom-website-title": "Website",
+  "showroom-website": "alma.vacations",
+  "showroom-email-title": "Email Address",
+  "showroom-email": "travel@alma.vacations",
+  "showroom-paragraph-1": "Text and stuff and things.",
+  "showroom-paragraph-2": "All sorts of text and info.",
+  "showroom-paragraph-3": "Even moar info and stuff."
 }

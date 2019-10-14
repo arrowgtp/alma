@@ -345,8 +345,8 @@ const Navigation = ({ intl }) => {
                 <AlmaLink to={`/vacations`} onClick={toggle}>{intl.formatMessage({ id: "nav-vacations" })}</AlmaLink>
                 <AlmaBulletShell src={almaShell}/>
                 <AlmaLink to={`/alma`} onClick={toggle}>{intl.formatMessage({ id: "nav-about-alma" })}</AlmaLink>
-                {/* <AlmaBulletShell src={almaShell}/>
-                <AlmaLink to={`/promotions`} onClick={toggle}>Promotions</AlmaLink> */}
+                <AlmaBulletShell src={almaShell}/>
+                <AlmaLink to={`/showroom`} onClick={toggle}>{intl.formatMessage({ id: "nav-showroom" })}</AlmaLink>
                 <SocialButtons>
                   <SocialButton href='https://www.facebook.com/almavacations'>
                     <img src={FacebookIcon} alt='The Alma Resort Facebook account.' />
@@ -400,8 +400,8 @@ const Navigation = ({ intl }) => {
           <AlmaLink to={`/vacations`}>{intl.formatMessage({ id: "nav-vacations" })}</AlmaLink>
           <AlmaBulletShell src={almaShell}/>
           <AlmaLink to={`/alma`}>{intl.formatMessage({ id: "nav-about-alma" })}</AlmaLink>
-          {/* <AlmaBulletShell src={almaShell}/> */}
-          {/* <AlmaLink to={`/promotions`}>Promotions</AlmaLink> */}
+          <AlmaBulletShell src={almaShell}/>
+          <AlmaLink to={`/showroom`}>{intl.formatMessage({ id: "nav-showroom" })}</AlmaLink>
         </LargeLinkTree> 
       </LargeNav>
     </>
