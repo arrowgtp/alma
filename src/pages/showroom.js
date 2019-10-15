@@ -53,7 +53,8 @@ const Showroom = ({ data, intl }) => {
         <Space/> */}
         <H2>{intl.formatMessage({ id: "alma-phone-number-title" })}</H2>
         <SmallSpace/>
-        <P>{intl.formatMessage({ id: "alma-phone-number" })}</P>
+        {/* <P>{intl.formatMessage({ id: "alma-phone-number" })}</P> */}
+        <a href="tel:+18336962562"><P>1.833.OWN.ALMA | 1.833.696.2562</P></a>
         <Space/>
         <H2>{intl.formatMessage({ id: "showroom-address-title" })}</H2>
         <SmallSpace/>
@@ -63,11 +64,13 @@ const Showroom = ({ data, intl }) => {
         <Space/>
         <H2>{intl.formatMessage({ id: "showroom-website-title" })}</H2>
         <SmallSpace/>
-        <P>{intl.formatMessage({ id: "showroom-website" })}</P>
+        {/* <P>{intl.formatMessage({ id: "showroom-website" })}</P> */}
+        <a href="https://alma.vacations"><P>alma.vacations</P></a>
         <Space/>
         <H2>{intl.formatMessage({ id: "showroom-email-title" })}</H2>
         <SmallSpace/>
-        <P>{intl.formatMessage({ id: "showroom-email" })}</P>
+        {/* <P>{intl.formatMessage({ id: "showroom-email" })}</P> */}
+        <a href="mailto:travel@alma.vacations"><P>travel@alma.vacations</P></a>
         <Space/>
       </CenteredContainer>
 
