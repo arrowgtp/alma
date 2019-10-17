@@ -33,7 +33,7 @@ const Showroom = ({ data, intl }) => {
             title={intl.formatMessage({ id: "showroom-title" })}
           />
         </HeadingContainer>
-        <Image grid fluid={data.showroom1.childImageSharp.fluid}/>
+        <Image grid fluid={data.showroomEntrance.childImageSharp.fluid}/>
         <Caption large>Actual Image</Caption>
         <Watermark large/>
       </FullContentCard>
@@ -44,10 +44,6 @@ const Showroom = ({ data, intl }) => {
           blue
           title={intl.formatMessage({ id: "showroom-title" })}
         />
-        <Space/>
-        <H2>{intl.formatMessage({ id: "showroom-hours-title" })}</H2>
-        <SmallSpace/>
-        <P>{intl.formatMessage({ id: "showroom-hours" })}</P>
         <Space/>
         {/* <H1>{intl.formatMessage({ id: "alma-contact-title" })}</H1>
         <Space/> */}
@@ -62,15 +58,17 @@ const Showroom = ({ data, intl }) => {
         <P>{intl.formatMessage({ id: "showroom-location" })}</P>
         <P>{intl.formatMessage({ id: "showroom-zipcode" })}</P>
         <Space/>
-        <H2>{intl.formatMessage({ id: "showroom-website-title" })}</H2>
+        <H2>{intl.formatMessage({ id: "showroom-hours-title" })}</H2>
         <SmallSpace/>
-        {/* <P>{intl.formatMessage({ id: "showroom-website" })}</P> */}
-        <a href="https://alma.vacations"><P>alma.vacations</P></a>
+        <P>{intl.formatMessage({ id: "showroom-hours" })}</P>
         <Space/>
         <H2>{intl.formatMessage({ id: "showroom-email-title" })}</H2>
         <SmallSpace/>
-        {/* <P>{intl.formatMessage({ id: "showroom-email" })}</P> */}
         <a href="mailto:travel@alma.vacations"><P>travel@alma.vacations</P></a>
+        <Space/>
+        <H2>{intl.formatMessage({ id: "showroom-website-title" })}</H2>
+        <SmallSpace/>
+        <a href="https://alma.vacations"><P>alma.vacations</P></a>
         <Space/>
       </CenteredContainer>
 
@@ -136,6 +134,13 @@ const Showroom = ({ data, intl }) => {
 
 export const query = graphql`
   query {
+    showroomEntrance: file(relativePath: { eq: "showroom/showroom-entrance-3x2.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
     showroom1: file(relativePath: { eq: "showroom/showroom-1-4x3.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 2880) {
