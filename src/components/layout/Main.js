@@ -29,6 +29,12 @@ const MainContainer = styled.main`
   }
 `
 
+// const ScrollPosition = styled.p`
+//   position: fixed;
+//   top: 1rem;
+//   right: 1rem;
+// `
+
 const Main = ({ children }) => {
 
   // const elementRef = useRef()
@@ -37,13 +43,36 @@ const Main = ({ children }) => {
   //   setTimeout(() => elementRef.current.scrollTop = 0, 0)
   // }, [])
 
-   useEffect(() => {
-    setTimeout(() => document.getElementById('MainContainer').scrollTop = 0, 0);
+  //  useEffect(() => {
+  //   setTimeout(() => document.getElementById('MainContainer').scrollTop = 0, 0);
+  // })
+
+  // document.getElementById('#office-manager').getBoundingClientRect()
+
+  useEffect(() => {
+
+    // let officeManager = document.querySelector('#office-manager').offsetTop
+    // let administrativeAsistant = document.querySelector('#administrative-asistant').offsetTop
+    // let vacationCounselor = document.querySelector('#vacation-counselor').offsetTop
+
+    if (window.location.href.indexOf('#office-manager') !== -1) {
+      // document.getElementById('MainContainer').scrollTop = officeManager
+      document.getElementById('MainContainer').scrollTop = 1000
+    } else if (window.location.href.indexOf('#administrative-asistant') !== -1) {
+      // document.getElementById('MainContainer').scrollTop = administrativeAsistant
+      document.getElementById('MainContainer').scrollTop = 2000
+    } else if (window.location.href.indexOf('#vacation-counselor') !== -1) {
+      // document.getElementById('MainContainer').scrollTop = vacationCounselor
+      document.getElementById('MainContainer').scrollTop = 3000
+    } else {
+      document.getElementById('MainContainer').scrollTop = 0
+    }
   })
 
   return (
     // <Main ref={elementRef}>
     <MainContainer id='MainContainer'>
+      {/* <ScrollPosition>{currentPosition}</ScrollPosition> */}
       {children}
     </MainContainer>
   )
