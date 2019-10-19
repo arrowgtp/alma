@@ -55,18 +55,38 @@ const Main = ({ children }) => {
     // let administrativeAsistant = document.querySelector('#administrative-asistant').offsetTop
     // let vacationCounselor = document.querySelector('#vacation-counselor').offsetTop
 
-    if (window.location.href.indexOf('#office-manager') !== -1) {
-      // document.getElementById('MainContainer').scrollTop = officeManager
-      document.getElementById('MainContainer').scrollTop = 1000
-    } else if (window.location.href.indexOf('#administrative-asistant') !== -1) {
-      // document.getElementById('MainContainer').scrollTop = administrativeAsistant
-      document.getElementById('MainContainer').scrollTop = 2000
-    } else if (window.location.href.indexOf('#vacation-counselor') !== -1) {
-      // document.getElementById('MainContainer').scrollTop = vacationCounselor
-      document.getElementById('MainContainer').scrollTop = 3000
+    if (window.location.href.indexOf('careers')!== -1) {
+      if (window.location.href.indexOf('#office-manager') !== -1) {
+        let officeManager = document.querySelector('#office-manager').offsetTop
+        document.getElementById('MainContainer').scrollTop = officeManager
+        // document.getElementById('MainContainer').scrollTop = 1000
+      } else if (window.location.href.indexOf('#administrative-asistant') !== -1) {
+        let administrativeAsistant = document.querySelector('#administrative-asistant').offsetTop
+        document.getElementById('MainContainer').scrollTop = administrativeAsistant
+        // document.getElementById('MainContainer').scrollTop = 2000
+      } else if (window.location.href.indexOf('#vacation-counselor') !== -1) {
+        let vacationCounselor = document.querySelector('#vacation-counselor').offsetTop
+        document.getElementById('MainContainer').scrollTop = vacationCounselor
+        // document.getElementById('MainContainer').scrollTop = 3000
+      } else {
+        document.getElementById('MainContainer').scrollTop = 0
+      }
     } else {
       document.getElementById('MainContainer').scrollTop = 0
     }
+
+    // if (window.location.href.indexOf('#office-manager') !== -1) {
+    //   // document.getElementById('MainContainer').scrollTop = officeManager
+    //   document.getElementById('MainContainer').scrollTop = 1000
+    // } else if (window.location.href.indexOf('#administrative-asistant') !== -1) {
+    //   // document.getElementById('MainContainer').scrollTop = administrativeAsistant
+    //   document.getElementById('MainContainer').scrollTop = 2000
+    // } else if (window.location.href.indexOf('#vacation-counselor') !== -1) {
+    //   // document.getElementById('MainContainer').scrollTop = vacationCounselor
+    //   document.getElementById('MainContainer').scrollTop = 3000
+    // } else {
+    //   document.getElementById('MainContainer').scrollTop = 0
+    // }
   })
 
   return (
