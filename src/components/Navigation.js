@@ -354,7 +354,7 @@ const Navigation = ({ intl }) => {
                 <AlmaBulletShell src={almaShell}/>
                 <AlmaLink to={`/showroom`} onClick={toggle}>{intl.formatMessage({ id: "nav-showroom" })}</AlmaLink>
                 <AlmaBulletShell src={almaShell}/>
-                <AlmaLink to={`/careers`}>Careers</AlmaLink>
+                <AlmaLink to={`/careers`} onClick={toggle}>Careers</AlmaLink>
                 <SocialButtons>
                   <SocialButton href='https://www.facebook.com/almavacations'>
                     <img src={FacebookIcon} alt='The Alma Resort Facebook account.' />

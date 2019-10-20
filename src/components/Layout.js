@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
 import { injectIntl } from 'gatsby-plugin-intl'
@@ -71,6 +71,38 @@ const Main = styled.main`
 // `
 
 const Layout = ({ children }) => {
+
+  // const elementRef = useRef()
+
+  // useEffect(() => {
+  //  setTimeout(() => elementRef.current.scrollTop = 0, 0)
+  // }, [])
+
+  // useEffect(() => {
+  //  setTimeout(() => document.getElementById('MainContainer').scrollTop = 0, 0);
+  // })
+
+  // document.getElementById('#office-manager').getBoundingClientRect()
+
+  useEffect(() => {
+    if (window.location.href.indexOf('careers')!== -1) {
+      if (window.location.href.indexOf('#office-manager') !== -1) {
+        let officeManager = document.querySelector('#office-manager').offsetTop
+        document.getElementById('main').scrollTop = officeManager
+      } else if (window.location.href.indexOf('#administrative-asistant') !== -1) {
+        let administrativeAsistant = document.querySelector('#administrative-asistant').offsetTop
+        document.getElementById('main').scrollTop = administrativeAsistant
+      } else if (window.location.href.indexOf('#vacation-counselor') !== -1) {
+        let vacationCounselor = document.querySelector('#vacation-counselor').offsetTop
+        document.getElementById('main').scrollTop = vacationCounselor
+      } else {
+        document.getElementById('main').scrollTop = 0
+      }
+    } else {
+      document.getElementById('main').scrollTop = 0
+    }
+  })
+
   return (
     <>
       {/* <AnimatedLogo/> */}
@@ -80,7 +112,7 @@ const Layout = ({ children }) => {
           <Nav/>
           <PromoButton/>
         </Menu>
-        <Main>
+        <Main id='main'>
           {children}
         </Main>
       </App>
