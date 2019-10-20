@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import { injectIntl } from 'gatsby-plugin-intl'
 
@@ -50,10 +50,10 @@ const LargeMenuContainer = styled.div`
 const Menu = ({ children }) => {
 
   return (
-    <Fragment>
+    <>
       <SmallMenuContainer>{children}</SmallMenuContainer>
       <LargeMenuContainer>{children}</LargeMenuContainer>
-    </Fragment>
+    </>
   )
 }
 

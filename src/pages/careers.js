@@ -3,10 +3,7 @@ import { graphql } from 'gatsby'
 import { navigate } from '@reach/router';
 import { Link, injectIntl } from 'gatsby-plugin-intl'
 import styled from 'styled-components'
-// import Img from 'gatsby-image'
 import SEO from '../components/seo'
-import { Tabs, Tab, Panel } from '@bumaga/tabs'
-import { motion, AnimatePresence } from 'framer-motion'
 
 import Content from '../components/layout/Content'
 
