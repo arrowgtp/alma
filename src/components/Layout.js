@@ -8,9 +8,6 @@ import almaLogoShellWhite from '../images/alma/alma-logo-shell-white.svg'
 import './Layout.css'
 
 // import AnimatedLogo from './AnimatedLogo'
-// import App from './layout/App'
-// import Main from './layout/Main'
-// import Menu from './layout/Menu'
 
 import Logo from './Logo'
 import Nav from './Navigation'
