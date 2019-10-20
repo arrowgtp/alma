@@ -41,10 +41,10 @@ const StickyBox = styled.div`
 const CenteredStickyContainer = styled(CenteredContainer)`
   position: fixed;
   bottom: 8vh;
-  bottom: calc(var(--vh, 1vh) * 8);
+  bottom: calc(var(--vh, 1vh) * 10);
   width: 100vw;
-  margin: 1rem 0;
-  padding: 1rem 0;
+  margin: 0;
+  padding: 0;
   background: white;
   opacity: 1;
   z-index: 5;
@@ -63,6 +63,16 @@ const CenteredStickyContainer = styled(CenteredContainer)`
     position: sticky;
     top: 1rem;
     border-radius: 32px;
+    margin: 1rem 0;
+    padding: 1rem 0;
+  }
+`
+
+const CustomSpace = styled.div`
+  height: 2rem;
+
+  @media (min-width: 50rem) {
+    height: 8rem
   }
 `
 
@@ -104,7 +114,7 @@ const Showroom = ({ data, intl }) => {
             title="Careers"
           />
         </HeadingContainer>
-        <Image grid fluid={data.showroomEntrance.childImageSharp.fluid}/>
+        <Image grid fluid={data.showroomBooklet.childImageSharp.fluid}/>
         <Caption large>Actual Image</Caption>
         <Watermark large/>
       </FullContentCard>
@@ -132,9 +142,7 @@ const Showroom = ({ data, intl }) => {
         </CenteredStickyContainer>
 
         <CenteredContainer id="office-manager" tabindex="0">
-          <Space/>
-          <Space/>
-          <Space/>
+          <CustomSpace/>
           <H1>Office Manager</H1>
           <SmallSpace/>
           <P><strong>Position:</strong> Office Manager</P>
@@ -202,9 +210,7 @@ const Showroom = ({ data, intl }) => {
         </CenteredContainer>
 
         <CenteredContainer id="administrative-asistant" tabindex="1">
-          <Space/>
-          <Space/>
-          <Space/>
+          <CustomSpace/>
           <H1>Administrative Asistant</H1>
           <SmallSpace/>
           <P><strong>Position:</strong> Administrative Assistant</P>
@@ -252,9 +258,7 @@ const Showroom = ({ data, intl }) => {
         </CenteredContainer>
 
         <CenteredContainer id="vacation-counselor" tabindex="2">
-          <Space/>
-          <Space/>
-          <Space/>
+          <CustomSpace/>
           <H1>Vacation Counselor</H1>
           <SmallSpace/>
           <P><strong>Position:</strong> Administrative Assistant</P>
@@ -310,7 +314,7 @@ const Showroom = ({ data, intl }) => {
 
 export const query = graphql`
   query {
-    showroomEntrance: file(relativePath: { eq: "showroom/showroom-entrance-3x2.jpg" }) {
+    showroomBooklet: file(relativePath: { eq: "showroom/showroom-booklet-3x2.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 2880) {
           ...GatsbyImageSharpFluid_withWebp

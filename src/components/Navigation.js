@@ -261,6 +261,12 @@ const DownArrow = styled.div`
   align-self: end;
 `
 
+// const Menu = ({ intl }) => {
+//   return (
+
+//   )
+// }
+
 const Navigation = ({ intl }) => {
 
   const navRef = useRef();
@@ -347,6 +353,8 @@ const Navigation = ({ intl }) => {
                 <AlmaLink to={`/alma`} onClick={toggle}>{intl.formatMessage({ id: "nav-about-alma" })}</AlmaLink>
                 <AlmaBulletShell src={almaShell}/>
                 <AlmaLink to={`/showroom`} onClick={toggle}>{intl.formatMessage({ id: "nav-showroom" })}</AlmaLink>
+                <AlmaBulletShell src={almaShell}/>
+                <AlmaLink to={`/careers`}>Careers</AlmaLink>
                 <SocialButtons>
                   <SocialButton href='https://www.facebook.com/almavacations'>
                     <img src={FacebookIcon} alt='The Alma Resort Facebook account.' />
@@ -400,10 +408,10 @@ const Navigation = ({ intl }) => {
           <AlmaLink to={`/vacations`}>{intl.formatMessage({ id: "nav-vacations" })}</AlmaLink>
           <AlmaBulletShell src={almaShell}/>
           <AlmaLink to={`/alma`}>{intl.formatMessage({ id: "nav-about-alma" })}</AlmaLink>
-          <AlmaLink2 to={`/careers`}>Careers</AlmaLink2>
-          <AlmaLink2 to={`/showroom`}>{intl.formatMessage({ id: "nav-showroom" })}</AlmaLink2>
-          {/* <AlmaBulletShell src={almaShell}/>
-          <AlmaLink to={`/showroom`}>{intl.formatMessage({ id: "nav-showroom" })}</AlmaLink> */}
+          <AlmaBulletShell src={almaShell}/>
+          <AlmaLink to={`/showroom`}>{intl.formatMessage({ id: "nav-showroom" })}</AlmaLink>
+          <AlmaBulletShell src={almaShell}/>
+          <AlmaLink to={`/careers`}>Careers</AlmaLink>
         </LargeLinkTree> 
       </LargeNav>
     </>

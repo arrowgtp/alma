@@ -8,6 +8,7 @@ module.exports = {
   },
   plugins: [
     // `gatsby-plugin-preact`,
+    'gatsby-plugin-webpack-bundle-analyzer',
     `gatsby-plugin-modal-routing`,
     `gatsby-plugin-netlify`,
     `gatsby-plugin-react-helmet`,
