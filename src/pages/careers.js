@@ -111,7 +111,7 @@ const Showroom = ({ data, intl }) => {
             title="Careers"
           />
         </HeadingContainer>
-        <Image grid fluid={data.showroomBooklet.childImageSharp.fluid}/>
+        <Image grid fluid={data.booklet.childImageSharp.fluid}/>
         <Caption large>Actual Image</Caption>
         <Watermark large/>
       </FullContentCard>
@@ -311,7 +311,7 @@ const Showroom = ({ data, intl }) => {
 
 export const query = graphql`
   query {
-    showroomBooklet: file(relativePath: { eq: "showroom/showroom-booklet-3x2.jpg" }) {
+    booklet: file(relativePath: { eq: "showroom/booklet-3x2.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 2880) {
           ...GatsbyImageSharpFluid_withWebp
