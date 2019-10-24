@@ -13,30 +13,7 @@ import Logo from './Logo'
 import Nav from './Navigation'
 import PromoButton from './PromoButton'
 
-// const App = styled(motion.div)`
-//   margin: 0;
-//   padding: 0;
-//   width: 100vw;
-//   height: 100vh;
-//   height: calc(var(--vh, 1vh) * 100);
-//   display: grid;
-//   grid-template-rows: 20vh 70vh 10vh;
-//   grid-template-rows:
-//     calc(var(--vh, 1vh) * 20)
-//     calc(var(--vh, 1vh) * 70) 
-//     calc(var(--vh, 1vh) * 10)
-//   ;
-//   grid-template-columns: repeat(3, 1fr);
-//   /* opacity: 0; */
-//   z-index: 2;
-
-//   @media (min-width: 50rem) {
-//     grid-template-rows: 100vh;
-//     grid-template-columns: 20vw 80vw;
-//   }
-// `
-
-const App = styled.div`
+const App = styled(motion.div)`
   margin: 0;
   padding: 0;
   width: 100vw;
@@ -58,6 +35,29 @@ const App = styled.div`
     grid-template-columns: 20vw 80vw;
   }
 `
+
+// const App = styled.div`
+//   margin: 0;
+//   padding: 0;
+//   width: 100vw;
+//   height: 100vh;
+//   height: calc(var(--vh, 1vh) * 100);
+//   display: grid;
+//   grid-template-rows: 20vh 70vh 10vh;
+//   grid-template-rows:
+//     calc(var(--vh, 1vh) * 20)
+//     calc(var(--vh, 1vh) * 70) 
+//     calc(var(--vh, 1vh) * 10)
+//   ;
+//   grid-template-columns: repeat(3, 1fr);
+//   /* opacity: 0; */
+//   z-index: 2;
+
+//   @media (min-width: 50rem) {
+//     grid-template-rows: 100vh;
+//     grid-template-columns: 20vw 80vw;
+//   }
+// `
 
 const Main = styled.main`
   margin: 0;

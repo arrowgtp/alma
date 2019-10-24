@@ -59,10 +59,6 @@ const Construction = ({ data, intl }) => {
           title={intl.formatMessage({ id: "construction-september-2019" })}
         />
         <Space/>
-        <VideoBox>
-          <iframe width="100%" height="100%" src="https://www.youtube.com/embed/5HuINkl3sOQ" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </VideoBox>
-        <Space/>
         <P>{intl.formatMessage({ id: "construction-september-2019-paragraph-1" })}</P>
         <Space/>
         <P>{intl.formatMessage({ id: "construction-september-2019-paragraph-2" })}</P>
@@ -138,6 +134,10 @@ const Construction = ({ data, intl }) => {
           blue
           title={intl.formatMessage({ id: "construction-august-2019" })}
         />
+        <Space/>
+        <VideoBox>
+          <iframe width="100%" height="100%" src="https://www.youtube.com/embed/5HuINkl3sOQ" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </VideoBox>
         <Space/>
         <P>{intl.formatMessage({ id: "construction-august-2019-paragraph-1" })}</P>
         <Space/>

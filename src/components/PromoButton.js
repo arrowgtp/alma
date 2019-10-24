@@ -53,7 +53,7 @@ const PromoButton = () => {
       {
         !isToggled ?
         (
-          <Link to={`/promotion`}>
+          <Link to={`/promo`}>
             <PromotionalButton onClick={toggle}>Promo</PromotionalButton>
           </Link>
         ) : (

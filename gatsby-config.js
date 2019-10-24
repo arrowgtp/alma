@@ -7,15 +7,6 @@ module.exports = {
     author: `Arrow GTP`
   },
   plugins: [
-    // `gatsby-plugin-preact`,
-    {
-      resolve: `gatsby-source-youtube-v2`,
-      options: {
-        channelId: ['UCMzsbNMXxwVTLOUZr_3lZWw'],
-        apiKey: 'AIzaSyDkAv4jUnYsIGOwtcdLpTE3bmfm9ww2o0Y',
-        maxVideos: 50 // Defaults to 50
-      },
-    },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {

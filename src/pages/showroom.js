@@ -33,7 +33,7 @@ const Showroom = ({ data, intl }) => {
             title={intl.formatMessage({ id: "showroom-title" })}
           />
         </HeadingContainer>
-        <Image grid fluid={data.showroomEntrance.childImageSharp.fluid}/>
+        <Image grid fluid={data.entrance.childImageSharp.fluid}/>
         <Caption large>Actual Image</Caption>
         <Watermark large/>
       </FullContentCard>
@@ -74,49 +74,97 @@ const Showroom = ({ data, intl }) => {
 
       <FullWidthContainer>
         <FullImage>
-          <Image rounded fluid={data.showroom2.childImageSharp.fluid}/>
+          <Image rounded fluid={data.waitingArea.childImageSharp.fluid}/>
           <Caption medium>Actual Image</Caption>
           <Watermark medium/>
         </FullImage>
         <Space/>
         <FullImage>
-          <Image rounded fluid={data.showroom3.childImageSharp.fluid}/>
+          <Image rounded fluid={data.hallway.childImageSharp.fluid}/>
           <Caption medium>Actual Image</Caption>
           <Watermark medium/>
         </FullImage>
         <Space/>
         <FullImage>
-          <Image rounded fluid={data.showroom4.childImageSharp.fluid}/>
+          <Image rounded fluid={data.presentationRoom1.childImageSharp.fluid}/>
           <Caption medium>Actual Image</Caption>
           <Watermark medium/>
         </FullImage>
         <Space/>
         <FullImage>
-          <Image rounded fluid={data.showroom5.childImageSharp.fluid}/>
+          <Image rounded fluid={data.presentationRoom2.childImageSharp.fluid}/>
           <Caption medium>Actual Image</Caption>
           <Watermark medium/>
         </FullImage>
         <Space/>
         <FullImage>
-          <Image rounded fluid={data.showroom6.childImageSharp.fluid}/>
+          <Image rounded fluid={data.conferenceRoom.childImageSharp.fluid}/>
           <Caption medium>Actual Image</Caption>
           <Watermark medium/>
         </FullImage>
         <Space/>
         <FullImage>
-          <Image rounded fluid={data.showroom7.childImageSharp.fluid}/>
+          <Image rounded fluid={data.kitchen1.childImageSharp.fluid}/>
           <Caption medium>Actual Image</Caption>
           <Watermark medium/>
         </FullImage>
         <Space/>
         <FullImage>
-          <Image rounded fluid={data.showroom8.childImageSharp.fluid}/>
+          <Image rounded fluid={data.kitchen2.childImageSharp.fluid}/>
           <Caption medium>Actual Image</Caption>
           <Watermark medium/>
         </FullImage>
         <Space/>
         <FullImage>
-          <Image rounded fluid={data.showroom9.childImageSharp.fluid}/>
+          <Image rounded fluid={data.model.childImageSharp.fluid}/>
+          <Caption medium>Actual Image</Caption>
+          <Watermark medium/>
+        </FullImage>
+        <Space/>
+        <FullImage>
+          <Image rounded fluid={data.salesArea1.childImageSharp.fluid}/>
+          <Caption medium>Actual Image</Caption>
+          <Watermark medium/>
+        </FullImage>
+        <Space/>
+        <FullImage>
+          <Image rounded fluid={data.salesArea2.childImageSharp.fluid}/>
+          <Caption medium>Actual Image</Caption>
+          <Watermark medium/>
+        </FullImage>
+        <Space/>
+        <FullImage>
+          <Image rounded fluid={data.salesArea3.childImageSharp.fluid}/>
+          <Caption medium>Actual Image</Caption>
+          <Watermark medium/>
+        </FullImage>
+        <Space/>
+        <FullImage>
+          <Image rounded fluid={data.office1.childImageSharp.fluid}/>
+          <Caption medium>Actual Image</Caption>
+          <Watermark medium/>
+        </FullImage>
+        <Space/>
+        <FullImage>
+          <Image rounded fluid={data.office2.childImageSharp.fluid}/>
+          <Caption medium>Actual Image</Caption>
+          <Watermark medium/>
+        </FullImage>
+        <Space/>
+        <FullImage>
+          <Image rounded fluid={data.office3.childImageSharp.fluid}/>
+          <Caption medium>Actual Image</Caption>
+          <Watermark medium/>
+        </FullImage>
+        <Space/>
+        <FullImage>
+          <Image rounded fluid={data.office4.childImageSharp.fluid}/>
+          <Caption medium>Actual Image</Caption>
+          <Watermark medium/>
+        </FullImage>
+        <Space/>
+        <FullImage>
+          <Image rounded fluid={data.office5.childImageSharp.fluid}/>
           <Caption medium>Actual Image</Caption>
           <Watermark medium/>
         </FullImage>
@@ -134,13 +182,6 @@ const Showroom = ({ data, intl }) => {
 
 export const query = graphql`
   query {
-    showroomEntrance: file(relativePath: { eq: "showroom/showroom-entrance-3x2.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 2880) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
     showroom1: file(relativePath: { eq: "showroom/showroom-1-4x3.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 2880) {
@@ -198,6 +239,125 @@ export const query = graphql`
       }
     }
     showroom9: file(relativePath: { eq: "showroom/showroom-9-4x3.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    entrance: file(relativePath: { eq: "showroom/entrance-3x2.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    waitingArea: file(relativePath: { eq: "showroom/waiting-area-1-4x3.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    hallway: file(relativePath: { eq: "showroom/hallway-4x3.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    presentationRoom1: file(relativePath: { eq: "showroom/presentation-room-1-4x3.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    presentationRoom2: file(relativePath: { eq: "showroom/presentation-room-2-4x3.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    conferenceRoom: file(relativePath: { eq: "showroom/conference-room-1-4x3.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    kitchen1: file(relativePath: { eq: "showroom/kitchen-1-4x3.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    kitchen2: file(relativePath: { eq: "showroom/kitchen-2-4x3.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    model: file(relativePath: { eq: "showroom/3D-model-4x3.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    salesArea1: file(relativePath: { eq: "showroom/sales-area-1-4x3.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    salesArea2: file(relativePath: { eq: "showroom/sales-area-2-4x3.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    salesArea3: file(relativePath: { eq: "showroom/sales-area-3-4x3.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    office1: file(relativePath: { eq: "showroom/office-1-4x3.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    office2: file(relativePath: { eq: "showroom/office-2-4x3.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    office3: file(relativePath: { eq: "showroom/office-3-4x3.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    office4: file(relativePath: { eq: "showroom/office-4-4x3.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    office5: file(relativePath: { eq: "showroom/office-5-4x3.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 2880) {
           ...GatsbyImageSharpFluid_withWebp

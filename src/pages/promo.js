@@ -183,7 +183,7 @@ const SubmitButton = styled(Button)`
   }
 `
 
-const Promotion = () => {
+const Promo = () => {
   return (
     <AnimatedCard 
       animate={{
@@ -222,4 +222,4 @@ const Promotion = () => {
   )
 }
 
-export default injectIntl(Promotion)
+export default injectIntl(Promo)
