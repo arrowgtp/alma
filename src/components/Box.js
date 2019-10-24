@@ -23,22 +23,20 @@ const Box = styled.div`
     }
   `}
 
-${props => props.featured && `
-  grid-column: 1 / 4;
-  position: relative;
-  margin: 0;
-  padding: 0;
-  height: calc(var(--vh, 1vh) * 90);
-  display: grid;
-  grid-template-rows: repeat(8, 1fr);
-  grid-template-columns: repeat(8, 1fr);
+  ${props => props.featured && `
+    grid-column: 1 / 4;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    height: calc(var(--vh, 1vh) * 90);
+    display: grid;
+    grid-template-rows: repeat(8, 1fr);
+    grid-template-columns: repeat(8, 1fr);
 
-  @media (min-width: 50rem) {
-    height: 100vh;
-  }
-`}
-
-
+    @media (min-width: 50rem) {
+      height: 100vh;
+    }
+  `}
 `
 
 export default Box
