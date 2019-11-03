@@ -1,9 +1,14 @@
 import React, { useEffect } from 'react'
+import { Link } from 'gatsby'
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
 import { injectIntl } from 'gatsby-plugin-intl'
+// import Img from 'gatsby-image'
 
 import almaLogoShellWhite from '../images/alma/alma-logo-shell-white.svg'
+
+import PromoCruise from '../images/promos/promo-cruise-wide.jpg'
+import PromoVegas from '../images/promos/promo-vegas-wide.jpg'
 
 import './Layout.css'
 
@@ -13,7 +18,86 @@ import Logo from './Logo'
 import Nav from './Navigation'
 import PromoButton from './PromoButton'
 
+const Image = styled.img`
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  height: 10vh;
+
+  @media (min-width: 50rem) {
+    height: 12vh;
+  }
+`
+
+const PromoCruiseImage = styled(Image)`
+grid-column: 1 / 3;
+grid-row: 1 / 2;
+justify-self: start;
+z-index: 1;
+mask-image: linear-gradient(
+    to left,
+    hsla(0, 0%, 100%, 0) 0%,
+    hsla(0, 0%, 100%, 0.013) 8.1%,
+    hsla(0, 0%, 100%, 0.049) 15.5%,
+    hsla(0, 0%, 100%, 0.104) 22.5%,
+    hsla(0, 0%, 100%, 0.175) 29%,
+    hsla(0, 0%, 100%, 0.259) 35.3%,
+    hsla(0, 0%, 100%, 0.352) 41.2%,
+    hsla(0, 0%, 100%, 0.45) 47.1%,
+    hsla(0, 0%, 100%, 0.55) 52.9%,
+    hsla(0, 0%, 100%, 0.648) 58.8%,
+    hsla(0, 0%, 100%, 0.741) 64.7%,
+    hsla(0, 0%, 100%, 0.825) 71%,
+    hsla(0, 0%, 100%, 0.896) 77.5%,
+    hsla(0, 0%, 100%, 0.951) 84.5%,
+    hsla(0, 0%, 100%, 0.987) 91.9%,
+    hsl(0, 0%, 100%) 100%)
+  ;
+`
+
+const PromoVegasImage = styled(Image)`
+  grid-column: 3 / 5;
+  grid-row: 1 / 2;
+  justify-self: end;
+  z-index: 1;
+  /* mask-image: linear-gradient(
+    to right,
+    hsla(0, 0%, 100%, 0) 0%,
+    hsla(0, 0%, 100%, 0.013) 8.1%,
+    hsla(0, 0%, 100%, 0.049) 15.5%,
+    hsla(0, 0%, 100%, 0.104) 22.5%,
+    hsla(0, 0%, 100%, 0.175) 29%,
+    hsla(0, 0%, 100%, 0.259) 35.3%,
+    hsla(0, 0%, 100%, 0.352) 41.2%,
+    hsla(0, 0%, 100%, 0.45) 47.1%,
+    hsla(0, 0%, 100%, 0.55) 52.9%,
+    hsla(0, 0%, 100%, 0.648) 58.8%,
+    hsla(0, 0%, 100%, 0.741) 64.7%,
+    hsla(0, 0%, 100%, 0.825) 71%,
+    hsla(0, 0%, 100%, 0.896) 77.5%,
+    hsla(0, 0%, 100%, 0.951) 84.5%,
+    hsla(0, 0%, 100%, 0.987) 91.9%,
+    hsl(0, 0%, 100%) 100%)
+  ; */
+`
+
+const PromoHeader = styled.h1`
+  grid-column: 1 / 5;
+  grid-row: 1 / 2;
+  justify-self: center;
+  align-self: center;
+  z-index: 2;
+  color: white;
+  text-shadow: 0px 0px 8px white;
+  text-shadow: 0px 0px 16px black;
+  font-size: 24px;
+
+  /* border: 1px solid red; */
+`
+
 const App = styled(motion.div)`
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
   width: 100vw;
@@ -27,7 +111,6 @@ const App = styled(motion.div)`
     calc(var(--vh, 1vh) * 10)
   ;
   grid-template-columns: repeat(3, 1fr);
-  /* opacity: 0; */
   z-index: 2;
 
   @media (min-width: 50rem) {
@@ -121,6 +204,40 @@ const Menu = styled.div`
   }
 `
 
+const PromoBanner = styled(Link)`
+  box-sizing: content-box;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  bottom: 10vh;
+  bottom: calc(var(--vh, 1vh) * 10);
+  left: 0;
+  right: 0;
+  height: 10vh;
+  height: calc(var(--vh, 1vh) * 10);
+  width: 100vw;
+  background: #001721;
+  background: black;
+  z-index: 10;
+  border-top: 2px solid #af875d;
+  color: white;
+  box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.25);
+  /* display: flex;
+  align-items: center;
+  justify-content: space-between; */
+  display: grid;
+  grid-template-rows: 1;
+  grid-template-columns: repeat(4, 1fr);
+
+  @media (min-width: 50rem) {
+    bottom: 0;
+    right: 0;
+    left: 20vw;
+    width: 80vw;
+    height: 12vh;
+  }
+`
+
 const Layout = ({ children }) => {
 
   // const elementRef = useRef()
@@ -140,12 +257,15 @@ const Layout = ({ children }) => {
       if (window.location.href.indexOf('#office-manager') !== -1) {
         let officeManager = document.querySelector('#office-manager').offsetTop
         document.getElementById('main').scrollTop = officeManager
-      } else if (window.location.href.indexOf('#administrative-asistant') !== -1) {
-        let administrativeAsistant = document.querySelector('#administrative-asistant').offsetTop
+      } else if (window.location.href.indexOf('#administrative-assistant') !== -1) {
+        let administrativeAsistant = document.querySelector('#administrative-assistant').offsetTop
         document.getElementById('main').scrollTop = administrativeAsistant
       } else if (window.location.href.indexOf('#vacation-counselor') !== -1) {
         let vacationCounselor = document.querySelector('#vacation-counselor').offsetTop
         document.getElementById('main').scrollTop = vacationCounselor
+      } else if (window.location.href.indexOf('#marketing-promoter') !== -1) {
+        let marketingPromoter = document.querySelector('#marketing-promoter').offsetTop
+        document.getElementById('main').scrollTop = marketingPromoter
       } else {
         document.getElementById('main').scrollTop = 0
       }
@@ -173,6 +293,11 @@ const Layout = ({ children }) => {
         <Main id='main'>
           {children}
         </Main>
+        {/* <PromoBanner to="/promo">
+          <PromoCruiseImage src={PromoCruise}/>
+          <PromoHeader>Win a fabulous vacation!</PromoHeader>
+          <PromoVegasImage src={PromoVegas}/>
+        </PromoBanner> */}
       </App>
     </>
   )

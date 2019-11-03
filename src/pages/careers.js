@@ -116,42 +116,37 @@ const Showroom = ({ data, intl }) => {
         <Watermark large/>
       </FullContentCard>
 
+      <CenteredContainer>
+        <Space/>
+        <P>We are an international company with a new showroom located in Costa Mesa, California. We are an off-site sales operation for a five-star resort being built in Nha Trang, Vietnam. Our focus initially is to market to the Southern California Vietnamese American community and expand that market as we grow as a company. We are looking for people  with drive and confidence to succeed. We seek enthusiastic and dependable people who are willing to adapt to a fast-paced work environment. We will train the right individuals to join our growing team today. </P>
+      </CenteredContainer>
+
       <StickyBox>
         <CenteredStickyContainer>
-          <JobButton
-            tabindex="0"
-            onClick={() => {navigate('#office-manager')}}
-          >
+          <JobButton onClick={() => {navigate('#office-manager')}}>
             Office Manager
           </JobButton>
-          <JobButton
-            tabindex="1"
-            onClick={() => {navigate('#administrative-asistant')}}
-          >
+          <JobButton onClick={() => {navigate('#administrative-assistant')}}>
             Administrative Asistant
           </JobButton>
-          <JobButton
-            tabindex="2"
-            onClick={() => {navigate('#vacation-counselor')}}
-          >
+          <JobButton onClick={() => {navigate('#vacation-counselor')}}>
             Vacation Counselor
+          </JobButton>
+          <JobButton onClick={() => {navigate('#marketing-promoter')}}>
+            Marketing Promoter
           </JobButton>
         </CenteredStickyContainer>
 
-        <CenteredContainer id="office-manager" tabindex="0">
+        <CenteredContainer id="office-manager">
           <CustomSpace/>
           <H1>Office Manager</H1>
           <SmallSpace/>
-          <P><strong>Position:</strong> Office Manager</P>
-          <P><strong>Where:</strong> Alma Resorts, 575 Anton Blvd., Suite 650, Costa Mesa, CA 92626</P>
-          <P><strong>Type of Business:</strong> Sales and Marketing Operation</P>
-          <P><strong>Hours of Operation:</strong> Wednesday – Sunday, must be flexible with hours</P>
+          <P><strong>Hours of Operation:</strong> Tuesday – Saturday. Must be flexible</P>
           <P><strong>Compensation:</strong> $45,000 to $50,000 annually depending on experience plus monthly bonus</P>
           <P><strong>Benefits:</strong> Full benefits available after 60 days of employment</P>
           <Space/>
           <H2>Position Overview</H2>
           <SmallSpace/>
-          <P>We are a new start up sales and marketing company located in Costa Mesa, California. We are an off-site sales operation for a five-star resort being built in Nha Trang, Vietnam. Our focus initially is to market to the Southern California Vietnamese American community and expand that market as we grow as a company.</P>
           <P>We are looking for an Office Manager who is very detail oriented and has very good organizational skills. The candidate will be responsible for the overall running of the office, kids club, staffing, training, contract processing and supporting the sales and marketing organizations. The candidate should have excellent communication skills and preferably proficient in English and Vietnamese.</P>
           <Space/>
           <H2>Office Manager Duties and Responsibilities</H2>
@@ -201,25 +196,21 @@ const Showroom = ({ data, intl }) => {
           <H2>Contact Information</H2>
           <SmallSpace/>
           <P><strong>Hank Scott</strong></P>
-          <P><strong>Email:</strong> hankscott@cox.net</P>
+          <P><strong>Email:</strong> hank@almavacations.com</P>
           <P><strong>Mobile:</strong> (949) 878-8287</P>
           <Space/>
         </CenteredContainer>
 
-        <CenteredContainer id="administrative-asistant" tabindex="1">
+        <CenteredContainer id="administrative-assistant">
           <CustomSpace/>
-          <H1>Administrative Asistant</H1>
+          <H1>Administrative Assistant</H1>
           <SmallSpace/>
-          <P><strong>Position:</strong> Administrative Assistant</P>
-          <P><strong>Where:</strong> Alma Resorts, 575 Anton Blvd., Suite 650, Costa Mesa, CA 92626</P>
-          <P><strong>Type of Business:</strong> Sales and Marketing Operation</P>
-          <P><strong>Hours of Operation:</strong> Wednesday – Sunday, must be flexible with hours</P>
+          <P><strong>Hours of Operation:</strong> Tuesday - Saturday. Must be flexible</P>
           <P><strong>Compensation:</strong> $15.00 per hour plus monthly bonus.</P>
           <P><strong>Benefits:</strong> Full benefits available after 60 days of employment</P>
           <Space/>
           <H2>Position Overview</H2>
           <SmallSpace/>
-          <P>We a new start up sales and marketing company located in Costa Mesa, California. We are an off-site sales operation for a five-star resort being built in Nha Trang, Vietnam. Our focus initially is to market to the Southern California Vietnamese community and expand that market as we grow as a company.</P>
           <P>We are looking for an administrative assistant in an entry level position to assist the office manager running the office. The candidate will be responsible for a variety of duties including reception duties, serving customers, supervising the kids’ corner, performing a variety of sales and marketing reporting and helping in contract processing. The position requires flexibility and the ability to learn new things. The candidate should have excellent communication and organizational skills and preferably proficient in English and Vietnamese.</P>
           <Space/>
           <H2>Administrative Assistant Duties and Responsibilities</H2>
@@ -249,55 +240,105 @@ const Showroom = ({ data, intl }) => {
           <H2>Contact Information</H2>
           <SmallSpace/>
           <P><strong>Hank Scott</strong></P>
-          <P><strong>Email:</strong> hankscott@cox.net</P>
+          <P><strong>Email:</strong> hank@almavacations.com</P>
           <P><strong>Mobile:</strong> (949) 878-8287</P>
           <Space/>
         </CenteredContainer>
 
-        <CenteredContainer id="vacation-counselor" tabindex="2">
+        <CenteredContainer id="vacation-counselor">
           <CustomSpace/>
           <H1>Vacation Counselor</H1>
           <SmallSpace/>
-          <P><strong>Position:</strong> Administrative Assistant</P>
-          <P><strong>Where:</strong> Alma Resorts, 575 Anton Blvd., Suite 650, Costa Mesa, CA 92626</P>
-          <P><strong>Type of Business:</strong> Sales and Marketing Operation</P>
-          <P><strong>Hours of Operation:</strong> Wednesday – Sunday, must be flexible with hours</P>
-          <P><strong>Compensation:</strong> $15.00 per hour plus monthly bonus.</P>
+          <P><strong>Hours of Operation:</strong> Tuesday - Saturday. Must be flexible</P>
+          <P><strong>Compensation:</strong> Salary + Commission + Bonus ($75,000 - $250,000)</P>
           <P><strong>Benefits:</strong> Full benefits available after 60 days of employment</P>
           <Space/>
           <H2>Position Overview</H2>
           <SmallSpace/>
-          <P>We a new start up sales and marketing company located in Costa Mesa, California. We are an off-site sales operation for a five-star resort being built in Nha Trang, Vietnam. Our focus initially is to market to the Southern California Vietnamese community and expand that market as we grow as a company.</P>
-          <P>We are looking for an administrative assistant in an entry level position to assist the office manager running the office. The candidate will be responsible for a variety of duties including reception duties, serving customers, supervising the kids’ corner, performing a variety of sales and marketing reporting and helping in contract processing. The position requires flexibility and the ability to learn new things. The candidate should have excellent communication and organizational skills and preferably proficient in English and Vietnamese.</P>
+          <P>We are looking for people with drive and confidence to succeed. We seek enthusiastic and dependable people who are willing to adapt to a fast-paced work environment. We are looking to train the right individuals to join our growing team today. Our elite, in-depth training is the best in the industry. We will provide you with the necessary skills, tools and product knowledge to help you succeed and reach your goals. No sales experience required.</P>
           <Space/>
           <H2>Vacation Counselor Duties and Responsibilities</H2>
           <SmallSpace/>
           <UL>
-            <LI>Perform various functions as directed by the Office Manager</LI> 
-            <LI>Help process sales contracts in an expeditious, efficient manner</LI>
-            <LI>Ensure that guests are properly checked in and taken care of properly</LI>
-            <LI>Learn new tracking software for reception duties and reporting</LI>
-            <LI>Run timely marketing and sales reports as directed</LI>
-            <LI>Ensure that all contracts, reports etc. are filed properly</LI>
-            <LI>Create a positive atmosphere in supporting sales operations in the office</LI>
-            <LI>Maintain professionalism at all times</LI>
+            <LI>Meet assigned appointments with prospective clients and current guests to create and deliver vacation ownership presentations to them</LI> 
+            <LI>Present and sell to prospective clients the weeks at the Alma Resort villas or condos</LI>
+            <LI>Welcome guests warmly to the resort and provide them with brief information about the resort, resort activities and services, and activities in the area</LI>
+            <LI>Complete all paperwork and documentation following established procedures for all sales transactions</LI>
+            <LI>Manage time effectively in order to handle multiple presentations on a weekly basis</LI>
+            <LI>Attend all sales departmental and division meetings and any other functions as needed</LI>
+            <LI></LI>
+            <LI></LI>
           </UL>
           <H2>Vacation Counselor Requirements and Qualifications</H2>
           <UL>
             <LI>Proficient computer skills including Microsoft Office Suite</LI> 
-            <LI>Prior experience handling office responsibilities, experience in customer service, or related field</LI>
-            <LI>Excellent verbal and written communication skills</LI>
-            <LI>Flexible in working hours</LI>
-            <LI>Bilingual in English and Vietnamese a plus</LI>
             <LI>Highly organized multi tasker who works well in a fast-paced environment</LI>
+            <LI>Must have reliable transportation</LI>
+            <LI>Minimum of six months of guest service experience is required</LI>
+            <LI>Strong sales experience with proven ability to close is a plus</LI>
+            <LI>Excellent verbal and written communication skills with the ability to effectively present information and answer questions from guests, owners, and management</LI>
+            <LI>Able to read, analyze, and interpret documents such as general business periodicals, professional journals, technical procedures, and governmental regulations</LI>
+            <LI>Ability to calculate basic mathematical skills to determine figures and amounts for sales</LI>
+            <LI>Must be flexible to work weekends and some holidays</LI>
+            <LI>Bilingual in English and Vietnamese a plus</LI>
           </UL>
           <H2>Contact Information</H2>
           <SmallSpace/>
           <P><strong>Hank Scott</strong></P>
-          <P><strong>Email:</strong> hankscott@cox.net</P>
+          <P><strong>Email:</strong> hank@almavacations.com</P>
           <P><strong>Mobile:</strong> (949) 878-8287</P>
           <Space/>
         </CenteredContainer>
+
+        <CenteredContainer id="marketing-promoter">
+          <CustomSpace/>
+          <H1>Marketing Promoter</H1>
+          <SmallSpace/>
+          <P><strong>Hours of Operation:</strong> Flexible hours including evenings, weekends and holidays</P>
+          <P><strong>Compensation:</strong> $12 - $20 per hour based on experience + Bonus</P>
+          <P><strong>Benefits:</strong> On-call / Seasonal / Part-time</P>
+          <Space/>
+          <H2>Position Overview</H2>
+          <SmallSpace/>
+          <P>If you enjoy working flexible hours, in an awesome team environment, and impacting thousands of people's lives in a positive way, then we look forward to learning more about you and discussing potential opportunities that we might have at Alma. This job could lead to a permanent position in the future.</P>
+          <Space/>
+          <H2>Marketing Promoter Duties and Responsibilities</H2>
+          <SmallSpace/>
+          <UL>
+            <LI>Work at marketing events, exhibitions, media productions, and client sites </LI> 
+            <LI>Set up and tear down tents, tables, chairs, signage, aesthetics, etc.</LI>
+            <LI>Staff event booths, engage attendees, perform registration</LI>
+            <LI>Hand out promotional materials and items, demonstrate products, and converse with attendees</LI>
+            <LI>Actively collect contact information as lead generation</LI>
+            <LI>Assist with the collation and production of marketing materials and literature</LI>
+            <LI>Assist in traditional and new (social/online) media campaigns and monitor progress</LI>
+            <LI>Keep inventory of all event materials, props, supplies, etc.</LI>
+            <LI>Distribute marketing collateral at various sites</LI>
+            <LI>Transport promotional materials to and from various locations</LI>
+            <LI>Perform other event or administrative duties as necessary</LI>
+          </UL>
+          {/* <Space/> */}
+          <H2>Marketing Promoter Requirements and Qualifications</H2>
+          {/* <SmallSpace/> */}
+          <UL>
+            <LI>Must be enthusiastic, engaging, brand savvy, well organized and self-motivated and able to work independently</LI> 
+            <LI>Ability to multitask, take direction and work in small and large groups</LI>
+            <LI>Must have a positive attitude and willingness to learn new tasks</LI>
+            <LI>Must maintain poised and polished appearance at all times while conducting promotions</LI>
+            <LI>Must have a passion for promoting and ability to communicate brand effectively with the audience</LI>
+            <LI>Conversational Vietnamese proficiency preferred but not mandatory. Some reading competency is a plus</LI>
+            <LI>Must have reliable transportation and a mobile device</LI>
+            <LI>Ability to stand for extended periods of time and lift up to 20 lbs</LI>
+          </UL>
+
+          <H2>Contact Information</H2>
+          <SmallSpace/>
+          <P><strong>Hank Scott</strong></P>
+          <P><strong>Email:</strong> hank@almavacations.com</P>
+          <P><strong>Mobile:</strong> (949) 878-8287</P>
+          <Space/>
+        </CenteredContainer>
+
       </StickyBox>
 
       <Footer>

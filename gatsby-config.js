@@ -7,6 +7,15 @@ module.exports = {
     author: `Arrow GTP`
   },
   plugins: [
+    // {
+    //   resolve: 'gatsby-plugin-tinacms',
+    //   options: {
+    //     plugins: [
+    //       "gatsby-tinacms-git",
+    //       "gatsby-tinacms-remark"
+    //     ],
+    //   },
+    // },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
