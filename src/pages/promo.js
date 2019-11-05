@@ -89,7 +89,6 @@ const Message = styled(P)`
   font-size: calc(18px + (32 - 18) * ((100vw - 300px) / (1600 - 300)));
   line-height: 1.5;
   text-align: center;
-  /* text-shadow: 0px 0px 8px hsla(0,0%,0%,1); */
 `
 
 const PromoVacation = styled.div`
