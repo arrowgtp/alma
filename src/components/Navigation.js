@@ -133,7 +133,7 @@ const AlmaLink = styled(Link)`
   font-size: calc(18px + (32 - 18) * ((100vw - 300px) / (1600 - 300)));
   font-weight: 300;
   margin: 0.25rem;
-  padding: 0.6rem 0;
+  padding: 0.25rem 0;
   line-height: 0.75;
   color: #2d658e;
 
@@ -153,7 +153,7 @@ const AlmaLink = styled(Link)`
 const AlmaLink2 = styled(Link)`
   grid-column: 2 / 4;
   margin: 0.25rem;
-  padding: 0.4rem 0;
+  padding: 0.25rem 0;
   white-space: nowrap;
   font-family: 'Open Sans', sans-serif;
   font-size: calc(16px + (32 - 16) * ((100vw - 300px) / (1600 - 300)));

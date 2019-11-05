@@ -35,7 +35,7 @@ const StickyBox = styled.div`
   ;
 `
 
-const CenteredStickyContainer = styled(CenteredContainer)`
+const CenteredStickyContainer = styled(FullWidthContainer)`
   position: fixed;
   bottom: 8vh;
   bottom: calc(var(--vh, 1vh) * 10);
@@ -46,22 +46,27 @@ const CenteredStickyContainer = styled(CenteredContainer)`
   opacity: 1;
   z-index: 5;
   padding: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: nowrap;
-  /* border: 1px solid red; */
-  /* overflow-x: auto;
-  -webkit-overflow-scrolling: touch; */
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
   box-shadow: 0px 0px 32px rgba(0,0,0,.25);
 
   @media (min-width: 50rem) {
-    width: 100%;
+    align-self: center;
+    justify-self: center;
+    /* max-width: 75%; */
     position: sticky;
-    top: 1rem;
+    top: 0;
     border-radius: 32px;
     margin: 1rem 0;
     padding: 1rem 0;
+    overflow-x: initial;
+    overflow-y: initial;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
   }
 `
 
@@ -75,7 +80,7 @@ const CustomSpace = styled.div`
 
 const JobButton = styled.button`
   background: #ddd;
-  /* border: 1px solid red; */
+  display: inline-block;
   border: none;
   font-size: 10px;
   padding: 0.5rem 1.25rem;
@@ -94,7 +99,7 @@ const JobButton = styled.button`
 
   @media (min-width: 50rem) {
     margin: 0 1rem;
-    font-size: 16px;
+    font-size: calc(6px + (18 - 6) * ((100vw - 300px) / (1600 - 300)));
   }
 `
 
@@ -266,8 +271,6 @@ const Showroom = ({ data, intl }) => {
             <LI>Complete all paperwork and documentation following established procedures for all sales transactions</LI>
             <LI>Manage time effectively in order to handle multiple presentations on a weekly basis</LI>
             <LI>Attend all sales departmental and division meetings and any other functions as needed</LI>
-            <LI></LI>
-            <LI></LI>
           </UL>
           <H2>Vacation Counselor Requirements and Qualifications</H2>
           <UL>
@@ -333,9 +336,9 @@ const Showroom = ({ data, intl }) => {
 
           <H2>Contact Information</H2>
           <SmallSpace/>
-          <P><strong>Hank Scott</strong></P>
-          <P><strong>Email:</strong> hank@almavacations.com</P>
-          <P><strong>Mobile:</strong> (949) 878-8287</P>
+          <P><strong>Gia Ly</strong></P>
+          <P><strong>Email:</strong> travel@alma.vacations</P>
+          <P><strong>Mobile:</strong> (714) 855-0409</P>
           <Space/>
         </CenteredContainer>
 

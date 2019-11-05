@@ -3,9 +3,8 @@ import { Link } from 'gatsby'
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
 import { injectIntl } from 'gatsby-plugin-intl'
-// import Img from 'gatsby-image'
 
-import almaLogoShellWhite from '../images/alma/alma-logo-shell-white.svg'
+import almaLogo from '../images/alma/alma-logo.svg'
 
 import PromoCruise from '../images/promos/promo-cruise-wide.jpg'
 import PromoVegas from '../images/promos/promo-vegas-wide.jpg'
@@ -17,84 +16,6 @@ import './Layout.css'
 import Logo from './Logo'
 import Nav from './Navigation'
 import PromoButton from './PromoButton'
-
-const Image = styled.img`
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  width: auto;
-  height: 10vh;
-
-  @media (min-width: 50rem) {
-    height: 12vh;
-  }
-`
-
-const PromoCruiseImage = styled(Image)`
-grid-column: 1 / 3;
-grid-row: 1 / 2;
-justify-self: start;
-z-index: 1;
-mask-image: linear-gradient(
-    to left,
-    hsla(0, 0%, 100%, 0) 0%,
-    hsla(0, 0%, 100%, 0.013) 8.1%,
-    hsla(0, 0%, 100%, 0.049) 15.5%,
-    hsla(0, 0%, 100%, 0.104) 22.5%,
-    hsla(0, 0%, 100%, 0.175) 29%,
-    hsla(0, 0%, 100%, 0.259) 35.3%,
-    hsla(0, 0%, 100%, 0.352) 41.2%,
-    hsla(0, 0%, 100%, 0.45) 47.1%,
-    hsla(0, 0%, 100%, 0.55) 52.9%,
-    hsla(0, 0%, 100%, 0.648) 58.8%,
-    hsla(0, 0%, 100%, 0.741) 64.7%,
-    hsla(0, 0%, 100%, 0.825) 71%,
-    hsla(0, 0%, 100%, 0.896) 77.5%,
-    hsla(0, 0%, 100%, 0.951) 84.5%,
-    hsla(0, 0%, 100%, 0.987) 91.9%,
-    hsl(0, 0%, 100%) 100%)
-  ;
-`
-
-const PromoVegasImage = styled(Image)`
-  grid-column: 3 / 5;
-  grid-row: 1 / 2;
-  justify-self: end;
-  z-index: 1;
-  /* mask-image: linear-gradient(
-    to right,
-    hsla(0, 0%, 100%, 0) 0%,
-    hsla(0, 0%, 100%, 0.013) 8.1%,
-    hsla(0, 0%, 100%, 0.049) 15.5%,
-    hsla(0, 0%, 100%, 0.104) 22.5%,
-    hsla(0, 0%, 100%, 0.175) 29%,
-    hsla(0, 0%, 100%, 0.259) 35.3%,
-    hsla(0, 0%, 100%, 0.352) 41.2%,
-    hsla(0, 0%, 100%, 0.45) 47.1%,
-    hsla(0, 0%, 100%, 0.55) 52.9%,
-    hsla(0, 0%, 100%, 0.648) 58.8%,
-    hsla(0, 0%, 100%, 0.741) 64.7%,
-    hsla(0, 0%, 100%, 0.825) 71%,
-    hsla(0, 0%, 100%, 0.896) 77.5%,
-    hsla(0, 0%, 100%, 0.951) 84.5%,
-    hsla(0, 0%, 100%, 0.987) 91.9%,
-    hsl(0, 0%, 100%) 100%)
-  ; */
-`
-
-const PromoHeader = styled.h1`
-  grid-column: 1 / 5;
-  grid-row: 1 / 2;
-  justify-self: center;
-  align-self: center;
-  z-index: 2;
-  color: white;
-  text-shadow: 0px 0px 8px white;
-  text-shadow: 0px 0px 16px black;
-  font-size: 24px;
-
-  /* border: 1px solid red; */
-`
 
 const App = styled(motion.div)`
   box-sizing: border-box;
@@ -119,29 +40,6 @@ const App = styled(motion.div)`
   }
 `
 
-// const App = styled.div`
-//   margin: 0;
-//   padding: 0;
-//   width: 100vw;
-//   height: 100vh;
-//   height: calc(var(--vh, 1vh) * 100);
-//   display: grid;
-//   grid-template-rows: 20vh 70vh 10vh;
-//   grid-template-rows:
-//     calc(var(--vh, 1vh) * 20)
-//     calc(var(--vh, 1vh) * 70) 
-//     calc(var(--vh, 1vh) * 10)
-//   ;
-//   grid-template-columns: repeat(3, 1fr);
-//   /* opacity: 0; */
-//   z-index: 2;
-
-//   @media (min-width: 50rem) {
-//     grid-template-rows: 100vh;
-//     grid-template-columns: 20vw 80vw;
-//   }
-// `
-
 const Main = styled.main`
   margin: 0;
   padding: 0;
@@ -151,10 +49,11 @@ const Main = styled.main`
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
   z-index: 1;
-  background-image: url(${almaLogoShellWhite});
+  /* background-image: url(${almaLogo});
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
+  background-size: 16rem; */
   box-shadow: 0px 0px 16px hsla(0,0%,0%,1);
 
   @media (min-width: 50rem) {
@@ -164,6 +63,30 @@ const Main = styled.main`
     overflow-y: scroll; */
     overflow-x: initial;
     overflow-y: initial;
+    position: relative;
+  }
+`
+
+const AlmaLogo = styled.img`
+  margin: 0;
+  padding: 0;
+  grid-column: 1 / 4;
+  grid-row: 1 / 3;
+  align-self: center;
+  justify-self: center;
+  width: 16rem;
+  height: auto;
+  z-index: 0;
+  opacity: 0.5;
+  
+  @media (min-width: 50rem) {
+    grid-column: 2 / 3;
+    grid-row: 1 / 5;
+    /* position: fixed;
+    top: 50%;
+    left: 50%;
+    bottom: 50%;
+    right: 50%; */
   }
 `
 
@@ -238,6 +161,95 @@ const PromoBanner = styled(Link)`
   }
 `
 
+const Image = styled.img`
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  height: 10vh;
+
+  @media (min-width: 50rem) {
+    height: 12vh;
+  }
+`
+
+const PromoCruiseImage = styled(Image)`
+grid-column: 1 / 3;
+grid-row: 1 / 2;
+justify-self: start;
+z-index: 1;
+mask-image: linear-gradient(
+    to left,
+    hsla(0, 0%, 100%, 0) 0%,
+    hsla(0, 0%, 100%, 0.013) 8.1%,
+    hsla(0, 0%, 100%, 0.049) 15.5%,
+    hsla(0, 0%, 100%, 0.104) 22.5%,
+    hsla(0, 0%, 100%, 0.175) 29%,
+    hsla(0, 0%, 100%, 0.259) 35.3%,
+    hsla(0, 0%, 100%, 0.352) 41.2%,
+    hsla(0, 0%, 100%, 0.45) 47.1%,
+    hsla(0, 0%, 100%, 0.55) 52.9%,
+    hsla(0, 0%, 100%, 0.648) 58.8%,
+    hsla(0, 0%, 100%, 0.741) 64.7%,
+    hsla(0, 0%, 100%, 0.825) 71%,
+    hsla(0, 0%, 100%, 0.896) 77.5%,
+    hsla(0, 0%, 100%, 0.951) 84.5%,
+    hsla(0, 0%, 100%, 0.987) 91.9%,
+    hsl(0, 0%, 100%) 100%)
+  ;
+`
+
+const PromoVegasImage = styled(Image)`
+  grid-column: 3 / 5;
+  grid-row: 1 / 2;
+  justify-self: end;
+  z-index: 1;
+  /* mask-image: linear-gradient(
+    to right,
+    hsla(0, 0%, 100%, 0) 0%,
+    hsla(0, 0%, 100%, 0.013) 8.1%,
+    hsla(0, 0%, 100%, 0.049) 15.5%,
+    hsla(0, 0%, 100%, 0.104) 22.5%,
+    hsla(0, 0%, 100%, 0.175) 29%,
+    hsla(0, 0%, 100%, 0.259) 35.3%,
+    hsla(0, 0%, 100%, 0.352) 41.2%,
+    hsla(0, 0%, 100%, 0.45) 47.1%,
+    hsla(0, 0%, 100%, 0.55) 52.9%,
+    hsla(0, 0%, 100%, 0.648) 58.8%,
+    hsla(0, 0%, 100%, 0.741) 64.7%,
+    hsla(0, 0%, 100%, 0.825) 71%,
+    hsla(0, 0%, 100%, 0.896) 77.5%,
+    hsla(0, 0%, 100%, 0.951) 84.5%,
+    hsla(0, 0%, 100%, 0.987) 91.9%,
+    hsl(0, 0%, 100%) 100%)
+  ; */
+`
+
+const PromoHeader = styled.h1`
+  grid-column: 1 / 5;
+  grid-row: 1 / 2;
+  margin: 0;
+  padding: 0.5rem 1.25rem;
+  justify-self: center;
+  align-self: center;
+  z-index: 2;
+  color: black;
+  font-family: 'Quicksand', sans-serif;
+  text-transform: uppercase;
+  /* text-shadow: 0px 0px 8px white;
+  text-shadow: 0px 0px 16px black; */
+  box-shadow: 0px 0px 16px black;
+  font-size: 16px;
+  background: white;
+  border-radius: 32px;
+  /* border: 1px solid red; */
+
+  @media (min-width: 50rem) {
+    padding: 0.75rem 1.5rem;
+    font-size: 24px;
+  }
+`
+
 const Layout = ({ children }) => {
 
   // const elementRef = useRef()
@@ -254,6 +266,7 @@ const Layout = ({ children }) => {
 
   useEffect(() => {
     if (window.location.href.indexOf('careers')!== -1) {
+
       if (window.location.href.indexOf('#office-manager') !== -1) {
         let officeManager = document.querySelector('#office-manager').offsetTop
         document.getElementById('main').scrollTop = officeManager
@@ -269,6 +282,9 @@ const Layout = ({ children }) => {
       } else {
         document.getElementById('main').scrollTop = 0
       }
+
+    } else if (window.location.href.indexOf('promo')!== -1) {
+      // condition goes here to hide the PromoBanner component
     } else {
       document.getElementById('main').scrollTop = 0
     }
@@ -292,12 +308,24 @@ const Layout = ({ children }) => {
         </Menu>
         <Main id='main'>
           {children}
-        </Main>
-        {/* <PromoBanner to="/promo">
+        </Main> 
+        <AlmaLogo src={almaLogo} alt="The Alma Logo" />
+        <PromoBanner
+          to="/promo"
+          style={{
+            display:
+              window.location.href.indexOf('promo')!== -1 ? 'none'
+              :
+              window.location.href.indexOf('careers')!== -1 ? 'none'
+              :
+              window.location.href.indexOf('success')!== -1 ? 'none'
+              :
+              'grid'
+            }}>
           <PromoCruiseImage src={PromoCruise}/>
-          <PromoHeader>Win a fabulous vacation!</PromoHeader>
+          <PromoHeader>Win a free vacation!</PromoHeader>
           <PromoVegasImage src={PromoVegas}/>
-        </PromoBanner> */}
+        </PromoBanner>
       </App>
     </>
   )
