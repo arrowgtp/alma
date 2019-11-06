@@ -136,8 +136,8 @@ const PromoBanner = styled(Link)`
   bottom: calc(var(--vh, 1vh) * 10);
   left: 0;
   right: 0;
-  height: 10vh;
-  height: calc(var(--vh, 1vh) * 10);
+  height: 12vh;
+  height: calc(var(--vh, 1vh) * 12);
   width: 100vw;
   background: #001721;
   background: black;
@@ -166,7 +166,8 @@ const Image = styled.img`
   margin: 0;
   padding: 0;
   width: auto;
-  height: 10vh;
+  height: 12vh;
+  height: calc(var(--vh, 1vh) * 12);
 
   @media (min-width: 50rem) {
     height: 12vh;
@@ -233,24 +234,26 @@ const PromoHeader = styled.h1`
   justify-self: center;
   align-self: center;
   z-index: 2;
-  color: black;
+  color: white;
+  background: rgba(0,0,0,0.5);
+  border-radius: 32px;
   font-family: 'Quicksand', sans-serif;
   text-transform: uppercase;
-  /* text-shadow: 0px 0px 8px white;
-  text-shadow: 0px 0px 16px black; */
-  box-shadow: 0px 0px 16px black;
   font-size: 16px;
-  background: white;
-  border-radius: 32px;
-  /* border: 1px solid red; */
 
   @media (min-width: 50rem) {
+    box-shadow: 0px 0px 32px black;
+    border-radius: 32px;
+    background: white;
+    color: black;
     padding: 0.75rem 1.5rem;
     font-size: 24px;
   }
 `
 
 const Layout = ({ children }) => {
+
+  const isBrowser = typeof window !== `undefined`
 
   // const elementRef = useRef()
 
@@ -342,16 +345,16 @@ const Layout = ({ children }) => {
         <AlmaLogo src={almaLogo} alt="The Alma Logo" />
         <PromoBanner
           to="/promo"
-          // style={{
-          //   display:
-          //     window.location.href.indexOf('promo')!== -1 ? 'none'
-          //     :
-          //     window.location.href.indexOf('careers')!== -1 ? 'none'
-          //     :
-          //     window.location.href.indexOf('success')!== -1 ? 'none'
-          //     :
-          //     'grid'
-          //   }}
+          style={{
+            display:
+              window.location.href.indexOf('promo')!== -1 ? 'none'
+              :
+              window.location.href.indexOf('careers')!== -1 ? 'none'
+              :
+              window.location.href.indexOf('success')!== -1 ? 'none'
+              :
+              'grid'
+          }}
         >
           <PromoCruiseImage src={PromoCruise}/>
           <PromoHeader>Win a free vacation!</PromoHeader>
