@@ -230,7 +230,7 @@ const PromoHeader = styled.h1`
   grid-column: 1 / 5;
   grid-row: 1 / 2;
   margin: 0;
-  padding: 0.5rem 1.25rem;
+  padding: 0.4rem 1.1rem;
   justify-self: center;
   align-self: center;
   z-index: 2;
@@ -345,16 +345,16 @@ const Layout = ({ children }) => {
         <AlmaLogo src={almaLogo} alt="The Alma Logo" />
         <PromoBanner
           to="/promo"
-          style={{
-            display:
-              window.location.href.indexOf('promo')!== -1 ? 'none'
-              :
-              window.location.href.indexOf('careers')!== -1 ? 'none'
-              :
-              window.location.href.indexOf('success')!== -1 ? 'none'
-              :
-              'grid'
-          }}
+          // style={{
+          //   display:
+          //     window.location.href.indexOf('promo')!== -1 ? 'none'
+          //     :
+          //     window.location.href.indexOf('careers')!== -1 ? 'none'
+          //     :
+          //     window.location.href.indexOf('success')!== -1 ? 'none'
+          //     :
+          //     'grid'
+          // }}
         >
           <PromoCruiseImage src={PromoCruise}/>
           <PromoHeader>Win a free vacation!</PromoHeader>
