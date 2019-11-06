@@ -136,8 +136,8 @@ const PromoBanner = styled(Link)`
   bottom: calc(var(--vh, 1vh) * 10);
   left: 0;
   right: 0;
-  height: 12vh;
-  height: calc(var(--vh, 1vh) * 12);
+  height: 10vh;
+  height: calc(var(--vh, 1vh) * 10);
   width: 100vw;
   background: #001721;
   background: black;
@@ -166,8 +166,8 @@ const Image = styled.img`
   margin: 0;
   padding: 0;
   width: auto;
-  height: 12vh;
-  height: calc(var(--vh, 1vh) * 12);
+  height: 10vh;
+  height: calc(var(--vh, 1vh) * 10);
 
   @media (min-width: 50rem) {
     height: 12vh;
@@ -235,13 +235,15 @@ const PromoHeader = styled.h1`
   align-self: center;
   z-index: 2;
   color: white;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0,0,0,0.25);
+  text-shadow: 0px 0px 8px rgba(0,0,0,1);
   border-radius: 32px;
   font-family: 'Quicksand', sans-serif;
   text-transform: uppercase;
   font-size: 16px;
 
   @media (min-width: 50rem) {
+    text-shadow: none;
     box-shadow: 0px 0px 32px black;
     border-radius: 32px;
     background: white;
@@ -251,118 +253,177 @@ const PromoHeader = styled.h1`
   }
 `
 
-const Layout = ({ children }) => {
+// const fetchLocation = value => {
+//   return window.location.href.indexOf(value) !== -1;
+// }
 
-  const isBrowser = typeof window !== `undefined`
-
-  // const elementRef = useRef()
-
-  // useEffect(() => {
-  //  setTimeout(() => elementRef.current.scrollTop = 0, 0)
-  // }, [])
-
-  // useEffect(() => {
-  //  setTimeout(() => document.getElementById('MainContainer').scrollTop = 0, 0);
-  // })
-
-  // document.getElementById('#office-manager').getBoundingClientRect()
+const Layout = ({ children, location }) => {
 
   useEffect(() => {
-
-    if (window.location.href.indexOf('careers')!== -1) {
-
-      if (window.location.href.indexOf('#office-manager') !== -1) {
-        let officeManager = document.querySelector('#office-manager').offsetTop
+    if (location.pathname.includes('careers')) {
+      if (location.pathname.includes('#office-manager')) {
+        const officeManager = document.querySelector('#office-manager').offsetTop
         document.getElementById('main').scrollTop = officeManager
-      } else if (window.location.href.indexOf('#administrative-assistant') !== -1) {
-        let administrativeAsistant = document.querySelector('#administrative-assistant').offsetTop
+      } else if (location.pathname.includes('#administrative-assistant')) {
+        const administrativeAsistant = document.querySelector('#administrative-assistant').offsetTop
         document.getElementById('main').scrollTop = administrativeAsistant
-      } else if (window.location.href.indexOf('#vacation-counselor') !== -1) {
-        let vacationCounselor = document.querySelector('#vacation-counselor').offsetTop
+      } else if (location.pathname.includes('#vacation-counselor')) {
+        const vacationCounselor = document.querySelector('#vacation-counselor')
+          .offsetTop
         document.getElementById('main').scrollTop = vacationCounselor
-      } else if (window.location.href.indexOf('#marketing-promoter') !== -1) {
-        let marketingPromoter = document.querySelector('#marketing-promoter').offsetTop
+      } else if (location.pathname.includes('#marketing-promoter')) {
+        const marketingPromoter = document.querySelector('#marketing-promoter')
+          .offsetTop
         document.getElementById('main').scrollTop = marketingPromoter
       } else {
         document.getElementById('main').scrollTop = 0
       }
-
     } else {
       document.getElementById('main').scrollTop = 0
     }
-
-  })
-
-  // useEffect(() => {
-  //   if (window.location.href.indexOf('careers')!== -1) {
-  //     return (
-  //       <PromoBanner
-  //         to="/promo"
-  //       >
-  //         <PromoCruiseImage src={PromoCruise}/>
-  //         <PromoHeader>Win a free vacation!</PromoHeader>
-  //         <PromoVegasImage src={PromoVegas}/>
-  //       </PromoBanner>
-  //     )
-  //   }
-  // })
-
-  // useEffect(() => {
-
-  //   const toggle = {
-  //     display:
-  //       window.location.href.indexOf('promo')!== -1 ? 'none'
-  //       :
-  //       window.location.href.indexOf('careers')!== -1 ? 'none'
-  //       :
-  //       window.location.href.indexOf('success')!== -1 ? 'none'
-  //       :
-  //       'grid'
-  //   }
-
-  //   return toggle
-  // })
+  }, [location])
 
   return (
-    <>
-      {/* <AnimatedLogo/> */}
-      <App
-        animate={{ opacity: 1 }}
-        transition={{
+    <App
+      animate={{ opacity: 1 }}
+      transition={{
         ease: 'easeInOut',
         duration: 1,
-        delay: 0 
+        delay: 0
+      }}
+    >
+      <Menu>
+        <Logo />
+        <Nav />
+        <PromoButton />
+      </Menu>
+      <Main id='main'>{children}</Main>
+      <AlmaLogo alt='The Alma Logo' src={almaLogo} />
+      <PromoBanner
+        style={{
+          display:
+            location.pathname.includes('promo')
+            ? 'none'
+            : location.pathname.includes('careers')
+            ? 'none'
+            : location.pathname.includes('success')
+            ? 'none'
+            : 'grid'
         }}
+        to='/promo'
       >
-        <Menu>
-          <Logo/>
-          <Nav/>
-          <PromoButton/>
-        </Menu>
-        <Main id='main'>
-          {children}
-        </Main> 
-        <AlmaLogo src={almaLogo} alt="The Alma Logo" />
-        <PromoBanner
-          to="/promo"
-          // style={{
-          //   display:
-          //     window.location.href.indexOf('promo')!== -1 ? 'none'
-          //     :
-          //     window.location.href.indexOf('careers')!== -1 ? 'none'
-          //     :
-          //     window.location.href.indexOf('success')!== -1 ? 'none'
-          //     :
-          //     'grid'
-          // }}
-        >
-          <PromoCruiseImage src={PromoCruise}/>
-          <PromoHeader>Win a free vacation!</PromoHeader>
-          <PromoVegasImage src={PromoVegas}/>
-        </PromoBanner>
-      </App>
-    </>
+        <PromoCruiseImage src={PromoCruise} />
+        <PromoHeader>Vacation Giveaway! Click Here!</PromoHeader>
+        <PromoVegasImage src={PromoVegas} />
+      </PromoBanner>
+    </App>
   )
 }
+
+// const Layout = ({ children }) => {
+
+  // const isBrowser = typeof window !== `undefined`
+
+  // useEffect(() => {
+  //   if(window.location.href.indexOf('careers')!== -1) {
+  //     return null;
+  //   } else {
+  //     return (
+  //         <p>
+  //           <input
+  //             onChange={this.handleChange}
+  //             value={this.state.inputText}
+  //           />
+  //         </p>
+  //     );
+  //   }
+  // }) 
+
+  // useEffect(() => {
+
+  //   if (window.location.href.indexOf('careers')!== -1) {
+
+  //     if (window.location.href.indexOf('#office-manager') !== -1) {
+  //       let officeManager = document.querySelector('#office-manager').offsetTop
+  //       document.getElementById('main').scrollTop = officeManager
+  //     } else if (window.location.href.indexOf('#administrative-assistant') !== -1) {
+  //       let administrativeAsistant = document.querySelector('#administrative-assistant').offsetTop
+  //       document.getElementById('main').scrollTop = administrativeAsistant
+  //     } else if (window.location.href.indexOf('#vacation-counselor') !== -1) {
+  //       let vacationCounselor = document.querySelector('#vacation-counselor').offsetTop
+  //       document.getElementById('main').scrollTop = vacationCounselor
+  //     } else if (window.location.href.indexOf('#marketing-promoter') !== -1) {
+  //       let marketingPromoter = document.querySelector('#marketing-promoter').offsetTop
+  //       document.getElementById('main').scrollTop = marketingPromoter
+  //     } else {
+  //       document.getElementById('main').scrollTop = 0
+  //     }
+
+  //   } else {
+  //     document.getElementById('main').scrollTop = 0
+  //   }
+
+  // })
+
+//   return (
+//     <>
+//       {/* <AnimatedLogo/> */}
+//       <App
+//         animate={{ opacity: 1 }}
+//         transition={{
+//         ease: 'easeInOut',
+//         duration: 1,
+//         delay: 0 
+//         }}
+//       >
+//         <Menu>
+//           <Logo/>
+//           <Nav/>
+//           <PromoButton/>
+//         </Menu>
+//         <Main id='main'>
+//           {children}
+//         </Main> 
+//         <AlmaLogo src={almaLogo} alt="The Alma Logo" />
+//         <PromoBanner
+//           to="/promo"
+//           style={{
+//             display:
+//               window.location.href.indexOf('promo')!== -1 ? 'none'
+//               :
+//               window.location.href.indexOf('careers')!== -1 ? 'none'
+//               :
+//               window.location.href.indexOf('success')!== -1 ? 'none'
+//               :
+//               'grid'
+//           }}
+//         >
+//           <PromoCruiseImage src={PromoCruise}/>
+//           <PromoHeader>Vacation Giveaway! Click Here!</PromoHeader>
+//           <PromoVegasImage src={PromoVegas}/>
+//         </PromoBanner>
+//         {isBrowser && (
+//           <PromoBanner
+//             to="/promo"
+//             style={{
+//               display:
+//                 fetchLocation("promo") !== -1
+//                   ? "none"
+//                   : fetchLocation("careers") !== -1
+//                   ? "none"
+//                   : fetchLocation("success") !== -1
+//                   ? "none"
+//                   : "grid"
+//             }}
+//           >
+//             <PromoCruiseImage src={PromoCruise}/>
+//             <PromoHeader>Vacation Giveaway! Click here!</PromoHeader>
+//             <PromoVegasImage src={PromoVegas}/>
+//           </PromoBanner>
+//         )}
+//       </App>
+//     </>
+//   )
+// }
 
 export default injectIntl(Layout)
