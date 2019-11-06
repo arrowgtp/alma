@@ -253,35 +253,44 @@ const PromoHeader = styled.h1`
   }
 `
 
-// const fetchLocation = value => {
-//   return window.location.href.indexOf(value) !== -1;
-// }
-
-const Layout = ({ children, location }) => {
+const Layout = ({ children, location: { pathname, hash } }) => {
 
   useEffect(() => {
-    if (location.pathname.includes('careers')) {
-      if (location.pathname.includes('#office-manager')) {
+
+    if (pathname.includes('careers')) {
+
+      if (hash === '#office-manager') {
+
         const officeManager = document.querySelector('#office-manager').offsetTop
-        document.getElementById('main').scrollTop = officeManager
-      } else if (location.pathname.includes('#administrative-assistant')) {
+        document.querySelector('#main').scrollTop = officeManager
+
+      } else if (hash ==='#administrative-assistant') {
+
         const administrativeAsistant = document.querySelector('#administrative-assistant').offsetTop
-        document.getElementById('main').scrollTop = administrativeAsistant
-      } else if (location.pathname.includes('#vacation-counselor')) {
-        const vacationCounselor = document.querySelector('#vacation-counselor')
-          .offsetTop
-        document.getElementById('main').scrollTop = vacationCounselor
-      } else if (location.pathname.includes('#marketing-promoter')) {
-        const marketingPromoter = document.querySelector('#marketing-promoter')
-          .offsetTop
-        document.getElementById('main').scrollTop = marketingPromoter
+        document.querySelector('#main').scrollTop = administrativeAsistant
+
+      } else if (hash ==='#vacation-counselor') {
+
+        const vacationCounselor = document.querySelector('#vacation-counselor').offsetTop
+        document.querySelector('#main').scrollTop = vacationCounselor
+
+      } else if (hash ==='#marketing-promoter') {
+
+        const marketingPromoter = document.querySelector('#marketing-promoter').offsetTop
+        document.querySelector('#main').scrollTop = marketingPromoter
+
       } else {
-        document.getElementById('main').scrollTop = 0
+
+        document.querySelector('#main').scrollTop = 0
+
       }
+
     } else {
-      document.getElementById('main').scrollTop = 0
+
+      document.querySelector('#main').scrollTop = 0
+
     }
-  }, [location])
+  }, [hash, pathname])
 
   return (
     <App
@@ -302,13 +311,16 @@ const Layout = ({ children, location }) => {
       <PromoBanner
         style={{
           display:
-            location.pathname.includes('promo')
-            ? 'none'
-            : location.pathname.includes('careers')
-            ? 'none'
-            : location.pathname.includes('success')
-            ? 'none'
-            : 'grid'
+            pathname.includes('promo') ?
+            'none'
+            :
+            pathname.includes('careers') ?
+            'none'
+            :
+            pathname.includes('success') ?
+            'none'
+            :
+            'grid'
         }}
         to='/promo'
       >
