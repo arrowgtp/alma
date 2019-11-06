@@ -165,10 +165,8 @@ const PromoVacationText = styled.div`
 `
 
 const PromoTitle = styled.h1`
-  margin: 0 1rem;
-  padding: 2rem;
-  grid-column: 1 / 9;
-  grid-row: 1 / 2;
+  margin: 0;
+  padding: 0 0.75rem;
   line-height: 1.5;
   color: white;
   font-size: 32px;
@@ -176,8 +174,11 @@ const PromoTitle = styled.h1`
   text-align: center;
   /* border: 1px red solid; */
   font-family: 'Open Sans', sans-serif;
+
   @media(min-width: 50rem) {
     font-size: calc(24px + (32 - 24) * ((100vw - 300px) / (1600 - 300)));
+    margin: 0 1rem;
+    padding: 2rem;
   }
 `
 
@@ -188,11 +189,16 @@ const PromoInfo = styled.h2`
   margin: 0 2rem;
   padding: 1rem;
   font-size: 24px;
-  font-size: calc(16px + (24 - 16) * ((100vw - 300px) / (1600 - 300)));
+  font-size: calc(16px + (20 - 16) * ((100vw - 300px) / (1600 - 300)));
   line-height: 1.5;
   text-align: center;
   /* border: 1px red solid; */
   font-family: 'Open Sans', sans-serif;
+
+  @media(min-width: 50rem) {
+    margin: 0 2rem;
+    padding: 0rem;
+  }
 `
 
 const PromoDetails = styled.div`
@@ -261,21 +267,29 @@ const PromoBang = styled.div`
 
 const PromoAmount = styled.p`
   color: white;
-  font-size: 16px;
+  font-size: 12px;
   line-height: 1;
   grid-row: 1 / 2;
   grid-column: 1 / 2;
   z-index: 2;
   transform: rotate(-16deg);
   font-family: 'Open Sans', sans-serif;
+
+  @media (min-width: 50rem) {
+    font-size: 16px;
+  }
 `
 
 const PromoStarburst = styled.img`
-  width: 8rem;
+  width: 6rem;
   height: auto;
   grid-row: 1 / 2;
   grid-column: 1 / 2;
   z-index: 1;
+
+  @media(min-width: 50rem) {
+    width: 8rem;
+  }
 `
 
 const Form = styled.form`
@@ -297,12 +311,12 @@ const Form = styled.form`
 
   @media (min-width: 50rem) {
     position: fixed;
-    top: 15vh;
+    top: 12.5vh;
     right: 2vw;
-    bottom: 15vh;
+    bottom: 12.5vh;
     background: rgba(255,255,255,1);
     border-radius: 16px;
-    height: 70vh;
+    height: 75vh;
     width: 20rem;
   }
 `
@@ -310,7 +324,7 @@ const Form = styled.form`
 const Label = styled.label`
   font-size: calc(16px + (24 - 16) * ((100vw - 300px) / (1600 - 300)));
   display: block;
-  margin: 0.5rem 0;
+  margin: 0.25rem 0;
   padding: 0;
 
   @media (min-width: 50rem) {
@@ -340,7 +354,6 @@ const Input = styled.input`
     padding: 1.25rem;
     width: 14rem;
   }
-
 
   :focus {
     box-shadow: 0px 0px 12px rgba(81,167,190,0.5);
@@ -376,6 +389,23 @@ const SubmitButton = styled(Button)`
   }
 `
 
+const Disclaimer = styled.p`
+  font-size: 8px;
+  line-height: 1.25;
+  margin: 0;
+  padding: 2rem 3rem;
+  font-family: 'Open Sans', sans-serif;
+`
+
+const PromoDisclaimer = styled(Disclaimer)`
+  /* grid-row:  8 / 9;
+  grid-column: 1 / 9;
+  z-index: 5; */
+  color: white;
+  /* align-self: end;
+  justify-self: center; */
+`
+
 const Promo = ({ data, intl }) => {
   return (
     // <AnimatedCard 
@@ -409,9 +439,11 @@ const Promo = ({ data, intl }) => {
               {/* <Space/> */}
             </PromoItems>
           </PromoDetails>
+          <PromoDisclaimer>{intl.formatMessage({ id: "promo-disclaimer-1" })}</PromoDisclaimer>
         </PromoVacationText>
         {/* <NarrowPromoVacationImage fluid={data.promoVegas.childImageSharp.fluid} />
         <WidePromoVacationImage fluid={data.promoVegas.childImageSharp.fluid} /> */}
+        {/* <PromoDisclaimer>{intl.formatMessage({ id: "promo-disclaimer-1" })}</PromoDisclaimer> */}
         <PromoVacationImage fluid={data.promoVegas.childImageSharp.fluid} />
       </PromoVacation>
       <PromoVacation>
@@ -432,9 +464,11 @@ const Promo = ({ data, intl }) => {
               {/* <Space/> */}
             </PromoItems>
           </PromoDetails>
+          <PromoDisclaimer>{intl.formatMessage({ id: "promo-disclaimer-1" })}</PromoDisclaimer>
         </PromoVacationText>
         {/* <NarrowPromoVacationImage fluid={data.promoCruise.childImageSharp.fluid} />
         <WidePromoVacationImage fluid={data.promoCruise.childImageSharp.fluid} /> */}
+        {/* <PromoDisclaimer>{intl.formatMessage({ id: "promo-disclaimer-1" })}</PromoDisclaimer> */}
         <PromoVacationImage fluid={data.promoCruise.childImageSharp.fluid} />
       </PromoVacation>
       <Space/>
@@ -461,6 +495,7 @@ const Promo = ({ data, intl }) => {
         >
         Enter Now!
         </SubmitButton>
+        <Disclaimer>{intl.formatMessage({ id: "promo-disclaimer-3" })}</Disclaimer>
       </Form>
     {/* </AnimatedCard> */}
     </Content>
