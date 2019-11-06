@@ -265,6 +265,7 @@ const Layout = ({ children }) => {
   // document.getElementById('#office-manager').getBoundingClientRect()
 
   useEffect(() => {
+
     if (window.location.href.indexOf('careers')!== -1) {
 
       if (window.location.href.indexOf('#office-manager') !== -1) {
@@ -283,12 +284,41 @@ const Layout = ({ children }) => {
         document.getElementById('main').scrollTop = 0
       }
 
-    } else if (window.location.href.indexOf('promo')!== -1) {
-      // condition goes here to hide the PromoBanner component
     } else {
       document.getElementById('main').scrollTop = 0
     }
+
   })
+
+  // useEffect(() => {
+  //   if (window.location.href.indexOf('careers')!== -1) {
+  //     return (
+  //       <PromoBanner
+  //         to="/promo"
+  //       >
+  //         <PromoCruiseImage src={PromoCruise}/>
+  //         <PromoHeader>Win a free vacation!</PromoHeader>
+  //         <PromoVegasImage src={PromoVegas}/>
+  //       </PromoBanner>
+  //     )
+  //   }
+  // })
+
+  // useEffect(() => {
+
+  //   const toggle = {
+  //     display:
+  //       window.location.href.indexOf('promo')!== -1 ? 'none'
+  //       :
+  //       window.location.href.indexOf('careers')!== -1 ? 'none'
+  //       :
+  //       window.location.href.indexOf('success')!== -1 ? 'none'
+  //       :
+  //       'grid'
+  //   }
+
+  //   return toggle
+  // })
 
   return (
     <>
@@ -312,16 +342,17 @@ const Layout = ({ children }) => {
         <AlmaLogo src={almaLogo} alt="The Alma Logo" />
         <PromoBanner
           to="/promo"
-          style={{
-            display:
-              window.location.href.indexOf('promo')!== -1 ? 'none'
-              :
-              window.location.href.indexOf('careers')!== -1 ? 'none'
-              :
-              window.location.href.indexOf('success')!== -1 ? 'none'
-              :
-              'grid'
-            }}>
+          // style={{
+          //   display:
+          //     window.location.href.indexOf('promo')!== -1 ? 'none'
+          //     :
+          //     window.location.href.indexOf('careers')!== -1 ? 'none'
+          //     :
+          //     window.location.href.indexOf('success')!== -1 ? 'none'
+          //     :
+          //     'grid'
+          //   }}
+        >
           <PromoCruiseImage src={PromoCruise}/>
           <PromoHeader>Win a free vacation!</PromoHeader>
           <PromoVegasImage src={PromoVegas}/>
