@@ -175,57 +175,57 @@ const Image = styled.img`
   }
 `
 
-const PromoCruiseImage = styled(Image)`
-grid-column: 1 / 3;
-grid-row: 1 / 2;
-justify-self: start;
-z-index: 1;
-mask-image: linear-gradient(
-    to left,
-    hsla(0, 0%, 100%, 0) 0%,
-    hsla(0, 0%, 100%, 0.013) 8.1%,
-    hsla(0, 0%, 100%, 0.049) 15.5%,
-    hsla(0, 0%, 100%, 0.104) 22.5%,
-    hsla(0, 0%, 100%, 0.175) 29%,
-    hsla(0, 0%, 100%, 0.259) 35.3%,
-    hsla(0, 0%, 100%, 0.352) 41.2%,
-    hsla(0, 0%, 100%, 0.45) 47.1%,
-    hsla(0, 0%, 100%, 0.55) 52.9%,
-    hsla(0, 0%, 100%, 0.648) 58.8%,
-    hsla(0, 0%, 100%, 0.741) 64.7%,
-    hsla(0, 0%, 100%, 0.825) 71%,
-    hsla(0, 0%, 100%, 0.896) 77.5%,
-    hsla(0, 0%, 100%, 0.951) 84.5%,
-    hsla(0, 0%, 100%, 0.987) 91.9%,
-    hsl(0, 0%, 100%) 100%)
-  ;
-`
+// const PromoCruiseImage = styled(Image)`
+// grid-column: 1 / 3;
+// grid-row: 1 / 2;
+// justify-self: start;
+// z-index: 1;
+// mask-image: linear-gradient(
+//     to left,
+//     hsla(0, 0%, 100%, 0) 0%,
+//     hsla(0, 0%, 100%, 0.013) 8.1%,
+//     hsla(0, 0%, 100%, 0.049) 15.5%,
+//     hsla(0, 0%, 100%, 0.104) 22.5%,
+//     hsla(0, 0%, 100%, 0.175) 29%,
+//     hsla(0, 0%, 100%, 0.259) 35.3%,
+//     hsla(0, 0%, 100%, 0.352) 41.2%,
+//     hsla(0, 0%, 100%, 0.45) 47.1%,
+//     hsla(0, 0%, 100%, 0.55) 52.9%,
+//     hsla(0, 0%, 100%, 0.648) 58.8%,
+//     hsla(0, 0%, 100%, 0.741) 64.7%,
+//     hsla(0, 0%, 100%, 0.825) 71%,
+//     hsla(0, 0%, 100%, 0.896) 77.5%,
+//     hsla(0, 0%, 100%, 0.951) 84.5%,
+//     hsla(0, 0%, 100%, 0.987) 91.9%,
+//     hsl(0, 0%, 100%) 100%)
+//   ;
+// `
 
-const PromoVegasImage = styled(Image)`
-  grid-column: 3 / 5;
-  grid-row: 1 / 2;
-  justify-self: end;
-  z-index: 1;
-  /* mask-image: linear-gradient(
-    to right,
-    hsla(0, 0%, 100%, 0) 0%,
-    hsla(0, 0%, 100%, 0.013) 8.1%,
-    hsla(0, 0%, 100%, 0.049) 15.5%,
-    hsla(0, 0%, 100%, 0.104) 22.5%,
-    hsla(0, 0%, 100%, 0.175) 29%,
-    hsla(0, 0%, 100%, 0.259) 35.3%,
-    hsla(0, 0%, 100%, 0.352) 41.2%,
-    hsla(0, 0%, 100%, 0.45) 47.1%,
-    hsla(0, 0%, 100%, 0.55) 52.9%,
-    hsla(0, 0%, 100%, 0.648) 58.8%,
-    hsla(0, 0%, 100%, 0.741) 64.7%,
-    hsla(0, 0%, 100%, 0.825) 71%,
-    hsla(0, 0%, 100%, 0.896) 77.5%,
-    hsla(0, 0%, 100%, 0.951) 84.5%,
-    hsla(0, 0%, 100%, 0.987) 91.9%,
-    hsl(0, 0%, 100%) 100%)
-  ; */
-`
+// const PromoVegasImage = styled(Image)`
+//   grid-column: 3 / 5;
+//   grid-row: 1 / 2;
+//   justify-self: end;
+//   z-index: 1;
+//   /* mask-image: linear-gradient(
+//     to right,
+//     hsla(0, 0%, 100%, 0) 0%,
+//     hsla(0, 0%, 100%, 0.013) 8.1%,
+//     hsla(0, 0%, 100%, 0.049) 15.5%,
+//     hsla(0, 0%, 100%, 0.104) 22.5%,
+//     hsla(0, 0%, 100%, 0.175) 29%,
+//     hsla(0, 0%, 100%, 0.259) 35.3%,
+//     hsla(0, 0%, 100%, 0.352) 41.2%,
+//     hsla(0, 0%, 100%, 0.45) 47.1%,
+//     hsla(0, 0%, 100%, 0.55) 52.9%,
+//     hsla(0, 0%, 100%, 0.648) 58.8%,
+//     hsla(0, 0%, 100%, 0.741) 64.7%,
+//     hsla(0, 0%, 100%, 0.825) 71%,
+//     hsla(0, 0%, 100%, 0.896) 77.5%,
+//     hsla(0, 0%, 100%, 0.951) 84.5%,
+//     hsla(0, 0%, 100%, 0.987) 91.9%,
+//     hsl(0, 0%, 100%) 100%)
+//   ; */
+// `
 
 const PromoVietnamImage = styled(Image)`
   grid-column: 1 / 5;
@@ -234,7 +234,7 @@ const PromoVietnamImage = styled(Image)`
   object-fit: cover;
   z-index: 1;
   /* mask-image: linear-gradient(
-    to right,
+    to top,
     hsla(0, 0%, 100%, 0) 0%,
     hsla(0, 0%, 100%, 0.013) 8.1%,
     hsla(0, 0%, 100%, 0.049) 15.5%,
@@ -257,23 +257,23 @@ const PromoVietnamImage = styled(Image)`
 const PromoHeader = styled.h1`
   grid-column: 1 / 5;
   grid-row: 1 / 2;
-  margin: 0;
-  padding: 0.4rem 1.1rem;
+  margin: 0.75rem 0 0 0;
+  padding: 0.3rem 1.1rem;
   justify-self: center;
-  align-self: center;
+  align-self: start;
+  text-align: center;
   z-index: 2;
   color: black;
   background: white;
-  /* text-shadow: 0px 0px 8px rgba(0,0,0,1); */
-  box-shadow: 0px 0px 32px rgba(0,0,0,0.5);
+  box-shadow: 0px 0px 16px rgba(0,0,0,0.5);
   border-radius: 32px;
   font-family: 'Quicksand', sans-serif;
   text-transform: uppercase;
+  font-weight: 900;
   font-size: 16px;
 
   @media (orientation: landscape) {
     text-shadow: none;
-    /* box-shadow: 0px 0px 32px black; */
     border-radius: 32px;
     background: white;
     color: black;

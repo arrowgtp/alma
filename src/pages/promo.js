@@ -463,15 +463,7 @@ const Promo = ({ data, intl }) => {
               <PromoStarburst src={starburst}/>
               <PromoAmount>$10,000<br/>Value!</PromoAmount>
             </PromoBang>
-            {/* <PromoItems>
-              <PromoItem>{intl.formatMessage({ id: "promo-vegas-hotel-1" })}</PromoItem>
-              <PromoItem>{intl.formatMessage({ id: "promo-vegas-hotel-2" })}</PromoItem>
-              <PromoItem>{intl.formatMessage({ id: "promo-vegas-hotel-3" })}</PromoItem>
-              <PromoItem>{intl.formatMessage({ id: "promo-vegas-hotel-4" })}</PromoItem>
-              <PromoItem>{intl.formatMessage({ id: "promo-vegas-tickets" })}</PromoItem>
-            </PromoItems> */}
           </PromoDetails>
-          {/* <PromoDisclaimer>{intl.formatMessage({ id: "promo-disclaimer-1" })}</PromoDisclaimer> */}
         </PromoVacationText>
         <PromoVacationImage fluid={data.promoVietnam.childImageSharp.fluid} />
       </PromoVacation>
