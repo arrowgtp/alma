@@ -195,38 +195,35 @@ const PromoVacationText = styled.div`
 
 const PromoTitle = styled.h1`
   margin: 0;
-  padding: 0 0.75rem;
+  padding: 0;
   line-height: 1.5;
   color: white;
   font-size: 32px;
-  font-size: calc(24px + (32 - 24) * ((100vw - 300px) / (1600 - 300)));
+  font-size: calc(24px + (48 - 24) * ((100vw - 300px) / (1600 - 300)));
   text-align: center;
-  /* border: 1px red solid; */
   font-family: 'Open Sans', sans-serif;
 
-  @media(min-width: 50rem) {
-    font-size: calc(24px + (32 - 24) * ((100vw - 300px) / (1600 - 300)));
-    margin: 0 1rem;
-    padding: 2rem;
+  @media(orientation: landscape) {
+    font-size: calc(24px + (36 - 24) * ((100vw - 300px) / (1600 - 300)));
+    margin: 0;
+    padding: 0;
   }
 `
 
 const PromoInfo = styled.h2`
-  /* grid-column: 1 / 9;
-  grid-row: 2 / 3; */
   color: white;
-  margin: 0 2rem;
-  padding: 1rem;
+  margin: 0;
+  padding: 0;
   font-size: 24px;
-  font-size: calc(16px + (20 - 16) * ((100vw - 300px) / (1600 - 300)));
+  font-size: calc(12px + (20 - 12) * ((100vw - 300px) / (1600 - 300)));
   line-height: 1.5;
   text-align: center;
-  /* border: 1px red solid; */
   font-family: 'Open Sans', sans-serif;
 
   @media(orientation: landscape) {
-    margin: 0 2rem;
-    padding: 0rem;
+    margin: 0;
+    padding: 0;
+    font-size: calc(12px + (20 - 12) * ((100vw - 300px) / (1600 - 300)));
   }
 `
 
@@ -453,17 +450,20 @@ const Promo = ({ data, intl }) => {
       <PromoVacation>
         {/* <Message>{intl.formatMessage({ id: "promo-subtitle" })}</Message> */}
         <PromoVacationText>
-          <PromoTitle>Exclusive VIP<br/>Trip to Vietnam</PromoTitle>
-          <PromoInfo>Airfare for 4 +<br/>7 Nights at<br/>the Alma Resort</PromoInfo>
-          <PromoInfo>Winner will be chosen by<br/>April 20, 2020</PromoInfo>
-          <PromoInfo>No purchase required</PromoInfo>
+          <PromoTitle>Win an Exclusive<br/>VIP Trip<br/>to Vietnam</PromoTitle>
           <Space/>
-          <PromoDetails>
+          <PromoInfo>Airfare for 4 +<br/>7 Nights at<br/>the Alma Resort</PromoInfo>
+          <Space/>
+          <PromoInfo>Winner will be chosen by<br/>April 20, 2020</PromoInfo>
+          <Space/>
+          <PromoInfo>No purchase required</PromoInfo>
+          <PromoInfo>Valid only for<br/>Southern California residents</PromoInfo>
+          {/* <PromoDetails>
             <PromoBang>
               <PromoStarburst src={starburst}/>
               <PromoAmount>$10,000<br/>Value!</PromoAmount>
             </PromoBang>
-          </PromoDetails>
+          </PromoDetails> */}
         </PromoVacationText>
         <PromoVacationImage fluid={data.promoVietnam.childImageSharp.fluid} />
       </PromoVacation>

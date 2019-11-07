@@ -6,8 +6,8 @@ import { injectIntl } from 'gatsby-plugin-intl'
 
 import almaLogo from '../images/alma/alma-logo.svg'
 
-import PromoCruise from '../images/promos/promo-cruise-wide.jpg'
-import PromoVegas from '../images/promos/promo-vegas-wide.jpg'
+// import PromoCruise from '../images/promos/promo-cruise-wide.jpg'
+// import PromoVegas from '../images/promos/promo-vegas-wide.jpg'
 import PromoVietnam from '../images/promos/promo-vietnam-wide.jpg'
 
 import './Layout.css'
@@ -279,6 +279,8 @@ const PromoHeader = styled.h1`
     color: black;
     padding: 0.75rem 1.5rem;
     font-size: 24px;
+    align-self: center;
+    margin: 0;
   }
 `
 
