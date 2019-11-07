@@ -899,10 +899,7 @@ const Index = ({ data, intl }) => {
         <Space/>
       </Box>
 
-      <Footer>
-        <p>{intl.formatMessage({ id: "copyright-notice" })}</p>
-        <p>{intl.formatMessage({ id: "solicitation-notice" })}</p>
-      </Footer>
+      <Footer/>
 
     </Content>
   )

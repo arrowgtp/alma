@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { injectIntl } from 'gatsby-plugin-intl'
 
 import FullWidthContainer from './layout/FullWidthContainer'
 
@@ -22,17 +23,35 @@ const FooterContainer = styled(FullWidthContainer)`
     text-align: center;
   }
 `
+
+const P = styled.p`
+  line-height: 2;
+  margin: 0;
+  padding: 0;
+`
+
+const Spacer = styled.div`
+  height: 2rem;
+`
+
 const BannerSpacer = styled.div`
   height: 12vh;
 `
 
-const Footer = ({children}) => {
+const Footer = ({ intl }) => {
   return (
     <FooterContainer>
-      {children}
+      <Spacer/>
+      <P>{intl.formatMessage({ id: "copyright-notice" })}</P>
+      <Spacer/>
+      <P>{intl.formatMessage({ id: "solicitation-notice" })}</P>
+      <Spacer/>
+      <P>Contact Us:</P>
+      <P>1.833.OWN.ALMA | 1.833.696.2562</P>
+      <P>575 Anton Blvd Suite 650 Costa Mesa, CA 92626</P>
       <BannerSpacer/>
     </FooterContainer>
   )
 }
 
-export default Footer
+export default injectIntl(Footer)

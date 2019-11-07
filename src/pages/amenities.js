@@ -127,10 +127,7 @@ const Amenities = ({ data, intl }) => {
         <Space/>
       </CenteredContainer>
 
-      <Footer>
-        <p>{intl.formatMessage({ id: "copyright-notice" })}</p>
-        <p>{intl.formatMessage({ id: "solicitation-notice" })}</p>
-      </Footer>
+      <Footer/>
 
     </Content>
   )

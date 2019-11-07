@@ -171,10 +171,7 @@ const Showroom = ({ data, intl }) => {
         <Space/>
       </FullWidthContainer>
 
-      <Footer>
-        <p>{intl.formatMessage({ id: "copyright-notice" })}</p>
-        <p>{intl.formatMessage({ id: "solicitation-notice" })}</p>
-      </Footer>
+      <Footer/>
 
     </Content>
   )
