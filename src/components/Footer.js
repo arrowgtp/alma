@@ -22,11 +22,15 @@ const FooterContainer = styled(FullWidthContainer)`
     text-align: center;
   }
 `
+const BannerSpacer = styled.div`
+  height: 12vh;
+`
 
 const Footer = ({children}) => {
   return (
     <FooterContainer>
       {children}
+      <BannerSpacer/>
     </FooterContainer>
   )
 }

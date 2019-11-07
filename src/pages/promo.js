@@ -10,7 +10,7 @@ import Content from '../components/layout/Content'
 import { Button } from '../components/visual/Button'
 import { Space, P } from '../components/visual/Typography'
 
-import lifestyleImage from '../images/lifestyle/lifestyle-1.jpg'
+// import lifestyleImage from '../images/lifestyle/lifestyle-1.jpg'
 import starburst from '../images/promos/promo-starburst.svg'
 
 // const AnimatedCard = styled(motion.div)`
@@ -78,66 +78,99 @@ import starburst from '../images/promos/promo-starburst.svg'
 //   }
 // `
 
-const Message = styled(P)`
-  grid-column: 1 / 4;
-  margin: 0 1rem 0 1rem;
-  padding: 1rem;
-  align-self: stretch;
-  justify-self: stretch;
-  color: black;
-  font-family: 'Open Sans', sans-serif;
-  font-size: calc(18px + (32 - 18) * ((100vw - 300px) / (1600 - 300)));
-  line-height: 1.5;
-  text-align: center;
-`
+// const Content = styled.div`
+//   margin: 0;
+//   padding: 0;
+//   width: 100vw;
+//   height: 90vh;
+//   height: calc(var(--vh, 1vh) * 90);
+//   display: grid;
+//   grid-template-columns: repeat(8, 1fr);
+//   grid-template-rows: calc(var(--vh, 1vh) * 90) calc(var(--vh, 1vh) * 90);
+
+// `
+
+// const PromoBox = styled.div`
+//   grid-column: 1/9;
+//   grid-row: 1 / 2;
+//   border: 1px solid red;
+//   margin: 0;
+//   padding: 0;
+//   width: 100vw;
+//   height: 90vh;
+//   height: calc(var(--vh, 1vh) * 90);
+//   display: grid;
+//   grid-template-rows: repeat(8, 1fr);
+//   grid-template-columns: repeat(8, 1fr);
+
+//   @media (orientation: landscape) {
+//     width: 80vw;
+//     height: 100vh;
+//     display: grid;
+//     grid-template-rows: repeat(8, 1fr);
+//     grid-template-columns: repeat(8, 1fr);
+//   } 
+// `
+
+// const Message = styled(P)`
+//   grid-column: 1 / 4;
+//   margin: 0 1rem 0 1rem;
+//   padding: 1rem;
+//   align-self: stretch;
+//   justify-self: stretch;
+//   color: black;
+//   font-family: 'Open Sans', sans-serif;
+//   font-size: calc(18px + (32 - 18) * ((100vw - 300px) / (1600 - 300)));
+//   line-height: 1.5;
+//   text-align: center;
+// `
 
 const PromoVacation = styled.div`
   grid-column: 1 / 4;
-  /* grid-row: 1 / 9; */
-  height: 80vh;
-  margin: 2rem;
-  border-radius: 32px;
-  margin: 1rem;
+  margin: 0;
   padding: 0;
+  height: 90vh;
+  height: calc(var(--vh, 1vh) * 90);
   display: grid;
   grid-template-rows: repeat(8, 1fr);
   grid-template-columns: repeat(8, 1fr);
-  /* border: 1px red solid; */
-  @media (orientation: landscape) {
-    grid-column: 1 / 3;
-  }
-`
-
-const NarrowPromoVacationImage = styled(Img)`
-  grid-row: 1 / 9;
-  grid-column: 1 / 9;
-  object-fit: cover;
-  z-index: 1;
-  border-radius: 32px;
 
   @media(orientation: landscape) {
-    display: none;
+    height: 100vh;
   }
 `
 
-const WidePromoVacationImage = styled(Img)`
-  display: none;
+// const NarrowPromoVacationImage = styled(Img)`
+//   grid-row: 1 / 9;
+//   grid-column: 1 / 9;
+//   object-fit: cover;
+//   z-index: 1;
+//   border-radius: 32px;
 
-  @media(orientation: landscape) {
-    grid-row: 1 / 9;
-    grid-column: 1 / 9;
-    object-fit: cover;
-    z-index: 1;
-    border-radius: 32px;
-  }
-`
+//   @media(orientation: landscape) {
+//     display: none;
+//   }
+// `
+
+// const WidePromoVacationImage = styled(Img)`
+//   display: none;
+
+//   @media(orientation: landscape) {
+//     grid-row: 1 / 9;
+//     grid-column: 1 / 9;
+//     object-fit: cover;
+//     z-index: 1;
+//     border-radius: 32px;
+//   }
+// `
 
 const PromoVacationImage = styled(Img)`
+  margin: 0;
+  padding: 0;
   grid-row: 1 / 9;
   grid-column: 1 / 9;
   object-fit: cover;
   z-index: 1;
-  border-radius: 32px;
 `
 
 const PromoVacationText = styled.div`
@@ -145,13 +178,8 @@ const PromoVacationText = styled.div`
   padding: 1rem;
   grid-row: 1 / 9;
   grid-column: 1 / 9;
-  /* align-self: center; */
   background: rgba(0, 0, 0, 0.5);
-  border-radius: 32px;
   z-index: 2;
-  /* display: grid;
-  grid-template-rows: repeat(3, 1fr);
-  grid-template-columns: repeat(8, 1fr); */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -161,6 +189,7 @@ const PromoVacationText = styled.div`
     grid-row: 2 / 8;
     grid-column: 2 / 6;
     box-shadow: 0px 0px 32px rgba(255,255,255,0.5);
+    border-radius: 32px;
   }
 `
 
@@ -268,10 +297,11 @@ const PromoBang = styled.div`
 const PromoAmount = styled.p`
   color: white;
   font-size: 12px;
-  line-height: 1;
+  line-height: 1.25;
   grid-row: 1 / 2;
   grid-column: 1 / 2;
   z-index: 2;
+  text-align: center;
   transform: rotate(-16deg);
   font-family: 'Open Sans', sans-serif;
 
@@ -293,7 +323,8 @@ const PromoStarburst = styled.img`
 `
 
 const Form = styled.form`
-  grid-column: 1 / 4;
+  grid-column: 1 / 9;
+  grid-row: 2 / 3;
   margin: 0;
   padding: 0;
   width: 100vw;
@@ -419,62 +450,76 @@ const Promo = ({ data, intl }) => {
     //   }}
     // >
     <Content>
-      <Message>{intl.formatMessage({ id: "promo-subtitle" })}</Message>
       <PromoVacation>
+        {/* <Message>{intl.formatMessage({ id: "promo-subtitle" })}</Message> */}
         <PromoVacationText>
-          <PromoTitle>{intl.formatMessage({ id: "promo-vegas-title" })}</PromoTitle>
-          <PromoInfo>{intl.formatMessage({ id: "promo-vegas-info" })}</PromoInfo>
+          <PromoTitle>Exclusive VIP<br/>Trip to Vietnam</PromoTitle>
+          <PromoInfo>Airfare for 4 +<br/>7 Nights at<br/>the Alma Resort</PromoInfo>
+          <PromoInfo>Winner will be chosen by<br/>April 20, 2020</PromoInfo>
+          <PromoInfo>No purchase required</PromoInfo>
           <Space/>
           <PromoDetails>
             <PromoBang>
               <PromoStarburst src={starburst}/>
-              <PromoAmount>{intl.formatMessage({ id: "promo-vegas-amount" })}</PromoAmount>
+              <PromoAmount>$10,000<br/>Value!</PromoAmount>
             </PromoBang>
-            <PromoItems>
+            {/* <PromoItems>
               <PromoItem>{intl.formatMessage({ id: "promo-vegas-hotel-1" })}</PromoItem>
               <PromoItem>{intl.formatMessage({ id: "promo-vegas-hotel-2" })}</PromoItem>
               <PromoItem>{intl.formatMessage({ id: "promo-vegas-hotel-3" })}</PromoItem>
               <PromoItem>{intl.formatMessage({ id: "promo-vegas-hotel-4" })}</PromoItem>
               <PromoItem>{intl.formatMessage({ id: "promo-vegas-tickets" })}</PromoItem>
-              {/* <Space/> */}
-            </PromoItems>
+            </PromoItems> */}
           </PromoDetails>
-          <PromoDisclaimer>{intl.formatMessage({ id: "promo-disclaimer-1" })}</PromoDisclaimer>
+          {/* <PromoDisclaimer>{intl.formatMessage({ id: "promo-disclaimer-1" })}</PromoDisclaimer> */}
         </PromoVacationText>
-        {/* <NarrowPromoVacationImage fluid={data.promoVegas.childImageSharp.fluid} />
-        <WidePromoVacationImage fluid={data.promoVegas.childImageSharp.fluid} /> */}
-        {/* <PromoDisclaimer>{intl.formatMessage({ id: "promo-disclaimer-1" })}</PromoDisclaimer> */}
-        <PromoVacationImage fluid={data.promoVegas.childImageSharp.fluid} />
+        <PromoVacationImage fluid={data.promoVietnam.childImageSharp.fluid} />
       </PromoVacation>
-      <PromoVacation>
-        <PromoVacationText>
-          <PromoTitle>{intl.formatMessage({ id: "promo-cruise-title" })}</PromoTitle>
-          <PromoInfo>{intl.formatMessage({ id: "promo-cruise-info" })}</PromoInfo>
-          <PromoItem>{intl.formatMessage({ id: "promo-cruise-itineraries" })}</PromoItem>
-          <Space />
-          <PromoDetails>
-            <PromoBang>
-              <PromoStarburst src={starburst}/>
-              <PromoAmount>{intl.formatMessage({ id: "promo-cruise-amount" })}</PromoAmount>
-            </PromoBang>
-            <PromoItems>
-              <PromoItem>{intl.formatMessage({ id: "promo-cruise-destination-1" })}</PromoItem>
-              <PromoItem>{intl.formatMessage({ id: "promo-cruise-destination-2" })}</PromoItem>
-              <PromoItem>{intl.formatMessage({ id: "promo-cruise-destination-3" })}</PromoItem>
-              {/* <Space/> */}
-            </PromoItems>
-          </PromoDetails>
-          <PromoDisclaimer>{intl.formatMessage({ id: "promo-disclaimer-1" })}</PromoDisclaimer>
-        </PromoVacationText>
-        {/* <NarrowPromoVacationImage fluid={data.promoCruise.childImageSharp.fluid} />
-        <WidePromoVacationImage fluid={data.promoCruise.childImageSharp.fluid} /> */}
-        {/* <PromoDisclaimer>{intl.formatMessage({ id: "promo-disclaimer-1" })}</PromoDisclaimer> */}
-        <PromoVacationImage fluid={data.promoCruise.childImageSharp.fluid} />
-      </PromoVacation>
-      <Space/>
-      <Space/>
-      <Space/>
-      <Space/>
+        {/* <Message>{intl.formatMessage({ id: "promo-subtitle" })}</Message>
+        <PromoVacation>
+          <PromoVacationText>
+            <PromoTitle>{intl.formatMessage({ id: "promo-vegas-title" })}</PromoTitle>
+            <PromoInfo>{intl.formatMessage({ id: "promo-vegas-info" })}</PromoInfo>
+            <Space/>
+            <PromoDetails>
+              <PromoBang>
+                <PromoStarburst src={starburst}/>
+                <PromoAmount>{intl.formatMessage({ id: "promo-vegas-amount" })}</PromoAmount>
+              </PromoBang>
+              <PromoItems>
+                <PromoItem>{intl.formatMessage({ id: "promo-vegas-hotel-1" })}</PromoItem>
+                <PromoItem>{intl.formatMessage({ id: "promo-vegas-hotel-2" })}</PromoItem>
+                <PromoItem>{intl.formatMessage({ id: "promo-vegas-hotel-3" })}</PromoItem>
+                <PromoItem>{intl.formatMessage({ id: "promo-vegas-hotel-4" })}</PromoItem>
+                <PromoItem>{intl.formatMessage({ id: "promo-vegas-tickets" })}</PromoItem>
+              
+              </PromoItems>
+            </PromoDetails>
+            <PromoDisclaimer>{intl.formatMessage({ id: "promo-disclaimer-1" })}</PromoDisclaimer>
+          </PromoVacationText>
+          <PromoVacationImage fluid={data.promoVegas.childImageSharp.fluid} />
+        </PromoVacation>
+        <PromoVacation>
+          <PromoVacationText>
+            <PromoTitle>{intl.formatMessage({ id: "promo-cruise-title" })}</PromoTitle>
+            <PromoInfo>{intl.formatMessage({ id: "promo-cruise-info" })}</PromoInfo>
+            <PromoItem>{intl.formatMessage({ id: "promo-cruise-itineraries" })}</PromoItem>
+            <Space />
+            <PromoDetails>
+              <PromoBang>
+                <PromoStarburst src={starburst}/>
+                <PromoAmount>{intl.formatMessage({ id: "promo-cruise-amount" })}</PromoAmount>
+              </PromoBang>
+              <PromoItems>
+                <PromoItem>{intl.formatMessage({ id: "promo-cruise-destination-1" })}</PromoItem>
+                <PromoItem>{intl.formatMessage({ id: "promo-cruise-destination-2" })}</PromoItem>
+                <PromoItem>{intl.formatMessage({ id: "promo-cruise-destination-3" })}</PromoItem>
+              </PromoItems>
+            </PromoDetails>
+            <PromoDisclaimer>{intl.formatMessage({ id: "promo-disclaimer-1" })}</PromoDisclaimer>
+          </PromoVacationText>
+          <PromoVacationImage fluid={data.promoCruise.childImageSharp.fluid} />
+        </PromoVacation> */}
       <Form
         name="alma-form"
         method="post"
@@ -497,7 +542,7 @@ const Promo = ({ data, intl }) => {
         </SubmitButton>
         <Disclaimer>{intl.formatMessage({ id: "promo-disclaimer-3" })}</Disclaimer>
       </Form>
-    {/* </AnimatedCard> */}
+      {/* </AnimatedCard> */}
     </Content>
   )
 }
@@ -514,6 +559,13 @@ export const query = graphql`
     promoCruise: file(relativePath: { eq: "promos/promo-cruise.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 2160) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    promoVietnam: file(relativePath: { eq: "promos/promo-vietnam.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2048) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }

@@ -8,6 +8,7 @@ import almaLogo from '../images/alma/alma-logo.svg'
 
 import PromoCruise from '../images/promos/promo-cruise-wide.jpg'
 import PromoVegas from '../images/promos/promo-vegas-wide.jpg'
+import PromoVietnam from '../images/promos/promo-vietnam-wide.jpg'
 
 import './Layout.css'
 
@@ -226,6 +227,33 @@ const PromoVegasImage = styled(Image)`
   ; */
 `
 
+const PromoVietnamImage = styled(Image)`
+  grid-column: 1 / 5;
+  grid-row: 1 / 2;
+  justify-self: stretch;
+  object-fit: cover;
+  z-index: 1;
+  /* mask-image: linear-gradient(
+    to right,
+    hsla(0, 0%, 100%, 0) 0%,
+    hsla(0, 0%, 100%, 0.013) 8.1%,
+    hsla(0, 0%, 100%, 0.049) 15.5%,
+    hsla(0, 0%, 100%, 0.104) 22.5%,
+    hsla(0, 0%, 100%, 0.175) 29%,
+    hsla(0, 0%, 100%, 0.259) 35.3%,
+    hsla(0, 0%, 100%, 0.352) 41.2%,
+    hsla(0, 0%, 100%, 0.45) 47.1%,
+    hsla(0, 0%, 100%, 0.55) 52.9%,
+    hsla(0, 0%, 100%, 0.648) 58.8%,
+    hsla(0, 0%, 100%, 0.741) 64.7%,
+    hsla(0, 0%, 100%, 0.825) 71%,
+    hsla(0, 0%, 100%, 0.896) 77.5%,
+    hsla(0, 0%, 100%, 0.951) 84.5%,
+    hsla(0, 0%, 100%, 0.987) 91.9%,
+    hsl(0, 0%, 100%) 100%)
+  ; */
+`
+
 const PromoHeader = styled.h1`
   grid-column: 1 / 5;
   grid-row: 1 / 2;
@@ -234,9 +262,10 @@ const PromoHeader = styled.h1`
   justify-self: center;
   align-self: center;
   z-index: 2;
-  color: white;
-  background: rgba(0,0,0,0.25);
-  text-shadow: 0px 0px 8px rgba(0,0,0,1);
+  color: black;
+  background: white;
+  /* text-shadow: 0px 0px 8px rgba(0,0,0,1); */
+  box-shadow: 0px 0px 32px rgba(0,0,0,0.5);
   border-radius: 32px;
   font-family: 'Quicksand', sans-serif;
   text-transform: uppercase;
@@ -244,7 +273,7 @@ const PromoHeader = styled.h1`
 
   @media (orientation: landscape) {
     text-shadow: none;
-    box-shadow: 0px 0px 32px black;
+    /* box-shadow: 0px 0px 32px black; */
     border-radius: 32px;
     background: white;
     color: black;
@@ -308,7 +337,7 @@ const Layout = ({ children, location: { pathname, hash } }) => {
       </Menu>
       <Main id='main'>{children}</Main>
       <AlmaLogo alt='The Alma Logo' src={almaLogo} />
-      <PromoBanner
+      {/* <PromoBanner
         style={{
           display:
             pathname.includes('promo') ?
@@ -327,7 +356,28 @@ const Layout = ({ children, location: { pathname, hash } }) => {
         <PromoCruiseImage src={PromoCruise} />
         <PromoHeader>Vacation Giveaway! Click Here!</PromoHeader>
         <PromoVegasImage src={PromoVegas} />
+      </PromoBanner> */}
+
+      <PromoBanner
+        style={{
+          display:
+            pathname.includes('promo') ?
+            'none'
+            :
+            pathname.includes('careers') ?
+            'none'
+            :
+            pathname.includes('success') ?
+            'none'
+            :
+            'grid'
+        }}
+        to='/promo'
+      >
+        <PromoHeader>Win a trip to Vietnam!</PromoHeader>
+        <PromoVietnamImage src={PromoVietnam} />
       </PromoBanner>
+
     </App>
   )
 }
