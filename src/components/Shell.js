@@ -49,7 +49,7 @@ export default styled(Link)`
     z-index: 20;
   }
 
-  @media (min-width: 50rem) {
+  @media (orientation: landscape) {
     display: none;
   }
 `

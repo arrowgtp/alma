@@ -31,7 +31,7 @@ const SmallMenu = styled.div`
   z-index: 1000;
   box-shadow: 0px 0px 64px rgba(0, 0, 0, 0.25);
 
-  @media (min-width: 50rem) {
+  @media (orientation: landscape) {
     display: none;
   }
 `
@@ -74,7 +74,7 @@ const LargeMenu = styled.div`
     z-index: 10;
   } */
 
-  @media (min-width: 50rem) {
+  @media (orientation: landscape) {
     position: fixed;
     top: 0;
     bottom: 0;

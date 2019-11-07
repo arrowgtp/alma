@@ -17,7 +17,7 @@ const Box = styled.div`
     align-items: center;
     justify-content: center;
     
-    @media (min-width: 50rem) {
+    @media (orientation: landscape) {
       padding: 4rem;
       flex-direction: row;
     }
@@ -33,7 +33,7 @@ const Box = styled.div`
     grid-template-rows: repeat(8, 1fr);
     grid-template-columns: repeat(8, 1fr);
 
-    @media (min-width: 50rem) {
+    @media (orientation: landscape) {
       height: 100vh;
     }
   `}

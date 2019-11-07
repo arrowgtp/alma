@@ -19,7 +19,7 @@ const MainContainer = styled.main`
   background-position: center;
   box-shadow: 0px 0px 16px hsla(0,0%,0%,1);
 
-  @media (min-width: 50rem) {
+  @media (orientation: landscape) {
     grid-column: 2 / 3;
     grid-row: 1 / 6;
     /* overflow-x: hidden;

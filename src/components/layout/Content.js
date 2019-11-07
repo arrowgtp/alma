@@ -11,9 +11,9 @@ const Container = styled(motion.div)`
   display: grid;
   grid-template-rows: auto;
   grid-template-columns: 
-    minmax(2rem, 1fr) 
+    minmax(1rem, 1fr) 
     minmax(1rem, 45rem) 
-    minmax(2rem, 1fr)
+    minmax(1rem, 1fr)
   ;
 `
 

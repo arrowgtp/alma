@@ -19,7 +19,7 @@ const Image = styled(Img)`
   }
   /* box-shadow: 0px 0px 16px hsla(0, 0%, 0%, 0.1); */
 
-  @media (min-width: 50rem) {
+  @media (orientation: landscape) {
     /* ${props => props.margin && `margin: 0 2rem`} */
     /* ${props => props.rounded && `border-radius: 24px`} */
     border-radius: ${props => props.rounded ? "24px" : "0"};

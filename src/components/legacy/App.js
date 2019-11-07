@@ -19,7 +19,7 @@ const AppContainer = styled(motion.div)`
   /* opacity: 0; */
   z-index: 2;
 
-  @media (min-width: 50rem) {
+  @media (orientation: landscape) {
     grid-template-rows: 100vh;
     grid-template-columns: 20vw 80vw;
   }

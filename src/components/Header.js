@@ -41,7 +41,7 @@ const HeaderTitle = styled.h1`
   text-shadow: ${props => props.white ? "none" : "0px 0px 8px hsla(0, 0%, 0%, 0.25)"};
   margin-right: -8px;
 
-  @media (min-width: 50rem) {
+  @media (orientation: landscape) {
     padding: calc(68px + (68 - 68) * ((100vw - 300px) / (1600 - 300))) 0;
     font-size: calc(18px + (40 - 18) * ((100vw - 300px) / (1600 - 300)));
     margin-right: -24px;
@@ -80,7 +80,7 @@ const HeaderBackground = styled.div`
       background-image: url(${almaHeaderWhiteSmall});
   `}
 
-  @media (min-width: 50rem) {
+  @media (orientation: landscape) {
     ${props =>
       props.blue && `
       background-image: url(${almaHeaderBlueLarge});

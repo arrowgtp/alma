@@ -11,7 +11,7 @@ export default styled.div`
   justify-content: center;
   /* border: 1px solid red; */
 
-  @media (min-width: 50rem) {
+  @media (orientation: landscape) {
     padding: 4rem;
     flex-direction: row;
   }

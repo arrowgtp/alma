@@ -16,7 +16,7 @@ const SmallMenuContainer = styled.div`
   align-items: center;
   justify-items: center;
 
-  @media (min-width: 50rem) {
+  @media (orientation: landscape) {
     display: none;
   }
 `
@@ -24,7 +24,7 @@ const SmallMenuContainer = styled.div`
 const LargeMenuContainer = styled.div`
   display: none;
 
-  @media (min-width: 50rem) {
+  @media (orientation: landscape) {
     position: fixed;
     top: 0;
     bottom: 0;

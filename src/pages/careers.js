@@ -52,7 +52,7 @@ const CenteredStickyContainer = styled(FullWidthContainer)`
   -webkit-overflow-scrolling: touch;
   box-shadow: 0px 0px 32px rgba(0,0,0,.25);
 
-  @media (min-width: 50rem) {
+  @media (orientation: landscape) {
     align-self: center;
     justify-self: center;
     /* max-width: 75%; */
@@ -73,7 +73,7 @@ const CenteredStickyContainer = styled(FullWidthContainer)`
 const CustomSpace = styled.div`
   height: 2rem;
 
-  @media (min-width: 50rem) {
+  @media (orientation: landscape) {
     height: 8rem
   }
 `
@@ -97,7 +97,7 @@ const JobButton = styled.button`
     outline: none;
   }
 
-  @media (min-width: 50rem) {
+  @media (orientation: landscape) {
     margin: 0 1rem;
     font-size: calc(6px + (18 - 6) * ((100vw - 300px) / (1600 - 300)));
   }

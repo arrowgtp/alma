@@ -19,7 +19,7 @@ const ViewContainer = styled.div`
   align-items: center;
   z-index: 0;
 
-  @media (min-width: 50rem) {
+  @media (orientation: landscape) {
     height: 100vh;
   }
 `

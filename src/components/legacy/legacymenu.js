@@ -76,7 +76,7 @@ const MobileMenu = styled(animated.div)`
 const LargeMenu = styled.div`
   display: none;
 
-  @media (min-width: 50rem) {
+  @media (orientation: landscape) {
     grid-column: 1 / 2;
     grid-row: 4 / 5;
     height: 60vh;

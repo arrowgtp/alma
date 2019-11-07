@@ -29,7 +29,7 @@ const SmallAlmaLogo = styled(Link)`
     border-radius: 50% 50% 0 0;
   }
 
-  @media (min-width: 50rem) {
+  @media (orientation: landscape) {
     display: none;
   }
 `
@@ -37,7 +37,7 @@ const SmallAlmaLogo = styled(Link)`
 const LargeAlmaLogo = styled(Link)`
   display: none;
 
-  @media (min-width: 50rem) {
+  @media (orientation: landscape) {
     margin: 0;
     padding: 0;
     grid-column: 1 / 2;

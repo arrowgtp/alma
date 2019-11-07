@@ -12,7 +12,7 @@ const FullContentCard = styled.div`
   grid-template-rows: repeat(8, 1fr);
   grid-template-columns: repeat(8, 1fr);
 
-  @media (min-width: 50rem) {
+  @media (orientation: landscape) {
     height: 100vh;
   }
 `
@@ -32,7 +32,7 @@ const HeadingContainer = styled.div`
   /* justify-self: center; */
   z-index: 5;
 
-  @media (min-width: 50rem) {
+  @media (orientation: landscape) {
     grid-column: 2 / 8;
     margin: 0 4rem;
     /* max-width: 45rem; */

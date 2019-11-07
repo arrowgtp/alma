@@ -19,7 +19,7 @@ const Box = styled.div`
   justify-content: center;
   /* border: 1px solid red; */
 
-  @media (min-width: 50rem) {
+  @media (orientation: landscape) {
     width: 80vw;
     height: 100vh;
     padding: 8rem;

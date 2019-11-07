@@ -60,7 +60,7 @@ const P = styled.p`
   font-size: calc(16px + (24 - 16) * ((100vw - 300px) / (1600 - 300)));
   line-height: calc(28px + (32 - 28) * ((100vw - 300px) / (1600 - 300)));
 
-  @media (min-width: 50rem) {
+  @media (orientation: landscape) {
     font-size: calc(12px + (20 - 12) * ((100vw - 300px) / (1600 - 300)));
     line-height: calc(28px + (40 - 28) * ((100vw - 300px) / (1600 - 300)));
   }
@@ -95,7 +95,7 @@ const LI = styled.li`
   font-size: 16px;
   padding: 0.25rem;
 
-  @media (min-width: 50rem) {
+  @media (orientation: landscape) {
     font-size: calc(12px + (20 - 12) * ((100vw - 300px) / (1600 - 300)));
     line-height: calc(28px + (40 - 28) * ((100vw - 300px) / (1600 - 300)));
   }

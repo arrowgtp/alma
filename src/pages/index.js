@@ -30,7 +30,7 @@ const MainLogo = styled.img`
   /* filter: drop-shadow( 0px 0px 16px rgba(0, 0, 0, 0.25)); */
   z-index: 1;
 
-  @media (min-width: 50rem) {
+  @media (orientation: landscape) {
     display: none;
   }
 `
@@ -46,7 +46,7 @@ const PageSlogan = styled.div`
   justify-self: center;
   margin-bottom: 3rem;
 
-  @media (min-width: 50rem) {
+  @media (orientation: landscape) {
     grid-row: 8 / 9;
     grid-column: 1 / 9;
   }
@@ -333,7 +333,7 @@ const InstaGrid = styled.div`
   grid-template-rows: 1fr 1fr 1fr;
   grid-gap: 2rem;
 
-  @media (min-width: 50rem) {
+  @media (orientation: landscape) {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
   }

@@ -47,7 +47,7 @@ const SmallNav = styled(motion.div)`
   z-index: 100;
   /* border: 1px solid red; */
 
-  @media (min-width: 50rem) {
+  @media (orientation: landscape) {
     display: none;
   }
 `
@@ -94,7 +94,7 @@ const NavBlock = styled.div`
     border: 1px solid tomato;
   } */
 
-  @media (min-width: 50rem ) {
+  @media (orientation: landscape) {
     display: none;
   }
 `
@@ -102,7 +102,7 @@ const NavBlock = styled.div`
 const LargeNav = styled.div`
   display: none;
 
-  @media (min-width: 50rem) {
+  @media (orientation: landscape) {
     grid-row: 2 / 3;
     grid-column: 1 / 2;
     display: grid;
@@ -143,7 +143,7 @@ const AlmaLink = styled(Link)`
     box-shadow: inset 0 0 8px hsla(0,0%,0%,0.25);
   } */
 
-  @media (min-width: 50rem) {
+  @media (orientation: landscape) {
     font-size: calc(10px + (18 - 10) * ((100vw - 300px) / (1600 - 300)));
     grid-column: 2 / 4;
     line-height: 1.25;
@@ -163,7 +163,7 @@ const AlmaLink2 = styled(Link)`
   line-height: 1;
   color: grey;
 
-  @media (min-width: 50rem) {
+  @media (orientation: landscape) {
     grid-column: 2 / 4;
     font-size: calc(8px + (16 - 8) * ((100vw - 300px) / (1600 - 300)));
     line-height: 1.25;
@@ -180,7 +180,7 @@ const AlmaBulletShell = styled.img`
   align-self: center;
   justify-self: center;
 
-  @media (min-width: 50rem) {
+  @media (orientation: landscape) {
     grid-column: 1 / 2;
     margin-bottom: 0px;
   }
@@ -198,7 +198,7 @@ const SocialButtons = styled.div`
   align-items: center;
   z-index: 1000;
 
-  @media (min-width: 50rem) {
+  @media (orientation: landscape) {
     margin: 0;
     grid-column: 1 / 4;
     grid-row: 2 / 3;
@@ -225,7 +225,7 @@ const MenuButton = styled(Button)`
   grid-row: 1 / 2;
   z-index: 100;
 
-  @media (min-width: 50rem) {
+  @media (orientation: landscape) {
     display: none
   }
 `
@@ -242,7 +242,7 @@ const Locales = styled.div`
   z-index: 1000;
   -webkit-tap-highlight-color: transparent;
 
-  @media (min-width: 50rem) {
+  @media (orientation: landscape) {
     grid-column: 1 / 4;
     grid-row: 1 / 2;
     align-self: center;

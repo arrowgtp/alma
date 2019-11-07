@@ -34,7 +34,7 @@ const App = styled(motion.div)`
   grid-template-columns: repeat(3, 1fr);
   z-index: 2;
 
-  @media (min-width: 50rem) {
+  @media (orientation: landscape) {
     grid-template-rows: 100vh;
     grid-template-columns: 20vw 80vw;
   }
@@ -56,7 +56,7 @@ const Main = styled.main`
   background-size: 16rem; */
   box-shadow: 0px 0px 16px hsla(0,0%,0%,1);
 
-  @media (min-width: 50rem) {
+  @media (orientation: landscape) {
     grid-column: 2 / 3;
     grid-row: 1 / 6;
     /* overflow-x: hidden;
@@ -79,7 +79,7 @@ const AlmaLogo = styled.img`
   z-index: 0;
   opacity: 0.5;
   
-  @media (min-width: 50rem) {
+  @media (orientation: landscape) {
     grid-column: 2 / 3;
     grid-row: 1 / 5;
     /* position: fixed;
@@ -104,7 +104,7 @@ const Menu = styled.div`
   align-items: center;
   justify-items: center;
 
-  @media (min-width: 50rem) {
+  @media (orientation: landscape) {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -152,7 +152,7 @@ const PromoBanner = styled(Link)`
   grid-template-rows: 1;
   grid-template-columns: repeat(4, 1fr);
 
-  @media (min-width: 50rem) {
+  @media (orientation: landscape) {
     bottom: 0;
     right: 0;
     left: 20vw;
@@ -169,7 +169,7 @@ const Image = styled.img`
   height: 10vh;
   height: calc(var(--vh, 1vh) * 10);
 
-  @media (min-width: 50rem) {
+  @media (orientation: landscape) {
     height: 12vh;
   }
 `
@@ -242,7 +242,7 @@ const PromoHeader = styled.h1`
   text-transform: uppercase;
   font-size: 16px;
 
-  @media (min-width: 50rem) {
+  @media (orientation: landscape) {
     text-shadow: none;
     box-shadow: 0px 0px 32px black;
     border-radius: 32px;

@@ -46,7 +46,7 @@ const Button = styled(motion.button)`
     /* box-shadow: 0px 0px 8px rgba(0, 0, 200, 0.5); */
   }
 
-  @media (min-width: 50rem) {
+  @media (orientation: landscape) {
     font-size: calc(12px + (20 - 12) * ((100vw - 300px) / (1600 - 300)));
     line-height: calc(12px + (24 - 12) * ((100vw - 300px) / (1600 - 300)));
     padding: 

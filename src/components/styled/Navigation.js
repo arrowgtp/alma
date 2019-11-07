@@ -15,7 +15,7 @@ export default styled.header`
   font-size: 10px;
   /* border: 1px solid black; */
 
-  @media (min-width: 50rem) {
+  @media (orientation: landscape) {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
     height: 60vh;

@@ -11,7 +11,7 @@ const PromotionalButton = styled(Button)`
   justify-self: center;
   z-index: 100;
 
-  @media (min-width: 50rem) {
+  @media (orientation: landscape) {
     font-size: 24px;
     padding: 12px 16px;
     grid-column: 1 / 2;

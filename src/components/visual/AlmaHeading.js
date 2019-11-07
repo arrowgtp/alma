@@ -16,7 +16,7 @@ export default styled.h1`
   border-image: url(${almaBorder}) 42 stretch;
   /* font-family: 'Gothic A1', sans-serif; */
 
-  @media (min-width: 50rem) {
+  @media (orientation: landscape) {
     font-size: calc(28px + (40 - 28) * ((100vw - 300px) / (1600 - 300)));
   }
 

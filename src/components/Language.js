@@ -22,7 +22,7 @@ const LocaleButton = styled(Button)`
     /* border-left: 1px; */
   }
 
-  @media (min-width: 50rem) {
+  @media (orientation: landscape) {
     font-size: 10px;
     line-height: 1;
     padding: 4px;

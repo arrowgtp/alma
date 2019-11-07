@@ -103,7 +103,7 @@ const PromoVacation = styled.div`
   grid-template-rows: repeat(8, 1fr);
   grid-template-columns: repeat(8, 1fr);
   /* border: 1px red solid; */
-  @media (min-width: 50rem) {
+  @media (orientation: landscape) {
     grid-column: 1 / 3;
   }
 `
@@ -115,7 +115,7 @@ const NarrowPromoVacationImage = styled(Img)`
   z-index: 1;
   border-radius: 32px;
 
-  @media(min-width: 50rem) {
+  @media(orientation: landscape) {
     display: none;
   }
 `
@@ -123,7 +123,7 @@ const NarrowPromoVacationImage = styled(Img)`
 const WidePromoVacationImage = styled(Img)`
   display: none;
 
-  @media(min-width: 50rem) {
+  @media(orientation: landscape) {
     grid-row: 1 / 9;
     grid-column: 1 / 9;
     object-fit: cover;
@@ -157,7 +157,7 @@ const PromoVacationText = styled.div`
   align-items: center;
   justify-content: center;
 
-  @media (min-width: 50rem) {
+  @media (orientation: landscape) {
     grid-row: 2 / 8;
     grid-column: 2 / 6;
     box-shadow: 0px 0px 32px rgba(255,255,255,0.5);
@@ -195,7 +195,7 @@ const PromoInfo = styled.h2`
   /* border: 1px red solid; */
   font-family: 'Open Sans', sans-serif;
 
-  @media(min-width: 50rem) {
+  @media(orientation: landscape) {
     margin: 0 2rem;
     padding: 0rem;
   }
@@ -210,7 +210,7 @@ const PromoDetails = styled.div`
   /* border: 1px solid red; */
 
   
-  @media (min-width: 50rem) {
+  @media (orientation: landscape) {
     flex-direction: row;
   }
 `
@@ -225,7 +225,7 @@ const PromoItems = styled.div`
   justify-content: center;
   /* border: 1px solid red; */
 
-  @media (min-width: 50rem)  {
+  @media (orientation: landscape)  {
     margin: 0 0 0 1rem;
   }
 `
@@ -249,7 +249,7 @@ const PromoItem = styled.p`
   padding: 0;
   font-family: 'Open Sans', sans-serif;
 
-  @media (min-width: 50rem) {
+  @media (orientation: landscape) {
     font-size: calc(12px + (16 - 12) * ((100vw - 300px) / (1600 - 300)));
   }
 `
@@ -275,7 +275,7 @@ const PromoAmount = styled.p`
   transform: rotate(-16deg);
   font-family: 'Open Sans', sans-serif;
 
-  @media (min-width: 50rem) {
+  @media (orientation: landscape) {
     font-size: 16px;
   }
 `
@@ -287,7 +287,7 @@ const PromoStarburst = styled.img`
   grid-column: 1 / 2;
   z-index: 1;
 
-  @media(min-width: 50rem) {
+  @media(orientation: landscape) {
     width: 8rem;
   }
 `
@@ -309,7 +309,7 @@ const Form = styled.form`
   z-index: 100;
   opacity: 1;
 
-  @media (min-width: 50rem) {
+  @media (orientation: landscape) {
     position: fixed;
     top: 12.5vh;
     right: 2vw;
@@ -327,7 +327,7 @@ const Label = styled.label`
   margin: 0.25rem 0;
   padding: 0;
 
-  @media (min-width: 50rem) {
+  @media (orientation: landscape) {
     font-size: calc(12px + (16 - 12) * ((100vw - 300px) / (1600 - 300)));
     padding: 0.5rem 2rem;
   }
@@ -347,7 +347,7 @@ const Input = styled.input`
   outline: none;
   background: rgba(255,255,255,0.75);
   
-  @media (min-width: 50rem) {
+  @media (orientation: landscape) {
     font-size: 18px;
     margin: 0.5rem 0;
     height: 24px;
@@ -375,7 +375,7 @@ const SubmitButton = styled(Button)`
   /* box-shadow: 0px 0px 32px hsla(0,0%,0%,0.5); */
   text-shadow: none;
 
-  @media (min-width: 50rem) {
+  @media (orientation: landscape) {
     box-shadow: none;
   }
 
