@@ -532,7 +532,7 @@ const Promo = ({ data, intl }) => {
         >
         Enter Now!
         </SubmitButton>
-        <Disclaimer>{intl.formatMessage({ id: "promo-disclaimer-3" })}</Disclaimer>
+        <Disclaimer>{intl.formatMessage({ id: "promo-disclaimer-vietnam-trip" })}</Disclaimer>
       </Form>
       {/* </AnimatedCard> */}
     </Content>

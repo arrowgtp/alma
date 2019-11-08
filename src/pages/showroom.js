@@ -45,11 +45,12 @@ const Showroom = ({ data, intl }) => {
           title={intl.formatMessage({ id: "showroom-title" })}
         />
         <Space/>
-        {/* <H1>{intl.formatMessage({ id: "alma-contact-title" })}</H1>
-        <Space/> */}
+        <P>{intl.formatMessage({ id: "showroom-paragraph-1" })}</P>
+        <Space/>
+        <P>{intl.formatMessage({ id: "showroom-paragraph-2" })}</P>
+        <Space/>
         <H2>{intl.formatMessage({ id: "alma-phone-number-title" })}</H2>
         <SmallSpace/>
-        {/* <P>{intl.formatMessage({ id: "alma-phone-number" })}</P> */}
         <a href="tel:+18336962562"><P>1.833.OWN.ALMA | 1.833.696.2562</P></a>
         <Space/>
         <H2>{intl.formatMessage({ id: "showroom-address-title" })}</H2>

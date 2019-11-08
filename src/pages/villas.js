@@ -174,16 +174,15 @@ const Villas = ({ data, intl }) => {
         </FlexContainer>
       </Box>
 
-      <Box center> 
+      <Box center>
         <Space/>
-        <P>{intl.formatMessage({ id: "villas-to-restaurants" })}</P>
+        <P>{intl.formatMessage({ id: "resort-to-apartments" })}</P>
         <Space/>
         <ButtonContainer>
-          <Link to="/restaurants">
-            <Button>{intl.formatMessage({ id: "restaurants-title" })}</Button>
+          <Link to="/apartments">
+            <Button>{intl.formatMessage({ id: "apartments-title" })}</Button>
           </Link> 
         </ButtonContainer>
-        <Space/> 
         <Space/>
       </Box>
 

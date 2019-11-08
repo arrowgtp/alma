@@ -346,8 +346,8 @@ const Navigation = ({ intl }) => {
               <NavBlock>
                 <AlmaBulletShell src={almaShell}/>
                 <AlmaLink to={`/resort`} onClick={toggle}>{intl.formatMessage({ id: "nav-resort" })}</AlmaLink>
-                  <AlmaLink2 to={`/apartments`} onClick={toggle}>{intl.formatMessage({ id: "nav-apartments" })}</AlmaLink2>
                   <AlmaLink2 to={`/villas`} onClick={toggle}>{intl.formatMessage({ id: "nav-villas" })}</AlmaLink2>
+                  <AlmaLink2 to={`/apartments`} onClick={toggle}>{intl.formatMessage({ id: "nav-apartments" })}</AlmaLink2>
                   <AlmaLink2 to={`/restaurants`} onClick={toggle}>{intl.formatMessage({ id: "nav-restaurants" })}</AlmaLink2>
                   <AlmaLink2 to={`/amenities`} onClick={toggle}>{intl.formatMessage({ id: "nav-amenities" })}</AlmaLink2>
                   <AlmaLink2 to={`/construction`} onClick={toggle}>{intl.formatMessage({ id: "nav-construction" })}</AlmaLink2>
@@ -403,8 +403,8 @@ const Navigation = ({ intl }) => {
         <LargeLinkTree>
         <AlmaBulletShell src={almaShell}/>
           <AlmaLink to={`/resort`}>{intl.formatMessage({ id: "nav-resort" })}</AlmaLink>
-            <AlmaLink2 to={`/apartments`}>{intl.formatMessage({ id: "nav-apartments" })}</AlmaLink2>
             <AlmaLink2 to={`/villas`}>{intl.formatMessage({ id: "nav-villas" })}</AlmaLink2>
+            <AlmaLink2 to={`/apartments`}>{intl.formatMessage({ id: "nav-apartments" })}</AlmaLink2>
             <AlmaLink2 to={`/restaurants`}>{intl.formatMessage({ id: "nav-restaurants" })}</AlmaLink2>
             <AlmaLink2 to={`/amenities`}>{intl.formatMessage({ id: "nav-amenities" })}</AlmaLink2>
             <AlmaLink2 to={`/construction`}>{intl.formatMessage({ id: "nav-construction" })}</AlmaLink2>

@@ -45,12 +45,147 @@ const Construction = ({ data, intl }) => {
         <HeadingContainer>
           <AlmaHeader white title={intl.formatMessage({ id: "construction-title" })}/>
         </HeadingContainer>
-        <Image grid fluid={data.sep1.childImageSharp.fluid}/>
+        <Image grid fluid={data.oct14.childImageSharp.fluid}/>
         <Caption large>Actual Image</Caption>
         <Watermark large/>
       </FullContentCard>
 
+      <CenteredContainer>
+        <Space/>
+        <AlmaHeader
+          blue
+          title={intl.formatMessage({ id: "construction-october-2019" })}
+        />
+        <Space/>
+        <P>{intl.formatMessage({ id: "construction-october-2019-paragraph-1" })}</P>
+        <Space/>
+        <P>{intl.formatMessage({ id: "construction-october-2019-paragraph-2" })}</P>
+        <Space/>
+        <P>{intl.formatMessage({ id: "construction-october-2019-paragraph-3" })}</P>
+        <Space/>
+        <P>{intl.formatMessage({ id: "construction-october-2019-paragraph-4" })}</P>
+        <Space/>
+        <P>{intl.formatMessage({ id: "construction-october-2019-paragraph-5" })}</P>
+        <Space/>
+      </CenteredContainer>
 
+      <FullWidthContainer>
+        <Space/>
+        <FullImage>
+          <Image rounded fluid={data.oct1.childImageSharp.fluid}/>
+          <Caption medium>Actual Image</Caption>
+          <Watermark medium/>
+        </FullImage>
+        <Space/>
+        <FullImage>
+          <Image rounded fluid={data.oct2.childImageSharp.fluid}/>
+          <Caption medium>Actual Image</Caption>
+          <Watermark medium/>
+        </FullImage>
+        <Space/>
+        <FullImage>
+          <Image rounded fluid={data.oct3.childImageSharp.fluid}/>
+          <Caption medium>Actual Image</Caption>
+          <Watermark medium/>
+        </FullImage>
+        <Space/>
+        <FullImage>
+          <Image rounded fluid={data.oct4.childImageSharp.fluid}/>
+          <Caption medium>Actual Image</Caption>
+          <Watermark medium/>
+        </FullImage>
+        <Space/>
+        <FullImage>
+          <Image rounded fluid={data.oct5.childImageSharp.fluid}/>
+          <Caption medium>Actual Image</Caption>
+          <Watermark medium/>
+        </FullImage>
+        <Space/>
+        <FullImage>
+          <Image rounded fluid={data.oct6.childImageSharp.fluid}/>
+          <Caption medium>Actual Image</Caption>
+          <Watermark medium/>
+        </FullImage>
+        <Space/>
+        <FullImage>
+          <Image rounded fluid={data.oct7.childImageSharp.fluid}/>
+          <Caption medium>Actual Image</Caption>
+          <Watermark medium/>
+        </FullImage>
+        <Space/>
+        <FullImage>
+          <Image rounded fluid={data.oct8.childImageSharp.fluid}/>
+          <Caption medium>Actual Image</Caption>
+          <Watermark medium/>
+        </FullImage>
+        <Space/>
+        <FullImage>
+          <Image rounded fluid={data.oct9.childImageSharp.fluid}/>
+          <Caption medium>Actual Image</Caption>
+          <Watermark medium/>
+        </FullImage>
+        <Space/>
+        <FullImage>
+          <Image rounded fluid={data.oct10.childImageSharp.fluid}/>
+          <Caption medium>Actual Image</Caption>
+          <Watermark medium/>
+        </FullImage>
+        <Space/>
+        <FullImage>
+          <Image rounded fluid={data.oct11.childImageSharp.fluid}/>
+          <Caption medium>Actual Image</Caption>
+          <Watermark medium/>
+        </FullImage>
+        <Space/>
+        <FullImage>
+          <Image rounded fluid={data.oct12.childImageSharp.fluid}/>
+          <Caption medium>Actual Image</Caption>
+          <Watermark medium/>
+        </FullImage>
+        <Space/>
+        <FullImage>
+          <Image rounded fluid={data.oct13.childImageSharp.fluid}/>
+          <Caption medium>Actual Image</Caption>
+          <Watermark medium/>
+        </FullImage>
+        <Space/>
+        <FullImage>
+          <Image rounded fluid={data.oct14.childImageSharp.fluid}/>
+          <Caption medium>Actual Image</Caption>
+          <Watermark medium/>
+        </FullImage>
+        <Space/>
+        <FullImage>
+          <Image rounded fluid={data.oct15.childImageSharp.fluid}/>
+          <Caption medium>Actual Image</Caption>
+          <Watermark medium/>
+        </FullImage>
+        <Space/>
+        <FullImage>
+          <Image rounded fluid={data.oct16.childImageSharp.fluid}/>
+          <Caption medium>Actual Image</Caption>
+          <Watermark medium/>
+        </FullImage>
+        <Space/>
+        <FullImage>
+          <Image rounded fluid={data.oct17.childImageSharp.fluid}/>
+          <Caption medium>Actual Image</Caption>
+          <Watermark medium/>
+        </FullImage>
+        <Space/>
+        <FullImage>
+          <Image rounded fluid={data.oct18.childImageSharp.fluid}/>
+          <Caption medium>Actual Image</Caption>
+          <Watermark medium/>
+        </FullImage>
+        <Space/>
+        <FullImage>
+          <Image rounded fluid={data.oct19.childImageSharp.fluid}/>
+          <Caption medium>Actual Image</Caption>
+          <Watermark medium/>
+        </FullImage>
+
+      </FullWidthContainer>
 
       <CenteredContainer>
         <Space/>
@@ -68,8 +203,6 @@ const Construction = ({ data, intl }) => {
         <P>{intl.formatMessage({ id: "construction-september-2019-paragraph-4" })}</P>
         <Space/>
       </CenteredContainer>
-
-      
 
       <FullWidthContainer>
         <Space/>
@@ -622,8 +755,139 @@ export const query = graphql`
         }
       }
     }
-    
-    
+    oct1: file(relativePath: { eq: "construction/october-2019-1.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    oct2: file(relativePath: { eq: "construction/october-2019-2.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    oct3: file(relativePath: { eq: "construction/october-2019-3.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    oct4: file(relativePath: { eq: "construction/october-2019-4.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    oct5: file(relativePath: { eq: "construction/october-2019-5.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    oct6: file(relativePath: { eq: "construction/october-2019-6.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    oct7: file(relativePath: { eq: "construction/october-2019-7.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    oct8: file(relativePath: { eq: "construction/october-2019-8.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    oct9: file(relativePath: { eq: "construction/october-2019-9.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    oct10: file(relativePath: { eq: "construction/october-2019-10.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    oct11: file(relativePath: { eq: "construction/october-2019-11.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    oct12: file(relativePath: { eq: "construction/october-2019-12.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    oct13: file(relativePath: { eq: "construction/october-2019-13.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    oct14: file(relativePath: { eq: "construction/october-2019-14.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    oct15: file(relativePath: { eq: "construction/october-2019-15.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    oct16: file(relativePath: { eq: "construction/october-2019-16.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    oct17: file(relativePath: { eq: "construction/october-2019-17.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    oct18: file(relativePath: { eq: "construction/october-2019-18.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    oct19: file(relativePath: { eq: "construction/october-2019-19.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
   }
 `
 

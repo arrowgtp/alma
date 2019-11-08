@@ -91,15 +91,18 @@ const Resort = ({ data, intl }) => {
 
       <Box center>
         <Space/>
-        <P>{intl.formatMessage({ id: "resort-to-apartments" })}</P>
+        <P>{intl.formatMessage({ id: "apartments-to-villas" })}</P>
         <Space/>
         <ButtonContainer>
-          <Link to="/apartments">
-            <Button>{intl.formatMessage({ id: "apartments-title" })}</Button>
+          <Link to="/villas">
+            <Button>{intl.formatMessage({ id: "villas-title" })}</Button>
           </Link> 
         </ButtonContainer>
         <Space/>
+        <Space/>
       </Box>
+
+      
 
       <Footer/>
 
