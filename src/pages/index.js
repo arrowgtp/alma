@@ -549,50 +549,6 @@ const Index = ({ data, intl }) => {
 
       <Box center>
         <Space/>
-        <AlmaHeader white title={intl.formatMessage({ id: "apartments-title" })} />
-        <Space/>
-        <P>{intl.formatMessage({ id: "apartments-intro-paragraph" })}</P>
-        <Space/>
-        <ButtonContainer>
-          <Link to="/apartments">
-            <Button>{intl.formatMessage({ id: "apartments-title" })}</Button>
-          </Link> 
-        </ButtonContainer>
-        <Space/>
-      </Box>
-
-      <Box full>
-        <HorizontalScrollContainer blue> 
-          <Card>
-            <CardImg fluid={data.apartmentLivingRoom1.childImageSharp.fluid} alt="Apartment living room."/>
-            <Caption small>Artist Rendering</Caption>
-            <Watermark small/>
-            </Card>
-          <Card>
-            <CardImg fluid={data.apartmentLivingRoom2.childImageSharp.fluid} alt="Apartment living room."/>
-            <Caption small>Artist Rendering</Caption>
-            <Watermark small/>
-          </Card>
-          <Card>
-            <CardImg fluid={data.apartmentKitchen.childImageSharp.fluid} alt="Apartment kitchen."/>
-            <Caption small>Artist Rendering</Caption>
-            <Watermark small/>
-          </Card>
-          <Card>
-            <CardImg fluid={data.apartmentBedroom.childImageSharp.fluid} alt="Apartment Bedroom."/>
-            <Caption small>Artist Rendering</Caption>
-            <Watermark small/>
-          </Card>
-          <Card>
-            <CardImg fluid={data.apartmentBathroom.childImageSharp.fluid} alt="Apartment bathroom."/>
-            <Caption small>Artist Rendering</Caption>
-            <Watermark small/>
-          </Card>
-        </HorizontalScrollContainer>
-      </Box>
-
-      <Box center>
-        <Space/>
         <AlmaHeader white title={intl.formatMessage({ id: "villas-title" })} />
         <Space/>
         <P>{intl.formatMessage({ id: "villas-intro-paragraph" })}</P>
@@ -645,6 +601,50 @@ const Index = ({ data, intl }) => {
           <Card>
             <CardImg fluid={data.villaBathroom1.childImageSharp.fluid} alt="The Alma Resort."/>
             <Caption small>Actual Image</Caption>
+            <Watermark small/>
+          </Card>
+        </HorizontalScrollContainer>
+      </Box>
+
+      <Box center>
+        <Space/>
+        <AlmaHeader white title={intl.formatMessage({ id: "apartments-title" })} />
+        <Space/>
+        <P>{intl.formatMessage({ id: "apartments-intro-paragraph" })}</P>
+        <Space/>
+        <ButtonContainer>
+          <Link to="/apartments">
+            <Button>{intl.formatMessage({ id: "apartments-title" })}</Button>
+          </Link> 
+        </ButtonContainer>
+        <Space/>
+      </Box>
+
+      <Box full>
+        <HorizontalScrollContainer blue> 
+          <Card>
+            <CardImg fluid={data.apartmentLivingRoom1.childImageSharp.fluid} alt="Apartment living room."/>
+            <Caption small>Artist Rendering</Caption>
+            <Watermark small/>
+            </Card>
+          <Card>
+            <CardImg fluid={data.apartmentLivingRoom2.childImageSharp.fluid} alt="Apartment living room."/>
+            <Caption small>Artist Rendering</Caption>
+            <Watermark small/>
+          </Card>
+          <Card>
+            <CardImg fluid={data.apartmentKitchen.childImageSharp.fluid} alt="Apartment kitchen."/>
+            <Caption small>Artist Rendering</Caption>
+            <Watermark small/>
+          </Card>
+          <Card>
+            <CardImg fluid={data.apartmentBedroom.childImageSharp.fluid} alt="Apartment Bedroom."/>
+            <Caption small>Artist Rendering</Caption>
+            <Watermark small/>
+          </Card>
+          <Card>
+            <CardImg fluid={data.apartmentBathroom.childImageSharp.fluid} alt="Apartment bathroom."/>
+            <Caption small>Artist Rendering</Caption>
             <Watermark small/>
           </Card>
         </HorizontalScrollContainer>

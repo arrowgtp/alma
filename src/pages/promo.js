@@ -6,6 +6,9 @@ import { Link, injectIntl } from 'gatsby-plugin-intl'
 import Img from 'gatsby-image'
 import SEO from '../components/seo'
 
+// import 'react-phone-number-input/style.css'
+// import PhoneInput from 'react-phone-number-input'
+
 import Content from '../components/layout/Content'
 import { Button } from '../components/visual/Button'
 import { Space, P } from '../components/visual/Typography'
@@ -224,6 +227,22 @@ const PromoInfo = styled.h2`
     margin: 0;
     padding: 0;
     font-size: calc(12px + (20 - 12) * ((100vw - 300px) / (1600 - 300)));
+  }
+`
+
+const PromoFine = styled.p`
+  color: white;
+  margin: 0;
+  padding: 0;
+  font-size: calc(8px + (16 - 8) * ((100vw - 300px) / (1600 - 300)));
+  line-height: 1.5;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+
+  @media(orientation: landscape) {
+    margin: 0;
+    padding: 0;
+    font-size: calc(8px + (14 - 8) * ((100vw - 300px) / (1600 - 300)));
   }
 `
 
@@ -456,8 +475,9 @@ const Promo = ({ data, intl }) => {
           <Space/>
           <PromoInfo>Winner will be chosen by<br/>April 20, 2020</PromoInfo>
           <Space/>
-          <PromoInfo>No purchase required</PromoInfo>
-          <PromoInfo>Valid only for<br/>Southern California residents</PromoInfo>
+          <PromoFine>No purchase required</PromoFine>
+          <PromoFine>Current offer good only<br/>for Southern California residents</PromoFine>
+          <PromoFine>For more information or general questions,<br/>email us at travel@alma.vacations</PromoFine>
           {/* <PromoDetails>
             <PromoBang>
               <PromoStarburst src={starburst}/>
@@ -524,6 +544,10 @@ const Promo = ({ data, intl }) => {
         <Label>Name<Input name="name" type="text"/></Label>   
         <Label>Email Address<Input name="email" type="email"/></Label>
         <Label>Phone Number<Input name="phone" type="tel"/></Label>
+        {/* <PhoneInput
+          placeholder="Enter phone number"
+          value={ this.state.value }
+          onChange={ value => this.setState({ value }) } /> */}
         <Label>Zip Code<Input name="zip" type="text"/></Label>
         <SubmitButton
           whileHover={{ scale: 1.1 }}
