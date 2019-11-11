@@ -548,7 +548,7 @@ const Promo = ({ data, intl }) => {
           placeholder="Enter phone number"
           value={ this.state.value }
           onChange={ value => this.setState({ value }) } /> */}
-        <Label>Zip Code<Input name="zip" type="text"/></Label>
+        {/* <Label>Zip Code<Input name="zip" type="text"/></Label> */}
         <SubmitButton
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
