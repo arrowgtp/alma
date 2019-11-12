@@ -30,14 +30,14 @@ const CenterP = styled(P)`
   max-width: 60ch;
 `
 
-const Success = () => {
+const Success = ({ data, intl }) => {
   return(
     <Content>
       <Box>
         <H1>Yay!</H1> 
         <Space/>
         <CenterP>
-          Your information has been submitted successfully, and we will be in touch with you shortly. Thank you very much for your interest in the Alma Resort.
+        {intl.formatMessage({ id: "promo-submission-success" })}
         </CenterP>
         <Space/>
         <Link to={`/`}>

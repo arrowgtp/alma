@@ -132,8 +132,8 @@ const PromoVacation = styled.div`
   grid-column: 1 / 4;
   margin: 0;
   padding: 0;
-  height: 90vh;
-  height: calc(var(--vh, 1vh) * 90);
+  height: 80vh;
+  height: calc(var(--vh, 1vh) * 80);
   display: grid;
   grid-template-rows: repeat(8, 1fr);
   grid-template-columns: repeat(8, 1fr);
@@ -174,25 +174,48 @@ const PromoVacationImage = styled(Img)`
   grid-column: 1 / 9;
   object-fit: cover;
   z-index: 1;
+  mask-image: linear-gradient(
+    to top,
+    hsla(0, 0%, 100%, 0) 0%,
+    hsla(0, 0%, 100%, 0.013) 8.1%,
+    hsla(0, 0%, 100%, 0.049) 15.5%,
+    hsla(0, 0%, 100%, 0.104) 22.5%,
+    hsla(0, 0%, 100%, 0.175) 29%,
+    hsla(0, 0%, 100%, 0.259) 35.3%,
+    hsla(0, 0%, 100%, 0.352) 41.2%,
+    hsla(0, 0%, 100%, 0.45) 47.1%,
+    hsla(0, 0%, 100%, 0.55) 52.9%,
+    hsla(0, 0%, 100%, 0.648) 58.8%,
+    hsla(0, 0%, 100%, 0.741) 64.7%,
+    hsla(0, 0%, 100%, 0.825) 71%,
+    hsla(0, 0%, 100%, 0.896) 77.5%,
+    hsla(0, 0%, 100%, 0.951) 84.5%,
+    hsla(0, 0%, 100%, 0.987) 91.9%,
+    hsl(0, 0%, 100%) 100%)
+  ;
+
+  @media (orientation: landscape) {
+    mask-image: none;
+  }
 `
 
 const PromoVacationText = styled.div`
   margin: 0;
   padding: 1rem;
-  grid-row: 1 / 9;
-  grid-column: 1 / 9;
+  grid-row: 2 / 8;
+  grid-column: 2 / 8;
   background: rgba(0, 0, 0, 0.5);
   z-index: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  border-radius: 32px;
 
   @media (orientation: landscape) {
     grid-row: 2 / 8;
     grid-column: 2 / 6;
     box-shadow: 0px 0px 32px rgba(255,255,255,0.5);
-    border-radius: 32px;
   }
 `
 
@@ -341,18 +364,18 @@ const PromoStarburst = styled.img`
 const Form = styled.form`
   grid-column: 1 / 9;
   grid-row: 2 / 3;
-  margin: 0;
+  margin: -2rem 0 0 0;
   padding: 0;
   width: 100vw;
-  height: 90vh;
-  height: calc(var(--vh, 1vh) * 90);
+  height: 70vh;
+  height: calc(var(--vh, 1vh) * 70);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  background: rgba(255,255,255,1);
+  justify-content: start;
+  /* background: rgba(255,255,255,1); */
   border-radius: 0px;
-  box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.25);
+  
   z-index: 100;
   opacity: 1;
 
@@ -361,7 +384,9 @@ const Form = styled.form`
     top: 12.5vh;
     right: 2vw;
     bottom: 12.5vh;
+    justify-content: center;
     background: rgba(255,255,255,1);
+    box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.25);
     border-radius: 16px;
     height: 75vh;
     width: 20rem;
@@ -389,7 +414,7 @@ const Input = styled.input`
   font-size: 16px;
   border: 1px solid #006674;
   border: 1px solid hsla(0,0%,0%,0.25);
-  background: hsla(255,100%,100%,0.5);
+  background: hsla(255,100%,100%,1);
   border-radius: 8px;
   outline: none;
   background: rgba(255,255,255,0.75);
@@ -469,15 +494,15 @@ const Promo = ({ data, intl }) => {
       <PromoVacation>
         {/* <Message>{intl.formatMessage({ id: "promo-subtitle" })}</Message> */}
         <PromoVacationText>
-          <PromoTitle>Win an Exclusive<br/>VIP Trip<br/>to Vietnam</PromoTitle>
+          <PromoTitle>{intl.formatMessage({ id: "promo-vn-title" })}</PromoTitle>
           <Space/>
-          <PromoInfo>Airfare for 4 +<br/>7 Nights at<br/>the Alma Resort</PromoInfo>
+          <PromoInfo>{intl.formatMessage({ id: "promo-vn-info-1" })}</PromoInfo>
           <Space/>
-          <PromoInfo>Winner will be chosen by<br/>April 20, 2020</PromoInfo>
+          <PromoInfo>{intl.formatMessage({ id: "promo-vn-info-2" })}</PromoInfo>
           <Space/>
-          <PromoFine>No purchase required</PromoFine>
-          <PromoFine>Current offer good only<br/>for Southern California residents</PromoFine>
-          <PromoFine>For more information or general questions,<br/>email us at travel@alma.vacations</PromoFine>
+          <PromoFine>{intl.formatMessage({ id: "promo-vn-info-3" })}</PromoFine>
+          <PromoFine>{intl.formatMessage({ id: "promo-vn-info-4" })}</PromoFine>
+          <PromoFine>{intl.formatMessage({ id: "promo-vn-info-5" })}</PromoFine>
           {/* <PromoDetails>
             <PromoBang>
               <PromoStarburst src={starburst}/>
@@ -556,7 +581,7 @@ const Promo = ({ data, intl }) => {
         >
         Enter Now!
         </SubmitButton>
-        <Disclaimer>{intl.formatMessage({ id: "promo-disclaimer-vietnam-trip" })}</Disclaimer>
+        <Disclaimer>{intl.formatMessage({ id: "promo-vn-disclaimer" })}</Disclaimer>
       </Form>
       {/* </AnimatedCard> */}
     </Content>
