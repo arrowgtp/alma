@@ -137,8 +137,8 @@ const Showroom = ({ data, intl }) => {
           <JobButton onClick={() => {navigate('#vacation-counselor')}}>
             Vacation Counselor
           </JobButton>
-          <JobButton onClick={() => {navigate('#marketing-promoter')}}>
-            Marketing Promoter
+          <JobButton onClick={() => {navigate('#event-staff')}}>
+            Event Staff
           </JobButton>
         </CenteredStickyContainer>
 
@@ -293,9 +293,9 @@ const Showroom = ({ data, intl }) => {
           <Space/>
         </CenteredContainer>
 
-        <CenteredContainer id="marketing-promoter">
+        <CenteredContainer id="event-staff">
           <CustomSpace/>
-          <H1>Marketing Promoter</H1>
+          <H1>Event Staff</H1>
           <SmallSpace/>
           <P><strong>Hours of Operation:</strong> Flexible hours including evenings, weekends and holidays</P>
           <P><strong>Compensation:</strong> $12 - $20 per hour based on experience + Bonus</P>
@@ -305,7 +305,7 @@ const Showroom = ({ data, intl }) => {
           <SmallSpace/>
           <P>If you enjoy working flexible hours, in an awesome team environment, and impacting thousands of people's lives in a positive way, then we look forward to learning more about you and discussing potential opportunities that we might have at Alma. This job could lead to a permanent position in the future.</P>
           <Space/>
-          <H2>Marketing Promoter Duties and Responsibilities</H2>
+          <H2>Duties and Responsibilities</H2>
           <SmallSpace/>
           <UL>
             <LI>Work at marketing events, exhibitions, media productions, and client sites </LI> 
@@ -321,7 +321,7 @@ const Showroom = ({ data, intl }) => {
             <LI>Perform other event or administrative duties as necessary</LI>
           </UL>
           {/* <Space/> */}
-          <H2>Marketing Promoter Requirements and Qualifications</H2>
+          <H2>Requirements and Qualifications</H2>
           {/* <SmallSpace/> */}
           <UL>
             <LI>Must be enthusiastic, engaging, brand savvy, well organized and self-motivated and able to work independently</LI> 

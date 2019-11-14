@@ -305,10 +305,10 @@ const Layout = ({ children, location: { pathname, hash } }) => {
         const vacationCounselor = document.querySelector('#vacation-counselor').offsetTop
         document.querySelector('#main').scrollTop = vacationCounselor
 
-      } else if (hash ==='#marketing-promoter') {
+      } else if (hash ==='#event-staff') {
 
-        const marketingPromoter = document.querySelector('#marketing-promoter').offsetTop
-        document.querySelector('#main').scrollTop = marketingPromoter
+        const eventStaff = document.querySelector('#event-staff').offsetTop
+        document.querySelector('#main').scrollTop = eventStaff
 
       } else {
 
