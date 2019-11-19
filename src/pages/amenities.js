@@ -92,25 +92,33 @@ const Amenities = ({ data, intl }) => {
 
       <CenteredContainer>
         <UL>
+          <ListTitle>{intl.formatMessage({ id: "activities-list" })}</ListTitle>
+          <LI>{intl.formatMessage({ id: "activity-1" })}</LI>
+          <LI>{intl.formatMessage({ id: "activity-2" })}</LI>
+          <LI>{intl.formatMessage({ id: "activity-3" })}</LI>
+          <LI>{intl.formatMessage({ id: "activity-4" })}</LI>
+          <LI>{intl.formatMessage({ id: "activity-5" })}</LI>
+          <LI>{intl.formatMessage({ id: "activity-6" })}</LI>
+          <LI>{intl.formatMessage({ id: "activity-7" })}</LI>
+          <LI>{intl.formatMessage({ id: "activity-8" })}</LI>
+          <LI>{intl.formatMessage({ id: "activity-9" })}</LI>
+          <LI>{intl.formatMessage({ id: "activity-10" })}</LI>
+          <LI>{intl.formatMessage({ id: "activity-11" })}</LI>
+          <LI>{intl.formatMessage({ id: "activity-11" })}</LI>
+          <LI>{intl.formatMessage({ id: "activity-12" })}</LI>
+        </UL>
+      </CenteredContainer>
+
+      <CenteredContainer>
+        <UL>
           <ListTitle>{intl.formatMessage({ id: "amenities-list" })}</ListTitle>
-          <LI>{intl.formatMessage({ id: "amenities-list-point-1" })}</LI>
-          <LI>{intl.formatMessage({ id: "amenities-list-point-2" })}</LI>
-          <LI>{intl.formatMessage({ id: "amenities-list-point-3" })}</LI>
-          <LI>{intl.formatMessage({ id: "amenities-list-point-4" })}</LI>
-          <LI>{intl.formatMessage({ id: "amenities-list-point-5" })}</LI>
-          <LI>{intl.formatMessage({ id: "amenities-list-point-6" })}</LI>
-          <LI>{intl.formatMessage({ id: "amenities-list-point-7" })}</LI>
-          <LI>{intl.formatMessage({ id: "amenities-list-point-8" })}</LI>
-          <LI>{intl.formatMessage({ id: "amenities-list-point-9" })}</LI>
-          <LI>{intl.formatMessage({ id: "amenities-list-point-10" })}</LI>
-          <LI>{intl.formatMessage({ id: "amenities-list-point-11" })}</LI>
-          <LI>{intl.formatMessage({ id: "amenities-list-point-12" })}</LI>
-          <LI>{intl.formatMessage({ id: "amenities-list-point-13" })}</LI>
-          <LI>{intl.formatMessage({ id: "amenities-list-point-14" })}</LI>
-          <LI>{intl.formatMessage({ id: "amenities-list-point-15" })}</LI>
-          <LI>{intl.formatMessage({ id: "amenities-list-point-16" })}</LI>
-          <LI>{intl.formatMessage({ id: "amenities-list-point-17" })}</LI>
-          <LI>{intl.formatMessage({ id: "amenities-list-point-18" })}</LI>
+          <LI>{intl.formatMessage({ id: "amenity-1" })}</LI>
+          <LI>{intl.formatMessage({ id: "amenity-2" })}</LI>
+          <LI>{intl.formatMessage({ id: "amenity-3" })}</LI>
+          <LI>{intl.formatMessage({ id: "amenity-4" })}</LI>
+          <LI>{intl.formatMessage({ id: "amenity-5" })}</LI>
+          <LI>{intl.formatMessage({ id: "amenity-6" })}</LI>
+          <LI>{intl.formatMessage({ id: "amenity-7" })}</LI>
         </UL>
       </CenteredContainer>
 

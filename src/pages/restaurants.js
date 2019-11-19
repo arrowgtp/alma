@@ -121,17 +121,14 @@ const Restaurants = ({ data, intl }) => {
       <CenteredContainer>
         <UL>
           <ListTitle>{intl.formatMessage({ id: "restaurants-list" })}</ListTitle>
-          <LI>{intl.formatMessage({ id: "restaurants-list-point-1" })}</LI>
-          <LI>{intl.formatMessage({ id: "restaurants-list-point-2" })}</LI>
-          <LI>{intl.formatMessage({ id: "restaurants-list-point-3" })}</LI>
-          <LI>{intl.formatMessage({ id: "restaurants-list-point-4" })}</LI>
-          <LI>{intl.formatMessage({ id: "restaurants-list-point-5" })}</LI>
-          <LI>{intl.formatMessage({ id: "restaurants-list-point-6" })}</LI>
-          <LI>{intl.formatMessage({ id: "restaurants-list-point-7" })}</LI>
-          <LI>{intl.formatMessage({ id: "restaurants-list-point-8" })}</LI>
-          <LI>{intl.formatMessage({ id: "restaurants-list-point-9" })}</LI>
-          <LI>{intl.formatMessage({ id: "restaurants-list-point-10" })}</LI>
-          <LI>{intl.formatMessage({ id: "restaurants-list-point-11" })}</LI>
+          <LI>{intl.formatMessage({ id: "restaurant-1" })}</LI>
+          <LI>{intl.formatMessage({ id: "restaurant-2" })}</LI>
+          <LI>{intl.formatMessage({ id: "restaurant-3" })}</LI>
+          <LI>{intl.formatMessage({ id: "restaurant-4" })}</LI>
+          <LI>{intl.formatMessage({ id: "restaurant-5" })}</LI>
+          <LI>{intl.formatMessage({ id: "restaurant-6" })}</LI>
+          <LI>{intl.formatMessage({ id: "restaurant-7" })}</LI>
+          <LI>{intl.formatMessage({ id: "restaurant-8" })}</LI>
         </UL>
       </CenteredContainer>
 
