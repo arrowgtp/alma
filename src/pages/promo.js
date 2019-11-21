@@ -566,9 +566,9 @@ const Promo = ({ data, intl }) => {
       >
         <input type="hidden" name="bot-field" />
         <input type="hidden" name="form-name" value="alma-form"/>
-        <Label>Name<Input name="name" type="text" required/></Label>   
+        <Label>Name<Input name="name" type="text" required/></Label>
+        <Label>Phone Number<Input name="phone" type="tel" required/></Label>  
         <Label>Email Address<Input name="email" type="email" required/></Label>
-        <Label>Phone Number<Input name="phone" type="tel" required/></Label>
         {/* <PhoneInput
           placeholder="Enter phone number"
           value={ this.state.value }

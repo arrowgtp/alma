@@ -5,6 +5,8 @@ import Img from 'gatsby-image'
 import { Link, injectIntl } from 'gatsby-plugin-intl'
 import SEO from '../components/seo'
 
+import YouTube from 'react-youtube'
+
 import Content from '../components/layout/Content'
 import HorizontalScrollContainer from '../components/layout/HorizontalScrollContainer'
 import AlmaHeader from '../components/Header'
@@ -24,7 +26,7 @@ const MainLogo = styled.img`
   height: auto;
   grid-row: 1 / 3;
   grid-column: 1 / 9;
-  z-index: 5;
+  z-index: 1000;
   align-self: center;
   justify-self: center;
   /* filter: drop-shadow( 0px 0px 16px rgba(0, 0, 0, 0.25)); */
@@ -36,20 +38,44 @@ const MainLogo = styled.img`
 `
 
 const PageSlogan = styled.div`
-  grid-row: 7 / 9;
+  grid-row: 7 / 8;
   grid-column: 1 / 9;
-  z-index: 1;
+  z-index: 5;
   color: white;
   font-size: calc(18px + (32 - 18) * ((100vw - 300px) / (1600 - 300)));
   font-family: 'Quicksand';
   align-self: end;
   justify-self: center;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 8px rgba(0,0,0,1);
 
   @media (orientation: landscape) {
-    grid-row: 8 / 9;
+    grid-row: 7 / 8;
     grid-column: 1 / 9;
   }
+`
+
+const Scrim = styled.div`
+  grid-row: 1 / 9;
+  grid-column: 1 / 9;
+  z-index: 100;
+  background: rgba(0,0,0,0.5);
+`
+
+const BackgroundVideo = styled(YouTube)`
+  grid-row: 1 / 9;
+  grid-column: 1 / 9;
+  object-fit: cover;
+  z-index: 1000;
+  /* min-width: 100%;
+  min-height: 100%; */
+  width: 100%;
+  height: auto;
+  /* position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; */
 `
 
 const Card = styled.figure`
@@ -444,7 +470,27 @@ const InstaScrim = styled.div`
 //   )
 // }
 
+
+
 const Index = ({ data, intl }) => {
+
+  // _onReady(event) {
+  //   // access to player in all event handlers via event.target
+  //   // event.target.mute();
+  // }
+  
+  // _onEnd(event) {
+  //   event.target.playVideo();
+  // }
+
+  const videoOptions = {
+    playerVars: { // https://developers.google.com/youtube/player_parameters
+      autoplay: 1,
+      controls: 0,
+      rel: 0,
+      showinfo: 0
+    }
+  }
 
   return (
     <Content>
@@ -452,12 +498,20 @@ const Index = ({ data, intl }) => {
       <SEO title="Home" />
 
       <Box featured>
+        {/* <Scrim /> */}
         <MainLogo src={almaLogoWithBG} alt="The Alma Resort Logo."/>
         <PageSlogan>{intl.formatMessage({ id: "slogan" })}</PageSlogan>
         {/* <FullContentImage fluid={data.resortOverview.childImageSharp.fluid}/> */}
         <Image grid fluid={data.resortOverview.childImageSharp.fluid}/>
         <Caption large>Artist Rendering</Caption>
         <Watermark large/>
+        {/* <BackgroundVideo
+          videoId="RwCOgvo7v-Q"
+          opts={videoOptions}
+          className="video-iframe"
+          // onReady={this._onReady}
+          // onEnd={this._onEnd}
+        /> */}
       </Box>
   
       <Box center>

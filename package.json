@@ -43,6 +43,7 @@
     "react-dom": "^16.9.0",
     "react-helmet": "^5.2.1",
     "react-phone-number-input": "^2.4.1",
+    "react-youtube": "^7.9.0",
     "styled-components": "^4.3.2"
   },
   "keywords": [
