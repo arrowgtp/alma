@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react'
 import styled from 'styled-components'
-// import { useTransition, animated } from 'react-spring'
 import { motion, AnimatePresence } from 'framer-motion'
 import { injectIntl, Link } from 'gatsby-plugin-intl'
 
@@ -360,16 +359,16 @@ const Navigation = ({ intl }) => {
                 <AlmaBulletShell src={almaShell}/>
                 <AlmaLink to={`/careers`} onClick={toggle}>Careers</AlmaLink>
                 <SocialButtons>
-                  <SocialButton href='https://www.facebook.com/almavacations'>
+                  <SocialButton href='https://www.facebook.com/almavacations' target="_blank">
                     <img src={FacebookIcon} alt='The Alma Resort Facebook account.' />
                   </SocialButton>
-                  <SocialButton href='https://www.instagram.com/almavacations'>
+                  <SocialButton href='https://www.instagram.com/almavacations' target="_blank">
                     <img src={InstagramIcon} alt='The Alma Resort Instagram account.' />
                   </SocialButton>
-                  <SocialButton href='https://www.twitter.com/almavacations'>
+                  <SocialButton href='https://www.twitter.com/almavacations' target="_blank">
                     <img src={TwitterIcon} alt='The Alma Resort Twitter account.' />
                   </SocialButton>
-                  <SocialButton href='https://www.youtube.com/channel/UCMzsbNMXxwVTLOUZr_3lZWw'>
+                  <SocialButton href='https://www.youtube.com/channel/UCMzsbNMXxwVTLOUZr_3lZWw' target="_blank">
                     <img src={YouTubeIcon} alt='The Alma Resort YouTube account.' />
                   </SocialButton>
                 </SocialButtons>
@@ -387,16 +386,16 @@ const Navigation = ({ intl }) => {
           <Language />
         </Locales>
         <SocialButtons>
-          <SocialButton href='https://www.facebook.com/almavacations'>
+          <SocialButton href='https://www.facebook.com/almavacations' target="_blank">
             <img src={FacebookIcon} alt='The Alma Resort Facebook account.' />
           </SocialButton>
-          <SocialButton href='https://www.instagram.com/almavacations'>
+          <SocialButton href='https://www.instagram.com/almavacations' target="_blank">
             <img src={InstagramIcon} alt='The Alma Resort Instagram account.' />
           </SocialButton>
-          <SocialButton href='https://www.twitter.com/almavacations'>
+          <SocialButton href='https://www.twitter.com/almavacations' target="_blank">
             <img src={TwitterIcon} alt='The Alma Resort Twitter account.' />
           </SocialButton>
-          <SocialButton href='https://www.youtube.com/channel/UCMzsbNMXxwVTLOUZr_3lZWw'>
+          <SocialButton href='https://www.youtube.com/channel/UCMzsbNMXxwVTLOUZr_3lZWw' target="_blank">
             <img src={YouTubeIcon} alt='The Alma Resort YouTube account.' />
           </SocialButton>
         </SocialButtons>

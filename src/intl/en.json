@@ -278,7 +278,8 @@
   "showroom-title": "US Showroom",
 
   "showroom-hours-title": "Showroom Hours",
-  "showroom-hours": "Tuesday - Saturday 10:00 AM - 4:00 PM",
+  "showroom-hours-week": "Wednesday, Thursday and Friday - 2:00 PM to 6:00 PM",
+  "showroom-hours-weekend": "Saturday and Sunday - 12:00 PM to 4:00 PM",
   "alma-contact-title": "Contact",
   "alma-phone-number-title": "Phone Number",
   "alma-phone-number": "1.833.OWN.ALMA | 1.833.696.2562",

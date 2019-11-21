@@ -15,7 +15,7 @@ import './Layout.css'
 // import AnimatedLogo from './AnimatedLogo'
 
 import Logo from './Logo'
-import Nav from './Navigation'
+import Navigation from './Navigation'
 import PromoButton from './PromoButton'
 
 const App = styled(motion.div)`
@@ -332,13 +332,13 @@ const Layout = ({ children, location: { pathname, hash } }) => {
         delay: 0
       }}
     >
+      <AlmaLogo alt='The Alma Logo' src={almaLogo} />
       <Menu>
-        <Logo />
-        <Nav />
-        <PromoButton />
+        <Logo/>
+        <Navigation/>
+        <PromoButton/>
       </Menu>
       <Main id='main'>{children}</Main>
-      <AlmaLogo alt='The Alma Logo' src={almaLogo} />
       {/* <PromoBanner
         style={{
           display:

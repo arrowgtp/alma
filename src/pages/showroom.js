@@ -61,7 +61,8 @@ const Showroom = ({ data, intl }) => {
         <Space/>
         <H2>{intl.formatMessage({ id: "showroom-hours-title" })}</H2>
         <SmallSpace/>
-        <P>{intl.formatMessage({ id: "showroom-hours" })}</P>
+        <P>{intl.formatMessage({ id: "showroom-hours-week" })}</P>
+        <P>{intl.formatMessage({ id: "showroom-hours-weekend" })}</P>
         <Space/>
         <H2>{intl.formatMessage({ id: "showroom-email-title" })}</H2>
         <SmallSpace/>
