@@ -510,7 +510,7 @@ const Promo = ({ data, intl }) => {
             </PromoBang>
           </PromoDetails> */}
         </PromoVacationText>
-        <PromoVacationImage fluid={data.promoVietnam.childImageSharp.fluid} />
+        <PromoVacationImage fluid={data.sep6.childImageSharp.fluid} />
       </PromoVacation>
         {/* <Message>{intl.formatMessage({ id: "promo-subtitle" })}</Message>
         <PromoVacation>
@@ -607,6 +607,13 @@ export const query = graphql`
     promoVietnam: file(relativePath: { eq: "promos/promo-vietnam.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 2048) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    sep6: file(relativePath: { eq: "construction/september-6.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }

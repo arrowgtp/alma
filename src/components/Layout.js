@@ -8,7 +8,8 @@ import almaLogo from '../images/alma/alma-logo.svg'
 
 // import PromoCruise from '../images/promos/promo-cruise-wide.jpg'
 // import PromoVegas from '../images/promos/promo-vegas-wide.jpg'
-import PromoVietnam from '../images/promos/promo-vietnam-wide.jpg'
+// import PromoVietnam from '../images/promos/promo-vietnam-wide.jpg'
+import PromoVietnam from '../images/promos/september-5-wide.jpg'
 
 import './Layout.css'
 
@@ -175,6 +176,16 @@ const Image = styled.img`
   }
 `
 
+// const Scrim = styled.div`
+//   grid-column: 1 / 5;
+//   grid-row: 1 / 2;
+//   width: 100%;
+//   height: 100%;
+//   justify-self: stretch;
+//   object-fit: cover;
+//   z-index: 2;
+// `
+
 // const PromoCruiseImage = styled(Image)`
 // grid-column: 1 / 3;
 // grid-row: 1 / 2;
@@ -233,25 +244,14 @@ const PromoVietnamImage = styled(Image)`
   justify-self: stretch;
   object-fit: cover;
   z-index: 1;
-  /* mask-image: linear-gradient(
-    to top,
-    hsla(0, 0%, 100%, 0) 0%,
-    hsla(0, 0%, 100%, 0.013) 8.1%,
-    hsla(0, 0%, 100%, 0.049) 15.5%,
-    hsla(0, 0%, 100%, 0.104) 22.5%,
-    hsla(0, 0%, 100%, 0.175) 29%,
-    hsla(0, 0%, 100%, 0.259) 35.3%,
-    hsla(0, 0%, 100%, 0.352) 41.2%,
-    hsla(0, 0%, 100%, 0.45) 47.1%,
-    hsla(0, 0%, 100%, 0.55) 52.9%,
-    hsla(0, 0%, 100%, 0.648) 58.8%,
-    hsla(0, 0%, 100%, 0.741) 64.7%,
-    hsla(0, 0%, 100%, 0.825) 71%,
-    hsla(0, 0%, 100%, 0.896) 77.5%,
-    hsla(0, 0%, 100%, 0.951) 84.5%,
-    hsla(0, 0%, 100%, 0.987) 91.9%,
-    hsl(0, 0%, 100%) 100%)
-  ; */
+  /* opacity: 0.5; */
+  mask-image:
+    linear-gradient(
+      to top,
+      hsla(0, 0%, 100%, 0.25) 0%,
+      hsla(0, 0%, 100%, 0.75) 100%
+    )
+  ;
 `
 
 const PromoHeader = styled.h1`
@@ -377,6 +377,7 @@ const Layout = ({ children, location: { pathname, hash } }) => {
         to='/promo'
       >
         <PromoHeader>Win a trip to Vietnam!</PromoHeader>
+        {/* <Scrim/> */}
         <PromoVietnamImage src={PromoVietnam} />
       </PromoBanner>
 
