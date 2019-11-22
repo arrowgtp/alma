@@ -5,8 +5,6 @@ import Img from 'gatsby-image'
 import { Link, injectIntl } from 'gatsby-plugin-intl'
 import SEO from '../components/seo'
 
-import YouTube from 'react-youtube'
-
 import Content from '../components/layout/Content'
 import HorizontalScrollContainer from '../components/layout/HorizontalScrollContainer'
 import AlmaHeader from '../components/Header'
@@ -517,15 +515,8 @@ const Index = ({ data, intl }) => {
         <PageSlogan>{intl.formatMessage({ id: "slogan" })}</PageSlogan>
         {/* <FullContentImage fluid={data.resortOverview.childImageSharp.fluid}/> */}
         <Image grid fluid={data.oct14.childImageSharp.fluid}/>
-        <Caption large>Artist Rendering</Caption>
+        <Caption large>Actual Image</Caption>
         <Watermark large/>
-        {/* <BackgroundVideo
-          videoId="RwCOgvo7v-Q"
-          opts={videoOptions}
-          className="video-iframe"
-          // onReady={this._onReady}
-          // onEnd={this._onEnd}
-        /> */}
       </Box>
   
       <Box center>
