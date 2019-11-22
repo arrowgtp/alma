@@ -38,20 +38,21 @@ const MainLogo = styled.img`
 `
 
 const PageSlogan = styled.div`
-  grid-row: 7 / 8;
+  grid-row: 3 / 4;
   grid-column: 1 / 9;
   z-index: 5;
   color: white;
   font-size: calc(18px + (32 - 18) * ((100vw - 300px) / (1600 - 300)));
   font-family: 'Quicksand';
-  align-self: end;
+  align-self: start;
   justify-self: center;
   margin-bottom: 1rem;
   text-shadow: 2px 2px 8px rgba(0,0,0,1);
 
   @media (orientation: landscape) {
-    grid-row: 7 / 8;
+    grid-row: 1 / 3;
     grid-column: 1 / 9;
+    align-self: center;
   }
 `
 
@@ -470,7 +471,20 @@ const InstaScrim = styled.div`
 //   )
 // }
 
+const VideoBox = styled.div`
+  position: relative;
+	padding-bottom: 52.75%;
+	padding-top: 25px;
+	height: 0;
 
+  > iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+`
 
 const Index = ({ data, intl }) => {
 
@@ -502,7 +516,7 @@ const Index = ({ data, intl }) => {
         <MainLogo src={almaLogoWithBG} alt="The Alma Resort Logo."/>
         <PageSlogan>{intl.formatMessage({ id: "slogan" })}</PageSlogan>
         {/* <FullContentImage fluid={data.resortOverview.childImageSharp.fluid}/> */}
-        <Image grid fluid={data.resortOverview.childImageSharp.fluid}/>
+        <Image grid fluid={data.oct14.childImageSharp.fluid}/>
         <Caption large>Artist Rendering</Caption>
         <Watermark large/>
         {/* <BackgroundVideo
@@ -517,6 +531,10 @@ const Index = ({ data, intl }) => {
       <Box center>
         <Space/>
         <AlmaHeader blue title={intl.formatMessage({ id: "resort-title" })} />
+        <Space/>
+        <VideoBox>
+          <iframe width="100%" height="100%" src="https://www.youtube.com/embed/RwCOgvo7v-Q" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe>
+        </VideoBox>
         <Space/>
         <P>{intl.formatMessage({ id: "resort-intro-paragraph" })}</P>
         <Space/>
@@ -1457,7 +1475,141 @@ export const query = graphql`
         }
       }
     }
+    oct1: file(relativePath: { eq: "construction/october-2019-1.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    oct2: file(relativePath: { eq: "construction/october-2019-2.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    oct3: file(relativePath: { eq: "construction/october-2019-3.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    oct4: file(relativePath: { eq: "construction/october-2019-4.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    oct5: file(relativePath: { eq: "construction/october-2019-5.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    oct6: file(relativePath: { eq: "construction/october-2019-6.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    oct7: file(relativePath: { eq: "construction/october-2019-7.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    oct8: file(relativePath: { eq: "construction/october-2019-8.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    oct9: file(relativePath: { eq: "construction/october-2019-9.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    oct10: file(relativePath: { eq: "construction/october-2019-10.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    oct11: file(relativePath: { eq: "construction/october-2019-11.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    oct12: file(relativePath: { eq: "construction/october-2019-12.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    oct13: file(relativePath: { eq: "construction/october-2019-13.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    oct14: file(relativePath: { eq: "construction/october-2019-14.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    oct15: file(relativePath: { eq: "construction/october-2019-15.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    oct16: file(relativePath: { eq: "construction/october-2019-16.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    oct17: file(relativePath: { eq: "construction/october-2019-17.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    oct18: file(relativePath: { eq: "construction/october-2019-18.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    oct19: file(relativePath: { eq: "construction/october-2019-19.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
   }
+  
 `
 
 export default injectIntl(Index)
