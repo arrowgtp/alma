@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react'
-import { Link } from 'gatsby'
+// import { Link } from 'gatsby'
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
-import { injectIntl } from 'gatsby-plugin-intl'
+import { injectIntl, Link } from 'gatsby-plugin-intl'
 
 import almaLogo from '../images/alma/alma-logo.svg'
 
@@ -374,7 +374,7 @@ const Layout = ({ children, location: { pathname, hash } }) => {
             :
             'grid'
         }}
-        to='/promo'
+        to={`/promo`}
       >
         <PromoHeader>Win a trip to Vietnam!</PromoHeader>
         {/* <Scrim/> */}

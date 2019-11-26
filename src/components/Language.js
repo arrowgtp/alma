@@ -31,7 +31,7 @@ const LocaleButton = styled(Button)`
 
 const languageName = {
   en: "EN",
-  vi: "VN"
+  vi: "VI"
 }
 
 const Language = () => {

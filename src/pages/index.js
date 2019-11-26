@@ -61,21 +61,21 @@ const Scrim = styled.div`
   background: rgba(0,0,0,0.5);
 `
 
-const BackgroundVideo = styled(YouTube)`
-  grid-row: 1 / 9;
-  grid-column: 1 / 9;
-  object-fit: cover;
-  z-index: 1000;
-  /* min-width: 100%;
-  min-height: 100%; */
-  width: 100%;
-  height: auto;
-  /* position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0; */
-`
+// const BackgroundVideo = styled(YouTube)`
+//   grid-row: 1 / 9;
+//   grid-column: 1 / 9;
+//   object-fit: cover;
+//   z-index: 1000;
+//   min-width: 100%;
+//   min-height: 100%;
+//   width: 100%;
+//   height: auto;
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   bottom: 0;
+// `
 
 const Card = styled.figure`
   position: relative;
@@ -495,14 +495,14 @@ const Index = ({ data, intl }) => {
   //   event.target.playVideo();
   // }
 
-  const videoOptions = {
-    playerVars: { // https://developers.google.com/youtube/player_parameters
-      autoplay: 1,
-      controls: 0,
-      rel: 0,
-      showinfo: 0
-    }
-  }
+  // const videoOptions = {
+  //   playerVars: { // https://developers.google.com/youtube/player_parameters
+  //     autoplay: 1,
+  //     controls: 0,
+  //     rel: 0,
+  //     showinfo: 0
+  //   }
+  // }
 
   return (
     <Content>
