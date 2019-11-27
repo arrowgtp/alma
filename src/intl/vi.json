@@ -12,8 +12,10 @@
   "nav-vacations": "Điểm Du Lịch",
   "nav-about-alma": "Về Alma",
   "nav-showroom": "US Showroom",
+  "nav-promo": "Trúng thưởng",
 
   "learn-more-button": "Tìm Hiểu Thêm",
+  "close-button": "Đóng",
 
   "instagram-paragraph": "Ngắm và chia sẻ hình ảnh về khoảnh khắc khó quên cùng những video du lịch của bạn, hashtag #AlmaVacations.",
   "copyright-notice": "© Bản quyền 2019, Alma USA LLC. Bảo lưu mọi quyền.",
@@ -295,8 +297,14 @@
   "showroom-paragraph-1": "Showroom chính thức rộng 560 mét vuông (6,000 square feet) của Alma Resort tọa lạc tại miền Nam tiểu bang California, USA, đã khai trương Các chủ nhân hiện tại từ khắp nơi trên thế giới, ngay cả Việt Nam, giờ đây sẽ có thêm một trung tâm quốc tế để hỗ trợ các chuyến du lịch.",
   "showroom-paragraph-2": "Mong ước của chúng tôi là mang lại cho các chủ nhân tương lai của Alma Resort một nơi chan hòa ánh nắng để hình dung gia đình thân yêu quây quần thoải mái bên nhau tại nơi nghỉ dưỡng với các tiện ích sang trọng như rạp chiếu phim, nhà hát lộ thiên, hộp đêm, khu vui chơi thể thao, công viên nước, và nhiều nhà hàng tiêu chuẩn quốc tế với ẩm thực phong phú.",
 
+  "promo-cta": "Thắng chuyến du lịch Việt Nam!",
+
   "promo-title": "Promos",
   "promo-subtitle": "Tham gia chương trình hội thoại Alma để có cơ hội nhận một trong hai món quà thưởng sau đây.",
+  "promo-name": "Tên",
+  "promo-number": "Số phone",
+  "promo-email": "Email",
+  "promo-submit": "Tham gia!",
 
   "promo-vn-title": "Trúng một chuyến du lịch VIP Đặc Biệt về Việt Nam",
   "promo-vn-info-1": "Vé máy bay cho 4 người + 7 Đêm tại Alma Resort",

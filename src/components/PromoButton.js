@@ -26,7 +26,7 @@ const PromotionalButton = styled(Button)`
   }
 `
 
-const PromoButton = () => {
+const PromoButton = ({ intl }) => {
 
   const promoRef = useRef();
 
@@ -54,11 +54,11 @@ const PromoButton = () => {
         !isToggled ?
         (
           <Link to={`/promo`}>
-            <PromotionalButton onClick={toggle}>Promo</PromotionalButton>
+            <PromotionalButton onClick={toggle}>{intl.formatMessage({ id: "nav-promo" })}</PromotionalButton>
           </Link>
         ) : (
           <Link to={`/`}>
-            <PromotionalButton onClick={toggle}>Close</PromotionalButton>
+            <PromotionalButton onClick={toggle}>{intl.formatMessage({ id: "close-button" })}</PromotionalButton>
           </Link>
         )
       }

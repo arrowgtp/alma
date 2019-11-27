@@ -284,7 +284,7 @@ const PromoHeader = styled.h1`
   }
 `
 
-const Layout = ({ children, location: { pathname, hash } }) => {
+const Layout = ({ intl, children, location: { pathname, hash } }) => {
 
   useEffect(() => {
 
@@ -376,7 +376,7 @@ const Layout = ({ children, location: { pathname, hash } }) => {
         }}
         to={`/promo`}
       >
-        <PromoHeader>Win a trip to Vietnam!</PromoHeader>
+        <PromoHeader>{intl.formatMessage({ id: "promo-cta" })}</PromoHeader>
         {/* <Scrim/> */}
         <PromoVietnamImage src={PromoVietnam} />
       </PromoBanner>

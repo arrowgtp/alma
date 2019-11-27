@@ -12,8 +12,10 @@
   "nav-vacations": "Vacations",
   "nav-about-alma": "About Alma",
   "nav-showroom": "US Showroom",
-  
+  "nav-promo": "Promo",
+
   "learn-more-button": "Learn More",
+  "close-button": "Close",
 
   "instagram-paragraph": "View and share your own #AlmaVacations photos, videos and memorable moments.",
   "copyright-notice": "© Copyright 2019, Alma USA LLC. All rights reserved.",
@@ -155,7 +157,7 @@
 
   "construction-october-2019": "October 2019",
   "construction-october-2019-paragraph-1": "As construction is nearly completed, the officially opening of Alma Resort will be the 29th of December. We are excited to welcome everyone to this paradise.",
-  "construction-october-2019-paragraph-2": "As of November, almost all the main structures are  finished, including the villas, the main towers, all the restaurants, the utility building, the pavilion, and the basement.",
+  "construction-october-2019-paragraph-2": "As of October, almost all the main structures are  finished, including the villas, the main towers, all the restaurants, the utility building, the pavilion, and the basement.",
   "construction-october-2019-paragraph-3": "The entertainment features such as kid’s playground, youth club, amphitheatre, spa, gym, bar are near completion. The golf course, soccer field, tennis court and basketball court are ready for usage.",
   "construction-october-2019-paragraph-4": "The Alma spa area houses 13 villas, with 11 double rooms and 2 single rooms, to provide guests with the most convenient and relaxation experience.",
   "construction-october-2019-paragraph-5": "We are counting down to the grand opening.",
@@ -294,8 +296,14 @@
   "showroom-paragraph-1": "The official 6,000 square feet Alma Resort Showroom located in Southern California, USA is now open. Existing Alma Vacation Owners from all over the world, including Vietnam, will now have access to another international center for their travel needs.",
   "showroom-paragraph-2": "Our vision is to provide future Alma Vacation Owners an inviting place to envision how their family will fit right in, and enjoy what this award-winning resort has to offer, including world-class amenities, cinema, amphitheater, night club, sports playground, waterpark many restaurants, and much more.",
 
+  "promo-cta": "Win a trip to Vietnam!",
+
   "promo-title": "Promos",
   "promo-subtitle": "Winners selected weekly! No purchase required. Enter now to win!",
+  "promo-name": "Name",
+  "promo-number": "Phone Number",
+  "promo-email": "Email Address",
+  "promo-submit": "Enter Now!",
 
   "promo-vn-title": "Win an Exclusive VIP Trip to Vietnam",
   "promo-vn-info-1": "Airfare for 4 + 7 Nights at the Alma Resort",

@@ -566,9 +566,9 @@ const Promo = ({ data, intl }) => {
       >
         <input type="hidden" name="bot-field" />
         <input type="hidden" name="form-name" value="alma-form"/>
-        <Label>Name<Input name="name" type="text" required/></Label>
-        <Label>Phone Number<Input name="phone" type="tel" required/></Label>  
-        <Label>Email Address<Input name="email" type="email" required/></Label>
+        <Label>{intl.formatMessage({ id: "promo-name" })}<Input name="name" type="text" required/></Label>
+        <Label>{intl.formatMessage({ id: "promo-number" })}<Input name="phone" type="tel" required/></Label>  
+        <Label>{intl.formatMessage({ id: "promo-email" })}<Input name="email" type="email" required/></Label>
         {/* <PhoneInput
           placeholder="Enter phone number"
           value={ this.state.value }
@@ -579,7 +579,7 @@ const Promo = ({ data, intl }) => {
           whileTap={{ scale: 0.9 }}
           type="submit"
         >
-        Enter Now!
+        {intl.formatMessage({ id: "promo-submit" })}
         </SubmitButton>
         <Disclaimer>{intl.formatMessage({ id: "promo-vn-disclaimer" })}</Disclaimer>
       </Form>
