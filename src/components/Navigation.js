@@ -155,6 +155,7 @@ const AlmaLink2 = styled(Link)`
   grid-column: 2 / 4;
   margin: 0.4rem;
   padding: 0.25rem 0;
+  text-decoration: none;
   white-space: nowrap;
   font-family: 'Open Sans', sans-serif;
   font-size: calc(14px + (24 - 14) * ((100vw - 300px) / (1600 - 300)));
@@ -263,12 +264,6 @@ const DownArrow = styled.div`
   margin-left: -32px;
   align-self: end;
 `
-
-// const Menu = ({ intl }) => {
-//   return (
-
-//   )
-// }
 
 const Navigation = ({ intl }) => {
 

@@ -1,10 +1,10 @@
-import React, { useState, useEffect, useRef, Fragment } from 'react'
+import React from 'react'
 import styled from 'styled-components'
-import { motion } from 'framer-motion'
+// import { motion } from 'framer-motion'
 import { graphql } from 'gatsby'
-import { Link, injectIntl } from 'gatsby-plugin-intl'
+import { injectIntl } from 'gatsby-plugin-intl'
 import Img from 'gatsby-image'
-import SEO from '../components/seo'
+// import SEO from '../components/seo'
 
 // import 'react-phone-number-input/style.css'
 // import PhoneInput from 'react-phone-number-input'
@@ -569,6 +569,19 @@ const Promo = ({ data, intl }) => {
         <Label>{intl.formatMessage({ id: "promo-name" })}<Input name="name" type="text" required/></Label>
         <Label>{intl.formatMessage({ id: "promo-number" })}<Input name="phone" type="tel" required/></Label>  
         <Label>{intl.formatMessage({ id: "promo-email" })}<Input name="email" type="email" required/></Label>
+        {/* <Label>How do hear about us?</Label>
+        <Input type="checkbox" value="hi"/>
+        <Label for="hi">Hi</Label>
+        <Input type="checkbox" value="ho"/>
+        <Label for="ho">Ho</Label> */}
+        {/* <Label>How do hear about us?
+          <select name="role[]">
+            <option value="newspaper">Newspaper</option>
+            <option value="website">Website</option>
+            <option value="facebook">Facebook</option>
+            <option value="instagram">Instagram</option>
+          </select>
+        </Label> */}
         {/* <PhoneInput
           placeholder="Enter phone number"
           value={ this.state.value }

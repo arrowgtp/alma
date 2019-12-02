@@ -1,5 +1,3 @@
-const path = require('path');
-
 module.exports = {
   siteMetadata: {
     title: `Alma Vacations`,
@@ -7,15 +5,6 @@ module.exports = {
     author: `Arrow GTP`
   },
   plugins: [
-    // {
-    //   resolve: 'gatsby-plugin-tinacms',
-    //   options: {
-    //     plugins: [
-    //       "gatsby-tinacms-git",
-    //       "gatsby-tinacms-remark"
-    //     ],
-    //   },
-    // },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
@@ -23,7 +12,6 @@ module.exports = {
       },
     },
     'gatsby-plugin-webpack-bundle-analyzer',
-    `gatsby-plugin-modal-routing`,
     `gatsby-plugin-netlify`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
@@ -43,16 +31,12 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `content`,
-        path: path.join(__dirname, `./src/content`),
-        // path: `${__dirname}/src/content`,
+        name: `videos`,
+        path: `${__dirname}/src/videos`,
       },
     },
     `gatsby-transformer-sharp`,
-    `gatsby-transformer-yaml`,
     `gatsby-plugin-sharp`,
-    `gatsby-transformer-remark`,
-    `gatsby-plugin-mdx`,
     {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
@@ -88,6 +72,6 @@ module.exports = {
         icon: `src/images/alma/alma-shell.svg`,
       },
     },
-    // `gatsby-plugin-offline`
+    `gatsby-plugin-offline`
   ]
 };
