@@ -128,6 +128,10 @@ import starburst from '../images/promos/promo-starburst.svg'
 //   text-align: center;
 // `
 
+const SmallSpace = styled.div`
+  height: 1rem;
+`
+
 const PromoVacation = styled.div`
   grid-column: 1 / 4;
   margin: 0;
@@ -269,97 +273,97 @@ const PromoFine = styled.p`
   }
 `
 
-const PromoDetails = styled.div`
-  display: flex;
-  flex-direction: column-reverse;
-  flex-wrap: no-wrap;
-  align-items: space-between;
-  justify-content: center;
-  /* border: 1px solid red; */
+// const PromoDetails = styled.div`
+//   display: flex;
+//   flex-direction: column-reverse;
+//   flex-wrap: no-wrap;
+//   align-items: space-between;
+//   justify-content: center;
+//   border: 1px solid red;
 
   
-  @media (orientation: landscape) {
-    flex-direction: row;
-  }
-`
+//   @media (orientation: landscape) {
+//     flex-direction: row;
+//   }
+// `
 
-const PromoItems = styled.div`
-  grid-column: 4 / 9;
-  grid-row: 3 / 4;
-  margin: 0 0 1rem 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  /* border: 1px solid red; */
+// const PromoItems = styled.div`
+//   grid-column: 4 / 9;
+//   grid-row: 3 / 4;
+//   margin: 0 0 1rem 0;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   justify-content: center;
+//   /* border: 1px solid red; */
 
-  @media (orientation: landscape)  {
-    margin: 0 0 0 1rem;
-  }
-`
+//   @media (orientation: landscape)  {
+//     margin: 0 0 0 1rem;
+//   }
+// `
 
-const PromoItinerary = styled.p`
-  margin: 0 0 1rem 0;
-  color: white;
-  font-size: 16px;
-  line-height: 1.5;
-  margin: 0;
-  padding: 0;
-  font-family: 'Open Sans', sans-serif;
-`
+// const PromoItinerary = styled.p`
+//   margin: 0 0 1rem 0;
+//   color: white;
+//   font-size: 16px;
+//   line-height: 1.5;
+//   margin: 0;
+//   padding: 0;
+//   font-family: 'Open Sans', sans-serif;
+// `
 
-const PromoItem = styled.p`
-  color: white;
-  font-size: 16px;
-  font-size: calc(12px + (16 - 12) * ((100vw - 300px) / (1600 - 300)));
-  line-height: 1.5;
-  margin: 0;
-  padding: 0;
-  font-family: 'Open Sans', sans-serif;
+// const PromoItem = styled.p`
+//   color: white;
+//   font-size: 16px;
+//   font-size: calc(12px + (16 - 12) * ((100vw - 300px) / (1600 - 300)));
+//   line-height: 1.5;
+//   margin: 0;
+//   padding: 0;
+//   font-family: 'Open Sans', sans-serif;
 
-  @media (orientation: landscape) {
-    font-size: calc(12px + (16 - 12) * ((100vw - 300px) / (1600 - 300)));
-  }
-`
+//   @media (orientation: landscape) {
+//     font-size: calc(12px + (16 - 12) * ((100vw - 300px) / (1600 - 300)));
+//   }
+// `
 
-const PromoBang = styled.div`
-  grid-column: 2 / 4;
-  grid-row: 3 / 4;
-  display: grid;
-  grid-template-rows: 1fr;
-  grid-template-columns: 1fr;
-  align-items: center;
-  justify-items: center;
-  /* border: 1px solid red; */
-`
+// const PromoBang = styled.div`
+//   grid-column: 2 / 4;
+//   grid-row: 3 / 4;
+//   display: grid;
+//   grid-template-rows: 1fr;
+//   grid-template-columns: 1fr;
+//   align-items: center;
+//   justify-items: center;
+//   border: 1px solid red;
+// `
 
-const PromoAmount = styled.p`
-  color: white;
-  font-size: 12px;
-  line-height: 1.25;
-  grid-row: 1 / 2;
-  grid-column: 1 / 2;
-  z-index: 2;
-  text-align: center;
-  transform: rotate(-16deg);
-  font-family: 'Open Sans', sans-serif;
+// const PromoAmount = styled.p`
+//   color: white;
+//   font-size: 12px;
+//   line-height: 1.25;
+//   grid-row: 1 / 2;
+//   grid-column: 1 / 2;
+//   z-index: 2;
+//   text-align: center;
+//   transform: rotate(-16deg);
+//   font-family: 'Open Sans', sans-serif;
 
-  @media (orientation: landscape) {
-    font-size: 16px;
-  }
-`
+//   @media (orientation: landscape) {
+//     font-size: 16px;
+//   }
+// `
 
-const PromoStarburst = styled.img`
-  width: 6rem;
-  height: auto;
-  grid-row: 1 / 2;
-  grid-column: 1 / 2;
-  z-index: 1;
+// const PromoStarburst = styled.img`
+//   width: 6rem;
+//   height: auto;
+//   grid-row: 1 / 2;
+//   grid-column: 1 / 2;
+//   z-index: 1;
 
-  @media(orientation: landscape) {
-    width: 8rem;
-  }
-`
+//   @media(orientation: landscape) {
+//     width: 8rem;
+//   }
+// `
 
 const Form = styled.form`
   grid-column: 1 / 9;
@@ -432,6 +436,21 @@ const Input = styled.input`
   }
 `
 
+// const SelectLabel = styled.label`
+//   margin: 2rem;
+// `
+
+const Select = styled.select`
+  width: 80vw;
+  /* appearance: none;
+  outline: 0;
+  box-shadow: none;
+  background: #ffffff; */
+  @media (orientation: landscape) {
+    width: 14rem;
+  }
+`
+
 const SubmitButton = styled(Button)`
   grid-column: 1 / 9;
   grid-row: 6 / 7;
@@ -469,14 +488,14 @@ const Disclaimer = styled.p`
   font-family: 'Open Sans', sans-serif;
 `
 
-const PromoDisclaimer = styled(Disclaimer)`
-  /* grid-row:  8 / 9;
-  grid-column: 1 / 9;
-  z-index: 5; */
-  color: white;
-  /* align-self: end;
-  justify-self: center; */
-`
+// const PromoDisclaimer = styled(Disclaimer)`
+//   grid-row:  8 / 9;
+//   grid-column: 1 / 9;
+//   z-index: 5;
+//   color: white;
+//   align-self: end;
+//   justify-self: center;
+// `
 
 const Promo = ({ data, intl }) => {
   return (
@@ -574,19 +593,25 @@ const Promo = ({ data, intl }) => {
         <Label for="hi">Hi</Label>
         <Input type="checkbox" value="ho"/>
         <Label for="ho">Ho</Label> */}
-        {/* <Label>How do hear about us?
-          <select name="role[]">
-            <option value="newspaper">Newspaper</option>
-            <option value="website">Website</option>
-            <option value="facebook">Facebook</option>
-            <option value="instagram">Instagram</option>
-          </select>
-        </Label> */}
+        <Label>How do hear about us?
+          <SmallSpace/>
+          <Select name="role[]">
+            <option value="online">Online</option>
+            <option value="tv">TV</option>
+            <option value="radio">Radio</option>
+            <option value="newspaper-magazine">Newspaper / Magazine</option>
+            <option value="event-show">Event / Show</option>
+            <option value="direct-mail">Direct mail</option>
+            <option value="billboard">Billboard</option>
+            <option value="hot-hui">Hot Hui Game Show</option>
+          </Select>
+        </Label>
         {/* <PhoneInput
           placeholder="Enter phone number"
           value={ this.state.value }
           onChange={ value => this.setState({ value }) } /> */}
         {/* <Label>Zip Code<Input name="zip" type="text"/></Label> */}
+        <SmallSpace/>
         <SubmitButton
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
