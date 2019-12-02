@@ -13,6 +13,7 @@ const Container = styled.div`
   perspective-origin: 0 0;
   border: 1px solid red;
   background: white;
+  position: relative;
 `
 
 const ChildOne = styled.div`
@@ -21,6 +22,7 @@ const ChildOne = styled.div`
   background: red;
   width: 256px;
   height: 256px;
+  z-index: 1;
 `
 
 const ChildTwo = styled.div`
@@ -29,6 +31,7 @@ const ChildTwo = styled.div`
   background: blue;
   width: 256px;
   height: 256px;
+  z-index: 2;
 `
 
 const ChildThree = styled.div`
@@ -37,6 +40,7 @@ const ChildThree = styled.div`
   background: green;
   width: 256px;
   height: 256px;
+  z-index: 3;
 `
 
 const Parallax = () => {
