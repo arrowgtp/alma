@@ -595,7 +595,7 @@ const Promo = ({ data, intl }) => {
         <Label for="ho">Ho</Label> */}
         <Label>How did you hear about us?
           <SmallSpace/>
-          <Select name="role[]">
+          <Select name="source">
             <option value="online">Online</option>
             <option value="tv">TV</option>
             <option value="radio">Radio</option>
