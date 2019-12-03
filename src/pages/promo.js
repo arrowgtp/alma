@@ -593,7 +593,7 @@ const Promo = ({ data, intl }) => {
         <Label for="hi">Hi</Label>
         <Input type="checkbox" value="ho"/>
         <Label for="ho">Ho</Label> */}
-        <Label>How do hear about us?
+        <Label>How did you hear about us?
           <SmallSpace/>
           <Select name="role[]">
             <option value="online">Online</option>
