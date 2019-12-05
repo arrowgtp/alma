@@ -1,236 +1,373 @@
-import React from 'react'
+import React, { useRef, useEffect } from 'react'
+import lax from 'lax.js';
 import styled from 'styled-components'
 
-import { ParallaxProvider, Parallax } from 'react-scroll-parallax';
+// import { useLax } from 'use-lax'
 
-// import Content from '../components/layout/Content'
+function useLax() {
+  const requestRef = useRef();
 
-// const ParallaxContainer = styled.div`
-//   margin: 0;
-//   padding: 0;
-//   display: block;
-//   width: 100vw;
-//   height: 75vh;
-//   overflow-x: hidden;
-//   overflow-y: auto;
-//   perspective: 300px;
-//   /* perspective-origin: 0 0; */
-//   border: 1px solid red;
-//   background: white;
-//   /* font-size: 200%; */
+  useEffect(() => {
+    lax.setup() // initialization
+    const element = document.querySelector('#scroller') // Find your scrollable element
 
-//   @media (orientation: landscape) {
-//     width: 80vw;
-//     height: 80vh;
-//   }
-// `
+    const updateLax = () => {
+      lax.update(element.scrollTop) // pass in the elements scrolled position
+      requestRef.current = window.requestAnimationFrame(updateLax);
+    };
 
-// const ParallaxGroupOne = styled.div`
-//   z-index: 3;
-//   margin: 0;
-//   padding: 0;
-//   display: block;
-//   position: relative;
-//   height: 80vh;
-//   transform-style: preserve-3d;
-//   transition: transform 0.5s;
-//   border: 1px solid red;
-//   /* background: #aaa; */
-// `
+    requestRef.current = window.requestAnimationFrame(updateLax);
 
-// const ParallaxGroupTwo = styled.div`
-//   margin: 0;
-//   margin-top: 80vh;
-//   padding: 0;
-//   display: block;
-//   position: relative;
-//   height: 80vh;
-//   transform-style: preserve-3d;
-//   transition: transform 0.5s;
-//   border: 1px solid red;
-//   /* background: #999; */
-// `
+    return () => {
+      if (requestRef.current) {
+        window.cancelAnimationFrame(requestRef.current);
+      }
+    };
+  }, []);
+}
 
-// const ParallaxGroupThree = styled.div`
-//   margin: 0;
-//   padding: 0;
-//   display: block;
-//   position: relative;
-//   height: 80vh;
-//   transform-style: preserve-3d;
-//   transition: transform 0.5s;
-//   border: 1px solid red;
-//   /* background: #666; */
-// `
+const Scroller = styled.div`
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 80vh;
+  overflow-x: none;
+  overflow-y: scroll;
+  border: 1px solid black;
+  background: black;
 
-// const ParallaxLayerOne = styled.div`
-//   margin: 0;
-//   padding: 0;
-//   position: absolute;
-//   top: 0;
-//   right: 0;
-//   bottom: 0;
-//   left: 0;
-//   transform: translateZ(0);
-//   border: 1px solid red;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-// `
-
-// const ParallaxLayerTwo = styled.div`
-//   margin: 0;
-//   padding: 0;
-//   position: absolute;
-//   top: 0;
-//   right: 0;
-//   bottom: 0;
-//   left: 0;
-//   transform: translateZ(-300px) scale(2);
-//   border: 1px solid red;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-// `
-
-// const ParallaxLayerThree = styled.div`
-//   margin: 0;
-//   padding: 0;
-//   position: absolute;
-//   top: 0;
-//   right: 0;
-//   bottom: 0;
-//   left: 0;
-//   transform: translateZ(-600px) scale(3);
-//   border: 1px solid red;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-// `
-
-// const Text = styled.p`
-//   margin: 0;
-//   padding: 0;
-//   line-height: 1;
-//   font-size: 24px;
-//   /* display: block;
-//   text-align: center;
-//   position: absolute;
-//   left: 50%;
-//   right: 50%;
-//   transform: translate(-50%, -50%); */
-// `
-
-// const ChildOne = styled.div`
-//   transform-origin: 0 0;
-//   position: absolute;
-//   top: 0;
-//   right: 0;
-//   bottom: 0;
-//   left: 0;
-//   transform: translateZ(-1px) scale(4);
-//   background: red;
-//   width: 256px;
-//   height: 256px;
-//   z-index: 1;
-//   border: 1px solid black;
-//   opacity: 0.5;
-// `
-
-// const ChildTwo = styled.div`
-//   transform-origin: 0 0;
-//   position: absolute;
-//   top: 0;
-//   right: 0;
-//   bottom: 0;
-//   left: 0;
-//   transform: translateZ(-2px) scale(5);
-//   background: blue;
-//   width: 256px;
-//   height: 256px;
-//   z-index: 2;
-//   border: 1px solid black;
-//   opacity: 0.5;
-// `
-
-// const ChildThree = styled.div`
-//   transform-origin: 0 0;
-//   position: absolute;
-//   top: 0;
-//   right: 0;
-//   bottom: 0;
-//   left: 0;
-//   transform: translateZ(-3px) scale(6);
-//   background: green;
-//   width: 256px;
-//   height: 256px;
-//   z-index: 3;
-//   border: 1px solid black;
-//   opacity: 0.5;
-// `
-
-
-const P1 = styled.p`
-  width: 256px;
-  height: 256px;
-  background: #aaa;
+  @media(orientation: landscape) {
+    width: 80vw;
+    height: 80vh;
+  }
 `
 
-const P2 = styled.p`
-  width: 256px;
-  height: 256px;
-  background: #888;
+const Section = styled.div`
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 80vh;
+  background: grey;
+  border: 1px solid red;
+  position: relative;
 `
 
-const P3 = styled.p`
-  width: 256px;
-  height: 256px;
-  background: #555;
+const Rect1 = styled.div`
+  margin: 0;
+  /* margin-top: -1000px; */
+  padding: 0;
+  width: 100%;
+  height: 80vh;
+  position: absolute;
+  top: 0;
+  background: #111;
+  z-index: 1;
 `
 
-const ParallaxPage = () => {
-  return(
-    <ParallaxProvider>
-      <Parallax y={[0, 20]}><P1>Hello There</P1></Parallax>
-      <Parallax y={[0, 20]}><P2>How are you doing?</P2></Parallax>
-      <Parallax y={[0, 20]}><P3>Is life treating you good?</P3></Parallax>
-    </ParallaxProvider>
-    // <ParallaxContainer>
-    //   <ParallaxGroupOne>
-    //     <ParallaxLayerOne>
-    //       <Text>Layer</Text>
-    //     </ParallaxLayerOne>
-    //     <ParallaxLayerTwo>
-    //       <Text>Layer</Text>
-    //     </ParallaxLayerTwo>
-    //     <ParallaxLayerThree style={{background: '#555'}}>
-    //       <Text>Layer</Text>
-    //     </ParallaxLayerThree>
-    //   </ParallaxGroupOne>
-    //   <ParallaxGroupTwo>
-    //     <ParallaxLayerOne>
-    //       <Text>Layer</Text>
-    //     </ParallaxLayerOne>
-    //     <ParallaxLayerTwo>
-    //       <Text>Layer</Text>
-    //     </ParallaxLayerTwo>
-    //     <ParallaxLayerThree style={{background: '#888'}}>
-    //       <Text>Layer</Text>
-    //     </ParallaxLayerThree>
-    //   </ParallaxGroupTwo>
-    //   {/* <ParallaxGroupThree>
-    //     <ParallaxLayerOne>
-    //       <Text>Layer</Text>
-    //     </ParallaxLayerOne>
-    //     <ParallaxLayerTwo>
-    //       <Text>Layer</Text>
-    //     </ParallaxLayerTwo>
-    //     <ParallaxLayerThree style={{background: '#aaa'}}>
-    //       <Text>Layer</Text>
-    //     </ParallaxLayerThree>
-    //   </ParallaxGroupThree> */}
-    // </ParallaxContainer>
+const Rect2 = styled.div`
+  margin: 0;
+  /* margin-top: -500px; */
+  padding: 0;
+  width: 100%;
+  height: 80vh; 
+  position: absolute;
+  /* top: 30vh; */
+  background: #333;
+  z-index: 2;
+`
+
+const Rect3 = styled.div`
+  margin: 0;
+  /* margin-top: -250px; */
+  padding: 0;
+  width: 100%;
+  height: 80vh;
+  position: absolute;
+  /* top: 55vh; */
+  background: #666;
+  z-index: 3;
+`
+
+const Rect4 = styled.div`
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 80vh;
+  position: absolute;
+  /* top: 70vh; */
+  background: #999;
+  z-index: 4;
+`
+
+const Parallax = () => {
+
+  useLax()
+
+  return (
+    <Scroller id='scroller'>
+      <Section>
+        <Rect1 className="lax" data-lax-preset="lazy-1000"></Rect1>
+        <Rect2 className="lax" data-lax-preset="lazy-500"></Rect2>
+        <Rect3 className="lax" data-lax-preset="lazy-250"></Rect3>
+        <Rect4 className="lax" data-lax-preset="lazy-0"></Rect4>
+      </Section>
+      <div id="section1" className="section">
+        <div className="left">
+          <div
+            className="lax bubble a"
+            style={{ background: '#EDD943' }}
+            data-lax-preset="lazy-250"
+          />
+
+          <div
+            className="lax bubble c"
+            style={{ background: '#ED2471', marginLeft: '80pt' }}
+            data-lax-preset="lazy-100"
+          />
+
+          <div
+            className="lax bubble b"
+            style={{ background: '#35D5E5', marginLeft: '160pt' }}
+            data-lax-preset="lazy-300"
+          />
+
+          <h3
+            data-lax-preset="driftRight"
+            data-lax-optimize="true"
+            className="lax chunkyText"
+            style={{ color: '#35D5E5' }}
+          >
+            oooh!
+          </h3>
+        </div>
+
+        <div className="right">
+          <div
+            className="lax bubble a"
+            style={{ background: '#35D5E5', marginLeft: '120pt' }}
+            data-lax-preset="lazy-200"
+          />
+
+          <div
+            className="lax bubble c"
+            style={{ background: '#EDD943', marginLeft: '-20pt' }}
+            data-lax-preset="lazy-150"
+          />
+
+          <div
+            className="lax bubble b"
+            style={{
+              background: '#ED2471',
+              marginLeft: '20pt',
+              marginTop: '200pt',
+            }}
+            data-lax-preset="lazy-350"
+          />
+          <h3
+            data-lax-optimize="true"
+            data-lax-preset="driftLeft"
+            className="lax chunkyText"
+            style={{ color: '#ED2471', marginTop: '200pt' }}
+          >
+            aaah!
+          </h3>
+        </div>
+
+        <h3
+          data-lax-preset="crazy zoomInOut"
+          className="lax crazyText"
+          data-lax-optimize="true"
+        >
+          sooo crazy
+        </h3>
+      </div>
+      <div id="section2" className="section">
+        <div
+          className="lax blockContainer"
+          data-lax-preset="leftToRight-1.1 fadeInOut"
+        >
+          <div
+            className="lax block"
+            style={{ background: '#35D5E5' }}
+            data-lax-preset="spin"
+          />
+        </div>
+
+        <div
+          className="lax blockContainer"
+          data-lax-preset="leftToRight-1.2 fadeInOut"
+        >
+          <div
+            className="lax block"
+            style={{
+              background: '#EDD943',
+              marginTop: '-50pt',
+              marginLeft: '-50pt',
+              width: '40pt',
+              height: '40pt',
+            }}
+            data-lax-preset="spinRev-500"
+          />
+        </div>
+
+        <div
+          className="lax blockContainer"
+          data-lax-preset="leftToRight-1.4 fadeInOut"
+        >
+          <div
+            className="lax block"
+            style={{
+              background: '#ED2471',
+              marginTop: '-90pt',
+              marginLeft: '-0pt',
+            }}
+            data-lax-preset="spin-500"
+          />
+        </div>
+
+        <div
+          className="lax blockContainer"
+          data-lax-preset="leftToRight-1.5 fadeInOut"
+        >
+          <div
+            className="lax block"
+            style={{
+              background: '#EDD943',
+              marginTop: '70pt',
+              marginLeft: '-150pt',
+              width: '40pt',
+              height: '40pt',
+            }}
+            data-lax-preset="spinRev-500"
+          />
+        </div>
+
+        <div
+          className="lax blockContainer"
+          data-lax-preset="leftToRight-1.3 fadeInOut"
+        >
+          <div
+            className="lax block"
+            style={{
+              background: '#EDD943',
+              marginTop: '100pt',
+              marginLeft: '-60pt',
+              width: '25pt',
+              height: '25pt',
+            }}
+            data-lax-preset="spin-500"
+          />
+        </div>
+
+        <div
+          className="lax blockContainer"
+          data-lax-preset="leftToRight-1.05 fadeInOut"
+        >
+          <div
+            className="lax block"
+            style={{
+              background: '#ED2471',
+              marginTop: '-30pt',
+              marginLeft: '-70pt',
+            }}
+            data-lax-preset="spin"
+          />
+        </div>
+
+        <h3
+          data-lax-preset="leftToRight-0.8 speedy"
+          data-lax-optimize="true"
+          className="lax chunkyText"
+          style={{
+            color: 'white',
+            position: 'absolute',
+            marginTop: '-20pt',
+            marginLeft: '-100pt',
+          }}
+        >
+          wheee!
+        </h3>
+
+        <div
+          className="lax blockContainer"
+          data-lax-preset="leftToRight-1.15 fadeInOut"
+        >
+          <div
+            className="lax block"
+            style={{
+              background: '#35D5E5',
+              marginTop: '-70pt',
+              marginLeft: '-20pt',
+              width: '40pt',
+              height: '40pt',
+            }}
+            data-lax-preset="spinRev-500"
+          />
+        </div>
+
+        <div
+          className="lax blockContainer"
+          data-lax-preset="leftToRight-1.45 fadeInOut"
+        >
+          <div
+            className="lax block"
+            style={{
+              background: '#ED2471',
+              marginTop: '-50pt',
+              marginLeft: '-50pt',
+              width: '25pt',
+              height: '25pt',
+            }}
+            data-lax-preset="spin-500"
+          />
+        </div>
+
+        <div
+          className="lax blockContainer"
+          data-lax-preset="leftToRight-1.5 fadeInOut"
+        >
+          <div
+            className="lax block"
+            style={{
+              background: '#35D5E5',
+              marginTop: '30pt',
+              marginLeft: '-20pt',
+            }}
+            data-lax-preset="spinRev-500"
+          />
+        </div>
+
+        <div
+          className="lax blockContainer"
+          data-lax-preset="leftToRight-1.25 fadeInOut"
+        >
+          <div
+            className="lax block"
+            style={{
+              background: '#ED2471',
+              marginTop: '80pt',
+              marginLeft: '-10pt',
+            }}
+            data-lax-preset="spin-500"
+          />
+        </div>
+      </div>
+      <div id="section3" className="section">
+      <p className="lax" data-lax-preset="linger" data-lax-optimize="true">
+        Harness the power of scrolling and make your websites come alive!
+      </p>
+      <a
+        className="lax button"
+        data-lax-preset="linger"
+        data-lax-optimize="true"
+        data-lax-bg-pos-x="0 0, 3000 1000"
+        href="https://github.com/alexfoxy/laxxx"
+      >
+        Get lax.js
+      </a>
+    </div>
+    </Scroller>
   )
 }
 
-export default ParallaxPage
+export default Parallax

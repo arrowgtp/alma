@@ -104,7 +104,6 @@ const Amenities = ({ data, intl }) => {
           <LI>{intl.formatMessage({ id: "activity-9" })}</LI>
           <LI>{intl.formatMessage({ id: "activity-10" })}</LI>
           <LI>{intl.formatMessage({ id: "activity-11" })}</LI>
-          <LI>{intl.formatMessage({ id: "activity-11" })}</LI>
           <LI>{intl.formatMessage({ id: "activity-12" })}</LI>
         </UL>
       </CenteredContainer>
