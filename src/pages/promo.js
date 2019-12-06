@@ -6,127 +6,9 @@ import { injectIntl } from 'gatsby-plugin-intl'
 import Img from 'gatsby-image'
 // import SEO from '../components/seo'
 
-// import 'react-phone-number-input/style.css'
-// import PhoneInput from 'react-phone-number-input'
-
 import Content from '../components/layout/Content'
 import { Button } from '../components/visual/Button'
 import { Space, P } from '../components/visual/Typography'
-
-// import lifestyleImage from '../images/lifestyle/lifestyle-1.jpg'
-import starburst from '../images/promos/promo-starburst.svg'
-
-// const AnimatedCard = styled(motion.div)`
-//   opacity: 0;
-//   grid-column: 1 / 4;
-//   margin: 0;
-//   padding: 0;
-//   /* height: 90vh; */
-//   /* background-image: url(${lifestyleImage});
-//   background-position: center;
-//   background-repeat: no-repeat;
-//   background-size: cover; */
-//   height: calc(var(--vh, 1vh) * 90);
-//   display: grid;
-//   grid-template-rows: repeat(8, 1fr);
-//   grid-template-columns: repeat(8, 1fr);
-
-//   @media (min-width: 50rem) {
-//     height: 100vh;
-//   }
-// `
-
-// const PromoContent = styled.div`
-//   grid-column: 1 / 4;
-//   display: grid;
-//   grid-template-columns: repeat(8, 1fr);
-//   grid-template-rows: auto;
-// `
-
-// const Image = styled.div`
-//   background-image: url(${lifestyleImage});
-//   background-position: center;
-//   background-repeat: no-repeat;
-//   background-size: cover;
-//   grid-column: 1 / 9;
-//   grid-row: 1;
-//   margin: 0;
-//   border-radius: 0px;
-//   mask-image: linear-gradient(
-//     to bottom,
-//     hsla(0, 0%, 100%, 0) 0%,
-//     hsla(0, 0%, 100%, 0.013) 8.1%,
-//     hsla(0, 0%, 100%, 0.049) 15.5%,
-//     hsla(0, 0%, 100%, 0.104) 22.5%,
-//     hsla(0, 0%, 100%, 0.175) 29%,
-//     hsla(0, 0%, 100%, 0.259) 35.3%,
-//     hsla(0, 0%, 100%, 0.352) 41.2%,
-//     hsla(0, 0%, 100%, 0.45) 47.1%,
-//     hsla(0, 0%, 100%, 0.55) 52.9%,
-//     hsla(0, 0%, 100%, 0.648) 58.8%,
-//     hsla(0, 0%, 100%, 0.741) 64.7%,
-//     hsla(0, 0%, 100%, 0.825) 71%,
-//     hsla(0, 0%, 100%, 0.896) 77.5%,
-//     hsla(0, 0%, 100%, 0.951) 84.5%,
-//     hsla(0, 0%, 100%, 0.987) 91.9%,
-//     hsl(0, 0%, 100%) 100%)
-//   ;
-
-//   @media (min-width: 50rem) {
-//     mask-image: none;
-//     grid-column: 1 / 6;
-//     grid-row: 2;
-//     margin: 2rem;
-//     border-radius: 32px;
-//   }
-// `
-
-// const Content = styled.div`
-//   margin: 0;
-//   padding: 0;
-//   width: 100vw;
-//   height: 90vh;
-//   height: calc(var(--vh, 1vh) * 90);
-//   display: grid;
-//   grid-template-columns: repeat(8, 1fr);
-//   grid-template-rows: calc(var(--vh, 1vh) * 90) calc(var(--vh, 1vh) * 90);
-
-// `
-
-// const PromoBox = styled.div`
-//   grid-column: 1/9;
-//   grid-row: 1 / 2;
-//   border: 1px solid red;
-//   margin: 0;
-//   padding: 0;
-//   width: 100vw;
-//   height: 90vh;
-//   height: calc(var(--vh, 1vh) * 90);
-//   display: grid;
-//   grid-template-rows: repeat(8, 1fr);
-//   grid-template-columns: repeat(8, 1fr);
-
-//   @media (orientation: landscape) {
-//     width: 80vw;
-//     height: 100vh;
-//     display: grid;
-//     grid-template-rows: repeat(8, 1fr);
-//     grid-template-columns: repeat(8, 1fr);
-//   } 
-// `
-
-// const Message = styled(P)`
-//   grid-column: 1 / 4;
-//   margin: 0 1rem 0 1rem;
-//   padding: 1rem;
-//   align-self: stretch;
-//   justify-self: stretch;
-//   color: black;
-//   font-family: 'Open Sans', sans-serif;
-//   font-size: calc(18px + (32 - 18) * ((100vw - 300px) / (1600 - 300)));
-//   line-height: 1.5;
-//   text-align: center;
-// `
 
 const SmallSpace = styled.div`
   height: 1rem;
@@ -146,30 +28,6 @@ const PromoVacation = styled.div`
     height: 100vh;
   }
 `
-
-// const NarrowPromoVacationImage = styled(Img)`
-//   grid-row: 1 / 9;
-//   grid-column: 1 / 9;
-//   object-fit: cover;
-//   z-index: 1;
-//   border-radius: 32px;
-
-//   @media(orientation: landscape) {
-//     display: none;
-//   }
-// `
-
-// const WidePromoVacationImage = styled(Img)`
-//   display: none;
-
-//   @media(orientation: landscape) {
-//     grid-row: 1 / 9;
-//     grid-column: 1 / 9;
-//     object-fit: cover;
-//     z-index: 1;
-//     border-radius: 32px;
-//   }
-// `
 
 const PromoVacationImage = styled(Img)`
   margin: 0;
@@ -273,98 +131,6 @@ const PromoFine = styled.p`
   }
 `
 
-// const PromoDetails = styled.div`
-//   display: flex;
-//   flex-direction: column-reverse;
-//   flex-wrap: no-wrap;
-//   align-items: space-between;
-//   justify-content: center;
-//   border: 1px solid red;
-
-  
-//   @media (orientation: landscape) {
-//     flex-direction: row;
-//   }
-// `
-
-// const PromoItems = styled.div`
-//   grid-column: 4 / 9;
-//   grid-row: 3 / 4;
-//   margin: 0 0 1rem 0;
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   justify-content: center;
-//   /* border: 1px solid red; */
-
-//   @media (orientation: landscape)  {
-//     margin: 0 0 0 1rem;
-//   }
-// `
-
-// const PromoItinerary = styled.p`
-//   margin: 0 0 1rem 0;
-//   color: white;
-//   font-size: 16px;
-//   line-height: 1.5;
-//   margin: 0;
-//   padding: 0;
-//   font-family: 'Open Sans', sans-serif;
-// `
-
-// const PromoItem = styled.p`
-//   color: white;
-//   font-size: 16px;
-//   font-size: calc(12px + (16 - 12) * ((100vw - 300px) / (1600 - 300)));
-//   line-height: 1.5;
-//   margin: 0;
-//   padding: 0;
-//   font-family: 'Open Sans', sans-serif;
-
-//   @media (orientation: landscape) {
-//     font-size: calc(12px + (16 - 12) * ((100vw - 300px) / (1600 - 300)));
-//   }
-// `
-
-// const PromoBang = styled.div`
-//   grid-column: 2 / 4;
-//   grid-row: 3 / 4;
-//   display: grid;
-//   grid-template-rows: 1fr;
-//   grid-template-columns: 1fr;
-//   align-items: center;
-//   justify-items: center;
-//   border: 1px solid red;
-// `
-
-// const PromoAmount = styled.p`
-//   color: white;
-//   font-size: 12px;
-//   line-height: 1.25;
-//   grid-row: 1 / 2;
-//   grid-column: 1 / 2;
-//   z-index: 2;
-//   text-align: center;
-//   transform: rotate(-16deg);
-//   font-family: 'Open Sans', sans-serif;
-
-//   @media (orientation: landscape) {
-//     font-size: 16px;
-//   }
-// `
-
-// const PromoStarburst = styled.img`
-//   width: 6rem;
-//   height: auto;
-//   grid-row: 1 / 2;
-//   grid-column: 1 / 2;
-//   z-index: 1;
-
-//   @media(orientation: landscape) {
-//     width: 8rem;
-//   }
-// `
-
 const Form = styled.form`
   grid-column: 1 / 9;
   grid-row: 2 / 3;
@@ -436,16 +202,9 @@ const Input = styled.input`
   }
 `
 
-// const SelectLabel = styled.label`
-//   margin: 2rem;
-// `
-
 const Select = styled.select`
   width: 80vw;
-  /* appearance: none;
-  outline: 0;
-  box-shadow: none;
-  background: #ffffff; */
+
   @media (orientation: landscape) {
     width: 14rem;
   }
@@ -488,30 +247,10 @@ const Disclaimer = styled.p`
   font-family: 'Open Sans', sans-serif;
 `
 
-// const PromoDisclaimer = styled(Disclaimer)`
-//   grid-row:  8 / 9;
-//   grid-column: 1 / 9;
-//   z-index: 5;
-//   color: white;
-//   align-self: end;
-//   justify-self: center;
-// `
-
 const Promo = ({ data, intl }) => {
   return (
-    // <AnimatedCard 
-    //   animate={{
-    //     opacity: 1,
-    //     transition: {
-    //       type: "spring",
-    //       stiffness: 100,
-    //       damping: 10
-    //     }
-    //   }}
-    // >
     <Content>
       <PromoVacation>
-        {/* <Message>{intl.formatMessage({ id: "promo-subtitle" })}</Message> */}
         <PromoVacationText>
           <PromoTitle>{intl.formatMessage({ id: "promo-vn-title" })}</PromoTitle>
           <Space/>
@@ -522,60 +261,9 @@ const Promo = ({ data, intl }) => {
           <PromoFine>{intl.formatMessage({ id: "promo-vn-info-3" })}</PromoFine>
           <PromoFine>{intl.formatMessage({ id: "promo-vn-info-4" })}</PromoFine>
           <PromoFine>{intl.formatMessage({ id: "promo-vn-info-5" })}</PromoFine>
-          {/* <PromoDetails>
-            <PromoBang>
-              <PromoStarburst src={starburst}/>
-              <PromoAmount>$10,000<br/>Value!</PromoAmount>
-            </PromoBang>
-          </PromoDetails> */}
         </PromoVacationText>
         <PromoVacationImage fluid={data.sep6.childImageSharp.fluid} />
       </PromoVacation>
-        {/* <Message>{intl.formatMessage({ id: "promo-subtitle" })}</Message>
-        <PromoVacation>
-          <PromoVacationText>
-            <PromoTitle>{intl.formatMessage({ id: "promo-vegas-title" })}</PromoTitle>
-            <PromoInfo>{intl.formatMessage({ id: "promo-vegas-info" })}</PromoInfo>
-            <Space/>
-            <PromoDetails>
-              <PromoBang>
-                <PromoStarburst src={starburst}/>
-                <PromoAmount>{intl.formatMessage({ id: "promo-vegas-amount" })}</PromoAmount>
-              </PromoBang>
-              <PromoItems>
-                <PromoItem>{intl.formatMessage({ id: "promo-vegas-hotel-1" })}</PromoItem>
-                <PromoItem>{intl.formatMessage({ id: "promo-vegas-hotel-2" })}</PromoItem>
-                <PromoItem>{intl.formatMessage({ id: "promo-vegas-hotel-3" })}</PromoItem>
-                <PromoItem>{intl.formatMessage({ id: "promo-vegas-hotel-4" })}</PromoItem>
-                <PromoItem>{intl.formatMessage({ id: "promo-vegas-tickets" })}</PromoItem>
-              
-              </PromoItems>
-            </PromoDetails>
-            <PromoDisclaimer>{intl.formatMessage({ id: "promo-disclaimer-1" })}</PromoDisclaimer>
-          </PromoVacationText>
-          <PromoVacationImage fluid={data.promoVegas.childImageSharp.fluid} />
-        </PromoVacation>
-        <PromoVacation>
-          <PromoVacationText>
-            <PromoTitle>{intl.formatMessage({ id: "promo-cruise-title" })}</PromoTitle>
-            <PromoInfo>{intl.formatMessage({ id: "promo-cruise-info" })}</PromoInfo>
-            <PromoItem>{intl.formatMessage({ id: "promo-cruise-itineraries" })}</PromoItem>
-            <Space />
-            <PromoDetails>
-              <PromoBang>
-                <PromoStarburst src={starburst}/>
-                <PromoAmount>{intl.formatMessage({ id: "promo-cruise-amount" })}</PromoAmount>
-              </PromoBang>
-              <PromoItems>
-                <PromoItem>{intl.formatMessage({ id: "promo-cruise-destination-1" })}</PromoItem>
-                <PromoItem>{intl.formatMessage({ id: "promo-cruise-destination-2" })}</PromoItem>
-                <PromoItem>{intl.formatMessage({ id: "promo-cruise-destination-3" })}</PromoItem>
-              </PromoItems>
-            </PromoDetails>
-            <PromoDisclaimer>{intl.formatMessage({ id: "promo-disclaimer-1" })}</PromoDisclaimer>
-          </PromoVacationText>
-          <PromoVacationImage fluid={data.promoCruise.childImageSharp.fluid} />
-        </PromoVacation> */}
       <Form
         name="alma-form"
         method="post"
@@ -588,15 +276,10 @@ const Promo = ({ data, intl }) => {
         <Label>{intl.formatMessage({ id: "promo-name" })}<Input name="name" type="text" required/></Label>
         <Label>{intl.formatMessage({ id: "promo-number" })}<Input name="phone" type="tel" required/></Label>  
         <Label>{intl.formatMessage({ id: "promo-email" })}<Input name="email" type="email" required/></Label>
-        {/* <Label>How do hear about us?</Label>
-        <Input type="checkbox" value="hi"/>
-        <Label for="hi">Hi</Label>
-        <Input type="checkbox" value="ho"/>
-        <Label for="ho">Ho</Label> */}
         <Label>How did you hear about us?
           <SmallSpace/>
-          <Select name="source">
-            <option value="blank">- Please select an option -</option>
+          <Select name="source" required>
+            <option value="">- Please select an option -</option>
             <option value="hot-hui">Hot Hui Game</option>
             <option value="online">Online</option>
             <option value="tv">TV</option>
@@ -607,11 +290,6 @@ const Promo = ({ data, intl }) => {
             <option value="radio">Radio</option>
           </Select>
         </Label>
-        {/* <PhoneInput
-          placeholder="Enter phone number"
-          value={ this.state.value }
-          onChange={ value => this.setState({ value }) } /> */}
-        {/* <Label>Zip Code<Input name="zip" type="text"/></Label> */}
         <SmallSpace/>
         <SubmitButton
           whileHover={{ scale: 1.1 }}
@@ -622,27 +300,12 @@ const Promo = ({ data, intl }) => {
         </SubmitButton>
         <Disclaimer>{intl.formatMessage({ id: "promo-vn-disclaimer" })}</Disclaimer>
       </Form>
-      {/* </AnimatedCard> */}
     </Content>
   )
 }
 
 export const query = graphql`
   query {
-    promoVegas: file(relativePath: { eq: "promos/promo-vegas.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 2160) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
-    promoCruise: file(relativePath: { eq: "promos/promo-cruise.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 2160) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
     promoVietnam: file(relativePath: { eq: "promos/promo-vietnam.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 2048) {
