@@ -351,6 +351,9 @@ const Layout = ({ intl, children, location: { pathname, hash } }) => {
             pathname.includes('success') ?
             'none'
             :
+            pathname.includes('holiday') ?
+            'none'
+            :
             'grid'
         }}
         to='/promo'
@@ -370,6 +373,9 @@ const Layout = ({ intl, children, location: { pathname, hash } }) => {
             'none'
             :
             pathname.includes('success') ?
+            'none'
+            :
+            pathname.includes('holiday') ?
             'none'
             :
             'grid'

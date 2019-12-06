@@ -497,7 +497,7 @@ const Disclaimer = styled.p`
 //   justify-self: center;
 // `
 
-const Promo = ({ data, intl }) => {
+const Holiday = ({ data, intl }) => {
   return (
     // <AnimatedCard 
     //   animate={{
@@ -513,15 +513,13 @@ const Promo = ({ data, intl }) => {
       <PromoVacation>
         {/* <Message>{intl.formatMessage({ id: "promo-subtitle" })}</Message> */}
         <PromoVacationText>
-          <PromoTitle>{intl.formatMessage({ id: "promo-vn-title" })}</PromoTitle>
+          <PromoTitle>{intl.formatMessage({ id: "promo-holiday-title" })}</PromoTitle>
           <Space/>
-          <PromoInfo>{intl.formatMessage({ id: "promo-vn-info-1" })}</PromoInfo>
+          <PromoInfo>{intl.formatMessage({ id: "promo-holiday-info" })}</PromoInfo>
           <Space/>
-          <PromoInfo>{intl.formatMessage({ id: "promo-vn-info-2" })}</PromoInfo>
+          <PromoFine>{intl.formatMessage({ id: "promo-holiday-fine-1" })}</PromoFine>
+          <PromoFine>{intl.formatMessage({ id: "promo-holiday-fine-2" })}</PromoFine>
           <Space/>
-          <PromoFine>{intl.formatMessage({ id: "promo-vn-info-3" })}</PromoFine>
-          <PromoFine>{intl.formatMessage({ id: "promo-vn-info-4" })}</PromoFine>
-          <PromoFine>{intl.formatMessage({ id: "promo-vn-info-5" })}</PromoFine>
           {/* <PromoDetails>
             <PromoBang>
               <PromoStarburst src={starburst}/>
@@ -529,7 +527,7 @@ const Promo = ({ data, intl }) => {
             </PromoBang>
           </PromoDetails> */}
         </PromoVacationText>
-        <PromoVacationImage fluid={data.sep6.childImageSharp.fluid} />
+        <PromoVacationImage fluid={data.coaster.childImageSharp.fluid} />
       </PromoVacation>
         {/* <Message>{intl.formatMessage({ id: "promo-subtitle" })}</Message>
         <PromoVacation>
@@ -620,7 +618,7 @@ const Promo = ({ data, intl }) => {
         >
         {intl.formatMessage({ id: "promo-submit" })}
         </SubmitButton>
-        <Disclaimer>{intl.formatMessage({ id: "promo-vn-disclaimer" })}</Disclaimer>
+        <Disclaimer>{intl.formatMessage({ id: "promo-holiday-disclaimer" })}</Disclaimer>
       </Form>
       {/* </AnimatedCard> */}
     </Content>
@@ -629,30 +627,9 @@ const Promo = ({ data, intl }) => {
 
 export const query = graphql`
   query {
-    promoVegas: file(relativePath: { eq: "promos/promo-vegas.jpg" }) {
+    coaster: file(relativePath: { eq: "promos/coaster.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 2160) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
-    promoCruise: file(relativePath: { eq: "promos/promo-cruise.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 2160) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
-    promoVietnam: file(relativePath: { eq: "promos/promo-vietnam.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 2048) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
-    sep6: file(relativePath: { eq: "construction/september-6.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 2880) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
@@ -660,4 +637,4 @@ export const query = graphql`
   }
 `
 
-export default injectIntl(Promo)
+export default injectIntl(Holiday)
