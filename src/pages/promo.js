@@ -138,7 +138,7 @@ const Form = styled.form`
   padding: 0;
   width: 100vw;
   height: 70vh;
-  height: calc(var(--vh, 1vh) * 70);
+  height: calc(var(--vh, 1vh) * 100);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -204,6 +204,7 @@ const Input = styled.input`
 
 const Select = styled.select`
   width: 80vw;
+  font-size: 18px;
 
   @media (orientation: landscape) {
     width: 14rem;

@@ -90,7 +90,6 @@ const Image = styled.div`
 //   display: grid;
 //   grid-template-columns: repeat(8, 1fr);
 //   grid-template-rows: calc(var(--vh, 1vh) * 90) calc(var(--vh, 1vh) * 90);
-
 // `
 
 const PromoBox = styled.div`
