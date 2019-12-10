@@ -299,7 +299,7 @@ const Promo = ({ data, intl }) => {
         >
         {intl.formatMessage({ id: "promo-submit" })}
         </SubmitButton>
-        <Disclaimer>{intl.formatMessage({ id: "promo-vn-disclaimer" })}</Disclaimer>
+        <Disclaimer>{intl.formatMessage({ id: "promo-disclaimer" })}</Disclaimer>
       </Form>
     </Content>
   )

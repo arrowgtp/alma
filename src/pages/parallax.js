@@ -1,8 +1,9 @@
 import React, { useRef, useEffect } from 'react'
-import lax from 'lax.js';
+import { graphql } from 'gatsby'
+import Img from 'gatsby-image'
 import styled from 'styled-components'
 
-// import { useLax } from 'use-lax'
+import lax from 'lax.js'
 
 function useLax() {
   const requestRef = useRef();
@@ -34,7 +35,7 @@ const Scroller = styled.div`
   overflow-x: none;
   overflow-y: scroll;
   border: 1px solid black;
-  background: black;
+  background: white;
 
   @media(orientation: landscape) {
     width: 80vw;
@@ -46,328 +47,199 @@ const Section = styled.div`
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 80vh;
-  background: grey;
+  height: 120vh;
   border: 1px solid red;
   position: relative;
+  display: grid;
+  grid-template-rows: repeat(8, 1fr);
+  grid-template-columns: repeat(12, 1fr);
 `
 
-const Rect1 = styled.div`
-  margin: 0;
-  /* margin-top: -1000px; */
-  padding: 0;
-  width: 100%;
-  height: 80vh;
-  position: absolute;
-  top: 0;
-  background: #111;
+const ImageOne = styled(Img)`
+  display: block;
+  width: 60vw;
+  height: auto;
+  border: 1px solid red;
+  grid-row: 1 / 9;
+  grid-column: 1 / 12;
+  align-self: start;
+  justify-self: start;
+  z-index: 0;
+`
+
+const ImageTwo = styled(Img)`
+  display: block;
+  width: 50vw;
+  height: auto;
+  border: 1px solid red;
+  grid-row: 1 / 9;
+  grid-column: 1 / 13 ;
+  align-self: end;
+  justify-self: end;
   z-index: 1;
 `
 
-const Rect2 = styled.div`
-  margin: 0;
-  /* margin-top: -500px; */
-  padding: 0;
-  width: 100%;
-  height: 80vh; 
+const Text = styled.p`
+  font-size: 48px;
+  width: 60vw;
+  height: auto;
   position: absolute;
-  /* top: 30vh; */
-  background: #333;
+  bottom: 0;
+  right: 0;
+  border: 1px solid red;
   z-index: 2;
 `
 
-const Rect3 = styled.div`
-  margin: 0;
-  /* margin-top: -250px; */
-  padding: 0;
-  width: 100%;
-  height: 80vh;
-  position: absolute;
-  /* top: 55vh; */
-  background: #666;
-  z-index: 3;
-`
-
-const Rect4 = styled.div`
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 80vh;
-  position: absolute;
-  /* top: 70vh; */
-  background: #999;
-  z-index: 4;
-`
-
-const Parallax = () => {
+const Parallax = ({ data }) => {
 
   useLax()
 
   return (
     <Scroller id='scroller'>
       <Section>
-        <Rect1 className="lax" data-lax-preset="lazy-1000"></Rect1>
-        <Rect2 className="lax" data-lax-preset="lazy-500"></Rect2>
-        <Rect3 className="lax" data-lax-preset="lazy-250"></Rect3>
-        <Rect4 className="lax" data-lax-preset="lazy-0"></Rect4>
+        <ImageOne
+          className="lax"
+          data-lax-preset="lazy-1000"
+          fluid={data.resortOverview.childImageSharp.fluid}
+          alt="The Alma Resort."
+        />
+        <Text className="lax" data-lax-preset="lazy-100">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </Text>
+        <ImageTwo
+          className="lax"
+          data-lax-preset="speedy-30"
+          fluid={data.resortBirdseye.childImageSharp.fluid}
+          alt="The Alma Resort."
+        />
       </Section>
-      <div id="section1" className="section">
-        <div className="left">
-          <div
-            className="lax bubble a"
-            style={{ background: '#EDD943' }}
-            data-lax-preset="lazy-250"
-          />
-
-          <div
-            className="lax bubble c"
-            style={{ background: '#ED2471', marginLeft: '80pt' }}
-            data-lax-preset="lazy-100"
-          />
-
-          <div
-            className="lax bubble b"
-            style={{ background: '#35D5E5', marginLeft: '160pt' }}
-            data-lax-preset="lazy-300"
-          />
-
-          <h3
-            data-lax-preset="driftRight"
-            data-lax-optimize="true"
-            className="lax chunkyText"
-            style={{ color: '#35D5E5' }}
-          >
-            oooh!
-          </h3>
-        </div>
-
-        <div className="right">
-          <div
-            className="lax bubble a"
-            style={{ background: '#35D5E5', marginLeft: '120pt' }}
-            data-lax-preset="lazy-200"
-          />
-
-          <div
-            className="lax bubble c"
-            style={{ background: '#EDD943', marginLeft: '-20pt' }}
-            data-lax-preset="lazy-150"
-          />
-
-          <div
-            className="lax bubble b"
-            style={{
-              background: '#ED2471',
-              marginLeft: '20pt',
-              marginTop: '200pt',
-            }}
-            data-lax-preset="lazy-350"
-          />
-          <h3
-            data-lax-optimize="true"
-            data-lax-preset="driftLeft"
-            className="lax chunkyText"
-            style={{ color: '#ED2471', marginTop: '200pt' }}
-          >
-            aaah!
-          </h3>
-        </div>
-
-        <h3
-          data-lax-preset="crazy zoomInOut"
-          className="lax crazyText"
-          data-lax-optimize="true"
-        >
-          sooo crazy
-        </h3>
-      </div>
-      <div id="section2" className="section">
-        <div
-          className="lax blockContainer"
-          data-lax-preset="leftToRight-1.1 fadeInOut"
-        >
-          <div
-            className="lax block"
-            style={{ background: '#35D5E5' }}
-            data-lax-preset="spin"
-          />
-        </div>
-
-        <div
-          className="lax blockContainer"
-          data-lax-preset="leftToRight-1.2 fadeInOut"
-        >
-          <div
-            className="lax block"
-            style={{
-              background: '#EDD943',
-              marginTop: '-50pt',
-              marginLeft: '-50pt',
-              width: '40pt',
-              height: '40pt',
-            }}
-            data-lax-preset="spinRev-500"
-          />
-        </div>
-
-        <div
-          className="lax blockContainer"
-          data-lax-preset="leftToRight-1.4 fadeInOut"
-        >
-          <div
-            className="lax block"
-            style={{
-              background: '#ED2471',
-              marginTop: '-90pt',
-              marginLeft: '-0pt',
-            }}
-            data-lax-preset="spin-500"
-          />
-        </div>
-
-        <div
-          className="lax blockContainer"
-          data-lax-preset="leftToRight-1.5 fadeInOut"
-        >
-          <div
-            className="lax block"
-            style={{
-              background: '#EDD943',
-              marginTop: '70pt',
-              marginLeft: '-150pt',
-              width: '40pt',
-              height: '40pt',
-            }}
-            data-lax-preset="spinRev-500"
-          />
-        </div>
-
-        <div
-          className="lax blockContainer"
-          data-lax-preset="leftToRight-1.3 fadeInOut"
-        >
-          <div
-            className="lax block"
-            style={{
-              background: '#EDD943',
-              marginTop: '100pt',
-              marginLeft: '-60pt',
-              width: '25pt',
-              height: '25pt',
-            }}
-            data-lax-preset="spin-500"
-          />
-        </div>
-
-        <div
-          className="lax blockContainer"
-          data-lax-preset="leftToRight-1.05 fadeInOut"
-        >
-          <div
-            className="lax block"
-            style={{
-              background: '#ED2471',
-              marginTop: '-30pt',
-              marginLeft: '-70pt',
-            }}
-            data-lax-preset="spin"
-          />
-        </div>
-
-        <h3
-          data-lax-preset="leftToRight-0.8 speedy"
-          data-lax-optimize="true"
-          className="lax chunkyText"
-          style={{
-            color: 'white',
-            position: 'absolute',
-            marginTop: '-20pt',
-            marginLeft: '-100pt',
-          }}
-        >
-          wheee!
-        </h3>
-
-        <div
-          className="lax blockContainer"
-          data-lax-preset="leftToRight-1.15 fadeInOut"
-        >
-          <div
-            className="lax block"
-            style={{
-              background: '#35D5E5',
-              marginTop: '-70pt',
-              marginLeft: '-20pt',
-              width: '40pt',
-              height: '40pt',
-            }}
-            data-lax-preset="spinRev-500"
-          />
-        </div>
-
-        <div
-          className="lax blockContainer"
-          data-lax-preset="leftToRight-1.45 fadeInOut"
-        >
-          <div
-            className="lax block"
-            style={{
-              background: '#ED2471',
-              marginTop: '-50pt',
-              marginLeft: '-50pt',
-              width: '25pt',
-              height: '25pt',
-            }}
-            data-lax-preset="spin-500"
-          />
-        </div>
-
-        <div
-          className="lax blockContainer"
-          data-lax-preset="leftToRight-1.5 fadeInOut"
-        >
-          <div
-            className="lax block"
-            style={{
-              background: '#35D5E5',
-              marginTop: '30pt',
-              marginLeft: '-20pt',
-            }}
-            data-lax-preset="spinRev-500"
-          />
-        </div>
-
-        <div
-          className="lax blockContainer"
-          data-lax-preset="leftToRight-1.25 fadeInOut"
-        >
-          <div
-            className="lax block"
-            style={{
-              background: '#ED2471',
-              marginTop: '80pt',
-              marginLeft: '-10pt',
-            }}
-            data-lax-preset="spin-500"
-          />
-        </div>
-      </div>
-      <div id="section3" className="section">
-      <p className="lax" data-lax-preset="linger" data-lax-optimize="true">
-        Harness the power of scrolling and make your websites come alive!
-      </p>
-      <a
-        className="lax button"
-        data-lax-preset="linger"
-        data-lax-optimize="true"
-        data-lax-bg-pos-x="0 0, 3000 1000"
-        href="https://github.com/alexfoxy/laxxx"
-      >
-        Get lax.js
-      </a>
-    </div>
+      <Section>
+        <Text className="lax" data-lax-preset="lazy-200">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </Text>
+        <Text className="lax" data-lax-preset="lazy-100">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </Text>
+      </Section>
     </Scroller>
   )
 }
+
+export const query = graphql`
+  query {
+    resortOverview: file(relativePath: { eq: "resort/resort-overview-render-1-16x10.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 3456) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    resortBirdseye: file(relativePath: { eq: "resort/birdseye-1x1.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2160) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    almaResort1: file(relativePath: { eq: "resort/resort-render-1-4x3.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    resortDrone1: file(relativePath: { eq: "resort/resort-drone-1-1x1.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2160) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    apartmentLivingRoom1: file(relativePath: { eq: "apartments/apartment-living-room-1-render-1x1.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2160) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    apartmentLivingRoom2: file(relativePath: { eq: "apartments/apartment-living-room-2-render-1x1.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2160) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    apartmentKitchen: file(relativePath: { eq: "apartments/apartment-kitchen-render-1x1.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2160) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    apartmentBedroom: file(relativePath: { eq: "apartments/apartment-bedroom-render-1x1.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2160) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    apartmentBathroom: file(relativePath: { eq: "apartments/apartment-bathroom-render-1x1.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2160) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    villaExterior1: file(relativePath: { eq: "villas/villa-exterior-1-1x1.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2160) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    villaExterior4: file(relativePath: { eq: "villas/villa-exterior-4-1x1.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2160) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    villaLivingRoom1: file(relativePath: { eq: "villas/villa-living-room-1-1x1.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2160) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    villaLivingRoom2: file(relativePath: { eq: "villas/villa-living-room-3-1x1.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2160) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    villaDining1: file(relativePath: { eq: "villas/villa-dining-1-1x1.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2160) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    villaBedroom1: file(relativePath: { eq: "villas/villa-bedroom-1-1x1.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2160) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    villaBathroom1: file(relativePath: { eq: "villas/villa-bathroom-1-1x1.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2160) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+  }
+`
 
 export default Parallax

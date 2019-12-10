@@ -325,7 +325,7 @@ const Holiday = ({ data, intl }) => {
         >
         {intl.formatMessage({ id: "promo-submit" })}
         </SubmitButton>
-        <Disclaimer>{intl.formatMessage({ id: "promo-holiday-disclaimer" })}</Disclaimer>
+        <Disclaimer>{intl.formatMessage({ id: "promo-disclaimer" })}</Disclaimer>
       </Form>
     </Content>
   )
