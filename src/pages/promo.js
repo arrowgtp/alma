@@ -67,6 +67,8 @@ const PromoVacationText = styled.div`
   grid-row: 2 / 8;
   grid-column: 2 / 8;
   background: rgba(0, 0, 0, 0.5);
+  align-self: center;
+  justify-self: center;
   z-index: 2;
   display: flex;
   flex-direction: column;
@@ -76,7 +78,7 @@ const PromoVacationText = styled.div`
 
   @media (orientation: landscape) {
     grid-row: 2 / 8;
-    grid-column: 2 / 6;
+    grid-column: 2 / 8;
     box-shadow: 0px 0px 32px rgba(255,255,255,0.5);
   }
 `
@@ -150,16 +152,21 @@ const Form = styled.form`
   opacity: 1;
 
   @media (orientation: landscape) {
-    position: fixed;
+    /* position: fixed;
     top: 12.5vh;
     right: 2vw;
-    bottom: 12.5vh;
+    bottom: 12.5vh; */
+    grid-column: 5 / 9;
+    grid-row: 1 / 9;
+    width: 32vw;
+    height: 100%;
     justify-content: center;
-    background: rgba(255,255,255,1);
+    align-self: center;
+    /* background: rgba(255,255,255,1);
     box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.25);
-    border-radius: 16px;
-    height: 75vh;
-    width: 20rem;
+    border-radius: 16px; */
+    /* height: 75vh;
+    width: 20rem; */
   }
 `
 
