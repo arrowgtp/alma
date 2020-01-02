@@ -378,6 +378,9 @@ const Layout = ({ intl, children, location: { pathname, hash } }) => {
             pathname.includes('holiday') ?
             'none'
             :
+            pathname.includes('event') ?
+            'none'
+            :
             'grid'
         }}
         to={`/promo`}

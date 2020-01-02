@@ -8,24 +8,31 @@ import Img from 'gatsby-image'
 
 import Content from '../components/layout/Content'
 import { Button } from '../components/visual/Button'
-import { Space, P } from '../components/visual/Typography'
+
+import almaPattern1 from '../images/alma/alma-bg-pattern-1.svg'
 
 const SmallSpace = styled.div`
-  height: 1rem;
+  height: calc(12px + (24 - 12) * ((100vw - 300px) / (1600 - 300)));
+`
+
+const Space = styled.div`
+  height: calc(24px + (48 - 28) * ((100vw - 300px) / (1600 - 300)));
 `
 
 const PromoVacation = styled.div`
   grid-column: 1 / 4;
   margin: 0;
   padding: 0;
-  height: 80vh;
-  height: calc(var(--vh, 1vh) * 80);
+  height: 90vh;
+  height: calc(var(--vh, 1vh) * 90);
   display: grid;
-  grid-template-rows: repeat(8, 1fr);
+  grid-template-rows: repeat(13, 1fr);
   grid-template-columns: repeat(8, 1fr);
 
   @media(orientation: landscape) {
     height: 100vh;
+    grid-template-rows: repeat(12, 1fr);
+    grid-template-columns: repeat(8, 1fr);
   }
 `
 
@@ -56,7 +63,7 @@ const PromoVacation = styled.div`
 const PromoVacationImage = styled(Img)`
   margin: 0;
   padding: 0;
-  grid-row: 1 / 9;
+  grid-row: 1 / 14;
   grid-column: 1 / 9;
   object-fit: cover;
   z-index: 1;
@@ -82,15 +89,16 @@ const PromoVacationImage = styled(Img)`
 
   @media (orientation: landscape) {
     mask-image: none;
+    grid-row: 1 / 10;
   }
 `
 
 const PromoVacationText = styled.div`
   margin: 0;
   padding: 1rem;
-  grid-row: 2 / 8;
+  grid-row: 1 / 10;
   grid-column: 2 / 8;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.75);
   align-self: center;
   justify-self: center;
   z-index: 2;
@@ -101,21 +109,24 @@ const PromoVacationText = styled.div`
   border-radius: 32px;
 
   @media (orientation: landscape) {
-    grid-row: 2 / 8;
-    grid-column: 2 / 8;
+    grid-row: 1 / 9;
+    grid-column: 3 / 7;
     box-shadow: 0px 0px 32px rgba(255,255,255,0.5);
+    min-width: 20rem;
   }
 `
 
 const PromoTitle = styled.h1`
   margin: 0;
   padding: 0;
-  line-height: 1.5;
+  line-height: 1.25;
+  /* color: #2D668E; */
   color: white;
   font-size: 32px;
-  font-size: calc(24px + (48 - 24) * ((100vw - 300px) / (1600 - 300)));
+  font-size: calc(28px + (48 - 28) * ((100vw - 300px) / (1600 - 300)));
   text-align: center;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Quicksand', sans-serif;
+  text-transform: uppercase;
 
   @media(orientation: landscape) {
     font-size: calc(24px + (36 - 24) * ((100vw - 300px) / (1600 - 300)));
@@ -125,6 +136,7 @@ const PromoTitle = styled.h1`
 `
 
 const PromoInfo = styled.h2`
+  color: #BE854D;
   color: white;
   margin: 0;
   padding: 0;
@@ -137,11 +149,12 @@ const PromoInfo = styled.h2`
   @media(orientation: landscape) {
     margin: 0;
     padding: 0;
-    font-size: calc(12px + (20 - 12) * ((100vw - 300px) / (1600 - 300)));
+    font-size: calc(8px + (18 - 8) * ((100vw - 300px) / (1600 - 300)));
   }
 `
 
 const PromoFine = styled.p`
+  /* color: black; */
   color: white;
   margin: 0;
   padding: 0;
@@ -154,6 +167,121 @@ const PromoFine = styled.p`
     margin: 0;
     padding: 0;
     font-size: calc(8px + (14 - 8) * ((100vw - 300px) / (1600 - 300)));
+  }
+`
+
+const PromoVacationWinners = styled.div`
+  margin: 0;
+  padding: 0;
+  grid-row: 11 / 13;
+  grid-column: 1 / 9;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  padding: 0;
+  min-width: 0;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  background-color: hsla(188, 70%, 43%, 1);
+  background-image: url(${almaPattern1});
+  background-repeat: repeat;
+  background-size: 96px;
+  box-shadow: inset 0px 0px 32px rgba(0, 0, 0, 0.5);
+  border-top: 4px solid white;
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  ::after {
+    content:'';
+    flex: 0 0 2rem;
+  }
+
+  @media (orientation: landscape) {
+    grid-row: 11 / 13;
+    grid-column: 1 / 9;
+    width: 100%;
+    height: 100%;
+    border-top: 8px solid white;
+  }
+`
+
+const Title = styled.h1`
+  font-family: 'Merienda One', sans-serif;
+  line-height: 1;
+  color: blue;
+  grid-row: 10 / 11;
+  grid-column: 1 / 9;
+  align-self: end;
+  color: #2D668E;
+  justify-self: center;
+  font-size: 16px;
+  opacity: 1;
+
+  @media (orientation: landscape) {
+    font-size: 24px;
+  }
+`
+
+const Winner = styled.figure`
+  position: relative;
+  flex: 0 0 auto;
+  margin: 0;
+  padding: 0;
+  width: 12rem;
+  height: auto;
+  line-height: 1;
+  white-space: pre-wrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border: 1px solid red; */
+
+  :first-child {
+    /* margin-left: 1rem; */
+  }
+
+  :last-child {
+    /* margin-right: -1rem; */
+  }
+
+  @media (orientation: landscape) {
+    width: 30rem;
+    width: calc(200px + (400 - 200) * ((100vw - 300px) / (1600 - 300)));
+  }
+`
+
+const Picture = styled(Img)`
+  margin: 0 1rem 0 0;
+  padding: 0;
+  width: calc(48px + (128 - 48) * ((100vw - 300px) / (1600 - 300)));
+  height: calc(48px + (128 - 48) * ((100vw - 300px) / (1600 - 300)));
+  border-radius: 512px;
+  border: 4px solid white;
+  z-index: 1;
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.5);
+
+  @media (orientation: landscape) {
+    margin: 0 2rem 0 0;
+    width: 10rem;
+    height: 10rem;
+    border: 4px solid white;
+    width: calc(64px + (96 - 64) * ((100vw - 300px) / (1600 - 300)));
+    height: calc(64px + (96 - 64) * ((100vw - 300px) / (1600 - 300)));
+  }
+`
+
+const Name = styled.p`
+  font-size: 16px;
+  color: white;
+  line-height: 1.25;
+  text-shadow: 0px 0px 16px rgba(0, 0, 0, 0.5);
+  font-family: 'Quicksand', sans-serif;
+
+  @media (orientation: landscape) {
+    font-size: calc(16px + (32 - 16) * ((100vw - 300px) / (1600 - 300)));
   }
 `
 
@@ -171,7 +299,6 @@ const Form = styled.form`
   justify-content: start;
   /* background: rgba(255,255,255,1); */
   border-radius: 0px;
-  
   z-index: 100;
   opacity: 1;
 
@@ -180,9 +307,9 @@ const Form = styled.form`
     top: 12.5vh;
     right: 2vw;
     bottom: 12.5vh; */
-    grid-column: 5 / 9;
+    grid-column: 6 / 9;
     grid-row: 1 / 9;
-    width: 32vw;
+    width: calc(200px + (400 - 200) * ((100vw - 300px) / (1600 - 300)));
     height: 100%;
     justify-content: center;
     align-self: center;
@@ -288,15 +415,28 @@ const Holiday = ({ data, intl }) => {
     <Content>
       <PromoVacation>
         <PromoVacationText>
+          <Space/>
           <PromoTitle>{intl.formatMessage({ id: "promo-holiday-title" })}</PromoTitle>
           <Space/>
           <PromoInfo>{intl.formatMessage({ id: "promo-holiday-info" })}</PromoInfo>
           <Space/>
           <PromoFine>{intl.formatMessage({ id: "promo-holiday-fine-1" })}</PromoFine>
           <PromoFine>{intl.formatMessage({ id: "promo-holiday-fine-2" })}</PromoFine>
+          <PromoFine>{intl.formatMessage({ id: "promo-holiday-fine-3" })}</PromoFine>
           <Space/>
         </PromoVacationText>
-        <PromoVacationImage fluid={data.coaster.childImageSharp.fluid} />
+        <Title>Winners!</Title>
+        <PromoVacationWinners>
+          <Winner>
+            <Picture fluid={data.decWinner1.childImageSharp.fluid} alt="The Alma Resort."/>
+            <Name>Iris<br/>Betzold</Name>
+          </Winner>
+          <Winner>
+            <Picture fluid={data.decWinner2.childImageSharp.fluid} alt="The Alma Resort."/>
+            <Name>Julissa<br/>Macchione</Name>
+          </Winner>
+        </PromoVacationWinners>
+        <PromoVacationImage fluid={data.holidayPromo.childImageSharp.fluid} />
       </PromoVacation>
       <Form
         name="alma-form"
@@ -340,7 +480,21 @@ const Holiday = ({ data, intl }) => {
 
 export const query = graphql`
   query {
-    coaster: file(relativePath: { eq: "promos/coaster.jpg" }) {
+    holidayPromo: file(relativePath: { eq: "promos/holiday-promo.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2160) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    decWinner1: file(relativePath: { eq: "promos/dec-winner-1.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2160) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    decWinner2: file(relativePath: { eq: "promos/dec-winner-2.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 2160) {
           ...GatsbyImageSharpFluid_withWebp
