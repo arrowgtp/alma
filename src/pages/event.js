@@ -176,9 +176,9 @@ const Holiday = ({ data, intl }) => {
               <option 
                 value="1/5/20 - Concert">1/5/20 - Concert</option>
               <option
-                value="1/3/20 - 1/23/20 - Flower Festival">1/3/20 - 1/23/20 - Flower Festival</option>
+                value="1/3/20-1/23/20 - Flower Festival">1/3/20-1/23/20 - Flower Festival</option>
               <option value="1/19/20 - Tet Contest">1/19/20 - Tet Contest</option>
-              <option value="1/24/20 - 1/26/20 - Tet Festival">1/24/20 - 1/26/20 - Tet Festival</option>
+              <option value="1/24/20-1/26/20 - Tet Festival">1/24/20-1/26/20 - Tet Festival</option>
             </Select>
           </Label>
           <Space/>
@@ -186,19 +186,19 @@ const Holiday = ({ data, intl }) => {
             <SmallSpace/>
             <Select name="Team Member" required>
               <option value="">- Please select an option -</option>
+              <option value="Brian B">Brian B</option>
+              <option value="Christian C">Christian C</option>
               <option value="Christy N">Christy N</option>
               <option value="Corona N">Corona N</option>
-              <option value="Gia L">Gia L</option>
-              <option value="Brian B">Brian B</option>
               <option value="Diep N">Diep N</option>
               <option value="Emmy T">Emmy T</option>
               <option value="Gabby N">Gabby N</option>
+              <option value="Gia L">Gia L</option>
               <option value="Ismael D">Ismael D</option>
-              <option value="Long H">Long H</option>
               <option value="Jeremy S">Jeremy S</option>
-              <option value="Christian C">Christian C</option>
+              <option value="Long H">Long H</option>
               <option value=">Nancy R">Nancy R</option>
-              <option value="Christina F">Christina F</option>
+              <option value=">Tung N">Tung N</option>
             </Select>
           </Label>
           <Space/>
