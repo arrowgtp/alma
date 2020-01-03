@@ -156,7 +156,7 @@ const Holiday = ({ data, intl }) => {
       <Form
         name="alma-event-form"
         method="post"
-        action="/success"
+        action="/event-success"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
       >
@@ -165,7 +165,7 @@ const Holiday = ({ data, intl }) => {
         <Block>
           <Label>Full Name<Input name="name" type="text" required/></Label>
           <Label>Phone Number<Input name="phone" type="tel" required/></Label>
-          <Label>Zip Code<Input name="zipcode" type="number" required/></Label> 
+          <Label>Zip Code (Optional)<Input name="zipcode" type="number"/></Label> 
           <Label>Email Address (Optional)<Input name="email" type="email"/></Label>
         </Block>
         <Block>
@@ -173,12 +173,10 @@ const Holiday = ({ data, intl }) => {
             <SmallSpace/>
             <Select name="Event" required>
               <option value="">- Please select an option -</option>
-              <option 
-                value="1/5/20 - Concert">1/5/20 - Concert</option>
-              <option
-                value="1/3/20-1/23/20 - Flower Festival">1/3/20-1/23/20 - Flower Festival</option>
+              <option value="1/3/20-1/23/20 - Flower Fest">1/3/20-1/23/20 - Flower Fest</option>
+              <option value="1/5/20 - Concert">1/5/20 - Concert</option>
               <option value="1/19/20 - Tet Contest">1/19/20 - Tet Contest</option>
-              <option value="1/24/20-1/26/20 - Tet Festival">1/24/20-1/26/20 - Tet Festival</option>
+              <option value="1/24/20-1/26/20 - Tet Fest">1/24/20-1/26/20 - Tet Fest</option>
             </Select>
           </Label>
           <Space/>
