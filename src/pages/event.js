@@ -20,23 +20,41 @@ const Form = styled.form`
   margin: 0;
   padding: 0;
   width: 100vw;
-  height: 100vh;
-  height: calc(var(--vh, 1vh) * 100);
-  display: flex;
+  height: 160vh;
+  height: calc(var(--vh, 1vh) * 150);
+  display: block;
   flex-direction: column;
   align-items: center;
   justify-content: start;
   border-radius: 0px;
   z-index: 100;
   opacity: 1;
+  background: white;
 
   @media (orientation: landscape) {
     grid-column: 1 / 9;
     grid-row: 1 / 9;
     width: 80vw;
     height: 100vh;
+    display: flex;
+    flex-direction: row;
     justify-content: center;
     align-self: center;
+  }
+`
+
+const Block = styled.div`
+  /* border: 1px solid red; */
+  display: flex;
+  width: 100vw;
+  height: 70vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  @media (orientation: landscape) {
+  width: 40vw;
+  height: 100vh;
   }
 `
 
@@ -136,55 +154,61 @@ const Holiday = ({ data, intl }) => {
   return (
     <Content>
       <Form
-        name="alma-form"
+        name="alma-event-form"
         method="post"
         action="/success"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
       >
         <input type="hidden" name="bot-field" />
-        <input type="hidden" name="form-name" value="alma-form"/>
-        <Label>Full Name<Input name="name" type="text" required/></Label>
-        <Label>Phone Number<Input name="phone" type="tel" required/></Label>
-        <Label>Zip Code<Input name="zipcode" type="number" required/></Label> 
-        <Label>Email Address (Optional)<Input name="email" type="email" required/></Label>
-        
-        <Label>Event
-          <SmallSpace/>
-          <Select name="source" required>
-            <option value="">- Please select an option -</option>
-            <option value="1">1/5/20 - Concert</option>
-            <option value="2">1/3/20 - 1/23/20 - Flower Festival</option>
-            <option value="3">1/19/20 - Tet Contest</option>
-            <option value="4">1/24/20 - 1/26/20 - Tet Festival</option>
-          </Select>
-        </Label>
-        <Space/>
-        <Label>Team Member
-          <SmallSpace/>
-          <Select name="source" required>
-            <option value="">- Please select an option -</option>
-            <option value="1">Christy N</option>
-            <option value="2">Corona N</option>
-            <option value="3">Gia L</option>
-            <option value="4">Brian B</option>
-            <option value="5">Diep N</option>
-            <option value="6">Emmy T</option>
-            <option value="7">Gabby N</option>
-            <option value="8">Ismael D</option>
-            <option value="9">Long H</option>
-            <option value="10">Jeremy S</option>
-          </Select>
-        </Label>
-        <SmallSpace/>
-        <SubmitButton
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-          type="submit"
-        >
-        {intl.formatMessage({ id: "promo-submit" })}
-        </SubmitButton>
-        <Disclaimer>{intl.formatMessage({ id: "promo-disclaimer" })}</Disclaimer>
+        <input type="hidden" name="form-name" value="alma-event-form"/>
+        <Block>
+          <Label>Full Name<Input name="name" type="text" required/></Label>
+          <Label>Phone Number<Input name="phone" type="tel" required/></Label>
+          <Label>Zip Code<Input name="zipcode" type="number" required/></Label> 
+          <Label>Email Address (Optional)<Input name="email" type="email"/></Label>
+        </Block>
+        <Block>
+          <Label>Event
+            <SmallSpace/>
+            <Select name="source" required>
+              <option value="">- Please select an option -</option>
+              <option value="1">1/5/20 - Concert</option>
+              <option value="2">1/3/20 - 1/23/20 - Flower Festival</option>
+              <option value="3">1/19/20 - Tet Contest</option>
+              <option value="4">1/24/20 - 1/26/20 - Tet Festival</option>
+            </Select>
+          </Label>
+          <Space/>
+          <Label>Team Member
+            <SmallSpace/>
+            <Select name="source" required>
+              <option value="">- Please select an option -</option>
+              <option value="1">Christy N</option>
+              <option value="2">Corona N</option>
+              <option value="3">Gia L</option>
+              <option value="4">Brian B</option>
+              <option value="5">Diep N</option>
+              <option value="6">Emmy T</option>
+              <option value="7">Gabby N</option>
+              <option value="8">Ismael D</option>
+              <option value="9">Long H</option>
+              <option value="10">Jeremy S</option>
+              <option value="10">Jeremy S</option>
+              <option value="10">Jeremy S</option>
+              <option value="10">Jeremy S</option>
+            </Select>
+          </Label>
+          <Space/>
+          <SubmitButton
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            type="submit"
+          >
+          {intl.formatMessage({ id: "promo-submit" })}
+          </SubmitButton>
+          <Disclaimer>{intl.formatMessage({ id: "promo-disclaimer" })}</Disclaimer>
+        </Block>
       </Form>
     </Content>
   )
