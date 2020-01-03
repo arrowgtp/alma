@@ -171,32 +171,34 @@ const Holiday = ({ data, intl }) => {
         <Block>
           <Label>Event
             <SmallSpace/>
-            <Select name="source" required>
+            <Select name="Event" required>
               <option value="">- Please select an option -</option>
-              <option value="1">1/5/20 - Concert</option>
-              <option value="2">1/3/20 - 1/23/20 - Flower Festival</option>
-              <option value="3">1/19/20 - Tet Contest</option>
-              <option value="4">1/24/20 - 1/26/20 - Tet Festival</option>
+              <option 
+                value="1/5/20 - Concert">1/5/20 - Concert</option>
+              <option
+                value="1/3/20 - 1/23/20 - Flower Festival">1/3/20 - 1/23/20 - Flower Festival</option>
+              <option value="1/19/20 - Tet Contest">1/19/20 - Tet Contest</option>
+              <option value="1/24/20 - 1/26/20 - Tet Festival">1/24/20 - 1/26/20 - Tet Festival</option>
             </Select>
           </Label>
           <Space/>
           <Label>Team Member
             <SmallSpace/>
-            <Select name="source" required>
+            <Select name="Team Member" required>
               <option value="">- Please select an option -</option>
-              <option value="1">Christy N</option>
-              <option value="2">Corona N</option>
-              <option value="3">Gia L</option>
-              <option value="4">Brian B</option>
-              <option value="5">Diep N</option>
-              <option value="6">Emmy T</option>
-              <option value="7">Gabby N</option>
-              <option value="8">Ismael D</option>
-              <option value="9">Long H</option>
-              <option value="10">Jeremy S</option>
-              <option value="10">Jeremy S</option>
-              <option value="10">Jeremy S</option>
-              <option value="10">Jeremy S</option>
+              <option value="Christy N">Christy N</option>
+              <option value="Corona N">Corona N</option>
+              <option value="Gia L">Gia L</option>
+              <option value="Brian B">Brian B</option>
+              <option value="Diep N">Diep N</option>
+              <option value="Emmy T">Emmy T</option>
+              <option value="Gabby N">Gabby N</option>
+              <option value="Ismael D">Ismael D</option>
+              <option value="Long H">Long H</option>
+              <option value="Jeremy S">Jeremy S</option>
+              <option value="Christian C">Christian C</option>
+              <option value=">Nancy R">Nancy R</option>
+              <option value="Christina F">Christina F</option>
             </Select>
           </Label>
           <Space/>
