@@ -190,13 +190,11 @@ const Holiday = ({ data, intl }) => {
               <option value="Corona N">Corona N</option>
               <option value="Diep N">Diep N</option>
               <option value="Emmy T">Emmy T</option>
-              <option value="Gabby N">Gabby N</option>
               <option value="Gia L">Gia L</option>
-              <option value="Ismael D">Ismael D</option>
-              <option value="Jeremy S">Jeremy S</option>
+              <option value="Hop N">Hop N</option>
               <option value="Kasey T">Kasey T</option>
               <option value="Long H">Long H</option>
-              <option value=">Nancy R">Nancy R</option>
+              <option value="Terrian N">Terrian N</option>
               <option value=">Tung N">Tung N</option>
             </Select>
           </Label>
