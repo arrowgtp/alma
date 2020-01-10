@@ -448,7 +448,8 @@ const Holiday = ({ data, intl }) => {
         <input type="hidden" name="bot-field" />
         <input type="hidden" name="form-name" value="alma-form"/>
         <Label>{intl.formatMessage({ id: "promo-name" })}<Input name="name" type="text" required/></Label>
-        <Label>{intl.formatMessage({ id: "promo-number" })}<Input name="phone" type="tel" required/></Label>  
+        <Label>{intl.formatMessage({ id: "promo-number" })}<Input name="phone" type="tel" required/></Label>
+        <Label>{intl.formatMessage({ id: "promo-zipcode" })}<Input name="zipcode" type="tel" required/></Label> 
         <Label>{intl.formatMessage({ id: "promo-email" })}<Input name="email" type="email" required/></Label>
         <Label>How did you hear about us?
           <SmallSpace/>

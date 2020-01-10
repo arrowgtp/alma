@@ -165,8 +165,8 @@ const Holiday = ({ data, intl }) => {
         <Block>
           <Label>Full Name<Input name="name" type="text" required/></Label>
           <Label>Phone Number<Input name="phone" type="tel" required/></Label>
-          <Label>Zip Code (Optional)<Input name="zipcode" type="number"/></Label> 
-          <Label>Email Address (Optional)<Input name="email" type="email"/></Label>
+          <Label>Zip Code<Input name="zipcode" type="tel" required/></Label> 
+          <Label>Email Address<Input name="email" type="email" required/></Label>
         </Block>
         <Block>
           <Label>Event
