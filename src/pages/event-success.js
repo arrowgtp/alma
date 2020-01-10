@@ -30,6 +30,15 @@ const CenterP = styled(P)`
   max-width: 60ch;
 `
 
+const Disclaimer = styled.p`
+  font-size: 9px;
+  line-height: 1.25;
+  margin: 0;
+  padding: 2rem 3rem;
+  font-family: 'Open Sans', sans-serif;
+  max-width: 30rem;
+`
+
 const Success = ({ data, intl }) => {
   return(
     <Content>
@@ -43,6 +52,7 @@ const Success = ({ data, intl }) => {
         <Link to={`/event`}>
           <Button>New Submission</Button>
         </Link>
+        <Disclaimer>{intl.formatMessage({ id: "promo-disclaimer" })}</Disclaimer>
       </Box>
     </Content>
   )

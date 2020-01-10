@@ -248,7 +248,7 @@ const SubmitButton = styled(Button)`
 `
 
 const Disclaimer = styled.p`
-  font-size: 8px;
+  font-size: 9px;
   line-height: 1.25;
   margin: 0;
   padding: 2rem 3rem;
