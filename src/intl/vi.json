@@ -44,17 +44,17 @@
   "floorplans-title": "Floorplans",
 
   "floorplan-a": "Loại A",
-  "floorplan-a-size": "Diện Tích: 60.3 m² / 650 ft²",
+  "floorplan-a-size": "Diện Tích: 70.8 m² / 762 ft²",
   "floorplan-a-bedrooms": "Phòng ngủ: 1",
   "floorplan-a-capacity": "Dành cho: 5 người",
 
   "floorplan-b": "Loại B",
-  "floorplan-b-size": "Diện Tích: 99.5 m² / 1,070 ft²",
+  "floorplan-b-size": "Diện Tích: 113.5 m² / 1,222 ft²",
   "floorplan-b-bedrooms": "Phòng ngủ: 2",
   "floorplan-b-capacity": "Dành cho: 7 người",
 
   "floorplan-c": "Loại C",
-  "floorplan-c-size": "Diện Tích: 128 m² / 1,380 ft²",
+  "floorplan-c-size": "Diện Tích: 164.7 m² / 1,773 ft²",
   "floorplan-c-bedrooms": "Phòng ngủ: 3",
   "floorplan-c-capacity": "Dành cho: 9 người",
 
@@ -73,22 +73,22 @@
   "villas-paragraph-4": "Phòng tắm càng được nâng cấp hơn hẳn, với nhiều tiện nghi sang trọng và hữu dụng để làm nổi bật địa điểm nghỉ dưỡng này so với các nơi khác. Sau một ngày vui chơi thỏa thích, một bữa ăn tối tuyệt vời, và có thể sau một suất phim, trầm mình trong bồn tắm nước nóng để cảm giác thời gian lắng đọng.",
 
   "floorplan-d": "Loại D",
-  "floorplan-d-size": "Diện Tích: 125 m² / 1,350 ft²",
+  "floorplan-d-size": "Diện Tích: 182.7 m² / 1,967 ft²",
   "floorplan-d-bedrooms": "Phòng ngủ: 2",
   "floorplan-d-capacity": "Dành cho: 7 người",
 
   "floorplan-e": "Loại E",
-  "floorplan-e-size": "Diện Tích: 149 m² / 1600 ft²",
+  "floorplan-e-size": "Diện Tích: 224.1 m² / 2,412 ft²",
   "floorplan-e-bedrooms": "Phòng ngủ: 3",
   "floorplan-e-capacity": "Dành cho: 9 người",
 
   "floorplan-f": "Loại F",
-  "floorplan-f-size": "Diện Tích: 149 m² / 1600 ft²",
+  "floorplan-f-size": "Diện Tích: 214 m² / 2,303 ft²",
   "floorplan-f-bedrooms": "Phòng ngủ: 3",
   "floorplan-f-capacity": "Dành cho: 9 người",
 
   "floorplan-g": "Loại G",
-  "floorplan-g-size": "Diện Tích: 127 m² / 1,370 ft²",
+  "floorplan-g-size": "Diện Tích: 157 m² / 1,690 ft²",
   "floorplan-g-bedrooms": "Phòng ngủ: 2",
   "floorplan-g-capacity": "Dành cho: 7 người",
 
@@ -281,8 +281,8 @@
   "showroom-title": "US Showroom",
 
   "showroom-hours-title": "Giờ Showroom",
-  "showroom-hours-week": "Wednesday, Thursday and Friday - 2:00 PM to 6:00 PM",
-  "showroom-hours-weekend": "Saturday and Sunday - 12:00 PM to 4:00 PM",
+  "showroom-hours-week": "Tuesday thru Saturday - 10:00 AM to 2:00 PM",
+  "showroom-hours-weekend": "By Appointment Only",
   "alma-contact-title": "Liên Lạc",
   "alma-phone-number-title": "Phone Number",
   "alma-phone-number": "1.833.OWN.ALMA | 1.833.696.2562",
