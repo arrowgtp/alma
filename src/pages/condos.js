@@ -41,7 +41,7 @@ const FloorplanParagraph = styled.p`
   color: #006897;
 `
 
-const Apartments = ({ data, intl }) => {
+const Condos = ({ data, intl }) => {
   return (
     <Content>
 
@@ -243,4 +243,4 @@ export const query = graphql`
   }
 `
 
-export default injectIntl(Apartments)
+export default injectIntl(Condos)

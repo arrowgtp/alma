@@ -179,7 +179,7 @@ const Villas = ({ data, intl }) => {
         <P>{intl.formatMessage({ id: "resort-to-apartments" })}</P>
         <Space/>
         <ButtonContainer>
-          <Link to="/apartments">
+          <Link to="/condos">
             <Button>{intl.formatMessage({ id: "apartments-title" })}</Button>
           </Link> 
         </ButtonContainer>
