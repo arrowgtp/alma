@@ -236,7 +236,7 @@ const Index = ({ data, intl }) => {
         <AlmaHeader blue title={intl.formatMessage({ id: "resort-title" })} />
         <Space/>
         <VideoBox>
-          <iframe width="100%" height="100%" src="https://www.youtube.com/embed/RwCOgvo7v-Q" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe>
+          <iframe width="100%" height="100%" src="https://www.youtube.com/embed/SUnBnufoa6k" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe>
         </VideoBox>
         <Space/>
         <P>{intl.formatMessage({ id: "resort-intro-paragraph" })}</P>
