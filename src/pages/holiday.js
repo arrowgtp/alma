@@ -449,7 +449,7 @@ const Holiday = ({ data, intl }) => {
         <input type="hidden" name="form-name" value="alma-form"/>
         <Label>{intl.formatMessage({ id: "promo-name" })}<Input name="name" type="text" required/></Label>
         <Label>{intl.formatMessage({ id: "promo-number" })}<Input name="phone" type="tel" required/></Label>
-        <Label>{intl.formatMessage({ id: "promo-zipcode" })}<Input name="zipcode" type="tel" required/></Label> 
+        <Label>Zip Code<Input name="zipcode" type="tel" required/></Label> 
         <Label>{intl.formatMessage({ id: "promo-email" })}<Input name="email" type="email" required/></Label>
         <Label>How did you hear about us?
           <SmallSpace/>
@@ -473,7 +473,7 @@ const Holiday = ({ data, intl }) => {
         >
         {intl.formatMessage({ id: "promo-submit" })}
         </SubmitButton>
-        <Disclaimer>{intl.formatMessage({ id: "promo-disclaimer" })}</Disclaimer>
+        <Disclaimer> By entering this drawing, you declare that you are between the ages of 28 and 72 years old, and you agree to receive information and promotional offers about the Alma Resort via calls, text or email. You can unsubscribe at any time. This advertising material is being used for the purpose of soliciting the sale of timeshare interests. A comparable substitute will be offered if your selection is not available. Only one entry per household.</Disclaimer>
       </Form>
     </Content>
   )
