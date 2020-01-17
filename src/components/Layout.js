@@ -336,7 +336,7 @@ const Layout = ({ intl, children, location: { pathname, hash } }) => {
       <Menu>
         <Logo/>
         <Navigation/>
-        <PromoButton/>
+        {/* <PromoButton/> */}
       </Menu>
       <Main id='main'>{children}</Main>
       {/* <PromoBanner
@@ -363,7 +363,7 @@ const Layout = ({ intl, children, location: { pathname, hash } }) => {
         <PromoVegasImage src={PromoVegas} />
       </PromoBanner> */}
 
-      <PromoBanner
+      {/* <PromoBanner
         style={{
           display:
             pathname.includes('promo') ?
@@ -386,9 +386,9 @@ const Layout = ({ intl, children, location: { pathname, hash } }) => {
         to={`/promo`}
       >
         <PromoHeader>{intl.formatMessage({ id: "promo-cta" })}</PromoHeader>
-        {/* <Scrim/> */}
+        <Scrim/>
         <PromoVietnamImage src={PromoVietnam} />
-      </PromoBanner>
+      </PromoBanner> */}
 
     </App>
   )
