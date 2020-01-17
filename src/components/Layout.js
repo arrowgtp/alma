@@ -17,7 +17,7 @@ import './Layout.css'
 
 import Logo from './Logo'
 import Navigation from './Navigation'
-import PromoButton from './PromoButton'
+import Contact from './ContactButton'
 
 const App = styled(motion.div)`
   box-sizing: border-box;
@@ -336,7 +336,7 @@ const Layout = ({ intl, children, location: { pathname, hash } }) => {
       <Menu>
         <Logo/>
         <Navigation/>
-        {/* <PromoButton/> */}
+        {/* <Contact/> */}
       </Menu>
       <Main id='main'>{children}</Main>
       {/* <PromoBanner

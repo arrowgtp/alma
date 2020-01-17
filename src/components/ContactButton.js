@@ -4,7 +4,7 @@ import { Link, injectIntl } from 'gatsby-plugin-intl'
 
 import { Button } from './visual/Button'
 
-const PromotionalButton = styled(Button)`
+const ContactButton = styled(Button)`
   grid-column: 3 / 4;
   grid-row: 1 / 2;
   align-self: center;
@@ -26,16 +26,16 @@ const PromotionalButton = styled(Button)`
   }
 `
 
-const PromoButton = ({ intl }) => {
+const Contact = ({ intl }) => {
 
-  const promoRef = useRef();
+  const contactRef = useRef();
 
   const [ isToggled, setToggle ] = useState(false);
 
   const toggle = () => setToggle(!isToggled);
 
   const handleClick = e => {
-    if (promoRef.current.contains(e.target)) {
+    if (contactRef.current.contains(e.target)) {
       return;
     }
     setToggle(false);
@@ -49,16 +49,16 @@ const PromoButton = ({ intl }) => {
   }, []);
 
   return (
-    <div ref={promoRef}>
+    <div ref={contactRef}>
       {
         !isToggled ?
         (
-          <Link to={`/promo`}>
-            <PromotionalButton onClick={toggle}>{intl.formatMessage({ id: "nav-promo" })}</PromotionalButton>
+          <Link to={`/contact`}>
+            <ContactButton onClick={toggle}>{intl.formatMessage({ id: "nav-promo" })}</ContactButton>
           </Link>
         ) : (
           <Link to={`/`}>
-            <PromotionalButton onClick={toggle}>{intl.formatMessage({ id: "close-button" })}</PromotionalButton>
+            <ContactButton onClick={toggle}>{intl.formatMessage({ id: "close-button" })}</ContactButton>
           </Link>
         )
       }
@@ -66,7 +66,7 @@ const PromoButton = ({ intl }) => {
   )
 }
 
-export default injectIntl(PromoButton)
+export default injectIntl(Contact)
 
 
 
