@@ -28,6 +28,7 @@ const Maintenance = styled.div`
   right: 0;
   left: 0;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   z-index: 100000;
@@ -38,6 +39,20 @@ const Maintenance = styled.div`
   font-size: calc(16px + (32 - 16) * ((100vw - 300px) / (1600 - 300)));
   line-height: 2;
   text-align: center;
+  color: #006897;
+`
+
+const Text = styled.p`
+  margin: 0;
+  padding: 0;
+  font-family: 'Quicksand', sans-serif;
+  font-size: calc(16px + (32 - 16) * ((100vw - 300px) / (1600 - 300)));
+  line-height: 2;
+  text-align: center;
+  color: #006897;
+`
+
+const Linky = styled.a`
   color: #006897;
 `
 
@@ -306,10 +321,11 @@ const PromoHeader = styled.h1`
   }
 `
 
-const Layout = ({ intl, children, location: { pathname, hash } }) => {
+const Layout = () => {
   return (
     <Maintenance>
-      Our site is currently under maintenance.<br/>Please check back with us later.
+      <Text>Please visit our website at:<br/></Text>
+      <Text><Linky href="https://alma.vn/en/">alma.vn</Linky></Text>
     </Maintenance>
   )
 }
