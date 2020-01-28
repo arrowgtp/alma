@@ -19,6 +19,30 @@ import Logo from './Logo'
 import Navigation from './Navigation'
 import Contact from './ContactButton'
 
+const Maintenance = styled.div`
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  grid-column: 1 / 4;
+  grid-row: 1 / 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100000;
+  background: white;
+  margin: 0;
+  padding: 0;
+  font-family: 'Quicksand', sans-serif;
+  font-size: calc(16px + (32 - 16) * ((100vw - 300px) / (1600 - 300)));
+  line-height: 2;
+  text-align: center;
+  color: #006897;
+`
+
 const App = styled(motion.div)`
   box-sizing: border-box;
   margin: 0;
@@ -332,6 +356,9 @@ const Layout = ({ intl, children, location: { pathname, hash } }) => {
         delay: 0
       }}
     >
+      <Maintenance>
+        Our site is currently under maintenance.<br/>Please check back with us later.
+      </Maintenance>
       <AlmaLogo alt='The Alma Logo' src={almaLogo} />
       <Menu>
         <Logo/>
