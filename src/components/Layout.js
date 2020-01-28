@@ -310,42 +310,42 @@ const PromoHeader = styled.h1`
 
 const Layout = ({ intl, children, location: { pathname, hash } }) => {
 
-  useEffect(() => {
+  // useEffect(() => {
 
-    if (pathname.includes('careers')) {
+  //   if (pathname.includes('careers')) {
 
-      if (hash === '#office-manager') {
+  //     if (hash === '#office-manager') {
 
-        const officeManager = document.querySelector('#office-manager').offsetTop
-        document.querySelector('#main').scrollTop = officeManager
+  //       const officeManager = document.querySelector('#office-manager').offsetTop
+  //       document.querySelector('#main').scrollTop = officeManager
 
-      } else if (hash ==='#administrative-assistant') {
+  //     } else if (hash ==='#administrative-assistant') {
 
-        const administrativeAsistant = document.querySelector('#administrative-assistant').offsetTop
-        document.querySelector('#main').scrollTop = administrativeAsistant
+  //       const administrativeAsistant = document.querySelector('#administrative-assistant').offsetTop
+  //       document.querySelector('#main').scrollTop = administrativeAsistant
 
-      } else if (hash ==='#vacation-counselor') {
+  //     } else if (hash ==='#vacation-counselor') {
 
-        const vacationCounselor = document.querySelector('#vacation-counselor').offsetTop
-        document.querySelector('#main').scrollTop = vacationCounselor
+  //       const vacationCounselor = document.querySelector('#vacation-counselor').offsetTop
+  //       document.querySelector('#main').scrollTop = vacationCounselor
 
-      } else if (hash ==='#event-staff') {
+  //     } else if (hash ==='#event-staff') {
 
-        const eventStaff = document.querySelector('#event-staff').offsetTop
-        document.querySelector('#main').scrollTop = eventStaff
+  //       const eventStaff = document.querySelector('#event-staff').offsetTop
+  //       document.querySelector('#main').scrollTop = eventStaff
 
-      } else {
+  //     } else {
 
-        document.querySelector('#main').scrollTop = 0
+  //       document.querySelector('#main').scrollTop = 0
 
-      }
+  //     }
 
-    } else {
+  //   } else {
 
-      document.querySelector('#main').scrollTop = 0
+  //     document.querySelector('#main').scrollTop = 0
 
-    }
-  }, [hash, pathname])
+  //   }
+  // }, [hash, pathname])
 
   return (
     <App
@@ -359,13 +359,13 @@ const Layout = ({ intl, children, location: { pathname, hash } }) => {
       <Maintenance>
         Our site is currently under maintenance.<br/>Please check back with us later.
       </Maintenance>
-      <AlmaLogo alt='The Alma Logo' src={almaLogo} />
+      {/* <AlmaLogo alt='The Alma Logo' src={almaLogo} />
       <Menu>
         <Logo/>
         <Navigation/>
-        {/* <Contact/> */}
+        <Contact/>
       </Menu>
-      <Main id='main'>{children}</Main>
+      <Main id='main'>{children}</Main> */}
       {/* <PromoBanner
         style={{
           display:
