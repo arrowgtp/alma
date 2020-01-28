@@ -22,6 +22,7 @@ import Contact from './ContactButton'
 const Maintenance = styled.div`
   width: 100vw;
   height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   position: fixed;
   top: 0;
   bottom: 0;
