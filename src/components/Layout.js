@@ -27,8 +27,6 @@ const Maintenance = styled.div`
   bottom: 0;
   right: 0;
   left: 0;
-  grid-column: 1 / 4;
-  grid-row: 1 / 4;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -309,6 +307,12 @@ const PromoHeader = styled.h1`
 `
 
 const Layout = ({ intl, children, location: { pathname, hash } }) => {
+  return (
+    <Maintenance>
+      Our site is currently under maintenance.<br/>Please check back with us later.
+    </Maintenance>
+  )
+}
 
   // useEffect(() => {
 
@@ -347,79 +351,78 @@ const Layout = ({ intl, children, location: { pathname, hash } }) => {
   //   }
   // }, [hash, pathname])
 
-  return (
-    <App
-      animate={{ opacity: 1 }}
-      transition={{
-        ease: 'easeInOut',
-        duration: 1,
-        delay: 0
-      }}
-    >
-      <Maintenance>
-        Our site is currently under maintenance.<br/>Please check back with us later.
-      </Maintenance>
-      {/* <AlmaLogo alt='The Alma Logo' src={almaLogo} />
-      <Menu>
-        <Logo/>
-        <Navigation/>
-        <Contact/>
-      </Menu>
-      <Main id='main'>{children}</Main> */}
-      {/* <PromoBanner
-        style={{
-          display:
-            pathname.includes('promo') ?
-            'none'
-            :
-            pathname.includes('careers') ?
-            'none'
-            :
-            pathname.includes('success') ?
-            'none'
-            :
-            pathname.includes('holiday') ?
-            'none'
-            :
-            'grid'
-        }}
-        to='/promo'
-      >
-        <PromoCruiseImage src={PromoCruise} />
-        <PromoHeader>Vacation Giveaway! Click Here!</PromoHeader>
-        <PromoVegasImage src={PromoVegas} />
-      </PromoBanner> */}
 
-      {/* <PromoBanner
-        style={{
-          display:
-            pathname.includes('promo') ?
-            'none'
-            :
-            pathname.includes('careers') ?
-            'none'
-            :
-            pathname.includes('success') ?
-            'none'
-            :
-            pathname.includes('holiday') ?
-            'none'
-            :
-            pathname.includes('event') ?
-            'none'
-            :
-            'grid'
-        }}
-        to={`/promo`}
-      >
-        <PromoHeader>{intl.formatMessage({ id: "promo-cta" })}</PromoHeader>
-        <Scrim/>
-        <PromoVietnamImage src={PromoVietnam} />
-      </PromoBanner> */}
+//   return (
 
-    </App>
-  )
-}
+//     <App
+//       animate={{ opacity: 1 }}
+//       transition={{
+//         ease: 'easeInOut',
+//         duration: 1,
+//         delay: 0
+//       }}
+//     >
+//       <AlmaLogo alt='The Alma Logo' src={almaLogo} />
+//       <Menu>
+//         <Logo/>
+//         <Navigation/>
+//         <Contact/>
+//       </Menu>
+//       <Main id='main'>{children}</Main>
+//       {/* <PromoBanner
+//         style={{
+//           display:
+//             pathname.includes('promo') ?
+//             'none'
+//             :
+//             pathname.includes('careers') ?
+//             'none'
+//             :
+//             pathname.includes('success') ?
+//             'none'
+//             :
+//             pathname.includes('holiday') ?
+//             'none'
+//             :
+//             'grid'
+//         }}
+//         to='/promo'
+//       >
+//         <PromoCruiseImage src={PromoCruise} />
+//         <PromoHeader>Vacation Giveaway! Click Here!</PromoHeader>
+//         <PromoVegasImage src={PromoVegas} />
+//       </PromoBanner> */}
+
+//       {/* <PromoBanner
+//         style={{
+//           display:
+//             pathname.includes('promo') ?
+//             'none'
+//             :
+//             pathname.includes('careers') ?
+//             'none'
+//             :
+//             pathname.includes('success') ?
+//             'none'
+//             :
+//             pathname.includes('holiday') ?
+//             'none'
+//             :
+//             pathname.includes('event') ?
+//             'none'
+//             :
+//             'grid'
+//         }}
+//         to={`/promo`}
+//       >
+//         <PromoHeader>{intl.formatMessage({ id: "promo-cta" })}</PromoHeader>
+//         <Scrim/>
+//         <PromoVietnamImage src={PromoVietnam} />
+//       </PromoBanner> */}
+
+//     </App>
+//   )
+// }
 
 // const Layout = ({ children }) => {
 
