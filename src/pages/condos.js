@@ -112,7 +112,7 @@ const Condos = ({ data, intl }) => {
         </FullImage>
       </Box>
 
-      <Box center>
+      {/* <Box center>
         <Space/>
         <AlmaHeader blue title={intl.formatMessage({ id: "floorplans-title" })}></AlmaHeader>
       </Box>
@@ -161,7 +161,7 @@ const Condos = ({ data, intl }) => {
             <Floorplan fluid={data.floorplanC.childImageSharp.fluid}/>
           </FlexBox>
         </FlexContainer>
-      </Box>
+      </Box> */}
 
       <Box center> 
         <Space/>

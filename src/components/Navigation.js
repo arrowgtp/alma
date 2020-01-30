@@ -344,15 +344,15 @@ const Navigation = ({ intl }) => {
                   <AlmaLink2 to={`/condos`} onClick={toggle}>{intl.formatMessage({ id: "nav-apartments" })}</AlmaLink2>
                   <AlmaLink2 to={`/restaurants`} onClick={toggle}>{intl.formatMessage({ id: "nav-restaurants" })}</AlmaLink2>
                   <AlmaLink2 to={`/amenities`} onClick={toggle}>{intl.formatMessage({ id: "nav-amenities" })}</AlmaLink2>
-                  <AlmaLink2 to={`/construction`} onClick={toggle}>{intl.formatMessage({ id: "nav-construction" })}</AlmaLink2>
-                  <AlmaBulletShell src={almaShell}/>
+                  {/* <AlmaLink2 to={`/construction`} onClick={toggle}>{intl.formatMessage({ id: "nav-construction" })}</AlmaLink2> */}
+                <AlmaBulletShell src={almaShell}/>
                 <AlmaLink to={`/vacations`} onClick={toggle}>{intl.formatMessage({ id: "nav-vacations" })}</AlmaLink>
                 <AlmaBulletShell src={almaShell}/>
                 <AlmaLink to={`/alma`} onClick={toggle}>{intl.formatMessage({ id: "nav-about-alma" })}</AlmaLink>
                 <AlmaBulletShell src={almaShell}/>
                 <AlmaLink to={`/showroom`} onClick={toggle}>{intl.formatMessage({ id: "nav-showroom" })}</AlmaLink>
-                <AlmaBulletShell src={almaShell}/>
-                <AlmaLink to={`/careers`} onClick={toggle}>Careers</AlmaLink>
+                {/* <AlmaBulletShell src={almaShell}/>
+                <AlmaLink to={`/careers`} onClick={toggle}>Careers</AlmaLink> */}
                 <SocialButtons>
                   <SocialButton href='https://www.facebook.com/almavacations' target="_blank">
                     <img src={FacebookIcon} alt='The Alma Resort Facebook account.' />
@@ -401,15 +401,15 @@ const Navigation = ({ intl }) => {
             <AlmaLink2 to={`/condos`}>{intl.formatMessage({ id: "nav-apartments" })}</AlmaLink2>
             <AlmaLink2 to={`/restaurants`}>{intl.formatMessage({ id: "nav-restaurants" })}</AlmaLink2>
             <AlmaLink2 to={`/amenities`}>{intl.formatMessage({ id: "nav-amenities" })}</AlmaLink2>
-            <AlmaLink2 to={`/construction`}>{intl.formatMessage({ id: "nav-construction" })}</AlmaLink2>
+            {/* <AlmaLink2 to={`/construction`}>{intl.formatMessage({ id: "nav-construction" })}</AlmaLink2> */}
           <AlmaBulletShell src={almaShell}/>
           <AlmaLink to={`/vacations`}>{intl.formatMessage({ id: "nav-vacations" })}</AlmaLink>
           <AlmaBulletShell src={almaShell}/>
           <AlmaLink to={`/alma`}>{intl.formatMessage({ id: "nav-about-alma" })}</AlmaLink>
           <AlmaBulletShell src={almaShell}/>
           <AlmaLink to={`/showroom`}>{intl.formatMessage({ id: "nav-showroom" })}</AlmaLink>
-          <AlmaBulletShell src={almaShell}/>
-          <AlmaLink to={`/careers`}>Careers</AlmaLink>
+          {/* <AlmaBulletShell src={almaShell}/>
+          <AlmaLink to={`/careers`}>Careers</AlmaLink> */}
         </LargeLinkTree> 
       </LargeNav>
     </>

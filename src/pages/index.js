@@ -523,7 +523,7 @@ const Index = ({ data, intl }) => {
         </HorizontalScrollContainer>
       </Box>
 
-      <Box center>
+      {/* <Box center>
         <Space/>
         <AlmaHeader white title={intl.formatMessage({ id: "construction-title" })} />
         <Space/>
@@ -535,9 +535,9 @@ const Index = ({ data, intl }) => {
           </Link> 
         </ButtonContainer>
         <Space/>
-      </Box>
+      </Box> */}
 
-      <Box full>
+      {/* <Box full>
         <HorizontalScrollContainer blue>
         <Card>
             <CardImg fluid={data.sep1.childImageSharp.fluid} alt="The Alma Resort."/>
@@ -585,7 +585,7 @@ const Index = ({ data, intl }) => {
             <Watermark small/>
           </Card>
         </HorizontalScrollContainer>
-      </Box>
+      </Box> */}
 
       <Box center>
         <Space/>

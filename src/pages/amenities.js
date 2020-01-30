@@ -121,13 +121,26 @@ const Amenities = ({ data, intl }) => {
         </UL>
       </CenteredContainer>
 
-      <CenteredContainer>
+      {/* <CenteredContainer>
         <Space/>
         <P>{intl.formatMessage({ id: "amenities-to-construction" })}</P>
         <Space/>
         <ButtonContainer>
           <Link to="/construction">
             <Button>{intl.formatMessage({ id: "construction-title" })}</Button>
+          </Link> 
+        </ButtonContainer>
+        <Space/>
+        <Space/>
+      </CenteredContainer> */}
+
+      <CenteredContainer>
+        <Space/>
+        <P>{intl.formatMessage({ id: "construction-to-vacations" })}</P>
+        <Space/>
+        <ButtonContainer>
+          <Link to="/vacations">
+            <Button>{intl.formatMessage({ id: "vacations-title" })}</Button>
           </Link> 
         </ButtonContainer>
         <Space/>

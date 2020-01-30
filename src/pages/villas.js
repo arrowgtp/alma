@@ -113,7 +113,7 @@ const Villas = ({ data, intl }) => {
         </FullImage>
       </Box>      
 
-      <Box center>
+      {/* <Box center>
         <Space/>
         <AlmaHeader blue title={intl.formatMessage({ id: "floorplans-title" })}></AlmaHeader>
       </Box>
@@ -172,7 +172,7 @@ const Villas = ({ data, intl }) => {
             <Floorplan fluid={data.floorplanG.childImageSharp.fluid}/>
           </FlexBox>
         </FlexContainer>
-      </Box>
+      </Box> */}
 
       <Box center>
         <Space/>

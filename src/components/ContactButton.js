@@ -54,7 +54,7 @@ const Contact = ({ intl }) => {
         !isToggled ?
         (
           <Link to={`/contact`}>
-            <ContactButton onClick={toggle}>{intl.formatMessage({ id: "nav-promo" })}</ContactButton>
+            <ContactButton onClick={toggle}>{intl.formatMessage({ id: "nav-contact" })}</ContactButton>
           </Link>
         ) : (
           <Link to={`/`}>

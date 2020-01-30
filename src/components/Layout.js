@@ -322,124 +322,125 @@ const PromoHeader = styled.h1`
   }
 `
 
-const Layout = () => {
-  return (
-    <Maintenance>
-      <Text>Please visit our website at:<br/></Text>
-      <Text><Linky href="https://alma.vn/en/">alma.vn</Linky></Text>
-    </Maintenance>
-  )
-}
-
-  // useEffect(() => {
-
-  //   if (pathname.includes('careers')) {
-
-  //     if (hash === '#office-manager') {
-
-  //       const officeManager = document.querySelector('#office-manager').offsetTop
-  //       document.querySelector('#main').scrollTop = officeManager
-
-  //     } else if (hash ==='#administrative-assistant') {
-
-  //       const administrativeAsistant = document.querySelector('#administrative-assistant').offsetTop
-  //       document.querySelector('#main').scrollTop = administrativeAsistant
-
-  //     } else if (hash ==='#vacation-counselor') {
-
-  //       const vacationCounselor = document.querySelector('#vacation-counselor').offsetTop
-  //       document.querySelector('#main').scrollTop = vacationCounselor
-
-  //     } else if (hash ==='#event-staff') {
-
-  //       const eventStaff = document.querySelector('#event-staff').offsetTop
-  //       document.querySelector('#main').scrollTop = eventStaff
-
-  //     } else {
-
-  //       document.querySelector('#main').scrollTop = 0
-
-  //     }
-
-  //   } else {
-
-  //     document.querySelector('#main').scrollTop = 0
-
-  //   }
-  // }, [hash, pathname])
-
-
+// const Layout = () => {
 //   return (
-
-//     <App
-//       animate={{ opacity: 1 }}
-//       transition={{
-//         ease: 'easeInOut',
-//         duration: 1,
-//         delay: 0
-//       }}
-//     >
-//       <AlmaLogo alt='The Alma Logo' src={almaLogo} />
-//       <Menu>
-//         <Logo/>
-//         <Navigation/>
-//         <Contact/>
-//       </Menu>
-//       <Main id='main'>{children}</Main>
-//       {/* <PromoBanner
-//         style={{
-//           display:
-//             pathname.includes('promo') ?
-//             'none'
-//             :
-//             pathname.includes('careers') ?
-//             'none'
-//             :
-//             pathname.includes('success') ?
-//             'none'
-//             :
-//             pathname.includes('holiday') ?
-//             'none'
-//             :
-//             'grid'
-//         }}
-//         to='/promo'
-//       >
-//         <PromoCruiseImage src={PromoCruise} />
-//         <PromoHeader>Vacation Giveaway! Click Here!</PromoHeader>
-//         <PromoVegasImage src={PromoVegas} />
-//       </PromoBanner> */}
-
-//       {/* <PromoBanner
-//         style={{
-//           display:
-//             pathname.includes('promo') ?
-//             'none'
-//             :
-//             pathname.includes('careers') ?
-//             'none'
-//             :
-//             pathname.includes('success') ?
-//             'none'
-//             :
-//             pathname.includes('holiday') ?
-//             'none'
-//             :
-//             pathname.includes('event') ?
-//             'none'
-//             :
-//             'grid'
-//         }}
-//         to={`/promo`}
-//       >
-//         <PromoHeader>{intl.formatMessage({ id: "promo-cta" })}</PromoHeader>
-//         <Scrim/>
-//         <PromoVietnamImage src={PromoVietnam} />
-//       </PromoBanner> */}
-
-//     </App>
+//     <Maintenance>
+//       <Text>Please visit our website at:<br/></Text>
+//       <Text><Linky href="https://alma.vn/en/">alma.vn</Linky></Text>
+//     </Maintenance>
 //   )
 // }
+
+const Layout = ({ intl, children, location: { pathname, hash } }) => {
+
+  useEffect(() => {
+
+    if (pathname.includes('careers')) {
+
+      if (hash === '#office-manager') {
+
+        const officeManager = document.querySelector('#office-manager').offsetTop
+        document.querySelector('#main').scrollTop = officeManager
+
+      } else if (hash ==='#administrative-assistant') {
+
+        const administrativeAsistant = document.querySelector('#administrative-assistant').offsetTop
+        document.querySelector('#main').scrollTop = administrativeAsistant
+
+      } else if (hash ==='#vacation-counselor') {
+
+        const vacationCounselor = document.querySelector('#vacation-counselor').offsetTop
+        document.querySelector('#main').scrollTop = vacationCounselor
+
+      } else if (hash ==='#event-staff') {
+
+        const eventStaff = document.querySelector('#event-staff').offsetTop
+        document.querySelector('#main').scrollTop = eventStaff
+
+      } else {
+
+        document.querySelector('#main').scrollTop = 0
+
+      }
+
+    } else {
+
+      document.querySelector('#main').scrollTop = 0
+
+    }
+  }, [hash, pathname])
+
+
+  return (
+
+    <App
+      animate={{ opacity: 1 }}
+      transition={{
+        ease: 'easeInOut',
+        duration: 1,
+        delay: 0
+      }}
+    >
+      <AlmaLogo alt='The Alma Logo' src={almaLogo} />
+      <Menu>
+        <Logo/>
+        <Navigation/>
+        {/* <Contact/> */}
+      </Menu>
+      <Main id='main'>{children}</Main>
+      {/* <PromoBanner
+        style={{
+          display:
+            pathname.includes('promo') ?
+            'none'
+            :
+            pathname.includes('careers') ?
+            'none'
+            :
+            pathname.includes('success') ?
+            'none'
+            :
+            pathname.includes('holiday') ?
+            'none'
+            :
+            'grid'
+        }}
+        to='/promo'
+      >
+        <PromoCruiseImage src={PromoCruise} />
+        <PromoHeader>Vacation Giveaway! Click Here!</PromoHeader>
+        <PromoVegasImage src={PromoVegas} />
+      </PromoBanner> */}
+
+      {/* <PromoBanner
+        style={{
+          display:
+            pathname.includes('promo') ?
+            'none'
+            :
+            pathname.includes('careers') ?
+            'none'
+            :
+            pathname.includes('success') ?
+            'none'
+            :
+            pathname.includes('holiday') ?
+            'none'
+            :
+            pathname.includes('event') ?
+            'none'
+            :
+            'grid'
+        }}
+        to={`/promo`}
+      >
+        <PromoHeader>{intl.formatMessage({ id: "promo-cta" })}</PromoHeader>
+        <Scrim/>
+        <PromoVietnamImage src={PromoVietnam} />
+      </PromoBanner> */}
+    </App>
+  )
+}
 
 // const Layout = ({ children }) => {
 

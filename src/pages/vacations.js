@@ -107,7 +107,6 @@ const Vacations = ({ intl, data }) => {
           </Link> 
         </ButtonContainer>
         <Space/>
-        <Space/>
       </CenteredContainer>
 
       <Footer/>
