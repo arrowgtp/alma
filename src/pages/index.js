@@ -252,30 +252,7 @@ const Index = ({ data, intl }) => {
       <Box full>
         <HorizontalScrollContainer orange>
           <Card>
-            <CardImg
-              fluid={data.resortDrone1.childImageSharp.fluid}
-              alt="The Alma Resort."
-            />
-            <Caption small>Actual Image</Caption>
-            <Watermark small/>
-          </Card>
-          <Card>
-            <CardImg fluid={data.resortDrone2.childImageSharp.fluid} alt="The Alma Resort."/>
-            <Caption small>Actual Image</Caption>
-            <Watermark small/>
-          </Card>
-          <Card>
-            <CardImg fluid={data.resortDrone3.childImageSharp.fluid} alt="The Alma Resort."/>
-            <Caption small>Actual Image</Caption>
-            <Watermark small/>
-          </Card>
-          <Card>
-            <CardImg fluid={data.resortBirdseye.childImageSharp.fluid} alt="The Alma Resort."/>
-            <Caption small>Actual Image</Caption>
-            <Watermark small/>
-          </Card>
-          <Card>
-            <CardImg fluid={data.resortDrone5.childImageSharp.fluid} alt="The Alma Resort."/>
+            <CardImg fluid={data.resortDrone1.childImageSharp.fluid} alt="The Alma Resort."/>
             <Caption small>Actual Image</Caption>
             <Watermark small/>
           </Card>
@@ -294,6 +271,26 @@ const Index = ({ data, intl }) => {
             <Caption small>Actual Image</Caption>
             <Watermark small/>
           </Card>
+          <Card>
+            <CardImg fluid={data.resortDrone2.childImageSharp.fluid} alt="The Alma Resort."/>
+            <Caption small>Actual Image</Caption>
+            <Watermark small/>
+          </Card>
+          <Card>
+            <CardImg fluid={data.resortDrone3.childImageSharp.fluid} alt="The Alma Resort."/>
+            <Caption small>Actual Image</Caption>
+            <Watermark small/>
+          </Card>
+          <Card>
+            <CardImg fluid={data.resortBirdseye.childImageSharp.fluid} alt="The Alma Resort."/>
+            <Caption small>Actual Image</Caption>
+            <Watermark small/>
+          </Card>
+          {/* <Card>
+            <CardImg fluid={data.resortDrone5.childImageSharp.fluid} alt="The Alma Resort."/>
+            <Caption small>Actual Image</Caption>
+            <Watermark small/>
+          </Card> */}
           {/* <Card>
             <CardImg fluid={data.almaResort1.childImageSharp.fluid}/>
             <Caption small>Artist Rendering</Caption>
