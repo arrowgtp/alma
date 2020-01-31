@@ -47,7 +47,7 @@ const Footer = ({ intl }) => {
       <P>{intl.formatMessage({ id: "solicitation-notice" })}</P>
       <Spacer/>
       <P>Contact Us:</P>
-      <P>1.833.OWN.ALMA | 1.833.696.2562</P>
+      <P>1.714.689.8554</P>
       <P>575 Anton Blvd Suite 650 Costa Mesa, CA 92626</P>
       <BannerSpacer/>
     </FooterContainer>
