@@ -286,11 +286,11 @@ const Index = ({ data, intl }) => {
             <Caption small>Actual Image</Caption>
             <Watermark small/>
           </Card>
-          {/* <Card>
+          <Card>
             <CardImg fluid={data.resortDrone5.childImageSharp.fluid} alt="The Alma Resort."/>
             <Caption small>Actual Image</Caption>
             <Watermark small/>
-          </Card> */}
+          </Card>
           {/* <Card>
             <CardImg fluid={data.almaResort1.childImageSharp.fluid}/>
             <Caption small>Artist Rendering</Caption>
