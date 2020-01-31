@@ -51,7 +51,7 @@ const Showroom = ({ data, intl }) => {
         <Space/>
         <H2>{intl.formatMessage({ id: "alma-phone-number-title" })}</H2>
         <SmallSpace/>
-        <a href="tel:+18336962562"><P>1.833.OWN.ALMA | 1.833.696.2562</P></a>
+        <a href="tel:+17146898554"><P>1.714.689.8554</P></a>
         <Space/>
         <H2>{intl.formatMessage({ id: "showroom-address-title" })}</H2>
         <SmallSpace/>
