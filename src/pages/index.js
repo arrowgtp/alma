@@ -584,7 +584,7 @@ const Index = ({ data, intl }) => {
         </HorizontalScrollContainer>
       </Box> */}
 
-      <Box center>
+      {/* <Box center>
         <Space/>
         <AlmaHeader blue title={intl.formatMessage({ id: "vacations-title" })} />
         <Space/>
@@ -600,7 +600,7 @@ const Index = ({ data, intl }) => {
 
       <Box full>
         <RCIMap fluid={data.rciMap.childImageSharp.fluid}/>
-      </Box>
+      </Box> */}
       
       <Box center>
         <Space/>
