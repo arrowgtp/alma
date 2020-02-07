@@ -40,10 +40,10 @@ const Vacations = ({ intl, data }) => {
         <H1>{intl.formatMessage({ id: "rci-heading-1" })}</H1>
         <Space/>
         <P>{intl.formatMessage({ id: "rci-paragraph-1" })}</P>
-        <Space/>
+        {/* <Space/>
         <H1>{intl.formatMessage({ id: "rci-heading-2" })}</H1>
         <Space/>
-        <P>{intl.formatMessage({ id: "rci-paragraph-2" })}</P>
+        <P>{intl.formatMessage({ id: "rci-paragraph-2" })}</P> */}
         <Space/>
         <H1>{intl.formatMessage({ id: "rci-heading-3" })}</H1>
         <Space/>
