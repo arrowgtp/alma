@@ -167,52 +167,52 @@ const Menu = styled.div`
   }
 `
 
-const PromoBanner = styled(Link)`
-  box-sizing: content-box;
-  margin: 0;
-  padding: 0;
-  position: fixed;
-  bottom: 10vh;
-  bottom: calc(var(--vh, 1vh) * 10);
-  left: 0;
-  right: 0;
-  height: 10vh;
-  height: calc(var(--vh, 1vh) * 10);
-  width: 100vw;
-  background: #001721;
-  background: black;
-  z-index: 10;
-  border-top: 2px solid #af875d;
-  color: white;
-  box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.25);
-  /* display: flex;
-  align-items: center;
-  justify-content: space-between; */
-  display: grid;
-  grid-template-rows: 1;
-  grid-template-columns: repeat(4, 1fr);
+// const PromoBanner = styled(Link)`
+//   box-sizing: content-box;
+//   margin: 0;
+//   padding: 0;
+//   position: fixed;
+//   bottom: 10vh;
+//   bottom: calc(var(--vh, 1vh) * 10);
+//   left: 0;
+//   right: 0;
+//   height: 10vh;
+//   height: calc(var(--vh, 1vh) * 10);
+//   width: 100vw;
+//   background: #001721;
+//   background: black;
+//   z-index: 10;
+//   border-top: 2px solid #af875d;
+//   color: white;
+//   box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.25);
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between;
+//   display: grid;
+//   grid-template-rows: 1;
+//   grid-template-columns: repeat(4, 1fr);
 
-  @media (orientation: landscape) {
-    bottom: 0;
-    right: 0;
-    left: 20vw;
-    width: 80vw;
-    height: 12vh;
-  }
-`
+//   @media (orientation: landscape) {
+//     bottom: 0;
+//     right: 0;
+//     left: 20vw;
+//     width: 80vw;
+//     height: 12vh;
+//   }
+// `
 
-const Image = styled.img`
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  width: auto;
-  height: 10vh;
-  height: calc(var(--vh, 1vh) * 10);
+// const Image = styled.img`
+//   box-sizing: border-box;
+//   margin: 0;
+//   padding: 0;
+//   width: auto;
+//   height: 10vh;
+//   height: calc(var(--vh, 1vh) * 10);
 
-  @media (orientation: landscape) {
-    height: 12vh;
-  }
-`
+//   @media (orientation: landscape) {
+//     height: 12vh;
+//   }
+// `
 
 // const Scrim = styled.div`
 //   grid-column: 1 / 5;
@@ -276,51 +276,51 @@ const Image = styled.img`
 //   ; */
 // `
 
-const PromoVietnamImage = styled(Image)`
-  grid-column: 1 / 5;
-  grid-row: 1 / 2;
-  justify-self: stretch;
-  object-fit: cover;
-  z-index: 1;
-  /* opacity: 0.5; */
-  mask-image:
-    linear-gradient(
-      to top,
-      hsla(0, 0%, 100%, 0.25) 0%,
-      hsla(0, 0%, 100%, 0.75) 100%
-    )
-  ;
-`
+// const PromoVietnamImage = styled(Image)`
+//   grid-column: 1 / 5;
+//   grid-row: 1 / 2;
+//   justify-self: stretch;
+//   object-fit: cover;
+//   z-index: 1;
+//   /* opacity: 0.5; */
+//   mask-image:
+//     linear-gradient(
+//       to top,
+//       hsla(0, 0%, 100%, 0.25) 0%,
+//       hsla(0, 0%, 100%, 0.75) 100%
+//     )
+//   ;
+// `
 
-const PromoHeader = styled.h1`
-  grid-column: 1 / 5;
-  grid-row: 1 / 2;
-  margin: 0.75rem 0 0 0;
-  padding: 0.3rem 1.1rem;
-  justify-self: center;
-  align-self: start;
-  text-align: center;
-  z-index: 2;
-  color: black;
-  background: white;
-  box-shadow: 0px 0px 16px rgba(0,0,0,0.5);
-  border-radius: 32px;
-  font-family: 'Quicksand', sans-serif;
-  text-transform: uppercase;
-  font-weight: 900;
-  font-size: 16px;
+// const PromoHeader = styled.h1`
+//   grid-column: 1 / 5;
+//   grid-row: 1 / 2;
+//   margin: 0.75rem 0 0 0;
+//   padding: 0.3rem 1.1rem;
+//   justify-self: center;
+//   align-self: start;
+//   text-align: center;
+//   z-index: 2;
+//   color: black;
+//   background: white;
+//   box-shadow: 0px 0px 16px rgba(0,0,0,0.5);
+//   border-radius: 32px;
+//   font-family: 'Quicksand', sans-serif;
+//   text-transform: uppercase;
+//   font-weight: 900;
+//   font-size: 16px;
 
-  @media (orientation: landscape) {
-    text-shadow: none;
-    border-radius: 32px;
-    background: white;
-    color: black;
-    padding: 0.75rem 1.5rem;
-    font-size: 24px;
-    align-self: center;
-    margin: 0;
-  }
-`
+//   @media (orientation: landscape) {
+//     text-shadow: none;
+//     border-radius: 32px;
+//     background: white;
+//     color: black;
+//     padding: 0.75rem 1.5rem;
+//     font-size: 24px;
+//     align-self: center;
+//     margin: 0;
+//   }
+// `
 
 // const Layout = () => {
 //   return (
