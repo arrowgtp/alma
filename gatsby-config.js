@@ -11,7 +11,6 @@ module.exports = {
         trackingId: 'UA-150454229-1',
       },
     },
-    'gatsby-plugin-webpack-bundle-analyzer',
     `gatsby-plugin-netlify`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
@@ -19,6 +18,26 @@ module.exports = {
       resolve: `gatsby-plugin-layout`,
       options: {
         component: require.resolve(`./src/components/Layout.js`),
+      },
+    },
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1024
+            },
+          },
+        ],
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `words`,
+        path: `${__dirname}/src/content/news`
       },
     },
     {

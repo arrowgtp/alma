@@ -127,22 +127,23 @@ const Showroom = ({ data, intl }) => {
       </CenteredContainer>
 
       <StickyBox>
+
         <CenteredStickyContainer>
-          <JobButton onClick={() => {navigate('#office-manager')}}>
+          {/* <JobButton onClick={() => {navigate('#office-manager')}}>
             Office Manager
-          </JobButton>
+          </JobButton> */}
           <JobButton onClick={() => {navigate('#administrative-assistant')}}>
             Administrative Asistant
           </JobButton>
           <JobButton onClick={() => {navigate('#vacation-counselor')}}>
             Vacation Counselor
           </JobButton>
-          <JobButton onClick={() => {navigate('#event-staff')}}>
+          {/* <JobButton onClick={() => {navigate('#event-staff')}}>
             Event Staff
-          </JobButton>
+          </JobButton> */}
         </CenteredStickyContainer>
 
-        <CenteredContainer id="office-manager">
+        {/* <CenteredContainer id="office-manager">
           <CustomSpace/>
           <H1>Office Manager</H1>
           <SmallSpace/>
@@ -204,7 +205,7 @@ const Showroom = ({ data, intl }) => {
           <P><strong>Email:</strong> hank@almavacations.com</P>
           <P><strong>Mobile:</strong> (949) 878-8287</P>
           <Space/>
-        </CenteredContainer>
+        </CenteredContainer> */}
 
         <CenteredContainer id="administrative-assistant">
           <CustomSpace/>
@@ -244,9 +245,9 @@ const Showroom = ({ data, intl }) => {
 
           <H2>Contact Information</H2>
           <SmallSpace/>
-          <P><strong>Hank Scott</strong></P>
-          <P><strong>Email:</strong> hank@almavacations.com</P>
-          <P><strong>Mobile:</strong> (949) 878-8287</P>
+          <P><strong>Annie Nguyen</strong></P>
+          <P><strong>Email:</strong> annie@almavacations.com</P>
+          <P><strong>Mobile:</strong> (619) 885-6666</P>
           <Space/>
         </CenteredContainer>
 
@@ -287,13 +288,13 @@ const Showroom = ({ data, intl }) => {
           </UL>
           <H2>Contact Information</H2>
           <SmallSpace/>
-          <P><strong>Hank Scott</strong></P>
-          <P><strong>Email:</strong> hank@almavacations.com</P>
-          <P><strong>Mobile:</strong> (949) 878-8287</P>
+          <P><strong>Annie Nguyen</strong></P>
+          <P><strong>Email:</strong> annie@almavacations.com</P>
+          <P><strong>Mobile:</strong> (619) 885-6666</P>
           <Space/>
         </CenteredContainer>
 
-        <CenteredContainer id="event-staff">
+        {/* <CenteredContainer id="event-staff">
           <CustomSpace/>
           <H1>Event Staff</H1>
           <SmallSpace/>
@@ -320,9 +321,7 @@ const Showroom = ({ data, intl }) => {
             <LI>Transport promotional materials to and from various locations</LI>
             <LI>Perform other event or administrative duties as necessary</LI>
           </UL>
-          {/* <Space/> */}
           <H2>Requirements and Qualifications</H2>
-          {/* <SmallSpace/> */}
           <UL>
             <LI>Must be enthusiastic, engaging, brand savvy, well organized and self-motivated and able to work independently</LI> 
             <LI>Ability to multitask, take direction and work in small and large groups</LI>
@@ -340,7 +339,7 @@ const Showroom = ({ data, intl }) => {
           <P><strong>Email:</strong> travel@alma.vacations</P>
           <P><strong>Mobile:</strong> (714) 855-0409</P>
           <Space/>
-        </CenteredContainer>
+        </CenteredContainer> */}
 
       </StickyBox>
 
