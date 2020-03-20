@@ -9,6 +9,7 @@
   "nav-restaurants": "Ẩm Thực",
   "nav-amenities": "Tiện Nghi",
   "nav-construction": "Xây Cất",
+  "nav-news": "Tin Tức",
   "nav-vacations": "Điểm Du Lịch",
   "nav-about-alma": "Về Alma",
   "nav-showroom": "US Showroom",
@@ -149,6 +150,23 @@
 
   "amenities-to-construction": "Nhấn vào đây để theo dõi tiến tình xây cất và xem hình ảnh xây dựng mới nhất.",
 
+  "news-title": "Tin Tức",
+  "news-subtitle": "",
+  "news-intro-paragraph": "Hãy theo dõi những tin tức chúng tôi cập nhật thường xuyên về Alma.",
+
+  "february-title": "Tháng Hai",
+  "february-paragraph-1": "Thật là một mùa lễ hội tưng bừng khi Alma USA có cơ hội tham gia nhiều sự kiện, các buổi hòa nhạc, nhiều cuộc thi thố, và nhiều lễ hội cộng đồng, nơi chúng tôi đã gặp gỡ hàng ngàn chủ nhân tương lai của Alma Vacation cùng gia đình thân yêu của họ.",
+  "february-paragraph-2": "Ba tuần Lễ Hội Hoa Tết tại Phước Lộc Thọ đã nối kết Alma cùng với nhiều gia đình và họ đã bày tỏ ước muốn có một căn nhà nhỏ ở một nơi cách xa mái nhà chính của họ trong những kỳ nghỉ của họ, vì vậy chúng tôi đã có một buổi trình chiếu đầy vui nhộn hình ảnh về du lịch trong quầy hàng chúng tôi. Hội Chợ Tết UVSA đã kết thúc mùa lễ hội qua màn múa lân, các món ăn truyền thống, bao lì xì, và các màn trình diễn vui nhộn.",
+  "february-paragraph-3": "Chương trình Hòa Nhạc Giáng Sinh Santa, & Điểm Tâm Với Santa đã chính thức khai mạc một mùa lễ đầy vui nhộn chung quanh đề tài du lịch và nghỉ dưỡng. Không lâu sau đó, Alma lại thêm một lần nữa được hân hạnh bảo trợ cuộc Thi Áo Dài Truyền Thống của LSTV và chúng tôi được lên khán đài trao vương miện cho thiếu nữ xinh đẹp thắng giải. Sau đó Alma lại tiếp tục có mặt trong hai buổi trình diễn đầy hứng thú tại Saigon Performing Arts Center và La Mirada cùng với lượng khán giả đông đảo.",
+  "february-paragraph-4": "Các bạn yêu thích du lịch đã đến thăm quầy hàng của Alma, và tham gia trò chơi quay vòng may mắn, Chúng tôi đã trao tặng hàng trăm giải thưởng gồm túi xách, đồ trang trí, quà tặng, vé vào tham quan công viên giải trí, và gói du lịch cho hai đêm vui chơi tại Las Vegas và nhiều món quà khác.",
+  "february-paragraph-5": "Nếu quý vị có hình chụp tại quầy hàng cùng với nhân viên thân thiện của Alma, hãy chia sẻ trên mạng và nối kết với chúng tôi tại #almavacations",
+
+  "january-title": "Tháng Một",
+  "january-paragraph-1": "Khu nghỉ dưỡng sẽ chính thức đi vào hoạt động từ ngày 29 tháng 12 năm 2019 dưới sự điều hành của ông Herbert Laubichler-Pichler, vị Tổng Quản lý vận hành kỳ cựu có thâm niên hơn 20 năm công tác trong lĩnh vực du lịch khách sạn phân khúc cao cấp.",
+  "january-paragraph-2": "Với thiết kế đẳng cấp, đáp ứng chuẩn mực sống thượng lưu và hiện đại, khu nghỉ dưỡng ALMA sẽ trở thành thành viên của chuỗi hệ thống Preferred Hotels & Resorts (Tổ chức các khách sạn và khu nghỉ dưỡng được yêu thích). Đây là một trong những dự án nghỉ dưỡng năm sao được đánh giá cao về quy mô và tiêu chuẩn chất lượng trong khu vực Nha Trang, Khánh Hòa.",
+  "january-paragraph-3": "Tọa lạc tại bờ biển vàng kế bên quần thể các khu nghỉ dưỡng hạng sang được quy hoạch tại Bãi Dài - một trong 10 bãi biển đẹp nhất hành tinh do tạp chí National Geographics (Mỹ) bình chọn, khu nghỉ dưỡng Alma được thiết kế với lối kiến trúc độc nhất mang đến tầm nhìn hướng biển tối ưu cho toàn bộ gần 400 căn hộ và 200 villa nghỉ dưỡng. Mỗi căn đều được trang bị tiện nghi hiện đại dành cho các gia đình từ 5 đến 9 người, đảm bảo không gian nghỉ dưỡng thượng lưu và tiêu chuẩn chất lượng cao cấp.",
+  "january-paragraph-4": "Sau khi đi vào vận hành, khu nghỉ dưỡng ALMA sẽ đưa vào hoạt động hệ thống cơ sở vật chất sang trọng bao gồm chuỗi nhà hàng quốc tế, 12 bể bơi đa dạng kích thước, công viên nước quy mô gần 1ha, phòng tập gym với hàng chục trang thiết bị hiện đại, rạp chiếu phim, nhà hát ngoài trời, câu lạc bộ khoa học cùng nhiều tiện ích vui chơi giải trí khác.",
+
   "construction-title": "Tiến Trình Xây Cất",
   "construction-subtitle": "",
   "construction-intro-paragraph": "Cập nhật những hoạt động xây cất cùng tiến trình mới nhất tại đây. Chúng tôi sẽ thường xuyên đăng tải hình ảnh và thông tin mới nhất hàng tháng cho đến ngày khánh thành khu nghỉ dưỡng.",
@@ -176,7 +194,6 @@
   "construction-july-2019-paragraph-2": "Tại tầng hầm trong khối tòa nhà chính, các trang thiết bị cho khu bếp chính, phòng lạnh, nhà ăn cho nhân viên, phòng giặt giũ cũng đã gần như hoàn tất. Hệ thống báo cháy đã được lắp đặt và đang được kiểm tra chất lượng.",
   "construction-july-2019-paragraph-3": "Trong khu vực ẩm thực, cầu thang dẫn lên sảnh chính đang thành hình và các thiết bị đã được lắp đặt trong khu nhà bếp. Trong công viên nước, nền móng của bể bơi dành cho trẻ em và khu vực sông lười cũng đang được hoàn thiện. Hồ bơi cùng những hàng cọ xanh bao quanh cũng đang gần hoàn tất, tạo nên một vẻ đẹp yên bình trong khu nghỉ dưỡng.",
   "construction-july-2019-paragraph-4": "Chúng tôi rất háo hức chia sẻ cho quý vị những bức ảnh mới nhất trong khu nghỉ dưỡng.",
-
 
   "construction-june-2019": "Tháng Sáu, 2019",
   "construction-june-2019-paragraph-1": "Tính cho đến tháng Sáu 2019, chúng tôi đã hoàn tất nhiều hoạt động thúc đẩy tiến trình xây cất. Ngoài việc dốc toàn lực vào để hoàn tất các khu cao ốc chính và biệt thự, nhà thầu xây cất đang tiến hành các khu vực công cộng, trồng cây xanh, để mang lại dáng vẻ mới lạ cho khu nghỉ dưỡng xinh đẹp này.",

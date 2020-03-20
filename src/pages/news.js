@@ -1,125 +1,116 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Img from 'gatsby-image'
-import styled from 'styled-components'
 import { Link, injectIntl } from 'gatsby-plugin-intl'
-import SEO from "../components/seo"
+import styled from 'styled-components'
+// import Img from 'gatsby-image'
+import SEO from '../components/seo'
 
 import Content from '../components/layout/Content'
+
+import FullWidthContainer from '../components/layout/FullWidthContainer'
+import { FullImage, Image } from '../components/visual/FullImage'
+import { FullContentCard, HeadingContainer } from '../components/layout/FullContentCard'
 import CenteredContainer from '../components/layout/CenteredContainer'
 import AlmaHeader from '../components/Header'
+import { Button, ButtonContainer } from '../components/visual/Button'
+import { Space, P } from '../components/visual/Typography'
+import Watermark from '../components/Watermark'
+import Caption from '../components/Caption'
+import Box from '../components/Box'
 
-const NavLink = styled(Link)`
-  text-decoration: none;
-  padding: 1rem;
-  line-height: 1;
-`
+import Footer from '../components/Footer'
 
-const NewsImage = styled(Img)`
+const VideoBox = styled.div`
   position: relative;
-  margin: 0 0 2rem 0;
-  border-radius: 16px;
-  box-shadow: 
-    0 13px 27px -5px rgba(50,50,93,.25),
-    0 8px 16px -8px rgba(0,0,0,.3),
-    0 -6px 16px -6px rgba(0,0,0,.025)
-  ;
+	padding-bottom: 52.75%;
+	padding-top: 25px;
+	height: 0;
 
-  &:before {
-    display: block;
-    position:absolute;
-    left:0;
-    top:0;
-    width:100%;
-    height:100%;
-    z-index: 2;
-    background: linear-gradient(
-    to bottom,
-    hsla(0, 0%, 0%, 0) 0%,
-    hsla(0, 0%, 0%, 0.006) 8.1%,
-    hsla(0, 0%, 0%, 0.024) 15.5%,
-    hsla(0, 0%, 0%, 0.052) 22.5%,
-    hsla(0, 0%, 0%, 0.088) 29%,
-    hsla(0, 0%, 0%, 0.13) 35.3%,
-    hsla(0, 0%, 0%, 0.176) 41.2%,
-    hsla(0, 0%, 0%, 0.225) 47.1%,
-    hsla(0, 0%, 0%, 0.275) 52.9%,
-    hsla(0, 0%, 0%, 0.324) 58.8%,
-    hsla(0, 0%, 0%, 0.37) 64.7%,
-    hsla(0, 0%, 0%, 0.412) 71%,
-    hsla(0, 0%, 0%, 0.448) 77.5%,
-    hsla(0, 0%, 0%, 0.476) 84.5%,
-    hsla(0, 0%, 0%, 0.494) 91.9%,
-    hsla(0, 0%, 0%, 0.5) 100%
-  );
+  > iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
-`
-
-const NewsTitle = styled.h1`
-  font-size: 32px;
-`
-
-const NewsDate = styled.p`
-  font-size: 12px;
-  font-style: italic;
-`
-
-const NewsSubtitle = styled.p`
-font-size: 18px;
-`
-
-const NewsExcerpt = styled.p`
-font-size: 16px;
 `
 
 const News = ({ data, intl }) => {
   return (
     <Content>
-      <SEO title="News" />
+
+      <SEO title={intl.formatMessage({ id: "news-title" })} />
+      
+      <FullContentCard>
+        <HeadingContainer>
+          <AlmaHeader white title={intl.formatMessage({ id: "news-title" })}/>
+        </HeadingContainer>
+        <Image grid fluid={data.oct19.childImageSharp.fluid}/>
+        <Caption large>Actual Image</Caption>
+        <Watermark large/>
+      </FullContentCard>
+
       <CenteredContainer>
-        <AlmaHeader title='Latest News' />
-        <p>{intl.formatMessage({ id: "title" })}</p>
-        <p>{intl.formatMessage({ id: "slogan" })}</p>
-        <div>
-          <h4>{data.articles.totalCount} Posts</h4>
-          {data.articles.edges.map(({ node }) => (
-            <NavLink key={node.id} to={node.fields.slug}>
-              <NewsImage fluid={node.frontmatter.image.childImageSharp.fluid} alt="cool stuff." />
-              <NewsTitle>{node.frontmatter.title}{" "}</NewsTitle>
-              <NewsDate>{node.frontmatter.date}</NewsDate>
-              <NewsSubtitle>{node.frontmatter.subtitle}</NewsSubtitle>
-              <NewsExcerpt>{node.excerpt}</NewsExcerpt>
-            </NavLink>
-          ))}
-        </div>
+        <Space/>
+        <AlmaHeader
+          blue
+          title={intl.formatMessage({ id: "february-title" })}
+        />
+        <Space/>
+        <P>{intl.formatMessage({ id: "february-paragraph-1" })}</P>
+        <Space/>
+        <P>{intl.formatMessage({ id: "february-paragraph-2" })}</P>
+        <Space/>
+        <P>{intl.formatMessage({ id: "february-paragraph-3" })}</P>
+        <Space/>
+        <P>{intl.formatMessage({ id: "february-paragraph-4" })}</P>
+        <Space/>
+        <P>{intl.formatMessage({ id: "february-paragraph-5" })}</P>
+        <Space/>
       </CenteredContainer>
+
+      <CenteredContainer>
+        <Space/>
+        <AlmaHeader
+          blue
+          title={intl.formatMessage({ id: "january-title" })}
+        />
+        <Space/>
+        <P>{intl.formatMessage({ id: "january-paragraph-1" })}</P>
+        <Space/>
+        <P>{intl.formatMessage({ id: "january-paragraph-2" })}</P>
+        <Space/>
+        <P>{intl.formatMessage({ id: "january-paragraph-3" })}</P>
+        <Space/>
+        <P>{intl.formatMessage({ id: "january-paragraph-4" })}</P>
+        <Space/>
+      </CenteredContainer>
+        
+      {/* <CenteredContainer>
+        <Space/>
+        <P>{intl.formatMessage({ id: "construction-to-vacations" })}</P>
+        <Space/>
+        <ButtonContainer>
+          <Link to="/vacations">
+            <Button>{intl.formatMessage({ id: "vacations-title" })}</Button>
+          </Link> 
+        </ButtonContainer>
+        <Space/>
+        <Space/>
+      </CenteredContainer> */}
+
+      <Footer/>
+
     </Content>
   )
 }
 
 export const query = graphql`
-  {
-    articles: allMdx {
-      totalCount
-      edges {
-        node {
-          excerpt
-          fields {
-            slug
-          }
-          frontmatter {
-            title
-            subtitle
-            description
-            date(formatString: "MMMM Do, YYYY")
-            image {
-              childImageSharp {
-                fluid(maxWidth: 3840) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-          }
+  query {
+    oct19: file(relativePath: { eq: "construction/october-2019-19.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
@@ -127,5 +118,3 @@ export const query = graphql`
 `
 
 export default injectIntl(News)
-
-// export default News

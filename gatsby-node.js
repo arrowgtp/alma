@@ -1,13 +1,13 @@
-const { createFilePath } = require("gatsby-source-filesystem")
-const path = require("path")
-const languages = ["en", "vi"] // plugin options
+const { createFilePath } = require('gatsby-source-filesystem')
+const path = require('path')
+const languages = ['en', 'vi'] // plugin options
 
-function flattenMessages(nestedMessages, prefix = "") {
+function flattenMessages(nestedMessages, prefix = '') {
   return Object.keys(nestedMessages).reduce((messages, key) => {
     let value = nestedMessages[key]
     let prefixedKey = prefix ? `${prefix}.${key}` : key
 
-    if (typeof value === "string") {
+    if (typeof value === 'string') {
       messages[prefixedKey] = value
     } else {
       Object.assign(messages, flattenMessages(value, prefixedKey))
@@ -68,10 +68,10 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   `)
   // Handle errors
   if (news.errors) {
-    reporter.panicOnBuild(`🚨 Error while running GraphQL(news) query.`)
+    reporter.panicOnBuild('🚨 Error while running GraphQL(news) query.')
     return
   }
-  console.log("news", news)
+  console.log('news', news)
   // you'll call `createPage` for each result
   news.data.allMdx.edges.forEach(({ node }, index) => {
     let slug = node.fields.slug
@@ -85,12 +85,12 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         slug: slug,
         prev: index - 1,
         next: index + 1,
-        category: "news",
+        category: 'news',
         // ADD INITL CONTEXT AT HERE
         intl: {
           language: node.frontmatter.language,
           languages,
-          messages: getMessages("./src/intl/", node.frontmatter.language),
+          messages: getMessages('./src/content/news/', node.frontmatter.language),
           routed: true,
           originalPath: slug.substr(3), // remove front /en or /vi strings
           redirect: false,
@@ -110,15 +110,15 @@ exports.onCreateNode = async ({
   createNodeId,
 }) => {
   const { createNodeField, createNode } = actions
-  if (node.internal.type === "Mdx") {
+  if (node.internal.type === 'Mdx') {
     const value = createFilePath({ node, getNode })
     const newSlug =
-      "/" + node.frontmatter.language + "/" + value
+      '/' + node.frontmatter.language + '/' + value
     createNodeField({
       // Individual MDX node
       node,
       // Name of the field you are adding
-      name: "slug",
+      name: 'slug',
       // Generated value based on filepath with "news" prefix
       value: newSlug,
     })
@@ -129,7 +129,7 @@ exports.onCreateNode = async ({
 exports.onCreatePage = async ({ page, actions }) => {
   const { createPage, deletePage } = actions
   // console.log('page.context.type', page.context.type)
-  const isBasicPage = page.context.type === "basic"
+  const isBasicPage = page.context.type === 'basic'
   const hasInvalidBlogPath = !basicPages.has(page.path)
 
   // If page is a blog page but has the wrong path

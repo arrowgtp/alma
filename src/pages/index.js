@@ -817,6 +817,70 @@ const Index = ({ data, intl }) => {
         </HorizontalScrollContainer>
       </Box> */}
 
+      <Box center>
+        <Space/>
+        <AlmaHeader white title={intl.formatMessage({ id: "news-title" })} />
+        <Space/>
+        <P>{intl.formatMessage({ id: "news-intro-paragraph" })}</P>
+        <Space/>
+        <ButtonContainer>
+          <Link to="/news">
+            <Button>{intl.formatMessage({ id: "news-title" })}</Button>
+          </Link> 
+        </ButtonContainer>
+        <Space/>
+      </Box>
+
+      {/* <Box full>
+        <HorizontalScrollContainer blue>
+        <Card>
+            <CardImg fluid={data.sep1.childImageSharp.fluid} alt="The Alma Resort."/>
+            <Caption small>Actual Image</Caption>
+            <Watermark small/>
+          </Card>
+          <Card>
+            <CardImg fluid={data.sep3.childImageSharp.fluid} alt="The Alma Resort."/>
+            <Caption small>Actual Image</Caption>
+            <Watermark small/>
+          </Card>
+          <Card>
+            <CardImg fluid={data.sep4.childImageSharp.fluid} alt="The Alma Resort."/>
+            <Caption small>Actual Image</Caption>
+            <Watermark small/>
+          </Card>
+          <Card>
+            <CardImg fluid={data.sep6.childImageSharp.fluid} alt="The Alma Resort."/>
+            <Caption small>Actual Image</Caption>
+            <Watermark small/>
+          </Card>
+          <Card>
+            <CardImg fluid={data.aug1.childImageSharp.fluid} alt="The Alma Resort."/>
+            <Caption small>Actual Image</Caption>
+            <Watermark small/>
+          </Card>
+          <Card>
+            <CardImg fluid={data.aug2.childImageSharp.fluid} alt="The Alma Resort."/>
+            <Caption small>Actual Image</Caption>
+            <Watermark small/>
+          </Card>
+          <Card>
+            <CardImg fluid={data.aug3.childImageSharp.fluid} alt="The Alma Resort."/>
+            <Caption small>Actual Image</Caption>
+            <Watermark small/>
+          </Card>
+          <Card>
+            <CardImg fluid={data.aug4.childImageSharp.fluid} alt="The Alma Resort."/>
+            <Caption small>Actual Image</Caption>
+            <Watermark small/>
+          </Card>
+          <Card>
+            <CardImg fluid={data.aug5.childImageSharp.fluid} alt="The Alma Resort."/>
+            <Caption small>Actual Image</Caption>
+            <Watermark small/>
+          </Card>
+        </HorizontalScrollContainer>
+      </Box> */}
+
       {/* <Box center>
         <Space/>
         <AlmaHeader blue title={intl.formatMessage({ id: "vacations-title" })} />

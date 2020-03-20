@@ -36,7 +36,7 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `words`,
+        name: `news`,
         path: `${__dirname}/src/content/news`
       },
     },
@@ -73,7 +73,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-intl`,
       options: {
-        path: `${__dirname}/src/intl`,
+        path: `${__dirname}/src/content`,
         languages: ['en', 'vi'],
         defaultLanguage: 'en',
         redirect: false,
