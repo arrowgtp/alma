@@ -1,41 +1,45 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import { Link, injectIntl } from 'gatsby-plugin-intl'
+// import { Link, injectIntl } from 'gatsby-plugin-intl'
+import { useIntl, Link } from "gatsby-plugin-intl"
 import styled from 'styled-components'
 // import Img from 'gatsby-image'
 import SEO from '../components/seo'
 
 import Content from '../components/layout/Content'
 
-import FullWidthContainer from '../components/layout/FullWidthContainer'
+// import FullWidthContainer from '../components/layout/FullWidthContainer'
 import { FullImage, Image } from '../components/visual/FullImage'
 import { FullContentCard, HeadingContainer } from '../components/layout/FullContentCard'
 import CenteredContainer from '../components/layout/CenteredContainer'
 import AlmaHeader from '../components/Header'
-import { Button, ButtonContainer } from '../components/visual/Button'
+// import { Button, ButtonContainer } from '../components/visual/Button'
 import { Space, P } from '../components/visual/Typography'
 import Watermark from '../components/Watermark'
 import Caption from '../components/Caption'
-import Box from '../components/Box'
+// import Box from '../components/Box'
 
 import Footer from '../components/Footer'
 
-const VideoBox = styled.div`
-  position: relative;
-	padding-bottom: 52.75%;
-	padding-top: 25px;
-	height: 0;
+// const VideoBox = styled.div`
+//   position: relative;
+// 	padding-bottom: 52.75%;
+// 	padding-top: 25px;
+// 	height: 0;
 
-  > iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-`
+//   > iframe {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//   }
+// `
 
-const News = ({ data, intl }) => {
+const News = ({ data }) => {
+
+  const intl = useIntl()
+
   return (
     <Content>
 
@@ -117,4 +121,4 @@ export const query = graphql`
   }
 `
 
-export default injectIntl(News)
+export default News
